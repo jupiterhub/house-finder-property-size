@@ -1,4 +1,4 @@
-const { isSeen, markAsSeen } = require('../utils/storage');
+const { isSeen, markAsSeen, markAsIgnored } = require('../utils/storage');
 const { extractSqmFromText } = require('../utils/parser');
 const { extractTextFromImage } = require('../utils/ocr');
 const config = require('../config.json');
@@ -70,19 +70,20 @@ class RightmoveAdapter {
       console.log(`Found ${listings.length} listings on this page.`);
 
       for (const listing of listings) {
-        if (isSeen(listing.id)) {
+        if (isSeen(listing.id, this.platformName)) {
           console.log(`Skipping already seen property: ${listing.id}`);
           continue;
         }
 
         if (listing.price > config.maxPrice) {
           console.log(`Skipping property ${listing.id} (Price ${listing.price} exceeds max ${config.maxPrice})`);
+          markAsIgnored(listing.id, this.platformName, `Price £${listing.price} exceeds max £${config.maxPrice}`);
           continue;
         }
 
-        markAsSeen(listing.id);
         const match = await this.processListing(listing);
         if (match) {
+          markAsSeen(listing.id, this.platformName);
           results.push(match);
         }
       }
@@ -148,6 +149,7 @@ class RightmoveAdapter {
           sqm = extractSqmFromText(text);
         } else {
           console.log(`No floorplan image found for ${listing.id}. Discarding.`);
+          markAsIgnored(listing.id, this.platformName, "No floorplan image found");
           return null;
         }
       }
@@ -161,7 +163,9 @@ class RightmoveAdapter {
           url: `https://www.rightmove.co.uk/properties/${listing.id}`
         };
       } else {
-        console.log(`Property ${listing.id} size (${sqm} sqm) does not meet minimum. Discarding.`);
+        const reason = sqm ? `Size ${sqm} sqm below min ${config.minSqm}` : "Could not determine size";
+        console.log(`Property ${listing.id} ignored: ${reason}`);
+        markAsIgnored(listing.id, this.platformName, reason);
         return null;
       }
 

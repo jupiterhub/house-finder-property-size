@@ -1,4 +1,4 @@
-const { isSeen, markAsSeen } = require('../utils/storage');
+const { isSeen, markAsSeen, markAsIgnored } = require('../utils/storage');
 const { extractSqmFromText } = require('../utils/parser');
 const { extractTextFromImage } = require('../utils/ocr');
 const config = require('../config.json');
@@ -99,19 +99,20 @@ class ZooplaAdapter {
       console.log(`Found ${listings.length} listings on this page.`);
 
       for (const listing of listings) {
-        if (isSeen(listing.id)) {
+        if (isSeen(listing.id, this.platformName)) {
           console.log(`Skipping already seen property: ${listing.id}`);
           continue;
         }
 
         if (listing.price > config.maxPrice) {
           console.log(`Skipping property ${listing.id} (Price ${listing.price} exceeds max ${config.maxPrice})`);
+          markAsIgnored(listing.id, this.platformName, `Price £${listing.price} exceeds max £${config.maxPrice}`);
           continue;
         }
 
-        markAsSeen(listing.id);
         const match = await this.processListing(listing);
         if (match) {
+          markAsSeen(listing.id, this.platformName);
           results.push(match);
         }
       }
@@ -146,15 +147,18 @@ class ZooplaAdapter {
           if (sqm) console.log(`Found SQM (${sqm}) in page text.`);
       }
 
-      // 2. Check NEXT_DATA script if not found in text
+      // 2. Check metadata scripts if not found in text
       if (!sqm) {
-          const nextDataText = await this.page.evaluate(() => {
-            const script = document.getElementById('__NEXT_DATA__');
-            return script ? script.textContent : null;
+          const scriptTexts = await this.page.evaluate(() => {
+            const scripts = Array.from(document.querySelectorAll('script'));
+            return scripts.map(s => s.textContent).filter(t => t && (t.includes('__NEXT_DATA__') || t.includes('self.__next_f.push')));
           });
-          if (nextDataText) {
-            sqm = extractSqmFromText(nextDataText);
-            if (sqm) console.log(`Found SQM (${sqm}) in NEXT_DATA.`);
+          for (const text of scriptTexts) {
+            sqm = extractSqmFromText(text);
+            if (sqm) {
+                console.log(`Found SQM (${sqm}) in metadata script.`);
+                break;
+            }
           }
       }
 
@@ -162,17 +166,13 @@ class ZooplaAdapter {
       if (!sqm) {
         // Specifically click the floor plan tab if it exists
         try {
-            const floorplanTab = this.page.locator('button:has(svg use[href*="floorplan"]), button:has-text("Floor plan")').first();
+            const floorplanTab = this.page.locator('button:has(svg use[href*="floorplan"]), button:has-text("Floor plan"), button:has-text("Floorplan")').first();
             if (await floorplanTab.isVisible({ timeout: 3000 })) {
                 await floorplanTab.click();
                 await this.page.waitForTimeout(3000); // give the tab plenty of time to open/load the images
-            } else {
-                console.log(`No floorplan button found on ${listing.id}. Discarding.`);
-                return null;
             }
         } catch (e) {
-            console.log(`No floorplan button found on ${listing.id}. Discarding.`);
-            return null;
+            console.log(`Note: No floorplan button to click on ${listing.id}`);
         }
 
         const rawUrls = await this.page.$$eval('img, source', els => {
@@ -191,16 +191,20 @@ class ZooplaAdapter {
         for (const urlStr of rawUrls) {
             const parts = urlStr.split(',').map(p => p.trim().split(' ')[0]); // Get the URL part of "url 480w"
             for (const part of parts) {
-                if (part && (part.includes('floor-plan') || part.includes('floorplan') || part.includes('fp.jpg') || part.includes('lc.zoocdn.com') || (part.includes('zoocdn.com') && !part.includes('logo') && !part.includes('.svg')))) {
-                    imageUrls.push(part);
+                if (part && (part.includes('floor-plan') || part.includes('floorplan') || part.includes('fp.jpg') || (part.includes('zoocdn.com') && !part.includes('logo') && !part.includes('.svg')))) {
+                    // Try to upgrade to high-res if it's a known Zoopla pattern
+                    let upgraded = part;
+                    if (part.includes('lid.zoocdn.com/u/480/360/')) {
+                        upgraded = part.replace('/u/480/360/', '/u/1200/900/');
+                    }
+                    imageUrls.push(upgraded);
                 }
             }
         }
 
         if (imageUrls.length > 0) {
-          // Zoopla's floorplans usually have the highest resolution versions available via 'lc.zoocdn.com'
-          // Or the last image loaded in the modal
-          let targetImage = imageUrls.find(src => src.includes('lc.zoocdn.com')) || imageUrls[imageUrls.length - 1];
+          // Zoopla's floorplans usually have the highest resolution versions available via 'lc.zoocdn.com' or 'lid.zoocdn.com'
+          let targetImage = imageUrls.find(src => src.includes('lc.zoocdn.com')) || imageUrls.find(src => src.includes('/u/1200/900/')) || imageUrls.find(src => src.includes('lid.zoocdn.com')) || imageUrls[imageUrls.length - 1];
           console.log(`Found floorplan image, running OCR on: ${targetImage}`);
           
           // Scale image using Playwright for better OCR
@@ -227,6 +231,7 @@ class ZooplaAdapter {
           sqm = extractSqmFromText(text);
         } else {
           console.log(`No floorplan image found for ${listing.id}. Discarding.`);
+          markAsIgnored(listing.id, this.platformName, "No floorplan image found");
           return null;
         }
       }
@@ -240,7 +245,9 @@ class ZooplaAdapter {
           url: `https://www.zoopla.co.uk/to-rent/details/${listing.id}/`
         };
       } else {
-        console.log(`Property ${listing.id} size (${sqm} sqm) does not meet minimum. Discarding.`);
+        const reason = sqm ? `Size ${sqm} sqm below min ${config.minSqm}` : "Could not determine size";
+        console.log(`Property ${listing.id} ignored: ${reason}`);
+        markAsIgnored(listing.id, this.platformName, reason);
         return null;
       }
 

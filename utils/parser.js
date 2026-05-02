@@ -8,11 +8,20 @@
 function extractSqmFromText(text) {
   if (!text) return null;
 
-  const normalizedText = text.toLowerCase().replace(/,/g, '');
+  // Normalize text: lowercase, remove commas, handle newlines
+  const normalizedText = text.toLowerCase().replace(/,/g, '').replace(/\s+/g, ' ');
 
   // 1. Explicit totals
-  const sqmRegex = /(\d+(?:\.\d+)?)\s*(?:sq\s*m|sqm|sq\.m\.|square\s*meters?)/;
-  const sqftRegex = /(\d+(?:\.\d+)?)\s*(?:sq\s*ft|sqft|sq\.ft\.|square\s*feet|square\s*foot)/;
+  const sqmRegex = /(\d+(?:\.\d+)?)\s*(?:sq\s*[mn]|sqm|sq\.m\.|square\s*meters?)/;
+  const sqftRegex = /(\d+(?:\.\d+)?)\s*(?:sq\s*[fhtl]|sqft|sq\.ft\.|square\s*feet|square\s*foot)/;
+  
+  // Look for "Total approx. floor area 254 sq.ft. (23.6 sq.m.)"
+  // Handling common OCR errors for "sq.m." like "sq.m", "sg.m", "sq.n"
+  const combinedRegex = /(?:total|approx|floor|area).*?(\d+(?:\.\d+)?)\s*(?:sq\s*[fhtl]|sqft).*?\((\d+(?:\.\d+)?)\s*(?:sq\s*[mn]|sqm)\)/i;
+  const combinedMatch = normalizedText.match(combinedRegex);
+  if (combinedMatch) {
+      return parseFloat(combinedMatch[2]);
+  }
 
   const sqmMatch = normalizedText.match(sqmRegex);
   if (sqmMatch && sqmMatch[1]) {
