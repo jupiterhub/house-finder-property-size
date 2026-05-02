@@ -75,7 +75,7 @@ function main() {
   const args = process.argv.slice(2);
   const flags = {
     maxPrice: null,
-    sort: 'timestamp',
+    sort: 'size',
     order: 'desc',
     output: null,
     cleanSeen: false,
@@ -138,21 +138,17 @@ function main() {
 
   const outputContent = result.map(formatMatchMarkdown).join('');
 
-  if (flags.migrate || (args.length === 0 && !flags.cleanSeen)) {
-    // Default behavior or explicit migrate: write to matches.md and potentially archive old txt
-    fs.writeFileSync(MD_FILE, outputContent);
-    console.log(`Updated ${MD_FILE} with ${result.length} matches.`);
+  const targetFile = flags.output || MD_FILE;
+  
+  if (flags.migrate || args.length >= 0) {
+    fs.writeFileSync(targetFile, outputContent);
+    console.log(`Updated ${targetFile} with ${result.length} matches (sorted by ${flags.sort} ${flags.order}).`);
     
     if (flags.migrate && fs.existsSync(TXT_FILE)) {
       const backupPath = TXT_FILE + '.bak';
       fs.renameSync(TXT_FILE, backupPath);
       console.log(`Migrated and backed up ${TXT_FILE} to ${backupPath}`);
     }
-  } else if (flags.output) {
-    fs.writeFileSync(flags.output, outputContent);
-    console.log(`Saved ${result.length} filtered/sorted matches to ${flags.output}`);
-  } else {
-    console.log(outputContent);
   }
 }
 
