@@ -1,5 +1,9 @@
 {
   "Rightmove": {
+    "174770801": {
+      "reason": "No floorplan image found",
+      "timestamp": "2026-05-02T21:15:21.955Z"
+    },
     "174771500": {
       "reason": "No floorplan image found",
       "timestamp": "2026-05-02T21:07:36.393Z"
@@ -14,13 +18,57 @@
       "reason": "No floorplan image found",
       "timestamp": "2026-05-02T21:08:34.352Z"
     },
+    "55044299": {
+      "reason": "No floorplan image found",
+      "timestamp": "2026-05-02T21:17:08.073Z"
+    },
+    "55941572": {
+      "reason": "Could not determine size",
+      "timestamp": "2026-05-02T21:17:07.426Z"
+    },
+    "59125587": {
+      "reason": "Could not determine size",
+      "timestamp": "2026-05-02T21:17:03.711Z"
+    },
+    "60409890": {
+      "reason": "No floorplan image found",
+      "timestamp": "2026-05-02T21:17:08.019Z"
+    },
+    "62309731": {
+      "reason": "Could not determine size",
+      "timestamp": "2026-05-02T21:15:49.064Z"
+    },
+    "64818019": {
+      "reason": "No floorplan image found",
+      "timestamp": "2026-05-02T21:17:08.509Z"
+    },
+    "66648151": {
+      "reason": "No floorplan image found",
+      "timestamp": "2026-05-02T21:17:08.133Z"
+    },
     "67397079": {
       "reason": "Could not determine size",
       "timestamp": "2026-05-02T21:08:15.619Z"
     },
+    "67711172": {
+      "reason": "No floorplan image found",
+      "timestamp": "2026-05-02T21:17:08.670Z"
+    },
     "67926667": {
       "reason": "Could not determine size",
       "timestamp": "2026-05-02T21:08:34.077Z"
+    },
+    "68206478": {
+      "reason": "No floorplan image found",
+      "timestamp": "2026-05-02T21:17:08.350Z"
+    },
+    "69941962": {
+      "reason": "No floorplan image found",
+      "timestamp": "2026-05-02T21:17:08.561Z"
+    },
+    "70742855": {
+      "reason": "Could not determine size",
+      "timestamp": "2026-05-02T21:16:26.558Z"
     },
     "70907450": {
       "reason": "Could not determine size",
@@ -30,9 +78,73 @@
       "reason": "Could not determine size",
       "timestamp": "2026-05-02T21:08:25.657Z"
     },
+    "71430595": {
+      "reason": "Could not determine size",
+      "timestamp": "2026-05-02T21:16:34.031Z"
+    },
+    "71432227": {
+      "reason": "Could not determine size",
+      "timestamp": "2026-05-02T21:16:25.392Z"
+    },
+    "71515961": {
+      "reason": "No floorplan image found",
+      "timestamp": "2026-05-02T21:17:08.775Z"
+    },
+    "72240340": {
+      "reason": "No floorplan image found",
+      "timestamp": "2026-05-02T21:17:08.242Z"
+    },
     "72292859": {
       "reason": "Could not determine size",
       "timestamp": "2026-05-02T21:08:32.329Z"
+    },
+    "72561288": {
+      "reason": "No floorplan image found",
+      "timestamp": "2026-05-02T21:17:07.966Z"
+    },
+    "72610387": {
+      "reason": "Could not determine size",
+      "timestamp": "2026-05-02T21:16:29.311Z"
+    },
+    "72681023": {
+      "reason": "No floorplan image found",
+      "timestamp": "2026-05-02T21:17:08.827Z"
+    },
+    "72762976": {
+      "reason": "Could not determine size",
+      "timestamp": "2026-05-02T21:16:59.730Z"
+    },
+    "72853751": {
+      "reason": "No floorplan image found",
+      "timestamp": "2026-05-02T21:17:08.723Z"
+    },
+    "72856629": {
+      "reason": "Could not determine size",
+      "timestamp": "2026-05-02T21:16:54.557Z"
+    },
+    "72868317": {
+      "reason": "No floorplan image found",
+      "timestamp": "2026-05-02T21:17:08.297Z"
+    },
+    "72868863": {
+      "reason": "Size 31 sqm below min 40",
+      "timestamp": "2026-05-02T21:17:07.815Z"
+    },
+    "72890360": {
+      "reason": "No floorplan image found",
+      "timestamp": "2026-05-02T21:17:08.401Z"
+    },
+    "72935761": {
+      "reason": "No floorplan image found",
+      "timestamp": "2026-05-02T21:17:07.895Z"
+    },
+    "72935762": {
+      "reason": "Could not determine size",
+      "timestamp": "2026-05-02T21:16:55.494Z"
+    },
+    "72945088": {
+      "reason": "No floorplan image found",
+      "timestamp": "2026-05-02T21:17:08.619Z"
     },
     "73017201": {
       "reason": "Could not determine size",
@@ -41,6 +153,10 @@
     "73019320": {
       "reason": "Could not determine size",
       "timestamp": "2026-05-02T21:08:33.890Z"
+    },
+    "73023483": {
+      "reason": "No floorplan image found",
+      "timestamp": "2026-05-02T21:17:08.188Z"
     },
     "73030327": {
       "reason": "No floorplan image found",
@@ -53,6 +169,10 @@
     "73034454": {
       "reason": "No floorplan image found",
       "timestamp": "2026-05-02T21:08:34.408Z"
+    },
+    "73038469": {
+      "reason": "No floorplan image found",
+      "timestamp": "2026-05-02T21:17:08.455Z"
     },
     "73040720": {
       "reason": "Could not determine size",
@@ -82,6 +202,10 @@
       "reason": "Could not determine size",
       "timestamp": "2026-05-02T21:08:29.939Z"
     },
+    "73058920": {
+      "reason": "Could not determine size",
+      "timestamp": "2026-05-02T21:16:59.110Z"
+    },
     "73064517": {
       "reason": "No floorplan image found",
       "timestamp": "2026-05-02T21:08:34.461Z"
@@ -89,6 +213,10 @@
     "73076825": {
       "reason": "Could not determine size",
       "timestamp": "2026-05-02T21:08:03.152Z"
+    },
+    "73082272": {
+      "reason": "Could not determine size",
+      "timestamp": "2026-05-02T21:16:20.290Z"
     },
     "73089271": {
       "reason": "No floorplan image found",
@@ -109,6 +237,10 @@
     "73093762": {
       "reason": "No floorplan image found",
       "timestamp": "2026-05-02T21:08:34.710Z"
+    },
+    "73094151": {
+      "reason": "Could not determine size",
+      "timestamp": "2026-05-02T21:16:21.492Z"
     }
   }
 }

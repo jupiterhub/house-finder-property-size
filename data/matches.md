@@ -25,21 +25,21 @@
 
 ---
 
-### [2026-05-02T20:13:36.411Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **ID**: 174493166
-- **Price**: £4250 PCM
-- **Size**: 84 sqm
-- **Link**: [https://www.rightmove.co.uk/properties/174493166](https://www.rightmove.co.uk/properties/174493166)
-
----
-
 ### [2026-05-02T20:15:55.706Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **ID**: 173811215
 - **Price**: £4250 PCM
 - **Size**: 84 sqm
 - **Link**: [https://www.rightmove.co.uk/properties/173811215](https://www.rightmove.co.uk/properties/173811215)
+
+---
+
+### [2026-05-02T20:13:36.411Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **ID**: 174493166
+- **Price**: £4250 PCM
+- **Size**: 84 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/174493166](https://www.rightmove.co.uk/properties/174493166)
 
 ---
 
@@ -52,12 +52,12 @@
 
 ---
 
-### [2026-05-02T20:15:55.705Z] MATCH FOUND!
+### [2026-05-02T20:15:55.706Z] MATCH FOUND!
 - **Platform**: Rightmove
-- **ID**: 87908958
-- **Price**: £4800 PCM
+- **ID**: 88013841
+- **Price**: £3700 PCM
 - **Size**: 80 sqm
-- **Link**: [https://www.rightmove.co.uk/properties/87908958](https://www.rightmove.co.uk/properties/87908958)
+- **Link**: [https://www.rightmove.co.uk/properties/88013841](https://www.rightmove.co.uk/properties/88013841)
 
 ---
 
@@ -70,12 +70,12 @@
 
 ---
 
-### [2026-05-02T20:15:55.706Z] MATCH FOUND!
+### [2026-05-02T20:15:55.705Z] MATCH FOUND!
 - **Platform**: Rightmove
-- **ID**: 88013841
-- **Price**: £3700 PCM
+- **ID**: 87908958
+- **Price**: £4800 PCM
 - **Size**: 80 sqm
-- **Link**: [https://www.rightmove.co.uk/properties/88013841](https://www.rightmove.co.uk/properties/88013841)
+- **Link**: [https://www.rightmove.co.uk/properties/87908958](https://www.rightmove.co.uk/properties/87908958)
 
 ---
 
@@ -124,21 +124,21 @@
 
 ---
 
-### [2026-05-02T20:15:55.705Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **ID**: 87899415
-- **Price**: £3500 PCM
-- **Size**: 71 sqm
-- **Link**: [https://www.rightmove.co.uk/properties/87899415](https://www.rightmove.co.uk/properties/87899415)
-
----
-
 ### [2026-05-02T20:15:55.707Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **ID**: 87962367
 - **Price**: £3900 PCM
 - **Size**: 71 sqm
 - **Link**: [https://www.rightmove.co.uk/properties/87962367](https://www.rightmove.co.uk/properties/87962367)
+
+---
+
+### [2026-05-02T20:15:55.705Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **ID**: 87899415
+- **Price**: £3500 PCM
+- **Size**: 71 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/87899415](https://www.rightmove.co.uk/properties/87899415)
 
 ---
 
@@ -151,21 +151,21 @@
 
 ---
 
-### [2026-05-02T20:15:55.705Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **ID**: 87996729
-- **Price**: £2900 PCM
-- **Size**: 69 sqm
-- **Link**: [https://www.rightmove.co.uk/properties/87996729](https://www.rightmove.co.uk/properties/87996729)
-
----
-
 ### [2026-05-02T20:15:55.706Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **ID**: 87900099
 - **Price**: £3250 PCM
 - **Size**: 69 sqm
 - **Link**: [https://www.rightmove.co.uk/properties/87900099](https://www.rightmove.co.uk/properties/87900099)
+
+---
+
+### [2026-05-02T20:15:55.705Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **ID**: 87996729
+- **Price**: £2900 PCM
+- **Size**: 69 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/87996729](https://www.rightmove.co.uk/properties/87996729)
 
 ---
 
@@ -225,19 +225,19 @@
 
 ### [2026-05-02T20:15:55.705Z] MATCH FOUND!
 - **Platform**: Rightmove
-- **ID**: 174040445
-- **Price**: £2500 PCM
+- **ID**: 87992601
+- **Price**: £3250 PCM
 - **Size**: 62 sqm
-- **Link**: [https://www.rightmove.co.uk/properties/174040445](https://www.rightmove.co.uk/properties/174040445)
+- **Link**: [https://www.rightmove.co.uk/properties/87992601](https://www.rightmove.co.uk/properties/87992601)
 
 ---
 
 ### [2026-05-02T20:15:55.705Z] MATCH FOUND!
 - **Platform**: Rightmove
-- **ID**: 87992601
-- **Price**: £3250 PCM
+- **ID**: 174040445
+- **Price**: £2500 PCM
 - **Size**: 62 sqm
-- **Link**: [https://www.rightmove.co.uk/properties/87992601](https://www.rightmove.co.uk/properties/87992601)
+- **Link**: [https://www.rightmove.co.uk/properties/174040445](https://www.rightmove.co.uk/properties/174040445)
 
 ---
 
@@ -333,19 +333,19 @@
 
 ### [2026-05-02T20:15:55.706Z] MATCH FOUND!
 - **Platform**: Rightmove
-- **ID**: 88017294
-- **Price**: £4333 PCM
+- **ID**: 87858384
+- **Price**: £3497 PCM
 - **Size**: 54 sqm
-- **Link**: [https://www.rightmove.co.uk/properties/88017294](https://www.rightmove.co.uk/properties/88017294)
+- **Link**: [https://www.rightmove.co.uk/properties/87858384](https://www.rightmove.co.uk/properties/87858384)
 
 ---
 
 ### [2026-05-02T20:15:55.706Z] MATCH FOUND!
 - **Platform**: Rightmove
-- **ID**: 87858384
-- **Price**: £3497 PCM
+- **ID**: 88017294
+- **Price**: £4333 PCM
 - **Size**: 54 sqm
-- **Link**: [https://www.rightmove.co.uk/properties/87858384](https://www.rightmove.co.uk/properties/87858384)
+- **Link**: [https://www.rightmove.co.uk/properties/88017294](https://www.rightmove.co.uk/properties/88017294)
 
 ---
 
@@ -358,12 +358,12 @@
 
 ---
 
-### [2026-05-02T20:15:55.705Z] MATCH FOUND!
+### [2026-05-02T20:15:55.707Z] MATCH FOUND!
 - **Platform**: Rightmove
-- **ID**: 173877707
-- **Price**: £2400 PCM
+- **ID**: 171491006
+- **Price**: £3228 PCM
 - **Size**: 52 sqm
-- **Link**: [https://www.rightmove.co.uk/properties/173877707](https://www.rightmove.co.uk/properties/173877707)
+- **Link**: [https://www.rightmove.co.uk/properties/171491006](https://www.rightmove.co.uk/properties/171491006)
 
 ---
 
@@ -376,12 +376,21 @@
 
 ---
 
-### [2026-05-02T20:15:55.707Z] MATCH FOUND!
+### [2026-05-02T20:15:55.705Z] MATCH FOUND!
 - **Platform**: Rightmove
-- **ID**: 171491006
-- **Price**: £3228 PCM
+- **ID**: 173877707
+- **Price**: £2400 PCM
 - **Size**: 52 sqm
-- **Link**: [https://www.rightmove.co.uk/properties/171491006](https://www.rightmove.co.uk/properties/171491006)
+- **Link**: [https://www.rightmove.co.uk/properties/173877707](https://www.rightmove.co.uk/properties/173877707)
+
+---
+
+### [2026-05-02T21:17:24.926Z] MATCH FOUND!
+- **Platform**: Zoopla
+- **ID**: 67090388
+- **Price**: £2210 PCM
+- **Size**: 51.4 sqm
+- **Link**: [https://www.zoopla.co.uk/to-rent/details/67090388/](https://www.zoopla.co.uk/to-rent/details/67090388/)
 
 ---
 
@@ -394,12 +403,12 @@
 
 ---
 
-### [2026-05-02T18:56:01.922Z] MATCH FOUND!
+### [2026-05-02T20:15:55.707Z] MATCH FOUND!
 - **Platform**: Rightmove
-- **ID**: 87703854
-- **Price**: £4120 PCM
+- **ID**: 174925886
+- **Price**: £3467 PCM
 - **Size**: 51 sqm
-- **Link**: [https://www.rightmove.co.uk/properties/87703854](https://www.rightmove.co.uk/properties/87703854)
+- **Link**: [https://www.rightmove.co.uk/properties/174925886](https://www.rightmove.co.uk/properties/174925886)
 
 ---
 
@@ -412,12 +421,12 @@
 
 ---
 
-### [2026-05-02T20:15:55.707Z] MATCH FOUND!
+### [2026-05-02T18:56:01.922Z] MATCH FOUND!
 - **Platform**: Rightmove
-- **ID**: 174925886
-- **Price**: £3467 PCM
+- **ID**: 87703854
+- **Price**: £4120 PCM
 - **Size**: 51 sqm
-- **Link**: [https://www.rightmove.co.uk/properties/174925886](https://www.rightmove.co.uk/properties/174925886)
+- **Link**: [https://www.rightmove.co.uk/properties/87703854](https://www.rightmove.co.uk/properties/87703854)
 
 ---
 
@@ -439,15 +448,6 @@
 
 ---
 
-### [2026-05-02T20:15:55.704Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **ID**: 87990153
-- **Price**: £1993 PCM
-- **Size**: 49 sqm
-- **Link**: [https://www.rightmove.co.uk/properties/87990153](https://www.rightmove.co.uk/properties/87990153)
-
----
-
 ### [2026-05-02T20:15:55.707Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **ID**: 172613117
@@ -457,12 +457,30 @@
 
 ---
 
+### [2026-05-02T20:15:55.704Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **ID**: 87990153
+- **Price**: £1993 PCM
+- **Size**: 49 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/87990153](https://www.rightmove.co.uk/properties/87990153)
+
+---
+
 ### [2026-05-02T20:21:02.303Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **ID**: 174682085
 - **Price**: £2149 PCM
 - **Size**: 48.31 sqm
 - **Link**: [https://www.rightmove.co.uk/properties/174682085](https://www.rightmove.co.uk/properties/174682085)
+
+---
+
+### [2026-05-02T20:21:02.303Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **ID**: 174893072
+- **Price**: £2492 PCM
+- **Size**: 48 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/174893072](https://www.rightmove.co.uk/properties/174893072)
 
 ---
 
@@ -477,19 +495,19 @@
 
 ### [2026-05-02T20:21:02.303Z] MATCH FOUND!
 - **Platform**: Rightmove
-- **ID**: 174893072
-- **Price**: £2492 PCM
-- **Size**: 48 sqm
-- **Link**: [https://www.rightmove.co.uk/properties/174893072](https://www.rightmove.co.uk/properties/174893072)
-
----
-
-### [2026-05-02T20:21:02.303Z] MATCH FOUND!
-- **Platform**: Rightmove
 - **ID**: 172765358
 - **Price**: £2150 PCM
 - **Size**: 47.9 sqm
 - **Link**: [https://www.rightmove.co.uk/properties/172765358](https://www.rightmove.co.uk/properties/172765358)
+
+---
+
+### [2026-05-02T21:17:24.926Z] MATCH FOUND!
+- **Platform**: Zoopla
+- **ID**: 68449109
+- **Price**: £2318 PCM
+- **Size**: 47.1 sqm
+- **Link**: [https://www.zoopla.co.uk/to-rent/details/68449109/](https://www.zoopla.co.uk/to-rent/details/68449109/)
 
 ---
 
@@ -511,12 +529,12 @@
 
 ---
 
-### [2026-05-02T20:21:02.302Z] MATCH FOUND!
+### [2026-05-02T20:21:02.303Z] MATCH FOUND!
 - **Platform**: Rightmove
-- **ID**: 174925166
-- **Price**: £2200 PCM
+- **ID**: 174604265
+- **Price**: £2500 PCM
 - **Size**: 46 sqm
-- **Link**: [https://www.rightmove.co.uk/properties/174925166](https://www.rightmove.co.uk/properties/174925166)
+- **Link**: [https://www.rightmove.co.uk/properties/174604265](https://www.rightmove.co.uk/properties/174604265)
 
 ---
 
@@ -529,21 +547,12 @@
 
 ---
 
-### [2026-05-02T20:21:02.303Z] MATCH FOUND!
+### [2026-05-02T20:21:02.302Z] MATCH FOUND!
 - **Platform**: Rightmove
-- **ID**: 174604265
-- **Price**: £2500 PCM
+- **ID**: 174925166
+- **Price**: £2200 PCM
 - **Size**: 46 sqm
-- **Link**: [https://www.rightmove.co.uk/properties/174604265](https://www.rightmove.co.uk/properties/174604265)
-
----
-
-### [2026-05-02T20:21:02.303Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **ID**: 87810489
-- **Price**: £2492 PCM
-- **Size**: 45 sqm
-- **Link**: [https://www.rightmove.co.uk/properties/87810489](https://www.rightmove.co.uk/properties/87810489)
+- **Link**: [https://www.rightmove.co.uk/properties/174925166](https://www.rightmove.co.uk/properties/174925166)
 
 ---
 
@@ -553,6 +562,15 @@
 - **Price**: £2492 PCM
 - **Size**: 45 sqm
 - **Link**: [https://www.rightmove.co.uk/properties/87808641](https://www.rightmove.co.uk/properties/87808641)
+
+---
+
+### [2026-05-02T20:21:02.303Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **ID**: 87810489
+- **Price**: £2492 PCM
+- **Size**: 45 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/87810489](https://www.rightmove.co.uk/properties/87810489)
 
 ---
 
@@ -648,15 +666,6 @@
 
 ### [2026-05-02T20:15:55.706Z] MATCH FOUND!
 - **Platform**: Rightmove
-- **ID**: 87916644
-- **Price**: £2575 PCM
-- **Size**: 27 sqm
-- **Link**: [https://www.rightmove.co.uk/properties/87916644](https://www.rightmove.co.uk/properties/87916644)
-
----
-
-### [2026-05-02T20:15:55.706Z] MATCH FOUND!
-- **Platform**: Rightmove
 - **ID**: 87916650
 - **Price**: £3900 PCM
 - **Size**: 27 sqm
@@ -664,12 +673,12 @@
 
 ---
 
-### [2026-05-02T20:15:55.704Z] MATCH FOUND!
+### [2026-05-02T20:15:55.706Z] MATCH FOUND!
 - **Platform**: Rightmove
-- **ID**: 88013265
-- **Price**: £1900 PCM
-- **Size**: 26 sqm
-- **Link**: [https://www.rightmove.co.uk/properties/88013265](https://www.rightmove.co.uk/properties/88013265)
+- **ID**: 87916644
+- **Price**: £2575 PCM
+- **Size**: 27 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/87916644](https://www.rightmove.co.uk/properties/87916644)
 
 ---
 
@@ -679,6 +688,15 @@
 - **Price**: £1829 PCM
 - **Size**: 26 sqm
 - **Link**: [https://www.rightmove.co.uk/properties/87895821](https://www.rightmove.co.uk/properties/87895821)
+
+---
+
+### [2026-05-02T20:15:55.704Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **ID**: 88013265
+- **Price**: £1900 PCM
+- **Size**: 26 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/88013265](https://www.rightmove.co.uk/properties/88013265)
 
 ---
 
