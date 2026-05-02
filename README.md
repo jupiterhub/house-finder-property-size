@@ -25,8 +25,15 @@ You can edit `config.json` in the project directory to update your search:
 - `rightmoveUrls` / `zooplaUrls`: Add or remove search links here.
 
 ## 📂 Output Files
-- **`data/matches.txt`**: A clean log of all properties that meet your criteria.
+- **`data/matches.md`**: A clean, readable Markdown log of all properties that meet your criteria.
 - **`data/seen_properties.json`**: The database of processed property IDs.
+
+## 🧹 Data Management
+Use the `tidy_data.js` script to manage your matches and clean up seen properties:
+- **Tidy & Migrate**: `node tidy_data.js --migrate` (converts .txt to .md and deduplicates).
+- **Clean Seen Properties**: `node tidy_data.js --clean-seen` (deduplicates and sorts IDs).
+- **Filter by Price**: `node tidy_data.js --max-price 2500 --output data/budget_matches.md`.
+- **Sort Matches**: `node tidy_data.js --sort price --order asc`.
 
 ## 🛠 Troubleshooting
 - **CAPTCHA:** If the terminal says "CAPTCHA detected", look at the browser window that popped up, click the "Verify you are human" checkbox, and wait. The terminal will resume automatically.

@@ -3,7 +3,7 @@ const path = require('path');
 
 const DATA_DIR = path.join(__dirname, '..', 'data');
 const SEEN_FILE = path.join(DATA_DIR, 'seen_properties.json');
-const MATCHES_FILE = path.join(DATA_DIR, 'matches.txt');
+const MATCHES_FILE = path.join(DATA_DIR, 'matches.md');
 
 // Ensure data directory exists
 if (!fs.existsSync(DATA_DIR)) {
@@ -54,6 +54,9 @@ function saveMatch(propertyData) {
 module.exports = {
   getSeenProperties,
   markAsSeen,
+  isSeen,
+  saveMatch
+};
   isSeen,
   saveMatch
 };
