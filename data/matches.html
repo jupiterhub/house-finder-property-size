@@ -64,10 +64,21 @@ function filterTable() {
 
         if (isNumeric) {
           var numCellValue = parseFloat(cellValue);
-          var numFilterValue = parseFloat(filterValue);
-          if (!isNaN(numFilterValue) && numCellValue < numFilterValue) {
-            display = "none";
-            break;
+          var operatorMatch = filterValue.match(/^(>=|<=|>|<)?\s*([\d,.]+)/);
+          if (operatorMatch) {
+            var operator = operatorMatch[1] || '>=';
+            var numFilterValue = parseFloat(operatorMatch[2].replace(/,/g, ''));
+            
+            var match = false;
+            if (operator === '>=') match = numCellValue >= numFilterValue;
+            else if (operator === '<=') match = numCellValue <= numFilterValue;
+            else if (operator === '>') match = numCellValue > numFilterValue;
+            else if (operator === '<') match = numCellValue < numFilterValue;
+            
+            if (!match) {
+              display = "none";
+              break;
+            }
           }
         } else {
           if (cellValue.toLowerCase().indexOf(filterValue.toLowerCase()) === -1) {
@@ -146,9 +157,9 @@ function sortTable(n) {
       <th onclick="sortTable(0)">Date ↕<br><input type="text" class="filter-input" data-col="0" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Filter..."></th>
       <th onclick="sortTable(1)">Platform ↕<br><input type="text" class="filter-input" data-col="1" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Filter..."></th>
       <th onclick="sortTable(2)">Location ↕<br><input type="text" class="filter-input" data-col="2" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Filter..."></th>
-      <th onclick="sortTable(3)">Price ↕<br><input type="text" class="filter-input" data-col="3" data-type="numeric" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Min £..."></th>
-      <th onclick="sortTable(4)">Size (sqm) ↕<br><input type="text" class="filter-input" data-col="4" data-type="numeric" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Min sqm..."></th>
-      <th onclick="sortTable(5)">£ / sqm ↕<br><input type="text" class="filter-input" data-col="5" data-type="numeric" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Min £/sqm..."></th>
+      <th onclick="sortTable(3)">Price ↕<br><input type="text" class="filter-input" data-col="3" data-type="numeric" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Price (e.g. >2000)..."></th>
+      <th onclick="sortTable(4)">Size (sqm) ↕<br><input type="text" class="filter-input" data-col="4" data-type="numeric" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Size (e.g. <50)..."></th>
+      <th onclick="sortTable(5)">£ / sqm ↕<br><input type="text" class="filter-input" data-col="5" data-type="numeric" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="£/sqm (e.g. >=40)..."></th>
       <th style="cursor: default; text-align: center;">Link</th>
     </tr>
   </thead>
