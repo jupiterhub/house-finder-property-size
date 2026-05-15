@@ -6,20 +6,23 @@
     "Farringdon",
     "Bloomsbury (Russell Square)",
     "Moorgate",
-    "Blackfriars"
+    "Blackfriars",
+    "Canary Wharf"
   ],
   "rightmoveUrls": [
     "https://www.rightmove.co.uk/property-to-rent/find.html?useLocationIdentifier=true&locationIdentifier=STATION%5E5162&_includeLetAgreed=false&maxBedrooms=2&index=0&sortType=6&channel=RENT&transactionType=LETTING&displayLocationIdentifier=Kings-Cross-Station.html&maxPrice=2500",
     "https://www.rightmove.co.uk/property-to-rent/find.html?useLocationIdentifier=true&locationIdentifier=STATION%5E3431&_includeLetAgreed=false&maxBedrooms=2&index=0&sortType=6&channel=RENT&transactionType=LETTING&displayLocationIdentifier=Farringdon-Station.html&maxPrice=2500",
     "https://www.rightmove.co.uk/property-to-rent/find.html?useLocationIdentifier=true&locationIdentifier=STATION%5E7877&_includeLetAgreed=false&maxBedrooms=2&index=0&sortType=6&channel=RENT&transactionType=LETTING&displayLocationIdentifier=Russell-Square-Station.html&maxPrice=2500",
     "https://www.rightmove.co.uk/property-to-rent/find.html?useLocationIdentifier=true&locationIdentifier=STATION%5E6332&_includeLetAgreed=false&maxBedrooms=2&index=0&sortType=6&channel=RENT&transactionType=LETTING&displayLocationIdentifier=Moorgate-Station.html&maxPrice=2500",
-    "https://www.rightmove.co.uk/property-to-rent/find.html?useLocationIdentifier=true&locationIdentifier=STATION%5E1040&_includeLetAgreed=false&maxBedrooms=2&index=0&sortType=6&channel=RENT&transactionType=LETTING&displayLocationIdentifier=Blackfriars-Station.html&maxPrice=2500"
+    "https://www.rightmove.co.uk/property-to-rent/find.html?useLocationIdentifier=true&locationIdentifier=STATION%5E1040&_includeLetAgreed=false&maxBedrooms=2&index=0&sortType=6&channel=RENT&transactionType=LETTING&displayLocationIdentifier=Blackfriars-Station.html&maxPrice=2500",
+    "https://www.rightmove.co.uk/property-to-rent/find.html?useLocationIdentifier=true&locationIdentifier=STATION%5E1724&_includeLetAgreed=false&maxBedrooms=2&index=0&sortType=6&channel=RENT&transactionType=LETTING&displayLocationIdentifier=Canary-Wharf-Station.html&maxPrice=2500"
   ],
   "zooplaUrls": [
     "https://www.zoopla.co.uk/to-rent/property/station/tube/kings-cross-st-pancras/?beds_max=2&price_frequency=per_month&price_max=2500&q=King%27s%20Cross%20St.%20Pancras%20Station%2C%20London&search_source=to-rent",
-    "https://www.zoopla.co.uk/to-rent/property/station/tube/kings-cross-st-pancras/?beds_max=2&price_frequency=per_month&price_max=2500&q=King%27s%20Cross%20St.%20Pancras%20Station%2C%20London&search_source=to-rent",
+    "https://www.zoopla.co.uk/to-rent/property/station/farringdon/?beds_max=2&price_frequency=per_month&price_max=2500&q=Farringdon%20Station%2C%20London&search_source=to-rent",
     "https://www.zoopla.co.uk/to-rent/property/station/tube/russell-square/?beds_max=2&price_frequency=per_month&price_max=2500&q=Russell%20Square%20Station%2C%20London&search_source=to-rent",
     "https://www.zoopla.co.uk/to-rent/property/station/rail/moorgate/?beds_max=2&price_frequency=per_month&price_max=2500&q=Moorgate%20Station%2C%20London&search_source=to-rent",
-    "https://www.zoopla.co.uk/to-rent/property/station/tube/blackfriars/?beds_max=2&price_frequency=per_month&price_max=2500&q=Blackfriars%20Station%2C%20London&search_source=to-rent"
+    "https://www.zoopla.co.uk/to-rent/property/station/tube/blackfriars/?beds_max=2&price_frequency=per_month&price_max=2500&q=Blackfriars%20Station%2C%20London&search_source=to-rent",
+    "https://www.zoopla.co.uk/to-rent/property/station/tube/canary-wharf/?beds_max=2&price_frequency=per_month&price_max=2500&q=Canary%20Wharf%20Station%2C%20London&search_source=to-rent"
   ]
 }
