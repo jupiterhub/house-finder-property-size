@@ -34,18 +34,20 @@ class ZooplaAdapter {
   }
 
   async checkCaptcha() {
-    try {
-        let isCaptcha = await this.page.isVisible('text="Verify you are human"');
-        if (isCaptcha) {
-            console.log("CAPTCHA detected! Waiting for manual intervention...");
-            while (isCaptcha) {
-                await this.page.waitForTimeout(5000); // Check every 5 seconds
-                isCaptcha = await this.page.isVisible('text="Verify you are human"');
-            }
-            console.log("CAPTCHA resolved! Continuing scraping...");
-            await this.page.waitForTimeout(3000); // Give the page a moment to fully load the next screen
+    let isCaptcha = await this.page.isVisible('text="Verify you are human"').catch(() => false);
+    if (isCaptcha) {
+        if (process.env.CI) {
+            console.error("CAPTCHA detected in CI environment! Cannot manually resolve. Aborting Zoopla scrape.");
+            throw new Error("CAPTCHA_IN_CI");
         }
-    } catch(e) {}
+        console.log("CAPTCHA detected! Waiting for manual intervention...");
+        while (isCaptcha) {
+            await this.page.waitForTimeout(5000); // Check every 5 seconds
+            isCaptcha = await this.page.isVisible('text="Verify you are human"').catch(() => false);
+        }
+        console.log("CAPTCHA resolved! Continuing scraping...");
+        await this.page.waitForTimeout(3000); // Give the page a moment to fully load the next screen
+    }
   }
 
   async run() {
@@ -252,6 +254,7 @@ class ZooplaAdapter {
       }
 
     } catch (error) {
+      if (error.message === "CAPTCHA_IN_CI") throw error;
       console.error(`Error processing ${listing.id}:`, error.message);
       return null;
     }
