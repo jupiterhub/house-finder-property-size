@@ -54,8 +54,11 @@ class ZooplaAdapter {
     const results = [];
     console.log(`Starting ${this.platformName} scraping...`);
 
-    for (const url of config.zooplaUrls) {
-      console.log(`Navigating to search URL: ${url}`);
+    for (let i = 0; i < config.zooplaUrls.length; i++) {
+      const url = config.zooplaUrls[i];
+      const locationName = config.locations[i] || 'Unknown';
+      
+      console.log(`Navigating to search URL: ${url} (${locationName})`);
       await this.page.goto(url, { waitUntil: 'domcontentloaded' });
       
       await this.checkCaptcha();
@@ -112,7 +115,7 @@ class ZooplaAdapter {
           continue;
         }
 
-        const match = await this.processListing(listing);
+        const match = await this.processListing(listing, locationName);
         if (match) {
           markAsSeen(listing.id, this.platformName);
           results.push(match);
@@ -123,7 +126,7 @@ class ZooplaAdapter {
     return results;
   }
 
-  async processListing(listing) {
+  async processListing(listing, locationName) {
     const floorplanUrl = `https://www.zoopla.co.uk/to-rent/details/${listing.id}/?tab=floor_plans`;
     console.log(`Processing listing: ${floorplanUrl}`);
     
@@ -244,6 +247,7 @@ class ZooplaAdapter {
           id: listing.id,
           price: listing.price,
           sqm: sqm,
+          location: locationName,
           url: `https://www.zoopla.co.uk/to-rent/details/${listing.id}/`
         };
       } else {

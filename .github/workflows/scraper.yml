@@ -33,7 +33,7 @@ jobs:
         run: npx playwright install --with-deps chromium
 
       - name: Run Scraper
-        run: node index.js
+        run: bash run.sh
 
       - name: Commit and Push Changes
         run: |

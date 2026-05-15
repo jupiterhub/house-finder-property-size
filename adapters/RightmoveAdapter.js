@@ -160,6 +160,7 @@ class RightmoveAdapter {
           id: listing.id,
           price: listing.price,
           sqm: sqm,
+          location: locationName,
           url: `https://www.rightmove.co.uk/properties/${listing.id}`
         };
       } else {

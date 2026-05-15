@@ -24,6 +24,11 @@ function parseMatches(content) {
     const platformMatch = block.match(/(?:Platform:|\*\*Platform\*\*:) (.*)/);
     if (platformMatch) match.platform = platformMatch[1].trim();
 
+    // Parse Location
+    const locMatch = block.match(/(?:Location:|\*\*Location\*\*:) (.*)/);
+    if (locMatch) match.location = locMatch[1].trim();
+    else match.location = 'Unknown';
+
     // Parse ID
     const idMatch = block.match(/(?:ID:|\*\*ID\*\*:) (.*)/);
     if (idMatch) match.id = idMatch[1].trim();
@@ -75,7 +80,7 @@ function main() {
   const args = process.argv.slice(2);
   const flags = {
     maxPrice: null,
-    sort: 'size',
+    sort: 'recent',
     order: 'desc',
     output: null,
     cleanSeen: false,
@@ -124,6 +129,35 @@ function main() {
 
   // Sort
   result.sort((a, b) => {
+    if (flags.sort === 'recent') {
+      // Primary: Recent match date (descending)
+      const timeA = a.timestamp ? a.timestamp.getTime() : 0;
+      const timeB = b.timestamp ? b.timestamp.getTime() : 0;
+      
+      if (timeA !== timeB) {
+        return timeB - timeA;
+      }
+      
+      // Secondary: SQM size (descending)
+      const sizeA = a.size || 0;
+      const sizeB = b.size || 0;
+      if (sizeA !== sizeB) {
+        return sizeB - sizeA;
+      }
+
+      // Tertiary: Price (ascending)
+      const priceA = a.price || 0;
+      const priceB = b.price || 0;
+      if (priceA !== priceB) {
+        return priceA - priceB;
+      }
+
+      // Quaternary: Location (ascending)
+      const locA = a.location || 'Unknown';
+      const locB = b.location || 'Unknown';
+      return locA.localeCompare(locB);
+    }
+
     let valA = a[flags.sort];
     let valB = b[flags.sort];
 
