@@ -1,0 +1,44 @@
+name: Property Scraper
+
+on:
+  schedule:
+    # Run at 10:43 AM UTC every day.
+    # This blends in better with typical daytime human traffic.
+    - cron: '43 10 * * *'
+  # Allow manual triggering from the GitHub Actions tab
+  workflow_dispatch:
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    
+    # Optional but good practice: Give the job permissions to push back to the repo
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20' # LTS
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps chromium
+
+      - name: Run Scraper
+        run: node index.js
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add data/
+          # Only commit and push if there are changes
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: update scraped properties [skip ci]" && git push)
