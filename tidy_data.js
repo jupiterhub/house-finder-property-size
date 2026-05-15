@@ -230,11 +230,12 @@ function main() {
     if (htmlFile !== targetFile) {
       const htmlRows = result.map(m => {
         const dateStr = m.timestamp ? m.timestamp.toISOString().replace(/T/, ' ').replace(/\..+/, '') : '';
+        const timestamp = m.timestamp ? m.timestamp.getTime() : 0;
         const pricePerSqm = (m.price && m.size) ? (m.price / m.size).toFixed(2) : 'N/A';
         const pricePerSqmValue = (m.price && m.size) ? (m.price / m.size) : 0;
         
         return `<tr>
-          <td>${dateStr}</td>
+          <td data-value="${timestamp}">${dateStr}</td>
           <td>${m.platform}</td>
           <td>${m.location || 'Unknown'}</td>
           <td class="numeric" data-value="${m.price || 0}">£${m.price || 0}</td>
@@ -305,29 +306,48 @@ function filterTable() {
         var td = tr[i].getElementsByTagName("td")[colIndex];
         if (!td) continue;
 
-        var cellValue = td.getAttribute("data-value") || td.textContent.trim();
-        var isNumeric = input.getAttribute("data-type") === "numeric";
+        var cellValue = td.getAttribute("data-value");
+        var type = input.getAttribute("data-type");
+        var isNumeric = type === "numeric";
+        var isDate = type === "date";
 
-        if (isNumeric) {
-          var numCellValue = parseFloat(cellValue);
-          var operatorMatch = filterValue.match(/^(>=|<=|>|<)?\\s*([\\d,.]+)/);
-          if (operatorMatch) {
-            var operator = operatorMatch[1] || '>=';
-            var numFilterValue = parseFloat(operatorMatch[2].replace(/,/g, ''));
-            
-            var match = false;
-            if (operator === '>=') match = numCellValue >= numFilterValue;
-            else if (operator === '<=') match = numCellValue <= numFilterValue;
-            else if (operator === '>') match = numCellValue > numFilterValue;
-            else if (operator === '<') match = numCellValue < numFilterValue;
-            
-            if (!match) {
-              display = "none";
-              break;
+        if (isNumeric || isDate) {
+          var numCellValue = parseFloat(cellValue || td.textContent.trim());
+          var operatorMatch = filterValue.match(/^(>=|<=|>|<)?\\s*(.*)/);
+          var operator = operatorMatch ? (operatorMatch[1] || '>=') : '>=';
+          var filterRaw = operatorMatch ? operatorMatch[2].trim() : filterValue;
+          
+          if (filterRaw) {
+            var numFilterValue;
+            if (isDate) {
+              var d = new Date(filterRaw);
+              numFilterValue = isNaN(d.getTime()) ? null : d.getTime();
+            } else {
+              numFilterValue = parseFloat(filterRaw.replace(/,/g, ''));
+            }
+
+            if (numFilterValue !== null && !isNaN(numFilterValue)) {
+              var match = false;
+              if (operator === '>=') match = numCellValue >= numFilterValue;
+              else if (operator === '<=') match = numCellValue <= numFilterValue;
+              else if (operator === '>') match = numCellValue > numFilterValue;
+              else if (operator === '<') match = numCellValue < numFilterValue;
+              
+              if (!match) {
+                display = "none";
+                break;
+              }
+            } else {
+              // Fallback to substring if invalid numeric/date filter
+              if (td.textContent.trim().toLowerCase().indexOf(filterValue.toLowerCase()) === -1) {
+                display = "none";
+                break;
+              }
             }
           }
         } else {
-          if (cellValue.toLowerCase().indexOf(filterValue.toLowerCase()) === -1) {
+          var textValue = td.textContent.trim();
+          if (textValue.toLowerCase().indexOf(filterValue.toLowerCase()) === -1) {
             display = "none";
             break;
           }
@@ -400,7 +420,7 @@ function sortTable(n) {
 <table id="matchesTable">
   <thead>
     <tr>
-      <th onclick="sortTable(0)">Date ↕<br><input type="text" class="filter-input" data-col="0" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Filter..."></th>
+      <th onclick="sortTable(0)">Date ↕<br><input type="text" class="filter-input" data-col="0" data-type="date" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Date (e.g. >2026-05-01)..."></th>
       <th onclick="sortTable(1)">Platform ↕<br><input type="text" class="filter-input" data-col="1" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Filter..."></th>
       <th onclick="sortTable(2)">Location ↕<br><input type="text" class="filter-input" data-col="2" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Filter..."></th>
       <th onclick="sortTable(3)">Price ↕<br><input type="text" class="filter-input" data-col="3" data-type="numeric" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Price (e.g. >2000)..."></th>
