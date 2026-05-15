@@ -24,8 +24,11 @@ class RightmoveAdapter {
     const results = [];
     console.log(`Starting ${this.platformName} scraping...`);
 
-    for (const url of config.rightmoveUrls) {
-      console.log(`Navigating to search URL: ${url}`);
+    for (let i = 0; i < config.rightmoveUrls.length; i++) {
+      const url = config.rightmoveUrls[i];
+      const locationName = config.locations[i] || 'Unknown';
+      
+      console.log(`Navigating to search URL: ${url} (${locationName})`);
       await this.page.goto(url, { waitUntil: 'domcontentloaded' });
       
       await this.acceptCookies();
@@ -81,7 +84,7 @@ class RightmoveAdapter {
           continue;
         }
 
-        const match = await this.processListing(listing);
+        const match = await this.processListing(listing, locationName);
         if (match) {
           markAsSeen(listing.id, this.platformName);
           results.push(match);
@@ -92,7 +95,7 @@ class RightmoveAdapter {
     return results;
   }
 
-  async processListing(listing) {
+  async processListing(listing, locationName) {
     const floorplanUrl = `https://www.rightmove.co.uk/properties/${listing.id}#/floorplan`;
     console.log(`Processing listing: ${floorplanUrl}`);
     

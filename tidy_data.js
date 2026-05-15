@@ -67,13 +67,25 @@ function tidySeenProperties() {
   if (!fs.existsSync(SEEN_FILE)) return;
   
   let seen = JSON.parse(fs.readFileSync(SEEN_FILE, 'utf-8'));
-  const originalCount = seen.length;
   
-  // Deduplicate and sort
-  seen = [...new Set(seen)].sort((a, b) => a.localeCompare(b));
+  // Backwards compatibility if it's an array
+  if (Array.isArray(seen)) {
+    seen = { "Rightmove": seen, "Zoopla": [] };
+  }
+
+  let totalRemoved = 0;
+  let totalIDs = 0;
+
+  for (const platform in seen) {
+    const originalCount = seen[platform].length;
+    // Deduplicate and sort
+    seen[platform] = [...new Set(seen[platform])].sort((a, b) => a.localeCompare(b));
+    totalRemoved += (originalCount - seen[platform].length);
+    totalIDs += seen[platform].length;
+  }
   
   fs.writeFileSync(SEEN_FILE, JSON.stringify(seen, null, 2));
-  console.log(`Tidied seen_properties.json: Removed ${originalCount - seen.length} duplicates and sorted ${seen.length} IDs.`);
+  console.log(`Tidied seen_properties.json: Removed ${totalRemoved} duplicates and sorted ${totalIDs} IDs across platforms.`);
 }
 
 function main() {
