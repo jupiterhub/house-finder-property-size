@@ -1,5 +1,25 @@
 {
   "Rightmove": {
+    "87843630": {
+      "reason": "Could not determine size",
+      "timestamp": "2026-05-15T16:39:40.349Z"
+    },
+    "87875202": {
+      "reason": "Could not determine size",
+      "timestamp": "2026-05-15T16:39:18.503Z"
+    },
+    "87995823": {
+      "reason": "No floorplan image found",
+      "timestamp": "2026-05-15T16:39:26.682Z"
+    },
+    "88011138": {
+      "reason": "Could not determine size",
+      "timestamp": "2026-05-15T16:39:17.270Z"
+    },
+    "88012710": {
+      "reason": "No floorplan image found",
+      "timestamp": "2026-05-15T16:43:17.365Z"
+    },
     "88058763": {
       "reason": "No floorplan image found",
       "timestamp": "2026-05-15T16:11:02.385Z"
@@ -96,6 +116,10 @@
       "reason": "Could not determine size",
       "timestamp": "2026-05-15T16:10:56.788Z"
     },
+    "88292748": {
+      "reason": "No floorplan image found",
+      "timestamp": "2026-05-15T16:43:45.480Z"
+    },
     "88295601": {
       "reason": "Could not determine size",
       "timestamp": "2026-05-15T16:10:56.228Z"
@@ -147,6 +171,10 @@
     "88438386": {
       "reason": "Size 36.6 sqm below min 40",
       "timestamp": "2026-05-15T16:10:47.488Z"
+    },
+    "88438464": {
+      "reason": "No floorplan image found",
+      "timestamp": "2026-05-15T16:39:16.803Z"
     },
     "88449747": {
       "reason": "Could not determine size",
@@ -256,6 +284,18 @@
       "reason": "No floorplan image found",
       "timestamp": "2026-05-15T16:10:33.343Z"
     },
+    "164911382": {
+      "reason": "Size 18.58 sqm below min 40",
+      "timestamp": "2026-05-15T16:39:55.431Z"
+    },
+    "172456529": {
+      "reason": "Could not determine size",
+      "timestamp": "2026-05-15T16:39:49.347Z"
+    },
+    "172800335": {
+      "reason": "Size 31 sqm below min 40",
+      "timestamp": "2026-05-15T16:39:43.839Z"
+    },
     "172930610": {
       "reason": "Size 24 sqm below min 40",
       "timestamp": "2026-05-15T16:10:22.917Z"
@@ -268,6 +308,22 @@
       "reason": "Size 26.66 sqm below min 40",
       "timestamp": "2026-05-15T16:10:48.471Z"
     },
+    "173369096": {
+      "reason": "No floorplan image found",
+      "timestamp": "2026-05-15T16:39:40.821Z"
+    },
+    "173427227": {
+      "reason": "Size 39 sqm below min 40",
+      "timestamp": "2026-05-15T16:39:49.582Z"
+    },
+    "173447588": {
+      "reason": "Size 28 sqm below min 40",
+      "timestamp": "2026-05-15T16:39:48.976Z"
+    },
+    "173542703": {
+      "reason": "Size 36 sqm below min 40",
+      "timestamp": "2026-05-15T16:39:48.790Z"
+    },
     "173608733": {
       "reason": "No floorplan image found",
       "timestamp": "2026-05-15T16:10:22.729Z"
@@ -276,6 +332,34 @@
       "reason": "No floorplan image found",
       "timestamp": "2026-05-15T16:10:24.750Z"
     },
+    "174145472": {
+      "reason": "Size 31 sqm below min 40",
+      "timestamp": "2026-05-15T16:39:41.265Z"
+    },
+    "174156416": {
+      "reason": "Size 26.57 sqm below min 40",
+      "timestamp": "2026-05-15T16:39:43.438Z"
+    },
+    "174341582": {
+      "reason": "Size 30 sqm below min 40",
+      "timestamp": "2026-05-15T16:39:26.902Z"
+    },
+    "174472625": {
+      "reason": "Could not determine size",
+      "timestamp": "2026-05-15T16:39:42.045Z"
+    },
+    "174633743": {
+      "reason": "Size 34 sqm below min 40",
+      "timestamp": "2026-05-15T16:39:41.495Z"
+    },
+    "174638864": {
+      "reason": "No floorplan image found",
+      "timestamp": "2026-05-15T16:39:48.599Z"
+    },
+    "174668897": {
+      "reason": "Could not determine size",
+      "timestamp": "2026-05-15T16:39:17.896Z"
+    },
     "174770801": {
       "reason": "No floorplan image found",
       "timestamp": "2026-05-02T21:15:21.955Z"
@@ -283,6 +367,18 @@
     "174771500": {
       "reason": "No floorplan image found",
       "timestamp": "2026-05-02T21:07:36.393Z"
+    },
+    "174801377": {
+      "reason": "Size 27 sqm below min 40",
+      "timestamp": "2026-05-15T16:39:27.102Z"
+    },
+    "174818921": {
+      "reason": "No floorplan image found",
+      "timestamp": "2026-05-15T16:39:47.541Z"
+    },
+    "174952769": {
+      "reason": "Size 38 sqm below min 40",
+      "timestamp": "2026-05-15T16:39:23.389Z"
     }
   },
   "Zoopla": {

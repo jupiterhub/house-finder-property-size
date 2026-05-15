@@ -56,6 +56,7 @@ function parseMatches(content) {
 function formatMatchMarkdown(match) {
   return `### [${match.timestamp.toISOString()}] MATCH FOUND!\n` +
     `- **Platform**: ${match.platform}\n` +
+    `- **Location**: ${match.location || 'Unknown'}\n` +
     `- **ID**: ${match.id}\n` +
     `- **Price**: £${match.price} PCM\n` +
     `- **Size**: ${match.size} sqm\n` +
@@ -122,15 +123,20 @@ function main() {
     allMatches = allMatches.concat(parseMatches(fs.readFileSync(MD_FILE, 'utf-8')));
   }
 
-  // Deduplicate by ID
-  const uniqueMatches = [];
-  const seenIds = new Set();
+  // Deduplicate by ID, preferring entries with a known location
+  const uniqueMatchesMap = new Map();
   for (const m of allMatches) {
-    if (!seenIds.has(m.id)) {
-      uniqueMatches.push(m);
-      seenIds.add(m.id);
+    if (!uniqueMatchesMap.has(m.id)) {
+      uniqueMatchesMap.set(m.id, m);
+    } else {
+      // If we already have this ID, overwrite it if the new one has a better location
+      const existing = uniqueMatchesMap.get(m.id);
+      if (existing.location === 'Unknown' && m.location && m.location !== 'Unknown') {
+        uniqueMatchesMap.set(m.id, m);
+      }
     }
   }
+  const uniqueMatches = Array.from(uniqueMatchesMap.values());
 
   let result = uniqueMatches;
 
