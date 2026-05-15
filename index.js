@@ -45,9 +45,16 @@ async function main() {
       saveMatch(match);
     }
     
-    const zooplaResults = await zoopla.run();
-    for (const match of zooplaResults) {
-      saveMatch(match);
+    const args = process.argv.slice(2);
+    const runZoopla = args.includes('--with-zoopla');
+
+    if (runZoopla) {
+      const zooplaResults = await zoopla.run();
+      for (const match of zooplaResults) {
+        saveMatch(match);
+      }
+    } else {
+      console.log('Skipping Zoopla scrape. Run with --with-zoopla to include it.');
     }
 
     console.log('Scraping complete.');
