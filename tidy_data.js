@@ -224,6 +224,124 @@ function main() {
     fs.writeFileSync(targetFile, outputContent);
     console.log(`Updated ${targetFile} with ${result.length} matches (sorted by ${flags.sort} ${flags.order}).`);
     
+    // Generate HTML
+    const htmlFile = flags.output ? flags.output.replace(/\.md$/, '.html') : HTML_FILE;
+    if (htmlFile !== targetFile) {
+      const htmlRows = result.map(m => {
+        const dateStr = m.timestamp ? m.timestamp.toISOString().replace(/T/, ' ').replace(/\..+/, '') : '';
+        return `<tr>
+          <td>${dateStr}</td>
+          <td>${m.platform}</td>
+          <td>${m.location || 'Unknown'}</td>
+          <td data-value="${m.price || 0}">£${m.price || 0}</td>
+          <td data-value="${m.size || 0}">${m.size || 0}</td>
+          <td><a href="${m.link}" target="_blank">View</a></td>
+        </tr>`;
+      }).join('\n');
+
+      const htmlContent = `<!DOCTYPE html>
+<html>
+<head>
+<title>Property Matches</title>
+<style>
+  body { font-family: sans-serif; padding: 20px; }
+  table { border-collapse: collapse; width: 100%; margin-top: 20px; }
+  th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+  th { background-color: #f2f2f2; cursor: pointer; }
+  th:hover { background-color: #ddd; }
+  tr:nth-child(even) {background-color: #f9f9f9;}
+  .filter-input { width: 100%; box-sizing: border-box; font-weight: normal; margin-top: 4px; padding: 4px;}
+</style>
+<script>
+function filterTable() {
+  var table = document.getElementById("matchesTable");
+  var tr = table.getElementsByTagName("tbody")[0].getElementsByTagName("tr");
+  var inputs = table.getElementsByTagName("thead")[0].getElementsByTagName("input");
+  
+  for (var i = 0; i < tr.length; i++) {
+    var display = "";
+    for (var j = 0; j < inputs.length; j++) {
+      var td = tr[i].getElementsByTagName("td")[j];
+      if (td) {
+        var txtValue = td.textContent || td.innerText;
+        var filterValue = inputs[j].value.toLowerCase();
+        if (txtValue.toLowerCase().indexOf(filterValue) === -1) {
+          display = "none";
+          break;
+        }
+      }       
+    }
+    tr[i].style.display = display;
+  }
+}
+
+function sortTable(n) {
+  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+  table = document.getElementById("matchesTable");
+  switching = true;
+  dir = "asc";
+  while (switching) {
+    switching = false;
+    rows = table.rows;
+    for (i = 1; i < (rows.length - 1); i++) {
+      shouldSwitch = false;
+      x = rows[i].getElementsByTagName("TD")[n];
+      y = rows[i + 1].getElementsByTagName("TD")[n];
+      
+      var valX = x.getAttribute("data-value") || x.innerHTML.toLowerCase();
+      var valY = y.getAttribute("data-value") || y.innerHTML.toLowerCase();
+      
+      var numX = parseFloat(valX);
+      var numY = parseFloat(valY);
+      
+      if (!isNaN(numX) && !isNaN(numY)) {
+        valX = numX;
+        valY = numY;
+      }
+
+      if (dir == "asc") {
+        if (valX > valY) { shouldSwitch = true; break; }
+      } else if (dir == "desc") {
+        if (valX < valY) { shouldSwitch = true; break; }
+      }
+    }
+    if (shouldSwitch) {
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      switchcount ++;
+    } else {
+      if (switchcount == 0 && dir == "asc") {
+        dir = "desc";
+        switching = true;
+      }
+    }
+  }
+}
+</script>
+</head>
+<body>
+<h2>Property Matches</h2>
+<table id="matchesTable">
+  <thead>
+    <tr>
+      <th onclick="sortTable(0)">Date ↕<br><input type="text" class="filter-input" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Filter..."></th>
+      <th onclick="sortTable(1)">Platform ↕<br><input type="text" class="filter-input" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Filter..."></th>
+      <th onclick="sortTable(2)">Location ↕<br><input type="text" class="filter-input" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Filter..."></th>
+      <th onclick="sortTable(3)">Price ↕<br><input type="text" class="filter-input" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Filter..."></th>
+      <th onclick="sortTable(4)">Size (sqm) ↕<br><input type="text" class="filter-input" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Filter..."></th>
+      <th>Link</th>
+    </tr>
+  </thead>
+  <tbody>
+${htmlRows}
+  </tbody>
+</table>
+</body>
+</html>`;
+      fs.writeFileSync(htmlFile, htmlContent);
+      console.log(`Updated ${htmlFile} with ${result.length} matches.`);
+    }
+
     if (flags.migrate && fs.existsSync(TXT_FILE)) {
       const backupPath = TXT_FILE + '.bak';
       fs.renameSync(TXT_FILE, backupPath);

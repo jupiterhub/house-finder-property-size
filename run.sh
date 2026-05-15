@@ -7,7 +7,7 @@ if [[ "$1" == "--help" || "$1" == "-h" ]]; then
   echo "Scraping Options:"
   echo "  --with-zoopla      Enable Zoopla scraping (disabled by default due to Cloudflare anti-bot checks)"
   echo ""
-  echo "Data Tidying Options (applied to data/matches.md after scraping):"
+  echo "Data Tidying Options (applied to data/matches.md and data/matches.html after scraping):"
   echo "  --sort <field>     Sort matches by field: ideal (default), recent, size, price"
   echo "  --order <asc|desc> Sort order: desc (default), asc"
   echo "  --max-price <num>  Filter out properties above this price"

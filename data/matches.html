@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Property Matches</title>
+<style>
+  body { font-family: sans-serif; padding: 20px; }
+  table { border-collapse: collapse; width: 100%; margin-top: 20px; }
+  th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+  th { background-color: #f2f2f2; cursor: pointer; }
+  th:hover { background-color: #ddd; }
+  tr:nth-child(even) {background-color: #f9f9f9;}
+</style>
+<script>
+function sortTable(n) {
+  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+  table = document.getElementById("matchesTable");
+  switching = true;
+  dir = "asc";
+  while (switching) {
+    switching = false;
+    rows = table.rows;
+    for (i = 1; i < (rows.length - 1); i++) {
+      shouldSwitch = false;
+      x = rows[i].getElementsByTagName("TD")[n];
+      y = rows[i + 1].getElementsByTagName("TD")[n];
+      
+      var valX = x.getAttribute("data-value") || x.innerHTML.toLowerCase();
+      var valY = y.getAttribute("data-value") || y.innerHTML.toLowerCase();
+      
+      var numX = parseFloat(valX);
+      var numY = parseFloat(valY);
+      
+      if (!isNaN(numX) && !isNaN(numY)) {
+        valX = numX;
+        valY = numY;
+      }
+
+      if (dir == "asc") {
+        if (valX > valY) { shouldSwitch = true; break; }
+      } else if (dir == "desc") {
+        if (valX < valY) { shouldSwitch = true; break; }
+      }
+    }
+    if (shouldSwitch) {
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      switchcount ++;
+    } else {
+      if (switchcount == 0 && dir == "asc") {
+        dir = "desc";
+        switching = true;
+      }
+    }
+  }
+}
+</script>
+</head>
+<body>
+<h2>Property Matches</h2>
+<table id="matchesTable">
+  <thead>
+    <tr>
+      <th onclick="sortTable(0)">Date ↕</th>
+      <th onclick="sortTable(1)">Platform ↕</th>
+      <th onclick="sortTable(2)">Location ↕</th>
+      <th onclick="sortTable(3)">Price ↕</th>
+      <th onclick="sortTable(4)">Size (sqm) ↕</th>
+      <th>Link</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+          <td>2026-05-15 16:41:00</td>
+          <td>Rightmove</td>
+          <td>Kings Cross</td>
+          <td data-value="2500">£2500</td>
+          <td data-value="9290.3">9290.3</td>
+          <td><a href="https://www.rightmove.co.uk/properties/88104309" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-15 16:41:00</td>
+          <td>Rightmove</td>
+          <td>Bloomsbury (Russell Square)</td>
+          <td data-value="1083">£1083</td>
+          <td data-value="163.53">163.53</td>
+          <td><a href="https://www.rightmove.co.uk/properties/88192251" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:15:55</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="5000">£5000</td>
+          <td data-value="101">101</td>
+          <td><a href="https://www.rightmove.co.uk/properties/173550569" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-15 16:41:00</td>
+          <td>Rightmove</td>
+          <td>Farringdon</td>
+          <td data-value="2210">£2210</td>
+          <td data-value="99">99</td>
+          <td><a href="https://www.rightmove.co.uk/properties/88054905" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:13:36</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="4500">£4500</td>
+          <td data-value="93">93</td>
+          <td><a href="https://www.rightmove.co.uk/properties/87877038" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:15:55</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="4750">£4750</td>
+          <td data-value="86">86</td>
+          <td><a href="https://www.rightmove.co.uk/properties/87949980" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:15:55</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="4250">£4250</td>
+          <td data-value="84">84</td>
+          <td><a href="https://www.rightmove.co.uk/properties/173811215" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:13:36</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="4250">£4250</td>
+          <td data-value="84">84</td>
+          <td><a href="https://www.rightmove.co.uk/properties/174493166" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:15:55</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="4312">£4312</td>
+          <td data-value="82">82</td>
+          <td><a href="https://www.rightmove.co.uk/properties/87853575" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:15:55</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="3400">£3400</td>
+          <td data-value="80">80</td>
+          <td><a href="https://www.rightmove.co.uk/properties/88010625" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:15:55</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="3700">£3700</td>
+          <td data-value="80">80</td>
+          <td><a href="https://www.rightmove.co.uk/properties/88013841" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:15:55</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="4800">£4800</td>
+          <td data-value="80">80</td>
+          <td><a href="https://www.rightmove.co.uk/properties/87908958" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:15:55</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="4680">£4680</td>
+          <td data-value="78">78</td>
+          <td><a href="https://www.rightmove.co.uk/properties/87984801" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:15:55</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="3250">£3250</td>
+          <td data-value="74">74</td>
+          <td><a href="https://www.rightmove.co.uk/properties/174571163" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:15:55</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="3700">£3700</td>
+          <td data-value="73">73</td>
+          <td><a href="https://www.rightmove.co.uk/properties/88013859" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:15:55</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="4312">£4312</td>
+          <td data-value="72.1">72.1</td>
+          <td><a href="https://www.rightmove.co.uk/properties/87812958" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:15:55</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="3050">£3050</td>
+          <td data-value="71.9">71.9</td>
+          <td><a href="https://www.rightmove.co.uk/properties/87962103" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:15:55</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="3500">£3500</td>
+          <td data-value="71">71</td>
+          <td><a href="https://www.rightmove.co.uk/properties/87899415" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:15:55</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="3900">£3900</td>
+          <td data-value="71">71</td>
+          <td><a href="https://www.rightmove.co.uk/properties/87962367" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:15:55</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="4300">£4300</td>
+          <td data-value="70">70</td>
+          <td><a href="https://www.rightmove.co.uk/properties/174007991" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:15:55</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="2900">£2900</td>
+          <td data-value="69">69</td>
+          <td><a href="https://www.rightmove.co.uk/properties/87996729" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:15:55</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="3250">£3250</td>
+          <td data-value="69">69</td>
+          <td><a href="https://www.rightmove.co.uk/properties/87900099" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:15:55</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="3250">£3250</td>
+          <td data-value="68">68</td>
+          <td><a href="https://www.rightmove.co.uk/properties/87950013" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:10:21</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="3600">£3600</td>
+          <td data-value="67">67</td>
+          <td><a href="https://www.rightmove.co.uk/properties/87941739" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:13:36</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="3000">£3000</td>
+          <td data-value="66">66</td>
+          <td><a href="https://www.rightmove.co.uk/properties/87766707" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:15:55</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="4800">£4800</td>
+          <td data-value="64.8">64.8</td>
+          <td><a href="https://www.rightmove.co.uk/properties/174304424" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:10:21</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="3600">£3600</td>
+          <td data-value="64.38">64.38</td>
+          <td><a href="https://www.rightmove.co.uk/properties/87882168" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:15:55</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="3250">£3250</td>
+          <td data-value="63.59">63.59</td>
+          <td><a href="https://www.rightmove.co.uk/properties/87930618" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:15:55</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="2500">£2500</td>
+          <td data-value="62">62</td>
+          <td><a href="https://www.rightmove.co.uk/properties/174040445" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:15:55</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="3250">£3250</td>
+          <td data-value="62">62</td>
+          <td><a href="https://www.rightmove.co.uk/properties/87992601" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:10:21</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="3500">£3500</td>
+          <td data-value="60.94">60.94</td>
+          <td><a href="https://www.rightmove.co.uk/properties/173392421" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:15:55</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="3500">£3500</td>
+          <td data-value="60.5">60.5</td>
+          <td><a href="https://www.rightmove.co.uk/properties/88000917" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-15 16:41:00</td>
+          <td>Rightmove</td>
+          <td>Farringdon</td>
+          <td data-value="2500">£2500</td>
+          <td data-value="60.39">60.39</td>
+          <td><a href="https://www.rightmove.co.uk/properties/174952553" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-15 16:27:38</td>
+          <td>Zoopla</td>
+          <td>Unknown</td>
+          <td data-value="2500">£2500</td>
+          <td data-value="60.39">60.39</td>
+          <td><a href="https://www.zoopla.co.uk/to-rent/details/55362571/" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 18:56:01</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="3820">£3820</td>
+          <td data-value="60">60</td>
+          <td><a href="https://www.rightmove.co.uk/properties/172129604" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-15 16:41:00</td>
+          <td>Rightmove</td>
+          <td>Farringdon</td>
+          <td data-value="2500">£2500</td>
+          <td data-value="59">59</td>
+          <td><a href="https://www.rightmove.co.uk/properties/161851685" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:15:55</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="3878">£3878</td>
+          <td data-value="59">59</td>
+          <td><a href="https://www.rightmove.co.uk/properties/174954773" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:15:55</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="3100">£3100</td>
+          <td data-value="56.9">56.9</td>
+          <td><a href="https://www.rightmove.co.uk/properties/143905373" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:15:55</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="4247">£4247</td>
+          <td data-value="56.3">56.3</td>
+          <td><a href="https://www.rightmove.co.uk/properties/87995664" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:15:55</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="3358">£3358</td>
+          <td data-value="55.74">55.74</td>
+          <td><a href="https://www.rightmove.co.uk/properties/87938394" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:15:55</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="3200">£3200</td>
+          <td data-value="55.53">55.53</td>
+          <td><a href="https://www.rightmove.co.uk/properties/87902091" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:15:55</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="2362">£2362</td>
+          <td data-value="55">55</td>
+          <td><a href="https://www.rightmove.co.uk/properties/87994380" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:15:55</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="3497">£3497</td>
+          <td data-value="54">54</td>
+          <td><a href="https://www.rightmove.co.uk/properties/87858384" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:15:55</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="4333">£4333</td>
+          <td data-value="54">54</td>
+          <td><a href="https://www.rightmove.co.uk/properties/88017294" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:21:02</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="2500">£2500</td>
+          <td data-value="53.88">53.88</td>
+          <td><a href="https://www.rightmove.co.uk/properties/174355781" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-15 16:41:00</td>
+          <td>Rightmove</td>
+          <td>Canary Wharf</td>
+          <td data-value="2250">£2250</td>
+          <td data-value="52">52</td>
+          <td><a href="https://www.rightmove.co.uk/properties/88503057" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:15:55</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="2400">£2400</td>
+          <td data-value="52">52</td>
+          <td><a href="https://www.rightmove.co.uk/properties/173877707" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:15:55</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="2400">£2400</td>
+          <td data-value="52">52</td>
+          <td><a href="https://www.rightmove.co.uk/properties/174401375" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:15:55</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="3228">£3228</td>
+          <td data-value="52">52</td>
+          <td><a href="https://www.rightmove.co.uk/properties/171491006" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 21:17:24</td>
+          <td>Zoopla</td>
+          <td>Unknown</td>
+          <td data-value="2210">£2210</td>
+          <td data-value="51.4">51.4</td>
+          <td><a href="https://www.zoopla.co.uk/to-rent/details/67090388/" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:15:55</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="2210">£2210</td>
+          <td data-value="51.4">51.4</td>
+          <td><a href="https://www.rightmove.co.uk/properties/87965001" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:15:55</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="3467">£3467</td>
+          <td data-value="51">51</td>
+          <td><a href="https://www.rightmove.co.uk/properties/174925886" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 18:56:01</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="4120">£4120</td>
+          <td data-value="51">51</td>
+          <td><a href="https://www.rightmove.co.uk/properties/87703854" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:15:55</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="4390">£4390</td>
+          <td data-value="51">51</td>
+          <td><a href="https://www.rightmove.co.uk/properties/173637449" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:15:55</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="2900">£2900</td>
+          <td data-value="50.4">50.4</td>
+          <td><a href="https://www.rightmove.co.uk/properties/87888108" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:15:55</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="2500">£2500</td>
+          <td data-value="50">50</td>
+          <td><a href="https://www.rightmove.co.uk/properties/87987126" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-15 16:41:00</td>
+          <td>Rightmove</td>
+          <td>Canary Wharf</td>
+          <td data-value="2496">£2496</td>
+          <td data-value="49.69">49.69</td>
+          <td><a href="https://www.rightmove.co.uk/properties/88519350" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:15:55</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="1993">£1993</td>
+          <td data-value="49">49</td>
+          <td><a href="https://www.rightmove.co.uk/properties/87990153" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-15 16:41:00</td>
+          <td>Rightmove</td>
+          <td>Farringdon</td>
+          <td data-value="2450">£2450</td>
+          <td data-value="49">49</td>
+          <td><a href="https://www.rightmove.co.uk/properties/88223106" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:15:55</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="2500">£2500</td>
+          <td data-value="49">49</td>
+          <td><a href="https://www.rightmove.co.uk/properties/172613117" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:21:02</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="2149">£2149</td>
+          <td data-value="48.31">48.31</td>
+          <td><a href="https://www.rightmove.co.uk/properties/174682085" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-15 16:41:00</td>
+          <td>Rightmove</td>
+          <td>Moorgate</td>
+          <td data-value="2492">£2492</td>
+          <td data-value="48">48</td>
+          <td><a href="https://www.rightmove.co.uk/properties/174893072" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:15:55</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="2817">£2817</td>
+          <td data-value="48">48</td>
+          <td><a href="https://www.rightmove.co.uk/properties/88017432" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:21:02</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="2150">£2150</td>
+          <td data-value="47.9">47.9</td>
+          <td><a href="https://www.rightmove.co.uk/properties/172765358" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 21:17:24</td>
+          <td>Zoopla</td>
+          <td>Unknown</td>
+          <td data-value="2318">£2318</td>
+          <td data-value="47.1">47.1</td>
+          <td><a href="https://www.zoopla.co.uk/to-rent/details/68449109/" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:21:02</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="2318">£2318</td>
+          <td data-value="47.1">47.1</td>
+          <td><a href="https://www.rightmove.co.uk/properties/87888522" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:21:02</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="2500">£2500</td>
+          <td data-value="47">47</td>
+          <td><a href="https://www.rightmove.co.uk/properties/172831100" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-15 16:14:07</td>
+          <td>Zoopla</td>
+          <td>Unknown</td>
+          <td data-value="2427">£2427</td>
+          <td data-value="46.45">46.45</td>
+          <td><a href="https://www.zoopla.co.uk/to-rent/details/73174919/" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:21:02</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="1950">£1950</td>
+          <td data-value="46">46</td>
+          <td><a href="https://www.rightmove.co.uk/properties/174778508" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:21:02</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="2200">£2200</td>
+          <td data-value="46">46</td>
+          <td><a href="https://www.rightmove.co.uk/properties/174925166" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-15 16:41:00</td>
+          <td>Rightmove</td>
+          <td>Moorgate</td>
+          <td data-value="2350">£2350</td>
+          <td data-value="46">46</td>
+          <td><a href="https://www.rightmove.co.uk/properties/88234458" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:21:02</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="2500">£2500</td>
+          <td data-value="46">46</td>
+          <td><a href="https://www.rightmove.co.uk/properties/174604265" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-15 16:11:16</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="2250">£2250</td>
+          <td data-value="45.15">45.15</td>
+          <td><a href="https://www.rightmove.co.uk/properties/88438464" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-15 16:41:00</td>
+          <td>Rightmove</td>
+          <td>Farringdon</td>
+          <td data-value="2383">£2383</td>
+          <td data-value="45">45</td>
+          <td><a href="https://www.rightmove.co.uk/properties/88486365" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-15 16:41:00</td>
+          <td>Rightmove</td>
+          <td>Canary Wharf</td>
+          <td data-value="2448">£2448</td>
+          <td data-value="45">45</td>
+          <td><a href="https://www.rightmove.co.uk/properties/88560645" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:21:02</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="2492">£2492</td>
+          <td data-value="45">45</td>
+          <td><a href="https://www.rightmove.co.uk/properties/87810489" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:21:02</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="2492">£2492</td>
+          <td data-value="45">45</td>
+          <td><a href="https://www.rightmove.co.uk/properties/87808641" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-15 16:41:00</td>
+          <td>Rightmove</td>
+          <td>Farringdon</td>
+          <td data-value="2500">£2500</td>
+          <td data-value="44.7">44.7</td>
+          <td><a href="https://www.rightmove.co.uk/properties/174538664" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-15 16:41:00</td>
+          <td>Rightmove</td>
+          <td>Canary Wharf</td>
+          <td data-value="1900">£1900</td>
+          <td data-value="44.22">44.22</td>
+          <td><a href="https://www.rightmove.co.uk/properties/88188000" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-15 16:41:00</td>
+          <td>Rightmove</td>
+          <td>Canary Wharf</td>
+          <td data-value="2300">£2300</td>
+          <td data-value="44">44</td>
+          <td><a href="https://www.rightmove.co.uk/properties/158921117" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-15 16:41:00</td>
+          <td>Rightmove</td>
+          <td>Farringdon</td>
+          <td data-value="2275">£2275</td>
+          <td data-value="43.3">43.3</td>
+          <td><a href="https://www.rightmove.co.uk/properties/70199733" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-15 16:41:00</td>
+          <td>Rightmove</td>
+          <td>Farringdon</td>
+          <td data-value="2300">£2300</td>
+          <td data-value="43">43</td>
+          <td><a href="https://www.rightmove.co.uk/properties/88148883" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-15 16:27:38</td>
+          <td>Zoopla</td>
+          <td>Unknown</td>
+          <td data-value="2300">£2300</td>
+          <td data-value="43">43</td>
+          <td><a href="https://www.zoopla.co.uk/to-rent/details/69426043/" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:21:02</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="2300">£2300</td>
+          <td data-value="42">42</td>
+          <td><a href="https://www.rightmove.co.uk/properties/173361548" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-15 16:41:00</td>
+          <td>Rightmove</td>
+          <td>Blackfriars</td>
+          <td data-value="2250">£2250</td>
+          <td data-value="41.81">41.81</td>
+          <td><a href="https://www.rightmove.co.uk/properties/88010865" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-15 16:14:07</td>
+          <td>Zoopla</td>
+          <td>Unknown</td>
+          <td data-value="2250">£2250</td>
+          <td data-value="41.81">41.81</td>
+          <td><a href="https://www.zoopla.co.uk/to-rent/details/73092671/" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:21:02</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="2400">£2400</td>
+          <td data-value="40.97">40.97</td>
+          <td><a href="https://www.rightmove.co.uk/properties/170516222" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-15 16:41:00</td>
+          <td>Rightmove</td>
+          <td>Moorgate</td>
+          <td data-value="2210">£2210</td>
+          <td data-value="40.6">40.6</td>
+          <td><a href="https://www.rightmove.co.uk/properties/174472619" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-15 16:41:00</td>
+          <td>Rightmove</td>
+          <td>Blackfriars</td>
+          <td data-value="2362">£2362</td>
+          <td data-value="40.07">40.07</td>
+          <td><a href="https://www.rightmove.co.uk/properties/88038282" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-15 16:41:00</td>
+          <td>Rightmove</td>
+          <td>Bloomsbury (Russell Square)</td>
+          <td data-value="2492">£2492</td>
+          <td data-value="40">40</td>
+          <td><a href="https://www.rightmove.co.uk/properties/88501011" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:15:55</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="4117">£4117</td>
+          <td data-value="40">40</td>
+          <td><a href="https://www.rightmove.co.uk/properties/173791553" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:15:55</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="4598">£4598</td>
+          <td data-value="39.88">39.88</td>
+          <td><a href="https://www.rightmove.co.uk/properties/174956972" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:15:55</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="2600">£2600</td>
+          <td data-value="39">39</td>
+          <td><a href="https://www.rightmove.co.uk/properties/87888429" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:15:55</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="3000">£3000</td>
+          <td data-value="38">38</td>
+          <td><a href="https://www.rightmove.co.uk/properties/157692917" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:15:55</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="2145">£2145</td>
+          <td data-value="34.65">34.65</td>
+          <td><a href="https://www.rightmove.co.uk/properties/87989646" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:15:55</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="2575">£2575</td>
+          <td data-value="27">27</td>
+          <td><a href="https://www.rightmove.co.uk/properties/87916644" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:15:55</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="3900">£3900</td>
+          <td data-value="27">27</td>
+          <td><a href="https://www.rightmove.co.uk/properties/87916650" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:15:55</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="1829">£1829</td>
+          <td data-value="26">26</td>
+          <td><a href="https://www.rightmove.co.uk/properties/87895821" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:15:55</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="1900">£1900</td>
+          <td data-value="26">26</td>
+          <td><a href="https://www.rightmove.co.uk/properties/88013265" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:15:55</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="1800">£1800</td>
+          <td data-value="24">24</td>
+          <td><a href="https://www.rightmove.co.uk/properties/88013730" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:15:55</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="1950">£1950</td>
+          <td data-value="17">17</td>
+          <td><a href="https://www.rightmove.co.uk/properties/88017369" target="_blank">View</a></td>
+        </tr>
+<tr>
+          <td>2026-05-02 20:15:55</td>
+          <td>Rightmove</td>
+          <td>Unknown</td>
+          <td data-value="1400">£1400</td>
+          <td data-value="16.2">16.2</td>
+          <td><a href="https://www.rightmove.co.uk/properties/87852042" target="_blank">View</a></td>
+        </tr>
+  </tbody>
+</table>
+</body>
+</html>
