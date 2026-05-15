@@ -230,13 +230,17 @@ function main() {
     if (htmlFile !== targetFile) {
       const htmlRows = result.map(m => {
         const dateStr = m.timestamp ? m.timestamp.toISOString().replace(/T/, ' ').replace(/\..+/, '') : '';
+        const pricePerSqm = (m.price && m.size) ? (m.price / m.size).toFixed(2) : 'N/A';
+        const pricePerSqmValue = (m.price && m.size) ? (m.price / m.size) : 0;
+        
         return `<tr>
           <td>${dateStr}</td>
           <td>${m.platform}</td>
           <td>${m.location || 'Unknown'}</td>
-          <td data-value="${m.price || 0}">£${m.price || 0}</td>
-          <td data-value="${m.size || 0}">${m.size || 0}</td>
-          <td><a href="${m.link}" target="_blank">View</a></td>
+          <td class="numeric" data-value="${m.price || 0}">£${m.price || 0}</td>
+          <td class="numeric" data-value="${m.size || 0}">${m.size || 0}</td>
+          <td class="numeric" data-value="${pricePerSqmValue}">${pricePerSqm}</td>
+          <td style="text-align: center;"><a href="${m.link}" target="_blank" class="view-btn">View</a></td>
         </tr>`;
       }).join('\n');
 
@@ -245,35 +249,84 @@ function main() {
 <head>
 <title>Property Matches</title>
 <style>
-  body { font-family: sans-serif; padding: 20px; }
-  table { border-collapse: collapse; width: 100%; margin-top: 20px; }
-  th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
-  th { background-color: #f2f2f2; cursor: pointer; }
-  th:hover { background-color: #ddd; }
-  tr:nth-child(even) {background-color: #f9f9f9;}
-  .filter-input { width: 100%; box-sizing: border-box; font-weight: normal; margin-top: 4px; padding: 4px;}
+  :root {
+    --primary: #007bff;
+    --bg: #f8f9fa;
+    --text: #333;
+    --border: #dee2e6;
+  }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; padding: 20px; background: var(--bg); color: var(--text); line-height: 1.5; }
+  .header-container { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 20px; flex-wrap: wrap; gap: 20px; }
+  .title-area h2 { margin: 0; color: #212529; }
+  .stats { color: #6c757d; font-size: 0.9em; margin-top: 5px; }
+  .search-container { flex-grow: 1; max-width: 400px; }
+  .search-container label { display: block; font-size: 0.8em; font-weight: 600; margin-bottom: 5px; color: #495057; }
+  #globalSearch { width: 100%; padding: 10px 15px; border: 1px solid #ced4da; border-radius: 6px; box-sizing: border-box; font-size: 1rem; transition: border-color 0.2s, box-shadow 0.2s; }
+  #globalSearch:focus { border-color: #80bdff; outline: 0; box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25); }
+  
+  .table-wrapper { background: white; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); overflow: auto; border: 1px solid var(--border); max-height: 85vh; }
+  table { border-collapse: collapse; width: 100%; border-spacing: 0; }
+  th { position: sticky; top: 0; background: #f1f3f5; z-index: 10; text-align: left; padding: 12px 15px; cursor: pointer; border-bottom: 2px solid var(--border); font-weight: 600; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.05em; color: #495057; }
+  th:hover { background-color: #e9ecef; }
+  td { padding: 12px 15px; text-align: left; border-bottom: 1px solid var(--border); font-size: 0.95rem; }
+  tr:last-child td { border-bottom: none; }
+  tr:hover { background-color: #f8f9fa; }
+  .numeric { text-align: right; font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; }
+  
+  .filter-input { width: 100%; box-sizing: border-box; font-weight: normal; margin-top: 8px; padding: 6px; border: 1px solid #ced4da; border-radius: 4px; font-size: 0.8em; }
+  .view-btn { display: inline-block; padding: 6px 16px; background: var(--primary); color: white !important; text-decoration: none; border-radius: 4px; font-size: 0.85em; font-weight: 600; transition: background 0.2s; }
+  .view-btn:hover { background: #0056b3; }
 </style>
 <script>
 function filterTable() {
+  var globalSearch = document.getElementById("globalSearch").value.toLowerCase();
   var table = document.getElementById("matchesTable");
-  var tr = table.getElementsByTagName("tbody")[0].getElementsByTagName("tr");
-  var inputs = table.getElementsByTagName("thead")[0].getElementsByTagName("input");
+  var tbody = table.getElementsByTagName("tbody")[0];
+  var tr = tbody.getElementsByTagName("tr");
+  var inputs = table.querySelectorAll("thead .filter-input");
   
+  var visibleCount = 0;
+
   for (var i = 0; i < tr.length; i++) {
     var display = "";
-    for (var j = 0; j < inputs.length; j++) {
-      var td = tr[i].getElementsByTagName("td")[j];
-      if (td) {
-        var txtValue = td.textContent || td.innerText;
-        var filterValue = inputs[j].value.toLowerCase();
-        if (txtValue.toLowerCase().indexOf(filterValue) === -1) {
-          display = "none";
-          break;
+    var rowText = tr[i].textContent.toLowerCase();
+    
+    // Global search check
+    if (globalSearch && rowText.indexOf(globalSearch) === -1) {
+      display = "none";
+    } else {
+      // Column-specific check
+      for (var j = 0; j < inputs.length; j++) {
+        var input = inputs[j];
+        var filterValue = input.value.trim();
+        if (!filterValue) continue;
+        
+        var colIndex = input.getAttribute("data-col");
+        var td = tr[i].getElementsByTagName("td")[colIndex];
+        if (!td) continue;
+
+        var cellValue = td.getAttribute("data-value") || td.textContent.trim();
+        var isNumeric = input.getAttribute("data-type") === "numeric";
+
+        if (isNumeric) {
+          var numCellValue = parseFloat(cellValue);
+          var numFilterValue = parseFloat(filterValue);
+          if (!isNaN(numFilterValue) && numCellValue < numFilterValue) {
+            display = "none";
+            break;
+          }
+        } else {
+          if (cellValue.toLowerCase().indexOf(filterValue.toLowerCase()) === -1) {
+            display = "none";
+            break;
+          }
         }
-      }       
+      }
     }
     tr[i].style.display = display;
+    if (display === "") visibleCount++;
   }
+  document.getElementById("visibleCount").textContent = visibleCount;
 }
 
 function sortTable(n) {
@@ -283,14 +336,14 @@ function sortTable(n) {
   dir = "asc";
   while (switching) {
     switching = false;
-    rows = table.rows;
-    for (i = 1; i < (rows.length - 1); i++) {
+    rows = table.getElementsByTagName("tbody")[0].rows;
+    for (i = 0; i < (rows.length - 1); i++) {
       shouldSwitch = false;
       x = rows[i].getElementsByTagName("TD")[n];
       y = rows[i + 1].getElementsByTagName("TD")[n];
       
-      var valX = x.getAttribute("data-value") || x.innerHTML.toLowerCase();
-      var valY = y.getAttribute("data-value") || y.innerHTML.toLowerCase();
+      var valX = x.getAttribute("data-value") || x.textContent.toLowerCase().trim();
+      var valY = y.getAttribute("data-value") || y.textContent.toLowerCase().trim();
       
       var numX = parseFloat(valX);
       var numY = parseFloat(valY);
@@ -321,22 +374,35 @@ function sortTable(n) {
 </script>
 </head>
 <body>
-<h2>Property Matches</h2>
+<div class="header-container">
+  <div class="title-area">
+    <h2>Property Matches</h2>
+    <div class="stats">Showing <span id="visibleCount">${result.length}</span> of ${result.length} properties found</div>
+  </div>
+  <div class="search-container">
+    <label for="globalSearch">Quick Search</label>
+    <input type="text" id="globalSearch" onkeyup="filterTable()" placeholder="Search location, platform, dates...">
+  </div>
+</div>
+
+<div class="table-wrapper">
 <table id="matchesTable">
   <thead>
     <tr>
-      <th onclick="sortTable(0)">Date ↕<br><input type="text" class="filter-input" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Filter..."></th>
-      <th onclick="sortTable(1)">Platform ↕<br><input type="text" class="filter-input" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Filter..."></th>
-      <th onclick="sortTable(2)">Location ↕<br><input type="text" class="filter-input" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Filter..."></th>
-      <th onclick="sortTable(3)">Price ↕<br><input type="text" class="filter-input" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Filter..."></th>
-      <th onclick="sortTable(4)">Size (sqm) ↕<br><input type="text" class="filter-input" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Filter..."></th>
-      <th>Link</th>
+      <th onclick="sortTable(0)">Date ↕<br><input type="text" class="filter-input" data-col="0" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Filter..."></th>
+      <th onclick="sortTable(1)">Platform ↕<br><input type="text" class="filter-input" data-col="1" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Filter..."></th>
+      <th onclick="sortTable(2)">Location ↕<br><input type="text" class="filter-input" data-col="2" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Filter..."></th>
+      <th onclick="sortTable(3)">Price ↕<br><input type="text" class="filter-input" data-col="3" data-type="numeric" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Min £..."></th>
+      <th onclick="sortTable(4)">Size (sqm) ↕<br><input type="text" class="filter-input" data-col="4" data-type="numeric" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Min sqm..."></th>
+      <th onclick="sortTable(5)">£ / sqm ↕<br><input type="text" class="filter-input" data-col="5" data-type="numeric" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Min £/sqm..."></th>
+      <th style="cursor: default; text-align: center;">Link</th>
     </tr>
   </thead>
   <tbody>
 ${htmlRows}
   </tbody>
 </table>
+</div>
 </body>
 </html>`;
       fs.writeFileSync(htmlFile, htmlContent);
