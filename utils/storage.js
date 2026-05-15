@@ -89,11 +89,24 @@ function saveMatch(propertyData) {
   console.log(`Saved match: ${propertyData.url}`);
 }
 
+function updateLocationIfUnknown(propertyId, locationName) {
+  if (!fs.existsSync(MATCHES_FILE)) return;
+  let content = fs.readFileSync(MATCHES_FILE, 'utf-8');
+  
+  const regex = new RegExp(`- \\*\\*Location\\*\\*: Unknown\\n- \\*\\*ID\\*\\*: ${propertyId}`, 'g');
+  if (regex.test(content)) {
+    content = content.replace(regex, `- **Location**: ${locationName}\n- **ID**: ${propertyId}`);
+    fs.writeFileSync(MATCHES_FILE, content);
+    console.log(`Backfilled location for previously seen property: ${propertyId} -> ${locationName}`);
+  }
+}
+
 module.exports = {
   getSeenProperties,
   getIgnoredProperties,
   markAsSeen,
   markAsIgnored,
   isSeen,
-  saveMatch
+  saveMatch,
+  updateLocationIfUnknown
 };

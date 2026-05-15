@@ -1,4 +1,4 @@
-const { isSeen, markAsSeen, markAsIgnored } = require('../utils/storage');
+const { isSeen, markAsSeen, markAsIgnored, updateLocationIfUnknown } = require('../utils/storage');
 const { extractSqmFromText } = require('../utils/parser');
 const { extractTextFromImage } = require('../utils/ocr');
 const config = require('../config.json');
