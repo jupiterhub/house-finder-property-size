@@ -80,7 +80,7 @@ function main() {
   const args = process.argv.slice(2);
   const flags = {
     maxPrice: null,
-    sort: 'recent',
+    sort: 'ideal',
     order: 'desc',
     output: null,
     cleanSeen: false,
@@ -129,6 +129,34 @@ function main() {
 
   // Sort
   result.sort((a, b) => {
+    if (flags.sort === 'ideal') {
+      // Primary: SQM size (descending)
+      const sizeA = a.size || 0;
+      const sizeB = b.size || 0;
+      if (sizeA !== sizeB) {
+        return sizeB - sizeA;
+      }
+
+      // Secondary: Price (ascending)
+      const priceA = a.price || 0;
+      const priceB = b.price || 0;
+      if (priceA !== priceB) {
+        return priceA - priceB;
+      }
+
+      // Tertiary: Recent match date (descending)
+      const timeA = a.timestamp ? a.timestamp.getTime() : 0;
+      const timeB = b.timestamp ? b.timestamp.getTime() : 0;
+      if (timeA !== timeB) {
+        return timeB - timeA;
+      }
+
+      // Quaternary: Location (ascending)
+      const locA = a.location || 'Unknown';
+      const locB = b.location || 'Unknown';
+      return locA.localeCompare(locB);
+    }
+    
     if (flags.sort === 'recent') {
       // Primary: Recent match date (descending)
       const timeA = a.timestamp ? a.timestamp.getTime() : 0;
