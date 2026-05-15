@@ -4,6 +4,7 @@ const path = require('path');
 const DATA_DIR = path.join(__dirname, 'data');
 const TXT_FILE = path.join(DATA_DIR, 'matches.txt');
 const MD_FILE = path.join(DATA_DIR, 'matches.md');
+const HTML_FILE = path.join(DATA_DIR, 'matches.html');
 const SEEN_FILE = path.join(DATA_DIR, 'seen_properties.json');
 
 function parseMatches(content) {

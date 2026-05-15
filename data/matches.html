@@ -9,8 +9,31 @@
   th { background-color: #f2f2f2; cursor: pointer; }
   th:hover { background-color: #ddd; }
   tr:nth-child(even) {background-color: #f9f9f9;}
+  .filter-input { width: 100%; box-sizing: border-box; font-weight: normal; margin-top: 4px; padding: 4px;}
 </style>
 <script>
+function filterTable() {
+  var table = document.getElementById("matchesTable");
+  var tr = table.getElementsByTagName("tbody")[0].getElementsByTagName("tr");
+  var inputs = table.getElementsByTagName("thead")[0].getElementsByTagName("input");
+  
+  for (var i = 0; i < tr.length; i++) {
+    var display = "";
+    for (var j = 0; j < inputs.length; j++) {
+      var td = tr[i].getElementsByTagName("td")[j];
+      if (td) {
+        var txtValue = td.textContent || td.innerText;
+        var filterValue = inputs[j].value.toLowerCase();
+        if (txtValue.toLowerCase().indexOf(filterValue) === -1) {
+          display = "none";
+          break;
+        }
+      }       
+    }
+    tr[i].style.display = display;
+  }
+}
+
 function sortTable(n) {
   var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
   table = document.getElementById("matchesTable");
@@ -60,11 +83,11 @@ function sortTable(n) {
 <table id="matchesTable">
   <thead>
     <tr>
-      <th onclick="sortTable(0)">Date ↕</th>
-      <th onclick="sortTable(1)">Platform ↕</th>
-      <th onclick="sortTable(2)">Location ↕</th>
-      <th onclick="sortTable(3)">Price ↕</th>
-      <th onclick="sortTable(4)">Size (sqm) ↕</th>
+      <th onclick="sortTable(0)">Date ↕<br><input type="text" class="filter-input" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Filter..."></th>
+      <th onclick="sortTable(1)">Platform ↕<br><input type="text" class="filter-input" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Filter..."></th>
+      <th onclick="sortTable(2)">Location ↕<br><input type="text" class="filter-input" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Filter..."></th>
+      <th onclick="sortTable(3)">Price ↕<br><input type="text" class="filter-input" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Filter..."></th>
+      <th onclick="sortTable(4)">Size (sqm) ↕<br><input type="text" class="filter-input" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Filter..."></th>
       <th>Link</th>
     </tr>
   </thead>
