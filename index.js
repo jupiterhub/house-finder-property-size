@@ -11,9 +11,26 @@ async function main() {
   // Using a persistent context is ideal for retaining cookies/sessions,
   // but for simplicity in this script we launch a normal headless instance.
   // To avoid bot detection, you might want headless: false or use a stealth plugin.
-  const browser = await chromium.launch({ headless: false }); 
+  const browser = await chromium.launch({ 
+    headless: false,
+    args: [
+      '--disable-blink-features=AutomationControlled',
+      '--disable-features=IsolateOrigins,site-per-process'
+    ]
+  }); 
   const context = await browser.newContext({
-    userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+    userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+    viewport: { width: 1920, height: 1080 },
+    locale: 'en-GB',
+    timezoneId: 'Europe/London',
+    deviceScaleFactor: 1
+  });
+
+  // Extra evasion: force webdriver property to false
+  await context.addInitScript(() => {
+    Object.defineProperty(navigator, 'webdriver', {
+      get: () => false,
+    });
   });
   
   const page = await context.newPage();
