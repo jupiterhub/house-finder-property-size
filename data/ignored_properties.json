@@ -280,6 +280,26 @@
       "reason": "No floorplan image found",
       "timestamp": "2026-05-15T16:11:06.950Z"
     },
+    "88573326": {
+      "reason": "No floorplan image found",
+      "timestamp": "2026-05-16T11:34:26.994Z"
+    },
+    "88575219": {
+      "reason": "Could not determine size",
+      "timestamp": "2026-05-16T11:34:26.109Z"
+    },
+    "88576446": {
+      "reason": "Size 34 sqm below min 40",
+      "timestamp": "2026-05-16T11:34:31.760Z"
+    },
+    "88580898": {
+      "reason": "Size 35 sqm below min 40",
+      "timestamp": "2026-05-16T11:34:46.020Z"
+    },
+    "88582899": {
+      "reason": "No floorplan image found",
+      "timestamp": "2026-05-16T11:34:43.464Z"
+    },
     "94932461": {
       "reason": "Size 34 sqm below min 40",
       "timestamp": "2026-05-15T16:10:43.490Z"
