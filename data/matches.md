@@ -348,6 +348,16 @@
 
 ---
 
+### [2026-05-19T13:45:14.097Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Location**: Canary Wharf
+- **ID**: 88677696
+- **Price**: £2500 PCM
+- **Size**: 60 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/88677696](https://www.rightmove.co.uk/properties/88677696)
+
+---
+
 ### [2026-05-02T18:56:01.921Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Location**: Unknown
@@ -458,6 +468,16 @@
 
 ---
 
+### [2026-05-19T13:45:14.097Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Location**: Canary Wharf
+- **ID**: 88639263
+- **Price**: £1950 PCM
+- **Size**: 53.32 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/88639263](https://www.rightmove.co.uk/properties/88639263)
+
+---
+
 ### [2026-05-15T16:41:00.994Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Location**: Canary Wharf
@@ -558,6 +578,16 @@
 
 ---
 
+### [2026-05-19T13:45:14.097Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Location**: Canary Wharf
+- **ID**: 88638303
+- **Price**: £2100 PCM
+- **Size**: 50 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/88638303](https://www.rightmove.co.uk/properties/88638303)
+
+---
+
 ### [2026-05-02T20:15:55.705Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Location**: Unknown
@@ -565,6 +595,16 @@
 - **Price**: £2500 PCM
 - **Size**: 50 sqm
 - **Link**: [https://www.rightmove.co.uk/properties/87987126](https://www.rightmove.co.uk/properties/87987126)
+
+---
+
+### [2026-05-19T13:45:14.097Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Location**: Kings Cross
+- **ID**: 88647930
+- **Price**: £2383 PCM
+- **Size**: 49.76 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/88647930](https://www.rightmove.co.uk/properties/88647930)
 
 ---
 
@@ -748,6 +788,16 @@
 
 ---
 
+### [2026-05-19T13:45:14.097Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Location**: Canary Wharf
+- **ID**: 88681878
+- **Price**: £2000 PCM
+- **Size**: 45.99 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/88681878](https://www.rightmove.co.uk/properties/88681878)
+
+---
+
 ### [2026-05-18T14:09:03.753Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Location**: Canary Wharf
@@ -765,6 +815,16 @@
 - **Price**: £2250 PCM
 - **Size**: 45.15 sqm
 - **Link**: [https://www.rightmove.co.uk/properties/88438464](https://www.rightmove.co.uk/properties/88438464)
+
+---
+
+### [2026-05-19T13:45:14.097Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Location**: Canary Wharf
+- **ID**: 173431148
+- **Price**: £2015 PCM
+- **Size**: 45 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/173431148](https://www.rightmove.co.uk/properties/173431148)
 
 ---
 
@@ -885,6 +945,16 @@
 - **Price**: £2300 PCM
 - **Size**: 42 sqm
 - **Link**: [https://www.rightmove.co.uk/properties/173361548](https://www.rightmove.co.uk/properties/173361548)
+
+---
+
+### [2026-05-19T13:45:14.097Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Location**: Canary Wharf
+- **ID**: 88684527
+- **Price**: £2400 PCM
+- **Size**: 42 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/88684527](https://www.rightmove.co.uk/properties/88684527)
 
 ---
 
