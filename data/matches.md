@@ -8,6 +8,16 @@
 
 ---
 
+### [2026-05-27T14:03:03.159Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Location**: Canary Wharf
+- **ID**: 88945296
+- **Price**: £2400 PCM
+- **Size**: 3716.12 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/88945296](https://www.rightmove.co.uk/properties/88945296)
+
+---
+
 ### [2026-05-23T11:45:49.228Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Location**: Bloomsbury (Russell Square)
@@ -115,6 +125,26 @@
 - **Price**: £4312 PCM
 - **Size**: 82 sqm
 - **Link**: [https://www.rightmove.co.uk/properties/87853575](https://www.rightmove.co.uk/properties/87853575)
+
+---
+
+### [2026-05-27T14:03:03.159Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Location**: Canary Wharf
+- **ID**: 88977246
+- **Price**: £2250 PCM
+- **Size**: 81.8 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/88977246](https://www.rightmove.co.uk/properties/88977246)
+
+---
+
+### [2026-05-27T14:03:03.158Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Location**: Canary Wharf
+- **ID**: 88977495
+- **Price**: £2250 PCM
+- **Size**: 81.8 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/88977495](https://www.rightmove.co.uk/properties/88977495)
 
 ---
 
@@ -538,6 +568,16 @@
 
 ---
 
+### [2026-05-27T14:03:03.159Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Location**: Canary Wharf
+- **ID**: 88939605
+- **Price**: £2400 PCM
+- **Size**: 56 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/88939605](https://www.rightmove.co.uk/properties/88939605)
+
+---
+
 ### [2026-05-02T20:15:55.706Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Location**: Unknown
@@ -555,6 +595,16 @@
 - **Price**: £3200 PCM
 - **Size**: 55.53 sqm
 - **Link**: [https://www.rightmove.co.uk/properties/87902091](https://www.rightmove.co.uk/properties/87902091)
+
+---
+
+### [2026-05-27T14:03:03.159Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Location**: Canary Wharf
+- **ID**: 88949238
+- **Price**: £2080 PCM
+- **Size**: 55.18 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/88949238](https://www.rightmove.co.uk/properties/88949238)
 
 ---
 
