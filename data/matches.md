@@ -558,6 +558,16 @@
 
 ---
 
+### [2026-05-30T11:57:31.646Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Location**: Moorgate
+- **ID**: 89094114
+- **Price**: £2400 PCM
+- **Size**: 60 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/89094114](https://www.rightmove.co.uk/properties/89094114)
+
+---
+
 ### [2026-05-19T13:45:14.097Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Location**: Canary Wharf
@@ -1275,6 +1285,16 @@
 - **Price**: £2250 PCM
 - **Size**: 45.15 sqm
 - **Link**: [https://www.rightmove.co.uk/properties/88438464](https://www.rightmove.co.uk/properties/88438464)
+
+---
+
+### [2026-05-30T11:57:31.646Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Location**: Canary Wharf
+- **ID**: 89088795
+- **Price**: £1950 PCM
+- **Size**: 45 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/89088795](https://www.rightmove.co.uk/properties/89088795)
 
 ---
 
