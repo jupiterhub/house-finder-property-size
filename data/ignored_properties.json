@@ -844,6 +844,10 @@
       "reason": "Size 37 sqm below min 40",
       "timestamp": "2026-05-28T14:23:22.218Z"
     },
+    "89009895": {
+      "reason": "No floorplan image found",
+      "timestamp": "2026-06-01T16:28:16.826Z"
+    },
     "89020668": {
       "reason": "No floorplan image found",
       "timestamp": "2026-05-28T14:23:38.914Z"
@@ -955,6 +959,42 @@
     "89111685": {
       "reason": "Size 32 sqm below min 40",
       "timestamp": "2026-05-31T12:04:39.208Z"
+    },
+    "89130006": {
+      "reason": "Size 36.42 sqm below min 40",
+      "timestamp": "2026-06-01T16:28:16.311Z"
+    },
+    "89135760": {
+      "reason": "Could not determine size",
+      "timestamp": "2026-06-01T16:28:10.756Z"
+    },
+    "89143671": {
+      "reason": "Size 32.84 sqm below min 40",
+      "timestamp": "2026-06-01T16:27:53.904Z"
+    },
+    "89144667": {
+      "reason": "No floorplan image found",
+      "timestamp": "2026-06-01T16:28:08.645Z"
+    },
+    "89145057": {
+      "reason": "No floorplan image found",
+      "timestamp": "2026-06-01T16:28:07.885Z"
+    },
+    "89150535": {
+      "reason": "No floorplan image found",
+      "timestamp": "2026-06-01T16:28:07.259Z"
+    },
+    "89154810": {
+      "reason": "Size 26 sqm below min 40",
+      "timestamp": "2026-06-01T16:28:06.745Z"
+    },
+    "89159985": {
+      "reason": "Size 36.77 sqm below min 40",
+      "timestamp": "2026-06-01T16:27:43.812Z"
+    },
+    "89160633": {
+      "reason": "No floorplan image found",
+      "timestamp": "2026-06-01T16:27:42.032Z"
     },
     "94932461": {
       "reason": "Size 34 sqm below min 40",
@@ -1179,6 +1219,10 @@
     "174952769": {
       "reason": "Size 38 sqm below min 40",
       "timestamp": "2026-05-15T16:39:23.389Z"
+    },
+    "174992399": {
+      "reason": "Size 39 sqm below min 40",
+      "timestamp": "2026-06-01T16:28:06.284Z"
     }
   },
   "Zoopla": {
