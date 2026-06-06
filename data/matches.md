@@ -98,6 +98,16 @@
 
 ---
 
+### [2026-06-06T12:01:35.827Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Location**: Canary Wharf
+- **ID**: 89380467
+- **Price**: £1170 PCM
+- **Size**: 97.6 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/89380467](https://www.rightmove.co.uk/properties/89380467)
+
+---
+
 ### [2026-05-02T20:13:36.411Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Location**: Unknown
@@ -135,6 +145,16 @@
 - **Price**: £4250 PCM
 - **Size**: 84 sqm
 - **Link**: [https://www.rightmove.co.uk/properties/174493166](https://www.rightmove.co.uk/properties/174493166)
+
+---
+
+### [2026-06-06T12:01:35.828Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Location**: Canary Wharf
+- **ID**: 89373828
+- **Price**: £2200 PCM
+- **Size**: 82 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/89373828](https://www.rightmove.co.uk/properties/89373828)
 
 ---
 
@@ -485,6 +505,16 @@
 - **Price**: £3600 PCM
 - **Size**: 64.38 sqm
 - **Link**: [https://www.rightmove.co.uk/properties/87882168](https://www.rightmove.co.uk/properties/87882168)
+
+---
+
+### [2026-06-06T12:01:35.828Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Location**: Canary Wharf
+- **ID**: 89361318
+- **Price**: £2500 PCM
+- **Size**: 63.6 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/89361318](https://www.rightmove.co.uk/properties/89361318)
 
 ---
 
@@ -1208,6 +1238,16 @@
 
 ---
 
+### [2026-06-06T12:01:35.827Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Location**: Farringdon
+- **ID**: 89379105
+- **Price**: £2500 PCM
+- **Size**: 48.5 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/89379105](https://www.rightmove.co.uk/properties/89379105)
+
+---
+
 ### [2026-05-02T20:21:02.303Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Location**: Unknown
@@ -1855,6 +1895,16 @@
 - **Price**: £2150 PCM
 - **Size**: 40 sqm
 - **Link**: [https://www.rightmove.co.uk/properties/89024196](https://www.rightmove.co.uk/properties/89024196)
+
+---
+
+### [2026-06-06T12:01:35.828Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Location**: Canary Wharf
+- **ID**: 89354052
+- **Price**: £2275 PCM
+- **Size**: 40 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/89354052](https://www.rightmove.co.uk/properties/89354052)
 
 ---
 
