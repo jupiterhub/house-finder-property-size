@@ -1828,6 +1828,16 @@
 
 ---
 
+### [2026-06-07T12:11:53.385Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Location**: Canary Wharf
+- **ID**: 89394102
+- **Price**: £2100 PCM
+- **Size**: 41.4 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/89394102](https://www.rightmove.co.uk/properties/89394102)
+
+---
+
 ### [2026-06-01T16:28:16.830Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Location**: Canary Wharf
