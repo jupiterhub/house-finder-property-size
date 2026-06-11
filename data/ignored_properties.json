@@ -1512,6 +1512,34 @@
       "reason": "Size 36 sqm below min 40",
       "timestamp": "2026-06-10T13:59:19.983Z"
     },
+    "89544288": {
+      "reason": "No floorplan image found",
+      "timestamp": "2026-06-11T14:26:20.167Z"
+    },
+    "89544864": {
+      "reason": "Size 36 sqm below min 40",
+      "timestamp": "2026-06-11T14:26:19.573Z"
+    },
+    "89547444": {
+      "reason": "Could not determine size",
+      "timestamp": "2026-06-11T14:25:44.835Z"
+    },
+    "89552553": {
+      "reason": "Size 26.63 sqm below min 40",
+      "timestamp": "2026-06-11T14:26:18.544Z"
+    },
+    "89576028": {
+      "reason": "Could not determine size",
+      "timestamp": "2026-06-11T14:26:13.529Z"
+    },
+    "89576040": {
+      "reason": "Size 31.5 sqm below min 40",
+      "timestamp": "2026-06-11T14:26:12.182Z"
+    },
+    "89581455": {
+      "reason": "No floorplan image found",
+      "timestamp": "2026-06-11T14:26:08.869Z"
+    },
     "94932461": {
       "reason": "Size 34 sqm below min 40",
       "timestamp": "2026-05-15T16:10:43.490Z"
@@ -1639,6 +1667,10 @@
     "173133356": {
       "reason": "Size 37.78 sqm below min 40",
       "timestamp": "2026-05-19T13:45:14.096Z"
+    },
+    "173173577": {
+      "reason": "No floorplan image found",
+      "timestamp": "2026-06-11T14:25:55.105Z"
     },
     "173251721": {
       "reason": "Size 26.66 sqm below min 40",
