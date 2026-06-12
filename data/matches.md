@@ -958,6 +958,16 @@
 
 ---
 
+### [2026-06-12T13:50:07.734Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Location**: Moorgate
+- **ID**: 89609436
+- **Price**: £1850 PCM
+- **Size**: 53 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/89609436](https://www.rightmove.co.uk/properties/89609436)
+
+---
+
 ### [2026-06-09T13:32:41.227Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Location**: Kings Cross
@@ -1598,6 +1608,16 @@
 
 ---
 
+### [2026-06-12T13:50:07.734Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Location**: Farringdon
+- **ID**: 89632845
+- **Price**: £2396 PCM
+- **Size**: 46 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/89632845](https://www.rightmove.co.uk/properties/89632845)
+
+---
+
 ### [2026-05-23T11:45:49.227Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Location**: Farringdon
@@ -1805,6 +1825,16 @@
 - **Price**: £2300 PCM
 - **Size**: 44 sqm
 - **Link**: [https://www.rightmove.co.uk/properties/158921117](https://www.rightmove.co.uk/properties/158921117)
+
+---
+
+### [2026-06-12T13:50:07.733Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Location**: Kings Cross
+- **ID**: 89604255
+- **Price**: £2250 PCM
+- **Size**: 43.39 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/89604255](https://www.rightmove.co.uk/properties/89604255)
 
 ---
 
@@ -2145,6 +2175,16 @@
 - **Price**: £2496 PCM
 - **Size**: 40 sqm
 - **Link**: [https://www.rightmove.co.uk/properties/88631589](https://www.rightmove.co.uk/properties/88631589)
+
+---
+
+### [2026-06-12T13:50:07.734Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Location**: Kings Cross
+- **ID**: 173699180
+- **Price**: £2500 PCM
+- **Size**: 40 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/173699180](https://www.rightmove.co.uk/properties/173699180)
 
 ---
 
