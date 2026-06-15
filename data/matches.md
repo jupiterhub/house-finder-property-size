@@ -738,6 +738,26 @@
 
 ---
 
+### [2026-06-15T16:13:11.640Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Location**: Farringdon
+- **ID**: 89689995
+- **Price**: £2500 PCM
+- **Size**: 58.53 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/89689995](https://www.rightmove.co.uk/properties/89689995)
+
+---
+
+### [2026-06-15T16:13:11.640Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Location**: Canary Wharf
+- **ID**: 89695833
+- **Price**: £2000 PCM
+- **Size**: 58 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/89695833](https://www.rightmove.co.uk/properties/89695833)
+
+---
+
 ### [2026-06-05T13:41:21.976Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Location**: Canary Wharf
@@ -1238,6 +1258,16 @@
 
 ---
 
+### [2026-06-15T16:13:11.640Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Location**: Canary Wharf
+- **ID**: 89708820
+- **Price**: £2296 PCM
+- **Size**: 50 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/89708820](https://www.rightmove.co.uk/properties/89708820)
+
+---
+
 ### [2026-05-28T14:23:45.500Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Location**: Canary Wharf
@@ -1458,6 +1488,16 @@
 
 ---
 
+### [2026-06-15T16:13:11.640Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Location**: Farringdon
+- **ID**: 89721399
+- **Price**: £2300 PCM
+- **Size**: 48 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/89721399](https://www.rightmove.co.uk/properties/89721399)
+
+---
+
 ### [2026-06-10T13:59:26.516Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Location**: Canary Wharf
@@ -1645,6 +1685,16 @@
 - **Price**: £2450 PCM
 - **Size**: 46 sqm
 - **Link**: [https://www.rightmove.co.uk/properties/89470749](https://www.rightmove.co.uk/properties/89470749)
+
+---
+
+### [2026-06-15T16:13:11.640Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Location**: Farringdon
+- **ID**: 88124379
+- **Price**: £2500 PCM
+- **Size**: 46 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/88124379](https://www.rightmove.co.uk/properties/88124379)
 
 ---
 
@@ -1938,6 +1988,16 @@
 
 ---
 
+### [2026-06-15T16:13:11.640Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Location**: Farringdon
+- **ID**: 89716989
+- **Price**: £2250 PCM
+- **Size**: 42 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/89716989](https://www.rightmove.co.uk/properties/89716989)
+
+---
+
 ### [2026-06-05T13:41:21.976Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Location**: Canary Wharf
@@ -2128,6 +2188,16 @@
 
 ---
 
+### [2026-06-15T16:13:11.640Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Location**: Canary Wharf
+- **ID**: 174779534
+- **Price**: £2275 PCM
+- **Size**: 40 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/174779534](https://www.rightmove.co.uk/properties/174779534)
+
+---
+
 ### [2026-06-06T12:01:35.828Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Location**: Canary Wharf
@@ -2145,6 +2215,16 @@
 - **Price**: £2275 PCM
 - **Size**: 40 sqm
 - **Link**: [https://www.rightmove.co.uk/properties/19588097](https://www.rightmove.co.uk/properties/19588097)
+
+---
+
+### [2026-06-15T16:13:11.640Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Location**: Farringdon
+- **ID**: 89701536
+- **Price**: £2383 PCM
+- **Size**: 40 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/89701536](https://www.rightmove.co.uk/properties/89701536)
 
 ---
 
