@@ -1978,6 +1978,16 @@
 
 ---
 
+### [2026-06-20T12:17:31.433Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Location**: Bloomsbury (Russell Square)
+- **ID**: 89767467
+- **Price**: £2479 PCM
+- **Size**: 45 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/89767467](https://www.rightmove.co.uk/properties/89767467)
+
+---
+
 ### [2026-06-04T13:46:51.487Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Location**: Canary Wharf
@@ -2075,6 +2085,16 @@
 - **Price**: £2300 PCM
 - **Size**: 44 sqm
 - **Link**: [https://www.rightmove.co.uk/properties/158921117](https://www.rightmove.co.uk/properties/158921117)
+
+---
+
+### [2026-06-20T12:17:31.434Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Location**: Canary Wharf
+- **ID**: 89936142
+- **Price**: £2400 PCM
+- **Size**: 43.77 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/89936142](https://www.rightmove.co.uk/properties/89936142)
 
 ---
 
