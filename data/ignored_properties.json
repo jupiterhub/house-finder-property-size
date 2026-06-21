@@ -1932,6 +1932,10 @@
       "reason": "No floorplan image found",
       "timestamp": "2026-06-20T12:17:29.558Z"
     },
+    "89958000": {
+      "reason": "Size 28 sqm below min 40",
+      "timestamp": "2026-06-21T12:28:16.956Z"
+    },
     "94932461": {
       "reason": "Size 34 sqm below min 40",
       "timestamp": "2026-05-15T16:10:43.490Z"
