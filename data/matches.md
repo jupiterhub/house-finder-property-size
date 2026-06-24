@@ -868,6 +868,16 @@
 
 ---
 
+### [2026-06-24T12:36:39.200Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Location**: Canary Wharf
+- **ID**: 90043989
+- **Price**: £2000 PCM
+- **Size**: 58 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/90043989](https://www.rightmove.co.uk/properties/90043989)
+
+---
+
 ### [2026-06-15T16:13:11.640Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Location**: Canary Wharf
@@ -1325,6 +1335,16 @@
 - **Price**: £1850 PCM
 - **Size**: 51 sqm
 - **Link**: [https://www.rightmove.co.uk/properties/89548770](https://www.rightmove.co.uk/properties/89548770)
+
+---
+
+### [2026-06-24T12:36:39.200Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Location**: Canary Wharf
+- **ID**: 90047667
+- **Price**: £2250 PCM
+- **Size**: 51 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/90047667](https://www.rightmove.co.uk/properties/90047667)
 
 ---
 
@@ -1838,6 +1858,16 @@
 
 ---
 
+### [2026-06-24T12:36:39.200Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Location**: Canary Wharf
+- **ID**: 90076083
+- **Price**: £2253 PCM
+- **Size**: 46.45 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/90076083](https://www.rightmove.co.uk/properties/90076083)
+
+---
+
 ### [2026-05-15T16:14:07.349Z] MATCH FOUND!
 - **Platform**: Zoopla
 - **Location**: Unknown
@@ -2198,6 +2228,16 @@
 
 ---
 
+### [2026-06-24T12:36:39.200Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Location**: Canary Wharf
+- **ID**: 90056139
+- **Price**: £2145 PCM
+- **Size**: 43.94 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/90056139](https://www.rightmove.co.uk/properties/90056139)
+
+---
+
 ### [2026-06-20T12:17:31.434Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Location**: Canary Wharf
@@ -2345,6 +2385,16 @@
 - **Price**: £2250 PCM
 - **Size**: 42 sqm
 - **Link**: [https://www.rightmove.co.uk/properties/89716989](https://www.rightmove.co.uk/properties/89716989)
+
+---
+
+### [2026-06-24T12:36:39.199Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Location**: Canary Wharf
+- **ID**: 90054642
+- **Price**: £2300 PCM
+- **Size**: 42 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/90054642](https://www.rightmove.co.uk/properties/90054642)
 
 ---
 
