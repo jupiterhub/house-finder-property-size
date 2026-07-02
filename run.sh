@@ -11,11 +11,13 @@ if [[ "$1" == "--help" || "$1" == "-h" ]]; then
   echo "  --sort <field>     Sort matches by field: ideal (default), recent, size, price"
   echo "  --order <asc|desc> Sort order: desc (default), asc"
   echo "  --max-price <num>  Filter out properties above this price"
+  echo "  --verify           Perform live status verification of matches (removes let-agreed/off-market)"
   echo ""
   echo "Examples:"
   echo "  bash run.sh --with-zoopla"
   echo "  bash run.sh --sort price --order asc"
   echo "  bash run.sh --with-zoopla --max-price 2000"
+  echo "  bash run.sh --verify"
   exit 0
 fi
 
@@ -24,6 +26,13 @@ echo "Starting the property scraper..."
 node index.js "$@"
 
 echo "Tidying data..."
+# Automatically run live status verification under CI
+VERIFY_FLAG=""
+if [ "$CI" = "true" ]; then
+  VERIFY_FLAG="--verify"
+  echo "CI environment detected. Enabling live status verification..."
+fi
+
 # Pass all arguments to tidy_data.js as well so sorting options work
-node tidy_data.js --clean-seen --migrate "$@"
+node tidy_data.js --clean-seen --migrate $VERIFY_FLAG "$@"
 echo "Data tidy complete!"
