@@ -1,6 +1,6 @@
 # London House Finder Scraper
 
-An automated property scraper for **Rightmove** and **Zoopla** that specifically filters for apartments by square meterage (sqm).
+An automated property scraper for **Rightmove** that specifically filters for apartments by square meterage (sqm).
 
 ## 🚀 Quick Start
 You don't need to navigate to the project folder. Use the shortcuts in your home directory:
@@ -9,7 +9,6 @@ You don't need to navigate to the project folder. Use the shortcuts in your home
 - **View Matches:** `./view-results.sh`
 
 ## ✨ Key Features
-- **Agnostic Scraping:** Handles both Rightmove and Zoopla search results.
 - **Smart SQM Extraction:** 
     - Scans property descriptions for size mentions.
     - Automatically clicks "Floor Plan" tabs.
@@ -22,7 +21,7 @@ You don't need to navigate to the project folder. Use the shortcuts in your home
 You can edit `config.json` in the project directory to update your search:
 - `maxPrice`: Your maximum monthly budget (currently £2500).
 - `minSqm`: Your minimum required size (currently 40 sqm).
-- `rightmoveUrls` / `zooplaUrls`: Add or remove search links here.
+- `rightmoveUrls`: Add or remove search links here.
 
 ## 📂 Output Files
 - **`data/matches.md`**: A clean, readable Markdown log of all properties that meet your criteria.

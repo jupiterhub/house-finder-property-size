@@ -17,16 +17,6 @@ async function run() {
       console.log('No propertyCard class found');
   }
   
-  console.log("Navigating to Zoopla...");
-  await page.goto('https://www.zoopla.co.uk/to-rent/property/station/tube/kings-cross-st-pancras/?beds_max=2&price_frequency=per_month&price_max=5000&q=King%27s%20Cross%20St.%20Pancras%20Station%2C%20London&search_source=to-rent', { waitUntil: 'domcontentloaded' });
-  console.log("Zoopla Title:", await page.title());
-  
-  const zooplaContent = await page.content();
-  if (zooplaContent.includes('regular-listings')) {
-      console.log('Found regular-listings class/id/data-testid');
-  } else {
-      console.log('No regular-listings found');
-  }
   await browser.close();
 }
 run();

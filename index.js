@@ -3,7 +3,6 @@ const stealth = require('puppeteer-extra-plugin-stealth')();
 chromium.use(stealth);
 
 const RightmoveAdapter = require('./adapters/RightmoveAdapter');
-const ZooplaAdapter = require('./adapters/ZooplaAdapter');
 const { saveMatch, markAsSeen } = require('./utils/storage');
 
 async function main() {
@@ -37,24 +36,11 @@ async function main() {
   const page = await context.newPage();
 
   const rightmove = new RightmoveAdapter(page);
-  const zoopla = new ZooplaAdapter(page);
 
   try {
     const rightmoveResults = await rightmove.run();
     for (const match of rightmoveResults) {
       saveMatch(match);
-    }
-    
-    const args = process.argv.slice(2);
-    const runZoopla = args.includes('--with-zoopla');
-
-    if (runZoopla) {
-      const zooplaResults = await zoopla.run();
-      for (const match of zooplaResults) {
-        saveMatch(match);
-      }
-    } else {
-      console.log('Skipping Zoopla scrape. Run with --with-zoopla to include it.');
     }
 
     console.log('Scraping complete.');

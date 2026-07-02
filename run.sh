@@ -4,9 +4,6 @@ if [[ "$1" == "--help" || "$1" == "-h" ]]; then
   echo "Property Scraper Wrapper"
   echo "Usage: bash run.sh [OPTIONS]"
   echo ""
-  echo "Scraping Options:"
-  echo "  --with-zoopla      Enable Zoopla scraping (disabled by default due to Cloudflare anti-bot checks)"
-  echo ""
   echo "Data Tidying Options (applied to data/matches.md and data/matches.html after scraping):"
   echo "  --sort <field>     Sort matches by field: ideal (default), recent, size, price"
   echo "  --order <asc|desc> Sort order: desc (default), asc"
@@ -14,9 +11,9 @@ if [[ "$1" == "--help" || "$1" == "-h" ]]; then
   echo "  --verify           Perform live status verification of matches (removes let-agreed/off-market)"
   echo ""
   echo "Examples:"
-  echo "  bash run.sh --with-zoopla"
+  echo "  bash run.sh"
   echo "  bash run.sh --sort price --order asc"
-  echo "  bash run.sh --with-zoopla --max-price 2000"
+  echo "  bash run.sh --max-price 2000"
   echo "  bash run.sh --verify"
   exit 0
 fi

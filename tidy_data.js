@@ -72,7 +72,7 @@ function tidySeenProperties() {
   
   // Backwards compatibility if it's an array
   if (Array.isArray(seen)) {
-    seen = { "Rightmove": seen, "Zoopla": [] };
+    seen = { "Rightmove": seen };
   }
 
   let totalRemoved = 0;
@@ -94,10 +94,8 @@ async function verifyMatches(matches) {
   console.log(`Starting live verification of ${matches.length} matches...`);
   
   const rightmoveMatches = matches.filter(m => m.platform === 'Rightmove');
-  const zooplaMatches = matches.filter(m => m.platform === 'Zoopla');
 
   console.log(`Rightmove matches to check: ${rightmoveMatches.length}`);
-  console.log(`Zoopla matches to check: ${zooplaMatches.length}`);
 
   const results = [];
   
@@ -151,67 +149,6 @@ async function verifyMatches(matches) {
     } catch (err) {
       // In case of error, default to keeping it in the list
       results.push(item);
-    }
-  }
-
-  // Zoopla checking (Playwright)
-  if (zooplaMatches.length > 0) {
-    console.log('\n--- VERIFYING ZOOPLA (Playwright) ---');
-    try {
-      const { chromium } = require('playwright-extra');
-      const stealth = require('puppeteer-extra-plugin-stealth')();
-      chromium.use(stealth);
-
-      const browser = await chromium.launch({ headless: true });
-      const context = await browser.newContext({
-        userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-        viewport: { width: 1280, height: 800 },
-      });
-      const page = await context.newPage();
-
-      for (let i = 0; i < zooplaMatches.length; i++) {
-        const item = zooplaMatches[i];
-        console.log(`Verifying Zoopla ${i + 1}/${zooplaMatches.length}: ${item.link}...`);
-        
-        try {
-          const response = await page.goto(item.link, { waitUntil: 'domcontentloaded', timeout: 15000 });
-          const currentUrl = page.url();
-
-          // Check if redirected to search or another page (means listing is gone)
-          if (currentUrl !== item.link && !currentUrl.includes(item.id)) {
-            console.log(`- Zoopla Property ${item.id} is off-market (Redirected)`);
-            continue;
-          }
-
-          if (response.status() === 404 || response.status() === 410) {
-            console.log(`- Zoopla Property ${item.id} is off-market (Status ${response.status()})`);
-            continue;
-          }
-
-          const bodyText = await page.innerText('body');
-          const isLetAgreed = /let agreed/i.test(bodyText);
-          const isNoLongerMarket = /no longer on the market/i.test(bodyText) || 
-                                   /no longer listed/i.test(bodyText);
-
-          if (isLetAgreed) {
-            console.log(`- Zoopla Property ${item.id} is Let Agreed`);
-          } else if (isNoLongerMarket) {
-            console.log(`- Zoopla Property ${item.id} is no longer on the market`);
-          } else {
-            results.push(item);
-          }
-        } catch (err) {
-          results.push(item);
-        }
-        await new Promise(r => setTimeout(r, 1000));
-      }
-
-      await browser.close();
-    } catch (err) {
-      console.error('Playwright verification failed for Zoopla, preserving listings:', err.message);
-      for (const item of zooplaMatches) {
-        results.push(item);
-      }
     }
   }
 
@@ -370,8 +307,8 @@ async function main() {
         const timestamp = m.timestamp ? m.timestamp.getTime() : 0;
         const pricePerSqm = (m.price && m.size) ? (m.price / m.size).toFixed(2) : 'N/A';
         const pricePerSqmValue = (m.price && m.size) ? (m.price / m.size) : 0;
-        const badgeClass = m.platform.toLowerCase() === 'rightmove' ? 'badge-rightmove' : 'badge-zoopla';
-        
+        const badgeClass = 'badge-rightmove';
+
         return `<tr data-id="${m.id}">
           <td data-value="${timestamp}">${dateStr}</td>
           <td><span class="badge ${badgeClass}">${m.platform}</span></td>
@@ -401,7 +338,6 @@ async function main() {
     --primary: #3b82f6;
     --primary-hover: #2563eb;
     --rightmove: #00ad80;
-    --zoopla: #ff0050;
     --danger: #ef4444;
     --danger-hover: #dc2626;
   }
@@ -531,11 +467,6 @@ async function main() {
     background: rgba(0, 173, 128, 0.15);
     color: var(--rightmove);
     border: 1px solid rgba(0, 173, 128, 0.3);
-  }
-  .badge-zoopla {
-    background: rgba(255, 0, 80, 0.15);
-    color: var(--zoopla);
-    border: 1px solid rgba(255, 0, 80, 0.3);
   }
 
   .numeric {
