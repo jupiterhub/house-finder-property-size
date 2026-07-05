@@ -157,6 +157,54 @@ class RightmoveAdapter {
         }
       }
 
+      // Extract agent / marketed by
+      let agentName = await this.page.evaluate(() => {
+        // 1. Check meta og:description first (e.g. "Marketed by OpenRent, London")
+        const metaDesc = document.querySelector('meta[property="og:description"]');
+        if (metaDesc && metaDesc.content) {
+          const mMatch = metaDesc.content.match(/Marketed by\s+([^<'""\.,]+(?:,\s*[^<'""\.,]+)?)/i);
+          if (mMatch && mMatch[1]) {
+            const val = mMatch[1].trim();
+            if (val.toLowerCase().includes('openrent')) return 'OpenRent, London';
+            return val;
+          }
+        }
+
+        // 2. Check agent links (including img alt attributes if anchor has an image logo)
+        const agentLinks = Array.from(document.querySelectorAll('a[href*="/estate-agents/agent/"], a[href*="BRANCH^"], a[href*="/property-to-rent/find/"]'));
+        for (const link of agentLinks) {
+          const txt = (link.textContent || '').trim() || (link.querySelector('img') ? (link.querySelector('img').alt || '').trim() : '');
+          if (txt && !txt.toLowerCase().includes('more properties') && !txt.toLowerCase().includes('valuation') && !txt.toLowerCase().includes('find estate') && !txt.toLowerCase().includes('find an agent')) {
+            if (txt.toLowerCase().includes('openrent')) return 'OpenRent, London';
+            return txt;
+          }
+        }
+
+        // 3. Check agent profile URL
+        for (const link of agentLinks) {
+          const match = link.href.match(/\/estate-agents\/agent\/([^\/]+)\//);
+          if (match && match[1]) {
+            const decoded = decodeURIComponent(match[1]).replace(/-/g, ' ');
+            if (decoded.toLowerCase() === 'openrent' || decoded.toLowerCase().includes('openrent')) return 'OpenRent, London';
+            return decoded;
+          }
+        }
+
+        // 4. Check adInfo
+        if (window.adInfo && Array.isArray(window.adInfo)) {
+          const cIdObj = window.adInfo.find(item => item && item.key === 'C_ID');
+          if (cIdObj && cIdObj.value && cIdObj.value[0]) {
+            return cIdObj.value[0];
+          }
+        }
+        return 'Unknown';
+      }).catch(() => 'Unknown');
+
+      // Fallback if locationName is OpenRent or link implies OpenRent
+      if ((!agentName || agentName === 'Unknown') && (locationName.toLowerCase().includes('openrent') || listing.link.toLowerCase().includes('openrent'))) {
+        agentName = 'OpenRent, London';
+      }
+
       if (sqm && sqm >= config.minSqm) {
         return {
           platform: this.platformName,
@@ -164,6 +212,7 @@ class RightmoveAdapter {
           price: listing.price,
           sqm: sqm,
           location: locationName,
+          agent: agentName || 'Unknown',
           url: `https://www.rightmove.co.uk/properties/${listing.id}`
         };
       } else {
@@ -180,5 +229,4 @@ class RightmoveAdapter {
   }
 }
 
-module.exports = RightmoveAdapter;
 module.exports = RightmoveAdapter;

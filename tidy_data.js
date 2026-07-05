@@ -25,6 +25,11 @@ function parseMatches(content) {
     const platformMatch = block.match(/(?:Platform:|\*\*Platform\*\*:) (.*)/);
     if (platformMatch) match.platform = platformMatch[1].trim();
 
+    // Parse Marketed by (or Agent)
+    const agentMatch = block.match(/(?:Marketed by:|\*\*Marketed by\*\*:|Agent:|\*\*Agent\*\*:) (.*)/);
+    if (agentMatch) match.agent = agentMatch[1].trim();
+    else match.agent = 'Unknown';
+
     // Parse Location
     const locMatch = block.match(/(?:Location:|\*\*Location\*\*:) (.*)/);
     if (locMatch) match.location = locMatch[1].trim();
@@ -47,6 +52,9 @@ function parseMatches(content) {
     if (linkMatch) match.link = linkMatch[1].trim();
 
     if (match.id) {
+      if (match.agent === 'Unknown' && (match.location === 'OpenRent (London)' || (match.link && match.link.toLowerCase().includes('openrent')))) {
+        match.agent = 'OpenRent, London';
+      }
       matches.push(match);
     }
   }
@@ -55,8 +63,10 @@ function parseMatches(content) {
 }
 
 function formatMatchMarkdown(match) {
-  return `### [${match.timestamp.toISOString()}] MATCH FOUND!\n` +
+  const ts = match.timestamp ? match.timestamp.toISOString() : new Date().toISOString();
+  return `### [${ts}] MATCH FOUND!\n` +
     `- **Platform**: ${match.platform}\n` +
+    `- **Marketed by**: ${match.agent || 'Unknown'}\n` +
     `- **Location**: ${match.location || 'Unknown'}\n` +
     `- **ID**: ${match.id}\n` +
     `- **Price**: £${match.price} PCM\n` +
@@ -171,6 +181,7 @@ async function main() {
 
   for (let i = 0; i < args.length; i++) {
     if (args[i] === '--max-price') flags.maxPrice = parseFloat(args[++i]);
+    else if (args[i] === '--agent' || args[i] === '--marketed-by' || args[i] === '--filter-agent') flags.agent = args[++i];
     else if (args[i] === '--sort') flags.sort = args[++i];
     else if (args[i] === '--order') flags.order = args[++i];
     else if (args[i] === '--output') flags.output = args[++i];
@@ -218,6 +229,10 @@ async function main() {
   // Filter
   if (flags.maxPrice) {
     result = result.filter(m => m.price <= flags.maxPrice);
+  }
+  if (flags.agent) {
+    const query = flags.agent.toLowerCase();
+    result = result.filter(m => (m.agent || 'Unknown').toLowerCase().includes(query));
   }
 
   // Sort
@@ -279,16 +294,55 @@ async function main() {
       return locA.localeCompare(locB);
     }
 
-    let valA = a[flags.sort];
-    let valB = b[flags.sort];
+    // Support multi-column sorting (e.g. 'date,price' or 'date:desc,price:asc')
+    const sortCols = flags.sort.split(',').map(s => s.trim());
+    const orderCols = flags.order ? flags.order.split(',').map(s => s.trim()) : [];
 
-    if (flags.sort === 'date' || flags.sort === 'timestamp') {
-      valA = a.timestamp;
-      valB = b.timestamp;
+    for (let idx = 0; idx < sortCols.length; idx++) {
+      let col = sortCols[idx];
+      let dir = orderCols[idx] || orderCols[0] || 'desc';
+      if (col.includes(':')) {
+        const parts = col.split(':');
+        col = parts[0].trim();
+        dir = parts[1].trim();
+      }
+
+      let valA = a[col];
+      let valB = b[col];
+
+      if (col === 'date' || col === 'timestamp' || col === 'recent') {
+        valA = a.timestamp ? a.timestamp.getTime() : 0;
+        valB = b.timestamp ? b.timestamp.getTime() : 0;
+        dir = orderCols[idx] || orderCols[0] || 'desc';
+      } else if (col === 'agent' || col === 'marketed-by' || col === 'marketedBy') {
+        valA = (a.agent || 'Unknown').toLowerCase();
+        valB = (b.agent || 'Unknown').toLowerCase();
+      } else if (col === 'price') {
+        valA = a.price || 0;
+        valB = b.price || 0;
+        if (!orderCols[idx] && !col.includes(':')) dir = 'asc'; // default price sort to asc
+      } else if (col === 'size') {
+        valA = a.size || 0;
+        valB = b.size || 0;
+      } else if (col === 'location') {
+        valA = (a.location || 'Unknown').toLowerCase();
+        valB = (b.location || 'Unknown').toLowerCase();
+      }
+
+      if (valA !== valB) {
+        if (dir === 'asc') return valA > valB ? 1 : -1;
+        return valA < valB ? 1 : -1;
+      }
     }
 
-    if (flags.order === 'asc') return valA > valB ? 1 : -1;
-    return valA < valB ? 1 : -1;
+    // Default secondary sort if only 1 column was specified: sort ties by price ascending
+    if (sortCols.length === 1 && sortCols[0] !== 'price') {
+      const priceA = a.price || 0;
+      const priceB = b.price || 0;
+      if (priceA !== priceB) return priceA - priceB;
+    }
+
+    return 0;
   });
 
   const outputContent = result.map(formatMatchMarkdown).join('');
@@ -308,10 +362,16 @@ async function main() {
         const pricePerSqm = (m.price && m.size) ? (m.price / m.size).toFixed(2) : 'N/A';
         const pricePerSqmValue = (m.price && m.size) ? (m.price / m.size) : 0;
         const badgeClass = 'badge-rightmove';
+        const agentStr = m.agent || 'Unknown';
+        const isOpenRent = agentStr.toLowerCase().includes('openrent');
+        const agentBadge = isOpenRent ? 
+          `<span class="badge badge-openrent">✨ ${agentStr}</span>` : 
+          `<span class="agent-name">${agentStr}</span>`;
 
         return `<tr data-id="${m.id}">
           <td data-value="${timestamp}">${dateStr}</td>
           <td><span class="badge ${badgeClass}">${m.platform}</span></td>
+          <td data-value="${agentStr}">${agentBadge}</td>
           <td>${m.location || 'Unknown'}</td>
           <td class="numeric" data-value="${m.price || 0}">£${m.price || 0}</td>
           <td class="numeric" data-value="${m.size || 0}">${m.size || 0} sqm</td>
@@ -467,6 +527,134 @@ async function main() {
     background: rgba(0, 173, 128, 0.15);
     color: var(--rightmove);
     border: 1px solid rgba(0, 173, 128, 0.3);
+  }
+  .badge-openrent {
+    background: linear-gradient(135deg, rgba(56, 189, 248, 0.15), rgba(37, 99, 235, 0.15));
+    color: #38bdf8;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    box-shadow: 0 0 10px rgba(56, 189, 248, 0.1);
+  }
+  .agent-name {
+    font-weight: 600;
+    color: #e2e8f0;
+  }
+  .quick-filters {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .filter-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .filter-chip {
+    padding: 6px 14px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .filter-chip:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--text);
+    transform: translateY(-1px);
+  }
+  .filter-chip.active {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+    box-shadow: 0 0 12px rgba(59, 130, 246, 0.4);
+  }
+  .filter-chip.chip-openrent.active {
+    background: linear-gradient(135deg, #0284c7, #2563eb);
+    border-color: #38bdf8;
+    color: white;
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+  }
+  .quick-sorts {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .sort-indicator {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--primary);
+    background: rgba(59, 130, 246, 0.15);
+    padding: 1px 6px;
+    border-radius: 10px;
+    margin-left: 5px;
+  }
+  th {
+    user-select: none;
+    cursor: pointer;
+  }
+  th:hover {
+    color: var(--primary);
+  }
+  .chip-clear {
+    background: rgba(239, 68, 68, 0.1);
+    border-color: rgba(239, 68, 68, 0.3);
+    color: #f87171;
+  }
+  .chip-clear:hover {
+    background: rgba(239, 68, 68, 0.2);
+    color: #fca5a5;
+  }
+  .tooltip-container {
+    position: relative;
+    display: inline-block;
+    margin-left: 4px;
+  }
+  .tooltip-badge {
+    cursor: help;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    background: rgba(255, 255, 255, 0.06);
+    padding: 5px 12px;
+    border-radius: 16px;
+    border: 1px dashed var(--border);
+    transition: all 0.2s ease;
+  }
+  .tooltip-container:hover .tooltip-badge {
+    color: var(--text);
+    border-color: var(--primary);
+    background: rgba(59, 130, 246, 0.1);
+  }
+  .tooltip-popup {
+    visibility: hidden;
+    opacity: 0;
+    width: 290px;
+    background-color: var(--card-bg);
+    color: var(--text);
+    text-align: left;
+    border-radius: 8px;
+    padding: 12px;
+    position: absolute;
+    z-index: 100;
+    top: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+    border: 1px solid var(--border);
+    font-size: 0.8rem;
+    line-height: 1.4;
+    transition: opacity 0.2s, visibility 0.2s, transform 0.2s;
+  }
+  .tooltip-container:hover .tooltip-popup {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-50%) translateY(4px);
   }
 
   .numeric {
@@ -697,51 +885,157 @@ function filterTable() {
   document.getElementById("visibleCount").textContent = visibleCount;
 }
 
-function sortTable(n) {
-  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-  table = document.getElementById("matchesTable");
-  switching = true;
-  dir = "asc";
-  while (switching) {
-    switching = false;
-    rows = table.getElementsByTagName("tbody")[0].rows;
-    for (i = 0; i < (rows.length - 1); i++) {
-      shouldSwitch = false;
-      x = rows[i].getElementsByTagName("TD")[n];
-      y = rows[i + 1].getElementsByTagName("TD")[n];
-      
-      var valX = x.getAttribute("data-value") || x.textContent.toLowerCase().trim();
-      var valY = y.getAttribute("data-value") || y.textContent.toLowerCase().trim();
-      
-      var numX = parseFloat(valX);
-      var numY = parseFloat(valY);
-      
-      if (!isNaN(numX) && !isNaN(numY)) {
-        valX = numX;
-        valY = numY;
+function setQuickFilter(agentName) {
+  var inputs = document.querySelectorAll("thead .filter-input");
+  for (var i = 0; i < inputs.length; i++) {
+    if (inputs[i].getAttribute("data-col") === "2") {
+      inputs[i].value = agentName;
+      break;
+    }
+  }
+  filterTable();
+  var chips = document.querySelectorAll(".quick-filters .filter-chip");
+  if (chips.length > 0) {
+    for (var k = 0; k < chips.length; k++) chips[k].classList.remove("active");
+    if (!agentName) {
+      var allBtn = document.getElementById("chipAll");
+      if (allBtn) allBtn.classList.add("active");
+    } else {
+      var orBtn = document.getElementById("chipOpenRent");
+      if (orBtn) orBtn.classList.add("active");
+    }
+  }
+}
+
+var currentSorts = [{col: 0, dir: 'desc'}, {col: 4, dir: 'asc'}]; // Default: Date desc, Price asc
+
+function sortTable(n, event) {
+  var isShift = event && event.shiftKey;
+  
+  if (isShift && currentSorts.length > 0) {
+    var foundIdx = -1;
+    for (var j = 0; j < currentSorts.length; j++) {
+      if (currentSorts[j].col === n) { foundIdx = j; break; }
+    }
+    if (foundIdx !== -1) {
+      currentSorts[foundIdx].dir = currentSorts[foundIdx].dir === 'asc' ? 'desc' : 'asc';
+    } else {
+      currentSorts.push({col: n, dir: (n === 0 || n === 5) ? 'desc' : 'asc'});
+    }
+  } else {
+    var primaryDir = 'asc';
+    if (currentSorts.length > 0 && currentSorts[0].col === n) {
+      primaryDir = currentSorts[0].dir === 'asc' ? 'desc' : 'asc';
+    } else {
+      primaryDir = (n === 0 || n === 5) ? 'desc' : 'asc';
+    }
+
+    if (n === 0) {
+      currentSorts = [{col: 0, dir: primaryDir}, {col: 4, dir: 'asc'}];
+    } else if (n === 4) {
+      currentSorts = [{col: 4, dir: primaryDir}, {col: 5, dir: 'desc'}];
+    } else if (n === 5) {
+      currentSorts = [{col: 5, dir: primaryDir}, {col: 4, dir: 'asc'}];
+    } else {
+      currentSorts = [{col: n, dir: primaryDir}, {col: 4, dir: 'asc'}];
+    }
+  }
+
+  applySort();
+  updateSortIndicators();
+}
+
+function applySort() {
+  var table = document.getElementById("matchesTable");
+  if (!table) return;
+  var tbody = table.getElementsByTagName("tbody")[0];
+  var rows = Array.from(tbody.getElementsByTagName("tr"));
+
+  rows.sort(function(rowA, rowB) {
+    for (var k = 0; k < currentSorts.length; k++) {
+      var colIdx = currentSorts[k].col;
+      var dir = currentSorts[k].dir;
+
+      var cellA = rowA.getElementsByTagName("td")[colIdx];
+      var cellB = rowB.getElementsByTagName("td")[colIdx];
+      if (!cellA || !cellB) continue;
+
+      var valA = cellA.getAttribute("data-value") !== null && cellA.getAttribute("data-value") !== "" ? cellA.getAttribute("data-value") : cellA.textContent.toLowerCase().trim();
+      var valB = cellB.getAttribute("data-value") !== null && cellB.getAttribute("data-value") !== "" ? cellB.getAttribute("data-value") : cellB.textContent.toLowerCase().trim();
+
+      var numA = parseFloat(valA);
+      var numB = parseFloat(valB);
+      if (!isNaN(numA) && !isNaN(numB)) {
+        valA = numA;
+        valB = numB;
+      } else {
+        valA = String(valA).toLowerCase();
+        valB = String(valB).toLowerCase();
       }
 
-      if (dir == "asc") {
-        if (valX > valY) { shouldSwitch = true; break; }
-      } else if (dir == "desc") {
-        if (valX < valY) { shouldSwitch = true; break; }
+      if (valA !== valB) {
+        if (dir === 'asc') return valA > valB ? 1 : -1;
+        return valA < valB ? 1 : -1;
       }
     }
-    if (shouldSwitch) {
-      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-      switching = true;
-      switchcount ++;
-    } else {
-      if (switchcount == 0 && dir == "asc") {
-        dir = "desc";
-        switching = true;
-      }
+    return 0;
+  });
+
+  var fragment = document.createDocumentFragment();
+  for (var r = 0; r < rows.length; r++) {
+    fragment.appendChild(rows[r]);
+  }
+  tbody.appendChild(fragment);
+}
+
+function updateSortIndicators() {
+  for (var c = 0; c <= 6; c++) {
+    var ind = document.getElementById("sort-ind-" + c);
+    if (ind) ind.textContent = "";
+  }
+  for (var j = 0; j < currentSorts.length; j++) {
+    var col = currentSorts[j].col;
+    var dir = currentSorts[j].dir;
+    var arrow = dir === 'asc' ? '▲' : '▼';
+    var indEl = document.getElementById("sort-ind-" + col);
+    if (indEl) {
+      indEl.textContent = currentSorts.length > 1 ? (arrow + " (" + (j + 1) + ")") : arrow;
     }
+  }
+}
+
+function setMultiSort(criteria) {
+  currentSorts = criteria;
+  applySort();
+  updateSortIndicators();
+  
+  var sortBtns = document.querySelectorAll(".quick-sorts .filter-chip");
+  for (var i = 0; i < sortBtns.length; i++) sortBtns[i].classList.remove("active");
+  
+  if (criteria.length === 2 && criteria[0].col === 0 && criteria[1].col === 4) {
+    var btn = document.getElementById("sortDatePrice");
+    if (btn) btn.classList.add("active");
+  } else if (criteria.length === 2 && criteria[0].col === 4 && criteria[1].col === 5) {
+    var btn = document.getElementById("sortPriceSize");
+    if (btn) btn.classList.add("active");
+  } else if (criteria.length === 2 && criteria[0].col === 5 && criteria[1].col === 4) {
+    var btn = document.getElementById("sortSizePrice");
+    if (btn) btn.classList.add("active");
+  }
+}
+
+function clearSort() {
+  setMultiSort([{col: 0, dir: 'desc'}, {col: 4, dir: 'asc'}]);
+  var clearBtn = document.getElementById("clearSortBtn");
+  if (clearBtn) {
+    clearBtn.classList.add("active");
+    setTimeout(() => clearBtn.classList.remove("active"), 1200);
   }
 }
 
 window.addEventListener('DOMContentLoaded', () => {
   applyHidden();
+  updateSortIndicators();
 });
 </script>
 </head>
@@ -754,9 +1048,30 @@ window.addEventListener('DOMContentLoaded', () => {
       <button id="resetHiddenBtn" onclick="resetHidden()" style="display:none;">Unhide All (<span id="hiddenCount">0</span>)</button>
     </div>
   </div>
+  <div class="quick-filters">
+    <span class="filter-label">Agent Filter:</span>
+    <button id="chipAll" class="filter-chip active" onclick="setQuickFilter('')">All Agents</button>
+    <button id="chipOpenRent" class="filter-chip chip-openrent" onclick="setQuickFilter('OpenRent')">✨ OpenRent Only</button>
+  </div>
+  <div class="quick-sorts">
+    <span class="filter-label">Quick Sort:</span>
+    <button id="sortDatePrice" class="filter-chip active" onclick="setMultiSort([{col: 0, dir: 'desc'}, {col: 4, dir: 'asc'}])">📅 Date → Price</button>
+    <button id="sortPriceSize" class="filter-chip" onclick="setMultiSort([{col: 4, dir: 'asc'}, {col: 5, dir: 'desc'}])">💰 Price → Size</button>
+    <button id="sortSizePrice" class="filter-chip" onclick="setMultiSort([{col: 5, dir: 'desc'}, {col: 4, dir: 'asc'}])">📐 Size → Price</button>
+    <button id="clearSortBtn" class="filter-chip chip-clear" onclick="clearSort()">✕ Clear Sort</button>
+    <div class="tooltip-container">
+      <span class="tooltip-badge">ℹ️ How to Multi-Sort</span>
+      <div class="tooltip-popup">
+        <strong>⚡ Multi-Column Sorting Guide:</strong><br>
+        • <strong>Hold SHIFT + Click</strong> any column header to add it as a secondary (2), tertiary (3), etc. sort column.<br>
+        • <strong>Normal Click</strong> sets a smart 2-column default (e.g. Date then Price).<br>
+        • Click <strong>✕ Clear Sort</strong> to return to default sorting.
+      </div>
+    </div>
+  </div>
   <div class="search-container">
     <label for="globalSearch">Quick Search</label>
-    <input type="text" id="globalSearch" onkeyup="filterTable()" placeholder="Search location, platform, dates...">
+    <input type="text" id="globalSearch" onkeyup="filterTable()" placeholder="Search location, agent, platform...">
   </div>
 </div>
 
@@ -764,12 +1079,13 @@ window.addEventListener('DOMContentLoaded', () => {
 <table id="matchesTable">
   <thead>
     <tr>
-      <th onclick="sortTable(0)">Date ↕<br><input type="text" class="filter-input" data-col="0" data-type="date" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Date (e.g. >2026-05-01)..."></th>
-      <th onclick="sortTable(1)">Platform ↕<br><input type="text" class="filter-input" data-col="1" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Filter..."></th>
-      <th onclick="sortTable(2)">Location ↕<br><input type="text" class="filter-input" data-col="2" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Filter..."></th>
-      <th onclick="sortTable(3)">Price ↕<br><input type="text" class="filter-input" data-col="3" data-type="numeric" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Price (e.g. >2000)..."></th>
-      <th onclick="sortTable(4)">Size ↕<br><input type="text" class="filter-input" data-col="4" data-type="numeric" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Size (e.g. <50)..."></th>
-      <th onclick="sortTable(5)">£ / sqm ↕<br><input type="text" class="filter-input" data-col="5" data-type="numeric" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="£/sqm (e.g. >=40)..."></th>
+      <th onclick="sortTable(0, event)">Date <span class="sort-indicator" id="sort-ind-0"></span><br><input type="text" class="filter-input" data-col="0" data-type="date" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Date (e.g. >2026-05-01)..."></th>
+      <th onclick="sortTable(1, event)">Platform <span class="sort-indicator" id="sort-ind-1"></span><br><input type="text" class="filter-input" data-col="1" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Filter..."></th>
+      <th onclick="sortTable(2, event)">Marketed By <span class="sort-indicator" id="sort-ind-2"></span><br><input type="text" class="filter-input" data-col="2" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Filter (e.g. OpenRent)..."></th>
+      <th onclick="sortTable(3, event)">Location <span class="sort-indicator" id="sort-ind-3"></span><br><input type="text" class="filter-input" data-col="3" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Filter..."></th>
+      <th onclick="sortTable(4, event)">Price <span class="sort-indicator" id="sort-ind-4"></span><br><input type="text" class="filter-input" data-col="4" data-type="numeric" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Price (e.g. >2000)..."></th>
+      <th onclick="sortTable(5, event)">Size <span class="sort-indicator" id="sort-ind-5"></span><br><input type="text" class="filter-input" data-col="5" data-type="numeric" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Size (e.g. <50)..."></th>
+      <th onclick="sortTable(6, event)">£ / sqm <span class="sort-indicator" id="sort-ind-6"></span><br><input type="text" class="filter-input" data-col="6" data-type="numeric" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="£/sqm (e.g. >=40)..."></th>
       <th style="cursor: default; text-align: center;">Link</th>
       <th style="cursor: default; text-align: center;">Actions</th>
     </tr>
