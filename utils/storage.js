@@ -78,7 +78,6 @@ function isSeen(propertyId, platform = 'Rightmove') {
 
 function saveMatch(propertyData) {
   const matchString = `### [${new Date().toISOString()}] MATCH FOUND!\n` +
-    `- **Platform**: ${propertyData.platform}\n` +
     `- **Marketed by**: ${propertyData.agent || propertyData.marketedBy || 'Unknown'}\n` +
     `- **Location**: ${propertyData.location || 'Unknown'}\n` +
     `- **ID**: ${propertyData.id}\n` +

@@ -65,7 +65,6 @@ function parseMatches(content) {
 function formatMatchMarkdown(match) {
   const ts = match.timestamp ? match.timestamp.toISOString() : new Date().toISOString();
   return `### [${ts}] MATCH FOUND!\n` +
-    `- **Platform**: ${match.platform}\n` +
     `- **Marketed by**: ${match.agent || 'Unknown'}\n` +
     `- **Location**: ${match.location || 'Unknown'}\n` +
     `- **ID**: ${match.id}\n` +
@@ -103,7 +102,7 @@ function tidySeenProperties() {
 async function verifyMatches(matches) {
   console.log(`Starting live verification of ${matches.length} matches...`);
   
-  const rightmoveMatches = matches.filter(m => m.platform === 'Rightmove');
+  const rightmoveMatches = matches.filter(m => !m.platform || m.platform === 'Rightmove' || (m.link && m.link.includes('rightmove')));
 
   console.log(`Rightmove matches to check: ${rightmoveMatches.length}`);
 
@@ -356,7 +355,7 @@ async function main() {
     // Generate HTML
     const htmlFile = flags.output ? flags.output.replace(/\.md$/, '.html') : HTML_FILE;
     if (htmlFile !== targetFile) {
-      const htmlRows = result.map(m => {
+      const htmlRows = result.map((m, idx) => {
         const dateStr = m.timestamp ? m.timestamp.toISOString().replace(/T/, ' ').replace(/\..+/, '') : '';
         const timestamp = m.timestamp ? m.timestamp.getTime() : 0;
         const pricePerSqm = (m.price && m.size) ? (m.price / m.size).toFixed(2) : 'N/A';
@@ -368,9 +367,8 @@ async function main() {
           `<span class="badge badge-openrent">✨ ${agentStr}</span>` : 
           `<span class="agent-name">${agentStr}</span>`;
 
-        return `<tr data-id="${m.id}">
+        return `<tr data-id="${m.id}" data-index="${idx}">
           <td data-value="${timestamp}">${dateStr}</td>
-          <td><span class="badge ${badgeClass}">${m.platform}</span></td>
           <td data-value="${agentStr}">${agentBadge}</td>
           <td>${m.location || 'Unknown'}</td>
           <td class="numeric" data-value="${m.price || 0}">£${m.price || 0}</td>
@@ -888,7 +886,7 @@ function filterTable() {
 function setQuickFilter(agentName) {
   var inputs = document.querySelectorAll("thead .filter-input");
   for (var i = 0; i < inputs.length; i++) {
-    if (inputs[i].getAttribute("data-col") === "2") {
+    if (inputs[i].getAttribute("data-col") === "1") {
       inputs[i].value = agentName;
       break;
     }
@@ -907,7 +905,7 @@ function setQuickFilter(agentName) {
   }
 }
 
-var currentSorts = [{col: 0, dir: 'desc'}, {col: 4, dir: 'asc'}]; // Default: Date desc, Price asc
+var currentSorts = [{col: 0, dir: 'desc'}, {col: 3, dir: 'asc'}]; // Default: Date desc, Price asc
 
 function sortTable(n, event) {
   var isShift = event && event.shiftKey;
@@ -920,24 +918,24 @@ function sortTable(n, event) {
     if (foundIdx !== -1) {
       currentSorts[foundIdx].dir = currentSorts[foundIdx].dir === 'asc' ? 'desc' : 'asc';
     } else {
-      currentSorts.push({col: n, dir: (n === 0 || n === 5) ? 'desc' : 'asc'});
+      currentSorts.push({col: n, dir: (n === 0 || n === 4) ? 'desc' : 'asc'});
     }
   } else {
     var primaryDir = 'asc';
     if (currentSorts.length > 0 && currentSorts[0].col === n) {
       primaryDir = currentSorts[0].dir === 'asc' ? 'desc' : 'asc';
     } else {
-      primaryDir = (n === 0 || n === 5) ? 'desc' : 'asc';
+      primaryDir = (n === 0 || n === 4) ? 'desc' : 'asc';
     }
 
     if (n === 0) {
-      currentSorts = [{col: 0, dir: primaryDir}, {col: 4, dir: 'asc'}];
+      currentSorts = [{col: 0, dir: primaryDir}, {col: 3, dir: 'asc'}];
+    } else if (n === 3) {
+      currentSorts = [{col: 3, dir: primaryDir}, {col: 4, dir: 'desc'}];
     } else if (n === 4) {
-      currentSorts = [{col: 4, dir: primaryDir}, {col: 5, dir: 'desc'}];
-    } else if (n === 5) {
-      currentSorts = [{col: 5, dir: primaryDir}, {col: 4, dir: 'asc'}];
+      currentSorts = [{col: 4, dir: primaryDir}, {col: 3, dir: 'asc'}];
     } else {
-      currentSorts = [{col: n, dir: primaryDir}, {col: 4, dir: 'asc'}];
+      currentSorts = [{col: n, dir: primaryDir}, {col: 3, dir: 'asc'}];
     }
   }
 
@@ -952,6 +950,11 @@ function applySort() {
   var rows = Array.from(tbody.getElementsByTagName("tr"));
 
   rows.sort(function(rowA, rowB) {
+    if (currentSorts.length === 0) {
+      var idxA = parseInt(rowA.getAttribute("data-index") || "0", 10);
+      var idxB = parseInt(rowB.getAttribute("data-index") || "0", 10);
+      return idxA - idxB;
+    }
     for (var k = 0; k < currentSorts.length; k++) {
       var colIdx = currentSorts[k].col;
       var dir = currentSorts[k].dir;
@@ -989,7 +992,7 @@ function applySort() {
 }
 
 function updateSortIndicators() {
-  for (var c = 0; c <= 6; c++) {
+  for (var c = 0; c <= 5; c++) {
     var ind = document.getElementById("sort-ind-" + c);
     if (ind) ind.textContent = "";
   }
@@ -1012,20 +1015,30 @@ function setMultiSort(criteria) {
   var sortBtns = document.querySelectorAll(".quick-sorts .filter-chip");
   for (var i = 0; i < sortBtns.length; i++) sortBtns[i].classList.remove("active");
   
-  if (criteria.length === 2 && criteria[0].col === 0 && criteria[1].col === 4) {
+  if (criteria.length === 2 && criteria[0].col === 0 && criteria[1].col === 3) {
     var btn = document.getElementById("sortDatePrice");
     if (btn) btn.classList.add("active");
-  } else if (criteria.length === 2 && criteria[0].col === 4 && criteria[1].col === 5) {
+  } else if (criteria.length === 2 && criteria[0].col === 3 && criteria[1].col === 4) {
     var btn = document.getElementById("sortPriceSize");
     if (btn) btn.classList.add("active");
-  } else if (criteria.length === 2 && criteria[0].col === 5 && criteria[1].col === 4) {
+  } else if (criteria.length === 2 && criteria[0].col === 4 && criteria[1].col === 3) {
     var btn = document.getElementById("sortSizePrice");
     if (btn) btn.classList.add("active");
   }
 }
 
 function clearSort() {
-  setMultiSort([{col: 0, dir: 'desc'}, {col: 4, dir: 'asc'}]);
+  var globalSearch = document.getElementById("globalSearch");
+  if (globalSearch) globalSearch.value = "";
+  var inputs = document.querySelectorAll("thead .filter-input");
+  for (var i = 0; i < inputs.length; i++) inputs[i].value = "";
+  var chips = document.querySelectorAll(".quick-filters .filter-chip");
+  for (var k = 0; k < chips.length; k++) chips[k].classList.remove("active");
+  var allBtn = document.getElementById("chipAll");
+  if (allBtn) allBtn.classList.add("active");
+  filterTable();
+
+  setMultiSort([{col: 0, dir: 'desc'}, {col: 3, dir: 'asc'}]);
   var clearBtn = document.getElementById("clearSortBtn");
   if (clearBtn) {
     clearBtn.classList.add("active");
@@ -1034,6 +1047,7 @@ function clearSort() {
 }
 
 window.addEventListener('DOMContentLoaded', () => {
+  applySort();
   applyHidden();
   updateSortIndicators();
 });
@@ -1055,23 +1069,23 @@ window.addEventListener('DOMContentLoaded', () => {
   </div>
   <div class="quick-sorts">
     <span class="filter-label">Quick Sort:</span>
-    <button id="sortDatePrice" class="filter-chip active" onclick="setMultiSort([{col: 0, dir: 'desc'}, {col: 4, dir: 'asc'}])">📅 Date → Price</button>
-    <button id="sortPriceSize" class="filter-chip" onclick="setMultiSort([{col: 4, dir: 'asc'}, {col: 5, dir: 'desc'}])">💰 Price → Size</button>
-    <button id="sortSizePrice" class="filter-chip" onclick="setMultiSort([{col: 5, dir: 'desc'}, {col: 4, dir: 'asc'}])">📐 Size → Price</button>
-    <button id="clearSortBtn" class="filter-chip chip-clear" onclick="clearSort()">✕ Clear Sort</button>
+    <button id="sortDatePrice" class="filter-chip active" onclick="setMultiSort([{col: 0, dir: 'desc'}, {col: 3, dir: 'asc'}])">📅 Date → Price</button>
+    <button id="sortPriceSize" class="filter-chip" onclick="setMultiSort([{col: 3, dir: 'asc'}, {col: 4, dir: 'desc'}])">💰 Price → Size</button>
+    <button id="sortSizePrice" class="filter-chip" onclick="setMultiSort([{col: 4, dir: 'desc'}, {col: 3, dir: 'asc'}])">📐 Size → Price</button>
+    <button id="clearSortBtn" class="filter-chip chip-clear" onclick="clearSort()">✕ Clear Sort / Filters</button>
     <div class="tooltip-container">
       <span class="tooltip-badge">ℹ️ How to Multi-Sort</span>
       <div class="tooltip-popup">
         <strong>⚡ Multi-Column Sorting Guide:</strong><br>
         • <strong>Hold SHIFT + Click</strong> any column header to add it as a secondary (2), tertiary (3), etc. sort column.<br>
         • <strong>Normal Click</strong> sets a smart 2-column default (e.g. Date then Price).<br>
-        • Click <strong>✕ Clear Sort</strong> to return to default sorting.
+        • Click <strong>✕ Clear Sort / Filters</strong> to clear all filters and return to default sorting (Date → Price).
       </div>
     </div>
   </div>
   <div class="search-container">
     <label for="globalSearch">Quick Search</label>
-    <input type="text" id="globalSearch" onkeyup="filterTable()" placeholder="Search location, agent, platform...">
+    <input type="text" id="globalSearch" onkeyup="filterTable()" placeholder="Search location, agent...">
   </div>
 </div>
 
@@ -1080,12 +1094,11 @@ window.addEventListener('DOMContentLoaded', () => {
   <thead>
     <tr>
       <th onclick="sortTable(0, event)">Date <span class="sort-indicator" id="sort-ind-0"></span><br><input type="text" class="filter-input" data-col="0" data-type="date" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Date (e.g. >2026-05-01)..."></th>
-      <th onclick="sortTable(1, event)">Platform <span class="sort-indicator" id="sort-ind-1"></span><br><input type="text" class="filter-input" data-col="1" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Filter..."></th>
-      <th onclick="sortTable(2, event)">Marketed By <span class="sort-indicator" id="sort-ind-2"></span><br><input type="text" class="filter-input" data-col="2" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Filter (e.g. OpenRent)..."></th>
-      <th onclick="sortTable(3, event)">Location <span class="sort-indicator" id="sort-ind-3"></span><br><input type="text" class="filter-input" data-col="3" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Filter..."></th>
-      <th onclick="sortTable(4, event)">Price <span class="sort-indicator" id="sort-ind-4"></span><br><input type="text" class="filter-input" data-col="4" data-type="numeric" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Price (e.g. >2000)..."></th>
-      <th onclick="sortTable(5, event)">Size <span class="sort-indicator" id="sort-ind-5"></span><br><input type="text" class="filter-input" data-col="5" data-type="numeric" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Size (e.g. <50)..."></th>
-      <th onclick="sortTable(6, event)">£ / sqm <span class="sort-indicator" id="sort-ind-6"></span><br><input type="text" class="filter-input" data-col="6" data-type="numeric" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="£/sqm (e.g. >=40)..."></th>
+      <th onclick="sortTable(1, event)">Marketed By <span class="sort-indicator" id="sort-ind-1"></span><br><input type="text" class="filter-input" data-col="1" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Filter (e.g. OpenRent)..."></th>
+      <th onclick="sortTable(2, event)">Location <span class="sort-indicator" id="sort-ind-2"></span><br><input type="text" class="filter-input" data-col="2" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Filter..."></th>
+      <th onclick="sortTable(3, event)">Price <span class="sort-indicator" id="sort-ind-3"></span><br><input type="text" class="filter-input" data-col="3" data-type="numeric" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Price (e.g. >2000)..."></th>
+      <th onclick="sortTable(4, event)">Size <span class="sort-indicator" id="sort-ind-4"></span><br><input type="text" class="filter-input" data-col="4" data-type="numeric" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Size (e.g. <50)..."></th>
+      <th onclick="sortTable(5, event)">£ / sqm <span class="sort-indicator" id="sort-ind-5"></span><br><input type="text" class="filter-input" data-col="5" data-type="numeric" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="£/sqm (e.g. >=40)..."></th>
       <th style="cursor: default; text-align: center;">Link</th>
       <th style="cursor: default; text-align: center;">Actions</th>
     </tr>
