@@ -1,5 +1,5 @@
 ### [2026-06-25T13:05:08.774Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Kings Cross
 - **ID**: 90116307
 - **Price**: £1850 PCM
@@ -9,7 +9,7 @@
 ---
 
 ### [2026-05-20T13:24:59.548Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Bloomsbury (Russell Square)
 - **ID**: 88702266
 - **Price**: £1192 PCM
@@ -19,7 +19,7 @@
 ---
 
 ### [2026-07-02T17:21:03.931Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Angel
 - **ID**: 90138318
 - **Price**: £1200 PCM
@@ -29,7 +29,7 @@
 ---
 
 ### [2026-05-27T14:03:03.159Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 88977246
 - **Price**: £2250 PCM
@@ -39,7 +39,7 @@
 ---
 
 ### [2026-05-27T14:03:03.158Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 88977495
 - **Price**: £2250 PCM
@@ -49,7 +49,7 @@
 ---
 
 ### [2026-05-02T20:15:55.705Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Unknown
 - **ID**: 87908958
 - **Price**: £4800 PCM
@@ -59,7 +59,7 @@
 ---
 
 ### [2026-06-23T13:27:08.844Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 90025377
 - **Price**: £2400 PCM
@@ -69,7 +69,7 @@
 ---
 
 ### [2026-07-01T13:22:22.689Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 90361794
 - **Price**: £2500 PCM
@@ -79,7 +79,7 @@
 ---
 
 ### [2026-06-04T13:46:51.487Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 89266041
 - **Price**: £2500 PCM
@@ -89,7 +89,7 @@
 ---
 
 ### [2026-05-29T13:48:52.194Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 89051616
 - **Price**: £2375 PCM
@@ -99,7 +99,7 @@
 ---
 
 ### [2026-05-23T11:45:49.228Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 88205823
 - **Price**: £2499 PCM
@@ -109,7 +109,7 @@
 ---
 
 ### [2026-06-02T14:39:45.426Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 89164764
 - **Price**: £2350 PCM
@@ -119,7 +119,7 @@
 ---
 
 ### [2026-05-02T20:15:55.703Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Unknown
 - **ID**: 174571163
 - **Price**: £3250 PCM
@@ -128,8 +128,18 @@
 
 ---
 
+### [2026-07-06T14:18:08.558Z] MATCH FOUND!
+- **Marketed by**: Relo Redac Strattons, West London Office
+- **Location**: Ealing Broadway
+- **ID**: 89890977
+- **Price**: £2400 PCM
+- **Size**: 73 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/89890977](https://www.rightmove.co.uk/properties/89890977)
+
+---
+
 ### [2026-06-25T13:05:08.775Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 88546884
 - **Price**: £2500 PCM
@@ -139,7 +149,7 @@
 ---
 
 ### [2026-06-09T13:32:41.227Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 89487687
 - **Price**: £2500 PCM
@@ -149,7 +159,7 @@
 ---
 
 ### [2026-07-04T11:57:12.811Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 90470013
 - **Price**: £2496 PCM
@@ -159,7 +169,7 @@
 ---
 
 ### [2026-07-04T11:57:12.811Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Stratford
 - **ID**: 90474612
 - **Price**: £2300 PCM
@@ -169,7 +179,7 @@
 ---
 
 ### [2026-07-02T17:21:03.929Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: West Hampstead
 - **ID**: 89937312
 - **Price**: £2350 PCM
@@ -179,7 +189,7 @@
 ---
 
 ### [2026-05-02T20:15:55.705Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Unknown
 - **ID**: 87996729
 - **Price**: £2900 PCM
@@ -189,7 +199,7 @@
 ---
 
 ### [2026-05-20T13:24:59.549Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 88718487
 - **Price**: £2400 PCM
@@ -199,7 +209,7 @@
 ---
 
 ### [2026-07-02T17:21:03.930Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Stratford
 - **ID**: 90273990
 - **Price**: £2100 PCM
@@ -209,7 +219,7 @@
 ---
 
 ### [2026-07-02T17:21:03.931Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Paddington
 - **ID**: 174057173
 - **Price**: £2200 PCM
@@ -219,7 +229,7 @@
 ---
 
 ### [2026-06-05T13:41:21.976Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 88065144
 - **Price**: £2500 PCM
@@ -229,7 +239,7 @@
 ---
 
 ### [2026-06-06T12:01:35.828Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 89361318
 - **Price**: £2500 PCM
@@ -239,7 +249,7 @@
 ---
 
 ### [2026-07-02T17:21:03.928Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Ealing Broadway
 - **ID**: 90278955
 - **Price**: £2500 PCM
@@ -249,7 +259,7 @@
 ---
 
 ### [2026-07-02T17:21:03.931Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Highbury & Islington
 - **ID**: 90372378
 - **Price**: £2500 PCM
@@ -259,7 +269,7 @@
 ---
 
 ### [2026-06-18T13:58:42.040Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 89856171
 - **Price**: £2384 PCM
@@ -269,7 +279,7 @@
 ---
 
 ### [2026-07-02T17:21:03.929Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: West Hampstead
 - **ID**: 90382506
 - **Price**: £2058 PCM
@@ -279,7 +289,7 @@
 ---
 
 ### [2026-06-25T13:05:08.775Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 90129939
 - **Price**: £2400 PCM
@@ -289,7 +299,7 @@
 ---
 
 ### [2026-05-23T11:45:49.228Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 87793455
 - **Price**: £2500 PCM
@@ -299,7 +309,7 @@
 ---
 
 ### [2026-07-04T11:57:12.811Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Stratford
 - **ID**: 90478146
 - **Price**: £1750 PCM
@@ -309,17 +319,7 @@
 ---
 
 ### [2026-07-02T17:21:03.931Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Location**: Highbury & Islington
-- **ID**: 89836089
-- **Price**: £2100 PCM
-- **Size**: 59 sqm
-- **Link**: [https://www.rightmove.co.uk/properties/89836089](https://www.rightmove.co.uk/properties/89836089)
-
----
-
-### [2026-07-02T17:21:03.931Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Stratford
 - **ID**: 90092094
 - **Price**: £2300 PCM
@@ -329,7 +329,7 @@
 ---
 
 ### [2026-07-02T12:32:13.021Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 90393204
 - **Price**: £2400 PCM
@@ -339,7 +339,7 @@
 ---
 
 ### [2026-07-02T17:21:03.931Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Stratford
 - **ID**: 90131796
 - **Price**: £2450 PCM
@@ -349,7 +349,7 @@
 ---
 
 ### [2026-07-04T11:57:12.811Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Stratford
 - **ID**: 167737724
 - **Price**: £2150 PCM
@@ -359,7 +359,7 @@
 ---
 
 ### [2026-06-05T13:41:21.976Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 89325786
 - **Price**: £2250 PCM
@@ -368,8 +368,18 @@
 
 ---
 
+### [2026-07-06T14:18:08.558Z] MATCH FOUND!
+- **Marketed by**: Ginger Lettings, London
+- **Location**: Highbury & Islington
+- **ID**: 90474102
+- **Price**: £2383 PCM
+- **Size**: 58 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/90474102](https://www.rightmove.co.uk/properties/90474102)
+
+---
+
 ### [2026-06-05T13:41:21.975Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Bloomsbury (Russell Square)
 - **ID**: 89312994
 - **Price**: £2384 PCM
@@ -379,7 +389,7 @@
 ---
 
 ### [2026-07-04T11:57:12.811Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Ealing Broadway
 - **ID**: 89629074
 - **Price**: £2500 PCM
@@ -389,7 +399,7 @@
 ---
 
 ### [2026-07-02T17:21:03.930Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: London Bridge
 - **ID**: 89710086
 - **Price**: £2200 PCM
@@ -399,7 +409,7 @@
 ---
 
 ### [2026-07-05T12:02:24.854Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: London Bridge
 - **ID**: 90500232
 - **Price**: £2500 PCM
@@ -409,7 +419,7 @@
 ---
 
 ### [2026-07-02T17:21:03.928Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Ealing Broadway
 - **ID**: 90173592
 - **Price**: £2200 PCM
@@ -419,7 +429,7 @@
 ---
 
 ### [2026-06-29T14:38:32.082Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 90265077
 - **Price**: £2200 PCM
@@ -429,7 +439,7 @@
 ---
 
 ### [2026-07-01T13:22:22.688Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Kings Cross
 - **ID**: 90343626
 - **Price**: £2150 PCM
@@ -439,7 +449,7 @@
 ---
 
 ### [2026-07-04T11:57:12.810Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 90471747
 - **Price**: £2400 PCM
@@ -449,7 +459,7 @@
 ---
 
 ### [2026-06-08T14:38:49.646Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 89444691
 - **Price**: £2250 PCM
@@ -459,7 +469,7 @@
 ---
 
 ### [2026-07-02T17:21:03.928Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Ealing Broadway
 - **ID**: 90101463
 - **Price**: £1925 PCM
@@ -469,7 +479,7 @@
 ---
 
 ### [2026-06-16T15:33:40.028Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Blackfriars
 - **ID**: 89756472
 - **Price**: £2500 PCM
@@ -478,18 +488,8 @@
 
 ---
 
-### [2026-07-02T17:21:03.928Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Location**: Ealing Broadway
-- **ID**: 90355449
-- **Price**: £2000 PCM
-- **Size**: 55 sqm
-- **Link**: [https://www.rightmove.co.uk/properties/90355449](https://www.rightmove.co.uk/properties/90355449)
-
----
-
 ### [2026-06-16T15:33:40.028Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 88301925
 - **Price**: £2080 PCM
@@ -499,7 +499,7 @@
 ---
 
 ### [2026-07-05T12:02:24.853Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 90501921
 - **Price**: £2167 PCM
@@ -509,7 +509,7 @@
 ---
 
 ### [2026-07-01T13:22:22.689Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 90333417
 - **Price**: £2200 PCM
@@ -518,8 +518,18 @@
 
 ---
 
+### [2026-07-06T14:18:08.558Z] MATCH FOUND!
+- **Marketed by**: Martin and Co, Twickenham
+- **Location**: Canary Wharf
+- **ID**: 90542760
+- **Price**: £2300 PCM
+- **Size**: 55 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/90542760](https://www.rightmove.co.uk/properties/90542760)
+
+---
+
 ### [2026-06-22T15:38:23.642Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 89979441
 - **Price**: £2300 PCM
@@ -529,7 +539,7 @@
 ---
 
 ### [2026-07-01T13:22:22.689Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 90350628
 - **Price**: £2200 PCM
@@ -539,7 +549,7 @@
 ---
 
 ### [2026-05-20T13:24:59.549Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 88702539
 - **Price**: £2145 PCM
@@ -549,7 +559,7 @@
 ---
 
 ### [2026-07-02T17:21:03.929Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: West Hampstead
 - **ID**: 90196941
 - **Price**: £2195 PCM
@@ -559,7 +569,7 @@
 ---
 
 ### [2026-06-11T14:26:20.170Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Kings Cross
 - **ID**: 89583771
 - **Price**: £2200 PCM
@@ -569,7 +579,7 @@
 ---
 
 ### [2026-05-02T20:15:55.706Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Unknown
 - **ID**: 87858384
 - **Price**: £3497 PCM
@@ -579,7 +589,7 @@
 ---
 
 ### [2026-06-29T14:38:32.082Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 90262479
 - **Price**: £2250 PCM
@@ -589,7 +599,7 @@
 ---
 
 ### [2026-07-02T17:21:03.930Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Stratford
 - **ID**: 141284486
 - **Price**: £2300 PCM
@@ -599,7 +609,7 @@
 ---
 
 ### [2026-06-25T13:05:08.775Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 90130602
 - **Price**: £2250 PCM
@@ -609,7 +619,7 @@
 ---
 
 ### [2026-06-30T12:32:19.234Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 90271782
 - **Price**: £2300 PCM
@@ -619,7 +629,7 @@
 ---
 
 ### [2026-05-28T14:23:45.500Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 88995306
 - **Price**: £2200 PCM
@@ -628,8 +638,18 @@
 
 ---
 
+### [2026-07-06T14:18:08.558Z] MATCH FOUND!
+- **Marketed by**: Bentley and Co, Camden
+- **Location**: Farringdon / Clerkenwell
+- **ID**: 90538971
+- **Price**: £2210 PCM
+- **Size**: 52 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/90538971](https://www.rightmove.co.uk/properties/90538971)
+
+---
+
 ### [2026-07-04T11:57:12.810Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 90453585
 - **Price**: £2250 PCM
@@ -639,7 +659,7 @@
 ---
 
 ### [2026-07-02T17:21:03.930Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Stratford
 - **ID**: 89955942
 - **Price**: £2250 PCM
@@ -649,7 +669,7 @@
 ---
 
 ### [2026-06-19T13:56:57.343Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 89891085
 - **Price**: £2297 PCM
@@ -659,7 +679,7 @@
 ---
 
 ### [2026-07-02T17:21:03.932Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Highbury & Islington
 - **ID**: 167674610
 - **Price**: £2300 PCM
@@ -668,18 +688,8 @@
 
 ---
 
-### [2026-07-02T12:32:13.021Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Location**: Canary Wharf
-- **ID**: 90370740
-- **Price**: £2340 PCM
-- **Size**: 52 sqm
-- **Link**: [https://www.rightmove.co.uk/properties/90370740](https://www.rightmove.co.uk/properties/90370740)
-
----
-
 ### [2026-07-04T11:57:12.811Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Highbury & Islington
 - **ID**: 87973476
 - **Price**: £2350 PCM
@@ -689,7 +699,7 @@
 ---
 
 ### [2026-07-05T12:02:24.854Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Stratford
 - **ID**: 90500016
 - **Price**: £2492 PCM
@@ -699,7 +709,7 @@
 ---
 
 ### [2026-06-27T12:01:20.007Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Kings Cross
 - **ID**: 90193935
 - **Price**: £2500 PCM
@@ -709,7 +719,7 @@
 ---
 
 ### [2026-07-02T17:21:03.931Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Highbury & Islington
 - **ID**: 90330885
 - **Price**: £2200 PCM
@@ -719,7 +729,7 @@
 ---
 
 ### [2026-07-01T13:22:22.689Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 90347763
 - **Price**: £2500 PCM
@@ -729,7 +739,7 @@
 ---
 
 ### [2026-07-02T12:32:13.022Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 90366564
 - **Price**: £2200 PCM
@@ -739,7 +749,7 @@
 ---
 
 ### [2026-06-24T12:36:39.200Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 90047667
 - **Price**: £2250 PCM
@@ -749,7 +759,7 @@
 ---
 
 ### [2026-07-02T17:21:03.930Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Stratford
 - **ID**: 90094407
 - **Price**: £2300 PCM
@@ -758,8 +768,18 @@
 
 ---
 
+### [2026-07-06T14:18:08.558Z] MATCH FOUND!
+- **Marketed by**: Romans and Partners, London
+- **Location**: Canary Wharf
+- **ID**: 90536670
+- **Price**: £2350 PCM
+- **Size**: 51 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/90536670](https://www.rightmove.co.uk/properties/90536670)
+
+---
+
 ### [2026-07-02T17:21:03.929Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Ealing Broadway
 - **ID**: 90333576
 - **Price**: £2400 PCM
@@ -769,7 +789,7 @@
 ---
 
 ### [2026-06-19T13:56:57.344Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 89915127
 - **Price**: £2400 PCM
@@ -779,7 +799,7 @@
 ---
 
 ### [2026-05-23T11:45:49.228Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 88854273
 - **Price**: £2400 PCM
@@ -789,7 +809,7 @@
 ---
 
 ### [2026-06-04T13:46:51.487Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 89280255
 - **Price**: £2492 PCM
@@ -798,8 +818,18 @@
 
 ---
 
+### [2026-07-06T14:18:08.558Z] MATCH FOUND!
+- **Marketed by**: Celestial Globe, Lewisham
+- **Location**: Canary Wharf
+- **ID**: 90531468
+- **Price**: £2500 PCM
+- **Size**: 51 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/90531468](https://www.rightmove.co.uk/properties/90531468)
+
+---
+
 ### [2026-07-04T11:57:12.811Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Stratford
 - **ID**: 90460716
 - **Price**: £2500 PCM
@@ -808,8 +838,18 @@
 
 ---
 
+### [2026-07-06T14:18:08.558Z] MATCH FOUND!
+- **Marketed by**: Kinleigh Folkard and Hayward - Lettings, Islington
+- **Location**: Farringdon / Clerkenwell
+- **ID**: 90528018
+- **Price**: £2500 PCM
+- **Size**: 50.1 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/90528018](https://www.rightmove.co.uk/properties/90528018)
+
+---
+
 ### [2026-07-01T13:22:22.688Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Kings Cross
 - **ID**: 90344049
 - **Price**: £2167 PCM
@@ -819,7 +859,7 @@
 ---
 
 ### [2026-06-25T13:05:08.775Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 90107523
 - **Price**: £2210 PCM
@@ -828,28 +868,8 @@
 
 ---
 
-### [2026-07-02T17:21:03.930Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Location**: Stratford
-- **ID**: 89738958
-- **Price**: £2350 PCM
-- **Size**: 50 sqm
-- **Link**: [https://www.rightmove.co.uk/properties/89738958](https://www.rightmove.co.uk/properties/89738958)
-
----
-
-### [2026-07-02T17:21:03.931Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Location**: Angel
-- **ID**: 89765676
-- **Price**: £2400 PCM
-- **Size**: 50 sqm
-- **Link**: [https://www.rightmove.co.uk/properties/89765676](https://www.rightmove.co.uk/properties/89765676)
-
----
-
 ### [2026-07-05T12:02:24.854Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Stratford
 - **ID**: 90500079
 - **Price**: £2492 PCM
@@ -859,7 +879,7 @@
 ---
 
 ### [2026-06-18T13:58:42.040Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 89866995
 - **Price**: £2492 PCM
@@ -869,7 +889,7 @@
 ---
 
 ### [2026-05-23T11:45:49.228Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 88839927
 - **Price**: £2448 PCM
@@ -879,7 +899,7 @@
 ---
 
 ### [2026-05-25T13:48:21.174Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 88898406
 - **Price**: £2450 PCM
@@ -888,18 +908,8 @@
 
 ---
 
-### [2026-07-04T11:57:12.811Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Location**: Angel
-- **ID**: 90454722
-- **Price**: £2250 PCM
-- **Size**: 49.61 sqm
-- **Link**: [https://www.rightmove.co.uk/properties/90454722](https://www.rightmove.co.uk/properties/90454722)
-
----
-
 ### [2026-07-02T17:21:03.932Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Highbury & Islington
 - **ID**: 171508100
 - **Price**: £2275 PCM
@@ -908,8 +918,18 @@
 
 ---
 
+### [2026-07-06T14:18:08.558Z] MATCH FOUND!
+- **Marketed by**: Foxtons, West End
+- **Location**: King's Cross
+- **ID**: 89875116
+- **Price**: £2400 PCM
+- **Size**: 49 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/89875116](https://www.rightmove.co.uk/properties/89875116)
+
+---
+
 ### [2026-07-04T11:57:12.810Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 89697432
 - **Price**: £2448 PCM
@@ -919,7 +939,7 @@
 ---
 
 ### [2026-05-15T16:41:00.993Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Farringdon
 - **ID**: 88223106
 - **Price**: £2450 PCM
@@ -928,18 +948,18 @@
 
 ---
 
-### [2026-07-04T11:57:12.811Z] MATCH FOUND!
-- **Platform**: Rightmove
+### [2026-07-06T14:18:08.558Z] MATCH FOUND!
+- **Marketed by**: Greystar, Coppermaker Square
 - **Location**: Stratford
-- **ID**: 90465339
+- **ID**: 90539745
 - **Price**: £2500 PCM
 - **Size**: 49 sqm
-- **Link**: [https://www.rightmove.co.uk/properties/90465339](https://www.rightmove.co.uk/properties/90465339)
+- **Link**: [https://www.rightmove.co.uk/properties/90539745](https://www.rightmove.co.uk/properties/90539745)
 
 ---
 
 ### [2026-06-27T12:01:20.007Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 90191994
 - **Price**: £2500 PCM
@@ -949,7 +969,7 @@
 ---
 
 ### [2026-07-04T11:57:12.811Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 90474750
 - **Price**: £2200 PCM
@@ -959,7 +979,7 @@
 ---
 
 ### [2026-06-19T13:56:57.344Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 89874699
 - **Price**: £2400 PCM
@@ -969,7 +989,7 @@
 ---
 
 ### [2026-06-11T14:26:20.170Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 89570763
 - **Price**: £2200 PCM
@@ -979,7 +999,7 @@
 ---
 
 ### [2026-06-02T14:39:45.426Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 89161776
 - **Price**: £2297 PCM
@@ -989,7 +1009,7 @@
 ---
 
 ### [2026-06-29T14:38:32.082Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 90258237
 - **Price**: £2300 PCM
@@ -999,7 +1019,7 @@
 ---
 
 ### [2026-06-10T13:59:26.516Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 89539155
 - **Price**: £2300 PCM
@@ -1009,7 +1029,7 @@
 ---
 
 ### [2026-07-02T17:21:03.929Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: London Bridge
 - **ID**: 90313908
 - **Price**: £2450 PCM
@@ -1019,7 +1039,7 @@
 ---
 
 ### [2026-06-30T12:32:19.234Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Farringdon
 - **ID**: 90305391
 - **Price**: £2379 PCM
@@ -1029,7 +1049,7 @@
 ---
 
 ### [2026-07-02T17:21:03.928Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Ealing Broadway
 - **ID**: 90269487
 - **Price**: £2000 PCM
@@ -1039,7 +1059,7 @@
 ---
 
 ### [2026-07-02T17:21:03.932Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Highbury & Islington
 - **ID**: 89537013
 - **Price**: £2500 PCM
@@ -1049,7 +1069,7 @@
 ---
 
 ### [2026-05-20T13:24:59.548Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Farringdon
 - **ID**: 88691211
 - **Price**: £2500 PCM
@@ -1059,7 +1079,7 @@
 ---
 
 ### [2026-07-02T17:21:03.930Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: London Bridge
 - **ID**: 89081745
 - **Price**: £2100 PCM
@@ -1069,7 +1089,7 @@
 ---
 
 ### [2026-06-24T12:36:39.200Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 90076083
 - **Price**: £2253 PCM
@@ -1079,7 +1099,7 @@
 ---
 
 ### [2026-07-05T12:02:24.853Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 90499383
 - **Price**: £2150 PCM
@@ -1089,7 +1109,7 @@
 ---
 
 ### [2026-07-04T11:57:12.810Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 90487326
 - **Price**: £2150 PCM
@@ -1098,8 +1118,18 @@
 
 ---
 
+### [2026-07-06T14:18:08.558Z] MATCH FOUND!
+- **Marketed by**: Dawn Sandoval Residential, Canary Wharf
+- **Location**: Canary Wharf
+- **ID**: 90044970
+- **Price**: £2200 PCM
+- **Size**: 46 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/90044970](https://www.rightmove.co.uk/properties/90044970)
+
+---
+
 ### [2026-06-12T13:50:07.734Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Farringdon
 - **ID**: 89632845
 - **Price**: £2396 PCM
@@ -1109,7 +1139,7 @@
 ---
 
 ### [2026-06-09T13:32:41.227Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 89470749
 - **Price**: £2450 PCM
@@ -1119,7 +1149,7 @@
 ---
 
 ### [2026-06-15T16:13:11.640Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Farringdon
 - **ID**: 88124379
 - **Price**: £2500 PCM
@@ -1129,7 +1159,7 @@
 ---
 
 ### [2026-07-02T17:21:03.929Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: London Bridge
 - **ID**: 89126466
 - **Price**: £2250 PCM
@@ -1139,7 +1169,7 @@
 ---
 
 ### [2026-07-02T17:21:03.931Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Highbury & Islington
 - **ID**: 90254595
 - **Price**: £2250 PCM
@@ -1149,7 +1179,7 @@
 ---
 
 ### [2026-05-15T16:41:00.994Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 88560645
 - **Price**: £2448 PCM
@@ -1159,7 +1189,7 @@
 ---
 
 ### [2026-06-20T12:17:31.433Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Bloomsbury (Russell Square)
 - **ID**: 89767467
 - **Price**: £2479 PCM
@@ -1169,7 +1199,7 @@
 ---
 
 ### [2026-07-02T12:32:13.021Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Farringdon
 - **ID**: 90404763
 - **Price**: £2500 PCM
@@ -1178,8 +1208,18 @@
 
 ---
 
+### [2026-07-06T14:18:08.558Z] MATCH FOUND!
+- **Marketed by**: OpenRent, London
+- **Location**: Canary Wharf
+- **ID**: 90522885
+- **Price**: £2199 PCM
+- **Size**: 44.97 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/90522885](https://www.rightmove.co.uk/properties/90522885)
+
+---
+
 ### [2026-05-15T16:41:00.993Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Farringdon
 - **ID**: 174538664
 - **Price**: £2500 PCM
@@ -1189,7 +1229,7 @@
 ---
 
 ### [2026-07-02T17:21:03.929Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: West Hampstead
 - **ID**: 90382449
 - **Price**: £1907 PCM
@@ -1199,7 +1239,7 @@
 ---
 
 ### [2026-06-27T12:01:20.007Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 89657289
 - **Price**: £2496 PCM
@@ -1209,7 +1249,7 @@
 ---
 
 ### [2026-07-02T17:21:03.929Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: London Bridge
 - **ID**: 90374136
 - **Price**: £1850 PCM
@@ -1219,7 +1259,7 @@
 ---
 
 ### [2026-05-29T13:48:52.194Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 89054328
 - **Price**: £2149 PCM
@@ -1229,7 +1269,7 @@
 ---
 
 ### [2026-05-15T16:41:00.994Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 158921117
 - **Price**: £2300 PCM
@@ -1239,7 +1279,7 @@
 ---
 
 ### [2026-06-27T12:01:20.007Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 90206850
 - **Price**: £2470 PCM
@@ -1249,7 +1289,7 @@
 ---
 
 ### [2026-07-01T13:22:22.689Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 90321744
 - **Price**: £2500 PCM
@@ -1258,18 +1298,8 @@
 
 ---
 
-### [2026-06-23T13:27:08.844Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Location**: Moorgate
-- **ID**: 89304243
-- **Price**: £2500 PCM
-- **Size**: 44 sqm
-- **Link**: [https://www.rightmove.co.uk/properties/89304243](https://www.rightmove.co.uk/properties/89304243)
-
----
-
 ### [2026-06-24T12:36:39.200Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 90056139
 - **Price**: £2145 PCM
@@ -1279,7 +1309,7 @@
 ---
 
 ### [2026-06-20T12:17:31.434Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 89936142
 - **Price**: £2400 PCM
@@ -1289,7 +1319,7 @@
 ---
 
 ### [2026-07-02T17:21:03.928Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Ealing Broadway
 - **ID**: 90355344
 - **Price**: £2450 PCM
@@ -1299,7 +1329,7 @@
 ---
 
 ### [2026-07-02T17:21:03.930Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Stratford
 - **ID**: 90131874
 - **Price**: £2390 PCM
@@ -1309,7 +1339,7 @@
 ---
 
 ### [2026-07-02T17:21:03.930Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Stratford
 - **ID**: 90211923
 - **Price**: £2390 PCM
@@ -1319,7 +1349,7 @@
 ---
 
 ### [2026-07-02T17:21:03.929Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: London Bridge
 - **ID**: 169515746
 - **Price**: £2500 PCM
@@ -1329,7 +1359,7 @@
 ---
 
 ### [2026-07-02T12:32:13.021Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 157618283
 - **Price**: £2448 PCM
@@ -1338,18 +1368,8 @@
 
 ---
 
-### [2026-05-28T14:23:45.500Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Location**: Canary Wharf
-- **ID**: 89010213
-- **Price**: £1900 PCM
-- **Size**: 42 sqm
-- **Link**: [https://www.rightmove.co.uk/properties/89010213](https://www.rightmove.co.uk/properties/89010213)
-
----
-
 ### [2026-07-02T17:21:03.931Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Stratford
 - **ID**: 90278811
 - **Price**: £2190 PCM
@@ -1359,7 +1379,7 @@
 ---
 
 ### [2026-07-02T17:21:03.930Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Stratford
 - **ID**: 90102600
 - **Price**: £2255 PCM
@@ -1369,7 +1389,7 @@
 ---
 
 ### [2026-06-24T12:36:39.199Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 90054642
 - **Price**: £2300 PCM
@@ -1379,7 +1399,7 @@
 ---
 
 ### [2026-06-19T13:56:57.343Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Kings Cross
 - **ID**: 89884620
 - **Price**: £2300 PCM
@@ -1389,7 +1409,7 @@
 ---
 
 ### [2026-06-19T13:56:57.343Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 89800551
 - **Price**: £2500 PCM
@@ -1399,7 +1419,7 @@
 ---
 
 ### [2026-05-29T13:48:52.194Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 174837137
 - **Price**: £2500 PCM
@@ -1409,7 +1429,7 @@
 ---
 
 ### [2026-06-27T12:01:20.007Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 166430741
 - **Price**: £2349 PCM
@@ -1418,18 +1438,8 @@
 
 ---
 
-### [2026-06-29T14:38:32.082Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Location**: Canary Wharf
-- **ID**: 90259866
-- **Price**: £2297 PCM
-- **Size**: 41.25 sqm
-- **Link**: [https://www.rightmove.co.uk/properties/90259866](https://www.rightmove.co.uk/properties/90259866)
-
----
-
 ### [2026-07-02T17:21:03.930Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: London Bridge
 - **ID**: 89365353
 - **Price**: £1998 PCM
@@ -1439,7 +1449,7 @@
 ---
 
 ### [2026-07-04T11:57:12.810Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 90473625
 - **Price**: £2250 PCM
@@ -1449,7 +1459,7 @@
 ---
 
 ### [2026-06-18T13:58:42.040Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 88695372
 - **Price**: £2384 PCM
@@ -1459,7 +1469,7 @@
 ---
 
 ### [2026-07-02T17:21:03.931Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Angel
 - **ID**: 89726034
 - **Price**: £2500 PCM
@@ -1469,7 +1479,7 @@
 ---
 
 ### [2026-06-18T13:58:42.040Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 89432874
 - **Price**: £2500 PCM
@@ -1479,7 +1489,7 @@
 ---
 
 ### [2026-06-30T12:32:19.234Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 87852465
 - **Price**: £2167 PCM
@@ -1489,7 +1499,7 @@
 ---
 
 ### [2026-07-02T17:21:03.929Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: West Hampstead
 - **ID**: 88135632
 - **Price**: £1842 PCM
@@ -1499,7 +1509,7 @@
 ---
 
 ### [2026-07-02T17:21:03.931Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Paddington
 - **ID**: 90210780
 - **Price**: £2000 PCM
@@ -1509,7 +1519,7 @@
 ---
 
 ### [2026-07-02T17:21:03.929Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: West Hampstead
 - **ID**: 90365553
 - **Price**: £2100 PCM
@@ -1518,18 +1528,8 @@
 
 ---
 
-### [2026-06-16T15:33:40.029Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Location**: Canary Wharf
-- **ID**: 174483524
-- **Price**: £2200 PCM
-- **Size**: 40 sqm
-- **Link**: [https://www.rightmove.co.uk/properties/174483524](https://www.rightmove.co.uk/properties/174483524)
-
----
-
 ### [2026-07-02T17:21:03.931Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Highbury & Islington
 - **ID**: 89866371
 - **Price**: £2250 PCM
@@ -1539,7 +1539,7 @@
 ---
 
 ### [2026-07-04T11:57:12.810Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 90474822
 - **Price**: £2275 PCM
@@ -1549,7 +1549,7 @@
 ---
 
 ### [2026-05-21T13:48:42.933Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Farringdon
 - **ID**: 19588097
 - **Price**: £2275 PCM
@@ -1559,7 +1559,7 @@
 ---
 
 ### [2026-07-04T11:57:12.810Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Blackfriars
 - **ID**: 90472821
 - **Price**: £2297 PCM
@@ -1569,7 +1569,7 @@
 ---
 
 ### [2026-07-02T17:21:03.930Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Stratford
 - **ID**: 90407115
 - **Price**: £2335 PCM
@@ -1579,7 +1579,7 @@
 ---
 
 ### [2026-06-30T12:32:19.234Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 90203535
 - **Price**: £2400 PCM
@@ -1589,7 +1589,7 @@
 ---
 
 ### [2026-05-23T11:45:49.228Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Canary Wharf
 - **ID**: 88631589
 - **Price**: £2496 PCM
@@ -1599,7 +1599,7 @@
 ---
 
 ### [2026-05-02T20:15:55.707Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Unknown
 - **ID**: 173791553
 - **Price**: £4117 PCM
@@ -1609,7 +1609,7 @@
 ---
 
 ### [2026-05-02T20:15:55.706Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Unknown
 - **ID**: 157692917
 - **Price**: £3000 PCM
@@ -1619,7 +1619,7 @@
 ---
 
 ### [2026-05-02T20:15:55.704Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Unknown
 - **ID**: 88013730
 - **Price**: £1800 PCM
@@ -1629,7 +1629,7 @@
 ---
 
 ### [2026-05-02T20:15:55.705Z] MATCH FOUND!
-- **Platform**: Rightmove
+- **Marketed by**: Unknown
 - **Location**: Unknown
 - **ID**: 88017369
 - **Price**: £1950 PCM

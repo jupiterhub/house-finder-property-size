@@ -145,6 +145,134 @@
     color: var(--rightmove);
     border: 1px solid rgba(0, 173, 128, 0.3);
   }
+  .badge-openrent {
+    background: linear-gradient(135deg, rgba(56, 189, 248, 0.15), rgba(37, 99, 235, 0.15));
+    color: #38bdf8;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    box-shadow: 0 0 10px rgba(56, 189, 248, 0.1);
+  }
+  .agent-name {
+    font-weight: 600;
+    color: #e2e8f0;
+  }
+  .quick-filters {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .filter-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .filter-chip {
+    padding: 6px 14px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .filter-chip:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--text);
+    transform: translateY(-1px);
+  }
+  .filter-chip.active {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+    box-shadow: 0 0 12px rgba(59, 130, 246, 0.4);
+  }
+  .filter-chip.chip-openrent.active {
+    background: linear-gradient(135deg, #0284c7, #2563eb);
+    border-color: #38bdf8;
+    color: white;
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+  }
+  .quick-sorts {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .sort-indicator {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--primary);
+    background: rgba(59, 130, 246, 0.15);
+    padding: 1px 6px;
+    border-radius: 10px;
+    margin-left: 5px;
+  }
+  th {
+    user-select: none;
+    cursor: pointer;
+  }
+  th:hover {
+    color: var(--primary);
+  }
+  .chip-clear {
+    background: rgba(239, 68, 68, 0.1);
+    border-color: rgba(239, 68, 68, 0.3);
+    color: #f87171;
+  }
+  .chip-clear:hover {
+    background: rgba(239, 68, 68, 0.2);
+    color: #fca5a5;
+  }
+  .tooltip-container {
+    position: relative;
+    display: inline-block;
+    margin-left: 4px;
+  }
+  .tooltip-badge {
+    cursor: help;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    background: rgba(255, 255, 255, 0.06);
+    padding: 5px 12px;
+    border-radius: 16px;
+    border: 1px dashed var(--border);
+    transition: all 0.2s ease;
+  }
+  .tooltip-container:hover .tooltip-badge {
+    color: var(--text);
+    border-color: var(--primary);
+    background: rgba(59, 130, 246, 0.1);
+  }
+  .tooltip-popup {
+    visibility: hidden;
+    opacity: 0;
+    width: 290px;
+    background-color: var(--card-bg);
+    color: var(--text);
+    text-align: left;
+    border-radius: 8px;
+    padding: 12px;
+    position: absolute;
+    z-index: 100;
+    top: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+    border: 1px solid var(--border);
+    font-size: 0.8rem;
+    line-height: 1.4;
+    transition: opacity 0.2s, visibility 0.2s, transform 0.2s;
+  }
+  .tooltip-container:hover .tooltip-popup {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-50%) translateY(4px);
+  }
 
   .numeric {
     text-align: right;
@@ -374,51 +502,173 @@ function filterTable() {
   document.getElementById("visibleCount").textContent = visibleCount;
 }
 
-function sortTable(n) {
-  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-  table = document.getElementById("matchesTable");
-  switching = true;
-  dir = "asc";
-  while (switching) {
-    switching = false;
-    rows = table.getElementsByTagName("tbody")[0].rows;
-    for (i = 0; i < (rows.length - 1); i++) {
-      shouldSwitch = false;
-      x = rows[i].getElementsByTagName("TD")[n];
-      y = rows[i + 1].getElementsByTagName("TD")[n];
-      
-      var valX = x.getAttribute("data-value") || x.textContent.toLowerCase().trim();
-      var valY = y.getAttribute("data-value") || y.textContent.toLowerCase().trim();
-      
-      var numX = parseFloat(valX);
-      var numY = parseFloat(valY);
-      
-      if (!isNaN(numX) && !isNaN(numY)) {
-        valX = numX;
-        valY = numY;
-      }
-
-      if (dir == "asc") {
-        if (valX > valY) { shouldSwitch = true; break; }
-      } else if (dir == "desc") {
-        if (valX < valY) { shouldSwitch = true; break; }
-      }
+function setQuickFilter(agentName) {
+  var inputs = document.querySelectorAll("thead .filter-input");
+  for (var i = 0; i < inputs.length; i++) {
+    if (inputs[i].getAttribute("data-col") === "1") {
+      inputs[i].value = agentName;
+      break;
     }
-    if (shouldSwitch) {
-      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-      switching = true;
-      switchcount ++;
+  }
+  filterTable();
+  var chips = document.querySelectorAll(".quick-filters .filter-chip");
+  if (chips.length > 0) {
+    for (var k = 0; k < chips.length; k++) chips[k].classList.remove("active");
+    if (!agentName) {
+      var allBtn = document.getElementById("chipAll");
+      if (allBtn) allBtn.classList.add("active");
     } else {
-      if (switchcount == 0 && dir == "asc") {
-        dir = "desc";
-        switching = true;
-      }
+      var orBtn = document.getElementById("chipOpenRent");
+      if (orBtn) orBtn.classList.add("active");
     }
   }
 }
 
+var currentSorts = [{col: 0, dir: 'desc'}, {col: 3, dir: 'asc'}]; // Default: Date desc, Price asc
+
+function sortTable(n, event) {
+  var isShift = event && event.shiftKey;
+  
+  if (isShift && currentSorts.length > 0) {
+    var foundIdx = -1;
+    for (var j = 0; j < currentSorts.length; j++) {
+      if (currentSorts[j].col === n) { foundIdx = j; break; }
+    }
+    if (foundIdx !== -1) {
+      currentSorts[foundIdx].dir = currentSorts[foundIdx].dir === 'asc' ? 'desc' : 'asc';
+    } else {
+      currentSorts.push({col: n, dir: (n === 0 || n === 4) ? 'desc' : 'asc'});
+    }
+  } else {
+    var primaryDir = 'asc';
+    if (currentSorts.length > 0 && currentSorts[0].col === n) {
+      primaryDir = currentSorts[0].dir === 'asc' ? 'desc' : 'asc';
+    } else {
+      primaryDir = (n === 0 || n === 4) ? 'desc' : 'asc';
+    }
+
+    if (n === 0) {
+      currentSorts = [{col: 0, dir: primaryDir}, {col: 3, dir: 'asc'}];
+    } else if (n === 3) {
+      currentSorts = [{col: 3, dir: primaryDir}, {col: 4, dir: 'desc'}];
+    } else if (n === 4) {
+      currentSorts = [{col: 4, dir: primaryDir}, {col: 3, dir: 'asc'}];
+    } else {
+      currentSorts = [{col: n, dir: primaryDir}, {col: 3, dir: 'asc'}];
+    }
+  }
+
+  applySort();
+  updateSortIndicators();
+}
+
+function applySort() {
+  var table = document.getElementById("matchesTable");
+  if (!table) return;
+  var tbody = table.getElementsByTagName("tbody")[0];
+  var rows = Array.from(tbody.getElementsByTagName("tr"));
+
+  rows.sort(function(rowA, rowB) {
+    if (currentSorts.length === 0) {
+      var idxA = parseInt(rowA.getAttribute("data-index") || "0", 10);
+      var idxB = parseInt(rowB.getAttribute("data-index") || "0", 10);
+      return idxA - idxB;
+    }
+    for (var k = 0; k < currentSorts.length; k++) {
+      var colIdx = currentSorts[k].col;
+      var dir = currentSorts[k].dir;
+
+      var cellA = rowA.getElementsByTagName("td")[colIdx];
+      var cellB = rowB.getElementsByTagName("td")[colIdx];
+      if (!cellA || !cellB) continue;
+
+      var valA = cellA.getAttribute("data-value") !== null && cellA.getAttribute("data-value") !== "" ? cellA.getAttribute("data-value") : cellA.textContent.toLowerCase().trim();
+      var valB = cellB.getAttribute("data-value") !== null && cellB.getAttribute("data-value") !== "" ? cellB.getAttribute("data-value") : cellB.textContent.toLowerCase().trim();
+
+      var numA = parseFloat(valA);
+      var numB = parseFloat(valB);
+      if (!isNaN(numA) && !isNaN(numB)) {
+        valA = numA;
+        valB = numB;
+      } else {
+        valA = String(valA).toLowerCase();
+        valB = String(valB).toLowerCase();
+      }
+
+      if (valA !== valB) {
+        if (dir === 'asc') return valA > valB ? 1 : -1;
+        return valA < valB ? 1 : -1;
+      }
+    }
+    return 0;
+  });
+
+  var fragment = document.createDocumentFragment();
+  for (var r = 0; r < rows.length; r++) {
+    fragment.appendChild(rows[r]);
+  }
+  tbody.appendChild(fragment);
+}
+
+function updateSortIndicators() {
+  for (var c = 0; c <= 5; c++) {
+    var ind = document.getElementById("sort-ind-" + c);
+    if (ind) ind.textContent = "";
+  }
+  for (var j = 0; j < currentSorts.length; j++) {
+    var col = currentSorts[j].col;
+    var dir = currentSorts[j].dir;
+    var arrow = dir === 'asc' ? '▲' : '▼';
+    var indEl = document.getElementById("sort-ind-" + col);
+    if (indEl) {
+      indEl.textContent = currentSorts.length > 1 ? (arrow + " (" + (j + 1) + ")") : arrow;
+    }
+  }
+}
+
+function setMultiSort(criteria) {
+  currentSorts = criteria;
+  applySort();
+  updateSortIndicators();
+  
+  var sortBtns = document.querySelectorAll(".quick-sorts .filter-chip");
+  for (var i = 0; i < sortBtns.length; i++) sortBtns[i].classList.remove("active");
+  
+  if (criteria.length === 2 && criteria[0].col === 0 && criteria[1].col === 3) {
+    var btn = document.getElementById("sortDatePrice");
+    if (btn) btn.classList.add("active");
+  } else if (criteria.length === 2 && criteria[0].col === 3 && criteria[1].col === 4) {
+    var btn = document.getElementById("sortPriceSize");
+    if (btn) btn.classList.add("active");
+  } else if (criteria.length === 2 && criteria[0].col === 4 && criteria[1].col === 3) {
+    var btn = document.getElementById("sortSizePrice");
+    if (btn) btn.classList.add("active");
+  }
+}
+
+function clearSort() {
+  var globalSearch = document.getElementById("globalSearch");
+  if (globalSearch) globalSearch.value = "";
+  var inputs = document.querySelectorAll("thead .filter-input");
+  for (var i = 0; i < inputs.length; i++) inputs[i].value = "";
+  var chips = document.querySelectorAll(".quick-filters .filter-chip");
+  for (var k = 0; k < chips.length; k++) chips[k].classList.remove("active");
+  var allBtn = document.getElementById("chipAll");
+  if (allBtn) allBtn.classList.add("active");
+  filterTable();
+
+  setMultiSort([{col: 0, dir: 'desc'}, {col: 3, dir: 'asc'}]);
+  var clearBtn = document.getElementById("clearSortBtn");
+  if (clearBtn) {
+    clearBtn.classList.add("active");
+    setTimeout(() => clearBtn.classList.remove("active"), 1200);
+  }
+}
+
 window.addEventListener('DOMContentLoaded', () => {
+  applySort();
   applyHidden();
+  updateSortIndicators();
 });
 </script>
 </head>
@@ -431,9 +681,30 @@ window.addEventListener('DOMContentLoaded', () => {
       <button id="resetHiddenBtn" onclick="resetHidden()" style="display:none;">Unhide All (<span id="hiddenCount">0</span>)</button>
     </div>
   </div>
+  <div class="quick-filters">
+    <span class="filter-label">Agent Filter:</span>
+    <button id="chipAll" class="filter-chip active" onclick="setQuickFilter('')">All Agents</button>
+    <button id="chipOpenRent" class="filter-chip chip-openrent" onclick="setQuickFilter('OpenRent')">✨ OpenRent Only</button>
+  </div>
+  <div class="quick-sorts">
+    <span class="filter-label">Quick Sort:</span>
+    <button id="sortDatePrice" class="filter-chip active" onclick="setMultiSort([{col: 0, dir: 'desc'}, {col: 3, dir: 'asc'}])">📅 Date → Price</button>
+    <button id="sortPriceSize" class="filter-chip" onclick="setMultiSort([{col: 3, dir: 'asc'}, {col: 4, dir: 'desc'}])">💰 Price → Size</button>
+    <button id="sortSizePrice" class="filter-chip" onclick="setMultiSort([{col: 4, dir: 'desc'}, {col: 3, dir: 'asc'}])">📐 Size → Price</button>
+    <button id="clearSortBtn" class="filter-chip chip-clear" onclick="clearSort()">✕ Clear Sort / Filters</button>
+    <div class="tooltip-container">
+      <span class="tooltip-badge">ℹ️ How to Multi-Sort</span>
+      <div class="tooltip-popup">
+        <strong>⚡ Multi-Column Sorting Guide:</strong><br>
+        • <strong>Hold SHIFT + Click</strong> any column header to add it as a secondary (2), tertiary (3), etc. sort column.<br>
+        • <strong>Normal Click</strong> sets a smart 2-column default (e.g. Date then Price).<br>
+        • Click <strong>✕ Clear Sort / Filters</strong> to clear all filters and return to default sorting (Date → Price).
+      </div>
+    </div>
+  </div>
   <div class="search-container">
     <label for="globalSearch">Quick Search</label>
-    <input type="text" id="globalSearch" onkeyup="filterTable()" placeholder="Search location, platform, dates...">
+    <input type="text" id="globalSearch" onkeyup="filterTable()" placeholder="Search location, agent...">
   </div>
 </div>
 
@@ -441,20 +712,20 @@ window.addEventListener('DOMContentLoaded', () => {
 <table id="matchesTable">
   <thead>
     <tr>
-      <th onclick="sortTable(0)">Date ↕<br><input type="text" class="filter-input" data-col="0" data-type="date" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Date (e.g. >2026-05-01)..."></th>
-      <th onclick="sortTable(1)">Platform ↕<br><input type="text" class="filter-input" data-col="1" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Filter..."></th>
-      <th onclick="sortTable(2)">Location ↕<br><input type="text" class="filter-input" data-col="2" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Filter..."></th>
-      <th onclick="sortTable(3)">Price ↕<br><input type="text" class="filter-input" data-col="3" data-type="numeric" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Price (e.g. >2000)..."></th>
-      <th onclick="sortTable(4)">Size ↕<br><input type="text" class="filter-input" data-col="4" data-type="numeric" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Size (e.g. <50)..."></th>
-      <th onclick="sortTable(5)">£ / sqm ↕<br><input type="text" class="filter-input" data-col="5" data-type="numeric" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="£/sqm (e.g. >=40)..."></th>
+      <th onclick="sortTable(0, event)">Date <span class="sort-indicator" id="sort-ind-0"></span><br><input type="text" class="filter-input" data-col="0" data-type="date" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Date (e.g. >2026-05-01)..."></th>
+      <th onclick="sortTable(1, event)">Marketed By <span class="sort-indicator" id="sort-ind-1"></span><br><input type="text" class="filter-input" data-col="1" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Filter (e.g. OpenRent)..."></th>
+      <th onclick="sortTable(2, event)">Location <span class="sort-indicator" id="sort-ind-2"></span><br><input type="text" class="filter-input" data-col="2" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Filter..."></th>
+      <th onclick="sortTable(3, event)">Price <span class="sort-indicator" id="sort-ind-3"></span><br><input type="text" class="filter-input" data-col="3" data-type="numeric" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Price (e.g. >2000)..."></th>
+      <th onclick="sortTable(4, event)">Size <span class="sort-indicator" id="sort-ind-4"></span><br><input type="text" class="filter-input" data-col="4" data-type="numeric" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Size (e.g. <50)..."></th>
+      <th onclick="sortTable(5, event)">£ / sqm <span class="sort-indicator" id="sort-ind-5"></span><br><input type="text" class="filter-input" data-col="5" data-type="numeric" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="£/sqm (e.g. >=40)..."></th>
       <th style="cursor: default; text-align: center;">Link</th>
       <th style="cursor: default; text-align: center;">Actions</th>
     </tr>
   </thead>
   <tbody>
-<tr data-id="90116307">
+<tr data-id="90116307" data-index="0">
           <td data-value="1782392708774">2026-06-25 13:05:08</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Kings Cross</td>
           <td class="numeric" data-value="1850">£1850</td>
           <td class="numeric" data-value="1484.4">1484.4 sqm</td>
@@ -462,9 +733,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90116307" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90116307')">Hide</button></td>
         </tr>
-<tr data-id="88702266">
+<tr data-id="88702266" data-index="1">
           <td data-value="1779283499548">2026-05-20 13:24:59</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Bloomsbury (Russell Square)</td>
           <td class="numeric" data-value="1192">£1192</td>
           <td class="numeric" data-value="163.53">163.53 sqm</td>
@@ -472,9 +743,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/88702266" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('88702266')">Hide</button></td>
         </tr>
-<tr data-id="90138318">
+<tr data-id="90138318" data-index="2">
           <td data-value="1783012863931">2026-07-02 17:21:03</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Angel</td>
           <td class="numeric" data-value="1200">£1200</td>
           <td class="numeric" data-value="111.14">111.14 sqm</td>
@@ -482,9 +753,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90138318" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90138318')">Hide</button></td>
         </tr>
-<tr data-id="88977246">
+<tr data-id="88977246" data-index="3">
           <td data-value="1779890583159">2026-05-27 14:03:03</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2250">£2250</td>
           <td class="numeric" data-value="81.8">81.8 sqm</td>
@@ -492,9 +763,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/88977246" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('88977246')">Hide</button></td>
         </tr>
-<tr data-id="88977495">
+<tr data-id="88977495" data-index="4">
           <td data-value="1779890583158">2026-05-27 14:03:03</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2250">£2250</td>
           <td class="numeric" data-value="81.8">81.8 sqm</td>
@@ -502,9 +773,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/88977495" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('88977495')">Hide</button></td>
         </tr>
-<tr data-id="87908958">
+<tr data-id="87908958" data-index="5">
           <td data-value="1777752955705">2026-05-02 20:15:55</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Unknown</td>
           <td class="numeric" data-value="4800">£4800</td>
           <td class="numeric" data-value="80">80 sqm</td>
@@ -512,9 +783,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/87908958" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('87908958')">Hide</button></td>
         </tr>
-<tr data-id="90025377">
+<tr data-id="90025377" data-index="6">
           <td data-value="1782221228844">2026-06-23 13:27:08</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2400">£2400</td>
           <td class="numeric" data-value="76">76 sqm</td>
@@ -522,9 +793,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90025377" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90025377')">Hide</button></td>
         </tr>
-<tr data-id="90361794">
+<tr data-id="90361794" data-index="7">
           <td data-value="1782912142689">2026-07-01 13:22:22</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2500">£2500</td>
           <td class="numeric" data-value="76">76 sqm</td>
@@ -532,9 +803,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90361794" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90361794')">Hide</button></td>
         </tr>
-<tr data-id="89266041">
+<tr data-id="89266041" data-index="8">
           <td data-value="1780580811487">2026-06-04 13:46:51</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2500">£2500</td>
           <td class="numeric" data-value="76">76 sqm</td>
@@ -542,9 +813,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/89266041" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('89266041')">Hide</button></td>
         </tr>
-<tr data-id="89051616">
+<tr data-id="89051616" data-index="9">
           <td data-value="1780062532194">2026-05-29 13:48:52</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2375">£2375</td>
           <td class="numeric" data-value="75">75 sqm</td>
@@ -552,9 +823,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/89051616" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('89051616')">Hide</button></td>
         </tr>
-<tr data-id="88205823">
+<tr data-id="88205823" data-index="10">
           <td data-value="1779536749228">2026-05-23 11:45:49</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2499">£2499</td>
           <td class="numeric" data-value="75">75 sqm</td>
@@ -562,9 +833,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/88205823" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('88205823')">Hide</button></td>
         </tr>
-<tr data-id="89164764">
+<tr data-id="89164764" data-index="11">
           <td data-value="1780411185426">2026-06-02 14:39:45</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2350">£2350</td>
           <td class="numeric" data-value="74.51">74.51 sqm</td>
@@ -572,9 +843,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/89164764" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('89164764')">Hide</button></td>
         </tr>
-<tr data-id="174571163">
+<tr data-id="174571163" data-index="12">
           <td data-value="1777752955703">2026-05-02 20:15:55</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Unknown</td>
           <td class="numeric" data-value="3250">£3250</td>
           <td class="numeric" data-value="74">74 sqm</td>
@@ -582,9 +853,19 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/174571163" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('174571163')">Hide</button></td>
         </tr>
-<tr data-id="88546884">
+<tr data-id="89890977" data-index="13">
+          <td data-value="1783347488558">2026-07-06 14:18:08</td>
+          <td data-value="Relo Redac Strattons, West London Office"><span class="agent-name">Relo Redac Strattons, West London Office</span></td>
+          <td>Ealing Broadway</td>
+          <td class="numeric" data-value="2400">£2400</td>
+          <td class="numeric" data-value="73">73 sqm</td>
+          <td class="numeric" data-value="32.87671232876713">£32.88</td>
+          <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/89890977" target="_blank" class="view-btn">View</a></td>
+          <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('89890977')">Hide</button></td>
+        </tr>
+<tr data-id="88546884" data-index="14">
           <td data-value="1782392708775">2026-06-25 13:05:08</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2500">£2500</td>
           <td class="numeric" data-value="73">73 sqm</td>
@@ -592,9 +873,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/88546884" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('88546884')">Hide</button></td>
         </tr>
-<tr data-id="89487687">
+<tr data-id="89487687" data-index="15">
           <td data-value="1781011961227">2026-06-09 13:32:41</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2500">£2500</td>
           <td class="numeric" data-value="72">72 sqm</td>
@@ -602,9 +883,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/89487687" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('89487687')">Hide</button></td>
         </tr>
-<tr data-id="90470013">
+<tr data-id="90470013" data-index="16">
           <td data-value="1783166232811">2026-07-04 11:57:12</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2496">£2496</td>
           <td class="numeric" data-value="71.16">71.16 sqm</td>
@@ -612,9 +893,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90470013" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90470013')">Hide</button></td>
         </tr>
-<tr data-id="90474612">
+<tr data-id="90474612" data-index="17">
           <td data-value="1783166232811">2026-07-04 11:57:12</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Stratford</td>
           <td class="numeric" data-value="2300">£2300</td>
           <td class="numeric" data-value="71">71 sqm</td>
@@ -622,9 +903,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90474612" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90474612')">Hide</button></td>
         </tr>
-<tr data-id="89937312">
+<tr data-id="89937312" data-index="18">
           <td data-value="1783012863929">2026-07-02 17:21:03</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>West Hampstead</td>
           <td class="numeric" data-value="2350">£2350</td>
           <td class="numeric" data-value="70">70 sqm</td>
@@ -632,9 +913,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/89937312" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('89937312')">Hide</button></td>
         </tr>
-<tr data-id="87996729">
+<tr data-id="87996729" data-index="19">
           <td data-value="1777752955705">2026-05-02 20:15:55</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Unknown</td>
           <td class="numeric" data-value="2900">£2900</td>
           <td class="numeric" data-value="69">69 sqm</td>
@@ -642,9 +923,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/87996729" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('87996729')">Hide</button></td>
         </tr>
-<tr data-id="88718487">
+<tr data-id="88718487" data-index="20">
           <td data-value="1779283499549">2026-05-20 13:24:59</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2400">£2400</td>
           <td class="numeric" data-value="68">68 sqm</td>
@@ -652,9 +933,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/88718487" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('88718487')">Hide</button></td>
         </tr>
-<tr data-id="90273990">
+<tr data-id="90273990" data-index="21">
           <td data-value="1783012863930">2026-07-02 17:21:03</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Stratford</td>
           <td class="numeric" data-value="2100">£2100</td>
           <td class="numeric" data-value="67">67 sqm</td>
@@ -662,9 +943,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90273990" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90273990')">Hide</button></td>
         </tr>
-<tr data-id="174057173">
+<tr data-id="174057173" data-index="22">
           <td data-value="1783012863931">2026-07-02 17:21:03</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Paddington</td>
           <td class="numeric" data-value="2200">£2200</td>
           <td class="numeric" data-value="66">66 sqm</td>
@@ -672,9 +953,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/174057173" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('174057173')">Hide</button></td>
         </tr>
-<tr data-id="88065144">
+<tr data-id="88065144" data-index="23">
           <td data-value="1780666881976">2026-06-05 13:41:21</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2500">£2500</td>
           <td class="numeric" data-value="66">66 sqm</td>
@@ -682,9 +963,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/88065144" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('88065144')">Hide</button></td>
         </tr>
-<tr data-id="89361318">
+<tr data-id="89361318" data-index="24">
           <td data-value="1780747295828">2026-06-06 12:01:35</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2500">£2500</td>
           <td class="numeric" data-value="63.6">63.6 sqm</td>
@@ -692,9 +973,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/89361318" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('89361318')">Hide</button></td>
         </tr>
-<tr data-id="90278955">
+<tr data-id="90278955" data-index="25">
           <td data-value="1783012863928">2026-07-02 17:21:03</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Ealing Broadway</td>
           <td class="numeric" data-value="2500">£2500</td>
           <td class="numeric" data-value="62.7">62.7 sqm</td>
@@ -702,9 +983,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90278955" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90278955')">Hide</button></td>
         </tr>
-<tr data-id="90372378">
+<tr data-id="90372378" data-index="26">
           <td data-value="1783012863931">2026-07-02 17:21:03</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Highbury & Islington</td>
           <td class="numeric" data-value="2500">£2500</td>
           <td class="numeric" data-value="62.62">62.62 sqm</td>
@@ -712,9 +993,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90372378" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90372378')">Hide</button></td>
         </tr>
-<tr data-id="89856171">
+<tr data-id="89856171" data-index="27">
           <td data-value="1781791122040">2026-06-18 13:58:42</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2384">£2384</td>
           <td class="numeric" data-value="62">62 sqm</td>
@@ -722,9 +1003,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/89856171" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('89856171')">Hide</button></td>
         </tr>
-<tr data-id="90382506">
+<tr data-id="90382506" data-index="28">
           <td data-value="1783012863929">2026-07-02 17:21:03</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>West Hampstead</td>
           <td class="numeric" data-value="2058">£2058</td>
           <td class="numeric" data-value="61.04">61.04 sqm</td>
@@ -732,9 +1013,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90382506" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90382506')">Hide</button></td>
         </tr>
-<tr data-id="90129939">
+<tr data-id="90129939" data-index="29">
           <td data-value="1782392708775">2026-06-25 13:05:08</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2400">£2400</td>
           <td class="numeric" data-value="61">61 sqm</td>
@@ -742,9 +1023,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90129939" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90129939')">Hide</button></td>
         </tr>
-<tr data-id="87793455">
+<tr data-id="87793455" data-index="30">
           <td data-value="1779536749228">2026-05-23 11:45:49</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2500">£2500</td>
           <td class="numeric" data-value="60.55">60.55 sqm</td>
@@ -752,9 +1033,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/87793455" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('87793455')">Hide</button></td>
         </tr>
-<tr data-id="90478146">
+<tr data-id="90478146" data-index="31">
           <td data-value="1783166232811">2026-07-04 11:57:12</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Stratford</td>
           <td class="numeric" data-value="1750">£1750</td>
           <td class="numeric" data-value="59">59 sqm</td>
@@ -762,19 +1043,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90478146" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90478146')">Hide</button></td>
         </tr>
-<tr data-id="89836089">
+<tr data-id="90092094" data-index="32">
           <td data-value="1783012863931">2026-07-02 17:21:03</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
-          <td>Highbury & Islington</td>
-          <td class="numeric" data-value="2100">£2100</td>
-          <td class="numeric" data-value="59">59 sqm</td>
-          <td class="numeric" data-value="35.59322033898305">£35.59</td>
-          <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/89836089" target="_blank" class="view-btn">View</a></td>
-          <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('89836089')">Hide</button></td>
-        </tr>
-<tr data-id="90092094">
-          <td data-value="1783012863931">2026-07-02 17:21:03</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Stratford</td>
           <td class="numeric" data-value="2300">£2300</td>
           <td class="numeric" data-value="59">59 sqm</td>
@@ -782,9 +1053,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90092094" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90092094')">Hide</button></td>
         </tr>
-<tr data-id="90393204">
+<tr data-id="90393204" data-index="33">
           <td data-value="1782995533021">2026-07-02 12:32:13</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2400">£2400</td>
           <td class="numeric" data-value="59">59 sqm</td>
@@ -792,9 +1063,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90393204" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90393204')">Hide</button></td>
         </tr>
-<tr data-id="90131796">
+<tr data-id="90131796" data-index="34">
           <td data-value="1783012863931">2026-07-02 17:21:03</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Stratford</td>
           <td class="numeric" data-value="2450">£2450</td>
           <td class="numeric" data-value="59">59 sqm</td>
@@ -802,9 +1073,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90131796" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90131796')">Hide</button></td>
         </tr>
-<tr data-id="167737724">
+<tr data-id="167737724" data-index="35">
           <td data-value="1783166232811">2026-07-04 11:57:12</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Stratford</td>
           <td class="numeric" data-value="2150">£2150</td>
           <td class="numeric" data-value="58">58 sqm</td>
@@ -812,9 +1083,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/167737724" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('167737724')">Hide</button></td>
         </tr>
-<tr data-id="89325786">
+<tr data-id="89325786" data-index="36">
           <td data-value="1780666881976">2026-06-05 13:41:21</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2250">£2250</td>
           <td class="numeric" data-value="58">58 sqm</td>
@@ -822,9 +1093,19 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/89325786" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('89325786')">Hide</button></td>
         </tr>
-<tr data-id="89312994">
+<tr data-id="90474102" data-index="37">
+          <td data-value="1783347488558">2026-07-06 14:18:08</td>
+          <td data-value="Ginger Lettings, London"><span class="agent-name">Ginger Lettings, London</span></td>
+          <td>Highbury & Islington</td>
+          <td class="numeric" data-value="2383">£2383</td>
+          <td class="numeric" data-value="58">58 sqm</td>
+          <td class="numeric" data-value="41.08620689655172">£41.09</td>
+          <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90474102" target="_blank" class="view-btn">View</a></td>
+          <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90474102')">Hide</button></td>
+        </tr>
+<tr data-id="89312994" data-index="38">
           <td data-value="1780666881975">2026-06-05 13:41:21</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Bloomsbury (Russell Square)</td>
           <td class="numeric" data-value="2384">£2384</td>
           <td class="numeric" data-value="58">58 sqm</td>
@@ -832,9 +1113,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/89312994" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('89312994')">Hide</button></td>
         </tr>
-<tr data-id="89629074">
+<tr data-id="89629074" data-index="39">
           <td data-value="1783166232811">2026-07-04 11:57:12</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Ealing Broadway</td>
           <td class="numeric" data-value="2500">£2500</td>
           <td class="numeric" data-value="58">58 sqm</td>
@@ -842,9 +1123,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/89629074" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('89629074')">Hide</button></td>
         </tr>
-<tr data-id="89710086">
+<tr data-id="89710086" data-index="40">
           <td data-value="1783012863930">2026-07-02 17:21:03</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>London Bridge</td>
           <td class="numeric" data-value="2200">£2200</td>
           <td class="numeric" data-value="57.97">57.97 sqm</td>
@@ -852,9 +1133,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/89710086" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('89710086')">Hide</button></td>
         </tr>
-<tr data-id="90500232">
+<tr data-id="90500232" data-index="41">
           <td data-value="1783252944854">2026-07-05 12:02:24</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>London Bridge</td>
           <td class="numeric" data-value="2500">£2500</td>
           <td class="numeric" data-value="57.41">57.41 sqm</td>
@@ -862,9 +1143,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90500232" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90500232')">Hide</button></td>
         </tr>
-<tr data-id="90173592">
+<tr data-id="90173592" data-index="42">
           <td data-value="1783012863928">2026-07-02 17:21:03</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Ealing Broadway</td>
           <td class="numeric" data-value="2200">£2200</td>
           <td class="numeric" data-value="57">57 sqm</td>
@@ -872,9 +1153,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90173592" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90173592')">Hide</button></td>
         </tr>
-<tr data-id="90265077">
+<tr data-id="90265077" data-index="43">
           <td data-value="1782743912082">2026-06-29 14:38:32</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2200">£2200</td>
           <td class="numeric" data-value="57">57 sqm</td>
@@ -882,9 +1163,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90265077" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90265077')">Hide</button></td>
         </tr>
-<tr data-id="90343626">
+<tr data-id="90343626" data-index="44">
           <td data-value="1782912142688">2026-07-01 13:22:22</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Kings Cross</td>
           <td class="numeric" data-value="2150">£2150</td>
           <td class="numeric" data-value="56">56 sqm</td>
@@ -892,9 +1173,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90343626" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90343626')">Hide</button></td>
         </tr>
-<tr data-id="90471747">
+<tr data-id="90471747" data-index="45">
           <td data-value="1783166232810">2026-07-04 11:57:12</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2400">£2400</td>
           <td class="numeric" data-value="56">56 sqm</td>
@@ -902,9 +1183,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90471747" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90471747')">Hide</button></td>
         </tr>
-<tr data-id="89444691">
+<tr data-id="89444691" data-index="46">
           <td data-value="1780929529646">2026-06-08 14:38:49</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2250">£2250</td>
           <td class="numeric" data-value="55.74">55.74 sqm</td>
@@ -912,9 +1193,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/89444691" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('89444691')">Hide</button></td>
         </tr>
-<tr data-id="90101463">
+<tr data-id="90101463" data-index="47">
           <td data-value="1783012863928">2026-07-02 17:21:03</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Ealing Broadway</td>
           <td class="numeric" data-value="1925">£1925</td>
           <td class="numeric" data-value="55.4">55.4 sqm</td>
@@ -922,9 +1203,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90101463" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90101463')">Hide</button></td>
         </tr>
-<tr data-id="89756472">
+<tr data-id="89756472" data-index="48">
           <td data-value="1781624020028">2026-06-16 15:33:40</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Blackfriars</td>
           <td class="numeric" data-value="2500">£2500</td>
           <td class="numeric" data-value="55.37">55.37 sqm</td>
@@ -932,19 +1213,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/89756472" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('89756472')">Hide</button></td>
         </tr>
-<tr data-id="90355449">
-          <td data-value="1783012863928">2026-07-02 17:21:03</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
-          <td>Ealing Broadway</td>
-          <td class="numeric" data-value="2000">£2000</td>
-          <td class="numeric" data-value="55">55 sqm</td>
-          <td class="numeric" data-value="36.36363636363637">£36.36</td>
-          <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90355449" target="_blank" class="view-btn">View</a></td>
-          <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90355449')">Hide</button></td>
-        </tr>
-<tr data-id="88301925">
+<tr data-id="88301925" data-index="49">
           <td data-value="1781624020028">2026-06-16 15:33:40</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2080">£2080</td>
           <td class="numeric" data-value="55">55 sqm</td>
@@ -952,9 +1223,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/88301925" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('88301925')">Hide</button></td>
         </tr>
-<tr data-id="90501921">
+<tr data-id="90501921" data-index="50">
           <td data-value="1783252944853">2026-07-05 12:02:24</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2167">£2167</td>
           <td class="numeric" data-value="55">55 sqm</td>
@@ -962,9 +1233,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90501921" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90501921')">Hide</button></td>
         </tr>
-<tr data-id="90333417">
+<tr data-id="90333417" data-index="51">
           <td data-value="1782912142689">2026-07-01 13:22:22</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2200">£2200</td>
           <td class="numeric" data-value="55">55 sqm</td>
@@ -972,9 +1243,19 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90333417" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90333417')">Hide</button></td>
         </tr>
-<tr data-id="89979441">
+<tr data-id="90542760" data-index="52">
+          <td data-value="1783347488558">2026-07-06 14:18:08</td>
+          <td data-value="Martin and Co, Twickenham"><span class="agent-name">Martin and Co, Twickenham</span></td>
+          <td>Canary Wharf</td>
+          <td class="numeric" data-value="2300">£2300</td>
+          <td class="numeric" data-value="55">55 sqm</td>
+          <td class="numeric" data-value="41.81818181818182">£41.82</td>
+          <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90542760" target="_blank" class="view-btn">View</a></td>
+          <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90542760')">Hide</button></td>
+        </tr>
+<tr data-id="89979441" data-index="53">
           <td data-value="1782142703642">2026-06-22 15:38:23</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2300">£2300</td>
           <td class="numeric" data-value="55">55 sqm</td>
@@ -982,9 +1263,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/89979441" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('89979441')">Hide</button></td>
         </tr>
-<tr data-id="90350628">
+<tr data-id="90350628" data-index="54">
           <td data-value="1782912142689">2026-07-01 13:22:22</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2200">£2200</td>
           <td class="numeric" data-value="54.3">54.3 sqm</td>
@@ -992,9 +1273,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90350628" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90350628')">Hide</button></td>
         </tr>
-<tr data-id="88702539">
+<tr data-id="88702539" data-index="55">
           <td data-value="1779283499549">2026-05-20 13:24:59</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2145">£2145</td>
           <td class="numeric" data-value="54">54 sqm</td>
@@ -1002,9 +1283,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/88702539" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('88702539')">Hide</button></td>
         </tr>
-<tr data-id="90196941">
+<tr data-id="90196941" data-index="56">
           <td data-value="1783012863929">2026-07-02 17:21:03</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>West Hampstead</td>
           <td class="numeric" data-value="2195">£2195</td>
           <td class="numeric" data-value="54">54 sqm</td>
@@ -1012,9 +1293,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90196941" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90196941')">Hide</button></td>
         </tr>
-<tr data-id="89583771">
+<tr data-id="89583771" data-index="57">
           <td data-value="1781187980170">2026-06-11 14:26:20</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Kings Cross</td>
           <td class="numeric" data-value="2200">£2200</td>
           <td class="numeric" data-value="54">54 sqm</td>
@@ -1022,9 +1303,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/89583771" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('89583771')">Hide</button></td>
         </tr>
-<tr data-id="87858384">
+<tr data-id="87858384" data-index="58">
           <td data-value="1777752955706">2026-05-02 20:15:55</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Unknown</td>
           <td class="numeric" data-value="3497">£3497</td>
           <td class="numeric" data-value="54">54 sqm</td>
@@ -1032,9 +1313,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/87858384" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('87858384')">Hide</button></td>
         </tr>
-<tr data-id="90262479">
+<tr data-id="90262479" data-index="59">
           <td data-value="1782743912082">2026-06-29 14:38:32</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2250">£2250</td>
           <td class="numeric" data-value="53.98">53.98 sqm</td>
@@ -1042,9 +1323,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90262479" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90262479')">Hide</button></td>
         </tr>
-<tr data-id="141284486">
+<tr data-id="141284486" data-index="60">
           <td data-value="1783012863930">2026-07-02 17:21:03</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Stratford</td>
           <td class="numeric" data-value="2300">£2300</td>
           <td class="numeric" data-value="53.7">53.7 sqm</td>
@@ -1052,9 +1333,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/141284486" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('141284486')">Hide</button></td>
         </tr>
-<tr data-id="90130602">
+<tr data-id="90130602" data-index="61">
           <td data-value="1782392708775">2026-06-25 13:05:08</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2250">£2250</td>
           <td class="numeric" data-value="53">53 sqm</td>
@@ -1062,9 +1343,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90130602" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90130602')">Hide</button></td>
         </tr>
-<tr data-id="90271782">
+<tr data-id="90271782" data-index="62">
           <td data-value="1782822739234">2026-06-30 12:32:19</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2300">£2300</td>
           <td class="numeric" data-value="52.03">52.03 sqm</td>
@@ -1072,9 +1353,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90271782" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90271782')">Hide</button></td>
         </tr>
-<tr data-id="88995306">
+<tr data-id="88995306" data-index="63">
           <td data-value="1779978225500">2026-05-28 14:23:45</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2200">£2200</td>
           <td class="numeric" data-value="52">52 sqm</td>
@@ -1082,9 +1363,19 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/88995306" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('88995306')">Hide</button></td>
         </tr>
-<tr data-id="90453585">
+<tr data-id="90538971" data-index="64">
+          <td data-value="1783347488558">2026-07-06 14:18:08</td>
+          <td data-value="Bentley and Co, Camden"><span class="agent-name">Bentley and Co, Camden</span></td>
+          <td>Farringdon / Clerkenwell</td>
+          <td class="numeric" data-value="2210">£2210</td>
+          <td class="numeric" data-value="52">52 sqm</td>
+          <td class="numeric" data-value="42.5">£42.50</td>
+          <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90538971" target="_blank" class="view-btn">View</a></td>
+          <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90538971')">Hide</button></td>
+        </tr>
+<tr data-id="90453585" data-index="65">
           <td data-value="1783166232810">2026-07-04 11:57:12</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2250">£2250</td>
           <td class="numeric" data-value="52">52 sqm</td>
@@ -1092,9 +1383,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90453585" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90453585')">Hide</button></td>
         </tr>
-<tr data-id="89955942">
+<tr data-id="89955942" data-index="66">
           <td data-value="1783012863930">2026-07-02 17:21:03</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Stratford</td>
           <td class="numeric" data-value="2250">£2250</td>
           <td class="numeric" data-value="52">52 sqm</td>
@@ -1102,9 +1393,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/89955942" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('89955942')">Hide</button></td>
         </tr>
-<tr data-id="89891085">
+<tr data-id="89891085" data-index="67">
           <td data-value="1781877417343">2026-06-19 13:56:57</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2297">£2297</td>
           <td class="numeric" data-value="52">52 sqm</td>
@@ -1112,9 +1403,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/89891085" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('89891085')">Hide</button></td>
         </tr>
-<tr data-id="167674610">
+<tr data-id="167674610" data-index="68">
           <td data-value="1783012863932">2026-07-02 17:21:03</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Highbury & Islington</td>
           <td class="numeric" data-value="2300">£2300</td>
           <td class="numeric" data-value="52">52 sqm</td>
@@ -1122,19 +1413,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/167674610" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('167674610')">Hide</button></td>
         </tr>
-<tr data-id="90370740">
-          <td data-value="1782995533021">2026-07-02 12:32:13</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
-          <td>Canary Wharf</td>
-          <td class="numeric" data-value="2340">£2340</td>
-          <td class="numeric" data-value="52">52 sqm</td>
-          <td class="numeric" data-value="45">£45.00</td>
-          <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90370740" target="_blank" class="view-btn">View</a></td>
-          <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90370740')">Hide</button></td>
-        </tr>
-<tr data-id="87973476">
+<tr data-id="87973476" data-index="69">
           <td data-value="1783166232811">2026-07-04 11:57:12</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Highbury & Islington</td>
           <td class="numeric" data-value="2350">£2350</td>
           <td class="numeric" data-value="52">52 sqm</td>
@@ -1142,9 +1423,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/87973476" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('87973476')">Hide</button></td>
         </tr>
-<tr data-id="90500016">
+<tr data-id="90500016" data-index="70">
           <td data-value="1783252944854">2026-07-05 12:02:24</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Stratford</td>
           <td class="numeric" data-value="2492">£2492</td>
           <td class="numeric" data-value="52">52 sqm</td>
@@ -1152,9 +1433,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90500016" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90500016')">Hide</button></td>
         </tr>
-<tr data-id="90193935">
+<tr data-id="90193935" data-index="71">
           <td data-value="1782561680007">2026-06-27 12:01:20</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Kings Cross</td>
           <td class="numeric" data-value="2500">£2500</td>
           <td class="numeric" data-value="52">52 sqm</td>
@@ -1162,9 +1443,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90193935" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90193935')">Hide</button></td>
         </tr>
-<tr data-id="90330885">
+<tr data-id="90330885" data-index="72">
           <td data-value="1783012863931">2026-07-02 17:21:03</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Highbury & Islington</td>
           <td class="numeric" data-value="2200">£2200</td>
           <td class="numeric" data-value="51.75">51.75 sqm</td>
@@ -1172,9 +1453,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90330885" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90330885')">Hide</button></td>
         </tr>
-<tr data-id="90347763">
+<tr data-id="90347763" data-index="73">
           <td data-value="1782912142689">2026-07-01 13:22:22</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2500">£2500</td>
           <td class="numeric" data-value="51.18">51.18 sqm</td>
@@ -1182,9 +1463,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90347763" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90347763')">Hide</button></td>
         </tr>
-<tr data-id="90366564">
+<tr data-id="90366564" data-index="74">
           <td data-value="1782995533022">2026-07-02 12:32:13</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2200">£2200</td>
           <td class="numeric" data-value="51">51 sqm</td>
@@ -1192,9 +1473,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90366564" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90366564')">Hide</button></td>
         </tr>
-<tr data-id="90047667">
+<tr data-id="90047667" data-index="75">
           <td data-value="1782304599200">2026-06-24 12:36:39</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2250">£2250</td>
           <td class="numeric" data-value="51">51 sqm</td>
@@ -1202,9 +1483,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90047667" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90047667')">Hide</button></td>
         </tr>
-<tr data-id="90094407">
+<tr data-id="90094407" data-index="76">
           <td data-value="1783012863930">2026-07-02 17:21:03</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Stratford</td>
           <td class="numeric" data-value="2300">£2300</td>
           <td class="numeric" data-value="51">51 sqm</td>
@@ -1212,9 +1493,19 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90094407" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90094407')">Hide</button></td>
         </tr>
-<tr data-id="90333576">
+<tr data-id="90536670" data-index="77">
+          <td data-value="1783347488558">2026-07-06 14:18:08</td>
+          <td data-value="Romans and Partners, London"><span class="agent-name">Romans and Partners, London</span></td>
+          <td>Canary Wharf</td>
+          <td class="numeric" data-value="2350">£2350</td>
+          <td class="numeric" data-value="51">51 sqm</td>
+          <td class="numeric" data-value="46.07843137254902">£46.08</td>
+          <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90536670" target="_blank" class="view-btn">View</a></td>
+          <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90536670')">Hide</button></td>
+        </tr>
+<tr data-id="90333576" data-index="78">
           <td data-value="1783012863929">2026-07-02 17:21:03</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Ealing Broadway</td>
           <td class="numeric" data-value="2400">£2400</td>
           <td class="numeric" data-value="51">51 sqm</td>
@@ -1222,9 +1513,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90333576" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90333576')">Hide</button></td>
         </tr>
-<tr data-id="89915127">
+<tr data-id="89915127" data-index="79">
           <td data-value="1781877417344">2026-06-19 13:56:57</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2400">£2400</td>
           <td class="numeric" data-value="51">51 sqm</td>
@@ -1232,9 +1523,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/89915127" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('89915127')">Hide</button></td>
         </tr>
-<tr data-id="88854273">
+<tr data-id="88854273" data-index="80">
           <td data-value="1779536749228">2026-05-23 11:45:49</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2400">£2400</td>
           <td class="numeric" data-value="51">51 sqm</td>
@@ -1242,9 +1533,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/88854273" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('88854273')">Hide</button></td>
         </tr>
-<tr data-id="89280255">
+<tr data-id="89280255" data-index="81">
           <td data-value="1780580811487">2026-06-04 13:46:51</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2492">£2492</td>
           <td class="numeric" data-value="51">51 sqm</td>
@@ -1252,9 +1543,19 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/89280255" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('89280255')">Hide</button></td>
         </tr>
-<tr data-id="90460716">
+<tr data-id="90531468" data-index="82">
+          <td data-value="1783347488558">2026-07-06 14:18:08</td>
+          <td data-value="Celestial Globe, Lewisham"><span class="agent-name">Celestial Globe, Lewisham</span></td>
+          <td>Canary Wharf</td>
+          <td class="numeric" data-value="2500">£2500</td>
+          <td class="numeric" data-value="51">51 sqm</td>
+          <td class="numeric" data-value="49.01960784313726">£49.02</td>
+          <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90531468" target="_blank" class="view-btn">View</a></td>
+          <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90531468')">Hide</button></td>
+        </tr>
+<tr data-id="90460716" data-index="83">
           <td data-value="1783166232811">2026-07-04 11:57:12</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Stratford</td>
           <td class="numeric" data-value="2500">£2500</td>
           <td class="numeric" data-value="51">51 sqm</td>
@@ -1262,9 +1563,19 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90460716" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90460716')">Hide</button></td>
         </tr>
-<tr data-id="90344049">
+<tr data-id="90528018" data-index="84">
+          <td data-value="1783347488558">2026-07-06 14:18:08</td>
+          <td data-value="Kinleigh Folkard and Hayward - Lettings, Islington"><span class="agent-name">Kinleigh Folkard and Hayward - Lettings, Islington</span></td>
+          <td>Farringdon / Clerkenwell</td>
+          <td class="numeric" data-value="2500">£2500</td>
+          <td class="numeric" data-value="50.1">50.1 sqm</td>
+          <td class="numeric" data-value="49.9001996007984">£49.90</td>
+          <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90528018" target="_blank" class="view-btn">View</a></td>
+          <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90528018')">Hide</button></td>
+        </tr>
+<tr data-id="90344049" data-index="85">
           <td data-value="1782912142688">2026-07-01 13:22:22</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Kings Cross</td>
           <td class="numeric" data-value="2167">£2167</td>
           <td class="numeric" data-value="50">50 sqm</td>
@@ -1272,9 +1583,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90344049" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90344049')">Hide</button></td>
         </tr>
-<tr data-id="90107523">
+<tr data-id="90107523" data-index="86">
           <td data-value="1782392708775">2026-06-25 13:05:08</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2210">£2210</td>
           <td class="numeric" data-value="50">50 sqm</td>
@@ -1282,29 +1593,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90107523" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90107523')">Hide</button></td>
         </tr>
-<tr data-id="89738958">
-          <td data-value="1783012863930">2026-07-02 17:21:03</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
-          <td>Stratford</td>
-          <td class="numeric" data-value="2350">£2350</td>
-          <td class="numeric" data-value="50">50 sqm</td>
-          <td class="numeric" data-value="47">£47.00</td>
-          <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/89738958" target="_blank" class="view-btn">View</a></td>
-          <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('89738958')">Hide</button></td>
-        </tr>
-<tr data-id="89765676">
-          <td data-value="1783012863931">2026-07-02 17:21:03</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
-          <td>Angel</td>
-          <td class="numeric" data-value="2400">£2400</td>
-          <td class="numeric" data-value="50">50 sqm</td>
-          <td class="numeric" data-value="48">£48.00</td>
-          <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/89765676" target="_blank" class="view-btn">View</a></td>
-          <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('89765676')">Hide</button></td>
-        </tr>
-<tr data-id="90500079">
+<tr data-id="90500079" data-index="87">
           <td data-value="1783252944854">2026-07-05 12:02:24</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Stratford</td>
           <td class="numeric" data-value="2492">£2492</td>
           <td class="numeric" data-value="50">50 sqm</td>
@@ -1312,9 +1603,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90500079" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90500079')">Hide</button></td>
         </tr>
-<tr data-id="89866995">
+<tr data-id="89866995" data-index="88">
           <td data-value="1781791122040">2026-06-18 13:58:42</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2492">£2492</td>
           <td class="numeric" data-value="50">50 sqm</td>
@@ -1322,9 +1613,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/89866995" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('89866995')">Hide</button></td>
         </tr>
-<tr data-id="88839927">
+<tr data-id="88839927" data-index="89">
           <td data-value="1779536749228">2026-05-23 11:45:49</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2448">£2448</td>
           <td class="numeric" data-value="49.98">49.98 sqm</td>
@@ -1332,9 +1623,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/88839927" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('88839927')">Hide</button></td>
         </tr>
-<tr data-id="88898406">
+<tr data-id="88898406" data-index="90">
           <td data-value="1779716901174">2026-05-25 13:48:21</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2450">£2450</td>
           <td class="numeric" data-value="49.8">49.8 sqm</td>
@@ -1342,19 +1633,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/88898406" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('88898406')">Hide</button></td>
         </tr>
-<tr data-id="90454722">
-          <td data-value="1783166232811">2026-07-04 11:57:12</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
-          <td>Angel</td>
-          <td class="numeric" data-value="2250">£2250</td>
-          <td class="numeric" data-value="49.61">49.61 sqm</td>
-          <td class="numeric" data-value="45.353759322717195">£45.35</td>
-          <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90454722" target="_blank" class="view-btn">View</a></td>
-          <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90454722')">Hide</button></td>
-        </tr>
-<tr data-id="171508100">
+<tr data-id="171508100" data-index="91">
           <td data-value="1783012863932">2026-07-02 17:21:03</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Highbury & Islington</td>
           <td class="numeric" data-value="2275">£2275</td>
           <td class="numeric" data-value="49">49 sqm</td>
@@ -1362,9 +1643,19 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/171508100" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('171508100')">Hide</button></td>
         </tr>
-<tr data-id="89697432">
+<tr data-id="89875116" data-index="92">
+          <td data-value="1783347488558">2026-07-06 14:18:08</td>
+          <td data-value="Foxtons, West End"><span class="agent-name">Foxtons, West End</span></td>
+          <td>King's Cross</td>
+          <td class="numeric" data-value="2400">£2400</td>
+          <td class="numeric" data-value="49">49 sqm</td>
+          <td class="numeric" data-value="48.97959183673469">£48.98</td>
+          <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/89875116" target="_blank" class="view-btn">View</a></td>
+          <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('89875116')">Hide</button></td>
+        </tr>
+<tr data-id="89697432" data-index="93">
           <td data-value="1783166232810">2026-07-04 11:57:12</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2448">£2448</td>
           <td class="numeric" data-value="49">49 sqm</td>
@@ -1372,9 +1663,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/89697432" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('89697432')">Hide</button></td>
         </tr>
-<tr data-id="88223106">
+<tr data-id="88223106" data-index="94">
           <td data-value="1778863260993">2026-05-15 16:41:00</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Farringdon</td>
           <td class="numeric" data-value="2450">£2450</td>
           <td class="numeric" data-value="49">49 sqm</td>
@@ -1382,19 +1673,19 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/88223106" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('88223106')">Hide</button></td>
         </tr>
-<tr data-id="90465339">
-          <td data-value="1783166232811">2026-07-04 11:57:12</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+<tr data-id="90539745" data-index="95">
+          <td data-value="1783347488558">2026-07-06 14:18:08</td>
+          <td data-value="Greystar, Coppermaker Square"><span class="agent-name">Greystar, Coppermaker Square</span></td>
           <td>Stratford</td>
           <td class="numeric" data-value="2500">£2500</td>
           <td class="numeric" data-value="49">49 sqm</td>
           <td class="numeric" data-value="51.02040816326531">£51.02</td>
-          <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90465339" target="_blank" class="view-btn">View</a></td>
-          <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90465339')">Hide</button></td>
+          <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90539745" target="_blank" class="view-btn">View</a></td>
+          <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90539745')">Hide</button></td>
         </tr>
-<tr data-id="90191994">
+<tr data-id="90191994" data-index="96">
           <td data-value="1782561680007">2026-06-27 12:01:20</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2500">£2500</td>
           <td class="numeric" data-value="49">49 sqm</td>
@@ -1402,9 +1693,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90191994" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90191994')">Hide</button></td>
         </tr>
-<tr data-id="90474750">
+<tr data-id="90474750" data-index="97">
           <td data-value="1783166232811">2026-07-04 11:57:12</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2200">£2200</td>
           <td class="numeric" data-value="48.4">48.4 sqm</td>
@@ -1412,9 +1703,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90474750" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90474750')">Hide</button></td>
         </tr>
-<tr data-id="89874699">
+<tr data-id="89874699" data-index="98">
           <td data-value="1781877417344">2026-06-19 13:56:57</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2400">£2400</td>
           <td class="numeric" data-value="48.4">48.4 sqm</td>
@@ -1422,9 +1713,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/89874699" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('89874699')">Hide</button></td>
         </tr>
-<tr data-id="89570763">
+<tr data-id="89570763" data-index="99">
           <td data-value="1781187980170">2026-06-11 14:26:20</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2200">£2200</td>
           <td class="numeric" data-value="48">48 sqm</td>
@@ -1432,9 +1723,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/89570763" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('89570763')">Hide</button></td>
         </tr>
-<tr data-id="89161776">
+<tr data-id="89161776" data-index="100">
           <td data-value="1780411185426">2026-06-02 14:39:45</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2297">£2297</td>
           <td class="numeric" data-value="48">48 sqm</td>
@@ -1442,9 +1733,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/89161776" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('89161776')">Hide</button></td>
         </tr>
-<tr data-id="90258237">
+<tr data-id="90258237" data-index="101">
           <td data-value="1782743912082">2026-06-29 14:38:32</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2300">£2300</td>
           <td class="numeric" data-value="48">48 sqm</td>
@@ -1452,9 +1743,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90258237" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90258237')">Hide</button></td>
         </tr>
-<tr data-id="89539155">
+<tr data-id="89539155" data-index="102">
           <td data-value="1781099966516">2026-06-10 13:59:26</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2300">£2300</td>
           <td class="numeric" data-value="48">48 sqm</td>
@@ -1462,9 +1753,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/89539155" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('89539155')">Hide</button></td>
         </tr>
-<tr data-id="90313908">
+<tr data-id="90313908" data-index="103">
           <td data-value="1783012863929">2026-07-02 17:21:03</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>London Bridge</td>
           <td class="numeric" data-value="2450">£2450</td>
           <td class="numeric" data-value="48">48 sqm</td>
@@ -1472,9 +1763,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90313908" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90313908')">Hide</button></td>
         </tr>
-<tr data-id="90305391">
+<tr data-id="90305391" data-index="104">
           <td data-value="1782822739234">2026-06-30 12:32:19</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Farringdon</td>
           <td class="numeric" data-value="2379">£2379</td>
           <td class="numeric" data-value="47.9">47.9 sqm</td>
@@ -1482,9 +1773,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90305391" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90305391')">Hide</button></td>
         </tr>
-<tr data-id="90269487">
+<tr data-id="90269487" data-index="105">
           <td data-value="1783012863928">2026-07-02 17:21:03</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Ealing Broadway</td>
           <td class="numeric" data-value="2000">£2000</td>
           <td class="numeric" data-value="47">47 sqm</td>
@@ -1492,9 +1783,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90269487" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90269487')">Hide</button></td>
         </tr>
-<tr data-id="89537013">
+<tr data-id="89537013" data-index="106">
           <td data-value="1783012863932">2026-07-02 17:21:03</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Highbury & Islington</td>
           <td class="numeric" data-value="2500">£2500</td>
           <td class="numeric" data-value="47">47 sqm</td>
@@ -1502,9 +1793,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/89537013" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('89537013')">Hide</button></td>
         </tr>
-<tr data-id="88691211">
+<tr data-id="88691211" data-index="107">
           <td data-value="1779283499548">2026-05-20 13:24:59</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Farringdon</td>
           <td class="numeric" data-value="2500">£2500</td>
           <td class="numeric" data-value="47">47 sqm</td>
@@ -1512,9 +1803,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/88691211" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('88691211')">Hide</button></td>
         </tr>
-<tr data-id="89081745">
+<tr data-id="89081745" data-index="108">
           <td data-value="1783012863930">2026-07-02 17:21:03</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>London Bridge</td>
           <td class="numeric" data-value="2100">£2100</td>
           <td class="numeric" data-value="46.82">46.82 sqm</td>
@@ -1522,9 +1813,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/89081745" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('89081745')">Hide</button></td>
         </tr>
-<tr data-id="90076083">
+<tr data-id="90076083" data-index="109">
           <td data-value="1782304599200">2026-06-24 12:36:39</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2253">£2253</td>
           <td class="numeric" data-value="46.45">46.45 sqm</td>
@@ -1532,9 +1823,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90076083" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90076083')">Hide</button></td>
         </tr>
-<tr data-id="90499383">
+<tr data-id="90499383" data-index="110">
           <td data-value="1783252944853">2026-07-05 12:02:24</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2150">£2150</td>
           <td class="numeric" data-value="46.36">46.36 sqm</td>
@@ -1542,9 +1833,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90499383" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90499383')">Hide</button></td>
         </tr>
-<tr data-id="90487326">
+<tr data-id="90487326" data-index="111">
           <td data-value="1783166232810">2026-07-04 11:57:12</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2150">£2150</td>
           <td class="numeric" data-value="46">46 sqm</td>
@@ -1552,9 +1843,19 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90487326" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90487326')">Hide</button></td>
         </tr>
-<tr data-id="89632845">
+<tr data-id="90044970" data-index="112">
+          <td data-value="1783347488558">2026-07-06 14:18:08</td>
+          <td data-value="Dawn Sandoval Residential, Canary Wharf"><span class="agent-name">Dawn Sandoval Residential, Canary Wharf</span></td>
+          <td>Canary Wharf</td>
+          <td class="numeric" data-value="2200">£2200</td>
+          <td class="numeric" data-value="46">46 sqm</td>
+          <td class="numeric" data-value="47.82608695652174">£47.83</td>
+          <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90044970" target="_blank" class="view-btn">View</a></td>
+          <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90044970')">Hide</button></td>
+        </tr>
+<tr data-id="89632845" data-index="113">
           <td data-value="1781272207734">2026-06-12 13:50:07</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Farringdon</td>
           <td class="numeric" data-value="2396">£2396</td>
           <td class="numeric" data-value="46">46 sqm</td>
@@ -1562,9 +1863,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/89632845" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('89632845')">Hide</button></td>
         </tr>
-<tr data-id="89470749">
+<tr data-id="89470749" data-index="114">
           <td data-value="1781011961227">2026-06-09 13:32:41</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2450">£2450</td>
           <td class="numeric" data-value="46">46 sqm</td>
@@ -1572,9 +1873,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/89470749" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('89470749')">Hide</button></td>
         </tr>
-<tr data-id="88124379">
+<tr data-id="88124379" data-index="115">
           <td data-value="1781539991640">2026-06-15 16:13:11</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Farringdon</td>
           <td class="numeric" data-value="2500">£2500</td>
           <td class="numeric" data-value="46">46 sqm</td>
@@ -1582,9 +1883,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/88124379" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('88124379')">Hide</button></td>
         </tr>
-<tr data-id="89126466">
+<tr data-id="89126466" data-index="116">
           <td data-value="1783012863929">2026-07-02 17:21:03</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>London Bridge</td>
           <td class="numeric" data-value="2250">£2250</td>
           <td class="numeric" data-value="45.4">45.4 sqm</td>
@@ -1592,9 +1893,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/89126466" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('89126466')">Hide</button></td>
         </tr>
-<tr data-id="90254595">
+<tr data-id="90254595" data-index="117">
           <td data-value="1783012863931">2026-07-02 17:21:03</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Highbury & Islington</td>
           <td class="numeric" data-value="2250">£2250</td>
           <td class="numeric" data-value="45">45 sqm</td>
@@ -1602,9 +1903,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90254595" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90254595')">Hide</button></td>
         </tr>
-<tr data-id="88560645">
+<tr data-id="88560645" data-index="118">
           <td data-value="1778863260994">2026-05-15 16:41:00</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2448">£2448</td>
           <td class="numeric" data-value="45">45 sqm</td>
@@ -1612,9 +1913,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/88560645" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('88560645')">Hide</button></td>
         </tr>
-<tr data-id="89767467">
+<tr data-id="89767467" data-index="119">
           <td data-value="1781957851433">2026-06-20 12:17:31</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Bloomsbury (Russell Square)</td>
           <td class="numeric" data-value="2479">£2479</td>
           <td class="numeric" data-value="45">45 sqm</td>
@@ -1622,9 +1923,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/89767467" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('89767467')">Hide</button></td>
         </tr>
-<tr data-id="90404763">
+<tr data-id="90404763" data-index="120">
           <td data-value="1782995533021">2026-07-02 12:32:13</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Farringdon</td>
           <td class="numeric" data-value="2500">£2500</td>
           <td class="numeric" data-value="45">45 sqm</td>
@@ -1632,9 +1933,19 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90404763" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90404763')">Hide</button></td>
         </tr>
-<tr data-id="174538664">
+<tr data-id="90522885" data-index="121">
+          <td data-value="1783347488558">2026-07-06 14:18:08</td>
+          <td data-value="OpenRent, London"><span class="badge badge-openrent">✨ OpenRent, London</span></td>
+          <td>Canary Wharf</td>
+          <td class="numeric" data-value="2199">£2199</td>
+          <td class="numeric" data-value="44.97">44.97 sqm</td>
+          <td class="numeric" data-value="48.899266177451636">£48.90</td>
+          <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90522885" target="_blank" class="view-btn">View</a></td>
+          <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90522885')">Hide</button></td>
+        </tr>
+<tr data-id="174538664" data-index="122">
           <td data-value="1778863260993">2026-05-15 16:41:00</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Farringdon</td>
           <td class="numeric" data-value="2500">£2500</td>
           <td class="numeric" data-value="44.7">44.7 sqm</td>
@@ -1642,9 +1953,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/174538664" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('174538664')">Hide</button></td>
         </tr>
-<tr data-id="90382449">
+<tr data-id="90382449" data-index="123">
           <td data-value="1783012863929">2026-07-02 17:21:03</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>West Hampstead</td>
           <td class="numeric" data-value="1907">£1907</td>
           <td class="numeric" data-value="44.5">44.5 sqm</td>
@@ -1652,9 +1963,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90382449" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90382449')">Hide</button></td>
         </tr>
-<tr data-id="89657289">
+<tr data-id="89657289" data-index="124">
           <td data-value="1782561680007">2026-06-27 12:01:20</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2496">£2496</td>
           <td class="numeric" data-value="44.39">44.39 sqm</td>
@@ -1662,9 +1973,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/89657289" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('89657289')">Hide</button></td>
         </tr>
-<tr data-id="90374136">
+<tr data-id="90374136" data-index="125">
           <td data-value="1783012863929">2026-07-02 17:21:03</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>London Bridge</td>
           <td class="numeric" data-value="1850">£1850</td>
           <td class="numeric" data-value="44">44 sqm</td>
@@ -1672,9 +1983,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90374136" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90374136')">Hide</button></td>
         </tr>
-<tr data-id="89054328">
+<tr data-id="89054328" data-index="126">
           <td data-value="1780062532194">2026-05-29 13:48:52</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2149">£2149</td>
           <td class="numeric" data-value="44">44 sqm</td>
@@ -1682,9 +1993,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/89054328" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('89054328')">Hide</button></td>
         </tr>
-<tr data-id="158921117">
+<tr data-id="158921117" data-index="127">
           <td data-value="1778863260994">2026-05-15 16:41:00</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2300">£2300</td>
           <td class="numeric" data-value="44">44 sqm</td>
@@ -1692,9 +2003,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/158921117" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('158921117')">Hide</button></td>
         </tr>
-<tr data-id="90206850">
+<tr data-id="90206850" data-index="128">
           <td data-value="1782561680007">2026-06-27 12:01:20</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2470">£2470</td>
           <td class="numeric" data-value="44">44 sqm</td>
@@ -1702,9 +2013,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90206850" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90206850')">Hide</button></td>
         </tr>
-<tr data-id="90321744">
+<tr data-id="90321744" data-index="129">
           <td data-value="1782912142689">2026-07-01 13:22:22</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2500">£2500</td>
           <td class="numeric" data-value="44">44 sqm</td>
@@ -1712,19 +2023,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90321744" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90321744')">Hide</button></td>
         </tr>
-<tr data-id="89304243">
-          <td data-value="1782221228844">2026-06-23 13:27:08</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
-          <td>Moorgate</td>
-          <td class="numeric" data-value="2500">£2500</td>
-          <td class="numeric" data-value="44">44 sqm</td>
-          <td class="numeric" data-value="56.81818181818182">£56.82</td>
-          <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/89304243" target="_blank" class="view-btn">View</a></td>
-          <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('89304243')">Hide</button></td>
-        </tr>
-<tr data-id="90056139">
+<tr data-id="90056139" data-index="130">
           <td data-value="1782304599200">2026-06-24 12:36:39</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2145">£2145</td>
           <td class="numeric" data-value="43.94">43.94 sqm</td>
@@ -1732,9 +2033,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90056139" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90056139')">Hide</button></td>
         </tr>
-<tr data-id="89936142">
+<tr data-id="89936142" data-index="131">
           <td data-value="1781957851434">2026-06-20 12:17:31</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2400">£2400</td>
           <td class="numeric" data-value="43.77">43.77 sqm</td>
@@ -1742,9 +2043,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/89936142" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('89936142')">Hide</button></td>
         </tr>
-<tr data-id="90355344">
+<tr data-id="90355344" data-index="132">
           <td data-value="1783012863928">2026-07-02 17:21:03</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Ealing Broadway</td>
           <td class="numeric" data-value="2450">£2450</td>
           <td class="numeric" data-value="43.45">43.45 sqm</td>
@@ -1752,9 +2053,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90355344" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90355344')">Hide</button></td>
         </tr>
-<tr data-id="90131874">
+<tr data-id="90131874" data-index="133">
           <td data-value="1783012863930">2026-07-02 17:21:03</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Stratford</td>
           <td class="numeric" data-value="2390">£2390</td>
           <td class="numeric" data-value="43">43 sqm</td>
@@ -1762,9 +2063,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90131874" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90131874')">Hide</button></td>
         </tr>
-<tr data-id="90211923">
+<tr data-id="90211923" data-index="134">
           <td data-value="1783012863930">2026-07-02 17:21:03</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Stratford</td>
           <td class="numeric" data-value="2390">£2390</td>
           <td class="numeric" data-value="43">43 sqm</td>
@@ -1772,9 +2073,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90211923" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90211923')">Hide</button></td>
         </tr>
-<tr data-id="169515746">
+<tr data-id="169515746" data-index="135">
           <td data-value="1783012863929">2026-07-02 17:21:03</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>London Bridge</td>
           <td class="numeric" data-value="2500">£2500</td>
           <td class="numeric" data-value="43">43 sqm</td>
@@ -1782,9 +2083,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/169515746" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('169515746')">Hide</button></td>
         </tr>
-<tr data-id="157618283">
+<tr data-id="157618283" data-index="136">
           <td data-value="1782995533021">2026-07-02 12:32:13</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2448">£2448</td>
           <td class="numeric" data-value="42.09">42.09 sqm</td>
@@ -1792,19 +2093,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/157618283" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('157618283')">Hide</button></td>
         </tr>
-<tr data-id="89010213">
-          <td data-value="1779978225500">2026-05-28 14:23:45</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
-          <td>Canary Wharf</td>
-          <td class="numeric" data-value="1900">£1900</td>
-          <td class="numeric" data-value="42">42 sqm</td>
-          <td class="numeric" data-value="45.23809523809524">£45.24</td>
-          <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/89010213" target="_blank" class="view-btn">View</a></td>
-          <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('89010213')">Hide</button></td>
-        </tr>
-<tr data-id="90278811">
+<tr data-id="90278811" data-index="137">
           <td data-value="1783012863931">2026-07-02 17:21:03</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Stratford</td>
           <td class="numeric" data-value="2190">£2190</td>
           <td class="numeric" data-value="42">42 sqm</td>
@@ -1812,9 +2103,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90278811" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90278811')">Hide</button></td>
         </tr>
-<tr data-id="90102600">
+<tr data-id="90102600" data-index="138">
           <td data-value="1783012863930">2026-07-02 17:21:03</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Stratford</td>
           <td class="numeric" data-value="2255">£2255</td>
           <td class="numeric" data-value="42">42 sqm</td>
@@ -1822,9 +2113,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90102600" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90102600')">Hide</button></td>
         </tr>
-<tr data-id="90054642">
+<tr data-id="90054642" data-index="139">
           <td data-value="1782304599199">2026-06-24 12:36:39</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2300">£2300</td>
           <td class="numeric" data-value="42">42 sqm</td>
@@ -1832,9 +2123,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90054642" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90054642')">Hide</button></td>
         </tr>
-<tr data-id="89884620">
+<tr data-id="89884620" data-index="140">
           <td data-value="1781877417343">2026-06-19 13:56:57</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Kings Cross</td>
           <td class="numeric" data-value="2300">£2300</td>
           <td class="numeric" data-value="42">42 sqm</td>
@@ -1842,9 +2133,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/89884620" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('89884620')">Hide</button></td>
         </tr>
-<tr data-id="89800551">
+<tr data-id="89800551" data-index="141">
           <td data-value="1781877417343">2026-06-19 13:56:57</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2500">£2500</td>
           <td class="numeric" data-value="42">42 sqm</td>
@@ -1852,9 +2143,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/89800551" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('89800551')">Hide</button></td>
         </tr>
-<tr data-id="174837137">
+<tr data-id="174837137" data-index="142">
           <td data-value="1780062532194">2026-05-29 13:48:52</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2500">£2500</td>
           <td class="numeric" data-value="42">42 sqm</td>
@@ -1862,9 +2153,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/174837137" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('174837137')">Hide</button></td>
         </tr>
-<tr data-id="166430741">
+<tr data-id="166430741" data-index="143">
           <td data-value="1782561680007">2026-06-27 12:01:20</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2349">£2349</td>
           <td class="numeric" data-value="41.99">41.99 sqm</td>
@@ -1872,19 +2163,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/166430741" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('166430741')">Hide</button></td>
         </tr>
-<tr data-id="90259866">
-          <td data-value="1782743912082">2026-06-29 14:38:32</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
-          <td>Canary Wharf</td>
-          <td class="numeric" data-value="2297">£2297</td>
-          <td class="numeric" data-value="41.25">41.25 sqm</td>
-          <td class="numeric" data-value="55.68484848484849">£55.68</td>
-          <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90259866" target="_blank" class="view-btn">View</a></td>
-          <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90259866')">Hide</button></td>
-        </tr>
-<tr data-id="89365353">
+<tr data-id="89365353" data-index="144">
           <td data-value="1783012863930">2026-07-02 17:21:03</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>London Bridge</td>
           <td class="numeric" data-value="1998">£1998</td>
           <td class="numeric" data-value="41">41 sqm</td>
@@ -1892,9 +2173,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/89365353" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('89365353')">Hide</button></td>
         </tr>
-<tr data-id="90473625">
+<tr data-id="90473625" data-index="145">
           <td data-value="1783166232810">2026-07-04 11:57:12</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2250">£2250</td>
           <td class="numeric" data-value="41">41 sqm</td>
@@ -1902,9 +2183,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90473625" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90473625')">Hide</button></td>
         </tr>
-<tr data-id="88695372">
+<tr data-id="88695372" data-index="146">
           <td data-value="1781791122040">2026-06-18 13:58:42</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2384">£2384</td>
           <td class="numeric" data-value="41">41 sqm</td>
@@ -1912,9 +2193,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/88695372" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('88695372')">Hide</button></td>
         </tr>
-<tr data-id="89726034">
+<tr data-id="89726034" data-index="147">
           <td data-value="1783012863931">2026-07-02 17:21:03</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Angel</td>
           <td class="numeric" data-value="2500">£2500</td>
           <td class="numeric" data-value="41">41 sqm</td>
@@ -1922,9 +2203,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/89726034" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('89726034')">Hide</button></td>
         </tr>
-<tr data-id="89432874">
+<tr data-id="89432874" data-index="148">
           <td data-value="1781791122040">2026-06-18 13:58:42</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2500">£2500</td>
           <td class="numeric" data-value="41">41 sqm</td>
@@ -1932,9 +2213,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/89432874" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('89432874')">Hide</button></td>
         </tr>
-<tr data-id="87852465">
+<tr data-id="87852465" data-index="149">
           <td data-value="1782822739234">2026-06-30 12:32:19</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2167">£2167</td>
           <td class="numeric" data-value="40.69">40.69 sqm</td>
@@ -1942,9 +2223,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/87852465" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('87852465')">Hide</button></td>
         </tr>
-<tr data-id="88135632">
+<tr data-id="88135632" data-index="150">
           <td data-value="1783012863929">2026-07-02 17:21:03</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>West Hampstead</td>
           <td class="numeric" data-value="1842">£1842</td>
           <td class="numeric" data-value="40">40 sqm</td>
@@ -1952,9 +2233,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/88135632" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('88135632')">Hide</button></td>
         </tr>
-<tr data-id="90210780">
+<tr data-id="90210780" data-index="151">
           <td data-value="1783012863931">2026-07-02 17:21:03</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Paddington</td>
           <td class="numeric" data-value="2000">£2000</td>
           <td class="numeric" data-value="40">40 sqm</td>
@@ -1962,9 +2243,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90210780" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90210780')">Hide</button></td>
         </tr>
-<tr data-id="90365553">
+<tr data-id="90365553" data-index="152">
           <td data-value="1783012863929">2026-07-02 17:21:03</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>West Hampstead</td>
           <td class="numeric" data-value="2100">£2100</td>
           <td class="numeric" data-value="40">40 sqm</td>
@@ -1972,19 +2253,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90365553" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90365553')">Hide</button></td>
         </tr>
-<tr data-id="174483524">
-          <td data-value="1781624020029">2026-06-16 15:33:40</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
-          <td>Canary Wharf</td>
-          <td class="numeric" data-value="2200">£2200</td>
-          <td class="numeric" data-value="40">40 sqm</td>
-          <td class="numeric" data-value="55">£55.00</td>
-          <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/174483524" target="_blank" class="view-btn">View</a></td>
-          <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('174483524')">Hide</button></td>
-        </tr>
-<tr data-id="89866371">
+<tr data-id="89866371" data-index="153">
           <td data-value="1783012863931">2026-07-02 17:21:03</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Highbury & Islington</td>
           <td class="numeric" data-value="2250">£2250</td>
           <td class="numeric" data-value="40">40 sqm</td>
@@ -1992,9 +2263,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/89866371" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('89866371')">Hide</button></td>
         </tr>
-<tr data-id="90474822">
+<tr data-id="90474822" data-index="154">
           <td data-value="1783166232810">2026-07-04 11:57:12</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2275">£2275</td>
           <td class="numeric" data-value="40">40 sqm</td>
@@ -2002,9 +2273,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90474822" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90474822')">Hide</button></td>
         </tr>
-<tr data-id="19588097">
+<tr data-id="19588097" data-index="155">
           <td data-value="1779371322933">2026-05-21 13:48:42</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Farringdon</td>
           <td class="numeric" data-value="2275">£2275</td>
           <td class="numeric" data-value="40">40 sqm</td>
@@ -2012,9 +2283,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/19588097" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('19588097')">Hide</button></td>
         </tr>
-<tr data-id="90472821">
+<tr data-id="90472821" data-index="156">
           <td data-value="1783166232810">2026-07-04 11:57:12</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Blackfriars</td>
           <td class="numeric" data-value="2297">£2297</td>
           <td class="numeric" data-value="40">40 sqm</td>
@@ -2022,9 +2293,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90472821" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90472821')">Hide</button></td>
         </tr>
-<tr data-id="90407115">
+<tr data-id="90407115" data-index="157">
           <td data-value="1783012863930">2026-07-02 17:21:03</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Stratford</td>
           <td class="numeric" data-value="2335">£2335</td>
           <td class="numeric" data-value="40">40 sqm</td>
@@ -2032,9 +2303,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90407115" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90407115')">Hide</button></td>
         </tr>
-<tr data-id="90203535">
+<tr data-id="90203535" data-index="158">
           <td data-value="1782822739234">2026-06-30 12:32:19</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2400">£2400</td>
           <td class="numeric" data-value="40">40 sqm</td>
@@ -2042,9 +2313,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90203535" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('90203535')">Hide</button></td>
         </tr>
-<tr data-id="88631589">
+<tr data-id="88631589" data-index="159">
           <td data-value="1779536749228">2026-05-23 11:45:49</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Canary Wharf</td>
           <td class="numeric" data-value="2496">£2496</td>
           <td class="numeric" data-value="40">40 sqm</td>
@@ -2052,9 +2323,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/88631589" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('88631589')">Hide</button></td>
         </tr>
-<tr data-id="173791553">
+<tr data-id="173791553" data-index="160">
           <td data-value="1777752955707">2026-05-02 20:15:55</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Unknown</td>
           <td class="numeric" data-value="4117">£4117</td>
           <td class="numeric" data-value="40">40 sqm</td>
@@ -2062,9 +2333,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/173791553" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('173791553')">Hide</button></td>
         </tr>
-<tr data-id="157692917">
+<tr data-id="157692917" data-index="161">
           <td data-value="1777752955706">2026-05-02 20:15:55</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Unknown</td>
           <td class="numeric" data-value="3000">£3000</td>
           <td class="numeric" data-value="38">38 sqm</td>
@@ -2072,9 +2343,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/157692917" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('157692917')">Hide</button></td>
         </tr>
-<tr data-id="88013730">
+<tr data-id="88013730" data-index="162">
           <td data-value="1777752955704">2026-05-02 20:15:55</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Unknown</td>
           <td class="numeric" data-value="1800">£1800</td>
           <td class="numeric" data-value="24">24 sqm</td>
@@ -2082,9 +2353,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/88013730" target="_blank" class="view-btn">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('88013730')">Hide</button></td>
         </tr>
-<tr data-id="88017369">
+<tr data-id="88017369" data-index="163">
           <td data-value="1777752955705">2026-05-02 20:15:55</td>
-          <td><span class="badge badge-rightmove">Rightmove</span></td>
+          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
           <td>Unknown</td>
           <td class="numeric" data-value="1950">£1950</td>
           <td class="numeric" data-value="17">17 sqm</td>
