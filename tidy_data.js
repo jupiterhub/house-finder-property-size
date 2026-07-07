@@ -1831,7 +1831,8 @@ ${htmlRows}
 </body>
 </html>`;
       fs.writeFileSync(htmlFile, htmlContent);
-      console.log(`Updated ${htmlFile} with ${result.length} matches.`);
+      fs.writeFileSync(path.join(__dirname, 'index.html'), htmlContent);
+      console.log(`Updated ${htmlFile} and root index.html with ${result.length} matches.`);
     }
 
     if (flags.migrate && fs.existsSync(TXT_FILE)) {

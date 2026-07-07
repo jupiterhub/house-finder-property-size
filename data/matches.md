@@ -4,6 +4,9 @@
 - **ID**: 90116307
 - **Price**: £1850 PCM
 - **Size**: 1484.4 sqm
+- **Listing Update**: 2026-06-25
+- **Listing Status**: Added on 25/06/2026
+- **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90116307](https://www.rightmove.co.uk/properties/90116307)
 
 ---
@@ -14,6 +17,9 @@
 - **ID**: 90138318
 - **Price**: £1200 PCM
 - **Size**: 111.14 sqm
+- **Listing Update**: 2026-06-25
+- **Listing Status**: Reduced on 25/06/2026
+- **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90138318](https://www.rightmove.co.uk/properties/90138318)
 
 ---
@@ -24,6 +30,9 @@
 - **ID**: 88977246
 - **Price**: £2250 PCM
 - **Size**: 81.8 sqm
+- **Listing Update**: 2026-05-27
+- **Listing Status**: Added on 27/05/2026
+- **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/88977246](https://www.rightmove.co.uk/properties/88977246)
 
 ---
@@ -34,6 +43,9 @@
 - **ID**: 88977495
 - **Price**: £2250 PCM
 - **Size**: 81.8 sqm
+- **Listing Update**: 2026-05-27
+- **Listing Status**: Added on 27/05/2026
+- **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/88977495](https://www.rightmove.co.uk/properties/88977495)
 
 ---
@@ -44,6 +56,9 @@
 - **ID**: 87908958
 - **Price**: £4800 PCM
 - **Size**: 80 sqm
+- **Listing Update**: 2026-04-30
+- **Listing Status**: Added on 30/04/2026
+- **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/87908958](https://www.rightmove.co.uk/properties/87908958)
 
 ---
@@ -54,6 +69,9 @@
 - **ID**: 90549390
 - **Price**: £2250 PCM
 - **Size**: 78 sqm
+- **Listing Update**: 2026-07-06
+- **Listing Status**: Added yesterday
+- **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90549390](https://www.rightmove.co.uk/properties/90549390)
 
 ---
@@ -64,6 +82,9 @@
 - **ID**: 89863914
 - **Price**: £2400 PCM
 - **Size**: 76 sqm
+- **Listing Update**: 2026-07-06
+- **Listing Status**: Reduced yesterday
+- **Let Available**: 24/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/89863914](https://www.rightmove.co.uk/properties/89863914)
 
 ---
@@ -74,6 +95,9 @@
 - **ID**: 90025377
 - **Price**: £2400 PCM
 - **Size**: 76 sqm
+- **Listing Update**: 2026-06-23
+- **Listing Status**: Added on 23/06/2026
+- **Let Available**: 14/09/2026 (🦅 Early Bird: 83d adv) (🦅 Early Bird: 83d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/90025377](https://www.rightmove.co.uk/properties/90025377)
 
 ---
@@ -84,6 +108,9 @@
 - **ID**: 90361794
 - **Price**: £2500 PCM
 - **Size**: 76 sqm
+- **Listing Update**: 2026-07-01
+- **Listing Status**: Added on 01/07/2026
+- **Let Available**: 15/09/2026 (🦅 Early Bird: 76d adv) (🦅 Early Bird: 76d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/90361794](https://www.rightmove.co.uk/properties/90361794)
 
 ---
@@ -94,6 +121,9 @@
 - **ID**: 89266041
 - **Price**: £2500 PCM
 - **Size**: 76 sqm
+- **Listing Update**: 2026-06-03
+- **Listing Status**: Added on 03/06/2026
+- **Let Available**: 04/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/89266041](https://www.rightmove.co.uk/properties/89266041)
 
 ---
@@ -104,6 +134,9 @@
 - **ID**: 89051616
 - **Price**: £2375 PCM
 - **Size**: 75 sqm
+- **Listing Update**: 2026-06-14
+- **Listing Status**: Reduced on 14/06/2026
+- **Let Available**: 17/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/89051616](https://www.rightmove.co.uk/properties/89051616)
 
 ---
@@ -114,6 +147,9 @@
 - **ID**: 88205823
 - **Price**: £2499 PCM
 - **Size**: 75 sqm
+- **Listing Update**: 2026-07-04
+- **Listing Status**: Reduced on 04/07/2026
+- **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/88205823](https://www.rightmove.co.uk/properties/88205823)
 
 ---
@@ -124,6 +160,9 @@
 - **ID**: 89164764
 - **Price**: £2350 PCM
 - **Size**: 74.51 sqm
+- **Listing Update**: 2026-06-01
+- **Listing Status**: Added on 01/06/2026
+- **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/89164764](https://www.rightmove.co.uk/properties/89164764)
 
 ---
@@ -134,6 +173,9 @@
 - **ID**: 174571163
 - **Price**: £3250 PCM
 - **Size**: 74 sqm
+- **Listing Update**: 2026-05-12
+- **Listing Status**: Reduced on 12/05/2026
+- **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/174571163](https://www.rightmove.co.uk/properties/174571163)
 
 ---
@@ -144,6 +186,9 @@
 - **ID**: 89890977
 - **Price**: £2400 PCM
 - **Size**: 73 sqm
+- **Listing Update**: 2026-06-18
+- **Listing Status**: Added on 18/06/2026
+- **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/89890977](https://www.rightmove.co.uk/properties/89890977)
 
 ---
@@ -154,6 +199,9 @@
 - **ID**: 88546884
 - **Price**: £2500 PCM
 - **Size**: 73 sqm
+- **Listing Update**: 2026-06-25
+- **Listing Status**: Reduced on 25/06/2026
+- **Let Available**: 16/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/88546884](https://www.rightmove.co.uk/properties/88546884)
 
 ---
@@ -164,6 +212,9 @@
 - **ID**: 89487687
 - **Price**: £2500 PCM
 - **Size**: 72 sqm
+- **Listing Update**: 2026-06-30
+- **Listing Status**: Reduced on 30/06/2026
+- **Let Available**: 27/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/89487687](https://www.rightmove.co.uk/properties/89487687)
 
 ---
@@ -174,6 +225,9 @@
 - **ID**: 90470013
 - **Price**: £2496 PCM
 - **Size**: 71.16 sqm
+- **Listing Update**: 2026-07-03
+- **Listing Status**: Added on 03/07/2026
+- **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90470013](https://www.rightmove.co.uk/properties/90470013)
 
 ---
@@ -184,6 +238,9 @@
 - **ID**: 90474612
 - **Price**: £2300 PCM
 - **Size**: 71 sqm
+- **Listing Update**: 2026-07-03
+- **Listing Status**: Added on 03/07/2026
+- **Let Available**: 01/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90474612](https://www.rightmove.co.uk/properties/90474612)
 
 ---
@@ -194,6 +251,9 @@
 - **ID**: 89937312
 - **Price**: £2350 PCM
 - **Size**: 70 sqm
+- **Listing Update**: 2026-07-04
+- **Listing Status**: Reduced on 04/07/2026
+- **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/89937312](https://www.rightmove.co.uk/properties/89937312)
 
 ---
@@ -204,6 +264,9 @@
 - **ID**: 87996729
 - **Price**: £2900 PCM
 - **Size**: 69 sqm
+- **Listing Update**: 2026-05-01
+- **Listing Status**: Added on 01/05/2026
+- **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/87996729](https://www.rightmove.co.uk/properties/87996729)
 
 ---
@@ -214,6 +277,9 @@
 - **ID**: 88718487
 - **Price**: £2400 PCM
 - **Size**: 68 sqm
+- **Listing Update**: 2026-05-20
+- **Listing Status**: Added on 20/05/2026
+- **Let Available**: 13/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/88718487](https://www.rightmove.co.uk/properties/88718487)
 
 ---
@@ -224,6 +290,9 @@
 - **ID**: 90273990
 - **Price**: £2100 PCM
 - **Size**: 67 sqm
+- **Listing Update**: 2026-06-30
+- **Listing Status**: Added on 30/06/2026
+- **Let Available**: 15/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90273990](https://www.rightmove.co.uk/properties/90273990)
 
 ---
@@ -234,6 +303,9 @@
 - **ID**: 90564630
 - **Price**: £2275 PCM
 - **Size**: 66.6 sqm
+- **Listing Update**: 2026-07-07
+- **Listing Status**: Added today
+- **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90564630](https://www.rightmove.co.uk/properties/90564630)
 
 ---
@@ -244,6 +316,9 @@
 - **ID**: 174057173
 - **Price**: £2200 PCM
 - **Size**: 66 sqm
+- **Listing Update**: 2026-07-01
+- **Listing Status**: Reduced on 01/07/2026
+- **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/174057173](https://www.rightmove.co.uk/properties/174057173)
 
 ---
@@ -254,6 +329,9 @@
 - **ID**: 88065144
 - **Price**: £2500 PCM
 - **Size**: 66 sqm
+- **Listing Update**: 2026-07-03
+- **Listing Status**: Reduced on 03/07/2026
+- **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/88065144](https://www.rightmove.co.uk/properties/88065144)
 
 ---
@@ -264,7 +342,23 @@
 - **ID**: 89361318
 - **Price**: £2500 PCM
 - **Size**: 63.6 sqm
+- **Listing Update**: 2026-06-05
+- **Listing Status**: Added on 05/06/2026
+- **Let Available**: 28/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/89361318](https://www.rightmove.co.uk/properties/89361318)
+
+---
+
+### [2026-07-07T16:53:19.142Z] MATCH FOUND!
+- **Marketed by**: Look Property Services Ltd, Bow
+- **Location**: Stratford
+- **ID**: 155821520
+- **Price**: £2100 PCM
+- **Size**: 62.7 sqm
+- **Listing Update**: 2026-07-07
+- **Listing Status**: Added today
+- **Let Available**: 29/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/155821520](https://www.rightmove.co.uk/properties/155821520)
 
 ---
 
@@ -274,6 +368,9 @@
 - **ID**: 90278955
 - **Price**: £2500 PCM
 - **Size**: 62.7 sqm
+- **Listing Update**: 2026-06-29
+- **Listing Status**: Added on 29/06/2026
+- **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90278955](https://www.rightmove.co.uk/properties/90278955)
 
 ---
@@ -284,6 +381,9 @@
 - **ID**: 90372378
 - **Price**: £2500 PCM
 - **Size**: 62.62 sqm
+- **Listing Update**: 2026-07-01
+- **Listing Status**: Added on 01/07/2026
+- **Let Available**: 10/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90372378](https://www.rightmove.co.uk/properties/90372378)
 
 ---
@@ -294,6 +394,9 @@
 - **ID**: 87973677
 - **Price**: £2150 PCM
 - **Size**: 62 sqm
+- **Listing Update**: 2026-05-28
+- **Listing Status**: Reduced on 28/05/2026
+- **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/87973677](https://www.rightmove.co.uk/properties/87973677)
 
 ---
@@ -304,6 +407,9 @@
 - **ID**: 89856171
 - **Price**: £2384 PCM
 - **Size**: 62 sqm
+- **Listing Update**: 2026-06-18
+- **Listing Status**: Added on 18/06/2026
+- **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/89856171](https://www.rightmove.co.uk/properties/89856171)
 
 ---
@@ -314,6 +420,9 @@
 - **ID**: 90552402
 - **Price**: £2500 PCM
 - **Size**: 62 sqm
+- **Listing Update**: 2026-07-06
+- **Listing Status**: Reduced yesterday
+- **Let Available**: 09/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90552402](https://www.rightmove.co.uk/properties/90552402)
 
 ---
@@ -324,6 +433,9 @@
 - **ID**: 90382506
 - **Price**: £2058 PCM
 - **Size**: 61.04 sqm
+- **Listing Update**: 2026-07-01
+- **Listing Status**: Added on 01/07/2026
+- **Let Available**: 14/09/2026 (🦅 Early Bird: 75d adv) (🦅 Early Bird: 75d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/90382506](https://www.rightmove.co.uk/properties/90382506)
 
 ---
@@ -334,6 +446,9 @@
 - **ID**: 90572814
 - **Price**: £2400 PCM
 - **Size**: 61 sqm
+- **Listing Update**: 2026-07-07
+- **Listing Status**: Added today
+- **Let Available**: 02/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90572814](https://www.rightmove.co.uk/properties/90572814)
 
 ---
@@ -344,6 +459,9 @@
 - **ID**: 90129939
 - **Price**: £2400 PCM
 - **Size**: 61 sqm
+- **Listing Update**: 2026-07-02
+- **Listing Status**: Reduced on 02/07/2026
+- **Let Available**: 29/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90129939](https://www.rightmove.co.uk/properties/90129939)
 
 ---
@@ -354,6 +472,9 @@
 - **ID**: 87793455
 - **Price**: £2500 PCM
 - **Size**: 60.55 sqm
+- **Listing Update**: 2026-06-11
+- **Listing Status**: Reduced on 11/06/2026
+- **Let Available**: 29/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/87793455](https://www.rightmove.co.uk/properties/87793455)
 
 ---
@@ -364,6 +485,9 @@
 - **ID**: 90478146
 - **Price**: £1750 PCM
 - **Size**: 59 sqm
+- **Listing Update**: 2026-07-03
+- **Listing Status**: Added on 03/07/2026
+- **Let Available**: 29/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90478146](https://www.rightmove.co.uk/properties/90478146)
 
 ---
@@ -374,6 +498,9 @@
 - **ID**: 90092094
 - **Price**: £2300 PCM
 - **Size**: 59 sqm
+- **Listing Update**: 2026-06-24
+- **Listing Status**: Added on 24/06/2026
+- **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90092094](https://www.rightmove.co.uk/properties/90092094)
 
 ---
@@ -384,6 +511,9 @@
 - **ID**: 90393204
 - **Price**: £2400 PCM
 - **Size**: 59 sqm
+- **Listing Update**: 2026-07-02
+- **Listing Status**: Added on 02/07/2026
+- **Let Available**: 22/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90393204](https://www.rightmove.co.uk/properties/90393204)
 
 ---
@@ -394,6 +524,9 @@
 - **ID**: 90131796
 - **Price**: £2450 PCM
 - **Size**: 59 sqm
+- **Listing Update**: 2026-06-25
+- **Listing Status**: Added on 25/06/2026
+- **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90131796](https://www.rightmove.co.uk/properties/90131796)
 
 ---
@@ -404,6 +537,9 @@
 - **ID**: 167737724
 - **Price**: £2150 PCM
 - **Size**: 58 sqm
+- **Listing Update**: 2026-07-02
+- **Listing Status**: Reduced on 02/07/2026
+- **Let Available**: 30/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/167737724](https://www.rightmove.co.uk/properties/167737724)
 
 ---
@@ -414,6 +550,9 @@
 - **ID**: 89325786
 - **Price**: £2250 PCM
 - **Size**: 58 sqm
+- **Listing Update**: 2026-06-19
+- **Listing Status**: Reduced on 19/06/2026
+- **Let Available**: 24/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/89325786](https://www.rightmove.co.uk/properties/89325786)
 
 ---
@@ -424,6 +563,9 @@
 - **ID**: 90474102
 - **Price**: £2383 PCM
 - **Size**: 58 sqm
+- **Listing Update**: 2026-07-05
+- **Listing Status**: Added on 05/07/2026
+- **Let Available**: 06/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90474102](https://www.rightmove.co.uk/properties/90474102)
 
 ---
@@ -434,6 +576,9 @@
 - **ID**: 89312994
 - **Price**: £2384 PCM
 - **Size**: 58 sqm
+- **Listing Update**: 2026-06-04
+- **Listing Status**: Added on 04/06/2026
+- **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/89312994](https://www.rightmove.co.uk/properties/89312994)
 
 ---
@@ -444,6 +589,9 @@
 - **ID**: 89629074
 - **Price**: £2500 PCM
 - **Size**: 58 sqm
+- **Listing Update**: 2026-06-12
+- **Listing Status**: Added on 12/06/2026
+- **Let Available**: 27/08/2026 (🦅 Early Bird: 76d adv) (🦅 Early Bird: 76d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/89629074](https://www.rightmove.co.uk/properties/89629074)
 
 ---
@@ -454,6 +602,9 @@
 - **ID**: 89710086
 - **Price**: £2200 PCM
 - **Size**: 57.97 sqm
+- **Listing Update**: 2026-06-15
+- **Listing Status**: Added on 15/06/2026
+- **Let Available**: 22/08/2026 (🦅 Early Bird: 68d adv) (🦅 Early Bird: 68d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/89710086](https://www.rightmove.co.uk/properties/89710086)
 
 ---
@@ -464,6 +615,9 @@
 - **ID**: 90500232
 - **Price**: £2500 PCM
 - **Size**: 57.41 sqm
+- **Listing Update**: 2026-07-04
+- **Listing Status**: Added on 04/07/2026
+- **Let Available**: 10/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90500232](https://www.rightmove.co.uk/properties/90500232)
 
 ---
@@ -474,6 +628,9 @@
 - **ID**: 90265077
 - **Price**: £2200 PCM
 - **Size**: 57 sqm
+- **Listing Update**: 2026-06-29
+- **Listing Status**: Added on 29/06/2026
+- **Let Available**: 10/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90265077](https://www.rightmove.co.uk/properties/90265077)
 
 ---
@@ -484,6 +641,9 @@
 - **ID**: 90343626
 - **Price**: £2150 PCM
 - **Size**: 56 sqm
+- **Listing Update**: 2026-07-01
+- **Listing Status**: Added on 01/07/2026
+- **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90343626](https://www.rightmove.co.uk/properties/90343626)
 
 ---
@@ -494,6 +654,9 @@
 - **ID**: 90471747
 - **Price**: £2400 PCM
 - **Size**: 56 sqm
+- **Listing Update**: 2026-07-03
+- **Listing Status**: Added on 03/07/2026
+- **Let Available**: 05/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90471747](https://www.rightmove.co.uk/properties/90471747)
 
 ---
@@ -504,6 +667,9 @@
 - **ID**: 89444691
 - **Price**: £2250 PCM
 - **Size**: 55.74 sqm
+- **Listing Update**: 2026-06-08
+- **Listing Status**: Added on 08/06/2026
+- **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/89444691](https://www.rightmove.co.uk/properties/89444691)
 
 ---
@@ -514,6 +680,9 @@
 - **ID**: 90101463
 - **Price**: £1925 PCM
 - **Size**: 55.4 sqm
+- **Listing Update**: 2026-06-24
+- **Listing Status**: Added on 24/06/2026
+- **Let Available**: 18/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90101463](https://www.rightmove.co.uk/properties/90101463)
 
 ---
@@ -524,6 +693,9 @@
 - **ID**: 89756472
 - **Price**: £2500 PCM
 - **Size**: 55.37 sqm
+- **Listing Update**: 2026-07-07
+- **Listing Status**: Reduced today
+- **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/89756472](https://www.rightmove.co.uk/properties/89756472)
 
 ---
@@ -534,6 +706,9 @@
 - **ID**: 88301925
 - **Price**: £2080 PCM
 - **Size**: 55 sqm
+- **Listing Update**: 2026-06-16
+- **Listing Status**: Reduced on 16/06/2026
+- **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/88301925](https://www.rightmove.co.uk/properties/88301925)
 
 ---
@@ -544,6 +719,9 @@
 - **ID**: 90501921
 - **Price**: £2167 PCM
 - **Size**: 55 sqm
+- **Listing Update**: 2026-07-04
+- **Listing Status**: Added on 04/07/2026
+- **Let Available**: 06/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90501921](https://www.rightmove.co.uk/properties/90501921)
 
 ---
@@ -554,6 +732,9 @@
 - **ID**: 90333417
 - **Price**: £2200 PCM
 - **Size**: 55 sqm
+- **Listing Update**: 2026-07-01
+- **Listing Status**: Added on 01/07/2026
+- **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90333417](https://www.rightmove.co.uk/properties/90333417)
 
 ---
@@ -564,6 +745,9 @@
 - **ID**: 90542760
 - **Price**: £2300 PCM
 - **Size**: 55 sqm
+- **Listing Update**: 2026-07-06
+- **Listing Status**: Added yesterday
+- **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90542760](https://www.rightmove.co.uk/properties/90542760)
 
 ---
@@ -574,6 +758,9 @@
 - **ID**: 89979441
 - **Price**: £2300 PCM
 - **Size**: 55 sqm
+- **Listing Update**: 2026-06-22
+- **Listing Status**: Added on 22/06/2026
+- **Let Available**: 18/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/89979441](https://www.rightmove.co.uk/properties/89979441)
 
 ---
@@ -584,6 +771,9 @@
 - **ID**: 90350628
 - **Price**: £2200 PCM
 - **Size**: 54.3 sqm
+- **Listing Update**: 2026-07-01
+- **Listing Status**: Added on 01/07/2026
+- **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90350628](https://www.rightmove.co.uk/properties/90350628)
 
 ---
@@ -594,6 +784,9 @@
 - **ID**: 88702539
 - **Price**: £2145 PCM
 - **Size**: 54 sqm
+- **Listing Update**: 2026-05-19
+- **Listing Status**: Added on 19/05/2026
+- **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/88702539](https://www.rightmove.co.uk/properties/88702539)
 
 ---
@@ -604,6 +797,9 @@
 - **ID**: 90196941
 - **Price**: £2195 PCM
 - **Size**: 54 sqm
+- **Listing Update**: 2026-06-26
+- **Listing Status**: Added on 26/06/2026
+- **Let Available**: 26/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90196941](https://www.rightmove.co.uk/properties/90196941)
 
 ---
@@ -614,6 +810,9 @@
 - **ID**: 89583771
 - **Price**: £2200 PCM
 - **Size**: 54 sqm
+- **Listing Update**: 2026-06-11
+- **Listing Status**: Added on 11/06/2026
+- **Let Available**: 03/09/2026 (🦅 Early Bird: 84d adv) (🦅 Early Bird: 84d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/89583771](https://www.rightmove.co.uk/properties/89583771)
 
 ---
@@ -624,6 +823,9 @@
 - **ID**: 90549924
 - **Price**: £2400 PCM
 - **Size**: 54 sqm
+- **Listing Update**: 2026-07-06
+- **Listing Status**: Added yesterday
+- **Let Available**: 05/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90549924](https://www.rightmove.co.uk/properties/90549924)
 
 ---
@@ -634,6 +836,9 @@
 - **ID**: 87858384
 - **Price**: £3497 PCM
 - **Size**: 54 sqm
+- **Listing Update**: 2026-04-29
+- **Listing Status**: Added on 29/04/2026
+- **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/87858384](https://www.rightmove.co.uk/properties/87858384)
 
 ---
@@ -644,6 +849,9 @@
 - **ID**: 90262479
 - **Price**: £2250 PCM
 - **Size**: 53.98 sqm
+- **Listing Update**: 2026-06-29
+- **Listing Status**: Added on 29/06/2026
+- **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90262479](https://www.rightmove.co.uk/properties/90262479)
 
 ---
@@ -654,6 +862,9 @@
 - **ID**: 141284486
 - **Price**: £2300 PCM
 - **Size**: 53.7 sqm
+- **Listing Update**: 2026-07-01
+- **Listing Status**: Reduced on 01/07/2026
+- **Let Available**: 20/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/141284486](https://www.rightmove.co.uk/properties/141284486)
 
 ---
@@ -664,6 +875,9 @@
 - **ID**: 90130602
 - **Price**: £2250 PCM
 - **Size**: 53 sqm
+- **Listing Update**: 2026-06-25
+- **Listing Status**: Added on 25/06/2026
+- **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90130602](https://www.rightmove.co.uk/properties/90130602)
 
 ---
@@ -674,6 +888,9 @@
 - **ID**: 90271782
 - **Price**: £2300 PCM
 - **Size**: 52.03 sqm
+- **Listing Update**: 2026-07-07
+- **Listing Status**: Reduced today
+- **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90271782](https://www.rightmove.co.uk/properties/90271782)
 
 ---
@@ -684,6 +901,9 @@
 - **ID**: 88995306
 - **Price**: £2200 PCM
 - **Size**: 52 sqm
+- **Listing Update**: 2026-05-27
+- **Listing Status**: Added on 27/05/2026
+- **Let Available**: 03/08/2026 (🦅 Early Bird: 68d adv) (🦅 Early Bird: 68d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/88995306](https://www.rightmove.co.uk/properties/88995306)
 
 ---
@@ -694,6 +914,9 @@
 - **ID**: 90538971
 - **Price**: £2210 PCM
 - **Size**: 52 sqm
+- **Listing Update**: 2026-07-06
+- **Listing Status**: Added yesterday
+- **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90538971](https://www.rightmove.co.uk/properties/90538971)
 
 ---
@@ -704,6 +927,9 @@
 - **ID**: 90453585
 - **Price**: £2250 PCM
 - **Size**: 52 sqm
+- **Listing Update**: 2026-07-03
+- **Listing Status**: Added on 03/07/2026
+- **Let Available**: 07/09/2026 (🦅 Early Bird: 66d adv) (🦅 Early Bird: 66d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/90453585](https://www.rightmove.co.uk/properties/90453585)
 
 ---
@@ -714,6 +940,9 @@
 - **ID**: 89955942
 - **Price**: £2250 PCM
 - **Size**: 52 sqm
+- **Listing Update**: 2026-06-29
+- **Listing Status**: Reduced on 29/06/2026
+- **Let Available**: 08/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/89955942](https://www.rightmove.co.uk/properties/89955942)
 
 ---
@@ -724,6 +953,9 @@
 - **ID**: 89891085
 - **Price**: £2297 PCM
 - **Size**: 52 sqm
+- **Listing Update**: 2026-06-18
+- **Listing Status**: Added on 18/06/2026
+- **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/89891085](https://www.rightmove.co.uk/properties/89891085)
 
 ---
@@ -734,6 +966,9 @@
 - **ID**: 167674610
 - **Price**: £2300 PCM
 - **Size**: 52 sqm
+- **Listing Update**: 2026-06-17
+- **Listing Status**: Reduced on 17/06/2026
+- **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/167674610](https://www.rightmove.co.uk/properties/167674610)
 
 ---
@@ -744,6 +979,9 @@
 - **ID**: 87973476
 - **Price**: £2350 PCM
 - **Size**: 52 sqm
+- **Listing Update**: 2026-06-02
+- **Listing Status**: Reduced on 02/06/2026
+- **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/87973476](https://www.rightmove.co.uk/properties/87973476)
 
 ---
@@ -754,6 +992,9 @@
 - **ID**: 90500016
 - **Price**: £2492 PCM
 - **Size**: 52 sqm
+- **Listing Update**: 2026-07-04
+- **Listing Status**: Added on 04/07/2026
+- **Let Available**: 03/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90500016](https://www.rightmove.co.uk/properties/90500016)
 
 ---
@@ -764,6 +1005,9 @@
 - **ID**: 90193935
 - **Price**: £2500 PCM
 - **Size**: 52 sqm
+- **Listing Update**: 2026-06-26
+- **Listing Status**: Added on 26/06/2026
+- **Let Available**: 28/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90193935](https://www.rightmove.co.uk/properties/90193935)
 
 ---
@@ -774,6 +1018,9 @@
 - **ID**: 90581886
 - **Price**: £2250 PCM
 - **Size**: 51.84 sqm
+- **Listing Update**: 2026-07-07
+- **Listing Status**: Added today
+- **Let Available**: 03/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90581886](https://www.rightmove.co.uk/properties/90581886)
 
 ---
@@ -784,6 +1031,9 @@
 - **ID**: 90330885
 - **Price**: £2200 PCM
 - **Size**: 51.75 sqm
+- **Listing Update**: 2026-06-30
+- **Listing Status**: Added on 30/06/2026
+- **Let Available**: 30/09/2026 (🦅 Early Bird: 92d adv) (🦅 Early Bird: 92d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/90330885](https://www.rightmove.co.uk/properties/90330885)
 
 ---
@@ -794,6 +1044,9 @@
 - **ID**: 90549273
 - **Price**: £1755 PCM
 - **Size**: 51.25 sqm
+- **Listing Update**: 2026-07-06
+- **Listing Status**: Added yesterday
+- **Let Available**: 07/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90549273](https://www.rightmove.co.uk/properties/90549273)
 
 ---
@@ -804,6 +1057,9 @@
 - **ID**: 90347763
 - **Price**: £2500 PCM
 - **Size**: 51.18 sqm
+- **Listing Update**: 2026-07-01
+- **Listing Status**: Added on 01/07/2026
+- **Let Available**: 03/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90347763](https://www.rightmove.co.uk/properties/90347763)
 
 ---
@@ -814,6 +1070,9 @@
 - **ID**: 90366564
 - **Price**: £2200 PCM
 - **Size**: 51 sqm
+- **Listing Update**: 2026-07-01
+- **Listing Status**: Added on 01/07/2026
+- **Let Available**: 25/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90366564](https://www.rightmove.co.uk/properties/90366564)
 
 ---
@@ -824,6 +1083,9 @@
 - **ID**: 90566934
 - **Price**: £2250 PCM
 - **Size**: 51 sqm
+- **Listing Update**: 2026-07-07
+- **Listing Status**: Added today
+- **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90566934](https://www.rightmove.co.uk/properties/90566934)
 
 ---
@@ -834,6 +1096,9 @@
 - **ID**: 90047667
 - **Price**: £2250 PCM
 - **Size**: 51 sqm
+- **Listing Update**: 2026-06-23
+- **Listing Status**: Added on 23/06/2026
+- **Let Available**: 11/09/2026 (🦅 Early Bird: 80d adv) (🦅 Early Bird: 80d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/90047667](https://www.rightmove.co.uk/properties/90047667)
 
 ---
@@ -844,6 +1109,9 @@
 - **ID**: 90094407
 - **Price**: £2300 PCM
 - **Size**: 51 sqm
+- **Listing Update**: 2026-06-24
+- **Listing Status**: Added on 24/06/2026
+- **Let Available**: 20/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90094407](https://www.rightmove.co.uk/properties/90094407)
 
 ---
@@ -854,6 +1122,9 @@
 - **ID**: 90536670
 - **Price**: £2350 PCM
 - **Size**: 51 sqm
+- **Listing Update**: 2026-07-06
+- **Listing Status**: Added yesterday
+- **Let Available**: 15/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90536670](https://www.rightmove.co.uk/properties/90536670)
 
 ---
@@ -864,6 +1135,9 @@
 - **ID**: 90333576
 - **Price**: £2400 PCM
 - **Size**: 51 sqm
+- **Listing Update**: 2026-07-01
+- **Listing Status**: Added on 01/07/2026
+- **Let Available**: 30/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90333576](https://www.rightmove.co.uk/properties/90333576)
 
 ---
@@ -874,6 +1148,9 @@
 - **ID**: 89915127
 - **Price**: £2400 PCM
 - **Size**: 51 sqm
+- **Listing Update**: 2026-06-19
+- **Listing Status**: Added on 19/06/2026
+- **Let Available**: 10/09/2026 (🦅 Early Bird: 83d adv) (🦅 Early Bird: 83d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/89915127](https://www.rightmove.co.uk/properties/89915127)
 
 ---
@@ -884,6 +1161,9 @@
 - **ID**: 88854273
 - **Price**: £2400 PCM
 - **Size**: 51 sqm
+- **Listing Update**: 2026-05-22
+- **Listing Status**: Added on 22/05/2026
+- **Let Available**: 24/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/88854273](https://www.rightmove.co.uk/properties/88854273)
 
 ---
@@ -894,6 +1174,9 @@
 - **ID**: 88627956
 - **Price**: £2450 PCM
 - **Size**: 51 sqm
+- **Listing Update**: 2026-05-18
+- **Listing Status**: Added on 18/05/2026
+- **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/88627956](https://www.rightmove.co.uk/properties/88627956)
 
 ---
@@ -904,6 +1187,9 @@
 - **ID**: 89280255
 - **Price**: £2492 PCM
 - **Size**: 51 sqm
+- **Listing Update**: 2026-06-04
+- **Listing Status**: Added on 04/06/2026
+- **Let Available**: 19/08/2026 (🦅 Early Bird: 76d adv) (🦅 Early Bird: 76d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/89280255](https://www.rightmove.co.uk/properties/89280255)
 
 ---
@@ -914,6 +1200,9 @@
 - **ID**: 90531468
 - **Price**: £2500 PCM
 - **Size**: 51 sqm
+- **Listing Update**: 2026-07-06
+- **Listing Status**: Added yesterday
+- **Let Available**: 20/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90531468](https://www.rightmove.co.uk/properties/90531468)
 
 ---
@@ -924,6 +1213,9 @@
 - **ID**: 90460716
 - **Price**: £2500 PCM
 - **Size**: 51 sqm
+- **Listing Update**: 2026-07-03
+- **Listing Status**: Added on 03/07/2026
+- **Let Available**: 12/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90460716](https://www.rightmove.co.uk/properties/90460716)
 
 ---
@@ -934,6 +1226,9 @@
 - **ID**: 90532275
 - **Price**: £2250 PCM
 - **Size**: 50.2 sqm
+- **Listing Update**: 2026-07-06
+- **Listing Status**: Added yesterday
+- **Let Available**: 15/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90532275](https://www.rightmove.co.uk/properties/90532275)
 
 ---
@@ -944,6 +1239,9 @@
 - **ID**: 90528018
 - **Price**: £2500 PCM
 - **Size**: 50.1 sqm
+- **Listing Update**: 2026-07-06
+- **Listing Status**: Added yesterday
+- **Let Available**: 02/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90528018](https://www.rightmove.co.uk/properties/90528018)
 
 ---
@@ -954,6 +1252,9 @@
 - **ID**: 90575472
 - **Price**: £1900 PCM
 - **Size**: 50 sqm
+- **Listing Update**: Unknown
+- **Listing Status**: Unknown
+- **Let Available**: Unknown
 - **Link**: [https://www.rightmove.co.uk/properties/90575472](https://www.rightmove.co.uk/properties/90575472)
 
 ---
@@ -964,6 +1265,9 @@
 - **ID**: 90344049
 - **Price**: £2167 PCM
 - **Size**: 50 sqm
+- **Listing Update**: 2026-07-01
+- **Listing Status**: Added on 01/07/2026
+- **Let Available**: 01/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90344049](https://www.rightmove.co.uk/properties/90344049)
 
 ---
@@ -974,6 +1278,9 @@
 - **ID**: 90107523
 - **Price**: £2210 PCM
 - **Size**: 50 sqm
+- **Listing Update**: 2026-06-24
+- **Listing Status**: Added on 24/06/2026
+- **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90107523](https://www.rightmove.co.uk/properties/90107523)
 
 ---
@@ -984,7 +1291,23 @@
 - **ID**: 90500079
 - **Price**: £2492 PCM
 - **Size**: 50 sqm
+- **Listing Update**: 2026-07-04
+- **Listing Status**: Added on 04/07/2026
+- **Let Available**: 04/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90500079](https://www.rightmove.co.uk/properties/90500079)
+
+---
+
+### [2026-07-07T16:53:19.142Z] MATCH FOUND!
+- **Marketed by**: Leaders Lettings, Kingston Upon Thames
+- **Location**: Ealing Broadway
+- **ID**: 90587013
+- **Price**: £1895 PCM
+- **Size**: 49.98 sqm
+- **Listing Update**: 2026-07-07
+- **Listing Status**: Added today
+- **Let Available**: 17/07/2026
+- **Link**: [https://www.rightmove.co.uk/properties/90587013](https://www.rightmove.co.uk/properties/90587013)
 
 ---
 
@@ -994,6 +1317,9 @@
 - **ID**: 88839927
 - **Price**: £2448 PCM
 - **Size**: 49.98 sqm
+- **Listing Update**: 2026-06-18
+- **Listing Status**: Added on 18/06/2026
+- **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/88839927](https://www.rightmove.co.uk/properties/88839927)
 
 ---
@@ -1004,6 +1330,9 @@
 - **ID**: 88898406
 - **Price**: £2450 PCM
 - **Size**: 49.8 sqm
+- **Listing Update**: 2026-06-15
+- **Listing Status**: Reduced on 15/06/2026
+- **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/88898406](https://www.rightmove.co.uk/properties/88898406)
 
 ---
@@ -1014,6 +1343,9 @@
 - **ID**: 171508100
 - **Price**: £2275 PCM
 - **Size**: 49 sqm
+- **Listing Update**: 2026-06-13
+- **Listing Status**: Reduced on 13/06/2026
+- **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/171508100](https://www.rightmove.co.uk/properties/171508100)
 
 ---
@@ -1024,6 +1356,9 @@
 - **ID**: 89875116
 - **Price**: £2400 PCM
 - **Size**: 49 sqm
+- **Listing Update**: 2026-07-06
+- **Listing Status**: Reduced yesterday
+- **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/89875116](https://www.rightmove.co.uk/properties/89875116)
 
 ---
@@ -1034,6 +1369,9 @@
 - **ID**: 89697432
 - **Price**: £2448 PCM
 - **Size**: 49 sqm
+- **Listing Update**: 2026-07-03
+- **Listing Status**: Reduced on 03/07/2026
+- **Let Available**: 05/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/89697432](https://www.rightmove.co.uk/properties/89697432)
 
 ---
@@ -1044,6 +1382,9 @@
 - **ID**: 88223106
 - **Price**: £2450 PCM
 - **Size**: 49 sqm
+- **Listing Update**: 2026-05-19
+- **Listing Status**: Reduced on 19/05/2026
+- **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/88223106](https://www.rightmove.co.uk/properties/88223106)
 
 ---
@@ -1054,6 +1395,9 @@
 - **ID**: 90539745
 - **Price**: £2500 PCM
 - **Size**: 49 sqm
+- **Listing Update**: 2026-07-06
+- **Listing Status**: Added yesterday
+- **Let Available**: 07/10/2026 (🦅 Early Bird: 93d adv) (🦅 Early Bird: 93d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/90539745](https://www.rightmove.co.uk/properties/90539745)
 
 ---
@@ -1064,6 +1408,9 @@
 - **ID**: 90191994
 - **Price**: £2500 PCM
 - **Size**: 49 sqm
+- **Listing Update**: 2026-06-26
+- **Listing Status**: Added on 26/06/2026
+- **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90191994](https://www.rightmove.co.uk/properties/90191994)
 
 ---
@@ -1074,6 +1421,9 @@
 - **ID**: 90474750
 - **Price**: £2200 PCM
 - **Size**: 48.4 sqm
+- **Listing Update**: 2026-07-03
+- **Listing Status**: Added on 03/07/2026
+- **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90474750](https://www.rightmove.co.uk/properties/90474750)
 
 ---
@@ -1084,6 +1434,9 @@
 - **ID**: 89874699
 - **Price**: £2400 PCM
 - **Size**: 48.4 sqm
+- **Listing Update**: 2026-06-18
+- **Listing Status**: Added on 18/06/2026
+- **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/89874699](https://www.rightmove.co.uk/properties/89874699)
 
 ---
@@ -1094,6 +1447,9 @@
 - **ID**: 89570763
 - **Price**: £2200 PCM
 - **Size**: 48 sqm
+- **Listing Update**: 2026-06-10
+- **Listing Status**: Added on 10/06/2026
+- **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/89570763](https://www.rightmove.co.uk/properties/89570763)
 
 ---
@@ -1104,6 +1460,9 @@
 - **ID**: 89161776
 - **Price**: £2297 PCM
 - **Size**: 48 sqm
+- **Listing Update**: 2026-06-30
+- **Listing Status**: Reduced on 30/06/2026
+- **Let Available**: 18/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/89161776](https://www.rightmove.co.uk/properties/89161776)
 
 ---
@@ -1114,6 +1473,9 @@
 - **ID**: 89539155
 - **Price**: £2300 PCM
 - **Size**: 48 sqm
+- **Listing Update**: 2026-07-03
+- **Listing Status**: Reduced on 03/07/2026
+- **Let Available**: 22/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/89539155](https://www.rightmove.co.uk/properties/89539155)
 
 ---
@@ -1124,6 +1486,9 @@
 - **ID**: 90305391
 - **Price**: £2379 PCM
 - **Size**: 47.9 sqm
+- **Listing Update**: 2026-06-30
+- **Listing Status**: Added on 30/06/2026
+- **Let Available**: 27/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90305391](https://www.rightmove.co.uk/properties/90305391)
 
 ---
@@ -1134,6 +1499,9 @@
 - **ID**: 90584553
 - **Price**: £2100 PCM
 - **Size**: 47.45 sqm
+- **Listing Update**: 2026-07-07
+- **Listing Status**: Added today
+- **Let Available**: 24/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90584553](https://www.rightmove.co.uk/properties/90584553)
 
 ---
@@ -1144,6 +1512,9 @@
 - **ID**: 90269487
 - **Price**: £2000 PCM
 - **Size**: 47 sqm
+- **Listing Update**: 2026-06-29
+- **Listing Status**: Added on 29/06/2026
+- **Let Available**: 28/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90269487](https://www.rightmove.co.uk/properties/90269487)
 
 ---
@@ -1154,6 +1525,9 @@
 - **ID**: 90553167
 - **Price**: £2492 PCM
 - **Size**: 47 sqm
+- **Listing Update**: 2026-07-06
+- **Listing Status**: Added yesterday
+- **Let Available**: 12/09/2026 (🦅 Early Bird: 68d adv) (🦅 Early Bird: 68d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/90553167](https://www.rightmove.co.uk/properties/90553167)
 
 ---
@@ -1164,6 +1538,9 @@
 - **ID**: 89537013
 - **Price**: £2500 PCM
 - **Size**: 47 sqm
+- **Listing Update**: 2026-06-10
+- **Listing Status**: Added on 10/06/2026
+- **Let Available**: 15/08/2026 (🦅 Early Bird: 66d adv) (🦅 Early Bird: 66d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/89537013](https://www.rightmove.co.uk/properties/89537013)
 
 ---
@@ -1174,6 +1551,9 @@
 - **ID**: 88691211
 - **Price**: £2500 PCM
 - **Size**: 47 sqm
+- **Listing Update**: 2026-06-15
+- **Listing Status**: Reduced on 15/06/2026
+- **Let Available**: 22/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/88691211](https://www.rightmove.co.uk/properties/88691211)
 
 ---
@@ -1184,6 +1564,9 @@
 - **ID**: 89081745
 - **Price**: £2100 PCM
 - **Size**: 46.82 sqm
+- **Listing Update**: 2026-07-01
+- **Listing Status**: Added on 01/07/2026
+- **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/89081745](https://www.rightmove.co.uk/properties/89081745)
 
 ---
@@ -1194,6 +1577,9 @@
 - **ID**: 90076083
 - **Price**: £2253 PCM
 - **Size**: 46.45 sqm
+- **Listing Update**: 2026-06-24
+- **Listing Status**: Added on 24/06/2026
+- **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90076083](https://www.rightmove.co.uk/properties/90076083)
 
 ---
@@ -1204,6 +1590,9 @@
 - **ID**: 90499383
 - **Price**: £2150 PCM
 - **Size**: 46.36 sqm
+- **Listing Update**: 2026-07-04
+- **Listing Status**: Added on 04/07/2026
+- **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90499383](https://www.rightmove.co.uk/properties/90499383)
 
 ---
@@ -1214,6 +1603,9 @@
 - **ID**: 90556479
 - **Price**: £2100 PCM
 - **Size**: 46 sqm
+- **Listing Update**: 2026-07-06
+- **Listing Status**: Added yesterday
+- **Let Available**: 04/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90556479](https://www.rightmove.co.uk/properties/90556479)
 
 ---
@@ -1224,6 +1616,9 @@
 - **ID**: 90582321
 - **Price**: £2100 PCM
 - **Size**: 46 sqm
+- **Listing Update**: 2026-07-07
+- **Listing Status**: Added today
+- **Let Available**: 02/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90582321](https://www.rightmove.co.uk/properties/90582321)
 
 ---
@@ -1234,6 +1629,9 @@
 - **ID**: 90487326
 - **Price**: £2150 PCM
 - **Size**: 46 sqm
+- **Listing Update**: 2026-07-03
+- **Listing Status**: Added on 03/07/2026
+- **Let Available**: 04/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90487326](https://www.rightmove.co.uk/properties/90487326)
 
 ---
@@ -1244,6 +1642,9 @@
 - **ID**: 90044970
 - **Price**: £2200 PCM
 - **Size**: 46 sqm
+- **Listing Update**: 2026-07-07
+- **Listing Status**: Reduced today
+- **Let Available**: 15/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90044970](https://www.rightmove.co.uk/properties/90044970)
 
 ---
@@ -1254,6 +1655,9 @@
 - **ID**: 89632845
 - **Price**: £2396 PCM
 - **Size**: 46 sqm
+- **Listing Update**: 2026-06-12
+- **Listing Status**: Added on 12/06/2026
+- **Let Available**: 22/08/2026 (🦅 Early Bird: 71d adv) (🦅 Early Bird: 71d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/89632845](https://www.rightmove.co.uk/properties/89632845)
 
 ---
@@ -1264,6 +1668,9 @@
 - **ID**: 89470749
 - **Price**: £2450 PCM
 - **Size**: 46 sqm
+- **Listing Update**: 2026-06-30
+- **Listing Status**: Reduced on 30/06/2026
+- **Let Available**: 14/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/89470749](https://www.rightmove.co.uk/properties/89470749)
 
 ---
@@ -1274,6 +1681,9 @@
 - **ID**: 88124379
 - **Price**: £2500 PCM
 - **Size**: 46 sqm
+- **Listing Update**: 2026-06-15
+- **Listing Status**: Reduced on 15/06/2026
+- **Let Available**: 25/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/88124379](https://www.rightmove.co.uk/properties/88124379)
 
 ---
@@ -1284,6 +1694,9 @@
 - **ID**: 89126466
 - **Price**: £2250 PCM
 - **Size**: 45.4 sqm
+- **Listing Update**: 2026-06-22
+- **Listing Status**: Reduced on 22/06/2026
+- **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/89126466](https://www.rightmove.co.uk/properties/89126466)
 
 ---
@@ -1294,6 +1707,9 @@
 - **ID**: 88560645
 - **Price**: £2448 PCM
 - **Size**: 45 sqm
+- **Listing Update**: 2026-06-30
+- **Listing Status**: Reduced on 30/06/2026
+- **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/88560645](https://www.rightmove.co.uk/properties/88560645)
 
 ---
@@ -1304,6 +1720,9 @@
 - **ID**: 89767467
 - **Price**: £2479 PCM
 - **Size**: 45 sqm
+- **Listing Update**: 2026-07-07
+- **Listing Status**: Reduced today
+- **Let Available**: 10/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/89767467](https://www.rightmove.co.uk/properties/89767467)
 
 ---
@@ -1314,6 +1733,9 @@
 - **ID**: 90404763
 - **Price**: £2500 PCM
 - **Size**: 45 sqm
+- **Listing Update**: 2026-07-02
+- **Listing Status**: Added on 02/07/2026
+- **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90404763](https://www.rightmove.co.uk/properties/90404763)
 
 ---
@@ -1324,6 +1746,9 @@
 - **ID**: 90522885
 - **Price**: £2199 PCM
 - **Size**: 44.97 sqm
+- **Listing Update**: 2026-07-06
+- **Listing Status**: Added yesterday
+- **Let Available**: 02/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90522885](https://www.rightmove.co.uk/properties/90522885)
 
 ---
@@ -1334,6 +1759,9 @@
 - **ID**: 174538664
 - **Price**: £2500 PCM
 - **Size**: 44.7 sqm
+- **Listing Update**: 2026-05-02
+- **Listing Status**: Reduced on 02/05/2026
+- **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/174538664](https://www.rightmove.co.uk/properties/174538664)
 
 ---
@@ -1344,6 +1772,9 @@
 - **ID**: 90382449
 - **Price**: £1907 PCM
 - **Size**: 44.5 sqm
+- **Listing Update**: 2026-07-01
+- **Listing Status**: Added on 01/07/2026
+- **Let Available**: 01/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90382449](https://www.rightmove.co.uk/properties/90382449)
 
 ---
@@ -1354,6 +1785,9 @@
 - **ID**: 89657289
 - **Price**: £2496 PCM
 - **Size**: 44.39 sqm
+- **Listing Update**: 2026-06-26
+- **Listing Status**: Reduced on 26/06/2026
+- **Let Available**: 29/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/89657289](https://www.rightmove.co.uk/properties/89657289)
 
 ---
@@ -1364,6 +1798,9 @@
 - **ID**: 89054328
 - **Price**: £2149 PCM
 - **Size**: 44 sqm
+- **Listing Update**: 2026-05-29
+- **Listing Status**: Added on 29/05/2026
+- **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/89054328](https://www.rightmove.co.uk/properties/89054328)
 
 ---
@@ -1374,6 +1811,9 @@
 - **ID**: 158921117
 - **Price**: £2300 PCM
 - **Size**: 44 sqm
+- **Listing Update**: 2026-06-25
+- **Listing Status**: Reduced on 25/06/2026
+- **Let Available**: 31/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/158921117](https://www.rightmove.co.uk/properties/158921117)
 
 ---
@@ -1384,6 +1824,9 @@
 - **ID**: 90206850
 - **Price**: £2470 PCM
 - **Size**: 44 sqm
+- **Listing Update**: 2026-06-26
+- **Listing Status**: Added on 26/06/2026
+- **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90206850](https://www.rightmove.co.uk/properties/90206850)
 
 ---
@@ -1394,6 +1837,9 @@
 - **ID**: 90321744
 - **Price**: £2500 PCM
 - **Size**: 44 sqm
+- **Listing Update**: 2026-06-30
+- **Listing Status**: Added on 30/06/2026
+- **Let Available**: 27/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90321744](https://www.rightmove.co.uk/properties/90321744)
 
 ---
@@ -1404,6 +1850,9 @@
 - **ID**: 90056139
 - **Price**: £2145 PCM
 - **Size**: 43.94 sqm
+- **Listing Update**: 2026-07-02
+- **Listing Status**: Reduced on 02/07/2026
+- **Let Available**: 01/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90056139](https://www.rightmove.co.uk/properties/90056139)
 
 ---
@@ -1414,6 +1863,9 @@
 - **ID**: 89936142
 - **Price**: £2400 PCM
 - **Size**: 43.77 sqm
+- **Listing Update**: 2026-06-19
+- **Listing Status**: Added on 19/06/2026
+- **Let Available**: 17/09/2026 (🦅 Early Bird: 90d adv) (🦅 Early Bird: 90d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/89936142](https://www.rightmove.co.uk/properties/89936142)
 
 ---
@@ -1424,6 +1876,9 @@
 - **ID**: 90355344
 - **Price**: £2450 PCM
 - **Size**: 43.45 sqm
+- **Listing Update**: 2026-07-01
+- **Listing Status**: Added on 01/07/2026
+- **Let Available**: 15/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90355344](https://www.rightmove.co.uk/properties/90355344)
 
 ---
@@ -1434,6 +1889,9 @@
 - **ID**: 90131874
 - **Price**: £2390 PCM
 - **Size**: 43 sqm
+- **Listing Update**: 2026-06-25
+- **Listing Status**: Added on 25/06/2026
+- **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90131874](https://www.rightmove.co.uk/properties/90131874)
 
 ---
@@ -1444,6 +1902,9 @@
 - **ID**: 90211923
 - **Price**: £2390 PCM
 - **Size**: 43 sqm
+- **Listing Update**: 2026-06-26
+- **Listing Status**: Added on 26/06/2026
+- **Let Available**: 14/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90211923](https://www.rightmove.co.uk/properties/90211923)
 
 ---
@@ -1454,6 +1915,9 @@
 - **ID**: 90534960
 - **Price**: £2500 PCM
 - **Size**: 43 sqm
+- **Listing Update**: 2026-07-06
+- **Listing Status**: Added yesterday
+- **Let Available**: 01/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90534960](https://www.rightmove.co.uk/properties/90534960)
 
 ---
@@ -1464,6 +1928,9 @@
 - **ID**: 169515746
 - **Price**: £2500 PCM
 - **Size**: 43 sqm
+- **Listing Update**: 2026-06-22
+- **Listing Status**: Added on 22/06/2026
+- **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/169515746](https://www.rightmove.co.uk/properties/169515746)
 
 ---
@@ -1474,6 +1941,9 @@
 - **ID**: 90581121
 - **Price**: £2000 PCM
 - **Size**: 42.5 sqm
+- **Listing Update**: 2026-07-07
+- **Listing Status**: Added today
+- **Let Available**: 04/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90581121](https://www.rightmove.co.uk/properties/90581121)
 
 ---
@@ -1484,6 +1954,9 @@
 - **ID**: 157618283
 - **Price**: £2448 PCM
 - **Size**: 42.09 sqm
+- **Listing Update**: 2026-07-01
+- **Listing Status**: Added on 01/07/2026
+- **Let Available**: 15/09/2026 (🦅 Early Bird: 76d adv) (🦅 Early Bird: 76d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/157618283](https://www.rightmove.co.uk/properties/157618283)
 
 ---
@@ -1494,6 +1967,9 @@
 - **ID**: 90278811
 - **Price**: £2190 PCM
 - **Size**: 42 sqm
+- **Listing Update**: 2026-06-29
+- **Listing Status**: Added on 29/06/2026
+- **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90278811](https://www.rightmove.co.uk/properties/90278811)
 
 ---
@@ -1504,7 +1980,23 @@
 - **ID**: 90102600
 - **Price**: £2255 PCM
 - **Size**: 42 sqm
+- **Listing Update**: 2026-06-24
+- **Listing Status**: Added on 24/06/2026
+- **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90102600](https://www.rightmove.co.uk/properties/90102600)
+
+---
+
+### [2026-07-07T16:53:19.142Z] MATCH FOUND!
+- **Marketed by**: Marc and Partners, Mayfair
+- **Location**: Canary Wharf
+- **ID**: 90587952
+- **Price**: £2300 PCM
+- **Size**: 42 sqm
+- **Listing Update**: 2026-07-07
+- **Listing Status**: Added today
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/90587952](https://www.rightmove.co.uk/properties/90587952)
 
 ---
 
@@ -1514,6 +2006,9 @@
 - **ID**: 90054642
 - **Price**: £2300 PCM
 - **Size**: 42 sqm
+- **Listing Update**: Unknown
+- **Listing Status**: Unknown
+- **Let Available**: Unknown
 - **Link**: [https://www.rightmove.co.uk/properties/90054642](https://www.rightmove.co.uk/properties/90054642)
 
 ---
@@ -1524,6 +2019,9 @@
 - **ID**: 89884620
 - **Price**: £2300 PCM
 - **Size**: 42 sqm
+- **Listing Update**: 2026-06-23
+- **Listing Status**: Reduced on 23/06/2026
+- **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/89884620](https://www.rightmove.co.uk/properties/89884620)
 
 ---
@@ -1534,6 +2032,9 @@
 - **ID**: 89800551
 - **Price**: £2500 PCM
 - **Size**: 42 sqm
+- **Listing Update**: 2026-06-17
+- **Listing Status**: Added on 17/06/2026
+- **Let Available**: 18/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/89800551](https://www.rightmove.co.uk/properties/89800551)
 
 ---
@@ -1544,6 +2045,9 @@
 - **ID**: 174837137
 - **Price**: £2500 PCM
 - **Size**: 42 sqm
+- **Listing Update**: 2026-05-29
+- **Listing Status**: Reduced on 29/05/2026
+- **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/174837137](https://www.rightmove.co.uk/properties/174837137)
 
 ---
@@ -1554,7 +2058,23 @@
 - **ID**: 166430741
 - **Price**: £2349 PCM
 - **Size**: 41.99 sqm
+- **Listing Update**: 2026-06-26
+- **Listing Status**: Added on 26/06/2026
+- **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/166430741](https://www.rightmove.co.uk/properties/166430741)
+
+---
+
+### [2026-07-07T16:53:19.142Z] MATCH FOUND!
+- **Marketed by**: Hamptons, Paddington
+- **Location**: Paddington
+- **ID**: 88837626
+- **Price**: £2500 PCM
+- **Size**: 41.81 sqm
+- **Listing Update**: 2026-06-18
+- **Listing Status**: Reduced on 18/06/2026
+- **Let Available**: 17/07/2026
+- **Link**: [https://www.rightmove.co.uk/properties/88837626](https://www.rightmove.co.uk/properties/88837626)
 
 ---
 
@@ -1564,6 +2084,9 @@
 - **ID**: 90546252
 - **Price**: £1950 PCM
 - **Size**: 41 sqm
+- **Listing Update**: 2026-07-06
+- **Listing Status**: Added yesterday
+- **Let Available**: 19/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90546252](https://www.rightmove.co.uk/properties/90546252)
 
 ---
@@ -1574,6 +2097,9 @@
 - **ID**: 89365353
 - **Price**: £1998 PCM
 - **Size**: 41 sqm
+- **Listing Update**: 2026-06-15
+- **Listing Status**: Reduced on 15/06/2026
+- **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/89365353](https://www.rightmove.co.uk/properties/89365353)
 
 ---
@@ -1584,6 +2110,9 @@
 - **ID**: 90473625
 - **Price**: £2250 PCM
 - **Size**: 41 sqm
+- **Listing Update**: 2026-07-03
+- **Listing Status**: Added on 03/07/2026
+- **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90473625](https://www.rightmove.co.uk/properties/90473625)
 
 ---
@@ -1594,6 +2123,9 @@
 - **ID**: 88695372
 - **Price**: £2384 PCM
 - **Size**: 41 sqm
+- **Listing Update**: 2026-06-17
+- **Listing Status**: Reduced on 17/06/2026
+- **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/88695372](https://www.rightmove.co.uk/properties/88695372)
 
 ---
@@ -1604,6 +2136,9 @@
 - **ID**: 89726034
 - **Price**: £2500 PCM
 - **Size**: 41 sqm
+- **Listing Update**: 2026-06-15
+- **Listing Status**: Added on 15/06/2026
+- **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/89726034](https://www.rightmove.co.uk/properties/89726034)
 
 ---
@@ -1614,6 +2149,9 @@
 - **ID**: 89432874
 - **Price**: £2500 PCM
 - **Size**: 41 sqm
+- **Listing Update**: 2026-06-18
+- **Listing Status**: Reduced on 18/06/2026
+- **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/89432874](https://www.rightmove.co.uk/properties/89432874)
 
 ---
@@ -1624,6 +2162,9 @@
 - **ID**: 87852465
 - **Price**: £2167 PCM
 - **Size**: 40.69 sqm
+- **Listing Update**: 2026-06-30
+- **Listing Status**: Reduced on 30/06/2026
+- **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/87852465](https://www.rightmove.co.uk/properties/87852465)
 
 ---
@@ -1634,6 +2175,9 @@
 - **ID**: 88135632
 - **Price**: £1842 PCM
 - **Size**: 40 sqm
+- **Listing Update**: 2026-06-29
+- **Listing Status**: Reduced on 29/06/2026
+- **Let Available**: 10/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/88135632](https://www.rightmove.co.uk/properties/88135632)
 
 ---
@@ -1644,6 +2188,9 @@
 - **ID**: 90210780
 - **Price**: £2000 PCM
 - **Size**: 40 sqm
+- **Listing Update**: 2026-06-26
+- **Listing Status**: Added on 26/06/2026
+- **Let Available**: 28/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90210780](https://www.rightmove.co.uk/properties/90210780)
 
 ---
@@ -1654,6 +2201,9 @@
 - **ID**: 90365553
 - **Price**: £2100 PCM
 - **Size**: 40 sqm
+- **Listing Update**: 2026-07-01
+- **Listing Status**: Added on 01/07/2026
+- **Let Available**: 26/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90365553](https://www.rightmove.co.uk/properties/90365553)
 
 ---
@@ -1664,6 +2214,9 @@
 - **ID**: 89866371
 - **Price**: £2250 PCM
 - **Size**: 40 sqm
+- **Listing Update**: 2026-06-30
+- **Listing Status**: Reduced on 30/06/2026
+- **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/89866371](https://www.rightmove.co.uk/properties/89866371)
 
 ---
@@ -1674,6 +2227,9 @@
 - **ID**: 90474822
 - **Price**: £2275 PCM
 - **Size**: 40 sqm
+- **Listing Update**: 2026-07-03
+- **Listing Status**: Added on 03/07/2026
+- **Let Available**: 27/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90474822](https://www.rightmove.co.uk/properties/90474822)
 
 ---
@@ -1684,6 +2240,9 @@
 - **ID**: 19588097
 - **Price**: £2275 PCM
 - **Size**: 40 sqm
+- **Listing Update**: 2026-06-16
+- **Listing Status**: Reduced on 16/06/2026
+- **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/19588097](https://www.rightmove.co.uk/properties/19588097)
 
 ---
@@ -1694,6 +2253,9 @@
 - **ID**: 90562557
 - **Price**: £2297 PCM
 - **Size**: 40 sqm
+- **Listing Update**: 2026-07-07
+- **Listing Status**: Added today
+- **Let Available**: 05/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90562557](https://www.rightmove.co.uk/properties/90562557)
 
 ---
@@ -1704,6 +2266,9 @@
 - **ID**: 90472821
 - **Price**: £2297 PCM
 - **Size**: 40 sqm
+- **Listing Update**: 2026-07-03
+- **Listing Status**: Added on 03/07/2026
+- **Let Available**: 29/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90472821](https://www.rightmove.co.uk/properties/90472821)
 
 ---
@@ -1714,6 +2279,9 @@
 - **ID**: 90407115
 - **Price**: £2335 PCM
 - **Size**: 40 sqm
+- **Listing Update**: 2026-07-02
+- **Listing Status**: Added on 02/07/2026
+- **Let Available**: 24/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90407115](https://www.rightmove.co.uk/properties/90407115)
 
 ---
@@ -1724,6 +2292,9 @@
 - **ID**: 90203535
 - **Price**: £2400 PCM
 - **Size**: 40 sqm
+- **Listing Update**: 2026-06-30
+- **Listing Status**: Added on 30/06/2026
+- **Let Available**: 03/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90203535](https://www.rightmove.co.uk/properties/90203535)
 
 ---
@@ -1734,6 +2305,9 @@
 - **ID**: 88631589
 - **Price**: £2496 PCM
 - **Size**: 40 sqm
+- **Listing Update**: 2026-07-07
+- **Listing Status**: Reduced today
+- **Let Available**: 23/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/88631589](https://www.rightmove.co.uk/properties/88631589)
 
 ---
@@ -1744,6 +2318,9 @@
 - **ID**: 90558996
 - **Price**: £2500 PCM
 - **Size**: 40 sqm
+- **Listing Update**: 2026-07-06
+- **Listing Status**: Added yesterday
+- **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90558996](https://www.rightmove.co.uk/properties/90558996)
 
 ---
@@ -1754,6 +2331,9 @@
 - **ID**: 173791553
 - **Price**: £4117 PCM
 - **Size**: 40 sqm
+- **Listing Update**: 2026-06-23
+- **Listing Status**: Reduced on 23/06/2026
+- **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/173791553](https://www.rightmove.co.uk/properties/173791553)
 
 ---
@@ -1764,6 +2344,9 @@
 - **ID**: 157692917
 - **Price**: £3000 PCM
 - **Size**: 38 sqm
+- **Listing Update**: 2026-05-01
+- **Listing Status**: Reduced on 01/05/2026
+- **Let Available**: 11/07/2026 (🦅 Early Bird: 71d adv) (🦅 Early Bird: 71d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/157692917](https://www.rightmove.co.uk/properties/157692917)
 
 ---
@@ -1774,6 +2357,9 @@
 - **ID**: 88013730
 - **Price**: £1800 PCM
 - **Size**: 24 sqm
+- **Listing Update**: 2026-05-02
+- **Listing Status**: Added on 02/05/2026
+- **Let Available**: Now (🦅 Early Bird: 67d adv) (🦅 Early Bird: 67d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/88013730](https://www.rightmove.co.uk/properties/88013730)
 
 ---
@@ -1784,6 +2370,9 @@
 - **ID**: 88017369
 - **Price**: £1950 PCM
 - **Size**: 17 sqm
+- **Listing Update**: 2026-06-04
+- **Listing Status**: Reduced on 04/06/2026
+- **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/88017369](https://www.rightmove.co.uk/properties/88017369)
 
 ---
