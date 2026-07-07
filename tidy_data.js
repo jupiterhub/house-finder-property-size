@@ -47,6 +47,21 @@ function parseMatches(content) {
     const sizeMatch = block.match(/(?:Size:|\*\*Size\*\*:) ([\d,.]+) sqm/);
     if (sizeMatch) match.size = parseFloat(sizeMatch[1]);
 
+    // Parse Listing Update
+    const updateMatch = block.match(/(?:Listing Update:|\*\*Listing Update\*\*:) (.*)/);
+    if (updateMatch) match.listingUpdate = updateMatch[1].trim();
+    else match.listingUpdate = 'Unknown';
+
+    // Parse Listing Status
+    const statusMatch = block.match(/(?:Listing Status:|\*\*Listing Status\*\*:|Status:|\*\*Status\*\*:) (.*)/);
+    if (statusMatch) match.listingStatus = statusMatch[1].trim();
+    else match.listingStatus = 'Unknown';
+
+    // Parse Let Available
+    const availMatch = block.match(/(?:Let Available:|\*\*Let Available\*\*:|Let Available Date:|\*\*Let Available Date\*\*:) (.*)/);
+    if (availMatch) match.letAvailableDate = availMatch[1].trim();
+    else match.letAvailableDate = 'Unknown';
+
     // Parse Link
     const linkMatch = block.match(/(?:Link:|\*\*Link\*\*:) (?:\[.*?\]\()?(https?:\/\/[^\s\)]+)/);
     if (linkMatch) match.link = linkMatch[1].trim();
@@ -70,6 +85,9 @@ function formatMatchMarkdown(match) {
     `- **ID**: ${match.id}\n` +
     `- **Price**: £${match.price} PCM\n` +
     `- **Size**: ${match.size} sqm\n` +
+    `- **Listing Update**: ${match.listingUpdate || 'Unknown'}\n` +
+    `- **Listing Status**: ${match.listingStatus || 'Unknown'}\n` +
+    `- **Let Available**: ${match.letAvailableDate || 'Unknown'}\n` +
     `- **Link**: [${match.link}](${match.link})\n\n` +
     `---\n\n`;
 }
@@ -97,6 +115,162 @@ function tidySeenProperties() {
   
   fs.writeFileSync(SEEN_FILE, JSON.stringify(seen, null, 2));
   console.log(`Tidied seen_properties.json: Removed ${totalRemoved} duplicates and sorted ${totalIDs} IDs across platforms.`);
+}
+
+function extractRightmoveMetadata(html) {
+  let letAvailableDate = 'Unknown';
+  let listingStatus = 'Unknown';
+  let listingUpdate = 'Unknown';
+
+  try {
+    const pmMatch = html.match(/(?:window\.)?__PAGE_MODEL\s*=\s*(\{.+?\});/) || html.match(/(?:window\.)?PAGE_MODEL\s*=\s*(\{.+?\});/);
+    if (pmMatch) {
+      const pm = JSON.parse(pmMatch[1]);
+      let pd = pm.propertyData || pm;
+      let analyticsAdded = null;
+      if (typeof pm.data === 'string') {
+        const arr = JSON.parse(pm.data);
+        function resolve(val, visited = new Set()) {
+          if (typeof val === 'number' && arr[val] !== undefined) {
+            if (visited.has(val)) return null;
+            visited.add(val);
+            return resolve(arr[val], visited);
+          }
+          if (Array.isArray(val)) return val.map(x => resolve(x, new Set(visited)));
+          if (val && typeof val === 'object') {
+            const res = {};
+            for (const [k, v] of Object.entries(val)) res[k] = resolve(v, new Set(visited));
+            return res;
+          }
+          return val;
+        }
+        const root = resolve(arr[0]);
+        if (root?.propertyData) pd = root.propertyData;
+        
+        if (root?.analyticsInfo?.analyticsProperty?.added) {
+          const addedStr = String(root.analyticsInfo.analyticsProperty.added);
+          if (/^\d{8}$/.test(addedStr)) {
+            analyticsAdded = `${addedStr.slice(0,4)}-${addedStr.slice(4,6)}-${addedStr.slice(6,8)}`;
+          } else if (/^\d{4}-\d{2}-\d{2}/.test(addedStr)) {
+            analyticsAdded = addedStr.slice(0, 10);
+          }
+        }
+      }
+
+      if (pd && typeof pd === 'object') {
+        if (pd.lettings?.letAvailableDate) {
+          letAvailableDate = String(pd.lettings.letAvailableDate).trim();
+        } else if (pd.letAvailableDate) {
+          letAvailableDate = String(pd.letAvailableDate).trim();
+        }
+
+        if (pd.listingHistory?.listingUpdateReason) {
+          listingStatus = String(pd.listingHistory.listingUpdateReason).trim();
+        } else if (typeof pd.listingUpdate === 'string') {
+          listingStatus = pd.listingUpdate.trim();
+        } else if (pd.addedOrReduced) {
+          listingStatus = String(pd.addedOrReduced).trim();
+        }
+
+        if (pd.firstVisibleDate) {
+          listingUpdate = String(pd.firstVisibleDate).split('T')[0];
+        } else if (pd.listingUpdate?.listingUpdateDate) {
+          listingUpdate = String(pd.listingUpdate.listingUpdateDate).split('T')[0];
+        } else if (analyticsAdded) {
+          listingUpdate = analyticsAdded;
+        }
+      }
+    }
+  } catch (err) {}
+
+  if (letAvailableDate === 'Unknown' || !letAvailableDate) {
+    const m = html.match(/Let\s+available\s+date:\s*<\/dt>\s*<dd[^>]*>\s*([^<]+)/i) || 
+              html.match(/Let\s+available\s+date:\s*([^\n<]+)/i);
+    if (m && m[1]) letAvailableDate = m[1].replace(/<[^>]+>/g, '').trim();
+  }
+
+  if (listingStatus === 'Unknown' || !listingStatus) {
+    const m = html.match(/(?:Added|Reduced|Listed)\s+(?:on\s+\d{2}\/\d{2}\/\d{4}|today|yesterday|on\s+\d{1,2}\s+[a-zA-Z]+\s+\d{4})/i);
+    if (m && m[0]) listingStatus = m[0].replace(/<[^>]+>/g, '').trim();
+  }
+
+  let derivedDate = null;
+  if (listingStatus !== 'Unknown' && listingStatus) {
+    const dateMatch = listingStatus.match(/(\d{2})\/(\d{2})\/(\d{4})/);
+    if (dateMatch) {
+      derivedDate = `${dateMatch[3]}-${dateMatch[2]}-${dateMatch[1]}`;
+    } else if (/today/i.test(listingStatus)) {
+      derivedDate = new Date().toISOString().split('T')[0];
+    } else if (/yesterday/i.test(listingStatus)) {
+      const d = new Date(Date.now() - 86400000);
+      derivedDate = d.toISOString().split('T')[0];
+    }
+  }
+
+  if (derivedDate) {
+    listingUpdate = derivedDate;
+  } else if (listingUpdate === 'Unknown' || !listingUpdate || !/^\d{4}-\d{2}-\d{2}$/.test(listingUpdate)) {
+    const textToParse = (listingStatus !== 'Unknown' ? listingStatus : '') + ' ' + (listingUpdate !== 'Unknown' ? listingUpdate : '');
+    const isoMatch = textToParse.match(/(\d{4}-\d{2}-\d{2})/);
+    if (isoMatch) {
+      listingUpdate = isoMatch[1];
+    } else {
+      listingUpdate = 'Unknown';
+    }
+  }
+
+  if (letAvailableDate !== 'Unknown' && typeof letAvailableDate === 'string') {
+    letAvailableDate = letAvailableDate.replace(/^Let\s+available\s+date:\s*/i, '').trim();
+  }
+
+  return { letAvailableDate, listingStatus, listingUpdate };
+}
+
+async function enrichMissingMetadata(matches) {
+  const needsEnrichment = m => {
+    if (m.platform && m.platform !== 'Rightmove' && !m.link?.includes('rightmove')) return false;
+    if (!m.link) return false;
+    if (!m.letAvailableDate || m.letAvailableDate === 'Unknown') return true;
+    if (!m.listingUpdate || m.listingUpdate === 'Unknown' || !/^\d{4}-\d{2}-\d{2}$/.test(m.listingUpdate)) return true;
+    if (!m.listingStatus || m.listingStatus === 'Unknown') return true;
+    return false;
+  };
+
+  const toEnrich = matches.filter(needsEnrichment);
+  if (toEnrich.length === 0) {
+    return matches;
+  }
+  console.log(`Enriching metadata for ${toEnrich.length} Rightmove properties...`);
+  const headers = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
+    'Accept-Language': 'en-GB,en;q=0.9',
+  };
+
+  let count = 0;
+  const batchSize = 5;
+  for (let i = 0; i < toEnrich.length; i += batchSize) {
+    const batch = toEnrich.slice(i, i + batchSize);
+    await Promise.all(batch.map(async (item) => {
+      try {
+        const res = await fetch(item.link, { headers });
+        if (res.status === 200) {
+          const html = await res.text();
+          const meta = extractRightmoveMetadata(html);
+          if (meta.letAvailableDate && meta.letAvailableDate !== 'Unknown') item.letAvailableDate = meta.letAvailableDate;
+          if (meta.listingStatus && meta.listingStatus !== 'Unknown') item.listingStatus = meta.listingStatus;
+          if (meta.listingUpdate && meta.listingUpdate !== 'Unknown') item.listingUpdate = meta.listingUpdate;
+        }
+      } catch (err) {}
+      count++;
+    }));
+    if (count % 20 === 0 || count === toEnrich.length) {
+      console.log(`Enriched ${count}/${toEnrich.length}...`);
+    }
+    await new Promise(r => setTimeout(r, 100));
+  }
+  console.log(`Metadata enrichment complete.`);
+  return matches;
 }
 
 async function verifyMatches(matches) {
@@ -153,6 +327,10 @@ async function verifyMatches(matches) {
       } else if (isNoLongerMarket) {
         console.log(`- Property ${item.id} is no longer on the market`);
       } else {
+        const meta = extractRightmoveMetadata(html);
+        if (meta.letAvailableDate && meta.letAvailableDate !== 'Unknown') item.letAvailableDate = meta.letAvailableDate;
+        if (meta.listingStatus && meta.listingStatus !== 'Unknown') item.listingStatus = meta.listingStatus;
+        if (meta.listingUpdate && meta.listingUpdate !== 'Unknown') item.listingUpdate = meta.listingUpdate;
         results.push(item);
       }
     } catch (err) {
@@ -223,6 +401,8 @@ async function main() {
   // Run live verification if --verify flag is set
   if (flags.verify) {
     result = await verifyMatches(result);
+  } else {
+    result = await enrichMissingMetadata(result);
   }
 
   // Filter
@@ -326,6 +506,15 @@ async function main() {
       } else if (col === 'location') {
         valA = (a.location || 'Unknown').toLowerCase();
         valB = (b.location || 'Unknown').toLowerCase();
+      } else if (col === 'listingUpdate' || col === 'listed') {
+        valA = (a.listingUpdate || 'Unknown').toLowerCase();
+        valB = (b.listingUpdate || 'Unknown').toLowerCase();
+      } else if (col === 'listingStatus' || col === 'status') {
+        valA = (a.listingStatus || 'Unknown').toLowerCase();
+        valB = (b.listingStatus || 'Unknown').toLowerCase();
+      } else if (col === 'letAvailableDate' || col === 'available') {
+        valA = (a.letAvailableDate || 'Unknown').toLowerCase();
+        valB = (b.letAvailableDate || 'Unknown').toLowerCase();
       }
 
       if (valA !== valB) {
@@ -366,15 +555,41 @@ async function main() {
         const agentBadge = isOpenRent ? 
           `<span class="badge badge-openrent">✨ ${agentStr}</span>` : 
           `<span class="agent-name">${agentStr}</span>`;
+        const listingUpdateStr = m.listingUpdate || 'Unknown';
+        const listingStatusStr = m.listingStatus || 'Unknown';
+        const letAvailableStr = m.letAvailableDate || 'Unknown';
+
+        let updateTs = 0;
+        if (listingUpdateStr && listingUpdateStr !== 'Unknown') {
+          const d = new Date(listingUpdateStr);
+          if (!isNaN(d.getTime())) updateTs = d.getTime();
+        }
+
+        let availTs = 0;
+        if (letAvailableStr && letAvailableStr !== 'Unknown') {
+          if (/now|immediate|today/i.test(letAvailableStr)) {
+            availTs = Date.now();
+          } else if (/(\d{2})\/(\d{2})\/(\d{4})/.test(letAvailableStr)) {
+            const mDate = letAvailableStr.match(/(\d{2})\/(\d{2})\/(\d{4})/);
+            const d = new Date(`${mDate[3]}-${mDate[2]}-${mDate[1]}`);
+            if (!isNaN(d.getTime())) availTs = d.getTime();
+          } else {
+            const d = new Date(letAvailableStr);
+            if (!isNaN(d.getTime())) availTs = d.getTime();
+          }
+        }
 
         return `<tr data-id="${m.id}" data-index="${idx}">
           <td data-value="${timestamp}">${dateStr}</td>
+          <td data-value="${updateTs}">${listingUpdateStr}</td>
+          <td data-value="${listingStatusStr}">${listingStatusStr}</td>
+          <td data-value="${availTs}">${letAvailableStr}</td>
           <td data-value="${agentStr}">${agentBadge}</td>
           <td>${m.location || 'Unknown'}</td>
           <td class="numeric" data-value="${m.price || 0}">£${m.price || 0}</td>
           <td class="numeric" data-value="${m.size || 0}">${m.size || 0} sqm</td>
           <td class="numeric" data-value="${pricePerSqmValue}">£${pricePerSqm}</td>
-          <td style="text-align: center;"><a href="${m.link}" target="_blank" class="view-btn">View</a></td>
+          <td style="text-align: center;"><a href="${m.link}" target="_blank" class="view-btn" onclick="markRowSeen('${m.id}')">View</a></td>
           <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('${m.id}')">Hide</button></td>
         </tr>`;
       }).join('\n');
@@ -734,9 +949,40 @@ async function main() {
     background: #475569;
     color: white;
   }
+
+  .seen-property-row {
+    opacity: 0.55;
+    background: rgba(255, 255, 255, 0.015);
+  }
+  .viewed-btn {
+    background: rgba(16, 185, 129, 0.2) !important;
+    color: #34d399 !important;
+    border: 1px solid rgba(16, 185, 129, 0.4) !important;
+  }
+  .viewed-btn:hover {
+    background: rgba(16, 185, 129, 0.3) !important;
+    color: white !important;
+  }
+  #resetSeenBtn {
+    padding: 3px 8px;
+    background: rgba(16, 185, 129, 0.15);
+    color: #34d399;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.8em;
+    transition: all 0.2s;
+    margin-left: 8px;
+  }
+  #resetSeenBtn:hover {
+    background: #059669;
+    color: white;
+  }
 </style>
 <script>
 const HIDDEN_STORAGE_KEY = 'house_finder_hidden_ids';
+const SEEN_STORAGE_KEY = 'house_finder_seen_ids';
 
 function getHiddenIds() {
   try {
@@ -744,6 +990,89 @@ function getHiddenIds() {
   } catch (e) {
     return [];
   }
+}
+
+function getSeenIds() {
+  try {
+    return JSON.parse(localStorage.getItem(SEEN_STORAGE_KEY) || '[]');
+  } catch (e) {
+    return [];
+  }
+}
+
+function markRowSeen(id) {
+  const seenIds = getSeenIds();
+  if (!seenIds.includes(id)) {
+    seenIds.push(id);
+    localStorage.setItem(SEEN_STORAGE_KEY, JSON.stringify(seenIds));
+  }
+  setTimeout(applySeen, 100);
+}
+
+function resetSeen() {
+  localStorage.removeItem(SEEN_STORAGE_KEY);
+  applySeen();
+}
+
+function toggleHideSeen() {
+  const current = localStorage.getItem('house_finder_hide_seen') === 'true';
+  localStorage.setItem('house_finder_hide_seen', current ? 'false' : 'true');
+  applySeen();
+  filterTable();
+}
+
+function applySeen() {
+  const seenIds = getSeenIds();
+  const table = document.getElementById("matchesTable");
+  if (!table) return;
+  
+  const tbody = table.getElementsByTagName("tbody")[0];
+  const trs = tbody.getElementsByTagName("tr");
+  
+  let seenCount = 0;
+  for (let i = 0; i < trs.length; i++) {
+    const tr = trs[i];
+    const id = tr.getAttribute("data-id");
+    const viewBtn = tr.querySelector(".view-btn");
+    if (seenIds.includes(id)) {
+      tr.classList.add("seen-property-row");
+      if (viewBtn) {
+        viewBtn.innerHTML = "✓ Viewed";
+        viewBtn.classList.add("viewed-btn");
+      }
+      seenCount++;
+    } else {
+      tr.classList.remove("seen-property-row");
+      if (viewBtn) {
+        viewBtn.innerHTML = "View";
+        viewBtn.classList.remove("viewed-btn");
+      }
+    }
+  }
+
+  const resetBtn = document.getElementById("resetSeenBtn");
+  if (resetBtn) {
+    if (seenCount > 0) {
+      resetBtn.style.display = "inline-block";
+      document.getElementById("seenCount").textContent = seenCount;
+    } else {
+      resetBtn.style.display = "none";
+    }
+  }
+
+  const toggleBtn = document.getElementById("toggleSeenBtn");
+  const hideSeenEnabled = localStorage.getItem('house_finder_hide_seen') === 'true';
+  if (toggleBtn) {
+    if (hideSeenEnabled) {
+      toggleBtn.classList.add("active");
+      toggleBtn.innerHTML = "👁️ Unhide Viewed";
+    } else {
+      toggleBtn.classList.remove("active");
+      toggleBtn.innerHTML = "👁️ Hide Viewed";
+    }
+  }
+  
+  filterTable();
 }
 
 function hideProperty(id) {
@@ -803,6 +1132,8 @@ function filterTable() {
   
   var visibleCount = 0;
   const hiddenIds = getHiddenIds();
+  const seenIds = getSeenIds();
+  const hideSeenEnabled = localStorage.getItem('house_finder_hide_seen') === 'true';
 
   for (var i = 0; i < tr.length; i++) {
     var display = "";
@@ -810,6 +1141,10 @@ function filterTable() {
     
     // Local storage hide check
     if (hiddenIds.includes(id)) {
+      tr[i].style.display = "none";
+      continue;
+    }
+    if (hideSeenEnabled && seenIds.includes(id)) {
       tr[i].style.display = "none";
       continue;
     }
@@ -886,7 +1221,7 @@ function filterTable() {
 function setQuickFilter(agentName) {
   var inputs = document.querySelectorAll("thead .filter-input");
   for (var i = 0; i < inputs.length; i++) {
-    if (inputs[i].getAttribute("data-col") === "1") {
+    if (inputs[i].getAttribute("data-col") === "4") {
       inputs[i].value = agentName;
       break;
     }
@@ -905,7 +1240,7 @@ function setQuickFilter(agentName) {
   }
 }
 
-var currentSorts = [{col: 0, dir: 'desc'}, {col: 3, dir: 'asc'}]; // Default: Date desc, Price asc
+var currentSorts = []; // Default: no client-side column sort override; keep original generation order
 
 function sortTable(n, event) {
   var isShift = event && event.shiftKey;
@@ -918,24 +1253,24 @@ function sortTable(n, event) {
     if (foundIdx !== -1) {
       currentSorts[foundIdx].dir = currentSorts[foundIdx].dir === 'asc' ? 'desc' : 'asc';
     } else {
-      currentSorts.push({col: n, dir: (n === 0 || n === 4) ? 'desc' : 'asc'});
+      currentSorts.push({col: n, dir: (n === 0 || n === 1 || n === 3 || n === 7) ? 'desc' : 'asc'});
     }
   } else {
     var primaryDir = 'asc';
     if (currentSorts.length > 0 && currentSorts[0].col === n) {
       primaryDir = currentSorts[0].dir === 'asc' ? 'desc' : 'asc';
     } else {
-      primaryDir = (n === 0 || n === 4) ? 'desc' : 'asc';
+      primaryDir = (n === 0 || n === 1 || n === 3 || n === 7) ? 'desc' : 'asc';
     }
 
     if (n === 0) {
-      currentSorts = [{col: 0, dir: primaryDir}, {col: 3, dir: 'asc'}];
-    } else if (n === 3) {
-      currentSorts = [{col: 3, dir: primaryDir}, {col: 4, dir: 'desc'}];
-    } else if (n === 4) {
-      currentSorts = [{col: 4, dir: primaryDir}, {col: 3, dir: 'asc'}];
+      currentSorts = [{col: 0, dir: primaryDir}, {col: 6, dir: 'asc'}];
+    } else if (n === 6) {
+      currentSorts = [{col: 6, dir: primaryDir}, {col: 7, dir: 'desc'}];
+    } else if (n === 7) {
+      currentSorts = [{col: 7, dir: primaryDir}, {col: 6, dir: 'asc'}];
     } else {
-      currentSorts = [{col: n, dir: primaryDir}, {col: 3, dir: 'asc'}];
+      currentSorts = [{col: n, dir: primaryDir}, {col: 6, dir: 'asc'}];
     }
   }
 
@@ -992,7 +1327,7 @@ function applySort() {
 }
 
 function updateSortIndicators() {
-  for (var c = 0; c <= 5; c++) {
+  for (var c = 0; c <= 8; c++) {
     var ind = document.getElementById("sort-ind-" + c);
     if (ind) ind.textContent = "";
   }
@@ -1015,13 +1350,13 @@ function setMultiSort(criteria) {
   var sortBtns = document.querySelectorAll(".quick-sorts .filter-chip");
   for (var i = 0; i < sortBtns.length; i++) sortBtns[i].classList.remove("active");
   
-  if (criteria.length === 2 && criteria[0].col === 0 && criteria[1].col === 3) {
+  if (criteria.length === 2 && criteria[0].col === 0 && criteria[1].col === 6) {
     var btn = document.getElementById("sortDatePrice");
     if (btn) btn.classList.add("active");
-  } else if (criteria.length === 2 && criteria[0].col === 3 && criteria[1].col === 4) {
+  } else if (criteria.length === 2 && criteria[0].col === 6 && criteria[1].col === 7) {
     var btn = document.getElementById("sortPriceSize");
     if (btn) btn.classList.add("active");
-  } else if (criteria.length === 2 && criteria[0].col === 4 && criteria[1].col === 3) {
+  } else if (criteria.length === 2 && criteria[0].col === 7 && criteria[1].col === 6) {
     var btn = document.getElementById("sortSizePrice");
     if (btn) btn.classList.add("active");
   }
@@ -1038,7 +1373,7 @@ function clearSort() {
   if (allBtn) allBtn.classList.add("active");
   filterTable();
 
-  setMultiSort([{col: 0, dir: 'desc'}, {col: 3, dir: 'asc'}]);
+  setMultiSort([]);
   var clearBtn = document.getElementById("clearSortBtn");
   if (clearBtn) {
     clearBtn.classList.add("active");
@@ -1049,6 +1384,7 @@ function clearSort() {
 window.addEventListener('DOMContentLoaded', () => {
   applySort();
   applyHidden();
+  applySeen();
   updateSortIndicators();
 });
 </script>
@@ -1060,18 +1396,20 @@ window.addEventListener('DOMContentLoaded', () => {
     <div class="stats">
       Showing <span id="visibleCount">${result.length}</span> of ${result.length} properties found
       <button id="resetHiddenBtn" onclick="resetHidden()" style="display:none;">Unhide All (<span id="hiddenCount">0</span>)</button>
+      <button id="resetSeenBtn" onclick="resetSeen()" style="display:none;">Reset Viewed (<span id="seenCount">0</span>)</button>
     </div>
   </div>
   <div class="quick-filters">
     <span class="filter-label">Agent Filter:</span>
     <button id="chipAll" class="filter-chip active" onclick="setQuickFilter('')">All Agents</button>
     <button id="chipOpenRent" class="filter-chip chip-openrent" onclick="setQuickFilter('OpenRent')">✨ OpenRent Only</button>
+    <button id="toggleSeenBtn" class="filter-chip" onclick="toggleHideSeen()">👁️ Hide Viewed</button>
   </div>
   <div class="quick-sorts">
     <span class="filter-label">Quick Sort:</span>
-    <button id="sortDatePrice" class="filter-chip active" onclick="setMultiSort([{col: 0, dir: 'desc'}, {col: 3, dir: 'asc'}])">📅 Date → Price</button>
-    <button id="sortPriceSize" class="filter-chip" onclick="setMultiSort([{col: 3, dir: 'asc'}, {col: 4, dir: 'desc'}])">💰 Price → Size</button>
-    <button id="sortSizePrice" class="filter-chip" onclick="setMultiSort([{col: 4, dir: 'desc'}, {col: 3, dir: 'asc'}])">📐 Size → Price</button>
+    <button id="sortDatePrice" class="filter-chip" onclick="setMultiSort([{col: 0, dir: 'desc'}, {col: 6, dir: 'asc'}])">📅 Date → Price</button>
+    <button id="sortPriceSize" class="filter-chip" onclick="setMultiSort([{col: 6, dir: 'asc'}, {col: 7, dir: 'desc'}])">💰 Price → Size</button>
+    <button id="sortSizePrice" class="filter-chip" onclick="setMultiSort([{col: 7, dir: 'desc'}, {col: 6, dir: 'asc'}])">📐 Size → Price</button>
     <button id="clearSortBtn" class="filter-chip chip-clear" onclick="clearSort()">✕ Clear Sort / Filters</button>
     <div class="tooltip-container">
       <span class="tooltip-badge">ℹ️ How to Multi-Sort</span>
@@ -1079,7 +1417,7 @@ window.addEventListener('DOMContentLoaded', () => {
         <strong>⚡ Multi-Column Sorting Guide:</strong><br>
         • <strong>Hold SHIFT + Click</strong> any column header to add it as a secondary (2), tertiary (3), etc. sort column.<br>
         • <strong>Normal Click</strong> sets a smart 2-column default (e.g. Date then Price).<br>
-        • Click <strong>✕ Clear Sort / Filters</strong> to clear all filters and return to default sorting (Date → Price).
+        • Click <strong>✕ Clear Sort / Filters</strong> to clear all filters and remove sorting.
       </div>
     </div>
   </div>
@@ -1094,11 +1432,14 @@ window.addEventListener('DOMContentLoaded', () => {
   <thead>
     <tr>
       <th onclick="sortTable(0, event)">Date <span class="sort-indicator" id="sort-ind-0"></span><br><input type="text" class="filter-input" data-col="0" data-type="date" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Date (e.g. >2026-05-01)..."></th>
-      <th onclick="sortTable(1, event)">Marketed By <span class="sort-indicator" id="sort-ind-1"></span><br><input type="text" class="filter-input" data-col="1" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Filter (e.g. OpenRent)..."></th>
-      <th onclick="sortTable(2, event)">Location <span class="sort-indicator" id="sort-ind-2"></span><br><input type="text" class="filter-input" data-col="2" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Filter..."></th>
-      <th onclick="sortTable(3, event)">Price <span class="sort-indicator" id="sort-ind-3"></span><br><input type="text" class="filter-input" data-col="3" data-type="numeric" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Price (e.g. >2000)..."></th>
-      <th onclick="sortTable(4, event)">Size <span class="sort-indicator" id="sort-ind-4"></span><br><input type="text" class="filter-input" data-col="4" data-type="numeric" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Size (e.g. <50)..."></th>
-      <th onclick="sortTable(5, event)">£ / sqm <span class="sort-indicator" id="sort-ind-5"></span><br><input type="text" class="filter-input" data-col="5" data-type="numeric" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="£/sqm (e.g. >=40)..."></th>
+      <th onclick="sortTable(1, event)">Listed / Updated <span class="sort-indicator" id="sort-ind-1"></span><br><input type="text" class="filter-input" data-col="1" data-type="date" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Date (e.g. >2026-07-01)..."></th>
+      <th onclick="sortTable(2, event)">Status <span class="sort-indicator" id="sort-ind-2"></span><br><input type="text" class="filter-input" data-col="2" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Filter (e.g. yesterday)..."></th>
+      <th onclick="sortTable(3, event)">Let Available <span class="sort-indicator" id="sort-ind-3"></span><br><input type="text" class="filter-input" data-col="3" data-type="date" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Date (e.g. >2026-07-01)..."></th>
+      <th onclick="sortTable(4, event)">Marketed By <span class="sort-indicator" id="sort-ind-4"></span><br><input type="text" class="filter-input" data-col="4" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Filter (e.g. OpenRent)..."></th>
+      <th onclick="sortTable(5, event)">Location <span class="sort-indicator" id="sort-ind-5"></span><br><input type="text" class="filter-input" data-col="5" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Filter..."></th>
+      <th onclick="sortTable(6, event)">Price <span class="sort-indicator" id="sort-ind-6"></span><br><input type="text" class="filter-input" data-col="6" data-type="numeric" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Price (e.g. >2000)..."></th>
+      <th onclick="sortTable(7, event)">Size <span class="sort-indicator" id="sort-ind-7"></span><br><input type="text" class="filter-input" data-col="7" data-type="numeric" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Size (e.g. <50)..."></th>
+      <th onclick="sortTable(8, event)">£ / sqm <span class="sort-indicator" id="sort-ind-8"></span><br><input type="text" class="filter-input" data-col="8" data-type="numeric" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="£/sqm (e.g. >=40)..."></th>
       <th style="cursor: default; text-align: center;">Link</th>
       <th style="cursor: default; text-align: center;">Actions</th>
     </tr>

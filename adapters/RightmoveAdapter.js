@@ -72,6 +72,29 @@ class RightmoveAdapter {
 
       console.log(`Found ${listings.length} listings on this page.`);
 
+      // Extract search page dates from __NEXT_DATA__ if available
+      const searchPageDates = await this.page.evaluate(() => {
+        const map = {};
+        try {
+          const script = document.querySelector('script#__NEXT_DATA__');
+          if (script) {
+            const data = JSON.parse(script.textContent);
+            const props = data?.props?.pageProps?.searchResults?.properties || [];
+            for (const p of props) {
+              if (p && p.id) {
+                map[String(p.id)] = {
+                  firstVisibleDate: p.firstVisibleDate || null,
+                  listingUpdateDate: p?.listingUpdate?.listingUpdateDate || p.firstVisibleDate || null,
+                  addedOrReduced: p.addedOrReduced || null,
+                  letAvailableDate: p.letAvailableDate || null
+                };
+              }
+            }
+          }
+        } catch(e) {}
+        return map;
+      }).catch(() => ({}));
+
       for (const listing of listings) {
         if (isSeen(listing.id, this.platformName)) {
           console.log(`Skipping already seen property: ${listing.id}`);
@@ -84,7 +107,7 @@ class RightmoveAdapter {
           continue;
         }
 
-        const match = await this.processListing(listing, locationName);
+        const match = await this.processListing(listing, locationName, searchPageDates[listing.id] || {});
         if (match) {
           markAsSeen(listing.id, this.platformName);
           results.push(match);
@@ -95,7 +118,7 @@ class RightmoveAdapter {
     return results;
   }
 
-  async processListing(listing, locationName) {
+  async processListing(listing, locationName, searchDates = {}) {
     const floorplanUrl = `https://www.rightmove.co.uk/properties/${listing.id}#/floorplan`;
     console.log(`Processing listing: ${floorplanUrl}`);
     
@@ -205,6 +228,147 @@ class RightmoveAdapter {
         agentName = 'OpenRent, London';
       }
 
+      // Extract letAvailableDate, listingStatus, and listingUpdate from detail page
+      const detailMetadata = await this.page.evaluate(() => {
+        let letAvailableDate = 'Unknown';
+        let listingStatus = 'Unknown';
+        let listingUpdate = 'Unknown';
+
+        try {
+          let pd = window.__PAGE_MODEL?.propertyData || window.PAGE_MODEL?.propertyData || window.__NEXT_DATA__?.props?.pageProps?.propertyData;
+          let analyticsAdded = null;
+          if (window.__PAGE_MODEL && typeof window.__PAGE_MODEL.data === 'string') {
+            const arr = JSON.parse(window.__PAGE_MODEL.data);
+            function resolve(val, visited = new Set()) {
+              if (typeof val === 'number' && arr[val] !== undefined) {
+                if (visited.has(val)) return null;
+                visited.add(val);
+                return resolve(arr[val], visited);
+              }
+              if (Array.isArray(val)) return val.map(x => resolve(x, new Set(visited)));
+              if (val && typeof val === 'object') {
+                const res = {};
+                for (const [k, v] of Object.entries(val)) res[k] = resolve(v, new Set(visited));
+                return res;
+              }
+              return val;
+            }
+            const root = resolve(arr[0]);
+            if (root?.propertyData) pd = root.propertyData;
+            
+            if (root?.analyticsInfo?.analyticsProperty?.added) {
+              const addedStr = String(root.analyticsInfo.analyticsProperty.added);
+              if (/^\d{8}$/.test(addedStr)) {
+                analyticsAdded = `${addedStr.slice(0,4)}-${addedStr.slice(4,6)}-${addedStr.slice(6,8)}`;
+              } else if (/^\d{4}-\d{2}-\d{2}/.test(addedStr)) {
+                analyticsAdded = addedStr.slice(0, 10);
+              }
+            }
+          }
+
+          if (!pd) {
+            const scripts = Array.from(document.querySelectorAll('script'));
+            for (const s of scripts) {
+              if (s.textContent && (s.textContent.includes('PAGE_MODEL') || s.textContent.includes('propertyData'))) {
+                const match = s.textContent.match(/(?:window\.)?__?PAGE_MODEL\s*=\s*(\{.*?\})\s*(?:;|\n|$)/) ||
+                              s.textContent.match(/\"propertyData\"\s*:\s*(\{.*?\})\s*(?:,|\})/);
+                if (match) {
+                  try {
+                    const data = JSON.parse(match[1]);
+                    pd = data.propertyData || data;
+                    if (pd) break;
+                  } catch (err) {}
+                }
+              }
+            }
+          }
+
+          if (pd && typeof pd === 'object') {
+            if (pd.lettings?.letAvailableDate) {
+              letAvailableDate = String(pd.lettings.letAvailableDate).trim();
+            } else if (pd.letAvailableDate) {
+              letAvailableDate = String(pd.letAvailableDate).trim();
+            }
+
+            if (pd.listingHistory?.listingUpdateReason) {
+              listingStatus = String(pd.listingHistory.listingUpdateReason).trim();
+            } else if (typeof pd.listingUpdate === 'string') {
+              listingStatus = pd.listingUpdate.trim();
+            } else if (pd.addedOrReduced) {
+              listingStatus = String(pd.addedOrReduced).trim();
+            }
+
+            if (pd.firstVisibleDate) {
+              listingUpdate = String(pd.firstVisibleDate).split('T')[0];
+            } else if (pd.listingUpdate?.listingUpdateDate) {
+              listingUpdate = String(pd.listingUpdate.listingUpdateDate).split('T')[0];
+            } else if (analyticsAdded) {
+              listingUpdate = analyticsAdded;
+            }
+          }
+        } catch (e) {}
+
+        const text = document.body ? document.body.innerText : "";
+        if (letAvailableDate === 'Unknown' || !letAvailableDate) {
+          const m = text.match(/Let\s+available\s+date:\s*([^\n]+)/i);
+          if (m && m[1]) letAvailableDate = m[1].trim();
+        }
+        if (listingStatus === 'Unknown' || !listingStatus) {
+          const m = text.match(/(?:Added|Reduced|Listed)\s+(?:on\s+\d{2}\/\d{2}\/\d{4}|today|yesterday|on\s+\d{1,2}\s+[a-zA-Z]+\s+\d{4})/i);
+          if (m && m[0]) listingStatus = m[0].trim();
+        }
+
+        let derivedDate = null;
+        if (listingStatus !== 'Unknown' && listingStatus) {
+          const dateMatch = listingStatus.match(/(\d{2})\/(\d{2})\/(\d{4})/);
+          if (dateMatch) {
+            derivedDate = `${dateMatch[3]}-${dateMatch[2]}-${dateMatch[1]}`;
+          } else if (/today/i.test(listingStatus)) {
+            derivedDate = new Date().toISOString().split('T')[0];
+          } else if (/yesterday/i.test(listingStatus)) {
+            const d = new Date(Date.now() - 86400000);
+            derivedDate = d.toISOString().split('T')[0];
+          }
+        }
+
+        if (derivedDate) {
+          listingUpdate = derivedDate;
+        } else if (listingUpdate === 'Unknown' || !listingUpdate || !/^\d{4}-\d{2}-\d{2}$/.test(listingUpdate)) {
+          const textToParse = (listingStatus !== 'Unknown' ? listingStatus : '') + ' ' + (listingUpdate !== 'Unknown' ? listingUpdate : '');
+          const isoMatch = textToParse.match(/(\d{4}-\d{2}-\d{2})/);
+          if (isoMatch) {
+            listingUpdate = isoMatch[1];
+          } else {
+            listingUpdate = 'Unknown';
+          }
+        }
+
+        if (letAvailableDate !== 'Unknown' && typeof letAvailableDate === 'string') {
+          letAvailableDate = letAvailableDate.replace(/^Let\s+available\s+date:\s*/i, '').trim();
+        }
+
+        return { letAvailableDate, listingStatus, listingUpdate };
+      }).catch(() => ({ letAvailableDate: 'Unknown', listingStatus: 'Unknown', listingUpdate: 'Unknown' }));
+
+      const letAvailableFormatted = detailMetadata.letAvailableDate !== 'Unknown' ? detailMetadata.letAvailableDate : (searchDates.letAvailableDate || 'Unknown');
+      const listingStatus = detailMetadata.listingStatus !== 'Unknown' ? detailMetadata.listingStatus : (searchDates.addedOrReduced || 'Unknown');
+      let listingUpdate = detailMetadata.listingUpdate !== 'Unknown' ? detailMetadata.listingUpdate : 
+                          (searchDates.firstVisibleDate || searchDates.listingUpdateDate || 'Unknown');
+      if (typeof listingUpdate === 'string' && listingUpdate !== 'Unknown') {
+        listingUpdate = listingUpdate.split('T')[0];
+      }
+      if (listingUpdate === 'Unknown' && typeof listingStatus === 'string' && listingStatus !== 'Unknown') {
+        const dateMatch = listingStatus.match(/(\d{2})\/(\d{2})\/(\d{4})/);
+        if (dateMatch) {
+          listingUpdate = `${dateMatch[3]}-${dateMatch[2]}-${dateMatch[1]}`;
+        } else if (/today/i.test(listingStatus)) {
+          listingUpdate = new Date().toISOString().split('T')[0];
+        } else if (/yesterday/i.test(listingStatus)) {
+          const d = new Date(Date.now() - 86400000);
+          listingUpdate = d.toISOString().split('T')[0];
+        }
+      }
+
       if (sqm && sqm >= config.minSqm) {
         return {
           platform: this.platformName,
@@ -213,7 +377,10 @@ class RightmoveAdapter {
           sqm: sqm,
           location: locationName,
           agent: agentName || 'Unknown',
-          url: `https://www.rightmove.co.uk/properties/${listing.id}`
+          url: `https://www.rightmove.co.uk/properties/${listing.id}`,
+          listingUpdate: listingUpdate,
+          listingStatus: listingStatus,
+          letAvailableDate: letAvailableFormatted
         };
       } else {
         const reason = sqm ? `Size ${sqm} sqm below min ${config.minSqm}` : "Could not determine size";

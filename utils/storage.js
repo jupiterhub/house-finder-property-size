@@ -83,6 +83,9 @@ function saveMatch(propertyData) {
     `- **ID**: ${propertyData.id}\n` +
     `- **Price**: £${propertyData.price} PCM\n` +
     `- **Size**: ${propertyData.sqm} sqm\n` +
+    `- **Listing Update**: ${propertyData.listingUpdate || 'Unknown'}\n` +
+    `- **Listing Status**: ${propertyData.listingStatus || 'Unknown'}\n` +
+    `- **Let Available**: ${propertyData.letAvailableDate || 'Unknown'}\n` +
     `- **Link**: [${propertyData.url}](${propertyData.url})\n\n---\n\n`;
   
   fs.appendFileSync(MATCHES_FILE, matchString);
