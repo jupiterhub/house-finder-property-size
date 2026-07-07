@@ -640,7 +640,7 @@ async function main() {
           <td class="numeric" data-value="${m.size || 0}">${m.size || 0} sqm</td>
           <td class="numeric" data-value="${pricePerSqmValue}">£${pricePerSqm}</td>
           <td style="text-align: center;"><a href="${m.link}" target="_blank" class="view-btn" onclick="markRowSeen('${m.id}')">View</a></td>
-          <td style="text-align: center;"><button class="hide-btn" onclick="hideProperty('${m.id}')">Hide</button></td>
+          <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('${m.id}', this)" title="Save Property">☆</button></td>
         </tr>`;
       }).join('\n');
 
@@ -801,10 +801,38 @@ async function main() {
     font-weight: 600;
     color: #e2e8f0;
   }
-  .quick-filters {
+  .quick-actions-bar {
     display: flex;
     align-items: center;
-    gap: 10px;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    background: rgba(255, 255, 255, 0.02);
+    padding: 12px 18px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    margin: 15px 0;
+  }
+  .action-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .action-divider {
+    width: 1px;
+    height: 24px;
+    background: var(--border);
+    margin: 0 4px;
+  }
+  @media (max-width: 768px) {
+    .action-divider { display: none; }
+    .quick-actions-bar { flex-direction: column; align-items: flex-start; }
+  }
+  .quick-filters, .quick-sorts {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     flex-wrap: wrap;
   }
   .filter-label {
@@ -1109,32 +1137,46 @@ async function main() {
     box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
   }
 
-  .hide-btn {
+  .star-btn {
     display: inline-block;
-    padding: 6px 14px;
-    background: rgba(239, 68, 68, 0.15);
-    color: var(--danger) !important;
+    padding: 3px 10px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #94a3b8 !important;
     text-decoration: none;
-    border: 1px solid rgba(239, 68, 68, 0.3);
+    border: 1px solid var(--border);
     border-radius: 6px;
-    font-size: 0.85em;
-    font-weight: 600;
+    font-size: 1.15em;
     cursor: pointer;
     transition: all 0.2s;
   }
-  .hide-btn:hover {
-    background: var(--danger);
-    color: white !important;
-    border-color: var(--danger);
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+  .star-btn:hover {
+    background: rgba(234, 179, 8, 0.15);
+    color: #facc15 !important;
+    border-color: rgba(234, 179, 8, 0.4);
+    transform: scale(1.1);
   }
-
-  #resetHiddenBtn {
+  .star-btn.starred {
+    background: rgba(234, 179, 8, 0.2);
+    color: #facc15 !important;
+    border-color: #facc15;
+    box-shadow: 0 0 10px rgba(234, 179, 8, 0.3);
+  }
+  .chip-starred {
+    background: rgba(234, 179, 8, 0.1);
+    border-color: rgba(234, 179, 8, 0.3);
+    color: #fde047;
+  }
+  .chip-starred.active {
+    background: #eab308;
+    color: #0f172a;
+    border-color: #eab308;
+    box-shadow: 0 0 12px rgba(234, 179, 8, 0.4);
+  }
+  #resetStarredBtn {
     padding: 3px 8px;
-    background: rgba(148, 163, 184, 0.15);
-    color: var(--text-muted);
-    border: 1px solid rgba(148, 163, 184, 0.3);
+    background: rgba(234, 179, 8, 0.15);
+    color: #fde047;
+    border: 1px solid rgba(234, 179, 8, 0.3);
     border-radius: 6px;
     font-weight: 600;
     cursor: pointer;
@@ -1142,9 +1184,9 @@ async function main() {
     transition: all 0.2s;
     margin-left: 8px;
   }
-  #resetHiddenBtn:hover {
-    background: #475569;
-    color: white;
+  #resetStarredBtn:hover {
+    background: #eab308;
+    color: #0f172a;
   }
 
   .seen-property-row {
@@ -1178,12 +1220,12 @@ async function main() {
   }
 </style>
 <script>
-const HIDDEN_STORAGE_KEY = 'house_finder_hidden_ids';
+const STARRED_STORAGE_KEY = 'house_finder_starred_ids';
 const SEEN_STORAGE_KEY = 'house_finder_seen_ids';
 
-function getHiddenIds() {
+function getStarredIds() {
   try {
-    return JSON.parse(localStorage.getItem(HIDDEN_STORAGE_KEY) || '[]');
+    return JSON.parse(localStorage.getItem(STARRED_STORAGE_KEY) || '[]');
   } catch (e) {
     return [];
   }
@@ -1209,13 +1251,6 @@ function markRowSeen(id) {
 function resetSeen() {
   localStorage.removeItem(SEEN_STORAGE_KEY);
   applySeen();
-}
-
-function toggleHideSeen() {
-  const current = localStorage.getItem('house_finder_hide_seen') === 'true';
-  localStorage.setItem('house_finder_hide_seen', current ? 'false' : 'true');
-  applySeen();
-  filterTable();
 }
 
 function applySeen() {
@@ -1256,65 +1291,80 @@ function applySeen() {
       resetBtn.style.display = "none";
     }
   }
-
-  const toggleBtn = document.getElementById("toggleSeenBtn");
-  const hideSeenEnabled = localStorage.getItem('house_finder_hide_seen') === 'true';
-  if (toggleBtn) {
-    if (hideSeenEnabled) {
-      toggleBtn.classList.add("active");
-      toggleBtn.innerHTML = "👁️ Unhide Viewed";
-    } else {
-      toggleBtn.classList.remove("active");
-      toggleBtn.innerHTML = "👁️ Hide Viewed";
-    }
-  }
   
   filterTable();
 }
 
-function hideProperty(id) {
-  const hiddenIds = getHiddenIds();
-  if (!hiddenIds.includes(id)) {
-    hiddenIds.push(id);
-    localStorage.setItem(HIDDEN_STORAGE_KEY, JSON.stringify(hiddenIds));
+function toggleStar(id, btn) {
+  let starredIds = getStarredIds();
+  if (starredIds.includes(id)) {
+    starredIds = starredIds.filter(x => x !== id);
+    if (btn) {
+      btn.innerHTML = "☆";
+      btn.classList.remove("starred");
+      btn.title = "Save Property";
+    }
+  } else {
+    starredIds.push(id);
+    if (btn) {
+      btn.innerHTML = "⭐";
+      btn.classList.add("starred");
+      btn.title = "Saved!";
+    }
   }
-  applyHidden();
+  localStorage.setItem(STARRED_STORAGE_KEY, JSON.stringify(starredIds));
+  applyStarred();
 }
 
-function resetHidden() {
-  localStorage.removeItem(HIDDEN_STORAGE_KEY);
-  applyHidden();
+function resetStarred() {
+  localStorage.removeItem(STARRED_STORAGE_KEY);
+  applyStarred();
 }
 
-function applyHidden() {
-  const hiddenIds = getHiddenIds();
+function applyStarred() {
+  const starredIds = getStarredIds();
   const table = document.getElementById("matchesTable");
   if (!table) return;
   
   const tbody = table.getElementsByTagName("tbody")[0];
   const trs = tbody.getElementsByTagName("tr");
   
-  let hiddenCount = 0;
+  let starredCount = 0;
   for (let i = 0; i < trs.length; i++) {
     const tr = trs[i];
     const id = tr.getAttribute("data-id");
-    if (hiddenIds.includes(id)) {
-      tr.classList.add("hidden-property-row");
-      tr.style.display = "none";
-      hiddenCount++;
+    const starBtn = tr.querySelector(".star-btn");
+    if (starredIds.includes(id)) {
+      tr.classList.add("starred-property-row");
+      if (starBtn) {
+        starBtn.innerHTML = "⭐";
+        starBtn.classList.add("starred");
+        starBtn.title = "Saved!";
+      }
+      starredCount++;
     } else {
-      tr.classList.remove("hidden-property-row");
+      tr.classList.remove("starred-property-row");
+      if (starBtn) {
+        starBtn.innerHTML = "☆";
+        starBtn.classList.remove("starred");
+        starBtn.title = "Save Property";
+      }
     }
   }
 
-  const resetBtn = document.getElementById("resetHiddenBtn");
+  const resetBtn = document.getElementById("resetStarredBtn");
   if (resetBtn) {
-    if (hiddenCount > 0) {
+    if (starredCount > 0) {
       resetBtn.style.display = "inline-block";
-      document.getElementById("hiddenCount").textContent = hiddenCount;
+      document.getElementById("starredCount").textContent = starredCount;
     } else {
       resetBtn.style.display = "none";
     }
+  }
+
+  const chip = document.getElementById("chipStarred");
+  if (chip) {
+    chip.innerHTML = "⭐ Starred (" + starredCount + ")";
   }
   
   filterTable();
@@ -1328,20 +1378,14 @@ function filterTable() {
   var inputs = table.querySelectorAll("thead .filter-input");
   
   var visibleCount = 0;
-  const hiddenIds = getHiddenIds();
+  const starredIds = getStarredIds();
   const seenIds = getSeenIds();
-  const hideSeenEnabled = localStorage.getItem('house_finder_hide_seen') === 'true';
 
   for (var i = 0; i < tr.length; i++) {
     var display = "";
     var id = tr[i].getAttribute("data-id");
     
-    // Local storage hide check
-    if (hiddenIds.includes(id)) {
-      tr[i].style.display = "none";
-      continue;
-    }
-    if (hideSeenEnabled && seenIds.includes(id)) {
+    if (activeQuickFilter === "Starred" && !starredIds.includes(id)) {
       tr[i].style.display = "none";
       continue;
     }
@@ -1349,6 +1393,16 @@ function filterTable() {
     if (activeQuickFilter === "EarlyBird" && tr[i].getAttribute("data-early-bird") !== "true") {
       tr[i].style.display = "none";
       continue;
+    }
+
+    var compatLabelSelect = document.getElementById("compatLabelSelect");
+    var compatLabelVal = compatLabelSelect ? compatLabelSelect.value : "";
+    if (compatLabelVal) {
+      var availTd = tr[i].getElementsByTagName("td")[3];
+      if (!availTd || !availTd.querySelector(".compat-" + compatLabelVal)) {
+        tr[i].style.display = "none";
+        continue;
+      }
     }
 
     var targetDateInput = document.getElementById("targetDateInput");
@@ -1483,6 +1537,9 @@ function setQuickFilter(filterType) {
     } else if (filterType === "EarlyBird") {
       var ebBtn = document.getElementById("chipEarlyBird");
       if (ebBtn) ebBtn.classList.add("active");
+    } else if (filterType === "Starred") {
+      var stBtn = document.getElementById("chipStarred");
+      if (stBtn) stBtn.classList.add("active");
     }
   }
 }
@@ -1531,6 +1588,11 @@ function updateCompatibilityBadges() {
 }
 
 function applyMoveInFilter() {
+  var compatSelect = document.getElementById("compatLabelSelect");
+  var targetInput = document.getElementById("targetDateInput");
+  if (compatSelect && compatSelect.value && targetInput && !targetInput.value) {
+    targetInput.value = new Date().toISOString().slice(0, 10);
+  }
   updateCompatibilityBadges();
   filterTable();
 }
@@ -1540,6 +1602,8 @@ function clearMoveInAssistant() {
   if (targetInput) targetInput.value = "";
   var winSelect = document.getElementById("windowSelect");
   if (winSelect) winSelect.value = "14";
+  var compatSelect = document.getElementById("compatLabelSelect");
+  if (compatSelect) compatSelect.value = "";
   var incNow = document.getElementById("includeNowCheck");
   if (incNow) incNow.checked = true;
   var incUnk = document.getElementById("includeUnknownCheck");
@@ -1701,12 +1765,6 @@ function setMultiSort(criteria) {
   if (criteria.length === 2 && criteria[0].col === 0 && criteria[1].col === 6) {
     var btn = document.getElementById("sortDatePrice");
     if (btn) btn.classList.add("active");
-  } else if (criteria.length === 2 && criteria[0].col === 6 && criteria[1].col === 7) {
-    var btn = document.getElementById("sortPriceSize");
-    if (btn) btn.classList.add("active");
-  } else if (criteria.length === 2 && criteria[0].col === 7 && criteria[1].col === 6) {
-    var btn = document.getElementById("sortSizePrice");
-    if (btn) btn.classList.add("active");
   }
 }
 
@@ -1714,9 +1772,11 @@ function clearSort() {
   activeQuickFilter = "";
   var globalSearch = document.getElementById("globalSearch");
   if (globalSearch) globalSearch.value = "";
+  var compatSelect = document.getElementById("compatLabelSelect");
+  if (compatSelect) compatSelect.value = "";
   var inputs = document.querySelectorAll("thead .filter-input");
   for (var i = 0; i < inputs.length; i++) inputs[i].value = "";
-  var chips = document.querySelectorAll(".quick-filters .filter-chip");
+  var chips = document.querySelectorAll(".quick-actions-bar .filter-chip, .quick-filters .filter-chip");
   for (var k = 0; k < chips.length; k++) chips[k].classList.remove("active");
   var allBtn = document.getElementById("chipAll");
   if (allBtn) allBtn.classList.add("active");
@@ -1732,7 +1792,7 @@ function clearSort() {
 
 window.addEventListener('DOMContentLoaded', () => {
   applySort();
-  applyHidden();
+  applyStarred();
   applySeen();
   updateSortIndicators();
   updateCompatibilityBadges();
@@ -1745,7 +1805,7 @@ window.addEventListener('DOMContentLoaded', () => {
     <h2>Property Matches</h2>
     <div class="stats">
       Showing <span id="visibleCount">${result.length}</span> of ${result.length} properties found
-      <button id="resetHiddenBtn" onclick="resetHidden()" style="display:none;">Unhide All (<span id="hiddenCount">0</span>)</button>
+      <button id="resetStarredBtn" onclick="resetStarred()" style="display:none;">Clear Saved (<span id="starredCount">0</span>)</button>
       <button id="resetSeenBtn" onclick="resetSeen()" style="display:none;">Reset Viewed (<span id="seenCount">0</span>)</button>
     </div>
   </div>
@@ -1769,34 +1829,45 @@ window.addEventListener('DOMContentLoaded', () => {
           <option value="999" ${flags.window === 999 ? 'selected' : ''}>Any time before</option>
         </select>
       </div>
+      <div class="control-group">
+        <label for="compatLabelSelect">Match Label:</label>
+        <select id="compatLabelSelect" onchange="applyMoveInFilter()">
+          <option value="">All Labels</option>
+          <option value="spot-on">🟢 Spot On Only</option>
+          <option value="early">🟡 Early Only</option>
+          <option value="advance">🔵 Advance Only</option>
+          <option value="imm">⚪ Immediate / Negotiable</option>
+        </select>
+      </div>
       <div class="control-group checkbox-group">
-        <label class="toggle-check"><input type="checkbox" id="includeNowCheck" checked onchange="applyMoveInFilter()"> <span>Include "Now / Immediate"</span></label>
+        <label class="toggle-check"><input type="checkbox" id="includeNowCheck" checked onchange="applyMoveInFilter()"> <span>Include "Now"</span></label>
         <label class="toggle-check"><input type="checkbox" id="includeUnknownCheck" checked onchange="applyMoveInFilter()"> <span>Include "Unknown"</span></label>
       </div>
       <button id="clearMoveInBtn" class="filter-chip chip-clear-movein" onclick="clearMoveInAssistant()">Reset Date</button>
     </div>
   </div>
-  <div class="quick-filters">
-    <span class="filter-label">Agent Filter:</span>
-    <button id="chipAll" class="filter-chip active" onclick="setQuickFilter('')">All Agents</button>
-    <button id="chipOpenRent" class="filter-chip chip-openrent" onclick="setQuickFilter('OpenRent')">✨ OpenRent Only</button>
-    <button id="chipEarlyBird" class="filter-chip chip-earlybird" onclick="setQuickFilter('EarlyBird')">🦅 Early Bird Deals</button>
-    <button id="toggleSeenBtn" class="filter-chip" onclick="toggleHideSeen()">👁️ Hide Viewed</button>
-  </div>
-  <div class="quick-sorts">
-    <span class="filter-label">Quick Sort:</span>
-    <button id="sortDatePrice" class="filter-chip" onclick="setMultiSort([{col: 0, dir: 'desc'}, {col: 6, dir: 'asc'}])">📅 Date → Price</button>
-    <button id="sortPriceSize" class="filter-chip" onclick="setMultiSort([{col: 6, dir: 'asc'}, {col: 7, dir: 'desc'}])">💰 Price → Size</button>
-    <button id="sortSizePrice" class="filter-chip" onclick="setMultiSort([{col: 7, dir: 'desc'}, {col: 6, dir: 'asc'}])">📐 Size → Price</button>
-    <button id="sortTargetDate" class="filter-chip chip-target" onclick="sortByTargetDate()">🎯 Match Proximity</button>
-    <button id="clearSortBtn" class="filter-chip chip-clear" onclick="clearSort()">✕ Clear Sort / Filters</button>
-    <div class="tooltip-container">
-      <span class="tooltip-badge">ℹ️ How to Multi-Sort</span>
-      <div class="tooltip-popup">
-        <strong>⚡ Multi-Column Sorting Guide:</strong><br>
-        • <strong>Hold SHIFT + Click</strong> any column header to add it as a secondary (2), tertiary (3), etc. sort column.<br>
-        • <strong>Normal Click</strong> sets a smart 2-column default (e.g. Date then Price).<br>
-        • Click <strong>✕ Clear Sort / Filters</strong> to clear all filters and remove sorting.
+  <div class="quick-actions-bar">
+    <div class="quick-filters action-group">
+      <span class="filter-label">Agent Filter:</span>
+      <button id="chipAll" class="filter-chip active" onclick="setQuickFilter('')">All Agents</button>
+      <button id="chipOpenRent" class="filter-chip chip-openrent" onclick="setQuickFilter('OpenRent')">✨ OpenRent Only</button>
+      <button id="chipEarlyBird" class="filter-chip chip-earlybird" onclick="setQuickFilter('EarlyBird')">🦅 Early Bird Deals</button>
+      <button id="chipStarred" class="filter-chip chip-starred" onclick="setQuickFilter('Starred')">⭐ Starred (0)</button>
+    </div>
+    <div class="action-divider"></div>
+    <div class="quick-sorts action-group">
+      <span class="filter-label">Quick Sort:</span>
+      <button id="sortDatePrice" class="filter-chip" onclick="setMultiSort([{col: 0, dir: 'desc'}, {col: 6, dir: 'asc'}])">📅 Date → Price</button>
+      <button id="sortTargetDate" class="filter-chip chip-target" onclick="sortByTargetDate()">🎯 Match Proximity</button>
+      <button id="clearSortBtn" class="filter-chip chip-clear" onclick="clearSort()">✕ Clear All</button>
+      <div class="tooltip-container">
+        <span class="tooltip-badge">ℹ️ Multi-Sort</span>
+        <div class="tooltip-popup">
+          <strong>⚡ Multi-Column Sorting Guide:</strong><br>
+          • <strong>Hold SHIFT + Click</strong> any column header to add it as a secondary (2), tertiary (3), etc. sort column.<br>
+          • <strong>Normal Click</strong> sets a smart 2-column default (e.g. Date then Price).<br>
+          • Click <strong>✕ Clear All</strong> to clear all filters and remove sorting.
+        </div>
       </div>
     </div>
   </div>
@@ -1820,7 +1891,7 @@ window.addEventListener('DOMContentLoaded', () => {
       <th onclick="sortTable(7, event)">Size <span class="sort-indicator" id="sort-ind-7"></span><br><input type="text" class="filter-input" data-col="7" data-type="numeric" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Size (e.g. <50)..."></th>
       <th onclick="sortTable(8, event)">£ / sqm <span class="sort-indicator" id="sort-ind-8"></span><br><input type="text" class="filter-input" data-col="8" data-type="numeric" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="£/sqm (e.g. >=40)..."></th>
       <th style="cursor: default; text-align: center;">Link</th>
-      <th style="cursor: default; text-align: center;">Actions</th>
+      <th style="cursor: default; text-align: center;">⭐</th>
     </tr>
   </thead>
   <tbody>
