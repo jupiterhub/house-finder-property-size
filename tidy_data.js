@@ -79,6 +79,30 @@ function parseMatches(content) {
 
 function formatMatchMarkdown(match) {
   const ts = match.timestamp ? match.timestamp.toISOString() : new Date().toISOString();
+  let earlyBirdStr = '';
+  if (match.letAvailableDate && match.letAvailableDate !== 'Unknown') {
+    let availTs = 0;
+    const str = match.letAvailableDate;
+    if (/now|immediate|today/i.test(str)) availTs = Date.now();
+    else if (/(\d{2})\/(\d{2})\/(\d{4})/.test(str)) {
+      const m = str.match(/(\d{2})\/(\d{2})\/(\d{4})/);
+      const d = new Date(`${m[3]}-${m[2]}-${m[1]}`);
+      if (!isNaN(d.getTime())) availTs = d.getTime();
+    } else {
+      const d = new Date(str);
+      if (!isNaN(d.getTime())) availTs = d.getTime();
+    }
+    let updateTs = 0;
+    if (match.listingUpdate && match.listingUpdate !== 'Unknown') {
+      const d = new Date(match.listingUpdate);
+      if (!isNaN(d.getTime())) updateTs = d.getTime();
+    }
+    const refTs = updateTs || (match.timestamp ? match.timestamp.getTime() : 0);
+    if (availTs && refTs && availTs > refTs) {
+      const leadDays = (availTs - refTs) / (1000 * 60 * 60 * 24);
+      if (leadDays > 65) earlyBirdStr = ` (🦅 Early Bird: ${Math.round(leadDays)}d adv)`;
+    }
+  }
   return `### [${ts}] MATCH FOUND!\n` +
     `- **Marketed by**: ${match.agent || 'Unknown'}\n` +
     `- **Location**: ${match.location || 'Unknown'}\n` +
@@ -87,7 +111,7 @@ function formatMatchMarkdown(match) {
     `- **Size**: ${match.size} sqm\n` +
     `- **Listing Update**: ${match.listingUpdate || 'Unknown'}\n` +
     `- **Listing Status**: ${match.listingStatus || 'Unknown'}\n` +
-    `- **Let Available**: ${match.letAvailableDate || 'Unknown'}\n` +
+    `- **Let Available**: ${match.letAvailableDate || 'Unknown'}${earlyBirdStr}\n` +
     `- **Link**: [${match.link}](${match.link})\n\n` +
     `---\n\n`;
 }
@@ -353,7 +377,9 @@ async function main() {
     output: null,
     cleanSeen: false,
     migrate: false,
-    verify: false
+    verify: false,
+    targetDate: null,
+    window: 14
   };
 
   for (let i = 0; i < args.length; i++) {
@@ -365,6 +391,8 @@ async function main() {
     else if (args[i] === '--clean-seen') flags.cleanSeen = true;
     else if (args[i] === '--migrate') flags.migrate = true;
     else if (args[i] === '--verify') flags.verify = true;
+    else if (args[i] === '--target-date' || args[i] === '--move-in') flags.targetDate = args[++i];
+    else if (args[i] === '--window') flags.window = parseInt(args[++i], 10);
   }
 
   if (flags.cleanSeen) {
@@ -512,9 +540,26 @@ async function main() {
       } else if (col === 'listingStatus' || col === 'status') {
         valA = (a.listingStatus || 'Unknown').toLowerCase();
         valB = (b.listingStatus || 'Unknown').toLowerCase();
-      } else if (col === 'letAvailableDate' || col === 'available') {
-        valA = (a.letAvailableDate || 'Unknown').toLowerCase();
-        valB = (b.letAvailableDate || 'Unknown').toLowerCase();
+      } else if (col === 'letAvailableDate' || col === 'available' || col === 'target' || col === 'move-in' || col === 'proximity') {
+        const parseDateTs = (str) => {
+          if (!str || str === 'Unknown') return 0;
+          if (/now|immediate|today/i.test(str)) return Date.now();
+          if (/(\d{2})\/(\d{2})\/(\d{4})/.test(str)) {
+            const mDate = str.match(/(\d{2})\/(\d{2})\/(\d{4})/);
+            const d = new Date(`${mDate[3]}-${mDate[2]}-${mDate[1]}`);
+            if (!isNaN(d.getTime())) return d.getTime();
+          }
+          const d = new Date(str);
+          return !isNaN(d.getTime()) ? d.getTime() : 0;
+        };
+        valA = parseDateTs(a.letAvailableDate || 'Unknown');
+        valB = parseDateTs(b.letAvailableDate || 'Unknown');
+        if (col === 'target' || col === 'move-in' || col === 'proximity') {
+          const targetTs = flags.targetDate ? new Date(flags.targetDate).getTime() : Date.now();
+          valA = valA > 0 ? Math.abs(valA - targetTs) : 9999999999999;
+          valB = valB > 0 ? Math.abs(valB - targetTs) : 9999999999999;
+          if (!orderCols[idx] && !col.includes(':')) dir = 'asc';
+        }
       }
 
       if (valA !== valB) {
@@ -579,11 +624,16 @@ async function main() {
           }
         }
 
-        return `<tr data-id="${m.id}" data-index="${idx}">
+        const refTs = updateTs || (m.timestamp ? m.timestamp.getTime() : 0);
+        const leadTimeDays = (availTs && refTs && availTs > refTs) ? (availTs - refTs) / (1000 * 60 * 60 * 24) : 0;
+        const isEarlyBird = leadTimeDays > 65;
+        const earlyBirdBadge = isEarlyBird ? `<br><span class="badge badge-earlybird" title="Listed ${Math.round(leadTimeDays)} days before let available date!">🦅 Early Bird (${Math.round(leadTimeDays)}d adv)</span>` : '';
+
+        return `<tr data-id="${m.id}" data-index="${idx}" data-early-bird="${isEarlyBird ? 'true' : 'false'}">
           <td data-value="${timestamp}">${dateStr}</td>
           <td data-value="${updateTs}">${listingUpdateStr}</td>
           <td data-value="${listingStatusStr}">${listingStatusStr}</td>
-          <td data-value="${availTs}">${letAvailableStr}</td>
+          <td data-value="${availTs}"><span class="avail-text">${letAvailableStr}</span><span class="compat-indicator"></span>${earlyBirdBadge}</td>
           <td data-value="${agentStr}">${agentBadge}</td>
           <td>${m.location || 'Unknown'}</td>
           <td class="numeric" data-value="${m.price || 0}">£${m.price || 0}</td>
@@ -791,6 +841,153 @@ async function main() {
     border-color: #38bdf8;
     color: white;
     box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+  }
+  .badge-earlybird {
+    background: linear-gradient(135deg, rgba(168, 85, 247, 0.2), rgba(236, 72, 153, 0.2));
+    color: #f472b6;
+    border: 1px solid rgba(236, 72, 153, 0.4);
+    box-shadow: 0 0 12px rgba(236, 72, 153, 0.2);
+    margin-top: 4px;
+    display: inline-block;
+  }
+  .chip-earlybird.active {
+    background: linear-gradient(135deg, #9333ea, #db2777);
+    border-color: #f472b6;
+    color: white;
+    box-shadow: 0 0 15px rgba(236, 72, 153, 0.4);
+  }
+  .chip-target.active {
+    background: linear-gradient(135deg, #10b981, #059669);
+    border-color: #34d399;
+    color: white;
+    box-shadow: 0 0 15px rgba(52, 211, 153, 0.4);
+  }
+  .move-in-assistant {
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.85), rgba(15, 23, 42, 0.95));
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin: 15px 0;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: all 0.3s ease;
+  }
+  .move-in-assistant:hover {
+    border-color: rgba(56, 189, 248, 0.5);
+    box-shadow: 0 12px 36px rgba(56, 189, 248, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  }
+  .assistant-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .assistant-icon {
+    font-size: 1.3rem;
+  }
+  .assistant-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #38bdf8;
+    letter-spacing: 0.02em;
+  }
+  .assistant-subtitle {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+  .assistant-controls {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .control-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .control-group label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #cbd5e1;
+  }
+  .control-group input[type="date"], .control-group select {
+    background: #0f172a;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: #f8fafc;
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  .control-group input[type="date"]:focus, .control-group select:focus {
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.2);
+  }
+  .checkbox-group {
+    display: flex;
+    gap: 16px;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 6px 14px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  .toggle-check {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    color: #cbd5e1;
+    user-select: none;
+  }
+  .toggle-check input[type="checkbox"] {
+    accent-color: #38bdf8;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+  }
+  .chip-clear-movein {
+    background: rgba(245, 158, 11, 0.15);
+    border-color: rgba(245, 158, 11, 0.4);
+    color: #fbbf24;
+  }
+  .chip-clear-movein:hover {
+    background: rgba(245, 158, 11, 0.25);
+    color: #fef08a;
+  }
+  .compat-tag {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    margin-top: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .compat-spot-on {
+    background: rgba(34, 197, 94, 0.15);
+    color: #4ade80;
+    border: 1px solid rgba(34, 197, 94, 0.3);
+  }
+  .compat-early {
+    background: rgba(234, 179, 8, 0.15);
+    color: #facc15;
+    border: 1px solid rgba(234, 179, 8, 0.3);
+  }
+  .compat-advance {
+    background: rgba(59, 130, 246, 0.15);
+    color: #60a5fa;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+  }
+  .compat-imm {
+    background: rgba(148, 163, 184, 0.15);
+    color: #cbd5e1;
+    border: 1px solid rgba(148, 163, 184, 0.3);
   }
   .quick-sorts {
     display: flex;
@@ -1149,6 +1346,49 @@ function filterTable() {
       continue;
     }
 
+    if (activeQuickFilter === "EarlyBird" && tr[i].getAttribute("data-early-bird") !== "true") {
+      tr[i].style.display = "none";
+      continue;
+    }
+
+    var targetDateInput = document.getElementById("targetDateInput");
+    var targetDateVal = targetDateInput ? targetDateInput.value : "";
+    if (targetDateVal) {
+      var targetTs = new Date(targetDateVal).getTime();
+      var windowDays = parseInt(document.getElementById("windowSelect").value, 10);
+      var incNow = document.getElementById("includeNowCheck").checked;
+      var incUnknown = document.getElementById("includeUnknownCheck").checked;
+      
+      var availTd = tr[i].getElementsByTagName("td")[3];
+      if (availTd) {
+        var availTs = parseFloat(availTd.getAttribute("data-value")) || 0;
+        var availText = availTd.textContent.toLowerCase();
+        var isUnknown = availTs === 0 && availText.indexOf("unknown") !== -1;
+        var isNow = (availTs === 0 || availText.indexOf("now") !== -1 || availText.indexOf("immediate") !== -1 || availText.indexOf("today") !== -1);
+        
+        if (isUnknown && !incUnknown) {
+          tr[i].style.display = "none";
+          continue;
+        } else if (isNow && !incNow) {
+          tr[i].style.display = "none";
+          continue;
+        } else if (!isUnknown && !isNow && availTs > 0) {
+          var diffDays = (availTs - targetTs) / (1000 * 60 * 60 * 24);
+          if (windowDays === 999) {
+            if (diffDays > 0) {
+              tr[i].style.display = "none";
+              continue;
+            }
+          } else {
+            if (Math.abs(diffDays) > windowDays) {
+              tr[i].style.display = "none";
+              continue;
+            }
+          }
+        }
+      }
+    }
+
     var rowText = tr[i].textContent.toLowerCase();
     
     // Global search check
@@ -1218,11 +1458,15 @@ function filterTable() {
   document.getElementById("visibleCount").textContent = visibleCount;
 }
 
-function setQuickFilter(agentName) {
+var activeQuickFilter = "";
+
+function setQuickFilter(filterType) {
+  activeQuickFilter = filterType || "";
   var inputs = document.querySelectorAll("thead .filter-input");
   for (var i = 0; i < inputs.length; i++) {
     if (inputs[i].getAttribute("data-col") === "4") {
-      inputs[i].value = agentName;
+      if (filterType === "OpenRent") inputs[i].value = "OpenRent";
+      else inputs[i].value = "";
       break;
     }
   }
@@ -1230,14 +1474,98 @@ function setQuickFilter(agentName) {
   var chips = document.querySelectorAll(".quick-filters .filter-chip");
   if (chips.length > 0) {
     for (var k = 0; k < chips.length; k++) chips[k].classList.remove("active");
-    if (!agentName) {
+    if (!filterType) {
       var allBtn = document.getElementById("chipAll");
       if (allBtn) allBtn.classList.add("active");
-    } else {
+    } else if (filterType === "OpenRent") {
       var orBtn = document.getElementById("chipOpenRent");
       if (orBtn) orBtn.classList.add("active");
+    } else if (filterType === "EarlyBird") {
+      var ebBtn = document.getElementById("chipEarlyBird");
+      if (ebBtn) ebBtn.classList.add("active");
     }
   }
+}
+
+function updateCompatibilityBadges() {
+  var targetDateInput = document.getElementById("targetDateInput");
+  var targetDateVal = targetDateInput ? targetDateInput.value : "";
+  var table = document.getElementById("matchesTable");
+  if (!table) return;
+  var tbody = table.getElementsByTagName("tbody")[0];
+  var tr = tbody.getElementsByTagName("tr");
+  var windowDays = document.getElementById("windowSelect") ? parseInt(document.getElementById("windowSelect").value, 10) : 14;
+  var targetTs = targetDateVal ? new Date(targetDateVal).getTime() : 0;
+
+  for (var i = 0; i < tr.length; i++) {
+    var availTd = tr[i].getElementsByTagName("td")[3];
+    if (!availTd) continue;
+    var compatSpan = availTd.querySelector(".compat-indicator");
+    if (!compatSpan) continue;
+    
+    if (!targetDateVal || targetTs === 0) {
+      compatSpan.innerHTML = "";
+      continue;
+    }
+    
+    var availTs = parseFloat(availTd.getAttribute("data-value")) || 0;
+    var availText = availTd.textContent.toLowerCase();
+    var isUnknown = availTs === 0 && availText.indexOf("unknown") !== -1;
+    var isNow = (availTs === 0 || availText.indexOf("now") !== -1 || availText.indexOf("immediate") !== -1 || availText.indexOf("today") !== -1);
+    
+    if (isNow) {
+      compatSpan.innerHTML = '<br><span class="compat-tag compat-imm">⚪ Immediate / Negotiable</span>';
+    } else if (isUnknown) {
+      compatSpan.innerHTML = '<br><span class="compat-tag compat-imm">⚪ Ask Agent</span>';
+    } else if (availTs > 0) {
+      var diffDays = (availTs - targetTs) / (1000 * 60 * 60 * 24);
+      if ((windowDays === 999 && diffDays <= 0) || (windowDays !== 999 && Math.abs(diffDays) <= windowDays)) {
+        compatSpan.innerHTML = '<br><span class="compat-tag compat-spot-on">🟢 Spot On (' + (Math.round(diffDays) >= 0 ? '+' : '') + Math.round(diffDays) + 'd)</span>';
+      } else if (diffDays < 0) {
+        compatSpan.innerHTML = '<br><span class="compat-tag compat-early">🟡 Early (' + Math.abs(Math.round(diffDays)) + 'd prior)</span>';
+      } else {
+        compatSpan.innerHTML = '<br><span class="compat-tag compat-advance">🔵 Advance (' + Math.round(diffDays) + 'd later)</span>';
+      }
+    }
+  }
+}
+
+function applyMoveInFilter() {
+  updateCompatibilityBadges();
+  filterTable();
+}
+
+function clearMoveInAssistant() {
+  var targetInput = document.getElementById("targetDateInput");
+  if (targetInput) targetInput.value = "";
+  var winSelect = document.getElementById("windowSelect");
+  if (winSelect) winSelect.value = "14";
+  var incNow = document.getElementById("includeNowCheck");
+  if (incNow) incNow.checked = true;
+  var incUnk = document.getElementById("includeUnknownCheck");
+  if (incUnk) incUnk.checked = true;
+  updateCompatibilityBadges();
+  filterTable();
+}
+
+function sortByTargetDate() {
+  var targetInput = document.getElementById("targetDateInput");
+  var targetDateVal = targetInput ? targetInput.value : "";
+  if (!targetDateVal) {
+    var todayStr = new Date().toISOString().slice(0, 10);
+    if (targetInput) targetInput.value = todayStr;
+    targetDateVal = todayStr;
+    updateCompatibilityBadges();
+    filterTable();
+  }
+  var targetTs = new Date(targetDateVal).getTime();
+  currentSorts = [{col: 'target', targetTs: targetTs}];
+  applySort();
+  updateSortIndicators();
+  var sortBtns = document.querySelectorAll(".quick-sorts .filter-chip");
+  for (var i = 0; i < sortBtns.length; i++) sortBtns[i].classList.remove("active");
+  var btn = document.getElementById("sortTargetDate");
+  if (btn) btn.classList.add("active");
 }
 
 var currentSorts = []; // Default: no client-side column sort override; keep original generation order
@@ -1293,6 +1621,26 @@ function applySort() {
     for (var k = 0; k < currentSorts.length; k++) {
       var colIdx = currentSorts[k].col;
       var dir = currentSorts[k].dir;
+
+      if (colIdx === 'target') {
+        var tTs = currentSorts[k].targetTs;
+        var getDist = function(row) {
+          var td = row.getElementsByTagName("td")[3];
+          if (!td) return 9999999999999;
+          var ts = parseFloat(td.getAttribute("data-value")) || 0;
+          var text = td.textContent.toLowerCase();
+          if (ts > 0) return Math.abs(ts - tTs);
+          if (text.indexOf("now") !== -1 || text.indexOf("immediate") !== -1 || text.indexOf("today") !== -1) return Math.abs(Date.now() - tTs);
+          return 9999999999999;
+        };
+        var distA = getDist(rowA);
+        var distB = getDist(rowB);
+        if (distA !== distB) {
+          if (dir === 'desc') return distB - distA;
+          return distA - distB;
+        }
+        continue;
+      }
 
       var cellA = rowA.getElementsByTagName("td")[colIdx];
       var cellB = rowB.getElementsByTagName("td")[colIdx];
@@ -1363,6 +1711,7 @@ function setMultiSort(criteria) {
 }
 
 function clearSort() {
+  activeQuickFilter = "";
   var globalSearch = document.getElementById("globalSearch");
   if (globalSearch) globalSearch.value = "";
   var inputs = document.querySelectorAll("thead .filter-input");
@@ -1386,6 +1735,7 @@ window.addEventListener('DOMContentLoaded', () => {
   applyHidden();
   applySeen();
   updateSortIndicators();
+  updateCompatibilityBadges();
 });
 </script>
 </head>
@@ -1399,10 +1749,38 @@ window.addEventListener('DOMContentLoaded', () => {
       <button id="resetSeenBtn" onclick="resetSeen()" style="display:none;">Reset Viewed (<span id="seenCount">0</span>)</button>
     </div>
   </div>
+  <div class="move-in-assistant" id="moveInAssistant">
+    <div class="assistant-header">
+      <span class="assistant-icon">🎯</span>
+      <span class="assistant-title">Move-In Date Assistant</span>
+      <span class="assistant-subtitle">Find deals tailored to your tenancy start date</span>
+    </div>
+    <div class="assistant-controls">
+      <div class="control-group">
+        <label for="targetDateInput">Target Move-In:</label>
+        <input type="date" id="targetDateInput" value="${flags.targetDate || ''}" onchange="applyMoveInFilter()">
+      </div>
+      <div class="control-group">
+        <label for="windowSelect">Tolerance:</label>
+        <select id="windowSelect" onchange="applyMoveInFilter()">
+          <option value="7" ${flags.window === 7 ? 'selected' : ''}>± 7 days</option>
+          <option value="14" ${(flags.window === 14 || (!flags.window && flags.window !== 7 && flags.window !== 30 && flags.window !== 999)) ? 'selected' : ''}>± 14 days</option>
+          <option value="30" ${flags.window === 30 ? 'selected' : ''}>± 30 days</option>
+          <option value="999" ${flags.window === 999 ? 'selected' : ''}>Any time before</option>
+        </select>
+      </div>
+      <div class="control-group checkbox-group">
+        <label class="toggle-check"><input type="checkbox" id="includeNowCheck" checked onchange="applyMoveInFilter()"> <span>Include "Now / Immediate"</span></label>
+        <label class="toggle-check"><input type="checkbox" id="includeUnknownCheck" checked onchange="applyMoveInFilter()"> <span>Include "Unknown"</span></label>
+      </div>
+      <button id="clearMoveInBtn" class="filter-chip chip-clear-movein" onclick="clearMoveInAssistant()">Reset Date</button>
+    </div>
+  </div>
   <div class="quick-filters">
     <span class="filter-label">Agent Filter:</span>
     <button id="chipAll" class="filter-chip active" onclick="setQuickFilter('')">All Agents</button>
     <button id="chipOpenRent" class="filter-chip chip-openrent" onclick="setQuickFilter('OpenRent')">✨ OpenRent Only</button>
+    <button id="chipEarlyBird" class="filter-chip chip-earlybird" onclick="setQuickFilter('EarlyBird')">🦅 Early Bird Deals</button>
     <button id="toggleSeenBtn" class="filter-chip" onclick="toggleHideSeen()">👁️ Hide Viewed</button>
   </div>
   <div class="quick-sorts">
@@ -1410,6 +1788,7 @@ window.addEventListener('DOMContentLoaded', () => {
     <button id="sortDatePrice" class="filter-chip" onclick="setMultiSort([{col: 0, dir: 'desc'}, {col: 6, dir: 'asc'}])">📅 Date → Price</button>
     <button id="sortPriceSize" class="filter-chip" onclick="setMultiSort([{col: 6, dir: 'asc'}, {col: 7, dir: 'desc'}])">💰 Price → Size</button>
     <button id="sortSizePrice" class="filter-chip" onclick="setMultiSort([{col: 7, dir: 'desc'}, {col: 6, dir: 'asc'}])">📐 Size → Price</button>
+    <button id="sortTargetDate" class="filter-chip chip-target" onclick="sortByTargetDate()">🎯 Match Proximity</button>
     <button id="clearSortBtn" class="filter-chip chip-clear" onclick="clearSort()">✕ Clear Sort / Filters</button>
     <div class="tooltip-container">
       <span class="tooltip-badge">ℹ️ How to Multi-Sort</span>
