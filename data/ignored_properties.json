@@ -3736,6 +3736,14 @@
       "reason": "No floorplan image found",
       "timestamp": "2026-07-07T16:53:17.933Z"
     },
+    "90599889": {
+      "reason": "No floorplan image found",
+      "timestamp": "2026-07-07T17:11:50.325Z"
+    },
+    "90599895": {
+      "reason": "Could not determine size",
+      "timestamp": "2026-07-07T17:11:52.471Z"
+    },
     "90599904": {
       "reason": "Price £3495 exceeds max £2500",
       "timestamp": "2026-07-07T16:53:18.820Z"
