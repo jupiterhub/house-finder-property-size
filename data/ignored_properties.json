@@ -24,6 +24,10 @@
       "reason": "No floorplan image found",
       "timestamp": "2026-07-02T12:32:01.550Z"
     },
+    "72513631": {
+      "reason": "No floorplan image found",
+      "timestamp": "2026-07-07T13:03:16.006Z"
+    },
     "77423481": {
       "reason": "No floorplan image found",
       "timestamp": "2026-06-16T15:33:11.185Z"
@@ -311,6 +315,10 @@
     "88366566": {
       "reason": "Could not determine size",
       "timestamp": "2026-06-10T13:59:23.914Z"
+    },
+    "88371804": {
+      "reason": "No floorplan image found",
+      "timestamp": "2026-07-07T13:04:46.466Z"
     },
     "88385730": {
       "reason": "Could not determine size",
@@ -2896,6 +2904,10 @@
       "reason": "No floorplan image found",
       "timestamp": "2026-07-02T16:45:25.541Z"
     },
+    "90380127": {
+      "reason": "Price £4400 exceeds max £2500",
+      "timestamp": "2026-07-07T13:04:23.809Z"
+    },
     "90380799": {
       "reason": "Size 35.02 sqm below min 40",
       "timestamp": "2026-07-02T17:20:37.755Z"
@@ -3396,6 +3408,10 @@
       "reason": "Price £3574 exceeds max £2500",
       "timestamp": "2026-07-06T14:17:17.868Z"
     },
+    "90539736": {
+      "reason": "Price £3075 exceeds max £2500",
+      "timestamp": "2026-07-07T13:04:23.804Z"
+    },
     "90540150": {
       "reason": "No floorplan image found",
       "timestamp": "2026-07-06T14:18:03.775Z"
@@ -3439,6 +3455,210 @@
     "90541737": {
       "reason": "No floorplan image found",
       "timestamp": "2026-07-06T14:16:59.328Z"
+    },
+    "90545043": {
+      "reason": "Could not determine size",
+      "timestamp": "2026-07-07T13:03:54.996Z"
+    },
+    "90546951": {
+      "reason": "No floorplan image found",
+      "timestamp": "2026-07-07T13:04:27.044Z"
+    },
+    "90547002": {
+      "reason": "No floorplan image found",
+      "timestamp": "2026-07-07T13:04:26.439Z"
+    },
+    "90548010": {
+      "reason": "No floorplan image found",
+      "timestamp": "2026-07-07T13:04:23.790Z"
+    },
+    "90549498": {
+      "reason": "No floorplan image found",
+      "timestamp": "2026-07-07T13:04:37.508Z"
+    },
+    "90551502": {
+      "reason": "No floorplan image found",
+      "timestamp": "2026-07-07T13:04:11.712Z"
+    },
+    "90551592": {
+      "reason": "Size 33.6 sqm below min 40",
+      "timestamp": "2026-07-07T13:04:28.143Z"
+    },
+    "90551901": {
+      "reason": "Size 38.9 sqm below min 40",
+      "timestamp": "2026-07-07T13:04:11.111Z"
+    },
+    "90556017": {
+      "reason": "No floorplan image found",
+      "timestamp": "2026-07-07T13:03:17.804Z"
+    },
+    "90556662": {
+      "reason": "Size 31 sqm below min 40",
+      "timestamp": "2026-07-07T13:04:36.351Z"
+    },
+    "90556995": {
+      "reason": "Size 35.02 sqm below min 40",
+      "timestamp": "2026-07-07T13:04:41.580Z"
+    },
+    "90560133": {
+      "reason": "Size 24.82 sqm below min 40",
+      "timestamp": "2026-07-07T13:04:35.838Z"
+    },
+    "90560139": {
+      "reason": "No floorplan image found",
+      "timestamp": "2026-07-07T13:04:34.402Z"
+    },
+    "90561072": {
+      "reason": "No floorplan image found",
+      "timestamp": "2026-07-07T13:04:39.193Z"
+    },
+    "90564336": {
+      "reason": "Size 25 sqm below min 40",
+      "timestamp": "2026-07-07T13:03:43.483Z"
+    },
+    "90564408": {
+      "reason": "No floorplan image found",
+      "timestamp": "2026-07-07T13:04:47.603Z"
+    },
+    "90564429": {
+      "reason": "Size 18 sqm below min 40",
+      "timestamp": "2026-07-07T13:03:42.817Z"
+    },
+    "90564540": {
+      "reason": "Size 16 sqm below min 40",
+      "timestamp": "2026-07-07T13:03:42.084Z"
+    },
+    "90564624": {
+      "reason": "Size 12 sqm below min 40",
+      "timestamp": "2026-07-07T13:03:41.421Z"
+    },
+    "90564684": {
+      "reason": "Size 16 sqm below min 40",
+      "timestamp": "2026-07-07T13:03:40.765Z"
+    },
+    "90565206": {
+      "reason": "Size 34 sqm below min 40",
+      "timestamp": "2026-07-07T13:04:33.082Z"
+    },
+    "90565446": {
+      "reason": "No floorplan image found",
+      "timestamp": "2026-07-07T13:03:11.611Z"
+    },
+    "90565953": {
+      "reason": "Size 39.4 sqm below min 40",
+      "timestamp": "2026-07-07T13:03:28.158Z"
+    },
+    "90567165": {
+      "reason": "Size 38 sqm below min 40",
+      "timestamp": "2026-07-07T13:03:16.565Z"
+    },
+    "90567723": {
+      "reason": "No floorplan image found",
+      "timestamp": "2026-07-07T13:04:09.127Z"
+    },
+    "90568278": {
+      "reason": "Could not determine size",
+      "timestamp": "2026-07-07T13:03:11.064Z"
+    },
+    "90568731": {
+      "reason": "Size 36 sqm below min 40",
+      "timestamp": "2026-07-07T13:04:46.979Z"
+    },
+    "90569832": {
+      "reason": "No floorplan image found",
+      "timestamp": "2026-07-07T13:03:37.623Z"
+    },
+    "90573342": {
+      "reason": "Size 17.37 sqm below min 40",
+      "timestamp": "2026-07-07T13:03:08.977Z"
+    },
+    "90574962": {
+      "reason": "No floorplan image found",
+      "timestamp": "2026-07-07T13:03:06.885Z"
+    },
+    "90576213": {
+      "reason": "Could not determine size",
+      "timestamp": "2026-07-07T13:04:21.785Z"
+    },
+    "90576249": {
+      "reason": "No floorplan image found",
+      "timestamp": "2026-07-07T13:03:06.150Z"
+    },
+    "90578874": {
+      "reason": "No floorplan image found",
+      "timestamp": "2026-07-07T13:04:20.138Z"
+    },
+    "90579849": {
+      "reason": "Could not determine size",
+      "timestamp": "2026-07-07T13:04:04.921Z"
+    },
+    "90579891": {
+      "reason": "Could not determine size",
+      "timestamp": "2026-07-07T13:04:03.257Z"
+    },
+    "90579915": {
+      "reason": "Could not determine size",
+      "timestamp": "2026-07-07T13:04:01.552Z"
+    },
+    "90579957": {
+      "reason": "Could not determine size",
+      "timestamp": "2026-07-07T13:03:59.910Z"
+    },
+    "90579981": {
+      "reason": "Could not determine size",
+      "timestamp": "2026-07-07T13:03:58.422Z"
+    },
+    "90580005": {
+      "reason": "Could not determine size",
+      "timestamp": "2026-07-07T13:03:56.723Z"
+    },
+    "90582369": {
+      "reason": "No floorplan image found",
+      "timestamp": "2026-07-07T13:04:19.527Z"
+    },
+    "90582453": {
+      "reason": "No floorplan image found",
+      "timestamp": "2026-07-07T13:05:11.100Z"
+    },
+    "90582456": {
+      "reason": "No floorplan image found",
+      "timestamp": "2026-07-07T13:05:14.904Z"
+    },
+    "90582462": {
+      "reason": "Price £2950 exceeds max £2500",
+      "timestamp": "2026-07-07T13:05:11.640Z"
+    },
+    "90582468": {
+      "reason": "No floorplan image found",
+      "timestamp": "2026-07-07T13:05:12.355Z"
+    },
+    "90582477": {
+      "reason": "No floorplan image found",
+      "timestamp": "2026-07-07T13:05:13.737Z"
+    },
+    "90582483": {
+      "reason": "No floorplan image found",
+      "timestamp": "2026-07-07T13:05:14.225Z"
+    },
+    "90582486": {
+      "reason": "No floorplan image found",
+      "timestamp": "2026-07-07T13:05:13.228Z"
+    },
+    "90582489": {
+      "reason": "No floorplan image found",
+      "timestamp": "2026-07-07T13:05:10.557Z"
+    },
+    "90582492": {
+      "reason": "No floorplan image found",
+      "timestamp": "2026-07-07T13:05:11.633Z"
+    },
+    "90582495": {
+      "reason": "No floorplan image found",
+      "timestamp": "2026-07-07T13:05:09.969Z"
+    },
+    "90582837": {
+      "reason": "Size 22.69 sqm below min 40",
+      "timestamp": "2026-07-07T13:03:51.631Z"
     },
     "94898018": {
       "reason": "Size 30.56 sqm below min 40",

@@ -8,16 +8,6 @@
 
 ---
 
-### [2026-05-20T13:24:59.548Z] MATCH FOUND!
-- **Marketed by**: Unknown
-- **Location**: Bloomsbury (Russell Square)
-- **ID**: 88702266
-- **Price**: £1192 PCM
-- **Size**: 163.53 sqm
-- **Link**: [https://www.rightmove.co.uk/properties/88702266](https://www.rightmove.co.uk/properties/88702266)
-
----
-
 ### [2026-07-02T17:21:03.931Z] MATCH FOUND!
 - **Marketed by**: Unknown
 - **Location**: Angel
@@ -55,6 +45,26 @@
 - **Price**: £4800 PCM
 - **Size**: 80 sqm
 - **Link**: [https://www.rightmove.co.uk/properties/87908958](https://www.rightmove.co.uk/properties/87908958)
+
+---
+
+### [2026-07-07T13:05:14.907Z] MATCH FOUND!
+- **Marketed by**: Foxtons, Stratford
+- **Location**: Stratford
+- **ID**: 90549390
+- **Price**: £2250 PCM
+- **Size**: 78 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/90549390](https://www.rightmove.co.uk/properties/90549390)
+
+---
+
+### [2026-07-07T13:05:14.907Z] MATCH FOUND!
+- **Marketed by**: JLL, Stratford
+- **Location**: Stratford
+- **ID**: 89863914
+- **Price**: £2400 PCM
+- **Size**: 76 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/89863914](https://www.rightmove.co.uk/properties/89863914)
 
 ---
 
@@ -218,6 +228,16 @@
 
 ---
 
+### [2026-07-07T13:05:14.906Z] MATCH FOUND!
+- **Marketed by**: Knight Frank - Lettings, Canary  Wharf
+- **Location**: Canary Wharf
+- **ID**: 90564630
+- **Price**: £2275 PCM
+- **Size**: 66.6 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/90564630](https://www.rightmove.co.uk/properties/90564630)
+
+---
+
 ### [2026-07-02T17:21:03.931Z] MATCH FOUND!
 - **Marketed by**: Unknown
 - **Location**: Paddington
@@ -268,6 +288,16 @@
 
 ---
 
+### [2026-07-07T13:05:14.907Z] MATCH FOUND!
+- **Marketed by**: Foxtons, Islington
+- **Location**: Angel
+- **ID**: 87973677
+- **Price**: £2150 PCM
+- **Size**: 62 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/87973677](https://www.rightmove.co.uk/properties/87973677)
+
+---
+
 ### [2026-06-18T13:58:42.040Z] MATCH FOUND!
 - **Marketed by**: Unknown
 - **Location**: Canary Wharf
@@ -278,6 +308,16 @@
 
 ---
 
+### [2026-07-07T13:05:14.906Z] MATCH FOUND!
+- **Marketed by**: Chestertons, Islington
+- **Location**: Farringdon / Clerkenwell
+- **ID**: 90552402
+- **Price**: £2500 PCM
+- **Size**: 62 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/90552402](https://www.rightmove.co.uk/properties/90552402)
+
+---
+
 ### [2026-07-02T17:21:03.929Z] MATCH FOUND!
 - **Marketed by**: Unknown
 - **Location**: West Hampstead
@@ -285,6 +325,16 @@
 - **Price**: £2058 PCM
 - **Size**: 61.04 sqm
 - **Link**: [https://www.rightmove.co.uk/properties/90382506](https://www.rightmove.co.uk/properties/90382506)
+
+---
+
+### [2026-07-07T13:05:14.906Z] MATCH FOUND!
+- **Marketed by**: Stirling Ackroyd Lettings, Canary Wharf
+- **Location**: Canary Wharf
+- **ID**: 90572814
+- **Price**: £2400 PCM
+- **Size**: 61 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/90572814](https://www.rightmove.co.uk/properties/90572814)
 
 ---
 
@@ -415,16 +465,6 @@
 - **Price**: £2500 PCM
 - **Size**: 57.41 sqm
 - **Link**: [https://www.rightmove.co.uk/properties/90500232](https://www.rightmove.co.uk/properties/90500232)
-
----
-
-### [2026-07-02T17:21:03.928Z] MATCH FOUND!
-- **Marketed by**: Unknown
-- **Location**: Ealing Broadway
-- **ID**: 90173592
-- **Price**: £2200 PCM
-- **Size**: 57 sqm
-- **Link**: [https://www.rightmove.co.uk/properties/90173592](https://www.rightmove.co.uk/properties/90173592)
 
 ---
 
@@ -578,6 +618,16 @@
 
 ---
 
+### [2026-07-07T13:05:14.907Z] MATCH FOUND!
+- **Marketed by**: Garrison Estates, London
+- **Location**: Canary Wharf
+- **ID**: 90549924
+- **Price**: £2400 PCM
+- **Size**: 54 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/90549924](https://www.rightmove.co.uk/properties/90549924)
+
+---
+
 ### [2026-05-02T20:15:55.706Z] MATCH FOUND!
 - **Marketed by**: Unknown
 - **Location**: Unknown
@@ -718,6 +768,16 @@
 
 ---
 
+### [2026-07-07T13:05:14.907Z] MATCH FOUND!
+- **Marketed by**: Hamptons, Islington
+- **Location**: Highbury & Islington
+- **ID**: 90581886
+- **Price**: £2250 PCM
+- **Size**: 51.84 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/90581886](https://www.rightmove.co.uk/properties/90581886)
+
+---
+
 ### [2026-07-02T17:21:03.931Z] MATCH FOUND!
 - **Marketed by**: Unknown
 - **Location**: Highbury & Islington
@@ -725,6 +785,16 @@
 - **Price**: £2200 PCM
 - **Size**: 51.75 sqm
 - **Link**: [https://www.rightmove.co.uk/properties/90330885](https://www.rightmove.co.uk/properties/90330885)
+
+---
+
+### [2026-07-07T13:05:14.907Z] MATCH FOUND!
+- **Marketed by**: CityZEN, London
+- **Location**: Stratford
+- **ID**: 90549273
+- **Price**: £1755 PCM
+- **Size**: 51.25 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/90549273](https://www.rightmove.co.uk/properties/90549273)
 
 ---
 
@@ -745,6 +815,16 @@
 - **Price**: £2200 PCM
 - **Size**: 51 sqm
 - **Link**: [https://www.rightmove.co.uk/properties/90366564](https://www.rightmove.co.uk/properties/90366564)
+
+---
+
+### [2026-07-07T13:05:14.907Z] MATCH FOUND!
+- **Marketed by**: TAUK, Covering Nationwide
+- **Location**: Stratford
+- **ID**: 90566934
+- **Price**: £2250 PCM
+- **Size**: 51 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/90566934](https://www.rightmove.co.uk/properties/90566934)
 
 ---
 
@@ -808,6 +888,16 @@
 
 ---
 
+### [2026-07-07T13:05:14.907Z] MATCH FOUND!
+- **Marketed by**: Foxtons, Islington
+- **Location**: Highbury & Islington
+- **ID**: 88627956
+- **Price**: £2450 PCM
+- **Size**: 51 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/88627956](https://www.rightmove.co.uk/properties/88627956)
+
+---
+
 ### [2026-06-04T13:46:51.487Z] MATCH FOUND!
 - **Marketed by**: Unknown
 - **Location**: Canary Wharf
@@ -838,6 +928,16 @@
 
 ---
 
+### [2026-07-07T13:05:14.907Z] MATCH FOUND!
+- **Marketed by**: Stirling Ackroyd Lettings, London Bridge
+- **Location**: London Bridge
+- **ID**: 90532275
+- **Price**: £2250 PCM
+- **Size**: 50.2 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/90532275](https://www.rightmove.co.uk/properties/90532275)
+
+---
+
 ### [2026-07-06T14:18:08.558Z] MATCH FOUND!
 - **Marketed by**: Kinleigh Folkard and Hayward - Lettings, Islington
 - **Location**: Farringdon / Clerkenwell
@@ -845,6 +945,16 @@
 - **Price**: £2500 PCM
 - **Size**: 50.1 sqm
 - **Link**: [https://www.rightmove.co.uk/properties/90528018](https://www.rightmove.co.uk/properties/90528018)
+
+---
+
+### [2026-07-07T13:05:14.907Z] MATCH FOUND!
+- **Marketed by**: Parker James Estates, London
+- **Location**: Paddington
+- **ID**: 90575472
+- **Price**: £1900 PCM
+- **Size**: 50 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/90575472](https://www.rightmove.co.uk/properties/90575472)
 
 ---
 
@@ -875,16 +985,6 @@
 - **Price**: £2492 PCM
 - **Size**: 50 sqm
 - **Link**: [https://www.rightmove.co.uk/properties/90500079](https://www.rightmove.co.uk/properties/90500079)
-
----
-
-### [2026-06-18T13:58:42.040Z] MATCH FOUND!
-- **Marketed by**: Unknown
-- **Location**: Canary Wharf
-- **ID**: 89866995
-- **Price**: £2492 PCM
-- **Size**: 50 sqm
-- **Link**: [https://www.rightmove.co.uk/properties/89866995](https://www.rightmove.co.uk/properties/89866995)
 
 ---
 
@@ -1008,16 +1108,6 @@
 
 ---
 
-### [2026-06-29T14:38:32.082Z] MATCH FOUND!
-- **Marketed by**: Unknown
-- **Location**: Canary Wharf
-- **ID**: 90258237
-- **Price**: £2300 PCM
-- **Size**: 48 sqm
-- **Link**: [https://www.rightmove.co.uk/properties/90258237](https://www.rightmove.co.uk/properties/90258237)
-
----
-
 ### [2026-06-10T13:59:26.516Z] MATCH FOUND!
 - **Marketed by**: Unknown
 - **Location**: Canary Wharf
@@ -1025,16 +1115,6 @@
 - **Price**: £2300 PCM
 - **Size**: 48 sqm
 - **Link**: [https://www.rightmove.co.uk/properties/89539155](https://www.rightmove.co.uk/properties/89539155)
-
----
-
-### [2026-07-02T17:21:03.929Z] MATCH FOUND!
-- **Marketed by**: Unknown
-- **Location**: London Bridge
-- **ID**: 90313908
-- **Price**: £2450 PCM
-- **Size**: 48 sqm
-- **Link**: [https://www.rightmove.co.uk/properties/90313908](https://www.rightmove.co.uk/properties/90313908)
 
 ---
 
@@ -1048,6 +1128,16 @@
 
 ---
 
+### [2026-07-07T13:05:14.907Z] MATCH FOUND!
+- **Marketed by**: Colin Bibra Estate Agents Ltd, London
+- **Location**: Ealing Broadway
+- **ID**: 90584553
+- **Price**: £2100 PCM
+- **Size**: 47.45 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/90584553](https://www.rightmove.co.uk/properties/90584553)
+
+---
+
 ### [2026-07-02T17:21:03.928Z] MATCH FOUND!
 - **Marketed by**: Unknown
 - **Location**: Ealing Broadway
@@ -1055,6 +1145,16 @@
 - **Price**: £2000 PCM
 - **Size**: 47 sqm
 - **Link**: [https://www.rightmove.co.uk/properties/90269487](https://www.rightmove.co.uk/properties/90269487)
+
+---
+
+### [2026-07-07T13:05:14.907Z] MATCH FOUND!
+- **Marketed by**: Fraser and Co, London West End
+- **Location**: Paddington
+- **ID**: 90553167
+- **Price**: £2492 PCM
+- **Size**: 47 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/90553167](https://www.rightmove.co.uk/properties/90553167)
 
 ---
 
@@ -1105,6 +1205,26 @@
 - **Price**: £2150 PCM
 - **Size**: 46.36 sqm
 - **Link**: [https://www.rightmove.co.uk/properties/90499383](https://www.rightmove.co.uk/properties/90499383)
+
+---
+
+### [2026-07-07T13:05:14.907Z] MATCH FOUND!
+- **Marketed by**: Chestertons, Canary Wharf and Docklands
+- **Location**: Canary Wharf
+- **ID**: 90556479
+- **Price**: £2100 PCM
+- **Size**: 46 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/90556479](https://www.rightmove.co.uk/properties/90556479)
+
+---
+
+### [2026-07-07T13:05:14.906Z] MATCH FOUND!
+- **Marketed by**: Chestertons, Canary Wharf and Docklands
+- **Location**: Canary Wharf
+- **ID**: 90582321
+- **Price**: £2100 PCM
+- **Size**: 46 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/90582321](https://www.rightmove.co.uk/properties/90582321)
 
 ---
 
@@ -1165,16 +1285,6 @@
 - **Price**: £2250 PCM
 - **Size**: 45.4 sqm
 - **Link**: [https://www.rightmove.co.uk/properties/89126466](https://www.rightmove.co.uk/properties/89126466)
-
----
-
-### [2026-07-02T17:21:03.931Z] MATCH FOUND!
-- **Marketed by**: Unknown
-- **Location**: Highbury & Islington
-- **ID**: 90254595
-- **Price**: £2250 PCM
-- **Size**: 45 sqm
-- **Link**: [https://www.rightmove.co.uk/properties/90254595](https://www.rightmove.co.uk/properties/90254595)
 
 ---
 
@@ -1245,16 +1355,6 @@
 - **Price**: £2496 PCM
 - **Size**: 44.39 sqm
 - **Link**: [https://www.rightmove.co.uk/properties/89657289](https://www.rightmove.co.uk/properties/89657289)
-
----
-
-### [2026-07-02T17:21:03.929Z] MATCH FOUND!
-- **Marketed by**: Unknown
-- **Location**: London Bridge
-- **ID**: 90374136
-- **Price**: £1850 PCM
-- **Size**: 44 sqm
-- **Link**: [https://www.rightmove.co.uk/properties/90374136](https://www.rightmove.co.uk/properties/90374136)
 
 ---
 
@@ -1348,6 +1448,16 @@
 
 ---
 
+### [2026-07-07T13:05:14.907Z] MATCH FOUND!
+- **Marketed by**: TAUK, Covering Nationwide
+- **Location**: Paddington
+- **ID**: 90534960
+- **Price**: £2500 PCM
+- **Size**: 43 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/90534960](https://www.rightmove.co.uk/properties/90534960)
+
+---
+
 ### [2026-07-02T17:21:03.929Z] MATCH FOUND!
 - **Marketed by**: Unknown
 - **Location**: London Bridge
@@ -1355,6 +1465,16 @@
 - **Price**: £2500 PCM
 - **Size**: 43 sqm
 - **Link**: [https://www.rightmove.co.uk/properties/169515746](https://www.rightmove.co.uk/properties/169515746)
+
+---
+
+### [2026-07-07T13:05:14.907Z] MATCH FOUND!
+- **Marketed by**: Gibbs Gillespie, Ealing Broadway
+- **Location**: Ealing Broadway
+- **ID**: 90581121
+- **Price**: £2000 PCM
+- **Size**: 42.5 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/90581121](https://www.rightmove.co.uk/properties/90581121)
 
 ---
 
@@ -1435,6 +1555,16 @@
 - **Price**: £2349 PCM
 - **Size**: 41.99 sqm
 - **Link**: [https://www.rightmove.co.uk/properties/166430741](https://www.rightmove.co.uk/properties/166430741)
+
+---
+
+### [2026-07-07T13:05:14.907Z] MATCH FOUND!
+- **Marketed by**: Square Quarters, Islington
+- **Location**: Highbury & Islington
+- **ID**: 90546252
+- **Price**: £1950 PCM
+- **Size**: 41 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/90546252](https://www.rightmove.co.uk/properties/90546252)
 
 ---
 
@@ -1558,6 +1688,16 @@
 
 ---
 
+### [2026-07-07T13:05:14.907Z] MATCH FOUND!
+- **Marketed by**: OpenRent, London
+- **Location**: Canary Wharf
+- **ID**: 90562557
+- **Price**: £2297 PCM
+- **Size**: 40 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/90562557](https://www.rightmove.co.uk/properties/90562557)
+
+---
+
 ### [2026-07-04T11:57:12.810Z] MATCH FOUND!
 - **Marketed by**: Unknown
 - **Location**: Blackfriars
@@ -1595,6 +1735,16 @@
 - **Price**: £2496 PCM
 - **Size**: 40 sqm
 - **Link**: [https://www.rightmove.co.uk/properties/88631589](https://www.rightmove.co.uk/properties/88631589)
+
+---
+
+### [2026-07-07T13:05:14.906Z] MATCH FOUND!
+- **Marketed by**: Hurford Salvi Carr, Britton Street
+- **Location**: Farringdon / Clerkenwell
+- **ID**: 90558996
+- **Price**: £2500 PCM
+- **Size**: 40 sqm
+- **Link**: [https://www.rightmove.co.uk/properties/90558996](https://www.rightmove.co.uk/properties/90558996)
 
 ---
 
