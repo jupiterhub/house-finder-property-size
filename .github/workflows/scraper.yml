@@ -2,9 +2,12 @@ name: Property Scraper
 
 on:
   schedule:
-    # Run at 10:43 AM UTC every day.
-    # This blends in better with typical daytime human traffic.
-    - cron: '43 10 * * *'
+    # 08:30 BST (07:30 UTC) - Morning rush & weekend notice processing
+    - cron: '30 7 * * 1-6'
+    # 12:30 BST (11:30 UTC) - Midday listing wave
+    - cron: '30 11 * * 1-5'
+    # 16:30 BST (15:30 UTC) - End-of-day wrap
+    - cron: '30 15 * * 1-5'
   # Allow manual triggering from the GitHub Actions tab
   workflow_dispatch:
 
@@ -12,9 +15,10 @@ jobs:
   scrape:
     runs-on: ubuntu-latest
     
-    # Optional but good practice: Give the job permissions to push back to the repo
+    # Give the job permissions to push back to the repo and create issues
     permissions:
       contents: write
+      issues: write
 
     steps:
       - name: Checkout repository
@@ -34,6 +38,42 @@ jobs:
 
       - name: Run Scraper
         run: bash run.sh
+
+      - name: Alert on New Matches (GitHub Issue & ntfy.sh)
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Extract newly added Rightmove URLs from git diff
+          NEW_LINKS=$(git diff HEAD --unified=0 data/matches.md | grep -E '^\+' | grep -o 'https://www.rightmove.co.uk/properties/[0-9]*' | sort -u || true)
+          
+          if [ -n "$NEW_LINKS" ]; then
+            COUNT=$(echo "$NEW_LINKS" | wc -l | tr -d ' ')
+            echo "Found $COUNT new match(es)! Triggering alerts..."
+            
+            ISSUE_BODY=$(printf "@jupiterhub The scraper just found **$COUNT new apartment(s)** matching your criteria!\n\n### Direct Links:\n%s\n\nCheck [matches.md](https://github.com/${{ github.repository }}/blob/main/data/matches.md) for full details." "$NEW_LINKS")
+            
+            # Create a GitHub Issue assigned to @jupiterhub
+            ISSUE_URL=$(gh issue create \
+              --title "🏠 [Sprint Alert] $COUNT New Apartment Match(es) Found!" \
+              --body "$ISSUE_BODY" \
+              --assignee "jupiterhub" || echo "")
+            
+            echo "Created GitHub Issue: $ISSUE_URL"
+            
+            # Use the created issue URL (or fallback to first property link) for the ntfy tap action
+            FIRST_LINK=$(echo "$NEW_LINKS" | head -n 1)
+            CLICK_URL=${ISSUE_URL:-$FIRST_LINK}
+            
+            # Send instant push notification to ntfy.sh
+            curl -H "Title: 🏠 $COUNT New London Apartment(s)!" \
+                 -H "Priority: high" \
+                 -H "Tags: house,uk,gb" \
+                 -H "Click: $CLICK_URL" \
+                 -d "Found $COUNT new property match(es)! Tap to view the GitHub Issue and direct Rightmove links." \
+                 https://ntfy.sh/london-rent-jupiterhub-2026 || true
+          else
+            echo "No new properties added in this run."
+          fi
 
       - name: Commit and Push Changes
         run: |
