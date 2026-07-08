@@ -131,8 +131,8 @@
 - **ID**: 89266041
 - **Price**: £2500 PCM
 - **Size**: 76 sqm
-- **Listing Update**: 2026-06-03
-- **Listing Status**: Added on 03/06/2026
+- **Listing Update**: 2026-07-08
+- **Listing Status**: Reduced today
 - **Let Available**: 04/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/89266041](https://www.rightmove.co.uk/properties/89266041)
 
@@ -365,20 +365,6 @@ Millwall, E14
 
 ---
 
-### [2026-07-08T08:40:22.292Z] MATCH FOUND!
-- **Marketed by**: Easthaus, London
-- **Location**: Stratford
-- **Property Name**: Biggerstaff Road, London, E15
-- **ID**: 89205498
-- **Price**: £1850 PCM
-- **Size**: 63 sqm
-- **Listing Update**: 2026-06-16
-- **Listing Status**: Reduced on 16/06/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/89205498](https://www.rightmove.co.uk/properties/89205498)
-
----
-
 ### [2026-07-07T16:53:19.142Z] MATCH FOUND!
 - **Marketed by**: Look Property Services Ltd, Bow
 - **Location**: Stratford
@@ -446,21 +432,6 @@ Millwall, E14
 - **Listing Status**: Added on 18/06/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/89856171](https://www.rightmove.co.uk/properties/89856171)
-
----
-
-### [2026-07-07T13:05:14.906Z] MATCH FOUND!
-- **Marketed by**: Chestertons, Islington
-- **Location**: Farringdon / Clerkenwell
-- **Property Name**: Dallington Street, 
-Clerkenwell, EC1V
-- **ID**: 90552402
-- **Price**: £2500 PCM
-- **Size**: 62 sqm
-- **Listing Update**: 2026-07-06
-- **Listing Status**: Reduced on 06/07/2026
-- **Let Available**: 14/07/2026
-- **Link**: [https://www.rightmove.co.uk/properties/90552402](https://www.rightmove.co.uk/properties/90552402)
 
 ---
 
@@ -1488,6 +1459,20 @@ Cassilis Road, E14
 
 ---
 
+### [2026-07-08T16:57:39.799Z] MATCH FOUND!
+- **Marketed by**: Hastings International, London Bridge
+- **Location**: London Bridge
+- **Property Name**: Old Theatre Court, Park Street, London, SE1
+- **ID**: 90643629
+- **Price**: £2275 PCM
+- **Size**: 49.61 sqm
+- **Listing Update**: 2026-07-08
+- **Listing Status**: Added today
+- **Let Available**: 07/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/90643629](https://www.rightmove.co.uk/properties/90643629)
+
+---
+
 ### [2026-07-08T12:10:56.580Z] MATCH FOUND!
 - **Marketed by**: Hamptons, Canary Wharf
 - **Location**: Canary Wharf
@@ -1499,6 +1484,21 @@ Cassilis Road, E14
 - **Listing Status**: Added today
 - **Let Available**: 15/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90628257](https://www.rightmove.co.uk/properties/90628257)
+
+---
+
+### [2026-07-08T16:57:39.799Z] MATCH FOUND!
+- **Marketed by**: Chestertons, Canary Wharf and Docklands
+- **Location**: Canary Wharf
+- **Property Name**: Ability Place, 
+Millharbour, E14
+- **ID**: 90643689
+- **Price**: £2200 PCM
+- **Size**: 49 sqm
+- **Listing Update**: 2026-07-08
+- **Listing Status**: Added today
+- **Let Available**: 12/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/90643689](https://www.rightmove.co.uk/properties/90643689)
 
 ---
 
@@ -1559,17 +1559,17 @@ Gee Street, EC1V
 
 ---
 
-### [2026-07-06T14:18:08.558Z] MATCH FOUND!
+### [2026-07-08T16:57:39.799Z] MATCH FOUND!
 - **Marketed by**: Greystar, Coppermaker Square
 - **Location**: Stratford
 - **Property Name**: Coppermaker Square
-- **ID**: 90539745
+- **ID**: 90638649
 - **Price**: £2500 PCM
 - **Size**: 49 sqm
-- **Listing Update**: 2026-07-06
-- **Listing Status**: Added on 06/07/2026
-- **Let Available**: 07/10/2026 (🦅 Early Bird: 93d adv)
-- **Link**: [https://www.rightmove.co.uk/properties/90539745](https://www.rightmove.co.uk/properties/90539745)
+- **Listing Update**: 2026-07-08
+- **Listing Status**: Added today
+- **Let Available**: 07/10/2026 (🦅 Early Bird: 91d adv)
+- **Link**: [https://www.rightmove.co.uk/properties/90638649](https://www.rightmove.co.uk/properties/90638649)
 
 ---
 
@@ -1895,6 +1895,34 @@ Millwall, E14
 - **Listing Status**: Reduced on 30/06/2026
 - **Let Available**: 14/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/89470749](https://www.rightmove.co.uk/properties/89470749)
+
+---
+
+### [2026-07-08T16:57:39.799Z] MATCH FOUND!
+- **Marketed by**: Fraser and Co, London West End
+- **Location**: Paddington
+- **Property Name**: Peninsula Apartments, W2
+- **ID**: 90650151
+- **Price**: £2492 PCM
+- **Size**: 46 sqm
+- **Listing Update**: 2026-07-08
+- **Listing Status**: Added today
+- **Let Available**: 20/07/2026
+- **Link**: [https://www.rightmove.co.uk/properties/90650151](https://www.rightmove.co.uk/properties/90650151)
+
+---
+
+### [2026-07-08T16:57:39.799Z] MATCH FOUND!
+- **Marketed by**: Winkworth, Islington
+- **Location**: Highbury & Islington
+- **Property Name**: Ashby Grove, London, N1
+- **ID**: 90654522
+- **Price**: £2500 PCM
+- **Size**: 46 sqm
+- **Listing Update**: 2026-07-08
+- **Listing Status**: Added today
+- **Let Available**: 13/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/90654522](https://www.rightmove.co.uk/properties/90654522)
 
 ---
 
