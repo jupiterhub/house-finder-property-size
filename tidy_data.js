@@ -35,6 +35,11 @@ function parseMatches(content) {
     if (locMatch) match.location = locMatch[1].trim();
     else match.location = 'Unknown';
 
+    // Parse Property Name
+    const propNameMatch = block.match(/(?:Property Name:|\*\*Property Name\*\*:) (.*)/);
+    if (propNameMatch) match.propertyName = propNameMatch[1].trim();
+    else match.propertyName = 'Unknown';
+
     // Parse ID
     const idMatch = block.match(/(?:ID:|\*\*ID\*\*:) (.*)/);
     if (idMatch) match.id = idMatch[1].trim();
@@ -106,6 +111,7 @@ function formatMatchMarkdown(match) {
   return `### [${ts}] MATCH FOUND!\n` +
     `- **Marketed by**: ${match.agent || 'Unknown'}\n` +
     `- **Location**: ${match.location || 'Unknown'}\n` +
+    `- **Property Name**: ${match.propertyName || 'Unknown'}\n` +
     `- **ID**: ${match.id}\n` +
     `- **Price**: £${match.price} PCM\n` +
     `- **Size**: ${match.size} sqm\n` +
@@ -145,6 +151,7 @@ function extractRightmoveMetadata(html) {
   let letAvailableDate = 'Unknown';
   let listingStatus = 'Unknown';
   let listingUpdate = 'Unknown';
+  let propertyName = 'Unknown';
 
   try {
     const pmMatch = html.match(/(?:window\.)?__PAGE_MODEL\s*=\s*(\{.+?\});/) || html.match(/(?:window\.)?PAGE_MODEL\s*=\s*(\{.+?\});/);
@@ -203,6 +210,14 @@ function extractRightmoveMetadata(html) {
         } else if (analyticsAdded) {
           listingUpdate = analyticsAdded;
         }
+
+        if (pd.address?.displayAddress) {
+          propertyName = String(pd.address.displayAddress).trim();
+        } else if (pd.location?.displayAddress) {
+          propertyName = String(pd.location.displayAddress).trim();
+        } else if (pd.displayAddress) {
+          propertyName = String(pd.displayAddress).trim();
+        }
       }
     }
   } catch (err) {}
@@ -247,7 +262,12 @@ function extractRightmoveMetadata(html) {
     letAvailableDate = letAvailableDate.replace(/^Let\s+available\s+date:\s*/i, '').trim();
   }
 
-  return { letAvailableDate, listingStatus, listingUpdate };
+  if (propertyName === 'Unknown' || !propertyName) {
+    const mAddr = html.match(/displayAddress\\?"\s*:\s*\\?"([^"\\]+)/i);
+    if (mAddr && mAddr[1]) propertyName = mAddr[1].trim();
+  }
+
+  return { letAvailableDate, listingStatus, listingUpdate, propertyName };
 }
 
 async function enrichMissingMetadata(matches) {
@@ -257,6 +277,7 @@ async function enrichMissingMetadata(matches) {
     if (!m.letAvailableDate || m.letAvailableDate === 'Unknown') return true;
     if (!m.listingUpdate || m.listingUpdate === 'Unknown' || !/^\d{4}-\d{2}-\d{2}$/.test(m.listingUpdate)) return true;
     if (!m.listingStatus || m.listingStatus === 'Unknown') return true;
+    if (!m.propertyName || m.propertyName === 'Unknown') return true;
     return false;
   };
 
@@ -284,6 +305,7 @@ async function enrichMissingMetadata(matches) {
           if (meta.letAvailableDate && meta.letAvailableDate !== 'Unknown') item.letAvailableDate = meta.letAvailableDate;
           if (meta.listingStatus && meta.listingStatus !== 'Unknown') item.listingStatus = meta.listingStatus;
           if (meta.listingUpdate && meta.listingUpdate !== 'Unknown') item.listingUpdate = meta.listingUpdate;
+          if (meta.propertyName && meta.propertyName !== 'Unknown') item.propertyName = meta.propertyName;
         }
       } catch (err) {}
       count++;
@@ -355,6 +377,7 @@ async function verifyMatches(matches) {
         if (meta.letAvailableDate && meta.letAvailableDate !== 'Unknown') item.letAvailableDate = meta.letAvailableDate;
         if (meta.listingStatus && meta.listingStatus !== 'Unknown') item.listingStatus = meta.listingStatus;
         if (meta.listingUpdate && meta.listingUpdate !== 'Unknown') item.listingUpdate = meta.listingUpdate;
+        if (meta.propertyName && meta.propertyName !== 'Unknown') item.propertyName = meta.propertyName;
         results.push(item);
       }
     } catch (err) {
@@ -636,6 +659,7 @@ async function main() {
           <td data-value="${availTs}"><span class="avail-text">${letAvailableStr}</span><span class="compat-indicator"></span>${earlyBirdBadge}</td>
           <td data-value="${agentStr}">${agentBadge}</td>
           <td>${m.location || 'Unknown'}</td>
+          <td>${m.propertyName || 'Unknown'}</td>
           <td class="numeric" data-value="${m.price || 0}">£${m.price || 0}</td>
           <td class="numeric" data-value="${m.size || 0}">${m.size || 0} sqm</td>
           <td class="numeric" data-value="${pricePerSqmValue}">£${pricePerSqm}</td>
@@ -1645,24 +1669,24 @@ function sortTable(n, event) {
     if (foundIdx !== -1) {
       currentSorts[foundIdx].dir = currentSorts[foundIdx].dir === 'asc' ? 'desc' : 'asc';
     } else {
-      currentSorts.push({col: n, dir: (n === 0 || n === 1 || n === 3 || n === 7) ? 'desc' : 'asc'});
+      currentSorts.push({col: n, dir: (n === 0 || n === 1 || n === 3 || n === 8) ? 'desc' : 'asc'});
     }
   } else {
     var primaryDir = 'asc';
     if (currentSorts.length > 0 && currentSorts[0].col === n) {
       primaryDir = currentSorts[0].dir === 'asc' ? 'desc' : 'asc';
     } else {
-      primaryDir = (n === 0 || n === 1 || n === 3 || n === 7) ? 'desc' : 'asc';
+      primaryDir = (n === 0 || n === 1 || n === 3 || n === 8) ? 'desc' : 'asc';
     }
 
     if (n === 0) {
-      currentSorts = [{col: 0, dir: primaryDir}, {col: 6, dir: 'asc'}];
-    } else if (n === 6) {
-      currentSorts = [{col: 6, dir: primaryDir}, {col: 7, dir: 'desc'}];
+      currentSorts = [{col: 0, dir: primaryDir}, {col: 7, dir: 'asc'}];
     } else if (n === 7) {
-      currentSorts = [{col: 7, dir: primaryDir}, {col: 6, dir: 'asc'}];
+      currentSorts = [{col: 7, dir: primaryDir}, {col: 8, dir: 'desc'}];
+    } else if (n === 8) {
+      currentSorts = [{col: 8, dir: primaryDir}, {col: 7, dir: 'asc'}];
     } else {
-      currentSorts = [{col: n, dir: primaryDir}, {col: 6, dir: 'asc'}];
+      currentSorts = [{col: n, dir: primaryDir}, {col: 7, dir: 'asc'}];
     }
   }
 
@@ -1739,7 +1763,7 @@ function applySort() {
 }
 
 function updateSortIndicators() {
-  for (var c = 0; c <= 8; c++) {
+  for (var c = 0; c <= 9; c++) {
     var ind = document.getElementById("sort-ind-" + c);
     if (ind) ind.textContent = "";
   }
@@ -1762,7 +1786,7 @@ function setMultiSort(criteria) {
   var sortBtns = document.querySelectorAll(".quick-sorts .filter-chip");
   for (var i = 0; i < sortBtns.length; i++) sortBtns[i].classList.remove("active");
   
-  if (criteria.length === 2 && criteria[0].col === 0 && criteria[1].col === 6) {
+  if (criteria.length === 2 && criteria[0].col === 0 && criteria[1].col === 7) {
     var btn = document.getElementById("sortDatePrice");
     if (btn) btn.classList.add("active");
   }
@@ -1857,7 +1881,7 @@ window.addEventListener('DOMContentLoaded', () => {
     <div class="action-divider"></div>
     <div class="quick-sorts action-group">
       <span class="filter-label">Quick Sort:</span>
-      <button id="sortDatePrice" class="filter-chip" onclick="setMultiSort([{col: 0, dir: 'desc'}, {col: 6, dir: 'asc'}])">📅 Date → Price</button>
+      <button id="sortDatePrice" class="filter-chip" onclick="setMultiSort([{col: 0, dir: 'desc'}, {col: 7, dir: 'asc'}])">📅 Date → Price</button>
       <button id="sortTargetDate" class="filter-chip chip-target" onclick="sortByTargetDate()">🎯 Match Proximity</button>
       <button id="clearSortBtn" class="filter-chip chip-clear" onclick="clearSort()">✕ Clear All</button>
       <div class="tooltip-container">
@@ -1887,9 +1911,10 @@ window.addEventListener('DOMContentLoaded', () => {
       <th onclick="sortTable(3, event)">Let Available <span class="sort-indicator" id="sort-ind-3"></span><br><input type="text" class="filter-input" data-col="3" data-type="date" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Date (e.g. >2026-07-01)..."></th>
       <th onclick="sortTable(4, event)">Marketed By <span class="sort-indicator" id="sort-ind-4"></span><br><input type="text" class="filter-input" data-col="4" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Filter (e.g. OpenRent)..."></th>
       <th onclick="sortTable(5, event)">Location <span class="sort-indicator" id="sort-ind-5"></span><br><input type="text" class="filter-input" data-col="5" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Filter..."></th>
-      <th onclick="sortTable(6, event)">Price <span class="sort-indicator" id="sort-ind-6"></span><br><input type="text" class="filter-input" data-col="6" data-type="numeric" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Price (e.g. >2000)..."></th>
-      <th onclick="sortTable(7, event)">Size <span class="sort-indicator" id="sort-ind-7"></span><br><input type="text" class="filter-input" data-col="7" data-type="numeric" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Size (e.g. <50)..."></th>
-      <th onclick="sortTable(8, event)">£ / sqm <span class="sort-indicator" id="sort-ind-8"></span><br><input type="text" class="filter-input" data-col="8" data-type="numeric" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="£/sqm (e.g. >=40)..."></th>
+      <th onclick="sortTable(6, event)">Property Name <span class="sort-indicator" id="sort-ind-6"></span><br><input type="text" class="filter-input" data-col="6" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Filter (e.g. Landmark)..."></th>
+      <th onclick="sortTable(7, event)">Price <span class="sort-indicator" id="sort-ind-7"></span><br><input type="text" class="filter-input" data-col="7" data-type="numeric" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Price (e.g. >2000)..."></th>
+      <th onclick="sortTable(8, event)">Size <span class="sort-indicator" id="sort-ind-8"></span><br><input type="text" class="filter-input" data-col="8" data-type="numeric" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Size (e.g. <50)..."></th>
+      <th onclick="sortTable(9, event)">£ / sqm <span class="sort-indicator" id="sort-ind-9"></span><br><input type="text" class="filter-input" data-col="9" data-type="numeric" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="£/sqm (e.g. >=40)..."></th>
       <th style="cursor: default; text-align: center;">Link</th>
       <th style="cursor: default; text-align: center;">⭐</th>
     </tr>

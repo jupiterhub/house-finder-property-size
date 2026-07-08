@@ -80,6 +80,7 @@ function saveMatch(propertyData) {
   const matchString = `### [${new Date().toISOString()}] MATCH FOUND!\n` +
     `- **Marketed by**: ${propertyData.agent || propertyData.marketedBy || 'Unknown'}\n` +
     `- **Location**: ${propertyData.location || 'Unknown'}\n` +
+    `- **Property Name**: ${propertyData.propertyName || 'Unknown'}\n` +
     `- **ID**: ${propertyData.id}\n` +
     `- **Price**: £${propertyData.price} PCM\n` +
     `- **Size**: ${propertyData.sqm} sqm\n` +

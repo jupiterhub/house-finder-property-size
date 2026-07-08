@@ -86,7 +86,8 @@ class RightmoveAdapter {
                   firstVisibleDate: p.firstVisibleDate || null,
                   listingUpdateDate: p?.listingUpdate?.listingUpdateDate || p.firstVisibleDate || null,
                   addedOrReduced: p.addedOrReduced || null,
-                  letAvailableDate: p.letAvailableDate || null
+                  letAvailableDate: p.letAvailableDate || null,
+                  displayAddress: p.displayAddress || null
                 };
               }
             }
@@ -233,6 +234,7 @@ class RightmoveAdapter {
         let letAvailableDate = 'Unknown';
         let listingStatus = 'Unknown';
         let listingUpdate = 'Unknown';
+        let propertyName = 'Unknown';
 
         try {
           let pd = window.__PAGE_MODEL?.propertyData || window.PAGE_MODEL?.propertyData || window.__NEXT_DATA__?.props?.pageProps?.propertyData;
@@ -305,6 +307,14 @@ class RightmoveAdapter {
             } else if (analyticsAdded) {
               listingUpdate = analyticsAdded;
             }
+
+            if (pd.address?.displayAddress) {
+              propertyName = String(pd.address.displayAddress).trim();
+            } else if (pd.location?.displayAddress) {
+              propertyName = String(pd.location.displayAddress).trim();
+            } else if (pd.displayAddress) {
+              propertyName = String(pd.displayAddress).trim();
+            }
           }
         } catch (e) {}
 
@@ -347,9 +357,10 @@ class RightmoveAdapter {
           letAvailableDate = letAvailableDate.replace(/^Let\s+available\s+date:\s*/i, '').trim();
         }
 
-        return { letAvailableDate, listingStatus, listingUpdate };
-      }).catch(() => ({ letAvailableDate: 'Unknown', listingStatus: 'Unknown', listingUpdate: 'Unknown' }));
+        return { letAvailableDate, listingStatus, listingUpdate, propertyName };
+      }).catch(() => ({ letAvailableDate: 'Unknown', listingStatus: 'Unknown', listingUpdate: 'Unknown', propertyName: 'Unknown' }));
 
+      const propertyName = detailMetadata.propertyName !== 'Unknown' ? detailMetadata.propertyName : (searchDates.displayAddress || 'Unknown');
       const letAvailableFormatted = detailMetadata.letAvailableDate !== 'Unknown' ? detailMetadata.letAvailableDate : (searchDates.letAvailableDate || 'Unknown');
       const listingStatus = detailMetadata.listingStatus !== 'Unknown' ? detailMetadata.listingStatus : (searchDates.addedOrReduced || 'Unknown');
       let listingUpdate = detailMetadata.listingUpdate !== 'Unknown' ? detailMetadata.listingUpdate : 
@@ -376,6 +387,7 @@ class RightmoveAdapter {
           price: listing.price,
           sqm: sqm,
           location: locationName,
+          propertyName: propertyName,
           agent: agentName || 'Unknown',
           url: `https://www.rightmove.co.uk/properties/${listing.id}`,
           listingUpdate: listingUpdate,
