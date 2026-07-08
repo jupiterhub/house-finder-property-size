@@ -12,6 +12,20 @@
 
 ---
 
+### [2026-07-08T12:59:59.222Z] MATCH FOUND!
+- **Marketed by**: OpenRent, London
+- **Location**: OpenRent (London)
+- **Property Name**: St. Peters Road, Abingdon, OX14
+- **ID**: 90633384
+- **Price**: £1950 PCM
+- **Size**: 110.9 sqm
+- **Listing Update**: 2026-07-08
+- **Listing Status**: Added today
+- **Let Available**: 11/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/90633384](https://www.rightmove.co.uk/properties/90633384)
+
+---
+
 ### [2026-05-27T14:03:03.159Z] MATCH FOUND!
 - **Marketed by**: Unknown
 - **Location**: Canary Wharf
@@ -994,21 +1008,6 @@ Islington, N1
 - **Listing Status**: Reduced today
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90130602](https://www.rightmove.co.uk/properties/90130602)
-
----
-
-### [2026-06-30T12:32:19.234Z] MATCH FOUND!
-- **Marketed by**: Unknown
-- **Location**: Canary Wharf
-- **Property Name**: Ability Place, 
-37 Millharbour, E14
-- **ID**: 90271782
-- **Price**: £2300 PCM
-- **Size**: 52.03 sqm
-- **Listing Update**: 2026-07-07
-- **Listing Status**: Reduced yesterday
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/90271782](https://www.rightmove.co.uk/properties/90271782)
 
 ---
 
@@ -2442,20 +2441,6 @@ Millwall, E14
 - **Listing Status**: Reduced on 18/06/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/89432874](https://www.rightmove.co.uk/properties/89432874)
-
----
-
-### [2026-06-30T12:32:19.234Z] MATCH FOUND!
-- **Marketed by**: Unknown
-- **Location**: Canary Wharf
-- **Property Name**: Landmark Pinnacle, Landmark Square, London
-- **ID**: 87852465
-- **Price**: £2167 PCM
-- **Size**: 40.69 sqm
-- **Listing Update**: 2026-06-30
-- **Listing Status**: Reduced on 30/06/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/87852465](https://www.rightmove.co.uk/properties/87852465)
 
 ---
 
