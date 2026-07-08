@@ -663,7 +663,7 @@ async function main() {
           <td class="numeric" data-value="${m.price || 0}">£${m.price || 0}</td>
           <td class="numeric" data-value="${m.size || 0}">${m.size || 0} sqm</td>
           <td class="numeric" data-value="${pricePerSqmValue}">£${pricePerSqm}</td>
-          <td style="text-align: center;"><a href="${m.link}" target="_blank" class="view-btn" onclick="markRowSeen('${m.id}')">View</a></td>
+          <td style="text-align: center;"><a href="${m.link}" target="_blank" class="view-btn" onclick="markRowSeen('${m.id}')" onauxclick="if (event.button === 1) markRowSeen('${m.id}')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('${m.id}', this)" title="Save Property">☆</button></td>
         </tr>`;
       }).join('\n');
@@ -1196,6 +1196,28 @@ async function main() {
     border-color: #eab308;
     box-shadow: 0 0 12px rgba(234, 179, 8, 0.4);
   }
+  .chip-viewed {
+    background: rgba(16, 185, 129, 0.1);
+    border-color: rgba(16, 185, 129, 0.3);
+    color: #34d399;
+  }
+  .chip-viewed.active {
+    background: #10b981;
+    color: white;
+    border-color: #10b981;
+    box-shadow: 0 0 12px rgba(16, 185, 129, 0.4);
+  }
+  .chip-unviewed {
+    background: rgba(56, 189, 248, 0.1);
+    border-color: rgba(56, 189, 248, 0.3);
+    color: #38bdf8;
+  }
+  .chip-unviewed.active {
+    background: #0284c7;
+    color: white;
+    border-color: #0284c7;
+    box-shadow: 0 0 12px rgba(56, 189, 248, 0.4);
+  }
   #resetStarredBtn {
     padding: 3px 8px;
     background: rgba(234, 179, 8, 0.15);
@@ -1419,6 +1441,16 @@ function filterTable() {
       continue;
     }
 
+    if (activeQuickFilter === "Viewed" && !seenIds.includes(id)) {
+      tr[i].style.display = "none";
+      continue;
+    }
+
+    if (activeQuickFilter === "Unviewed" && seenIds.includes(id)) {
+      tr[i].style.display = "none";
+      continue;
+    }
+
     var compatLabelSelect = document.getElementById("compatLabelSelect");
     var compatLabelVal = compatLabelSelect ? compatLabelSelect.value : "";
     if (compatLabelVal) {
@@ -1564,6 +1596,12 @@ function setQuickFilter(filterType) {
     } else if (filterType === "Starred") {
       var stBtn = document.getElementById("chipStarred");
       if (stBtn) stBtn.classList.add("active");
+    } else if (filterType === "Viewed") {
+      var vBtn = document.getElementById("chipViewed");
+      if (vBtn) vBtn.classList.add("active");
+    } else if (filterType === "Unviewed") {
+      var uvBtn = document.getElementById("chipUnviewed");
+      if (uvBtn) uvBtn.classList.add("active");
     }
   }
 }
@@ -1872,11 +1910,13 @@ window.addEventListener('DOMContentLoaded', () => {
   </div>
   <div class="quick-actions-bar">
     <div class="quick-filters action-group">
-      <span class="filter-label">Agent Filter:</span>
-      <button id="chipAll" class="filter-chip active" onclick="setQuickFilter('')">All Agents</button>
+      <span class="filter-label">Quick Filters:</span>
+      <button id="chipAll" class="filter-chip active" onclick="setQuickFilter('')">All</button>
       <button id="chipOpenRent" class="filter-chip chip-openrent" onclick="setQuickFilter('OpenRent')">✨ OpenRent Only</button>
       <button id="chipEarlyBird" class="filter-chip chip-earlybird" onclick="setQuickFilter('EarlyBird')">🦅 Early Bird Deals</button>
       <button id="chipStarred" class="filter-chip chip-starred" onclick="setQuickFilter('Starred')">⭐ Starred (0)</button>
+      <button id="chipViewed" class="filter-chip chip-viewed" onclick="setQuickFilter('Viewed')">✓ Viewed</button>
+      <button id="chipUnviewed" class="filter-chip chip-unviewed" onclick="setQuickFilter('Unviewed')">👀 Unviewed</button>
     </div>
     <div class="action-divider"></div>
     <div class="quick-sorts action-group">

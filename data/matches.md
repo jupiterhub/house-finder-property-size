@@ -105,7 +105,7 @@
 - **Size**: 76 sqm
 - **Listing Update**: 2026-06-23
 - **Listing Status**: Added on 23/06/2026
-- **Let Available**: 14/09/2026 (🦅 Early Bird: 83d adv) (🦅 Early Bird: 83d adv) (🦅 Early Bird: 83d adv)
+- **Let Available**: 14/09/2026 (🦅 Early Bird: 83d adv) (🦅 Early Bird: 83d adv) (🦅 Early Bird: 83d adv) (🦅 Early Bird: 83d adv) (🦅 Early Bird: 83d adv) (🦅 Early Bird: 83d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/90025377](https://www.rightmove.co.uk/properties/90025377)
 
 ---
@@ -119,7 +119,7 @@
 - **Size**: 76 sqm
 - **Listing Update**: 2026-07-01
 - **Listing Status**: Added on 01/07/2026
-- **Let Available**: 15/09/2026 (🦅 Early Bird: 76d adv) (🦅 Early Bird: 76d adv) (🦅 Early Bird: 76d adv)
+- **Let Available**: 15/09/2026 (🦅 Early Bird: 76d adv) (🦅 Early Bird: 76d adv) (🦅 Early Bird: 76d adv) (🦅 Early Bird: 76d adv) (🦅 Early Bird: 76d adv) (🦅 Early Bird: 76d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/90361794](https://www.rightmove.co.uk/properties/90361794)
 
 ---
@@ -376,6 +376,20 @@
 
 ---
 
+### [2026-07-08T08:40:22.292Z] MATCH FOUND!
+- **Marketed by**: Easthaus, London
+- **Location**: Stratford
+- **Property Name**: Biggerstaff Road, London, E15
+- **ID**: 89205498
+- **Price**: £1850 PCM
+- **Size**: 63 sqm
+- **Listing Update**: 2026-06-16
+- **Listing Status**: Reduced on 16/06/2026
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/89205498](https://www.rightmove.co.uk/properties/89205498)
+
+---
+
 ### [2026-07-07T16:53:19.142Z] MATCH FOUND!
 - **Marketed by**: Look Property Services Ltd, Bow
 - **Location**: Stratford
@@ -469,7 +483,7 @@
 - **Size**: 61.04 sqm
 - **Listing Update**: 2026-07-01
 - **Listing Status**: Added on 01/07/2026
-- **Let Available**: 14/09/2026 (🦅 Early Bird: 75d adv) (🦅 Early Bird: 75d adv) (🦅 Early Bird: 75d adv)
+- **Let Available**: 14/09/2026 (🦅 Early Bird: 75d adv) (🦅 Early Bird: 75d adv) (🦅 Early Bird: 75d adv) (🦅 Early Bird: 75d adv) (🦅 Early Bird: 75d adv) (🦅 Early Bird: 75d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/90382506](https://www.rightmove.co.uk/properties/90382506)
 
 ---
@@ -651,7 +665,7 @@
 - **Size**: 58 sqm
 - **Listing Update**: 2026-06-12
 - **Listing Status**: Added on 12/06/2026
-- **Let Available**: 27/08/2026 (🦅 Early Bird: 76d adv) (🦅 Early Bird: 76d adv) (🦅 Early Bird: 76d adv)
+- **Let Available**: 27/08/2026 (🦅 Early Bird: 76d adv) (🦅 Early Bird: 76d adv) (🦅 Early Bird: 76d adv) (🦅 Early Bird: 76d adv) (🦅 Early Bird: 76d adv) (🦅 Early Bird: 76d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/89629074](https://www.rightmove.co.uk/properties/89629074)
 
 ---
@@ -665,7 +679,7 @@
 - **Size**: 57.97 sqm
 - **Listing Update**: 2026-06-15
 - **Listing Status**: Added on 15/06/2026
-- **Let Available**: 22/08/2026 (🦅 Early Bird: 68d adv) (🦅 Early Bird: 68d adv) (🦅 Early Bird: 68d adv)
+- **Let Available**: 22/08/2026 (🦅 Early Bird: 68d adv) (🦅 Early Bird: 68d adv) (🦅 Early Bird: 68d adv) (🦅 Early Bird: 68d adv) (🦅 Early Bird: 68d adv) (🦅 Early Bird: 68d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/89710086](https://www.rightmove.co.uk/properties/89710086)
 
 ---
@@ -861,7 +875,7 @@
 - **Size**: 54 sqm
 - **Listing Update**: 2026-07-07
 - **Listing Status**: Added today
-- **Let Available**: 21/09/2026 (🦅 Early Bird: 76d adv) (🦅 Early Bird: 76d adv) (🦅 Early Bird: 76d adv)
+- **Let Available**: 21/09/2026 (🦅 Early Bird: 76d adv) (🦅 Early Bird: 76d adv) (🦅 Early Bird: 76d adv) (🦅 Early Bird: 76d adv) (🦅 Early Bird: 76d adv) (🦅 Early Bird: 76d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/90602829](https://www.rightmove.co.uk/properties/90602829)
 
 ---
@@ -903,7 +917,7 @@
 - **Size**: 54 sqm
 - **Listing Update**: 2026-06-11
 - **Listing Status**: Added on 11/06/2026
-- **Let Available**: 03/09/2026 (🦅 Early Bird: 84d adv) (🦅 Early Bird: 84d adv) (🦅 Early Bird: 84d adv)
+- **Let Available**: 03/09/2026 (🦅 Early Bird: 84d adv) (🦅 Early Bird: 84d adv) (🦅 Early Bird: 84d adv) (🦅 Early Bird: 84d adv) (🦅 Early Bird: 84d adv) (🦅 Early Bird: 84d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/89583771](https://www.rightmove.co.uk/properties/89583771)
 
 ---
@@ -1001,7 +1015,7 @@
 - **Size**: 52 sqm
 - **Listing Update**: 2026-05-27
 - **Listing Status**: Added on 27/05/2026
-- **Let Available**: 03/08/2026 (🦅 Early Bird: 68d adv) (🦅 Early Bird: 68d adv) (🦅 Early Bird: 68d adv)
+- **Let Available**: 03/08/2026 (🦅 Early Bird: 68d adv) (🦅 Early Bird: 68d adv) (🦅 Early Bird: 68d adv) (🦅 Early Bird: 68d adv) (🦅 Early Bird: 68d adv) (🦅 Early Bird: 68d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/88995306](https://www.rightmove.co.uk/properties/88995306)
 
 ---
@@ -1029,7 +1043,7 @@
 - **Size**: 52 sqm
 - **Listing Update**: 2026-07-03
 - **Listing Status**: Added on 03/07/2026
-- **Let Available**: 07/09/2026 (🦅 Early Bird: 66d adv) (🦅 Early Bird: 66d adv) (🦅 Early Bird: 66d adv)
+- **Let Available**: 07/09/2026 (🦅 Early Bird: 66d adv) (🦅 Early Bird: 66d adv) (🦅 Early Bird: 66d adv) (🦅 Early Bird: 66d adv) (🦅 Early Bird: 66d adv) (🦅 Early Bird: 66d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/90453585](https://www.rightmove.co.uk/properties/90453585)
 
 ---
@@ -1141,7 +1155,7 @@
 - **Size**: 51.75 sqm
 - **Listing Update**: 2026-06-30
 - **Listing Status**: Added on 30/06/2026
-- **Let Available**: 30/09/2026 (🦅 Early Bird: 92d adv) (🦅 Early Bird: 92d adv) (🦅 Early Bird: 92d adv)
+- **Let Available**: 30/09/2026 (🦅 Early Bird: 92d adv) (🦅 Early Bird: 92d adv) (🦅 Early Bird: 92d adv) (🦅 Early Bird: 92d adv) (🦅 Early Bird: 92d adv) (🦅 Early Bird: 92d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/90330885](https://www.rightmove.co.uk/properties/90330885)
 
 ---
@@ -1211,7 +1225,7 @@
 - **Size**: 51 sqm
 - **Listing Update**: 2026-06-23
 - **Listing Status**: Added on 23/06/2026
-- **Let Available**: 11/09/2026 (🦅 Early Bird: 80d adv) (🦅 Early Bird: 80d adv) (🦅 Early Bird: 80d adv)
+- **Let Available**: 11/09/2026 (🦅 Early Bird: 80d adv) (🦅 Early Bird: 80d adv) (🦅 Early Bird: 80d adv) (🦅 Early Bird: 80d adv) (🦅 Early Bird: 80d adv) (🦅 Early Bird: 80d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/90047667](https://www.rightmove.co.uk/properties/90047667)
 
 ---
@@ -1267,7 +1281,7 @@
 - **Size**: 51 sqm
 - **Listing Update**: 2026-06-19
 - **Listing Status**: Added on 19/06/2026
-- **Let Available**: 10/09/2026 (🦅 Early Bird: 83d adv) (🦅 Early Bird: 83d adv) (🦅 Early Bird: 83d adv)
+- **Let Available**: 10/09/2026 (🦅 Early Bird: 83d adv) (🦅 Early Bird: 83d adv) (🦅 Early Bird: 83d adv) (🦅 Early Bird: 83d adv) (🦅 Early Bird: 83d adv) (🦅 Early Bird: 83d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/89915127](https://www.rightmove.co.uk/properties/89915127)
 
 ---
@@ -1309,7 +1323,7 @@
 - **Size**: 51 sqm
 - **Listing Update**: 2026-06-04
 - **Listing Status**: Added on 04/06/2026
-- **Let Available**: 19/08/2026 (🦅 Early Bird: 76d adv) (🦅 Early Bird: 76d adv) (🦅 Early Bird: 76d adv)
+- **Let Available**: 19/08/2026 (🦅 Early Bird: 76d adv) (🦅 Early Bird: 76d adv) (🦅 Early Bird: 76d adv) (🦅 Early Bird: 76d adv) (🦅 Early Bird: 76d adv) (🦅 Early Bird: 76d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/89280255](https://www.rightmove.co.uk/properties/89280255)
 
 ---
@@ -1533,7 +1547,7 @@
 - **Size**: 49 sqm
 - **Listing Update**: 2026-07-06
 - **Listing Status**: Added yesterday
-- **Let Available**: 07/10/2026 (🦅 Early Bird: 93d adv) (🦅 Early Bird: 93d adv) (🦅 Early Bird: 93d adv)
+- **Let Available**: 07/10/2026 (🦅 Early Bird: 93d adv) (🦅 Early Bird: 93d adv) (🦅 Early Bird: 93d adv) (🦅 Early Bird: 93d adv) (🦅 Early Bird: 93d adv) (🦅 Early Bird: 93d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/90539745](https://www.rightmove.co.uk/properties/90539745)
 
 ---
@@ -1673,7 +1687,7 @@
 - **Size**: 47 sqm
 - **Listing Update**: 2026-07-06
 - **Listing Status**: Added yesterday
-- **Let Available**: 12/09/2026 (🦅 Early Bird: 68d adv) (🦅 Early Bird: 68d adv) (🦅 Early Bird: 68d adv)
+- **Let Available**: 12/09/2026 (🦅 Early Bird: 68d adv) (🦅 Early Bird: 68d adv) (🦅 Early Bird: 68d adv) (🦅 Early Bird: 68d adv) (🦅 Early Bird: 68d adv) (🦅 Early Bird: 68d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/90553167](https://www.rightmove.co.uk/properties/90553167)
 
 ---
@@ -1687,7 +1701,7 @@
 - **Size**: 47 sqm
 - **Listing Update**: 2026-06-10
 - **Listing Status**: Added on 10/06/2026
-- **Let Available**: 15/08/2026 (🦅 Early Bird: 66d adv) (🦅 Early Bird: 66d adv) (🦅 Early Bird: 66d adv)
+- **Let Available**: 15/08/2026 (🦅 Early Bird: 66d adv) (🦅 Early Bird: 66d adv) (🦅 Early Bird: 66d adv) (🦅 Early Bird: 66d adv) (🦅 Early Bird: 66d adv) (🦅 Early Bird: 66d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/89537013](https://www.rightmove.co.uk/properties/89537013)
 
 ---
@@ -1827,7 +1841,7 @@
 - **Size**: 46 sqm
 - **Listing Update**: 2026-06-12
 - **Listing Status**: Added on 12/06/2026
-- **Let Available**: 22/08/2026 (🦅 Early Bird: 71d adv) (🦅 Early Bird: 71d adv) (🦅 Early Bird: 71d adv)
+- **Let Available**: 22/08/2026 (🦅 Early Bird: 71d adv) (🦅 Early Bird: 71d adv) (🦅 Early Bird: 71d adv) (🦅 Early Bird: 71d adv) (🦅 Early Bird: 71d adv) (🦅 Early Bird: 71d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/89632845](https://www.rightmove.co.uk/properties/89632845)
 
 ---
@@ -2093,7 +2107,7 @@
 - **Size**: 43.77 sqm
 - **Listing Update**: 2026-06-19
 - **Listing Status**: Added on 19/06/2026
-- **Let Available**: 17/09/2026 (🦅 Early Bird: 90d adv) (🦅 Early Bird: 90d adv) (🦅 Early Bird: 90d adv)
+- **Let Available**: 17/09/2026 (🦅 Early Bird: 90d adv) (🦅 Early Bird: 90d adv) (🦅 Early Bird: 90d adv) (🦅 Early Bird: 90d adv) (🦅 Early Bird: 90d adv) (🦅 Early Bird: 90d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/89936142](https://www.rightmove.co.uk/properties/89936142)
 
 ---
@@ -2205,7 +2219,7 @@
 - **Size**: 42.09 sqm
 - **Listing Update**: 2026-07-01
 - **Listing Status**: Added on 01/07/2026
-- **Let Available**: 15/09/2026 (🦅 Early Bird: 76d adv) (🦅 Early Bird: 76d adv) (🦅 Early Bird: 76d adv)
+- **Let Available**: 15/09/2026 (🦅 Early Bird: 76d adv) (🦅 Early Bird: 76d adv) (🦅 Early Bird: 76d adv) (🦅 Early Bird: 76d adv) (🦅 Early Bird: 76d adv) (🦅 Early Bird: 76d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/157618283](https://www.rightmove.co.uk/properties/157618283)
 
 ---
@@ -2611,7 +2625,7 @@
 - **Size**: 38 sqm
 - **Listing Update**: 2026-05-01
 - **Listing Status**: Reduced on 01/05/2026
-- **Let Available**: 11/07/2026 (🦅 Early Bird: 71d adv) (🦅 Early Bird: 71d adv) (🦅 Early Bird: 71d adv)
+- **Let Available**: 11/07/2026 (🦅 Early Bird: 71d adv) (🦅 Early Bird: 71d adv) (🦅 Early Bird: 71d adv) (🦅 Early Bird: 71d adv) (🦅 Early Bird: 71d adv) (🦅 Early Bird: 71d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/157692917](https://www.rightmove.co.uk/properties/157692917)
 
 ---
@@ -2625,7 +2639,7 @@
 - **Size**: 24 sqm
 - **Listing Update**: 2026-05-02
 - **Listing Status**: Added on 02/05/2026
-- **Let Available**: Now (🦅 Early Bird: 67d adv) (🦅 Early Bird: 67d adv) (🦅 Early Bird: 67d adv)
+- **Let Available**: Now (🦅 Early Bird: 67d adv) (🦅 Early Bird: 67d adv) (🦅 Early Bird: 67d adv) (🦅 Early Bird: 67d adv) (🦅 Early Bird: 67d adv) (🦅 Early Bird: 67d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/88013730](https://www.rightmove.co.uk/properties/88013730)
 
 ---
