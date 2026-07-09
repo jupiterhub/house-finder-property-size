@@ -12,6 +12,20 @@
 
 ---
 
+### [2026-07-09T08:40:00.560Z] MATCH FOUND!
+- **Marketed by**: OpenRent, London
+- **Location**: OpenRent (London)
+- **Property Name**: Village Road, Nottingham, NG11
+- **ID**: 90331062
+- **Price**: £2500 PCM
+- **Size**: 231.79 sqm
+- **Listing Update**: 2026-07-09
+- **Listing Status**: Reduced today
+- **Let Available**: 01/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/90331062](https://www.rightmove.co.uk/properties/90331062)
+
+---
+
 ### [2026-07-08T12:59:59.222Z] MATCH FOUND!
 - **Marketed by**: OpenRent, London
 - **Location**: OpenRent (London)
@@ -20,7 +34,7 @@
 - **Price**: £1950 PCM
 - **Size**: 110.9 sqm
 - **Listing Update**: 2026-07-08
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: 11/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90633384](https://www.rightmove.co.uk/properties/90633384)
 
@@ -110,20 +124,6 @@
 
 ---
 
-### [2026-07-01T13:22:22.689Z] MATCH FOUND!
-- **Marketed by**: Unknown
-- **Location**: Canary Wharf
-- **Property Name**: Boardwalk Place, Canary Wharf, London, E14
-- **ID**: 90361794
-- **Price**: £2500 PCM
-- **Size**: 76 sqm
-- **Listing Update**: 2026-07-01
-- **Listing Status**: Added on 01/07/2026
-- **Let Available**: 15/09/2026 (🦅 Early Bird: 76d adv)
-- **Link**: [https://www.rightmove.co.uk/properties/90361794](https://www.rightmove.co.uk/properties/90361794)
-
----
-
 ### [2026-06-04T13:46:51.487Z] MATCH FOUND!
 - **Marketed by**: Unknown
 - **Location**: Canary Wharf
@@ -132,7 +132,7 @@
 - **Price**: £2500 PCM
 - **Size**: 76 sqm
 - **Listing Update**: 2026-07-08
-- **Listing Status**: Reduced today
+- **Listing Status**: Reduced yesterday
 - **Let Available**: 04/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/89266041](https://www.rightmove.co.uk/properties/89266041)
 
@@ -317,7 +317,7 @@ Millwall, E14
 - **Price**: £2275 PCM
 - **Size**: 66.6 sqm
 - **Listing Update**: 2026-07-07
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 07/07/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90564630](https://www.rightmove.co.uk/properties/90564630)
 
@@ -334,20 +334,6 @@ Millwall, E14
 - **Listing Status**: Reduced on 01/07/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/174057173](https://www.rightmove.co.uk/properties/174057173)
-
----
-
-### [2026-06-05T13:41:21.976Z] MATCH FOUND!
-- **Marketed by**: Unknown
-- **Location**: Canary Wharf
-- **Property Name**: Constable House, Canary Wharf, London, E14
-- **ID**: 88065144
-- **Price**: £2500 PCM
-- **Size**: 66 sqm
-- **Listing Update**: 2026-07-03
-- **Listing Status**: Reduced on 03/07/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/88065144](https://www.rightmove.co.uk/properties/88065144)
 
 ---
 
@@ -373,7 +359,7 @@ Millwall, E14
 - **Price**: £2100 PCM
 - **Size**: 62.7 sqm
 - **Listing Update**: 2026-07-07
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 07/07/2026
 - **Let Available**: 29/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/155821520](https://www.rightmove.co.uk/properties/155821520)
 
@@ -457,7 +443,7 @@ Millwall, E14
 - **Price**: £2400 PCM
 - **Size**: 61 sqm
 - **Listing Update**: 2026-07-07
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 07/07/2026
 - **Let Available**: 02/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90572814](https://www.rightmove.co.uk/properties/90572814)
 
@@ -485,7 +471,7 @@ Millwall, E14
 - **Price**: £2175 PCM
 - **Size**: 60 sqm
 - **Listing Update**: 2026-07-07
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 07/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90603552](https://www.rightmove.co.uk/properties/90603552)
 
@@ -653,7 +639,7 @@ Millwall, E14
 - **Price**: £2275 PCM
 - **Size**: 57 sqm
 - **Listing Update**: 2026-07-08
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90632145](https://www.rightmove.co.uk/properties/90632145)
 
@@ -667,7 +653,7 @@ Millwall, E14
 - **Price**: £2350 PCM
 - **Size**: 56.46 sqm
 - **Listing Update**: 2026-07-08
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: 19/09/2026 (🦅 Early Bird: 73d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/90632781](https://www.rightmove.co.uk/properties/90632781)
 
@@ -681,7 +667,7 @@ Millwall, E14
 - **Price**: £2037 PCM
 - **Size**: 56 sqm
 - **Listing Update**: 2026-07-08
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90632466](https://www.rightmove.co.uk/properties/90632466)
 
@@ -751,7 +737,7 @@ Millwall, E14
 - **Price**: £2500 PCM
 - **Size**: 55.37 sqm
 - **Listing Update**: 2026-07-07
-- **Listing Status**: Reduced yesterday
+- **Listing Status**: Reduced on 07/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/89756472](https://www.rightmove.co.uk/properties/89756472)
 
@@ -849,7 +835,7 @@ Millwall, E14
 - **Price**: £2050 PCM
 - **Size**: 54 sqm
 - **Listing Update**: 2026-07-07
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 07/07/2026
 - **Let Available**: 21/09/2026 (🦅 Early Bird: 76d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/90602829](https://www.rightmove.co.uk/properties/90602829)
 
@@ -920,7 +906,7 @@ Islington, N1
 - **Price**: £2500 PCM
 - **Size**: 54 sqm
 - **Listing Update**: 2026-07-08
-- **Listing Status**: Reduced today
+- **Listing Status**: Reduced yesterday
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/89918850](https://www.rightmove.co.uk/properties/89918850)
 
@@ -976,7 +962,7 @@ Islington, N1
 - **Price**: £2250 PCM
 - **Size**: 53 sqm
 - **Listing Update**: 2026-07-08
-- **Listing Status**: Reduced today
+- **Listing Status**: Reduced yesterday
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90130602](https://www.rightmove.co.uk/properties/90130602)
 
@@ -1095,20 +1081,6 @@ Cassilis Road, E14
 
 ---
 
-### [2026-06-27T12:01:20.007Z] MATCH FOUND!
-- **Marketed by**: Unknown
-- **Location**: Kings Cross
-- **Property Name**: Leigh Street, Bloomsbury, London, WC1H
-- **ID**: 90193935
-- **Price**: £2500 PCM
-- **Size**: 52 sqm
-- **Listing Update**: 2026-06-26
-- **Listing Status**: Added on 26/06/2026
-- **Let Available**: 28/08/2026
-- **Link**: [https://www.rightmove.co.uk/properties/90193935](https://www.rightmove.co.uk/properties/90193935)
-
----
-
 ### [2026-07-07T13:05:14.907Z] MATCH FOUND!
 - **Marketed by**: Hamptons, Islington
 - **Location**: Highbury & Islington
@@ -1117,7 +1089,7 @@ Cassilis Road, E14
 - **Price**: £2250 PCM
 - **Size**: 51.84 sqm
 - **Listing Update**: 2026-07-07
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 07/07/2026
 - **Let Available**: 03/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90581886](https://www.rightmove.co.uk/properties/90581886)
 
@@ -1187,7 +1159,7 @@ Cassilis Road, E14
 - **Price**: £2250 PCM
 - **Size**: 51 sqm
 - **Listing Update**: 2026-07-07
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 07/07/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90566934](https://www.rightmove.co.uk/properties/90566934)
 
@@ -1425,7 +1397,7 @@ Cassilis Road, E14
 - **Price**: £1895 PCM
 - **Size**: 49.98 sqm
 - **Listing Update**: 2026-07-07
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 07/07/2026
 - **Let Available**: 17/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90587013](https://www.rightmove.co.uk/properties/90587013)
 
@@ -1467,7 +1439,7 @@ Cassilis Road, E14
 - **Price**: £2275 PCM
 - **Size**: 49.61 sqm
 - **Listing Update**: 2026-07-08
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: 07/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90643629](https://www.rightmove.co.uk/properties/90643629)
 
@@ -1481,7 +1453,7 @@ Cassilis Road, E14
 - **Price**: £1950 PCM
 - **Size**: 49.1 sqm
 - **Listing Update**: 2026-07-08
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: 15/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90628257](https://www.rightmove.co.uk/properties/90628257)
 
@@ -1496,7 +1468,7 @@ Millharbour, E14
 - **Price**: £2200 PCM
 - **Size**: 49 sqm
 - **Listing Update**: 2026-07-08
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: 12/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90643689](https://www.rightmove.co.uk/properties/90643689)
 
@@ -1567,7 +1539,7 @@ Gee Street, EC1V
 - **Price**: £2500 PCM
 - **Size**: 49 sqm
 - **Listing Update**: 2026-07-08
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: 07/10/2026 (🦅 Early Bird: 91d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/90638649](https://www.rightmove.co.uk/properties/90638649)
 
@@ -1637,7 +1609,7 @@ Gee Street, EC1V
 - **Price**: £2297 PCM
 - **Size**: 48 sqm
 - **Listing Update**: 2026-07-08
-- **Listing Status**: Reduced today
+- **Listing Status**: Reduced yesterday
 - **Let Available**: 18/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/89161776](https://www.rightmove.co.uk/properties/89161776)
 
@@ -1654,6 +1626,20 @@ Gee Street, EC1V
 - **Listing Status**: Reduced on 03/07/2026
 - **Let Available**: 22/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/89539155](https://www.rightmove.co.uk/properties/89539155)
+
+---
+
+### [2026-07-09T08:40:00.560Z] MATCH FOUND!
+- **Marketed by**: Thomas Michael, City of London and Barbican
+- **Location**: Farringdon / Clerkenwell
+- **Property Name**: Clifford's Inn, Fetter Lane, City Of London,
+- **ID**: 90659712
+- **Price**: £2383 PCM
+- **Size**: 48 sqm
+- **Listing Update**: 2026-07-08
+- **Listing Status**: Added yesterday
+- **Let Available**: 15/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/90659712](https://www.rightmove.co.uk/properties/90659712)
 
 ---
 
@@ -1679,7 +1665,7 @@ Gee Street, EC1V
 - **Price**: £2100 PCM
 - **Size**: 47.45 sqm
 - **Listing Update**: 2026-07-07
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 07/07/2026
 - **Let Available**: 24/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90584553](https://www.rightmove.co.uk/properties/90584553)
 
@@ -1696,20 +1682,6 @@ Gee Street, EC1V
 - **Listing Status**: Added on 29/06/2026
 - **Let Available**: 28/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90269487](https://www.rightmove.co.uk/properties/90269487)
-
----
-
-### [2026-07-07T13:05:14.907Z] MATCH FOUND!
-- **Marketed by**: Fraser and Co, London West End
-- **Location**: Paddington
-- **Property Name**: Peninsula Apartments, London, W2
-- **ID**: 90553167
-- **Price**: £2492 PCM
-- **Size**: 47 sqm
-- **Listing Update**: 2026-07-06
-- **Listing Status**: Added on 06/07/2026
-- **Let Available**: 12/09/2026 (🦅 Early Bird: 68d adv)
-- **Link**: [https://www.rightmove.co.uk/properties/90553167](https://www.rightmove.co.uk/properties/90553167)
 
 ---
 
@@ -1756,6 +1728,20 @@ Gee Street, EC1V
 
 ---
 
+### [2026-07-09T08:40:00.560Z] MATCH FOUND!
+- **Marketed by**: David Astburys, Islington
+- **Location**: Highbury & Islington
+- **Property Name**: Holloway Road, Holloway, London
+- **ID**: 90656631
+- **Price**: £1700 PCM
+- **Size**: 46.45 sqm
+- **Listing Update**: 2026-07-08
+- **Listing Status**: Added yesterday
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/90656631](https://www.rightmove.co.uk/properties/90656631)
+
+---
+
 ### [2026-06-24T12:36:39.200Z] MATCH FOUND!
 - **Marketed by**: Unknown
 - **Location**: Canary Wharf
@@ -1792,7 +1778,7 @@ Gee Street, EC1V
 - **Price**: £1950 PCM
 - **Size**: 46 sqm
 - **Listing Update**: 2026-07-08
-- **Listing Status**: Reduced today
+- **Listing Status**: Reduced yesterday
 - **Let Available**: 16/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90327240](https://www.rightmove.co.uk/properties/90327240)
 
@@ -1836,7 +1822,7 @@ Millwall, E14
 - **Price**: £2100 PCM
 - **Size**: 46 sqm
 - **Listing Update**: 2026-07-07
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 07/07/2026
 - **Let Available**: 02/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90582321](https://www.rightmove.co.uk/properties/90582321)
 
@@ -1864,7 +1850,7 @@ Millwall, E14
 - **Price**: £2200 PCM
 - **Size**: 46 sqm
 - **Listing Update**: 2026-07-07
-- **Listing Status**: Reduced yesterday
+- **Listing Status**: Reduced on 07/07/2026
 - **Let Available**: 15/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90044970](https://www.rightmove.co.uk/properties/90044970)
 
@@ -1906,7 +1892,7 @@ Millwall, E14
 - **Price**: £2492 PCM
 - **Size**: 46 sqm
 - **Listing Update**: 2026-07-08
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: 20/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90650151](https://www.rightmove.co.uk/properties/90650151)
 
@@ -1920,7 +1906,7 @@ Millwall, E14
 - **Price**: £2500 PCM
 - **Size**: 46 sqm
 - **Listing Update**: 2026-07-08
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: 13/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90654522](https://www.rightmove.co.uk/properties/90654522)
 
@@ -1962,7 +1948,7 @@ Millwall, E14
 - **Price**: £2250 PCM
 - **Size**: 45 sqm
 - **Listing Update**: 2026-07-08
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90610632](https://www.rightmove.co.uk/properties/90610632)
 
@@ -1990,7 +1976,7 @@ Millwall, E14
 - **Price**: £2479 PCM
 - **Size**: 45 sqm
 - **Listing Update**: 2026-07-07
-- **Listing Status**: Reduced yesterday
+- **Listing Status**: Reduced on 07/07/2026
 - **Let Available**: 10/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/89767467](https://www.rightmove.co.uk/properties/89767467)
 
@@ -2032,7 +2018,7 @@ Millwall, E14
 - **Price**: £2400 PCM
 - **Size**: 44.87 sqm
 - **Listing Update**: 2026-07-08
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: 04/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90607554](https://www.rightmove.co.uk/properties/90607554)
 
@@ -2116,7 +2102,7 @@ Millwall, E14
 - **Price**: £2400 PCM
 - **Size**: 44 sqm
 - **Listing Update**: 2026-07-08
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90610560](https://www.rightmove.co.uk/properties/90610560)
 
@@ -2256,7 +2242,7 @@ Millwall, E14
 - **Price**: £2000 PCM
 - **Size**: 42.5 sqm
 - **Listing Update**: 2026-07-07
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 07/07/2026
 - **Let Available**: 04/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90581121](https://www.rightmove.co.uk/properties/90581121)
 
@@ -2312,7 +2298,7 @@ Millwall, E14
 - **Price**: £2300 PCM
 - **Size**: 42 sqm
 - **Listing Update**: 2026-07-07
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 07/07/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90587952](https://www.rightmove.co.uk/properties/90587952)
 
@@ -2385,6 +2371,20 @@ Millwall, E14
 - **Listing Status**: Reduced on 18/06/2026
 - **Let Available**: 17/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/88837626](https://www.rightmove.co.uk/properties/88837626)
+
+---
+
+### [2026-07-09T08:40:00.560Z] MATCH FOUND!
+- **Marketed by**: Acorn, London Bridge
+- **Location**: London Bridge
+- **Property Name**: Kipling Estate London Bridge SE1
+- **ID**: 90656274
+- **Price**: £2000 PCM
+- **Size**: 41.06 sqm
+- **Listing Update**: 2026-07-08
+- **Listing Status**: Added yesterday
+- **Let Available**: 25/07/2026
+- **Link**: [https://www.rightmove.co.uk/properties/90656274](https://www.rightmove.co.uk/properties/90656274)
 
 ---
 
@@ -2552,7 +2552,7 @@ Islington, N7
 - **Price**: £2297 PCM
 - **Size**: 40 sqm
 - **Listing Update**: 2026-07-07
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 07/07/2026
 - **Let Available**: 05/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90562557](https://www.rightmove.co.uk/properties/90562557)
 
@@ -2608,7 +2608,7 @@ Islington, N7
 - **Price**: £2496 PCM
 - **Size**: 40 sqm
 - **Listing Update**: 2026-07-07
-- **Listing Status**: Reduced yesterday
+- **Listing Status**: Reduced on 07/07/2026
 - **Let Available**: 23/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/88631589](https://www.rightmove.co.uk/properties/88631589)
 
