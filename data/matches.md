@@ -119,7 +119,7 @@
 - **Size**: 76 sqm
 - **Listing Update**: 2026-06-23
 - **Listing Status**: Added on 23/06/2026
-- **Let Available**: 14/09/2026 (🦅 Early Bird: 83d adv)
+- **Let Available**: 14/09/2026 (🦅 Early Bird: 83d adv) (🦅 Early Bird: 83d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/90025377](https://www.rightmove.co.uk/properties/90025377)
 
 ---
@@ -169,14 +169,13 @@
 ### [2026-05-02T20:15:55.703Z] MATCH FOUND!
 - **Marketed by**: Unknown
 - **Location**: Unknown
-- **Property Name**: Caledonian Road, 
-Islington, N1
+- **Property Name**: Caledonian Road,
 - **ID**: 174571163
 - **Price**: £3250 PCM
 - **Size**: 74 sqm
 - **Listing Update**: 2026-05-12
 - **Listing Status**: Reduced on 12/05/2026
-- **Let Available**: 03/08/2026 (🦅 Early Bird: 83d adv)
+- **Let Available**: 03/08/2026 (🦅 Early Bird: 83d adv) (🦅 Early Bird: 83d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/174571163](https://www.rightmove.co.uk/properties/174571163)
 
 ---
@@ -212,8 +211,7 @@ Islington, N1
 ### [2026-06-09T13:32:41.227Z] MATCH FOUND!
 - **Marketed by**: Unknown
 - **Location**: Canary Wharf
-- **Property Name**: Boardwalk Place, 
-South Quay, E14
+- **Property Name**: Boardwalk Place,
 - **ID**: 89487687
 - **Price**: £2500 PCM
 - **Size**: 72 sqm
@@ -255,8 +253,7 @@ South Quay, E14
 ### [2026-05-20T13:24:59.549Z] MATCH FOUND!
 - **Marketed by**: Unknown
 - **Location**: Canary Wharf
-- **Property Name**: Millharbour, 
-Millwall, E14
+- **Property Name**: Millharbour,
 - **ID**: 88718487
 - **Price**: £2400 PCM
 - **Size**: 68 sqm
@@ -292,6 +289,20 @@ Millwall, E14
 - **Listing Status**: Reduced on 01/07/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/174057173](https://www.rightmove.co.uk/properties/174057173)
+
+---
+
+### [2026-07-09T20:12:46.308Z] MATCH FOUND!
+- **Marketed by**: OpenRent, London
+- **Location**: Farringdon / Clerkenwell
+- **Property Name**: Dulverton Mansions, London, WC1X
+- **ID**: 89844084
+- **Price**: £2500 PCM
+- **Size**: 65.87 sqm
+- **Listing Update**: 2026-07-09
+- **Listing Status**: Reduced today
+- **Let Available**: 04/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/89844084](https://www.rightmove.co.uk/properties/89844084)
 
 ---
 
@@ -374,7 +385,7 @@ Millwall, E14
 - **Size**: 61.04 sqm
 - **Listing Update**: 2026-07-01
 - **Listing Status**: Added on 01/07/2026
-- **Let Available**: 12/09/2026 (🦅 Early Bird: 73d adv)
+- **Let Available**: 12/09/2026 (🦅 Early Bird: 73d adv) (🦅 Early Bird: 73d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/90382506](https://www.rightmove.co.uk/properties/90382506)
 
 ---
@@ -542,7 +553,7 @@ Millwall, E14
 - **Size**: 58 sqm
 - **Listing Update**: 2026-06-12
 - **Listing Status**: Added on 12/06/2026
-- **Let Available**: 27/08/2026 (🦅 Early Bird: 76d adv)
+- **Let Available**: 27/08/2026 (🦅 Early Bird: 76d adv) (🦅 Early Bird: 76d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/89629074](https://www.rightmove.co.uk/properties/89629074)
 
 ---
@@ -570,7 +581,7 @@ Millwall, E14
 - **Size**: 57.97 sqm
 - **Listing Update**: 2026-06-15
 - **Listing Status**: Added on 15/06/2026
-- **Let Available**: 22/08/2026 (🦅 Early Bird: 68d adv)
+- **Let Available**: 22/08/2026 (🦅 Early Bird: 68d adv) (🦅 Early Bird: 68d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/89710086](https://www.rightmove.co.uk/properties/89710086)
 
 ---
@@ -626,7 +637,7 @@ Millwall, E14
 - **Size**: 56.46 sqm
 - **Listing Update**: 2026-07-08
 - **Listing Status**: Added yesterday
-- **Let Available**: 19/09/2026 (🦅 Early Bird: 73d adv)
+- **Let Available**: 19/09/2026 (🦅 Early Bird: 73d adv) (🦅 Early Bird: 73d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/90632781](https://www.rightmove.co.uk/properties/90632781)
 
 ---
@@ -808,7 +819,7 @@ Millwall, E14
 - **Size**: 54 sqm
 - **Listing Update**: 2026-07-07
 - **Listing Status**: Added on 07/07/2026
-- **Let Available**: 21/09/2026 (🦅 Early Bird: 76d adv)
+- **Let Available**: 21/09/2026 (🦅 Early Bird: 76d adv) (🦅 Early Bird: 76d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/90602829](https://www.rightmove.co.uk/properties/90602829)
 
 ---
@@ -844,14 +855,13 @@ Millwall, E14
 ### [2026-06-11T14:26:20.170Z] MATCH FOUND!
 - **Marketed by**: Unknown
 - **Location**: Kings Cross
-- **Property Name**: Calshot Street, 
-Islington, N1
+- **Property Name**: Calshot Street,
 - **ID**: 89583771
 - **Price**: £2200 PCM
 - **Size**: 54 sqm
 - **Listing Update**: 2026-06-11
 - **Listing Status**: Added on 11/06/2026
-- **Let Available**: 03/09/2026 (🦅 Early Bird: 84d adv)
+- **Let Available**: 03/09/2026 (🦅 Early Bird: 84d adv) (🦅 Early Bird: 84d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/89583771](https://www.rightmove.co.uk/properties/89583771)
 
 ---
@@ -943,14 +953,13 @@ Islington, N1
 ### [2026-05-28T14:23:45.500Z] MATCH FOUND!
 - **Marketed by**: Unknown
 - **Location**: Canary Wharf
-- **Property Name**: Gainsborough House, 
-Cassilis Road, E14
+- **Property Name**: Gainsborough House,
 - **ID**: 88995306
 - **Price**: £2200 PCM
 - **Size**: 52 sqm
 - **Listing Update**: 2026-05-27
 - **Listing Status**: Added on 27/05/2026
-- **Let Available**: 03/08/2026 (🦅 Early Bird: 68d adv)
+- **Let Available**: 03/08/2026 (🦅 Early Bird: 68d adv) (🦅 Early Bird: 68d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/88995306](https://www.rightmove.co.uk/properties/88995306)
 
 ---
@@ -978,7 +987,7 @@ Cassilis Road, E14
 - **Size**: 52 sqm
 - **Listing Update**: 2026-07-03
 - **Listing Status**: Added on 03/07/2026
-- **Let Available**: 07/09/2026 (🦅 Early Bird: 66d adv)
+- **Let Available**: 07/09/2026 (🦅 Early Bird: 66d adv) (🦅 Early Bird: 66d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/90453585](https://www.rightmove.co.uk/properties/90453585)
 
 ---
@@ -1132,7 +1141,7 @@ Cassilis Road, E14
 - **Size**: 51 sqm
 - **Listing Update**: 2026-06-23
 - **Listing Status**: Added on 23/06/2026
-- **Let Available**: 11/09/2026 (🦅 Early Bird: 80d adv)
+- **Let Available**: 11/09/2026 (🦅 Early Bird: 80d adv) (🦅 Early Bird: 80d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/90047667](https://www.rightmove.co.uk/properties/90047667)
 
 ---
@@ -1188,7 +1197,7 @@ Cassilis Road, E14
 - **Size**: 51 sqm
 - **Listing Update**: 2026-06-19
 - **Listing Status**: Added on 19/06/2026
-- **Let Available**: 10/09/2026 (🦅 Early Bird: 83d adv)
+- **Let Available**: 10/09/2026 (🦅 Early Bird: 83d adv) (🦅 Early Bird: 83d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/89915127](https://www.rightmove.co.uk/properties/89915127)
 
 ---
@@ -1230,7 +1239,7 @@ Cassilis Road, E14
 - **Size**: 51 sqm
 - **Listing Update**: 2026-06-04
 - **Listing Status**: Added on 04/06/2026
-- **Let Available**: 19/08/2026 (🦅 Early Bird: 76d adv)
+- **Let Available**: 19/08/2026 (🦅 Early Bird: 76d adv) (🦅 Early Bird: 76d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/89280255](https://www.rightmove.co.uk/properties/89280255)
 
 ---
@@ -1420,8 +1429,7 @@ Cassilis Road, E14
 ### [2026-07-08T16:57:39.799Z] MATCH FOUND!
 - **Marketed by**: Chestertons, Canary Wharf and Docklands
 - **Location**: Canary Wharf
-- **Property Name**: Ability Place, 
-Millharbour, E14
+- **Property Name**: Ability Place,
 - **ID**: 90643689
 - **Price**: £2200 PCM
 - **Size**: 49 sqm
@@ -1477,8 +1485,7 @@ Millharbour, E14
 ### [2026-05-15T16:41:00.993Z] MATCH FOUND!
 - **Marketed by**: Unknown
 - **Location**: Farringdon
-- **Property Name**: Parmoor Court, 
-Gee Street, EC1V
+- **Property Name**: Parmoor Court,
 - **ID**: 88223106
 - **Price**: £2450 PCM
 - **Size**: 49 sqm
@@ -1498,7 +1505,7 @@ Gee Street, EC1V
 - **Size**: 49 sqm
 - **Listing Update**: 2026-07-08
 - **Listing Status**: Added yesterday
-- **Let Available**: 07/10/2026 (🦅 Early Bird: 91d adv)
+- **Let Available**: 07/10/2026 (🦅 Early Bird: 91d adv) (🦅 Early Bird: 91d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/90638649](https://www.rightmove.co.uk/properties/90638649)
 
 ---
@@ -1632,14 +1639,13 @@ Gee Street, EC1V
 ### [2026-07-02T17:21:03.932Z] MATCH FOUND!
 - **Marketed by**: Unknown
 - **Location**: Highbury & Islington
-- **Property Name**: Transenna Works, 
-1 Laycock Street, N1
+- **Property Name**: Transenna Works,
 - **ID**: 89537013
 - **Price**: £2500 PCM
 - **Size**: 47 sqm
 - **Listing Update**: 2026-06-10
 - **Listing Status**: Added on 10/06/2026
-- **Let Available**: 15/08/2026 (🦅 Early Bird: 66d adv)
+- **Let Available**: 15/08/2026 (🦅 Early Bird: 66d adv) (🦅 Early Bird: 66d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/89537013](https://www.rightmove.co.uk/properties/89537013)
 
 ---
@@ -1745,8 +1751,7 @@ Gee Street, EC1V
 ### [2026-07-07T13:05:14.907Z] MATCH FOUND!
 - **Marketed by**: Chestertons, Canary Wharf and Docklands
 - **Location**: Canary Wharf
-- **Property Name**: Moore House, 
-Cassilis Road, E14
+- **Property Name**: Moore House,
 - **ID**: 90556479
 - **Price**: £2100 PCM
 - **Size**: 46 sqm
@@ -1760,8 +1765,7 @@ Cassilis Road, E14
 ### [2026-07-07T13:05:14.906Z] MATCH FOUND!
 - **Marketed by**: Chestertons, Canary Wharf and Docklands
 - **Location**: Canary Wharf
-- **Property Name**: Millharbour, 
-Millwall, E14
+- **Property Name**: Millharbour,
 - **ID**: 90582321
 - **Price**: £2100 PCM
 - **Size**: 46 sqm
@@ -1809,7 +1813,7 @@ Millwall, E14
 - **Size**: 46 sqm
 - **Listing Update**: 2026-06-12
 - **Listing Status**: Added on 12/06/2026
-- **Let Available**: 22/08/2026 (🦅 Early Bird: 71d adv)
+- **Let Available**: 22/08/2026 (🦅 Early Bird: 71d adv) (🦅 Early Bird: 71d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/89632845](https://www.rightmove.co.uk/properties/89632845)
 
 ---
@@ -2075,7 +2079,7 @@ Millwall, E14
 - **Size**: 43.77 sqm
 - **Listing Update**: 2026-06-19
 - **Listing Status**: Added on 19/06/2026
-- **Let Available**: 17/09/2026 (🦅 Early Bird: 90d adv)
+- **Let Available**: 17/09/2026 (🦅 Early Bird: 90d adv) (🦅 Early Bird: 90d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/89936142](https://www.rightmove.co.uk/properties/89936142)
 
 ---
@@ -2173,7 +2177,7 @@ Millwall, E14
 - **Size**: 42.09 sqm
 - **Listing Update**: 2026-07-01
 - **Listing Status**: Added on 01/07/2026
-- **Let Available**: 15/09/2026 (🦅 Early Bird: 76d adv)
+- **Let Available**: 15/09/2026 (🦅 Early Bird: 76d adv) (🦅 Early Bird: 76d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/157618283](https://www.rightmove.co.uk/properties/157618283)
 
 ---
@@ -2447,8 +2451,7 @@ Millwall, E14
 ### [2026-07-02T17:21:03.929Z] MATCH FOUND!
 - **Marketed by**: Unknown
 - **Location**: West Hampstead
-- **Property Name**: Canfield Gardens, 
-South Hampstead, NW6
+- **Property Name**: Canfield Gardens,
 - **ID**: 90365553
 - **Price**: £2100 PCM
 - **Size**: 40 sqm
@@ -2462,8 +2465,7 @@ South Hampstead, NW6
 ### [2026-07-02T17:21:03.931Z] MATCH FOUND!
 - **Marketed by**: Unknown
 - **Location**: Highbury & Islington
-- **Property Name**: Holloway Road, 
-Islington, N7
+- **Property Name**: Holloway Road,
 - **ID**: 89866371
 - **Price**: £2250 PCM
 - **Size**: 40 sqm
@@ -2595,7 +2597,7 @@ Islington, N7
 - **Size**: 38 sqm
 - **Listing Update**: 2026-05-01
 - **Listing Status**: Reduced on 01/05/2026
-- **Let Available**: 11/07/2026 (🦅 Early Bird: 71d adv)
+- **Let Available**: 11/07/2026 (🦅 Early Bird: 71d adv) (🦅 Early Bird: 71d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/157692917](https://www.rightmove.co.uk/properties/157692917)
 
 ---
@@ -2609,7 +2611,7 @@ Islington, N7
 - **Size**: 24 sqm
 - **Listing Update**: 2026-05-02
 - **Listing Status**: Added on 02/05/2026
-- **Let Available**: Now (🦅 Early Bird: 69d adv)
+- **Let Available**: Now (🦅 Early Bird: 69d adv) (🦅 Early Bird: 69d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/88013730](https://www.rightmove.co.uk/properties/88013730)
 
 ---
