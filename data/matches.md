@@ -138,20 +138,6 @@
 
 ---
 
-### [2026-05-29T13:48:52.194Z] MATCH FOUND!
-- **Marketed by**: Unknown
-- **Location**: Canary Wharf
-- **Property Name**: City Tower, Canary Wharf, E14
-- **ID**: 89051616
-- **Price**: £2375 PCM
-- **Size**: 75 sqm
-- **Listing Update**: 2026-06-14
-- **Listing Status**: Reduced on 14/06/2026
-- **Let Available**: 17/07/2026
-- **Link**: [https://www.rightmove.co.uk/properties/89051616](https://www.rightmove.co.uk/properties/89051616)
-
----
-
 ### [2026-05-23T11:45:49.228Z] MATCH FOUND!
 - **Marketed by**: Unknown
 - **Location**: Canary Wharf
@@ -376,20 +362,6 @@ Millwall, E14
 - **Listing Status**: Added on 29/06/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90278955](https://www.rightmove.co.uk/properties/90278955)
-
----
-
-### [2026-07-02T17:21:03.931Z] MATCH FOUND!
-- **Marketed by**: Unknown
-- **Location**: Highbury & Islington
-- **Property Name**: Canonbury Street London N1
-- **ID**: 90372378
-- **Price**: £2500 PCM
-- **Size**: 62.62 sqm
-- **Listing Update**: 2026-07-01
-- **Listing Status**: Added on 01/07/2026
-- **Let Available**: 10/07/2026
-- **Link**: [https://www.rightmove.co.uk/properties/90372378](https://www.rightmove.co.uk/properties/90372378)
 
 ---
 
@@ -1092,20 +1064,6 @@ Cassilis Road, E14
 - **Listing Status**: Added on 07/07/2026
 - **Let Available**: 03/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90581886](https://www.rightmove.co.uk/properties/90581886)
-
----
-
-### [2026-07-02T17:21:03.931Z] MATCH FOUND!
-- **Marketed by**: Unknown
-- **Location**: Highbury & Islington
-- **Property Name**: Waterloo Gardens, 1-4 Milner Square, London, N1
-- **ID**: 90330885
-- **Price**: £2200 PCM
-- **Size**: 51.75 sqm
-- **Listing Update**: 2026-06-30
-- **Listing Status**: Added on 30/06/2026
-- **Let Available**: 30/09/2026 (🦅 Early Bird: 92d adv)
-- **Link**: [https://www.rightmove.co.uk/properties/90330885](https://www.rightmove.co.uk/properties/90330885)
 
 ---
 
