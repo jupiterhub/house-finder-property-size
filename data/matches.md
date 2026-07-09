@@ -226,20 +226,6 @@ South Quay, E14
 
 ### [2026-07-04T11:57:12.811Z] MATCH FOUND!
 - **Marketed by**: Unknown
-- **Location**: Canary Wharf
-- **Property Name**: City Tower, Limeharbour, Nr Canary Wharf, London, E14
-- **ID**: 90470013
-- **Price**: £2496 PCM
-- **Size**: 71.16 sqm
-- **Listing Update**: 2026-07-03
-- **Listing Status**: Added on 03/07/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/90470013](https://www.rightmove.co.uk/properties/90470013)
-
----
-
-### [2026-07-04T11:57:12.811Z] MATCH FOUND!
-- **Marketed by**: Unknown
 - **Location**: Stratford
 - **Property Name**: The Stratford Eye, Angel Lane E15
 - **ID**: 90474612
@@ -388,7 +374,7 @@ Millwall, E14
 - **Size**: 61.04 sqm
 - **Listing Update**: 2026-07-01
 - **Listing Status**: Added on 01/07/2026
-- **Let Available**: 14/09/2026 (🦅 Early Bird: 75d adv)
+- **Let Available**: 12/09/2026 (🦅 Early Bird: 73d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/90382506](https://www.rightmove.co.uk/properties/90382506)
 
 ---
@@ -558,6 +544,20 @@ Millwall, E14
 - **Listing Status**: Added on 12/06/2026
 - **Let Available**: 27/08/2026 (🦅 Early Bird: 76d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/89629074](https://www.rightmove.co.uk/properties/89629074)
+
+---
+
+### [2026-07-09T17:30:15.508Z] MATCH FOUND!
+- **Marketed by**: OpenRent, London
+- **Location**: OpenRent (London)
+- **Property Name**: Great North Road, London, N6
+- **ID**: 90706746
+- **Price**: £1850 PCM
+- **Size**: 57.97 sqm
+- **Listing Update**: 2026-07-09
+- **Listing Status**: Added today
+- **Let Available**: 21/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/90706746](https://www.rightmove.co.uk/properties/90706746)
 
 ---
 
@@ -1912,20 +1912,6 @@ Millwall, E14
 
 ---
 
-### [2026-06-20T12:17:31.433Z] MATCH FOUND!
-- **Marketed by**: Unknown
-- **Location**: Bloomsbury (Russell Square)
-- **Property Name**: Great Ormond St, Bloomsbury, London, WC1N
-- **ID**: 89767467
-- **Price**: £2479 PCM
-- **Size**: 45 sqm
-- **Listing Update**: 2026-07-07
-- **Listing Status**: Reduced on 07/07/2026
-- **Let Available**: 10/08/2026
-- **Link**: [https://www.rightmove.co.uk/properties/89767467](https://www.rightmove.co.uk/properties/89767467)
-
----
-
 ### [2026-07-02T12:32:13.021Z] MATCH FOUND!
 - **Marketed by**: Unknown
 - **Location**: Farringdon
@@ -2245,6 +2231,34 @@ Millwall, E14
 - **Listing Status**: Reduced on 23/06/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/89884620](https://www.rightmove.co.uk/properties/89884620)
+
+---
+
+### [2026-07-09T17:30:15.508Z] MATCH FOUND!
+- **Marketed by**: Knight Frank - Lettings, Wapping
+- **Location**: Farringdon / Clerkenwell
+- **Property Name**: St Andrews Street, City, London, EC4A
+- **ID**: 90698046
+- **Price**: £2496 PCM
+- **Size**: 42 sqm
+- **Listing Update**: 2026-07-09
+- **Listing Status**: Added today
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/90698046](https://www.rightmove.co.uk/properties/90698046)
+
+---
+
+### [2026-07-09T17:30:15.508Z] MATCH FOUND!
+- **Marketed by**: Savills Lettings, Canary Wharf
+- **Location**: Canary Wharf
+- **Property Name**: Marsh Wall, London, E22
+- **ID**: 89072415
+- **Price**: £2500 PCM
+- **Size**: 42 sqm
+- **Listing Update**: 2026-07-09
+- **Listing Status**: Reduced today
+- **Let Available**: 08/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/89072415](https://www.rightmove.co.uk/properties/89072415)
 
 ---
 
