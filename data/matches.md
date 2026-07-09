@@ -176,7 +176,7 @@ Islington, N1
 - **Size**: 74 sqm
 - **Listing Update**: 2026-05-12
 - **Listing Status**: Reduced on 12/05/2026
-- **Let Available**: 14/07/2026
+- **Let Available**: 03/08/2026 (🦅 Early Bird: 83d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/174571163](https://www.rightmove.co.uk/properties/174571163)
 
 ---
@@ -292,20 +292,6 @@ Millwall, E14
 - **Listing Status**: Added on 30/06/2026
 - **Let Available**: 15/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90273990](https://www.rightmove.co.uk/properties/90273990)
-
----
-
-### [2026-07-07T13:05:14.906Z] MATCH FOUND!
-- **Marketed by**: Knight Frank - Lettings, Canary  Wharf
-- **Location**: Canary Wharf
-- **Property Name**: Port East Apartments, Hertsmere Road, Nr Canary Wharf, London, E14.
-- **ID**: 90564630
-- **Price**: £2275 PCM
-- **Size**: 66.6 sqm
-- **Listing Update**: 2026-07-07
-- **Listing Status**: Added on 07/07/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/90564630](https://www.rightmove.co.uk/properties/90564630)
 
 ---
 
@@ -502,6 +488,20 @@ Millwall, E14
 - **Listing Status**: Added on 25/06/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90131796](https://www.rightmove.co.uk/properties/90131796)
+
+---
+
+### [2026-07-09T14:04:32.095Z] MATCH FOUND!
+- **Marketed by**: Dimension Estates, London
+- **Location**: Stratford
+- **Property Name**: Wise Road,  London, E15
+- **ID**: 160081223
+- **Price**: £1050 PCM
+- **Size**: 58.4 sqm
+- **Listing Update**: 2026-07-09
+- **Listing Status**: Reduced today
+- **Let Available**: 15/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/160081223](https://www.rightmove.co.uk/properties/160081223)
 
 ---
 
@@ -1601,20 +1601,6 @@ Gee Street, EC1V
 
 ---
 
-### [2026-06-30T12:32:19.234Z] MATCH FOUND!
-- **Marketed by**: Unknown
-- **Location**: Farringdon
-- **Property Name**: Arlidge House, Kirby Street, London, EC1N
-- **ID**: 90305391
-- **Price**: £2379 PCM
-- **Size**: 47.9 sqm
-- **Listing Update**: 2026-06-30
-- **Listing Status**: Added on 30/06/2026
-- **Let Available**: 27/07/2026
-- **Link**: [https://www.rightmove.co.uk/properties/90305391](https://www.rightmove.co.uk/properties/90305391)
-
----
-
 ### [2026-07-07T13:05:14.907Z] MATCH FOUND!
 - **Marketed by**: Colin Bibra Estate Agents Ltd, London
 - **Location**: Ealing Broadway
@@ -1979,20 +1965,6 @@ Millwall, E14
 - **Listing Status**: Added yesterday
 - **Let Available**: 04/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90607554](https://www.rightmove.co.uk/properties/90607554)
-
----
-
-### [2026-05-15T16:41:00.993Z] MATCH FOUND!
-- **Marketed by**: Unknown
-- **Location**: Farringdon
-- **Property Name**: Red Lion Court, St Pauls
-- **ID**: 174538664
-- **Price**: £2500 PCM
-- **Size**: 44.7 sqm
-- **Listing Update**: 2026-05-02
-- **Listing Status**: Reduced on 02/05/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/174538664](https://www.rightmove.co.uk/properties/174538664)
 
 ---
 
@@ -2437,8 +2409,8 @@ Millwall, E14
 - **ID**: 88135632
 - **Price**: £1842 PCM
 - **Size**: 40 sqm
-- **Listing Update**: 2026-06-29
-- **Listing Status**: Reduced on 29/06/2026
+- **Listing Update**: 2026-07-09
+- **Listing Status**: Reduced today
 - **Let Available**: 10/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/88135632](https://www.rightmove.co.uk/properties/88135632)
 
@@ -2623,7 +2595,7 @@ Islington, N7
 - **Size**: 24 sqm
 - **Listing Update**: 2026-05-02
 - **Listing Status**: Added on 02/05/2026
-- **Let Available**: Now (🦅 Early Bird: 68d adv)
+- **Let Available**: Now (🦅 Early Bird: 69d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/88013730](https://www.rightmove.co.uk/properties/88013730)
 
 ---
