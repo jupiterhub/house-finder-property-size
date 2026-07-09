@@ -24,9 +24,41 @@ class RightmoveAdapter {
     const results = [];
     console.log(`Starting ${this.platformName} scraping...`);
 
-    for (let i = 0; i < config.rightmoveUrls.length; i++) {
-      const url = config.rightmoveUrls[i];
-      const locationName = config.locations[i] || 'Unknown';
+    const LOCATION_IDENTIFIERS = {
+      "canary wharf": "STATION^1724",
+      "south quay": "STATION^8432",
+      "south quay station": "STATION^8432",
+      "paddington": "STATION^6965",
+      "moorgate": "STATION^6332",
+      "bloomsbury (russell square)": "STATION^7877",
+      "farringdon / clerkenwell": "STATION^3431",
+      "king's cross": "STATION^5162",
+      "blackfriars": "STATION^1040",
+      "ealing broadway": "STATION^3023",
+      "london bridge": "STATION^5792",
+      "stratford": "STATION^8813",
+      "angel": "STATION^245",
+      "highbury & islington": "STATION^4583",
+      "openrent (london)": "https://www.rightmove.co.uk/estate-agents/agent/OpenRent/London-96668.html?transactionType=lettings"
+    };
+
+    const locationsToScrape = config.locations || [];
+    for (const locationName of locationsToScrape) {
+      const key = locationName.toLowerCase().trim();
+      const identifier = LOCATION_IDENTIFIERS[key];
+      
+      if (!identifier) {
+        console.warn(`Warning: Location "${locationName}" is not mapped to a Rightmove identifier/URL. Skipping.`);
+        continue;
+      }
+
+      let url;
+      if (identifier.startsWith('http')) {
+        url = identifier;
+      } else {
+        const encodedId = encodeURIComponent(identifier);
+        url = `https://www.rightmove.co.uk/property-to-rent/find.html?useLocationIdentifier=true&locationIdentifier=${encodedId}&_includeLetAgreed=false&maxBedrooms=2&index=0&sortType=6&channel=RENT&transactionType=LETTING&maxPrice=${config.maxPrice}`;
+      }
       
       console.log(`Navigating to search URL: ${url} (${locationName})`);
       await this.page.goto(url, { waitUntil: 'domcontentloaded' });

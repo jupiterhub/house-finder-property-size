@@ -19,9 +19,10 @@ You don't need to navigate to the project folder. Use the shortcuts in your home
 
 ## ⚙️ Configuration
 You can edit `config.json` in the project directory to update your search:
-- `maxPrice`: Your maximum monthly budget (currently £2500).
-- `minSqm`: Your minimum required size (currently 40 sqm).
-- `rightmoveUrls`: Add or remove search links here.
+- `maxPrice`: Your maximum monthly rent budget (currently £2700).
+- `minSqm`: Your minimum required property size (currently 50 sqm).
+- `locations`: Add or remove search areas (e.g. "Canary Wharf", "Paddington"). The URLs are dynamically generated from these locations.
+
 
 ## 📂 Output Files
 - **`data/matches.md`**: A clean, readable Markdown log of all properties that meet your criteria.
