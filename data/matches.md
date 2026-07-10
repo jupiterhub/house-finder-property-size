@@ -152,6 +152,20 @@
 
 ---
 
+### [2026-07-10T13:24:20.943Z] MATCH FOUND!
+- **Marketed by**: Dexters, Canary Wharf
+- **Location**: Canary Wharf
+- **Property Name**: Knighthead Point, Canary Wharf
+- **ID**: 90735000
+- **Price**: £1900 PCM
+- **Size**: 75.4 sqm
+- **Listing Update**: 2026-07-10
+- **Listing Status**: Added today
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/90735000](https://www.rightmove.co.uk/properties/90735000)
+
+---
+
 ### [2026-05-23T11:45:49.228Z] MATCH FOUND!
 - **Marketed by**: Unknown
 - **Location**: Canary Wharf
@@ -280,21 +294,6 @@ South Quay, E14
 
 ---
 
-### [2026-05-20T13:24:59.549Z] MATCH FOUND!
-- **Marketed by**: Unknown
-- **Location**: Canary Wharf
-- **Property Name**: Millharbour, 
-Millwall, E14
-- **ID**: 88718487
-- **Price**: £2400 PCM
-- **Size**: 68 sqm
-- **Listing Update**: 2026-05-20
-- **Listing Status**: Added on 20/05/2026
-- **Let Available**: 13/07/2026
-- **Link**: [https://www.rightmove.co.uk/properties/88718487](https://www.rightmove.co.uk/properties/88718487)
-
----
-
 ### [2026-07-02T17:21:03.930Z] MATCH FOUND!
 - **Marketed by**: Unknown
 - **Location**: Stratford
@@ -348,34 +347,6 @@ Millwall, E14
 - **Listing Status**: Reduced on 08/07/2026
 - **Let Available**: 28/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/89878227](https://www.rightmove.co.uk/properties/89878227)
-
----
-
-### [2026-07-09T20:28:22.871Z] MATCH FOUND!
-- **Marketed by**: Flagstones Property Group, London
-- **Location**: Canary Wharf
-- **Property Name**: The Madison, Marsh Wall, Canary Wharf E14
-- **ID**: 90698475
-- **Price**: £2700 PCM
-- **Size**: 64 sqm
-- **Listing Update**: 2026-07-09
-- **Listing Status**: Added yesterday
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/90698475](https://www.rightmove.co.uk/properties/90698475)
-
----
-
-### [2026-07-09T20:28:22.871Z] MATCH FOUND!
-- **Marketed by**: Flagstones Property Group, London
-- **Location**: Canary Wharf
-- **Property Name**: The Madison, Marsh Wall, Canary Wharf E14
-- **ID**: 90635964
-- **Price**: £2700 PCM
-- **Size**: 64 sqm
-- **Listing Update**: 2026-07-08
-- **Listing Status**: Added on 08/07/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/90635964](https://www.rightmove.co.uk/properties/90635964)
 
 ---
 
@@ -474,6 +445,20 @@ Millwall, E14
 - **Listing Status**: Added on 07/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90603552](https://www.rightmove.co.uk/properties/90603552)
+
+---
+
+### [2026-07-10T13:24:20.943Z] MATCH FOUND!
+- **Marketed by**: Orient Estates, London
+- **Location**: Bloomsbury (Russell Square)
+- **Property Name**: Marchmont Street, London
+- **ID**: 90729582
+- **Price**: £2275 PCM
+- **Size**: 60 sqm
+- **Listing Update**: 2026-07-10
+- **Listing Status**: Added today
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/90729582](https://www.rightmove.co.uk/properties/90729582)
 
 ---
 
@@ -645,6 +630,20 @@ Millwall, E14
 
 ---
 
+### [2026-07-10T13:24:20.943Z] MATCH FOUND!
+- **Marketed by**: Benham and Reeves - Canary Wharf, Canary Wharf
+- **Location**: Canary Wharf
+- **Property Name**: Millharbour, Canary Wharf, E14
+- **ID**: 90733836
+- **Price**: £2600 PCM
+- **Size**: 57.3 sqm
+- **Listing Update**: 2026-07-10
+- **Listing Status**: Added today
+- **Let Available**: 25/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/90733836](https://www.rightmove.co.uk/properties/90733836)
+
+---
+
 ### [2026-06-29T14:38:32.082Z] MATCH FOUND!
 - **Marketed by**: Unknown
 - **Location**: Canary Wharf
@@ -740,6 +739,20 @@ Millwall, E14
 - **Listing Status**: Added on 03/07/2026
 - **Let Available**: 05/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90471747](https://www.rightmove.co.uk/properties/90471747)
+
+---
+
+### [2026-07-10T13:24:20.943Z] MATCH FOUND!
+- **Marketed by**: JLL, Canary Wharf
+- **Location**: Canary Wharf
+- **Property Name**: Amory Tower, Marsh Wall, E14
+- **ID**: 174789320
+- **Price**: £2600 PCM
+- **Size**: 56 sqm
+- **Listing Update**: 2026-07-07
+- **Listing Status**: Reduced on 07/07/2026
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/174789320](https://www.rightmove.co.uk/properties/174789320)
 
 ---
 
@@ -919,9 +932,9 @@ Islington, N1
 - **ID**: 89583771
 - **Price**: £2200 PCM
 - **Size**: 54 sqm
-- **Listing Update**: 2026-06-11
-- **Listing Status**: Added on 11/06/2026
-- **Let Available**: 03/09/2026 (🦅 Early Bird: 84d adv)
+- **Listing Update**: 2026-07-10
+- **Listing Status**: Reduced today
+- **Let Available**: 03/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/89583771](https://www.rightmove.co.uk/properties/89583771)
 
 ---
@@ -1035,6 +1048,20 @@ Islington, N1
 - **Listing Status**: Added on 07/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90569322](https://www.rightmove.co.uk/properties/90569322)
+
+---
+
+### [2026-07-10T13:24:20.943Z] MATCH FOUND!
+- **Marketed by**: JOHNSandCO, Canary Wharf
+- **Location**: South Quay
+- **Property Name**: Heritage Tower, Canary Wharf
+- **ID**: 90738903
+- **Price**: £2600 PCM
+- **Size**: 52.03 sqm
+- **Listing Update**: 2026-07-10
+- **Listing Status**: Added today
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/90738903](https://www.rightmove.co.uk/properties/90738903)
 
 ---
 
@@ -1584,20 +1611,6 @@ Gee Street, EC1V
 - **Listing Status**: Reduced on 19/05/2026
 - **Let Available**: 14/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/88223106](https://www.rightmove.co.uk/properties/88223106)
-
----
-
-### [2026-07-08T16:57:39.799Z] MATCH FOUND!
-- **Marketed by**: Greystar, Coppermaker Square
-- **Location**: Stratford
-- **Property Name**: Coppermaker Square
-- **ID**: 90638649
-- **Price**: £2500 PCM
-- **Size**: 49 sqm
-- **Listing Update**: 2026-07-08
-- **Listing Status**: Added on 08/07/2026
-- **Let Available**: 07/10/2026 (🦅 Early Bird: 91d adv)
-- **Link**: [https://www.rightmove.co.uk/properties/90638649](https://www.rightmove.co.uk/properties/90638649)
 
 ---
 
@@ -2558,20 +2571,6 @@ Islington, N7
 
 ---
 
-### [2026-07-04T11:57:12.810Z] MATCH FOUND!
-- **Marketed by**: Unknown
-- **Location**: Blackfriars
-- **Property Name**: NEO Bankside, Sumner Street, Southbank, London, SE1
-- **ID**: 90472821
-- **Price**: £2297 PCM
-- **Size**: 40 sqm
-- **Listing Update**: 2026-07-03
-- **Listing Status**: Added on 03/07/2026
-- **Let Available**: 29/08/2026
-- **Link**: [https://www.rightmove.co.uk/properties/90472821](https://www.rightmove.co.uk/properties/90472821)
-
----
-
 ### [2026-07-02T17:21:03.930Z] MATCH FOUND!
 - **Marketed by**: Unknown
 - **Location**: Stratford
@@ -2665,7 +2664,7 @@ Islington, N7
 - **Size**: 24 sqm
 - **Listing Update**: 2026-05-02
 - **Listing Status**: Added on 02/05/2026
-- **Let Available**: Now (🦅 Early Bird: 69d adv)
+- **Let Available**: Now (🦅 Early Bird: 70d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/88013730](https://www.rightmove.co.uk/properties/88013730)
 
 ---
