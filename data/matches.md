@@ -20,7 +20,7 @@
 - **Price**: £2500 PCM
 - **Size**: 231.79 sqm
 - **Listing Update**: 2026-07-09
-- **Listing Status**: Reduced today
+- **Listing Status**: Reduced yesterday
 - **Let Available**: 01/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90331062](https://www.rightmove.co.uk/properties/90331062)
 
@@ -34,9 +34,23 @@
 - **Price**: £1950 PCM
 - **Size**: 110.9 sqm
 - **Listing Update**: 2026-07-08
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 08/07/2026
 - **Let Available**: 11/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90633384](https://www.rightmove.co.uk/properties/90633384)
+
+---
+
+### [2026-07-10T10:44:39.654Z] MATCH FOUND!
+- **Marketed by**: Foxtons, Canary Wharf
+- **Location**: Canary Wharf
+- **Property Name**: Boardwalk Place, Canary Wharf, London, E14
+- **ID**: 90723732
+- **Price**: £2492 PCM
+- **Size**: 90 sqm
+- **Listing Update**: 2026-07-10
+- **Listing Status**: Added today
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/90723732](https://www.rightmove.co.uk/properties/90723732)
 
 ---
 
@@ -119,7 +133,7 @@
 - **Size**: 76 sqm
 - **Listing Update**: 2026-06-23
 - **Listing Status**: Added on 23/06/2026
-- **Let Available**: 14/09/2026 (🦅 Early Bird: 83d adv) (🦅 Early Bird: 83d adv) (🦅 Early Bird: 83d adv)
+- **Let Available**: 14/09/2026 (🦅 Early Bird: 83d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/90025377](https://www.rightmove.co.uk/properties/90025377)
 
 ---
@@ -132,7 +146,7 @@
 - **Price**: £2500 PCM
 - **Size**: 76 sqm
 - **Listing Update**: 2026-07-08
-- **Listing Status**: Reduced yesterday
+- **Listing Status**: Reduced on 08/07/2026
 - **Let Available**: 04/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/89266041](https://www.rightmove.co.uk/properties/89266041)
 
@@ -169,13 +183,14 @@
 ### [2026-05-02T20:15:55.703Z] MATCH FOUND!
 - **Marketed by**: Unknown
 - **Location**: Unknown
-- **Property Name**: Caledonian Road,
+- **Property Name**: Caledonian Road, 
+Islington, N1
 - **ID**: 174571163
 - **Price**: £3250 PCM
 - **Size**: 74 sqm
 - **Listing Update**: 2026-05-12
 - **Listing Status**: Reduced on 12/05/2026
-- **Let Available**: 03/08/2026 (🦅 Early Bird: 83d adv) (🦅 Early Bird: 83d adv) (🦅 Early Bird: 83d adv)
+- **Let Available**: 03/08/2026 (🦅 Early Bird: 83d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/174571163](https://www.rightmove.co.uk/properties/174571163)
 
 ---
@@ -216,7 +231,7 @@
 - **Price**: £2650 PCM
 - **Size**: 73 sqm
 - **Listing Update**: 2026-07-09
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: 14/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90707175](https://www.rightmove.co.uk/properties/90707175)
 
@@ -225,7 +240,8 @@
 ### [2026-06-09T13:32:41.227Z] MATCH FOUND!
 - **Marketed by**: Unknown
 - **Location**: Canary Wharf
-- **Property Name**: Boardwalk Place,
+- **Property Name**: Boardwalk Place, 
+South Quay, E14
 - **ID**: 89487687
 - **Price**: £2500 PCM
 - **Size**: 72 sqm
@@ -264,24 +280,11 @@
 
 ---
 
-### [2026-05-02T20:15:55.705Z] MATCH FOUND!
-- **Marketed by**: Unknown
-- **Location**: Unknown
-- **Property Name**: Turnmill Street, Farringdon, London, EC1M
-- **ID**: 87996729
-- **Price**: £2900 PCM
-- **Size**: 69 sqm
-- **Listing Update**: 2026-05-01
-- **Listing Status**: Added on 01/05/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/87996729](https://www.rightmove.co.uk/properties/87996729)
-
----
-
 ### [2026-05-20T13:24:59.549Z] MATCH FOUND!
 - **Marketed by**: Unknown
 - **Location**: Canary Wharf
-- **Property Name**: Millharbour,
+- **Property Name**: Millharbour, 
+Millwall, E14
 - **ID**: 88718487
 - **Price**: £2400 PCM
 - **Size**: 68 sqm
@@ -328,7 +331,7 @@
 - **Price**: £2500 PCM
 - **Size**: 65.87 sqm
 - **Listing Update**: 2026-07-09
-- **Listing Status**: Reduced today
+- **Listing Status**: Reduced yesterday
 - **Let Available**: 04/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/89844084](https://www.rightmove.co.uk/properties/89844084)
 
@@ -342,7 +345,7 @@
 - **Price**: £2600 PCM
 - **Size**: 64.8 sqm
 - **Listing Update**: 2026-07-08
-- **Listing Status**: Reduced yesterday
+- **Listing Status**: Reduced on 08/07/2026
 - **Let Available**: 28/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/89878227](https://www.rightmove.co.uk/properties/89878227)
 
@@ -356,7 +359,7 @@
 - **Price**: £2700 PCM
 - **Size**: 64 sqm
 - **Listing Update**: 2026-07-09
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90698475](https://www.rightmove.co.uk/properties/90698475)
 
@@ -370,7 +373,7 @@
 - **Price**: £2700 PCM
 - **Size**: 64 sqm
 - **Listing Update**: 2026-07-08
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 08/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90635964](https://www.rightmove.co.uk/properties/90635964)
 
@@ -446,20 +449,6 @@
 
 ---
 
-### [2026-07-02T17:21:03.929Z] MATCH FOUND!
-- **Marketed by**: Unknown
-- **Location**: West Hampstead
-- **Property Name**: Finchley Road, Hampstead NW3
-- **ID**: 90382506
-- **Price**: £2058 PCM
-- **Size**: 61.04 sqm
-- **Listing Update**: 2026-07-01
-- **Listing Status**: Added on 01/07/2026
-- **Let Available**: 12/09/2026 (🦅 Early Bird: 73d adv) (🦅 Early Bird: 73d adv) (🦅 Early Bird: 73d adv)
-- **Link**: [https://www.rightmove.co.uk/properties/90382506](https://www.rightmove.co.uk/properties/90382506)
-
----
-
 ### [2026-07-07T13:05:14.906Z] MATCH FOUND!
 - **Marketed by**: Stirling Ackroyd Lettings, Canary Wharf
 - **Location**: Canary Wharf
@@ -471,20 +460,6 @@
 - **Listing Status**: Added on 07/07/2026
 - **Let Available**: 02/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90572814](https://www.rightmove.co.uk/properties/90572814)
-
----
-
-### [2026-06-25T13:05:08.775Z] MATCH FOUND!
-- **Marketed by**: Unknown
-- **Location**: Canary Wharf
-- **Property Name**: South Quay Square, Canary Wharf, London, E14
-- **ID**: 90129939
-- **Price**: £2400 PCM
-- **Size**: 61 sqm
-- **Listing Update**: 2026-07-02
-- **Listing Status**: Reduced on 02/07/2026
-- **Let Available**: 29/07/2026
-- **Link**: [https://www.rightmove.co.uk/properties/90129939](https://www.rightmove.co.uk/properties/90129939)
 
 ---
 
@@ -510,7 +485,7 @@
 - **Price**: £2650 PCM
 - **Size**: 60 sqm
 - **Listing Update**: 2026-07-08
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 08/07/2026
 - **Let Available**: 04/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90639810](https://www.rightmove.co.uk/properties/90639810)
 
@@ -537,8 +512,8 @@
 - **ID**: 90092094
 - **Price**: £2300 PCM
 - **Size**: 59 sqm
-- **Listing Update**: 2026-06-24
-- **Listing Status**: Added on 24/06/2026
+- **Listing Update**: 2026-07-10
+- **Listing Status**: Reduced today
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90092094](https://www.rightmove.co.uk/properties/90092094)
 
@@ -580,23 +555,9 @@
 - **Price**: £1050 PCM
 - **Size**: 58.4 sqm
 - **Listing Update**: 2026-07-09
-- **Listing Status**: Reduced today
+- **Listing Status**: Reduced yesterday
 - **Let Available**: 15/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/160081223](https://www.rightmove.co.uk/properties/160081223)
-
----
-
-### [2026-07-04T11:57:12.811Z] MATCH FOUND!
-- **Marketed by**: Unknown
-- **Location**: Stratford
-- **Property Name**: Stratosphere Tower,  Great Eastern Road, London E15
-- **ID**: 167737724
-- **Price**: £2150 PCM
-- **Size**: 58 sqm
-- **Listing Update**: 2026-07-02
-- **Listing Status**: Reduced on 02/07/2026
-- **Let Available**: 30/07/2026
-- **Link**: [https://www.rightmove.co.uk/properties/167737724](https://www.rightmove.co.uk/properties/167737724)
 
 ---
 
@@ -637,7 +598,7 @@
 - **Size**: 58 sqm
 - **Listing Update**: 2026-06-12
 - **Listing Status**: Added on 12/06/2026
-- **Let Available**: 27/08/2026 (🦅 Early Bird: 76d adv) (🦅 Early Bird: 76d adv) (🦅 Early Bird: 76d adv)
+- **Let Available**: 27/08/2026 (🦅 Early Bird: 76d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/89629074](https://www.rightmove.co.uk/properties/89629074)
 
 ---
@@ -650,7 +611,7 @@
 - **Price**: £1850 PCM
 - **Size**: 57.97 sqm
 - **Listing Update**: 2026-07-09
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: 21/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90706746](https://www.rightmove.co.uk/properties/90706746)
 
@@ -665,7 +626,7 @@
 - **Size**: 57.97 sqm
 - **Listing Update**: 2026-06-15
 - **Listing Status**: Added on 15/06/2026
-- **Let Available**: 22/08/2026 (🦅 Early Bird: 68d adv) (🦅 Early Bird: 68d adv) (🦅 Early Bird: 68d adv)
+- **Let Available**: 22/08/2026 (🦅 Early Bird: 68d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/89710086](https://www.rightmove.co.uk/properties/89710086)
 
 ---
@@ -679,7 +640,7 @@
 - **Size**: 57.41 sqm
 - **Listing Update**: 2026-07-04
 - **Listing Status**: Added on 04/07/2026
-- **Let Available**: 10/07/2026
+- **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90500232](https://www.rightmove.co.uk/properties/90500232)
 
 ---
@@ -693,7 +654,7 @@
 - **Size**: 57 sqm
 - **Listing Update**: 2026-06-29
 - **Listing Status**: Added on 29/06/2026
-- **Let Available**: 10/07/2026
+- **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90265077](https://www.rightmove.co.uk/properties/90265077)
 
 ---
@@ -706,9 +667,23 @@
 - **Price**: £2275 PCM
 - **Size**: 57 sqm
 - **Listing Update**: 2026-07-08
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 08/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90632145](https://www.rightmove.co.uk/properties/90632145)
+
+---
+
+### [2026-07-10T10:44:39.654Z] MATCH FOUND!
+- **Marketed by**: Foxtons, Canary Wharf
+- **Location**: South Quay
+- **Property Name**: Maine Tower, Canary Wharf, London, E14
+- **ID**: 89737599
+- **Price**: £2600 PCM
+- **Size**: 57 sqm
+- **Listing Update**: 2026-06-16
+- **Listing Status**: Added on 16/06/2026
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/89737599](https://www.rightmove.co.uk/properties/89737599)
 
 ---
 
@@ -720,8 +695,8 @@
 - **Price**: £2350 PCM
 - **Size**: 56.46 sqm
 - **Listing Update**: 2026-07-08
-- **Listing Status**: Added yesterday
-- **Let Available**: 19/09/2026 (🦅 Early Bird: 73d adv) (🦅 Early Bird: 73d adv) (🦅 Early Bird: 73d adv)
+- **Listing Status**: Added on 08/07/2026
+- **Let Available**: 19/09/2026 (🦅 Early Bird: 73d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/90632781](https://www.rightmove.co.uk/properties/90632781)
 
 ---
@@ -734,7 +709,7 @@
 - **Price**: £2037 PCM
 - **Size**: 56 sqm
 - **Listing Update**: 2026-07-08
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 08/07/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90632466](https://www.rightmove.co.uk/properties/90632466)
 
@@ -903,7 +878,7 @@
 - **Size**: 54 sqm
 - **Listing Update**: 2026-07-07
 - **Listing Status**: Added on 07/07/2026
-- **Let Available**: 21/09/2026 (🦅 Early Bird: 76d adv) (🦅 Early Bird: 76d adv) (🦅 Early Bird: 76d adv)
+- **Let Available**: 21/09/2026 (🦅 Early Bird: 76d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/90602829](https://www.rightmove.co.uk/properties/90602829)
 
 ---
@@ -939,13 +914,14 @@
 ### [2026-06-11T14:26:20.170Z] MATCH FOUND!
 - **Marketed by**: Unknown
 - **Location**: Kings Cross
-- **Property Name**: Calshot Street,
+- **Property Name**: Calshot Street, 
+Islington, N1
 - **ID**: 89583771
 - **Price**: £2200 PCM
 - **Size**: 54 sqm
 - **Listing Update**: 2026-06-11
 - **Listing Status**: Added on 11/06/2026
-- **Let Available**: 03/09/2026 (🦅 Early Bird: 84d adv) (🦅 Early Bird: 84d adv) (🦅 Early Bird: 84d adv)
+- **Let Available**: 03/09/2026 (🦅 Early Bird: 84d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/89583771](https://www.rightmove.co.uk/properties/89583771)
 
 ---
@@ -972,7 +948,7 @@
 - **Price**: £2500 PCM
 - **Size**: 54 sqm
 - **Listing Update**: 2026-07-08
-- **Listing Status**: Reduced yesterday
+- **Listing Status**: Reduced on 08/07/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/89918850](https://www.rightmove.co.uk/properties/89918850)
 
@@ -986,7 +962,7 @@
 - **Price**: £2600 PCM
 - **Size**: 54 sqm
 - **Listing Update**: 2026-07-09
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: 17/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90698739](https://www.rightmove.co.uk/properties/90698739)
 
@@ -1042,7 +1018,7 @@
 - **Price**: £2250 PCM
 - **Size**: 53 sqm
 - **Listing Update**: 2026-07-08
-- **Listing Status**: Reduced yesterday
+- **Listing Status**: Reduced on 08/07/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90130602](https://www.rightmove.co.uk/properties/90130602)
 
@@ -1065,13 +1041,14 @@
 ### [2026-05-28T14:23:45.500Z] MATCH FOUND!
 - **Marketed by**: Unknown
 - **Location**: Canary Wharf
-- **Property Name**: Gainsborough House,
+- **Property Name**: Gainsborough House, 
+Cassilis Road, E14
 - **ID**: 88995306
 - **Price**: £2200 PCM
 - **Size**: 52 sqm
 - **Listing Update**: 2026-05-27
 - **Listing Status**: Added on 27/05/2026
-- **Let Available**: 03/08/2026 (🦅 Early Bird: 68d adv) (🦅 Early Bird: 68d adv) (🦅 Early Bird: 68d adv)
+- **Let Available**: 03/08/2026 (🦅 Early Bird: 68d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/88995306](https://www.rightmove.co.uk/properties/88995306)
 
 ---
@@ -1099,7 +1076,7 @@
 - **Size**: 52 sqm
 - **Listing Update**: 2026-07-03
 - **Listing Status**: Added on 03/07/2026
-- **Let Available**: 07/09/2026 (🦅 Early Bird: 66d adv) (🦅 Early Bird: 66d adv) (🦅 Early Bird: 66d adv)
+- **Let Available**: 07/09/2026 (🦅 Early Bird: 66d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/90453585](https://www.rightmove.co.uk/properties/90453585)
 
 ---
@@ -1253,7 +1230,7 @@
 - **Size**: 51 sqm
 - **Listing Update**: 2026-06-23
 - **Listing Status**: Added on 23/06/2026
-- **Let Available**: 11/09/2026 (🦅 Early Bird: 80d adv) (🦅 Early Bird: 80d adv) (🦅 Early Bird: 80d adv)
+- **Let Available**: 11/09/2026 (🦅 Early Bird: 80d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/90047667](https://www.rightmove.co.uk/properties/90047667)
 
 ---
@@ -1309,7 +1286,7 @@
 - **Size**: 51 sqm
 - **Listing Update**: 2026-06-19
 - **Listing Status**: Added on 19/06/2026
-- **Let Available**: 10/09/2026 (🦅 Early Bird: 83d adv) (🦅 Early Bird: 83d adv) (🦅 Early Bird: 83d adv)
+- **Let Available**: 10/09/2026 (🦅 Early Bird: 83d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/89915127](https://www.rightmove.co.uk/properties/89915127)
 
 ---
@@ -1351,7 +1328,7 @@
 - **Size**: 51 sqm
 - **Listing Update**: 2026-06-04
 - **Listing Status**: Added on 04/06/2026
-- **Let Available**: 19/08/2026 (🦅 Early Bird: 76d adv) (🦅 Early Bird: 76d adv) (🦅 Early Bird: 76d adv)
+- **Let Available**: 19/08/2026 (🦅 Early Bird: 76d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/89280255](https://www.rightmove.co.uk/properties/89280255)
 
 ---
@@ -1395,20 +1372,6 @@
 - **Listing Status**: Added on 06/07/2026
 - **Let Available**: 12/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90532275](https://www.rightmove.co.uk/properties/90532275)
-
----
-
-### [2026-07-06T14:18:08.558Z] MATCH FOUND!
-- **Marketed by**: Kinleigh Folkard and Hayward - Lettings, Islington
-- **Location**: Farringdon / Clerkenwell
-- **Property Name**: Rosoman Street, Angel, London, EC1R
-- **ID**: 90528018
-- **Price**: £2500 PCM
-- **Size**: 50.1 sqm
-- **Listing Update**: 2026-07-06
-- **Listing Status**: Added on 06/07/2026
-- **Let Available**: 02/08/2026
-- **Link**: [https://www.rightmove.co.uk/properties/90528018](https://www.rightmove.co.uk/properties/90528018)
 
 ---
 
@@ -1532,7 +1495,7 @@
 - **Price**: £2275 PCM
 - **Size**: 49.61 sqm
 - **Listing Update**: 2026-07-08
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 08/07/2026
 - **Let Available**: 07/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90643629](https://www.rightmove.co.uk/properties/90643629)
 
@@ -1546,7 +1509,7 @@
 - **Price**: £1950 PCM
 - **Size**: 49.1 sqm
 - **Listing Update**: 2026-07-08
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 08/07/2026
 - **Let Available**: 15/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90628257](https://www.rightmove.co.uk/properties/90628257)
 
@@ -1555,12 +1518,13 @@
 ### [2026-07-08T16:57:39.799Z] MATCH FOUND!
 - **Marketed by**: Chestertons, Canary Wharf and Docklands
 - **Location**: Canary Wharf
-- **Property Name**: Ability Place,
+- **Property Name**: Ability Place, 
+Millharbour, E14
 - **ID**: 90643689
 - **Price**: £2200 PCM
 - **Size**: 49 sqm
 - **Listing Update**: 2026-07-08
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 08/07/2026
 - **Let Available**: 12/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90643689](https://www.rightmove.co.uk/properties/90643689)
 
@@ -1611,7 +1575,8 @@
 ### [2026-05-15T16:41:00.993Z] MATCH FOUND!
 - **Marketed by**: Unknown
 - **Location**: Farringdon
-- **Property Name**: Parmoor Court,
+- **Property Name**: Parmoor Court, 
+Gee Street, EC1V
 - **ID**: 88223106
 - **Price**: £2450 PCM
 - **Size**: 49 sqm
@@ -1630,8 +1595,8 @@
 - **Price**: £2500 PCM
 - **Size**: 49 sqm
 - **Listing Update**: 2026-07-08
-- **Listing Status**: Added yesterday
-- **Let Available**: 07/10/2026 (🦅 Early Bird: 91d adv) (🦅 Early Bird: 91d adv) (🦅 Early Bird: 91d adv)
+- **Listing Status**: Added on 08/07/2026
+- **Let Available**: 07/10/2026 (🦅 Early Bird: 91d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/90638649](https://www.rightmove.co.uk/properties/90638649)
 
 ---
@@ -1700,7 +1665,7 @@
 - **Price**: £2297 PCM
 - **Size**: 48 sqm
 - **Listing Update**: 2026-07-08
-- **Listing Status**: Reduced yesterday
+- **Listing Status**: Reduced on 08/07/2026
 - **Let Available**: 18/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/89161776](https://www.rightmove.co.uk/properties/89161776)
 
@@ -1728,7 +1693,7 @@
 - **Price**: £2383 PCM
 - **Size**: 48 sqm
 - **Listing Update**: 2026-07-08
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 08/07/2026
 - **Let Available**: 15/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90659712](https://www.rightmove.co.uk/properties/90659712)
 
@@ -1748,30 +1713,17 @@
 
 ---
 
-### [2026-07-02T17:21:03.928Z] MATCH FOUND!
-- **Marketed by**: Unknown
-- **Location**: Ealing Broadway
-- **Property Name**: Windsor Road, London, W5
-- **ID**: 90269487
-- **Price**: £2000 PCM
-- **Size**: 47 sqm
-- **Listing Update**: 2026-06-29
-- **Listing Status**: Added on 29/06/2026
-- **Let Available**: 28/07/2026
-- **Link**: [https://www.rightmove.co.uk/properties/90269487](https://www.rightmove.co.uk/properties/90269487)
-
----
-
 ### [2026-07-02T17:21:03.932Z] MATCH FOUND!
 - **Marketed by**: Unknown
 - **Location**: Highbury & Islington
-- **Property Name**: Transenna Works,
+- **Property Name**: Transenna Works, 
+1 Laycock Street, N1
 - **ID**: 89537013
 - **Price**: £2500 PCM
 - **Size**: 47 sqm
 - **Listing Update**: 2026-06-10
 - **Listing Status**: Added on 10/06/2026
-- **Let Available**: 15/08/2026 (🦅 Early Bird: 66d adv) (🦅 Early Bird: 66d adv) (🦅 Early Bird: 66d adv)
+- **Let Available**: 15/08/2026 (🦅 Early Bird: 66d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/89537013](https://www.rightmove.co.uk/properties/89537013)
 
 ---
@@ -1812,7 +1764,7 @@
 - **Price**: £1700 PCM
 - **Size**: 46.45 sqm
 - **Listing Update**: 2026-07-08
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 08/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90656631](https://www.rightmove.co.uk/properties/90656631)
 
@@ -1854,7 +1806,7 @@
 - **Price**: £1950 PCM
 - **Size**: 46 sqm
 - **Listing Update**: 2026-07-08
-- **Listing Status**: Reduced yesterday
+- **Listing Status**: Reduced on 08/07/2026
 - **Let Available**: 16/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90327240](https://www.rightmove.co.uk/properties/90327240)
 
@@ -1877,7 +1829,8 @@
 ### [2026-07-07T13:05:14.907Z] MATCH FOUND!
 - **Marketed by**: Chestertons, Canary Wharf and Docklands
 - **Location**: Canary Wharf
-- **Property Name**: Moore House,
+- **Property Name**: Moore House, 
+Cassilis Road, E14
 - **ID**: 90556479
 - **Price**: £2100 PCM
 - **Size**: 46 sqm
@@ -1891,7 +1844,8 @@
 ### [2026-07-07T13:05:14.906Z] MATCH FOUND!
 - **Marketed by**: Chestertons, Canary Wharf and Docklands
 - **Location**: Canary Wharf
-- **Property Name**: Millharbour,
+- **Property Name**: Millharbour, 
+Millwall, E14
 - **ID**: 90582321
 - **Price**: £2100 PCM
 - **Size**: 46 sqm
@@ -1939,7 +1893,7 @@
 - **Size**: 46 sqm
 - **Listing Update**: 2026-06-12
 - **Listing Status**: Added on 12/06/2026
-- **Let Available**: 22/08/2026 (🦅 Early Bird: 71d adv) (🦅 Early Bird: 71d adv) (🦅 Early Bird: 71d adv)
+- **Let Available**: 22/08/2026 (🦅 Early Bird: 71d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/89632845](https://www.rightmove.co.uk/properties/89632845)
 
 ---
@@ -1966,7 +1920,7 @@
 - **Price**: £2492 PCM
 - **Size**: 46 sqm
 - **Listing Update**: 2026-07-08
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 08/07/2026
 - **Let Available**: 20/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90650151](https://www.rightmove.co.uk/properties/90650151)
 
@@ -1980,7 +1934,7 @@
 - **Price**: £2500 PCM
 - **Size**: 46 sqm
 - **Listing Update**: 2026-07-08
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 08/07/2026
 - **Let Available**: 13/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90654522](https://www.rightmove.co.uk/properties/90654522)
 
@@ -2022,7 +1976,7 @@
 - **Price**: £2250 PCM
 - **Size**: 45 sqm
 - **Listing Update**: 2026-07-08
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 08/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90610632](https://www.rightmove.co.uk/properties/90610632)
 
@@ -2078,7 +2032,7 @@
 - **Price**: £2400 PCM
 - **Size**: 44.87 sqm
 - **Listing Update**: 2026-07-08
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 08/07/2026
 - **Let Available**: 04/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90607554](https://www.rightmove.co.uk/properties/90607554)
 
@@ -2148,23 +2102,9 @@
 - **Price**: £2400 PCM
 - **Size**: 44 sqm
 - **Listing Update**: 2026-07-08
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 08/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90610560](https://www.rightmove.co.uk/properties/90610560)
-
----
-
-### [2026-06-27T12:01:20.007Z] MATCH FOUND!
-- **Marketed by**: Unknown
-- **Location**: Canary Wharf
-- **Property Name**: Pan Peninsula Square, Canary Wharf, London, E14
-- **ID**: 90206850
-- **Price**: £2470 PCM
-- **Size**: 44 sqm
-- **Listing Update**: 2026-06-26
-- **Listing Status**: Added on 26/06/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/90206850](https://www.rightmove.co.uk/properties/90206850)
 
 ---
 
@@ -2205,7 +2145,7 @@
 - **Size**: 43.77 sqm
 - **Listing Update**: 2026-06-19
 - **Listing Status**: Added on 19/06/2026
-- **Let Available**: 17/09/2026 (🦅 Early Bird: 90d adv) (🦅 Early Bird: 90d adv) (🦅 Early Bird: 90d adv)
+- **Let Available**: 17/09/2026 (🦅 Early Bird: 90d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/89936142](https://www.rightmove.co.uk/properties/89936142)
 
 ---
@@ -2303,7 +2243,7 @@
 - **Size**: 42.09 sqm
 - **Listing Update**: 2026-07-01
 - **Listing Status**: Added on 01/07/2026
-- **Let Available**: 15/09/2026 (🦅 Early Bird: 76d adv) (🦅 Early Bird: 76d adv) (🦅 Early Bird: 76d adv)
+- **Let Available**: 15/09/2026 (🦅 Early Bird: 76d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/157618283](https://www.rightmove.co.uk/properties/157618283)
 
 ---
@@ -2372,7 +2312,7 @@
 - **Price**: £2496 PCM
 - **Size**: 42 sqm
 - **Listing Update**: 2026-07-09
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90698046](https://www.rightmove.co.uk/properties/90698046)
 
@@ -2386,7 +2326,7 @@
 - **Price**: £2500 PCM
 - **Size**: 42 sqm
 - **Listing Update**: 2026-07-09
-- **Listing Status**: Reduced today
+- **Listing Status**: Reduced yesterday
 - **Let Available**: 08/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/89072415](https://www.rightmove.co.uk/properties/89072415)
 
@@ -2456,7 +2396,7 @@
 - **Price**: £2000 PCM
 - **Size**: 41.06 sqm
 - **Listing Update**: 2026-07-08
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 08/07/2026
 - **Let Available**: 25/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90656274](https://www.rightmove.co.uk/properties/90656274)
 
@@ -2554,8 +2494,8 @@
 - **Price**: £1842 PCM
 - **Size**: 40 sqm
 - **Listing Update**: 2026-07-09
-- **Listing Status**: Reduced today
-- **Let Available**: 10/07/2026
+- **Listing Status**: Reduced yesterday
+- **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/88135632](https://www.rightmove.co.uk/properties/88135632)
 
 ---
@@ -2577,7 +2517,8 @@
 ### [2026-07-02T17:21:03.929Z] MATCH FOUND!
 - **Marketed by**: Unknown
 - **Location**: West Hampstead
-- **Property Name**: Canfield Gardens,
+- **Property Name**: Canfield Gardens, 
+South Hampstead, NW6
 - **ID**: 90365553
 - **Price**: £2100 PCM
 - **Size**: 40 sqm
@@ -2591,7 +2532,8 @@
 ### [2026-07-02T17:21:03.931Z] MATCH FOUND!
 - **Marketed by**: Unknown
 - **Location**: Highbury & Islington
-- **Property Name**: Holloway Road,
+- **Property Name**: Holloway Road, 
+Islington, N7
 - **ID**: 89866371
 - **Price**: £2250 PCM
 - **Size**: 40 sqm
@@ -2613,20 +2555,6 @@
 - **Listing Status**: Reduced on 16/06/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/19588097](https://www.rightmove.co.uk/properties/19588097)
-
----
-
-### [2026-07-07T13:05:14.907Z] MATCH FOUND!
-- **Marketed by**: OpenRent, London
-- **Location**: Canary Wharf
-- **Property Name**: Marsh Wall, Isle Of Dogs, E14
-- **ID**: 90562557
-- **Price**: £2297 PCM
-- **Size**: 40 sqm
-- **Listing Update**: 2026-07-07
-- **Listing Status**: Added on 07/07/2026
-- **Let Available**: 05/08/2026
-- **Link**: [https://www.rightmove.co.uk/properties/90562557](https://www.rightmove.co.uk/properties/90562557)
 
 ---
 
@@ -2723,7 +2651,7 @@
 - **Size**: 38 sqm
 - **Listing Update**: 2026-05-01
 - **Listing Status**: Reduced on 01/05/2026
-- **Let Available**: 11/07/2026 (🦅 Early Bird: 71d adv) (🦅 Early Bird: 71d adv) (🦅 Early Bird: 71d adv)
+- **Let Available**: 11/07/2026 (🦅 Early Bird: 71d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/157692917](https://www.rightmove.co.uk/properties/157692917)
 
 ---
@@ -2737,7 +2665,7 @@
 - **Size**: 24 sqm
 - **Listing Update**: 2026-05-02
 - **Listing Status**: Added on 02/05/2026
-- **Let Available**: Now (🦅 Early Bird: 69d adv) (🦅 Early Bird: 69d adv) (🦅 Early Bird: 69d adv)
+- **Let Available**: Now (🦅 Early Bird: 69d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/88013730](https://www.rightmove.co.uk/properties/88013730)
 
 ---
