@@ -1,3 +1,17 @@
+### [2026-07-10T17:16:50.152Z] MATCH FOUND!
+- **Marketed by**: Vertus, Canary Wharf
+- **Location**: Canary Wharf
+- **Property Name**: 50 Charter Street, London, E22
+- **ID**: 172155143
+- **Price**: £2518 PCM
+- **Size**: 4869 sqm
+- **Listing Update**: 2026-07-10
+- **Listing Status**: Added today
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/172155143](https://www.rightmove.co.uk/properties/172155143)
+
+---
+
 ### [2026-06-25T13:05:08.774Z] MATCH FOUND!
 - **Marketed by**: Unknown
 - **Location**: Kings Cross
@@ -714,20 +728,6 @@ South Quay, E14
 
 ---
 
-### [2026-07-01T13:22:22.688Z] MATCH FOUND!
-- **Marketed by**: Unknown
-- **Location**: Kings Cross
-- **Property Name**: Penton Rise, Islington, London
-- **ID**: 90343626
-- **Price**: £2150 PCM
-- **Size**: 56 sqm
-- **Listing Update**: 2026-07-01
-- **Listing Status**: Added on 01/07/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/90343626](https://www.rightmove.co.uk/properties/90343626)
-
----
-
 ### [2026-07-04T11:57:12.810Z] MATCH FOUND!
 - **Marketed by**: Unknown
 - **Location**: Canary Wharf
@@ -865,6 +865,20 @@ South Quay, E14
 - **Listing Status**: Added on 22/06/2026
 - **Let Available**: 18/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/89979441](https://www.rightmove.co.uk/properties/89979441)
+
+---
+
+### [2026-07-10T17:16:50.152Z] MATCH FOUND!
+- **Marketed by**: Knight Frank - Lettings, Canary  Wharf
+- **Location**: Canary Wharf
+- **Property Name**: No 1 West India Quay, Hertsmere Road, Nr Canary Wharf, London, E14
+- **ID**: 88839924
+- **Price**: £2496 PCM
+- **Size**: 55 sqm
+- **Listing Update**: 2026-07-10
+- **Listing Status**: Reduced today
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/88839924](https://www.rightmove.co.uk/properties/88839924)
 
 ---
 
@@ -1164,6 +1178,20 @@ Cassilis Road, E14
 
 ---
 
+### [2026-07-10T17:16:50.152Z] MATCH FOUND!
+- **Marketed by**: Chase Evans, Canary Wharf
+- **Location**: Canary Wharf
+- **Property Name**: Roosevelt Tower, Manhattan Plaza, 18 Williamsburg Plaza, Canary Wharf, London, E14
+- **ID**: 90754224
+- **Price**: £2383 PCM
+- **Size**: 52 sqm
+- **Listing Update**: 2026-07-10
+- **Listing Status**: Added today
+- **Let Available**: 17/09/2026 (🦅 Early Bird: 69d adv)
+- **Link**: [https://www.rightmove.co.uk/properties/90754224](https://www.rightmove.co.uk/properties/90754224)
+
+---
+
 ### [2026-07-05T12:02:24.854Z] MATCH FOUND!
 - **Marketed by**: Unknown
 - **Location**: Stratford
@@ -1458,20 +1486,6 @@ Cassilis Road, E14
 
 ---
 
-### [2026-07-09T20:28:22.871Z] MATCH FOUND!
-- **Marketed by**: Drury Estates, London
-- **Location**: Moorgate
-- **Property Name**: The Cobalt Building 10-15 Bridgewater Square, London, EC2Y
-- **ID**: 90089166
-- **Price**: £2700 PCM
-- **Size**: 50 sqm
-- **Listing Update**: 2026-06-24
-- **Listing Status**: Added on 24/06/2026
-- **Let Available**: 28/07/2026
-- **Link**: [https://www.rightmove.co.uk/properties/90089166](https://www.rightmove.co.uk/properties/90089166)
-
----
-
 ### [2026-07-07T16:53:19.142Z] MATCH FOUND!
 - **Marketed by**: Leaders Lettings, Kingston Upon Thames
 - **Location**: Ealing Broadway
@@ -1698,20 +1712,6 @@ Gee Street, EC1V
 
 ---
 
-### [2026-07-09T08:40:00.560Z] MATCH FOUND!
-- **Marketed by**: Thomas Michael, City of London and Barbican
-- **Location**: Farringdon / Clerkenwell
-- **Property Name**: Clifford's Inn, Fetter Lane, City Of London,
-- **ID**: 90659712
-- **Price**: £2383 PCM
-- **Size**: 48 sqm
-- **Listing Update**: 2026-07-08
-- **Listing Status**: Added on 08/07/2026
-- **Let Available**: 15/08/2026
-- **Link**: [https://www.rightmove.co.uk/properties/90659712](https://www.rightmove.co.uk/properties/90659712)
-
----
-
 ### [2026-07-07T13:05:14.907Z] MATCH FOUND!
 - **Marketed by**: Colin Bibra Estate Agents Ltd, London
 - **Location**: Ealing Broadway
@@ -1897,20 +1897,6 @@ Millwall, E14
 
 ---
 
-### [2026-06-12T13:50:07.734Z] MATCH FOUND!
-- **Marketed by**: Unknown
-- **Location**: Farringdon
-- **Property Name**: Rosebery Avenue, Clerkenwell, London, EC1R
-- **ID**: 89632845
-- **Price**: £2396 PCM
-- **Size**: 46 sqm
-- **Listing Update**: 2026-06-12
-- **Listing Status**: Added on 12/06/2026
-- **Let Available**: 22/08/2026 (🦅 Early Bird: 71d adv)
-- **Link**: [https://www.rightmove.co.uk/properties/89632845](https://www.rightmove.co.uk/properties/89632845)
-
----
-
 ### [2026-06-09T13:32:41.227Z] MATCH FOUND!
 - **Marketed by**: Unknown
 - **Location**: Canary Wharf
@@ -1922,20 +1908,6 @@ Millwall, E14
 - **Listing Status**: Reduced on 30/06/2026
 - **Let Available**: 14/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/89470749](https://www.rightmove.co.uk/properties/89470749)
-
----
-
-### [2026-07-08T16:57:39.799Z] MATCH FOUND!
-- **Marketed by**: Fraser and Co, London West End
-- **Location**: Paddington
-- **Property Name**: Peninsula Apartments, W2
-- **ID**: 90650151
-- **Price**: £2492 PCM
-- **Size**: 46 sqm
-- **Listing Update**: 2026-07-08
-- **Listing Status**: Added on 08/07/2026
-- **Let Available**: 20/07/2026
-- **Link**: [https://www.rightmove.co.uk/properties/90650151](https://www.rightmove.co.uk/properties/90650151)
 
 ---
 
