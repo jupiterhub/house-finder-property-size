@@ -861,8 +861,8 @@ South Quay, E14
 - **ID**: 90542760
 - **Price**: £2300 PCM
 - **Size**: 55 sqm
-- **Listing Update**: 2026-07-06
-- **Listing Status**: Added on 06/07/2026
+- **Listing Update**: 2026-07-11
+- **Listing Status**: Reduced today
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90542760](https://www.rightmove.co.uk/properties/90542760)
 
@@ -1248,20 +1248,6 @@ Cassilis Road, E14
 
 ---
 
-### [2026-07-01T13:22:22.689Z] MATCH FOUND!
-- **Marketed by**: Unknown
-- **Location**: Canary Wharf
-- **Property Name**: Cascades Tower, Canary Wharf, London
-- **ID**: 90347763
-- **Price**: £2500 PCM
-- **Size**: 51.18 sqm
-- **Listing Update**: 2026-07-01
-- **Listing Status**: Added on 01/07/2026
-- **Let Available**: 03/08/2026
-- **Link**: [https://www.rightmove.co.uk/properties/90347763](https://www.rightmove.co.uk/properties/90347763)
-
----
-
 ### [2026-07-02T12:32:13.022Z] MATCH FOUND!
 - **Marketed by**: Unknown
 - **Location**: Canary Wharf
@@ -1497,6 +1483,20 @@ Cassilis Road, E14
 - **Listing Status**: Added on 04/07/2026
 - **Let Available**: 04/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90500079](https://www.rightmove.co.uk/properties/90500079)
+
+---
+
+### [2026-07-11T16:15:53.450Z] MATCH FOUND!
+- **Marketed by**: Nathan K Real Estate, London
+- **Location**: Moorgate
+- **Property Name**: City Road, London, EC1Y
+- **ID**: 89542932
+- **Price**: £2550 PCM
+- **Size**: 50 sqm
+- **Listing Update**: 2026-05-07
+- **Listing Status**: Reduced on 07/05/2026
+- **Let Available**: Now (🦅 Early Bird: 66d adv)
+- **Link**: [https://www.rightmove.co.uk/properties/89542932](https://www.rightmove.co.uk/properties/89542932)
 
 ---
 
@@ -2359,20 +2359,6 @@ Millwall, E14
 
 ---
 
-### [2026-07-09T08:40:00.560Z] MATCH FOUND!
-- **Marketed by**: Acorn, London Bridge
-- **Location**: London Bridge
-- **Property Name**: Kipling Estate London Bridge SE1
-- **ID**: 90656274
-- **Price**: £2000 PCM
-- **Size**: 41.06 sqm
-- **Listing Update**: 2026-07-08
-- **Listing Status**: Added on 08/07/2026
-- **Let Available**: 25/07/2026
-- **Link**: [https://www.rightmove.co.uk/properties/90656274](https://www.rightmove.co.uk/properties/90656274)
-
----
-
 ### [2026-07-07T13:05:14.907Z] MATCH FOUND!
 - **Marketed by**: Square Quarters, Islington
 - **Location**: Highbury & Islington
@@ -2610,20 +2596,6 @@ Islington, N7
 - **Listing Status**: Reduced on 01/05/2026
 - **Let Available**: Now (🦅 Early Bird: 72d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/157692917](https://www.rightmove.co.uk/properties/157692917)
-
----
-
-### [2026-05-02T20:15:55.704Z] MATCH FOUND!
-- **Marketed by**: Unknown
-- **Location**: Unknown
-- **Property Name**: Albany House, Judd Street, Camden, London
-- **ID**: 88013730
-- **Price**: £1800 PCM
-- **Size**: 24 sqm
-- **Listing Update**: 2026-05-02
-- **Listing Status**: Added on 02/05/2026
-- **Let Available**: Now (🦅 Early Bird: 71d adv)
-- **Link**: [https://www.rightmove.co.uk/properties/88013730](https://www.rightmove.co.uk/properties/88013730)
 
 ---
 
