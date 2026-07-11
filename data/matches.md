@@ -6,7 +6,7 @@
 - **Price**: £2518 PCM
 - **Size**: 4869 sqm
 - **Listing Update**: 2026-07-10
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/172155143](https://www.rightmove.co.uk/properties/172155143)
 
@@ -34,7 +34,7 @@
 - **Price**: £2500 PCM
 - **Size**: 231.79 sqm
 - **Listing Update**: 2026-07-09
-- **Listing Status**: Reduced yesterday
+- **Listing Status**: Reduced on 09/07/2026
 - **Let Available**: 01/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90331062](https://www.rightmove.co.uk/properties/90331062)
 
@@ -62,7 +62,7 @@
 - **Price**: £2492 PCM
 - **Size**: 90 sqm
 - **Listing Update**: 2026-07-10
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90723732](https://www.rightmove.co.uk/properties/90723732)
 
@@ -174,7 +174,7 @@
 - **Price**: £1900 PCM
 - **Size**: 75.4 sqm
 - **Listing Update**: 2026-07-10
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90735000](https://www.rightmove.co.uk/properties/90735000)
 
@@ -259,7 +259,7 @@ Islington, N1
 - **Price**: £2650 PCM
 - **Size**: 73 sqm
 - **Listing Update**: 2026-07-09
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 09/07/2026
 - **Let Available**: 14/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90707175](https://www.rightmove.co.uk/properties/90707175)
 
@@ -344,7 +344,7 @@ South Quay, E14
 - **Price**: £2500 PCM
 - **Size**: 65.87 sqm
 - **Listing Update**: 2026-07-09
-- **Listing Status**: Reduced yesterday
+- **Listing Status**: Reduced on 09/07/2026
 - **Let Available**: 04/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/89844084](https://www.rightmove.co.uk/properties/89844084)
 
@@ -462,6 +462,20 @@ South Quay, E14
 
 ---
 
+### [2026-07-11T09:08:59.371Z] MATCH FOUND!
+- **Marketed by**: Foxtons, Canary Wharf
+- **Location**: South Quay
+- **Property Name**: Discovery Dock West, Canary Wharf, London, E14
+- **ID**: 90106407
+- **Price**: £2200 PCM
+- **Size**: 60 sqm
+- **Listing Update**: 2026-05-20
+- **Listing Status**: Added on 20/05/2026
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/90106407](https://www.rightmove.co.uk/properties/90106407)
+
+---
+
 ### [2026-07-10T13:24:20.943Z] MATCH FOUND!
 - **Marketed by**: Orient Estates, London
 - **Location**: Bloomsbury (Russell Square)
@@ -470,23 +484,9 @@ South Quay, E14
 - **Price**: £2275 PCM
 - **Size**: 60 sqm
 - **Listing Update**: 2026-07-10
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90729582](https://www.rightmove.co.uk/properties/90729582)
-
----
-
-### [2026-07-09T20:28:22.871Z] MATCH FOUND!
-- **Marketed by**: Stirling Ackroyd Lettings, Clerkenwell
-- **Location**: Farringdon / Clerkenwell
-- **Property Name**: Brewhouse Yard, London, EC1V
-- **ID**: 90639810
-- **Price**: £2650 PCM
-- **Size**: 60 sqm
-- **Listing Update**: 2026-07-08
-- **Listing Status**: Added on 08/07/2026
-- **Let Available**: 04/09/2026
-- **Link**: [https://www.rightmove.co.uk/properties/90639810](https://www.rightmove.co.uk/properties/90639810)
 
 ---
 
@@ -512,7 +512,7 @@ South Quay, E14
 - **Price**: £2300 PCM
 - **Size**: 59 sqm
 - **Listing Update**: 2026-07-10
-- **Listing Status**: Reduced today
+- **Listing Status**: Reduced yesterday
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90092094](https://www.rightmove.co.uk/properties/90092094)
 
@@ -554,7 +554,7 @@ South Quay, E14
 - **Price**: £1050 PCM
 - **Size**: 58.4 sqm
 - **Listing Update**: 2026-07-09
-- **Listing Status**: Reduced yesterday
+- **Listing Status**: Reduced on 09/07/2026
 - **Let Available**: 15/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/160081223](https://www.rightmove.co.uk/properties/160081223)
 
@@ -610,7 +610,7 @@ South Quay, E14
 - **Price**: £1850 PCM
 - **Size**: 57.97 sqm
 - **Listing Update**: 2026-07-09
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 09/07/2026
 - **Let Available**: 21/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90706746](https://www.rightmove.co.uk/properties/90706746)
 
@@ -652,7 +652,7 @@ South Quay, E14
 - **Price**: £2600 PCM
 - **Size**: 57.3 sqm
 - **Listing Update**: 2026-07-10
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: 25/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90733836](https://www.rightmove.co.uk/properties/90733836)
 
@@ -876,7 +876,7 @@ South Quay, E14
 - **Price**: £2496 PCM
 - **Size**: 55 sqm
 - **Listing Update**: 2026-07-10
-- **Listing Status**: Reduced today
+- **Listing Status**: Reduced yesterday
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/88839924](https://www.rightmove.co.uk/properties/88839924)
 
@@ -947,7 +947,7 @@ Islington, N1
 - **Price**: £2200 PCM
 - **Size**: 54 sqm
 - **Listing Update**: 2026-07-10
-- **Listing Status**: Reduced today
+- **Listing Status**: Reduced yesterday
 - **Let Available**: 03/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/89583771](https://www.rightmove.co.uk/properties/89583771)
 
@@ -989,7 +989,7 @@ Islington, N1
 - **Price**: £2600 PCM
 - **Size**: 54 sqm
 - **Listing Update**: 2026-07-09
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 09/07/2026
 - **Let Available**: 17/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90698739](https://www.rightmove.co.uk/properties/90698739)
 
@@ -1073,7 +1073,7 @@ Islington, N1
 - **Price**: £2600 PCM
 - **Size**: 52.03 sqm
 - **Listing Update**: 2026-07-10
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90738903](https://www.rightmove.co.uk/properties/90738903)
 
@@ -1186,7 +1186,7 @@ Cassilis Road, E14
 - **Price**: £2383 PCM
 - **Size**: 52 sqm
 - **Listing Update**: 2026-07-10
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: 17/09/2026 (🦅 Early Bird: 69d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/90754224](https://www.rightmove.co.uk/properties/90754224)
 
@@ -2051,20 +2051,6 @@ Millwall, E14
 
 ---
 
-### [2026-05-29T13:48:52.194Z] MATCH FOUND!
-- **Marketed by**: Unknown
-- **Location**: Canary Wharf
-- **Property Name**: Waterford Court, 7 Turnberry Quay, E14
-- **ID**: 89054328
-- **Price**: £2149 PCM
-- **Size**: 44 sqm
-- **Listing Update**: 2026-05-29
-- **Listing Status**: Added on 29/05/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/89054328](https://www.rightmove.co.uk/properties/89054328)
-
----
-
 ### [2026-05-15T16:41:00.994Z] MATCH FOUND!
 - **Marketed by**: Unknown
 - **Location**: Canary Wharf
@@ -2297,7 +2283,7 @@ Millwall, E14
 - **Price**: £2496 PCM
 - **Size**: 42 sqm
 - **Listing Update**: 2026-07-09
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 09/07/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90698046](https://www.rightmove.co.uk/properties/90698046)
 
@@ -2311,7 +2297,7 @@ Millwall, E14
 - **Price**: £2500 PCM
 - **Size**: 42 sqm
 - **Listing Update**: 2026-07-09
-- **Listing Status**: Reduced yesterday
+- **Listing Status**: Reduced on 09/07/2026
 - **Let Available**: 08/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/89072415](https://www.rightmove.co.uk/properties/89072415)
 
@@ -2479,7 +2465,7 @@ Millwall, E14
 - **Price**: £1842 PCM
 - **Size**: 40 sqm
 - **Listing Update**: 2026-07-09
-- **Listing Status**: Reduced yesterday
+- **Listing Status**: Reduced on 09/07/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/88135632](https://www.rightmove.co.uk/properties/88135632)
 
@@ -2622,7 +2608,7 @@ Islington, N7
 - **Size**: 38 sqm
 - **Listing Update**: 2026-05-01
 - **Listing Status**: Reduced on 01/05/2026
-- **Let Available**: 11/07/2026 (🦅 Early Bird: 71d adv)
+- **Let Available**: Now (🦅 Early Bird: 71d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/157692917](https://www.rightmove.co.uk/properties/157692917)
 
 ---
