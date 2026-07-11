@@ -68,6 +68,20 @@
 
 ---
 
+### [2026-07-11T12:12:13.895Z] MATCH FOUND!
+- **Marketed by**: W J Meade, Mile End and Bow
+- **Location**: South Quay
+- **Property Name**: Peninsula Court, Canary Wharf, E14
+- **ID**: 90412020
+- **Price**: £2500 PCM
+- **Size**: 88 sqm
+- **Listing Update**: 2026-07-11
+- **Listing Status**: Reduced today
+- **Let Available**: 06/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/90412020](https://www.rightmove.co.uk/properties/90412020)
+
+---
+
 ### [2026-05-27T14:03:03.159Z] MATCH FOUND!
 - **Marketed by**: Unknown
 - **Location**: Canary Wharf
@@ -1503,13 +1517,13 @@ Cassilis Road, E14
 ### [2026-05-23T11:45:49.228Z] MATCH FOUND!
 - **Marketed by**: Unknown
 - **Location**: Canary Wharf
-- **Property Name**: Marsh Wall, Nr Canary Wharf, London, E14
+- **Property Name**: Marsh Wall, Nr Canary Wharf, London, E14.
 - **ID**: 88839927
 - **Price**: £2448 PCM
 - **Size**: 49.98 sqm
 - **Listing Update**: 2026-06-18
 - **Listing Status**: Added on 18/06/2026
-- **Let Available**: Ask agent
+- **Let Available**: 16/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/88839927](https://www.rightmove.co.uk/properties/88839927)
 
 ---
@@ -1709,20 +1723,6 @@ Gee Street, EC1V
 - **Listing Status**: Reduced on 03/07/2026
 - **Let Available**: 22/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/89539155](https://www.rightmove.co.uk/properties/89539155)
-
----
-
-### [2026-07-07T13:05:14.907Z] MATCH FOUND!
-- **Marketed by**: Colin Bibra Estate Agents Ltd, London
-- **Location**: Ealing Broadway
-- **Property Name**: Ealing Village, Ealing W5
-- **ID**: 90584553
-- **Price**: £2100 PCM
-- **Size**: 47.45 sqm
-- **Listing Update**: 2026-07-07
-- **Listing Status**: Added on 07/07/2026
-- **Let Available**: 24/08/2026
-- **Link**: [https://www.rightmove.co.uk/properties/90584553](https://www.rightmove.co.uk/properties/90584553)
 
 ---
 
@@ -2608,7 +2608,7 @@ Islington, N7
 - **Size**: 38 sqm
 - **Listing Update**: 2026-05-01
 - **Listing Status**: Reduced on 01/05/2026
-- **Let Available**: Now (🦅 Early Bird: 71d adv)
+- **Let Available**: Now (🦅 Early Bird: 72d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/157692917](https://www.rightmove.co.uk/properties/157692917)
 
 ---
@@ -2622,7 +2622,7 @@ Islington, N7
 - **Size**: 24 sqm
 - **Listing Update**: 2026-05-02
 - **Listing Status**: Added on 02/05/2026
-- **Let Available**: Now (🦅 Early Bird: 70d adv)
+- **Let Available**: Now (🦅 Early Bird: 71d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/88013730](https://www.rightmove.co.uk/properties/88013730)
 
 ---
