@@ -1338,6 +1338,11 @@ async function main() {
     color: #cbd5e1;
     border: 1px solid rgba(148, 163, 184, 0.3);
   }
+  .compat-ask-agent {
+    background: rgba(168, 85, 247, 0.15);
+    color: #c084fc;
+    border: 1px solid rgba(168, 85, 247, 0.3);
+  }
   .quick-sorts {
     display: flex;
     align-items: center;
@@ -1789,22 +1794,21 @@ function filterTable() {
       if (availTd) {
         var availTs = parseFloat(availTd.getAttribute("data-value")) || 0;
         var availText = availTd.textContent.toLowerCase();
-        var isUnknown = availTs === 0 && availText.indexOf("unknown") !== -1;
         var isNow = (availText.indexOf("now") !== -1 || availText.indexOf("immediate") !== -1 || availText.indexOf("today") !== -1);
-        if (isNow && availTs === 0) {
-          availTs = Date.now();
-        }
+        var isUnknown = !isNow && (availTs === 0 || availText.indexOf("unknown") !== -1 || availText.indexOf("ask agent") !== -1);
         
         if (isUnknown && !incUnknown) {
           tr[i].style.display = "none";
           continue;
-        } else if (availTs > 0) {
+        } else if (!isUnknown && availTs > 0) {
           var diffDays = (availTs - targetTs) / (1000 * 60 * 60 * 24);
           if (windowDays === 999) {
             if (diffDays > 0) {
               tr[i].style.display = "none";
               continue;
             }
+          } else if (windowDays === 3650) {
+            // Any date (All) - keep visible
           } else {
             if (Math.abs(diffDays) > windowDays) {
               tr[i].style.display = "none";
@@ -1980,16 +1984,16 @@ function updateCompatibilityBadges() {
     
     var availTs = parseFloat(availTd.getAttribute("data-value")) || 0;
     var availText = availTd.textContent.toLowerCase();
-    var isUnknown = availTs === 0 && availText.indexOf("unknown") !== -1;
-    var isNow = (availTs === 0 || availText.indexOf("now") !== -1 || availText.indexOf("immediate") !== -1 || availText.indexOf("today") !== -1);
+    var isNow = (availText.indexOf("now") !== -1 || availText.indexOf("immediate") !== -1 || availText.indexOf("today") !== -1);
+    var isUnknown = !isNow && (availTs === 0 || availText.indexOf("unknown") !== -1 || availText.indexOf("ask agent") !== -1);
     
     if (isNow) {
       compatSpan.innerHTML = '<br><span class="compat-tag compat-imm">⚪ Immediate / Negotiable</span>';
     } else if (isUnknown) {
-      compatSpan.innerHTML = '<br><span class="compat-tag compat-imm">⚪ Ask Agent</span>';
+      compatSpan.innerHTML = '<br><span class="compat-tag compat-ask-agent">❓ Ask Agent / Unknown</span>';
     } else if (availTs > 0) {
       var diffDays = (availTs - targetTs) / (1000 * 60 * 60 * 24);
-      if ((windowDays === 999 && diffDays <= 0) || (windowDays !== 999 && Math.abs(diffDays) <= windowDays)) {
+      if ((windowDays === 999 && diffDays <= 0) || (windowDays !== 999 && windowDays !== 3650 && Math.abs(diffDays) <= windowDays) || windowDays === 3650) {
         compatSpan.innerHTML = '<br><span class="compat-tag compat-spot-on">🟢 Spot On (' + (Math.round(diffDays) >= 0 ? '+' : '') + Math.round(diffDays) + 'd)</span>';
       } else if (diffDays < 0) {
         compatSpan.innerHTML = '<br><span class="compat-tag compat-early">🟡 Early (' + Math.abs(Math.round(diffDays)) + 'd prior)</span>';
@@ -2354,6 +2358,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <option value="14" ${flags.window === 14 ? 'selected' : ''}>± 14 days</option>
           <option value="30" ${flags.window === 30 ? 'selected' : ''}>± 30 days</option>
           <option value="999" ${flags.window === 999 ? 'selected' : ''}>Any time before</option>
+          <option value="3650" ${flags.window === 3650 ? 'selected' : ''}>Any date (All)</option>
         </select>
       </div>
       <div class="control-group">
@@ -2364,10 +2369,11 @@ document.addEventListener("DOMContentLoaded", function() {
           <option value="early">🟡 Early Only</option>
           <option value="advance">🔵 Advance Only</option>
           <option value="imm">⚪ Immediate / Negotiable</option>
+          <option value="ask-agent">❓ Ask Agent / Unknown</option>
         </select>
       </div>
       <div class="control-group checkbox-group">
-        <label class="toggle-check"><input type="checkbox" id="includeUnknownCheck" ${flags.includeUnknownAvailability ? 'checked' : ''} onchange="applyMoveInFilter()"> <span>Include "Unknown"</span></label>
+        <label class="toggle-check"><input type="checkbox" id="includeUnknownCheck" ${flags.includeUnknownAvailability ? 'checked' : ''} onchange="applyMoveInFilter()"> <span>Include "Ask Agent / Any"</span></label>
       </div>
       <button id="clearMoveInBtn" class="filter-chip chip-clear-movein" onclick="clearMoveInAssistant()">Reset Date</button>
     </div>
