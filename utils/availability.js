@@ -28,9 +28,7 @@ function getDesiredAvailabilityConfig(config = {}) {
   const windowDays = config.availabilityWindowDays !== undefined ? config.availabilityWindowDays :
                      (config.availabilityWindow !== undefined ? config.availabilityWindow : 7);
 
-  const filterAvailableNow = config.filterAvailableNow !== undefined ? config.filterAvailableNow :
-                             (config.includeAvailableNow !== undefined ? !config.includeAvailableNow : !!desiredDateStr);
-
+  const filterAvailableNow = config.filterAvailableNow !== undefined ? config.filterAvailableNow : false;
   const includeUnknownAvailability = config.includeUnknownAvailability !== undefined ? config.includeUnknownAvailability : true;
 
   return {

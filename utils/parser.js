@@ -8,31 +8,34 @@
 function extractSqmFromText(text) {
   if (!text) return null;
 
-  // Normalize text: lowercase, remove commas, handle newlines
-  const normalizedText = text.toLowerCase().replace(/,/g, '').replace(/\s+/g, ' ');
+  // Normalize text: lowercase, remove commas, normalize superscript ², handle newlines
+  const normalizedText = text.toLowerCase().replace(/,/g, '').replace(/²/g, '2').replace(/\s+/g, ' ');
 
-  // 1. Explicit totals
-  const sqmRegex = /(\d+(?:\.\d+)?)\s*(?:sq\s*[mn]|sqm|sq\.m\.|square\s*meters?)/;
-  const sqftRegex = /(\d+(?:\.\d+)?)\s*(?:sq\s*[fhtl]|sqft|sq\.ft\.|square\s*feet|square\s*foot)/;
-  
-  // Look for "Total approx. floor area 254 sq.ft. (23.6 sq.m.)"
-  // Handling common OCR errors for "sq.m." like "sq.m", "sg.m", "sq.n"
-  const combinedRegex = /(?:total|approx|floor|area).*?(\d+(?:\.\d+)?)\s*(?:sq\s*[fhtl]|sqft).*?\((\d+(?:\.\d+)?)\s*(?:sq\s*[mn]|sqm)\)/i;
+  // 1. Look for combined patterns like "Approx. 557 sq ft (52 sq m)" or "557 sq. ft. (51.7 sq. m.)"
+  const combinedRegex = /(\d+(?:\.\d+)?)\s*(?:sq\.?\s*f|sqft|ft2).*?\(?\s*(?:approx\.?\s*)?(\d+(?:\.\d+)?)\s*(?:sq\.?\s*m|sqm|m2)/i;
   const combinedMatch = normalizedText.match(combinedRegex);
   if (combinedMatch) {
-      return parseFloat(combinedMatch[2]);
+    const val = parseFloat(combinedMatch[2]);
+    if (val >= 15 && val <= 1000) return val;
   }
 
+  // 2. Look for explicit sqm / m2 / square meters
+  const sqmRegex = /(\d+(?:\.\d+)?)\s*(?:sq\.?\s*m\.?|sqm|m2|square\s*met(?:er|re)s?)/i;
   const sqmMatch = normalizedText.match(sqmRegex);
   if (sqmMatch && sqmMatch[1]) {
-    return parseFloat(sqmMatch[1]);
+    const val = parseFloat(sqmMatch[1]);
+    if (val >= 15 && val <= 1000) return val;
   }
 
+  // 3. Look for explicit sqft / ft2 / square feet
+  const sqftRegex = /(\d+(?:\.\d+)?)\s*(?:sq\.?\s*f\.?t?|sqft|ft2|square\s*feet|square\s*foot)/i;
   const sqftMatch = normalizedText.match(sqftRegex);
   if (sqftMatch && sqftMatch[1]) {
     const sqft = parseFloat(sqftMatch[1]);
-    const sqm = sqft * 0.092903;
-    return parseFloat(sqm.toFixed(2));
+    if (sqft >= 150 && sqft <= 10000) {
+      const sqm = sqft * 0.092903;
+      return parseFloat(sqm.toFixed(2));
+    }
   }
 
   // 2. Fallback: Sum up room dimensions (e.g., "3.66x2.80m" or "366x280m" due to OCR missing dots)

@@ -415,6 +415,7 @@ function matchesAllowedLocations(m, allowedLocations) {
     const tokens = loc.split(/[\/\(\)]+/).map(t => t.trim().toLowerCase()).filter(Boolean);
     keywords.push(...tokens);
     if (loc.toLowerCase().includes('canary wharf')) keywords.push('e14', 'wood wharf');
+    if (loc.toLowerCase().includes('south quay')) keywords.push('e14', 'marsh wall', 'millwall');
     if (loc.toLowerCase().includes('paddington')) keywords.push('w2');
     if (loc.toLowerCase().includes('moorgate')) keywords.push('ec2');
     if (loc.toLowerCase().includes('bloomsbury')) keywords.push('russell square', 'wc1');
@@ -442,7 +443,6 @@ async function main() {
     verify: false,
     targetDate: availabilityConfig.desiredDateStr || null,
     window: availabilityConfig.windowDays !== undefined ? availabilityConfig.windowDays : 7,
-    filterAvailableNow: availabilityConfig.filterAvailableNow,
     includeUnknownAvailability: availabilityConfig.includeUnknownAvailability,
     filterAvailability: !!availabilityConfig.desiredDateStr,
     platform: null
@@ -464,8 +464,6 @@ async function main() {
     else if (args[i] === '--window') flags.window = parseInt(args[++i], 10);
     else if (args[i] === '--filter-availability') flags.filterAvailability = true;
     else if (args[i] === '--no-filter-availability') flags.filterAvailability = false;
-    else if (args[i] === '--filter-available-now') flags.filterAvailableNow = true;
-    else if (args[i] === '--include-available-now') flags.filterAvailableNow = false;
   }
 
   if (flags.cleanSeen) {
@@ -539,7 +537,6 @@ async function main() {
       const check = isDesiredAvailability(m.letAvailableDate, {
         desiredAvailabilityDate: flags.targetDate,
         availabilityWindowDays: flags.window,
-        filterAvailableNow: flags.filterAvailableNow,
         includeUnknownAvailability: flags.includeUnknownAvailability
       });
       return check.kept;
@@ -1786,23 +1783,22 @@ function filterTable() {
     if (targetDateVal) {
       var targetTs = new Date(targetDateVal).getTime();
       var windowDays = parseInt(document.getElementById("windowSelect").value, 10);
-      var incNow = document.getElementById("includeNowCheck").checked;
-      var incUnknown = document.getElementById("includeUnknownCheck").checked;
+      var incUnknown = document.getElementById("includeUnknownCheck") ? document.getElementById("includeUnknownCheck").checked : true;
       
       var availTd = tr[i].getElementsByTagName("td")[3];
       if (availTd) {
         var availTs = parseFloat(availTd.getAttribute("data-value")) || 0;
         var availText = availTd.textContent.toLowerCase();
         var isUnknown = availTs === 0 && availText.indexOf("unknown") !== -1;
-        var isNow = (availTs === 0 || availText.indexOf("now") !== -1 || availText.indexOf("immediate") !== -1 || availText.indexOf("today") !== -1);
+        var isNow = (availText.indexOf("now") !== -1 || availText.indexOf("immediate") !== -1 || availText.indexOf("today") !== -1);
+        if (isNow && availTs === 0) {
+          availTs = Date.now();
+        }
         
         if (isUnknown && !incUnknown) {
           tr[i].style.display = "none";
           continue;
-        } else if (isNow && !incNow) {
-          tr[i].style.display = "none";
-          continue;
-        } else if (!isUnknown && !isNow && availTs > 0) {
+        } else if (availTs > 0) {
           var diffDays = (availTs - targetTs) / (1000 * 60 * 60 * 24);
           if (windowDays === 999) {
             if (diffDays > 0) {
@@ -1897,7 +1893,9 @@ function setQuickFilter(filterType) {
     var col = inputs[i].getAttribute("data-col");
     if (col === "4") {
       if (["Rightmove", "JLL", "JOHNS&CO", "Knight Frank"].includes(filterType)) {
-        inputs[i].value = filterType;
+        if (filterType === "Knight Frank") inputs[i].value = "Knight";
+        else if (filterType === "JOHNS&CO") inputs[i].value = "Johns";
+        else inputs[i].value = filterType;
       } else {
         inputs[i].value = "";
       }
@@ -2019,8 +2017,6 @@ function clearMoveInAssistant() {
   if (winSelect) winSelect.value = "14";
   var compatSelect = document.getElementById("compatLabelSelect");
   if (compatSelect) compatSelect.value = "";
-  var incNow = document.getElementById("includeNowCheck");
-  if (incNow) incNow.checked = true;
   var incUnk = document.getElementById("includeUnknownCheck");
   if (incUnk) incUnk.checked = true;
   updateCompatibilityBadges();
@@ -2371,7 +2367,6 @@ document.addEventListener("DOMContentLoaded", function() {
         </select>
       </div>
       <div class="control-group checkbox-group">
-        <label class="toggle-check"><input type="checkbox" id="includeNowCheck" ${!flags.filterAvailableNow ? 'checked' : ''} onchange="applyMoveInFilter()"> <span>Include "Now"</span></label>
         <label class="toggle-check"><input type="checkbox" id="includeUnknownCheck" ${flags.includeUnknownAvailability ? 'checked' : ''} onchange="applyMoveInFilter()"> <span>Include "Unknown"</span></label>
       </div>
       <button id="clearMoveInBtn" class="filter-chip chip-clear-movein" onclick="clearMoveInAssistant()">Reset Date</button>

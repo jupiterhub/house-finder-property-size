@@ -2,16 +2,14 @@
   "maxPrice": 2700,
   "minSqm": 50,
   "desiredLetAvailableDate": "2026-09-12",
-  "availabilityWindowDays": 7,
-  "filterAvailableNow": true,
+  "availabilityWindowDays": 14,
   "includeUnknownAvailability": true,
   "locations": [
     "Canary Wharf",
     "South Quay",
     "Paddington",
     "Moorgate",
-    "Bloomsbury (Russell Square)",
-    "Farringdon / Clerkenwell"
+    "Farringdon"
   ],
   "excludedAgents": [
     "Foxtons"

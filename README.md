@@ -23,7 +23,6 @@ You can edit `config.json` in the project directory to update your search:
 - `minSqm`: Your minimum required property size (currently 50 sqm).
 - `desiredLetAvailableDate`: Desired Let Available start date (e.g., `"2026-09-12"`). Filters out properties that are available "Now" or too early before this date.
 - `availabilityWindowDays`: Number of days tolerance around your desired let available date (default `14`).
-- `filterAvailableNow`: When `true`, automatically filters out listings marked as available "Now" or "Immediate" when searching for a future date.
 - `includeUnknownAvailability`: When `true`, retains listings whose Let Available date is "Unknown" or "Ask agent" so you can confirm directly with the letting agent.
 - `locations`: Add or remove search areas (e.g. "Canary Wharf", "Paddington"). The URLs are dynamically generated from these locations.
 

@@ -92,6 +92,10 @@
       "reason": "Size 17 sqm below min 40",
       "timestamp": "2026-06-04T13:46:25.643Z"
     },
+    "88027446": {
+      "reason": "Size 44 sqm below min 50",
+      "timestamp": "2026-07-12T10:58:12.097Z"
+    },
     "88040346": {
       "reason": "No floorplan image found",
       "timestamp": "2026-05-17T11:43:20.319Z"
@@ -351,6 +355,10 @@
     "88418370": {
       "reason": "Size 24 sqm below min 40",
       "timestamp": "2026-05-15T16:10:33.776Z"
+    },
+    "88433652": {
+      "reason": "Could not determine size",
+      "timestamp": "2026-07-12T11:35:05.268Z"
     },
     "88438386": {
       "reason": "Size 36.6 sqm below min 40",
@@ -2320,6 +2328,10 @@
       "reason": "No floorplan image found",
       "timestamp": "2026-06-23T13:26:35.231Z"
     },
+    "90037290": {
+      "reason": "Size 32 sqm below min 50",
+      "timestamp": "2026-07-12T10:29:58.807Z"
+    },
     "90037776": {
       "reason": "Size 34 sqm below min 40",
       "timestamp": "2026-07-02T17:20:47.370Z"
@@ -3555,6 +3567,10 @@
     "90534795": {
       "reason": "Size 35.02 sqm below min 40",
       "timestamp": "2026-07-06T14:17:32.585Z"
+    },
+    "90536895": {
+      "reason": "Size 41.81 sqm below min 50",
+      "timestamp": "2026-07-12T10:27:19.215Z"
     },
     "90538992": {
       "reason": "No floorplan image found",
@@ -5687,6 +5703,154 @@
     "P169204": {
       "reason": "Could not determine size",
       "timestamp": "2026-07-12T09:32:52.289Z"
+    },
+    "P169198": {
+      "reason": "Could not determine size",
+      "timestamp": "2026-07-12T10:27:11.109Z"
+    },
+    "P169197": {
+      "reason": "Could not determine size",
+      "timestamp": "2026-07-12T10:27:17.317Z"
+    },
+    "P169193": {
+      "reason": "Could not determine size",
+      "timestamp": "2026-07-12T10:27:19.618Z"
+    },
+    "P169094": {
+      "reason": "Could not determine size",
+      "timestamp": "2026-07-12T10:27:24.349Z"
+    },
+    "P168963": {
+      "reason": "Size 43.48 sqm below min 50",
+      "timestamp": "2026-07-12T10:27:28.851Z"
+    },
+    "P168962": {
+      "reason": "Size 48.96 sqm below min 50",
+      "timestamp": "2026-07-12T10:27:31.126Z"
+    },
+    "P168870": {
+      "reason": "Could not determine size",
+      "timestamp": "2026-07-12T10:27:34.888Z"
+    },
+    "P168813": {
+      "reason": "Size 49.52 sqm below min 50",
+      "timestamp": "2026-07-12T10:27:37.117Z"
+    },
+    "P168782": {
+      "reason": "Could not determine size",
+      "timestamp": "2026-07-12T10:27:43.837Z"
+    },
+    "P169261": {
+      "reason": "Could not determine size",
+      "timestamp": "2026-07-12T10:29:56.308Z"
+    },
+    "P169185": {
+      "reason": "Could not determine size",
+      "timestamp": "2026-07-12T10:29:59.721Z"
+    },
+    "P169117": {
+      "reason": "Could not determine size",
+      "timestamp": "2026-07-12T10:30:03.194Z"
+    },
+    "P169076": {
+      "reason": "Size 40.97 sqm below min 50",
+      "timestamp": "2026-07-12T10:30:06.914Z"
+    },
+    "P168970": {
+      "reason": "Could not determine size",
+      "timestamp": "2026-07-12T10:30:10.508Z"
+    },
+    "P168955": {
+      "reason": "Could not determine size",
+      "timestamp": "2026-07-12T10:30:17.225Z"
+    },
+    "P169099": {
+      "reason": "Size 34 sqm below min 50",
+      "timestamp": "2026-07-12T11:38:59.743Z"
+    }
+  },
+  "Johns&Co": {
+    "2342322": {
+      "reason": "Could not determine size",
+      "timestamp": "2026-07-12T10:27:53.092Z"
+    },
+    "2350666": {
+      "reason": "Could not determine size",
+      "timestamp": "2026-07-12T10:27:47.266Z"
+    },
+    "2444735": {
+      "reason": "Size 39.86 sqm below min 50",
+      "timestamp": "2026-07-12T10:30:19.420Z"
+    },
+    "2509339": {
+      "reason": "Size 37.16 sqm below min 50",
+      "timestamp": "2026-07-12T10:30:17.032Z"
+    },
+    "2529724": {
+      "reason": "Size 39.86 sqm below min 50",
+      "timestamp": "2026-07-12T10:30:10.757Z"
+    },
+    "2570525": {
+      "reason": "Size 10.13 sqm below min 50",
+      "timestamp": "2026-07-12T10:30:08.475Z"
+    },
+    "2613718": {
+      "reason": "Size 36.51 sqm below min 50",
+      "timestamp": "2026-07-12T10:30:05.483Z"
+    },
+    "2646020": {
+      "reason": "Size 35.77 sqm below min 50",
+      "timestamp": "2026-07-12T10:30:00.874Z"
+    },
+    "2698083": {
+      "reason": "Could not determine size",
+      "timestamp": "2026-07-12T10:29:58.446Z"
+    },
+    "2700220": {
+      "reason": "Size 39.95 sqm below min 50",
+      "timestamp": "2026-07-12T10:29:56.129Z"
+    },
+    "2706974": {
+      "reason": "Size 39.95 sqm below min 50",
+      "timestamp": "2026-07-12T10:29:53.193Z"
+    },
+    "2708246": {
+      "reason": "Could not determine size",
+      "timestamp": "2026-07-12T10:27:25.120Z"
+    },
+    "2720320": {
+      "reason": "Could not determine size",
+      "timestamp": "2026-07-12T10:27:22.659Z"
+    },
+    "2731699": {
+      "reason": "Size 6.41 sqm below min 50",
+      "timestamp": "2026-07-12T10:27:19.772Z"
+    },
+    "2732711": {
+      "reason": "Could not determine size",
+      "timestamp": "2026-07-12T10:27:17.337Z"
+    }
+  },
+  "KnightFrank": {
+    "CWQ012688518LG": {
+      "reason": "Size 46 sqm below min 50",
+      "timestamp": "2026-07-12T10:27:27.468Z"
+    },
+    "CWQ012630595LG": {
+      "reason": "Size 42.01 sqm below min 50",
+      "timestamp": "2026-07-12T10:27:29.689Z"
+    },
+    "CWQ012624394LG": {
+      "reason": "Size 49.98 sqm below min 50",
+      "timestamp": "2026-07-12T10:27:40.184Z"
+    },
+    "CWQ012667148": {
+      "reason": "Size 42.67 sqm below min 50",
+      "timestamp": "2026-07-12T10:28:17.300Z"
+    },
+    "CWQ012625576LG": {
+      "reason": "Size 39.95 sqm below min 50",
+      "timestamp": "2026-07-12T10:34:42.078Z"
     }
   }
 }

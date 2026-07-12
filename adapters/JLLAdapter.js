@@ -17,17 +17,51 @@ class JLLAdapter {
     const priceMin = config.minPrice !== undefined ? config.minPrice : 2000;
     const priceMax = config.maxPrice !== undefined ? config.maxPrice : 2700;
 
-    const url = `https://residential.jll.co.uk/search?tenureType=rent&placeId=ChIJuZV87v-n2EcRQWuoaOCPFzg&placeName=London%20E14%2C%20UK&priceMin=${priceMin}&priceMax=${priceMax}&bedMin=1&bedMax=2&currencyType=GBP&latEnc=51.50686602787108&lngEnc=-0.015439010925319078&radius=3.123&sortBy=newestListed&sortDirection=desc&page=1&frequency=monthly`;
+    const searchUrls = [
+      `https://residential.jll.co.uk/search?tenureType=rent&placeId=ChIJuZV87v-n2EcRQWuoaOCPFzg&placeName=London%20E14%2C%20UK&priceMin=${priceMin}&priceMax=${priceMax}&currencyType=GBP&latEnc=51.50686602787108&lngEnc=-0.015439010925319078&radius=3.123&sortBy=newestListed&sortDirection=desc&page=1&frequency=monthly`,
+      `https://residential.jll.co.uk/search?tenureType=rent&placeName=South%20Quay%2C%20London&priceMin=${priceMin}&priceMax=${priceMax}&currencyType=GBP&radius=3.0&sortBy=newestListed&sortDirection=desc&page=1&frequency=monthly`
+    ];
 
-    console.log(`Navigating to ${this.platformName} search URL: ${url}`);
+    const allLinks = new Set();
     try {
-      await this.page.goto(url, { waitUntil: 'domcontentloaded', timeout: 30000 });
-      await this.page.waitForTimeout(3000);
+      for (const url of searchUrls) {
+        console.log(`Navigating to ${this.platformName} search URL: ${url}`);
+        await this.page.goto(url, { waitUntil: 'domcontentloaded', timeout: 30000 });
+        await this.page.waitForTimeout(2000);
 
-      const links = await this.page.$$eval('a', els =>
-        els.map(a => a.href).filter(h => h.includes('/rent-') && h.match(/-p\d+/i))
-      );
-      const uniqueLinks = [...new Set(links)];
+        const links = await this.page.$$eval('a', els =>
+          els.map(a => a.href).filter(h => h.includes('/rent-') && h.match(/-p\d+/i))
+        );
+        links.forEach(l => allLinks.add(l));
+
+        if (links.length === 0) {
+          console.log(`[${this.platformName}] Playwright found 0 links on search URL. Using SSR fetch fallback...`);
+          try {
+            const res = await fetch(url, {
+              headers: {
+                'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36'
+              }
+            });
+            const html = await res.text();
+            const ndMatch = html.match(/<script id="__NEXT_DATA__"[^>]*>([\s\S]*?)<\/script>/);
+            if (ndMatch) {
+              const nextJson = JSON.parse(ndMatch[1]);
+              const searchResults = nextJson?.props?.pageProps?.properties || nextJson?.props?.pageProps?.initialState?.search?.results || [];
+              for (const item of searchResults) {
+                if (item.pageUrl) {
+                  const fullUrl = item.pageUrl.startsWith('http') ? item.pageUrl : `https://residential.jll.co.uk${item.pageUrl}`;
+                  allLinks.add(fullUrl);
+                }
+              }
+            }
+          } catch (fetchErr) {
+            console.error(`[${this.platformName}] SSR fetch error:`, fetchErr.message);
+          }
+        }
+      }
+
+      const uniqueLinks = [...allLinks];
+
       console.log(`Found ${uniqueLinks.length} unique property links on ${this.platformName}.`);
 
       for (const link of uniqueLinks) {
@@ -75,6 +109,22 @@ class JLLAdapter {
         };
       });
 
+      if (!pageData.nextJson || pageData.title.includes('Access Denied')) {
+        const res = await fetch(link, {
+          headers: {
+            'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36'
+          }
+        });
+        const html = await res.text();
+        const ndMatch = html.match(/<script id="__NEXT_DATA__"[^>]*>([\s\S]*?)<\/script>/);
+        if (ndMatch) {
+          try {
+            pageData.nextJson = JSON.parse(ndMatch[1]);
+          } catch (e) {}
+        }
+        pageData.bodyText = html.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ');
+      }
+
       const prop = pageData.nextJson?.props?.pageProps?.property || {};
       const bodyText = pageData.bodyText;
 
@@ -120,8 +170,8 @@ class JLLAdapter {
       // Fallback: Check floorplan image OCR if not found in text
       if (!sqm) {
         try {
-          const imageUrls = await this.page.$$eval('img', imgs =>
-            imgs.map(img => img.src).filter(src => /floorplan|floor-plan|floor_plan/i.test(src) || /floorplan/i.test(img.alt || ''))
+          const imageUrls = await this.page.$$eval('img, a', els =>
+            els.map(el => el.src || el.href).filter(url => url && (/floorplan|floor-plan|floor_plan/i.test(url) || /floorplan/i.test(el.alt || el.title || el.innerText || '')))
           );
           if (imageUrls.length > 0) {
             console.log(`[${this.platformName}] Running OCR on floorplan image...`);
@@ -131,27 +181,31 @@ class JLLAdapter {
         } catch (ocrErr) {}
       }
 
-      if (sqm && sqm >= config.minSqm) {
-        const letAvailableDate = 'Now';
-        return {
-          platform: this.platformName,
-          id: id,
-          price: price || 0,
-          sqm: sqm,
-          location: 'Canary Wharf (E14)',
-          propertyName: propertyName,
-          agent: 'JLL',
-          url: link,
-          listingUpdate: new Date().toISOString().split('T')[0],
-          listingStatus: 'Available',
-          letAvailableDate: letAvailableDate
-        };
-      } else {
-        const reason = sqm ? `Size ${sqm} sqm below min ${config.minSqm}` : 'Could not determine size';
+      if (sqm && sqm < config.minSqm) {
+        const reason = `Size ${sqm} sqm below min ${config.minSqm}`;
         console.log(`[${this.platformName}] Property ${id} ignored: ${reason}`);
         markAsIgnored(id, this.platformName, reason);
         return null;
       }
+
+      let letAvailableDate = 'Ask agent';
+      const availMatch = bodyText.match(/(?:Available|Let Available|Available from)[:\s]+([0-9]{1,2}[\/\-.][0-9]{1,2}[\/\-.][0-9]{2,4})/i);
+      if (availMatch) {
+        letAvailableDate = availMatch[1].trim();
+      }
+      return {
+        platform: this.platformName,
+        id: id,
+        price: price || 0,
+        sqm: sqm || 0,
+        location: 'Canary Wharf (E14)',
+        propertyName: propertyName,
+        agent: 'JLL',
+        url: link,
+        listingUpdate: new Date().toISOString().split('T')[0],
+        listingStatus: 'Available',
+        letAvailableDate: letAvailableDate
+      };
     } catch (err) {
       console.error(`[${this.platformName}] Error processing ${id}:`, err.message);
       return null;
