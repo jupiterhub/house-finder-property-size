@@ -6,7 +6,7 @@
 - **Price**: £2518 PCM
 - **Size**: 4869 sqm
 - **Listing Update**: 2026-07-10
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 10/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/172155143](https://www.rightmove.co.uk/properties/172155143)
 
@@ -62,7 +62,7 @@
 - **Price**: £2492 PCM
 - **Size**: 90 sqm
 - **Listing Update**: 2026-07-10
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 10/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90723732](https://www.rightmove.co.uk/properties/90723732)
 
@@ -76,7 +76,7 @@
 - **Price**: £2500 PCM
 - **Size**: 88 sqm
 - **Listing Update**: 2026-07-11
-- **Listing Status**: Reduced today
+- **Listing Status**: Reduced yesterday
 - **Let Available**: 06/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90412020](https://www.rightmove.co.uk/properties/90412020)
 
@@ -188,7 +188,7 @@
 - **Price**: £1900 PCM
 - **Size**: 75.4 sqm
 - **Listing Update**: 2026-07-10
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 10/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90735000](https://www.rightmove.co.uk/properties/90735000)
 
@@ -498,7 +498,7 @@ South Quay, E14
 - **Price**: £2275 PCM
 - **Size**: 60 sqm
 - **Listing Update**: 2026-07-10
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 10/07/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90729582](https://www.rightmove.co.uk/properties/90729582)
 
@@ -526,7 +526,7 @@ South Quay, E14
 - **Price**: £2300 PCM
 - **Size**: 59 sqm
 - **Listing Update**: 2026-07-10
-- **Listing Status**: Reduced yesterday
+- **Listing Status**: Reduced on 10/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90092094](https://www.rightmove.co.uk/properties/90092094)
 
@@ -666,7 +666,7 @@ South Quay, E14
 - **Price**: £2600 PCM
 - **Size**: 57.3 sqm
 - **Listing Update**: 2026-07-10
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 10/07/2026
 - **Let Available**: 25/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90733836](https://www.rightmove.co.uk/properties/90733836)
 
@@ -862,7 +862,7 @@ South Quay, E14
 - **Price**: £2300 PCM
 - **Size**: 55 sqm
 - **Listing Update**: 2026-07-11
-- **Listing Status**: Reduced today
+- **Listing Status**: Reduced yesterday
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90542760](https://www.rightmove.co.uk/properties/90542760)
 
@@ -890,7 +890,7 @@ South Quay, E14
 - **Price**: £2496 PCM
 - **Size**: 55 sqm
 - **Listing Update**: 2026-07-10
-- **Listing Status**: Reduced yesterday
+- **Listing Status**: Reduced on 10/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/88839924](https://www.rightmove.co.uk/properties/88839924)
 
@@ -961,7 +961,7 @@ Islington, N1
 - **Price**: £2200 PCM
 - **Size**: 54 sqm
 - **Listing Update**: 2026-07-10
-- **Listing Status**: Reduced yesterday
+- **Listing Status**: Reduced on 10/07/2026
 - **Let Available**: 03/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/89583771](https://www.rightmove.co.uk/properties/89583771)
 
@@ -1087,7 +1087,7 @@ Islington, N1
 - **Price**: £2600 PCM
 - **Size**: 52.03 sqm
 - **Listing Update**: 2026-07-10
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 10/07/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90738903](https://www.rightmove.co.uk/properties/90738903)
 
@@ -1200,7 +1200,7 @@ Cassilis Road, E14
 - **Price**: £2383 PCM
 - **Size**: 52 sqm
 - **Listing Update**: 2026-07-10
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 10/07/2026
 - **Let Available**: 17/09/2026 (🦅 Early Bird: 69d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/90754224](https://www.rightmove.co.uk/properties/90754224)
 

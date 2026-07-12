@@ -3220,6 +3220,10 @@
       "reason": "Could not determine size",
       "timestamp": "2026-07-04T11:55:58.404Z"
     },
+    "90452202": {
+      "reason": "Size 41.81 sqm below min 50",
+      "timestamp": "2026-07-12T09:28:12.913Z"
+    },
     "90452694": {
       "reason": "No floorplan image found",
       "timestamp": "2026-07-03T12:29:21.424Z"
@@ -4759,6 +4763,10 @@
     "90780096": {
       "reason": "Could not determine size",
       "timestamp": "2026-07-11T16:15:49.875Z"
+    },
+    "90781317": {
+      "reason": "Size 46.45 sqm below min 50",
+      "timestamp": "2026-07-12T09:28:25.397Z"
     },
     "94898018": {
       "reason": "Size 30.56 sqm below min 40",
