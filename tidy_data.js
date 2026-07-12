@@ -78,7 +78,7 @@ function parseMatches(content) {
 
     // Parse Let Available
     const availMatch = block.match(/(?:Let Available:|\*\*Let Available\*\*:|Let Available Date:|\*\*Let Available Date\*\*:) (.*)/);
-    if (availMatch) match.letAvailableDate = availMatch[1].trim();
+    if (availMatch) match.letAvailableDate = availMatch[1].replace(/\s*\(\s*🦅\s*Early\s+Bird[^\)]*\)/gi, '').trim();
     else match.letAvailableDate = 'Unknown';
 
     // Parse Link
@@ -122,6 +122,7 @@ function formatMatchMarkdown(match) {
       if (leadDays > 65) earlyBirdStr = ` (🦅 Early Bird: ${Math.round(leadDays)}d adv)`;
     }
   }
+  const cleanAvail = (match.letAvailableDate || 'Unknown').replace(/\s*\(\s*🦅\s*Early\s+Bird[^\)]*\)/gi, '').trim();
   return `### [${ts}] MATCH FOUND!\n` +
     `- **Platform**: ${match.platform || 'Rightmove'}\n` +
     `- **Marketed by**: ${match.agent || 'Unknown'}\n` +
@@ -132,7 +133,7 @@ function formatMatchMarkdown(match) {
     `- **Size**: ${match.size} sqm\n` +
     `- **Listing Update**: ${match.listingUpdate || 'Unknown'}\n` +
     `- **Listing Status**: ${match.listingStatus || 'Unknown'}\n` +
-    `- **Let Available**: ${match.letAvailableDate || 'Unknown'}${earlyBirdStr}\n` +
+    `- **Let Available**: ${cleanAvail}${earlyBirdStr}\n` +
     `- **Link**: [${match.link}](${match.link})\n\n` +
     `---\n\n`;
 }
@@ -402,8 +403,30 @@ async function verifyMatches(matches) {
   }
 
   const removedCount = matches.length - results.length;
-  console.log(`Verification complete. Removed ${removedCount} inactive/let-agreed listings.`);
   return results;
+}
+
+function matchesAllowedLocations(m, allowedLocations) {
+  if (!allowedLocations || !Array.isArray(allowedLocations) || allowedLocations.length === 0) {
+    return true;
+  }
+  const keywords = [];
+  for (const loc of allowedLocations) {
+    const tokens = loc.split(/[\/\(\)]+/).map(t => t.trim().toLowerCase()).filter(Boolean);
+    keywords.push(...tokens);
+    if (loc.toLowerCase().includes('canary wharf')) keywords.push('e14', 'wood wharf');
+    if (loc.toLowerCase().includes('paddington')) keywords.push('w2');
+    if (loc.toLowerCase().includes('moorgate')) keywords.push('ec2');
+    if (loc.toLowerCase().includes('bloomsbury')) keywords.push('russell square', 'wc1');
+    if (loc.toLowerCase().includes('farringdon')) keywords.push('clerkenwell', 'ec1');
+  }
+
+  const locStr = (m.location || '').toLowerCase();
+  const propStr = (m.propertyName || '').toLowerCase();
+
+  return keywords.some(kw => {
+    return locStr.includes(kw) || propStr.includes(kw) || (locStr.includes('openrent') && propStr.includes(kw));
+  });
 }
 
 async function main() {
@@ -484,6 +507,21 @@ async function main() {
   }
 
   // Filter
+  if (config.locations && Array.isArray(config.locations) && config.locations.length > 0) {
+    const preLocCount = result.length;
+    result = result.filter(m => matchesAllowedLocations(m, config.locations));
+    console.log(`Filtered out locations not in config.json (${config.locations.length} active areas): ${preLocCount} -> ${result.length} matches.`);
+  }
+
+  if (config.excludedAgents && Array.isArray(config.excludedAgents) && config.excludedAgents.length > 0) {
+    const preAgentCount = result.length;
+    result = result.filter(m => {
+      const agentStr = (m.agent || '').toLowerCase();
+      return !config.excludedAgents.some(ex => agentStr.includes(ex.toLowerCase()));
+    });
+    console.log(`Filtered out excluded agents (${config.excludedAgents.join(', ')}): ${preAgentCount} -> ${result.length} matches.`);
+  }
+
   if (flags.maxPrice) {
     result = result.filter(m => m.price <= flags.maxPrice);
   }
@@ -656,6 +694,18 @@ async function main() {
     // Generate HTML
     const htmlFile = flags.output ? flags.output.replace(/\.md$/, '.html') : HTML_FILE;
     if (htmlFile !== targetFile) {
+      // Calculate Deal Rating / Value Score Percentiles across all matches
+      const allPpsqms = result
+        .filter(m => m.price && m.size && m.size > 0)
+        .map(m => m.price / m.size)
+        .sort((a, b) => a - b);
+      let p20Ppsqm = 999;
+      let p40Ppsqm = 999;
+      if (allPpsqms.length > 0) {
+        p20Ppsqm = allPpsqms[Math.floor(allPpsqms.length * 0.2)] || 40;
+        p40Ppsqm = allPpsqms[Math.floor(allPpsqms.length * 0.45)] || 45;
+      }
+
       const htmlRows = result.map((m, idx) => {
         const dateStr = m.timestamp ? m.timestamp.toISOString().replace(/T/, ' ').replace(/\..+/, '') : '';
         const timestamp = m.timestamp ? m.timestamp.getTime() : 0;
@@ -708,7 +758,29 @@ async function main() {
                               platformLower.includes('knight') ? 'badge-platform-knightfrank' : 'badge-platform-rightmove';
         const platformBadge = `<span class="badge-platform ${platformClass}">${platformIcon}${platformStr}</span>`;
 
-        return `<tr data-id="${m.id}" data-index="${idx}" data-platform="${platformStr}" data-early-bird="${isEarlyBird ? 'true' : 'false'}">
+        let dealBadge = '';
+        let dealType = 'fair';
+        if (pricePerSqmValue > 0 && pricePerSqmValue <= p20Ppsqm) {
+          dealBadge = `<br><span class="badge badge-deal badge-deal-bargain" title="Top 20% lowest £/sqm value!">💎 Bargain</span>`;
+          dealType = 'bargain';
+        } else if (pricePerSqmValue > 0 && pricePerSqmValue <= p40Ppsqm) {
+          dealBadge = `<br><span class="badge badge-deal badge-deal-good" title="Good £/sqm value">👍 Good Value</span>`;
+          dealType = 'good';
+        } else if (pricePerSqmValue > 0) {
+          dealBadge = `<br><span class="badge badge-deal badge-deal-fair">⚖️ Market Rate</span>`;
+          dealType = 'fair';
+        }
+
+        const crmSelect = `<select class="crm-status-select" onchange="updateRowStatus('${m.id}', this.value)" onclick="event.stopPropagation()" title="Hunt Status">
+          <option value="exploring" title="Exploring">⚪</option>
+          <option value="contacted" title="Contacted">📞</option>
+          <option value="viewing" title="Viewing Booked">🗓️</option>
+          <option value="ruledout" title="Ruled Out">❌</option>
+        </select>`;
+
+        const noteBtn = `<button class="note-btn note-icon-btn" id="note-btn-${m.id}" onclick="openNoteModal('${m.id}')" title="Add / View Note">📝</button>`;
+
+        return `<tr data-id="${m.id}" data-index="${idx}" data-platform="${platformStr}" data-deal="${dealType}" data-crm-status="exploring" data-early-bird="${isEarlyBird ? 'true' : 'false'}">
           <td data-value="${timestamp}">${dateStr}</td>
           <td data-value="${updateTs}">${listingUpdateStr}</td>
           <td data-value="${listingStatusStr}">${listingStatusStr}</td>
@@ -719,7 +791,9 @@ async function main() {
           <td>${m.propertyName || 'Unknown'}</td>
           <td class="numeric" data-value="${m.price || 0}">£${m.price || 0}</td>
           <td class="numeric" data-value="${m.size || 0}">${m.size || 0} sqm</td>
-          <td class="numeric" data-value="${pricePerSqmValue}">£${pricePerSqm}</td>
+          <td class="numeric" data-value="${pricePerSqmValue}">£${pricePerSqm}${dealBadge}</td>
+          <td style="text-align: center;">${crmSelect}</td>
+          <td style="text-align: center;">${noteBtn}</td>
           <td style="text-align: center;"><a href="${m.link}" target="_blank" class="view-btn" onclick="markRowSeen('${m.id}')" onauxclick="if (event.button === 1) markRowSeen('${m.id}')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('${m.id}', this)" title="Save Property">☆</button></td>
         </tr>`;
@@ -984,6 +1058,145 @@ async function main() {
     background: rgba(67,160,71,0.15);
     color: #81c784;
     border: 1px solid rgba(67,160,71,0.3);
+  }
+  .badge-deal {
+    margin-top: 4px;
+    display: inline-block;
+    padding: 2px 7px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 700;
+  }
+  .badge-deal-bargain {
+    background: linear-gradient(135deg, rgba(16,185,129,0.2), rgba(5,150,105,0.25));
+    color: #34d399;
+    border: 1px solid rgba(52,211,153,0.4);
+    box-shadow: 0 0 10px rgba(16,185,129,0.25);
+  }
+  .badge-deal-good {
+    background: rgba(16,185,129,0.12);
+    color: #6ee7b7;
+    border: 1px solid rgba(52,211,153,0.25);
+  }
+  .badge-deal-fair {
+    background: rgba(148,163,184,0.1);
+    color: #94a3b8;
+    border: 1px solid rgba(148,163,184,0.2);
+  }
+  .crm-status-select {
+    background: #1e293b;
+    color: #e2e8f0;
+    border: 1px solid #334155;
+    border-radius: 6px;
+    padding: 3px 1px;
+    font-size: 1.1em;
+    cursor: pointer;
+    width: 42px;
+    text-align: center;
+    text-align-last: center;
+  }
+  tr.row-ruledout {
+    opacity: 0.45;
+  }
+  tr.row-ruledout td {
+    text-decoration: line-through;
+  }
+  .note-btn {
+    background: #1e293b;
+    color: #94a3b8;
+    border: 1px solid #334155;
+    border-radius: 6px;
+    width: 34px;
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1em;
+    cursor: pointer;
+    padding: 0;
+    transition: all 0.2s;
+  }
+  .note-btn:hover {
+    border-color: #60a5fa;
+    color: #60a5fa;
+  }
+  .note-btn.has-note {
+    background: rgba(245, 158, 11, 0.18);
+    border-color: #f59e0b;
+    color: #facc15;
+    box-shadow: 0 0 8px rgba(245, 158, 11, 0.35);
+  }
+  .btn-export {
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 6px 14px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 0 12px rgba(16,185,129,0.3);
+    transition: all 0.2s ease;
+  }
+  .btn-export:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 0 16px rgba(16,185,129,0.5);
+  }
+  .modal-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+  }
+  .modal-card {
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    padding: 24px;
+    width: 90%;
+    max-width: 450px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+  }
+  .modal-card h3 {
+    margin-top: 0;
+    color: #f8fafc;
+  }
+  .modal-card textarea {
+    width: 100%;
+    background: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    color: #e2e8f0;
+    padding: 10px;
+    font-family: inherit;
+    font-size: 0.9rem;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+  }
+  .modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  .btn-cancel {
+    background: transparent;
+    border: 1px solid #475569;
+    color: #94a3b8;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  .btn-save {
+    background: #3b82f6;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
   }
   .badge-earlybird {
     margin-top: 4px;
@@ -1538,6 +1751,26 @@ function filterTable() {
       continue;
     }
 
+    if (activeQuickFilter === "Bargain" && tr[i].getAttribute("data-deal") !== "bargain") {
+      tr[i].style.display = "none";
+      continue;
+    }
+
+    if (activeQuickFilter === "Viewing" && tr[i].getAttribute("data-crm-status") !== "viewing") {
+      tr[i].style.display = "none";
+      continue;
+    }
+
+    if (activeQuickFilter === "Contacted" && tr[i].getAttribute("data-crm-status") !== "contacted") {
+      tr[i].style.display = "none";
+      continue;
+    }
+
+    if (activeQuickFilter === "RuledOut" && tr[i].getAttribute("data-crm-status") !== "ruledout") {
+      tr[i].style.display = "none";
+      continue;
+    }
+
     var compatLabelSelect = document.getElementById("compatLabelSelect");
     var compatLabelVal = compatLabelSelect ? compatLabelSelect.value : "";
     if (compatLabelVal) {
@@ -1710,6 +1943,18 @@ function setQuickFilter(filterType) {
     } else if (filterType === "Unviewed") {
       var uvBtn = document.getElementById("chipUnviewed");
       if (uvBtn) uvBtn.classList.add("active");
+    } else if (filterType === "Bargain") {
+      var bgBtn = document.getElementById("chipBargain");
+      if (bgBtn) bgBtn.classList.add("active");
+    } else if (filterType === "Viewing") {
+      var vwBtn = document.getElementById("chipViewing");
+      if (vwBtn) vwBtn.classList.add("active");
+    } else if (filterType === "Contacted") {
+      var ctBtn = document.getElementById("chipContacted");
+      if (ctBtn) ctBtn.classList.add("active");
+    } else if (filterType === "RuledOut") {
+      var roBtn = document.getElementById("chipRuledOut");
+      if (roBtn) roBtn.classList.add("active");
     }
   }
 }
@@ -1960,10 +2205,126 @@ function clearSort() {
   }
 }
 
-window.addEventListener('DOMContentLoaded', () => {
-  applySort();
+function applySavedCrmData() {
+  const statuses = JSON.parse(localStorage.getItem('crm_statuses') || '{}');
+  const notes = JSON.parse(localStorage.getItem('crm_notes') || '{}');
+  const rows = document.querySelectorAll("#matchesTable tbody tr");
+  rows.forEach(tr => {
+    const id = tr.getAttribute("data-id");
+    if (statuses[id]) {
+      tr.setAttribute("data-crm-status", statuses[id]);
+      const select = tr.querySelector(".crm-status-select");
+      if (select) select.value = statuses[id];
+      if (statuses[id] === "ruledout") tr.classList.add("row-ruledout");
+      else tr.classList.remove("row-ruledout");
+    }
+    const btn = tr.querySelector('#note-btn-' + id);
+    if (btn) {
+      if (notes[id]) {
+        btn.classList.add('has-note');
+        btn.title = 'Note: ' + notes[id];
+      } else {
+        btn.classList.remove('has-note');
+        btn.title = 'Add / View Note';
+      }
+    }
+  });
+}
+
+function updateRowStatus(id, newStatus) {
+  const statuses = JSON.parse(localStorage.getItem('crm_statuses') || '{}');
+  statuses[id] = newStatus;
+  localStorage.setItem('crm_statuses', JSON.stringify(statuses));
+  const tr = document.querySelector('tr[data-id="' + id + '"]');
+  if (tr) {
+    tr.setAttribute('data-crm-status', newStatus);
+    if (newStatus === 'ruledout') tr.classList.add('row-ruledout');
+    else tr.classList.remove('row-ruledout');
+  }
+  filterTable();
+}
+
+let currentEditingNoteId = null;
+function openNoteModal(id) {
+  currentEditingNoteId = id;
+  const notes = JSON.parse(localStorage.getItem('crm_notes') || '{}');
+  const textarea = document.getElementById('noteTextarea');
+  if (textarea) textarea.value = notes[id] || '';
+  const modal = document.getElementById('noteModal');
+  if (modal) modal.style.display = 'flex';
+}
+function closeNoteModal() {
+  const modal = document.getElementById('noteModal');
+  if (modal) modal.style.display = 'none';
+}
+function saveNoteFromModal() {
+  if (!currentEditingNoteId) return;
+  const textarea = document.getElementById('noteTextarea');
+  const noteVal = textarea ? textarea.value.trim() : '';
+  const notes = JSON.parse(localStorage.getItem('crm_notes') || '{}');
+  if (noteVal) notes[currentEditingNoteId] = noteVal;
+  else delete notes[currentEditingNoteId];
+  localStorage.setItem('crm_notes', JSON.stringify(notes));
+  const tr = document.querySelector('tr[data-id="' + currentEditingNoteId + '"]');
+  if (tr) {
+    const btn = tr.querySelector('#note-btn-' + currentEditingNoteId);
+    if (btn) {
+      if (noteVal) {
+        btn.classList.add('has-note');
+        btn.title = 'Note: ' + noteVal;
+      } else {
+        btn.classList.remove('has-note');
+        btn.title = 'Add / View Note';
+      }
+    }
+  }
+  closeNoteModal();
+}
+
+function copyShortlistToClipboard() {
+  const starred = getStarredIds();
+  if (starred.length === 0) {
+    alert('No properties starred yet! Click ⭐ on properties to add them to your shortlist first.');
+    return;
+  }
+  const rows = document.querySelectorAll('#matchesTable tbody tr');
+  let summary = '🌟 MY LONDON PROPERTY SHORTLIST (' + starred.length + ' properties) 🌟\\n\\n';
+  let count = 1;
+  rows.forEach(tr => {
+    const id = tr.getAttribute('data-id');
+    if (starred.includes(id)) {
+      const price = tr.children[8].textContent.trim();
+      const sqm = tr.children[9].textContent.trim();
+      const ppsqmText = tr.children[10].textContent.replace(/💎.*|👍.*|⚖️.*/g, '').trim();
+      const propName = tr.children[7].textContent.trim();
+      const loc = tr.children[6].textContent.trim();
+      const platform = tr.getAttribute('data-platform') || 'Rightmove';
+      const agent = tr.children[5].textContent.trim();
+      const avail = tr.children[3].querySelector('.avail-text') ? tr.children[3].querySelector('.avail-text').textContent : tr.children[3].textContent.trim();
+      const linkEl = tr.children[13].querySelector('a');
+      const url = linkEl ? linkEl.href : '';
+
+      summary += count + '. ' + propName + ' — ' + price + ' (' + sqm + ' | ' + ppsqmText + ')\\n';
+      summary += '   📍 ' + loc + ' | ' + platform + ' (' + agent + ')\\n';
+      summary += '   📅 Let Available: ' + avail + '\\n';
+      summary += '   🔗 ' + url + '\\n\\n';
+      count++;
+    }
+  });
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(summary).then(() => {
+      alert('✅ Copied ' + starred.length + ' shortlisted properties to clipboard!');
+    });
+  } else {
+    alert(summary);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function() {
   applyStarred();
   applySeen();
+  applySavedCrmData();
+  applySort();
   updateSortIndicators();
   updateCompatibilityBadges();
 });
@@ -2020,6 +2381,7 @@ window.addEventListener('DOMContentLoaded', () => {
     <div class="quick-filters action-group">
       <span class="filter-label">Quick Filters:</span>
       <button id="chipAll" class="filter-chip active" onclick="setQuickFilter('')">All</button>
+      <button id="chipBargain" class="filter-chip chip-bargain" onclick="setQuickFilter('Bargain')">💎 Best Deals</button>
       <button id="chipRightmove" class="filter-chip" onclick="setQuickFilter('Rightmove')">🏠 Rightmove</button>
       <button id="chipJLL" class="filter-chip" onclick="setQuickFilter('JLL')">🏢 JLL</button>
       <button id="chipJohns" class="filter-chip" onclick="setQuickFilter('JOHNS&CO')">🏙️ JOHNS&CO</button>
@@ -2027,8 +2389,15 @@ window.addEventListener('DOMContentLoaded', () => {
       <button id="chipOpenRent" class="filter-chip chip-openrent" onclick="setQuickFilter('OpenRent')">✨ OpenRent Only</button>
       <button id="chipEarlyBird" class="filter-chip chip-earlybird" onclick="setQuickFilter('EarlyBird')">🦅 Early Bird Deals</button>
       <button id="chipStarred" class="filter-chip chip-starred" onclick="setQuickFilter('Starred')">⭐ Starred (0)</button>
+      <button id="chipViewing" class="filter-chip" onclick="setQuickFilter('Viewing')">🗓️ Booked Viewings</button>
+      <button id="chipContacted" class="filter-chip" onclick="setQuickFilter('Contacted')">📞 Contacted</button>
+      <button id="chipRuledOut" class="filter-chip" onclick="setQuickFilter('RuledOut')">❌ Ruled Out</button>
       <button id="chipViewed" class="filter-chip chip-viewed" onclick="setQuickFilter('Viewed')">✓ Viewed</button>
       <button id="chipUnviewed" class="filter-chip chip-unviewed" onclick="setQuickFilter('Unviewed')">👀 Unviewed</button>
+    </div>
+    <div class="action-divider"></div>
+    <div class="quick-export action-group">
+      <button class="btn-export" onclick="copyShortlistToClipboard()" title="Copy Starred properties ready for WhatsApp or Email">📋 Copy Shortlist</button>
     </div>
     <div class="action-divider"></div>
     <div class="quick-sorts action-group">
@@ -2068,6 +2437,8 @@ window.addEventListener('DOMContentLoaded', () => {
       <th onclick="sortTable(8, event)">Price <span class="sort-indicator" id="sort-ind-8"></span><br><input type="text" class="filter-input" data-col="8" data-type="numeric" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Price (e.g. >2000)..."></th>
       <th onclick="sortTable(9, event)">Size <span class="sort-indicator" id="sort-ind-9"></span><br><input type="text" class="filter-input" data-col="9" data-type="numeric" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Size (e.g. <50)..."></th>
       <th onclick="sortTable(10, event)">£ / sqm <span class="sort-indicator" id="sort-ind-10"></span><br><input type="text" class="filter-input" data-col="10" data-type="numeric" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="£/sqm (e.g. >=40)..."></th>
+      <th style="cursor: default; text-align: center; width: 44px;" title="Hunt Status (⚪ Exploring / 📞 Contacted / 🗓️ Booked / ❌ Ruled Out)">🏷️</th>
+      <th style="cursor: default; text-align: center; width: 40px;" title="Personal Notes">📝</th>
       <th style="cursor: default; text-align: center;">Link</th>
       <th style="cursor: default; text-align: center;">⭐</th>
     </tr>
@@ -2077,6 +2448,18 @@ ${htmlRows}
   </tbody>
 </table>
 </div>
+
+<div id="noteModal" class="modal-overlay" style="display: none;" onclick="if(event.target===this) closeNoteModal()">
+  <div class="modal-card">
+    <h3>📝 Personal Note for Property</h3>
+    <textarea id="noteTextarea" placeholder="e.g. Viewing booked Sat 2pm with Sarah. Loved the balcony!..." rows="4"></textarea>
+    <div class="modal-actions">
+      <button class="btn-cancel" onclick="closeNoteModal()">Cancel</button>
+      <button class="btn-save" onclick="saveNoteFromModal()">Save Note</button>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>`;
       fs.writeFileSync(htmlFile, htmlContent);

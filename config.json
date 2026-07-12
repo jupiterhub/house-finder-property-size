@@ -12,5 +12,8 @@
     "Moorgate",
     "Bloomsbury (Russell Square)",
     "Farringdon / Clerkenwell"
+  ],
+  "excludedAgents": [
+    "Foxtons"
   ]
 }
