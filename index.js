@@ -3,6 +3,9 @@ const stealth = require('puppeteer-extra-plugin-stealth')();
 chromium.use(stealth);
 
 const RightmoveAdapter = require('./adapters/RightmoveAdapter');
+const JLLAdapter = require('./adapters/JLLAdapter');
+const JohnsAndCoAdapter = require('./adapters/JohnsAndCoAdapter');
+const KnightFrankAdapter = require('./adapters/KnightFrankAdapter');
 const { saveMatch, markAsSeen } = require('./utils/storage');
 
 async function main() {
@@ -33,15 +36,29 @@ async function main() {
     });
   });
   
-  const page = await context.newPage();
-
-  const rightmove = new RightmoveAdapter(page);
+  const adapterClasses = [
+    RightmoveAdapter,
+    JLLAdapter,
+    JohnsAndCoAdapter,
+    KnightFrankAdapter
+  ];
 
   try {
-    const rightmoveResults = await rightmove.run();
-    for (const match of rightmoveResults) {
-      saveMatch(match);
-    }
+    await Promise.all(adapterClasses.map(async (AdapterClass) => {
+      const page = await context.newPage();
+      const adapter = new AdapterClass(page);
+      console.log(`Running ${adapter.platformName} adapter in parallel...`);
+      try {
+        const results = await adapter.run();
+        for (const match of results) {
+          saveMatch(match);
+        }
+      } catch (err) {
+        console.error(`Error in ${adapter.platformName} adapter:`, err);
+      } finally {
+        await page.close().catch(() => {});
+      }
+    }));
 
     console.log('Scraping complete.');
   } catch (error) {

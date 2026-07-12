@@ -5670,5 +5670,23 @@
       "reason": "Could not determine size",
       "timestamp": "2026-05-15T16:11:38.121Z"
     }
+  },
+  "JLL": {
+    "P169268": {
+      "reason": "Could not determine size",
+      "timestamp": "2026-07-12T09:32:36.385Z"
+    },
+    "P169264": {
+      "reason": "Could not determine size",
+      "timestamp": "2026-07-12T09:32:39.880Z"
+    },
+    "P169260": {
+      "reason": "Could not determine size",
+      "timestamp": "2026-07-12T09:32:43.191Z"
+    },
+    "P169204": {
+      "reason": "Could not determine size",
+      "timestamp": "2026-07-12T09:32:52.289Z"
+    }
   }
 }
