@@ -1,6 +1,7 @@
 const { isSeen, markAsSeen, markAsIgnored } = require('../utils/storage');
 const { extractSqmFromText } = require('../utils/parser');
 const { extractTextFromImage } = require('../utils/ocr');
+const { isDesiredAvailability } = require('../utils/availability');
 const config = require('../config.json');
 
 class JLLAdapter {
@@ -131,6 +132,7 @@ class JLLAdapter {
       }
 
       if (sqm && sqm >= config.minSqm) {
+        const letAvailableDate = 'Now';
         return {
           platform: this.platformName,
           id: id,
@@ -142,7 +144,7 @@ class JLLAdapter {
           url: link,
           listingUpdate: new Date().toISOString().split('T')[0],
           listingStatus: 'Available',
-          letAvailableDate: 'Now'
+          letAvailableDate: letAvailableDate
         };
       } else {
         const reason = sqm ? `Size ${sqm} sqm below min ${config.minSqm}` : 'Could not determine size';

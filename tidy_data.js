@@ -6,6 +6,11 @@ const TXT_FILE = path.join(DATA_DIR, 'matches.txt');
 const MD_FILE = path.join(DATA_DIR, 'matches.md');
 const HTML_FILE = path.join(DATA_DIR, 'matches.html');
 const SEEN_FILE = path.join(DATA_DIR, 'seen_properties.json');
+const { isDesiredAvailability, getDesiredAvailabilityConfig } = require('./utils/availability');
+let config = {};
+try {
+  config = require('./config.json');
+} catch (e) {}
 
 function parseMatches(content) {
   const matches = [];
@@ -24,6 +29,15 @@ function parseMatches(content) {
     // Parse Platform
     const platformMatch = block.match(/(?:Platform:|\*\*Platform\*\*:) (.*)/);
     if (platformMatch) match.platform = platformMatch[1].trim();
+    if (!match.platform) {
+      if (match.link && match.link.includes('rightmove.co.uk')) match.platform = 'Rightmove';
+      else if (match.link && match.link.includes('jll')) match.platform = 'JLL';
+      else if (match.agent && match.agent.toUpperCase().includes('JLL')) match.platform = 'JLL';
+      else if (match.agent && match.agent.toUpperCase().includes('JOHNS&CO')) match.platform = 'JOHNS&CO';
+      else if (match.agent && match.agent.toUpperCase().includes('KNIGHT FRANK')) match.platform = 'Knight Frank';
+      else if (match.link && match.link.includes('zoopla')) match.platform = 'Zoopla';
+      else match.platform = 'Rightmove';
+    }
 
     // Parse Marketed by (or Agent)
     const agentMatch = block.match(/(?:Marketed by:|\*\*Marketed by\*\*:|Agent:|\*\*Agent\*\*:) (.*)/);
@@ -109,6 +123,7 @@ function formatMatchMarkdown(match) {
     }
   }
   return `### [${ts}] MATCH FOUND!\n` +
+    `- **Platform**: ${match.platform || 'Rightmove'}\n` +
     `- **Marketed by**: ${match.agent || 'Unknown'}\n` +
     `- **Location**: ${match.location || 'Unknown'}\n` +
     `- **Property Name**: ${match.propertyName || 'Unknown'}\n` +
@@ -393,16 +408,21 @@ async function verifyMatches(matches) {
 
 async function main() {
   const args = process.argv.slice(2);
+  const availabilityConfig = getDesiredAvailabilityConfig(config);
   const flags = {
-    maxPrice: null,
+    maxPrice: config.maxPrice || null,
     sort: 'ideal',
     order: 'desc',
     output: null,
     cleanSeen: false,
     migrate: false,
     verify: false,
-    targetDate: null,
-    window: 14
+    targetDate: availabilityConfig.desiredDateStr || null,
+    window: availabilityConfig.windowDays !== undefined ? availabilityConfig.windowDays : 7,
+    filterAvailableNow: availabilityConfig.filterAvailableNow,
+    includeUnknownAvailability: availabilityConfig.includeUnknownAvailability,
+    filterAvailability: !!availabilityConfig.desiredDateStr,
+    platform: null
   };
 
   for (let i = 0; i < args.length; i++) {
@@ -414,8 +434,15 @@ async function main() {
     else if (args[i] === '--clean-seen') flags.cleanSeen = true;
     else if (args[i] === '--migrate') flags.migrate = true;
     else if (args[i] === '--verify') flags.verify = true;
-    else if (args[i] === '--target-date' || args[i] === '--move-in') flags.targetDate = args[++i];
+    else if (args[i] === '--target-date' || args[i] === '--move-in' || args[i] === '--desired-availability-date') {
+      flags.targetDate = args[++i];
+      flags.filterAvailability = true;
+    }
     else if (args[i] === '--window') flags.window = parseInt(args[++i], 10);
+    else if (args[i] === '--filter-availability') flags.filterAvailability = true;
+    else if (args[i] === '--no-filter-availability') flags.filterAvailability = false;
+    else if (args[i] === '--filter-available-now') flags.filterAvailableNow = true;
+    else if (args[i] === '--include-available-now') flags.filterAvailableNow = false;
   }
 
   if (flags.cleanSeen) {
@@ -463,6 +490,23 @@ async function main() {
   if (flags.agent) {
     const query = flags.agent.toLowerCase();
     result = result.filter(m => (m.agent || 'Unknown').toLowerCase().includes(query));
+  }
+  if (flags.platform) {
+    const query = flags.platform.toLowerCase();
+    result = result.filter(m => (m.platform || 'Rightmove').toLowerCase().includes(query));
+  }
+  if (flags.filterAvailability && flags.targetDate) {
+    const initialCount = result.length;
+    result = result.filter(m => {
+      const check = isDesiredAvailability(m.letAvailableDate, {
+        desiredAvailabilityDate: flags.targetDate,
+        availabilityWindowDays: flags.window,
+        filterAvailableNow: flags.filterAvailableNow,
+        includeUnknownAvailability: flags.includeUnknownAvailability
+      });
+      return check.kept;
+    });
+    console.log(`Filtered out noise by desired availability date (${flags.targetDate}, tolerance ±${flags.window}d): ${initialCount} -> ${result.length} matches.`);
   }
 
   // Sort
@@ -652,11 +696,24 @@ async function main() {
         const isEarlyBird = leadTimeDays > 65;
         const earlyBirdBadge = isEarlyBird ? `<br><span class="badge badge-earlybird" title="Listed ${Math.round(leadTimeDays)} days before let available date!">🦅 Early Bird (${Math.round(leadTimeDays)}d adv)</span>` : '';
 
-        return `<tr data-id="${m.id}" data-index="${idx}" data-early-bird="${isEarlyBird ? 'true' : 'false'}">
+        const platformStr = m.platform || 'Rightmove';
+        const platformLower = platformStr.toLowerCase().replace(/[^a-z]/g, '');
+        const platformIcon = platformLower.includes('rightmove') ? '🏠 ' :
+                             platformLower.includes('jll') ? '🏢 ' :
+                             platformLower.includes('johns') ? '🏙️ ' :
+                             platformLower.includes('knight') ? '🏰 ' : '🌐 ';
+        const platformClass = platformLower.includes('rightmove') ? 'badge-platform-rightmove' :
+                              platformLower.includes('jll') ? 'badge-platform-jll' :
+                              platformLower.includes('johns') ? 'badge-platform-johnsandco' :
+                              platformLower.includes('knight') ? 'badge-platform-knightfrank' : 'badge-platform-rightmove';
+        const platformBadge = `<span class="badge-platform ${platformClass}">${platformIcon}${platformStr}</span>`;
+
+        return `<tr data-id="${m.id}" data-index="${idx}" data-platform="${platformStr}" data-early-bird="${isEarlyBird ? 'true' : 'false'}">
           <td data-value="${timestamp}">${dateStr}</td>
           <td data-value="${updateTs}">${listingUpdateStr}</td>
           <td data-value="${listingStatusStr}">${listingStatusStr}</td>
           <td data-value="${availTs}"><span class="avail-text">${letAvailableStr}</span><span class="compat-indicator"></span>${earlyBirdBadge}</td>
+          <td data-value="${platformStr}">${platformBadge}</td>
           <td data-value="${agentStr}">${agentBadge}</td>
           <td>${m.location || 'Unknown'}</td>
           <td>${m.propertyName || 'Unknown'}</td>
@@ -899,6 +956,36 @@ async function main() {
     color: #f472b6;
     border: 1px solid rgba(236, 72, 153, 0.4);
     box-shadow: 0 0 12px rgba(236, 72, 153, 0.2);
+  }
+  .badge-platform {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-size: 0.8em;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .badge-platform-rightmove {
+    background: rgba(30,136,229,0.15);
+    color: #64b5f6;
+    border: 1px solid rgba(30,136,229,0.3);
+  }
+  .badge-platform-jll {
+    background: rgba(229,57,53,0.15);
+    color: #ef5350;
+    border: 1px solid rgba(229,57,53,0.3);
+  }
+  .badge-platform-johnsandco {
+    background: rgba(251,140,0,0.15);
+    color: #ffb74d;
+    border: 1px solid rgba(251,140,0,0.3);
+  }
+  .badge-platform-knightfrank {
+    background: rgba(67,160,71,0.15);
+    color: #81c784;
+    border: 1px solid rgba(67,160,71,0.3);
+  }
+  .badge-earlybird {
     margin-top: 4px;
     display: inline-block;
   }
@@ -1574,10 +1661,19 @@ function setQuickFilter(filterType) {
   activeQuickFilter = filterType || "";
   var inputs = document.querySelectorAll("thead .filter-input");
   for (var i = 0; i < inputs.length; i++) {
-    if (inputs[i].getAttribute("data-col") === "4") {
-      if (filterType === "OpenRent") inputs[i].value = "OpenRent";
-      else inputs[i].value = "";
-      break;
+    var col = inputs[i].getAttribute("data-col");
+    if (col === "4") {
+      if (["Rightmove", "JLL", "JOHNS&CO", "Knight Frank"].includes(filterType)) {
+        inputs[i].value = filterType;
+      } else {
+        inputs[i].value = "";
+      }
+    } else if (col === "5") {
+      if (filterType === "OpenRent") {
+        inputs[i].value = "OpenRent";
+      } else {
+        inputs[i].value = "";
+      }
     }
   }
   filterTable();
@@ -1587,6 +1683,18 @@ function setQuickFilter(filterType) {
     if (!filterType) {
       var allBtn = document.getElementById("chipAll");
       if (allBtn) allBtn.classList.add("active");
+    } else if (filterType === "Rightmove") {
+      var rmBtn = document.getElementById("chipRightmove");
+      if (rmBtn) rmBtn.classList.add("active");
+    } else if (filterType === "JLL") {
+      var jllBtn = document.getElementById("chipJLL");
+      if (jllBtn) jllBtn.classList.add("active");
+    } else if (filterType === "JOHNS&CO") {
+      var jcoBtn = document.getElementById("chipJohns");
+      if (jcoBtn) jcoBtn.classList.add("active");
+    } else if (filterType === "Knight Frank") {
+      var kfBtn = document.getElementById("chipKF");
+      if (kfBtn) kfBtn.classList.add("active");
     } else if (filterType === "OpenRent") {
       var orBtn = document.getElementById("chipOpenRent");
       if (orBtn) orBtn.classList.add("active");
@@ -1718,13 +1826,13 @@ function sortTable(n, event) {
     }
 
     if (n === 0) {
-      currentSorts = [{col: 0, dir: primaryDir}, {col: 7, dir: 'asc'}];
-    } else if (n === 7) {
-      currentSorts = [{col: 7, dir: primaryDir}, {col: 8, dir: 'desc'}];
+      currentSorts = [{col: 0, dir: primaryDir}, {col: 8, dir: 'asc'}];
     } else if (n === 8) {
-      currentSorts = [{col: 8, dir: primaryDir}, {col: 7, dir: 'asc'}];
+      currentSorts = [{col: 8, dir: primaryDir}, {col: 9, dir: 'desc'}];
+    } else if (n === 9) {
+      currentSorts = [{col: 9, dir: primaryDir}, {col: 8, dir: 'asc'}];
     } else {
-      currentSorts = [{col: n, dir: primaryDir}, {col: 7, dir: 'asc'}];
+      currentSorts = [{col: n, dir: primaryDir}, {col: 8, dir: 'asc'}];
     }
   }
 
@@ -1874,19 +1982,19 @@ window.addEventListener('DOMContentLoaded', () => {
   <div class="move-in-assistant" id="moveInAssistant">
     <div class="assistant-header">
       <span class="assistant-icon">🎯</span>
-      <span class="assistant-title">Move-In Date Assistant</span>
-      <span class="assistant-subtitle">Find deals tailored to your tenancy start date</span>
+      <span class="assistant-title">Let Available Date Assistant</span>
+      <span class="assistant-subtitle">Filter deals tailored to your desired let available date</span>
     </div>
     <div class="assistant-controls">
       <div class="control-group">
-        <label for="targetDateInput">Target Move-In:</label>
+        <label for="targetDateInput">Target Let Available:</label>
         <input type="date" id="targetDateInput" value="${flags.targetDate || ''}" onchange="applyMoveInFilter()">
       </div>
       <div class="control-group">
         <label for="windowSelect">Tolerance:</label>
         <select id="windowSelect" onchange="applyMoveInFilter()">
-          <option value="7" ${flags.window === 7 ? 'selected' : ''}>± 7 days</option>
-          <option value="14" ${(flags.window === 14 || (!flags.window && flags.window !== 7 && flags.window !== 30 && flags.window !== 999)) ? 'selected' : ''}>± 14 days</option>
+          <option value="7" ${(flags.window === 7 || !flags.window) ? 'selected' : ''}>± 7 days</option>
+          <option value="14" ${flags.window === 14 ? 'selected' : ''}>± 14 days</option>
           <option value="30" ${flags.window === 30 ? 'selected' : ''}>± 30 days</option>
           <option value="999" ${flags.window === 999 ? 'selected' : ''}>Any time before</option>
         </select>
@@ -1902,8 +2010,8 @@ window.addEventListener('DOMContentLoaded', () => {
         </select>
       </div>
       <div class="control-group checkbox-group">
-        <label class="toggle-check"><input type="checkbox" id="includeNowCheck" checked onchange="applyMoveInFilter()"> <span>Include "Now"</span></label>
-        <label class="toggle-check"><input type="checkbox" id="includeUnknownCheck" checked onchange="applyMoveInFilter()"> <span>Include "Unknown"</span></label>
+        <label class="toggle-check"><input type="checkbox" id="includeNowCheck" ${!flags.filterAvailableNow ? 'checked' : ''} onchange="applyMoveInFilter()"> <span>Include "Now"</span></label>
+        <label class="toggle-check"><input type="checkbox" id="includeUnknownCheck" ${flags.includeUnknownAvailability ? 'checked' : ''} onchange="applyMoveInFilter()"> <span>Include "Unknown"</span></label>
       </div>
       <button id="clearMoveInBtn" class="filter-chip chip-clear-movein" onclick="clearMoveInAssistant()">Reset Date</button>
     </div>
@@ -1912,6 +2020,10 @@ window.addEventListener('DOMContentLoaded', () => {
     <div class="quick-filters action-group">
       <span class="filter-label">Quick Filters:</span>
       <button id="chipAll" class="filter-chip active" onclick="setQuickFilter('')">All</button>
+      <button id="chipRightmove" class="filter-chip" onclick="setQuickFilter('Rightmove')">🏠 Rightmove</button>
+      <button id="chipJLL" class="filter-chip" onclick="setQuickFilter('JLL')">🏢 JLL</button>
+      <button id="chipJohns" class="filter-chip" onclick="setQuickFilter('JOHNS&CO')">🏙️ JOHNS&CO</button>
+      <button id="chipKF" class="filter-chip" onclick="setQuickFilter('Knight Frank')">🏰 Knight Frank</button>
       <button id="chipOpenRent" class="filter-chip chip-openrent" onclick="setQuickFilter('OpenRent')">✨ OpenRent Only</button>
       <button id="chipEarlyBird" class="filter-chip chip-earlybird" onclick="setQuickFilter('EarlyBird')">🦅 Early Bird Deals</button>
       <button id="chipStarred" class="filter-chip chip-starred" onclick="setQuickFilter('Starred')">⭐ Starred (0)</button>
@@ -1921,7 +2033,7 @@ window.addEventListener('DOMContentLoaded', () => {
     <div class="action-divider"></div>
     <div class="quick-sorts action-group">
       <span class="filter-label">Quick Sort:</span>
-      <button id="sortDatePrice" class="filter-chip" onclick="setMultiSort([{col: 0, dir: 'desc'}, {col: 7, dir: 'asc'}])">📅 Date → Price</button>
+      <button id="sortDatePrice" class="filter-chip" onclick="setMultiSort([{col: 0, dir: 'desc'}, {col: 8, dir: 'asc'}])">📅 Date → Price</button>
       <button id="sortTargetDate" class="filter-chip chip-target" onclick="sortByTargetDate()">🎯 Match Proximity</button>
       <button id="clearSortBtn" class="filter-chip chip-clear" onclick="clearSort()">✕ Clear All</button>
       <div class="tooltip-container">
@@ -1949,12 +2061,13 @@ window.addEventListener('DOMContentLoaded', () => {
       <th onclick="sortTable(1, event)">Listed / Updated <span class="sort-indicator" id="sort-ind-1"></span><br><input type="text" class="filter-input" data-col="1" data-type="date" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Date (e.g. >2026-07-01)..."></th>
       <th onclick="sortTable(2, event)">Status <span class="sort-indicator" id="sort-ind-2"></span><br><input type="text" class="filter-input" data-col="2" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Filter (e.g. yesterday)..."></th>
       <th onclick="sortTable(3, event)">Let Available <span class="sort-indicator" id="sort-ind-3"></span><br><input type="text" class="filter-input" data-col="3" data-type="date" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Date (e.g. >2026-07-01)..."></th>
-      <th onclick="sortTable(4, event)">Marketed By <span class="sort-indicator" id="sort-ind-4"></span><br><input type="text" class="filter-input" data-col="4" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Filter (e.g. OpenRent)..."></th>
-      <th onclick="sortTable(5, event)">Location <span class="sort-indicator" id="sort-ind-5"></span><br><input type="text" class="filter-input" data-col="5" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Filter..."></th>
-      <th onclick="sortTable(6, event)">Property Name <span class="sort-indicator" id="sort-ind-6"></span><br><input type="text" class="filter-input" data-col="6" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Filter (e.g. Landmark)..."></th>
-      <th onclick="sortTable(7, event)">Price <span class="sort-indicator" id="sort-ind-7"></span><br><input type="text" class="filter-input" data-col="7" data-type="numeric" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Price (e.g. >2000)..."></th>
-      <th onclick="sortTable(8, event)">Size <span class="sort-indicator" id="sort-ind-8"></span><br><input type="text" class="filter-input" data-col="8" data-type="numeric" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Size (e.g. <50)..."></th>
-      <th onclick="sortTable(9, event)">£ / sqm <span class="sort-indicator" id="sort-ind-9"></span><br><input type="text" class="filter-input" data-col="9" data-type="numeric" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="£/sqm (e.g. >=40)..."></th>
+      <th onclick="sortTable(4, event)">Source <span class="sort-indicator" id="sort-ind-4"></span><br><input type="text" class="filter-input" data-col="4" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Source (e.g. Rightmove, JLL)..."></th>
+      <th onclick="sortTable(5, event)">Marketed By <span class="sort-indicator" id="sort-ind-5"></span><br><input type="text" class="filter-input" data-col="5" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Filter (e.g. OpenRent)..."></th>
+      <th onclick="sortTable(6, event)">Location <span class="sort-indicator" id="sort-ind-6"></span><br><input type="text" class="filter-input" data-col="6" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Filter..."></th>
+      <th onclick="sortTable(7, event)">Property Name <span class="sort-indicator" id="sort-ind-7"></span><br><input type="text" class="filter-input" data-col="7" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Filter (e.g. Landmark)..."></th>
+      <th onclick="sortTable(8, event)">Price <span class="sort-indicator" id="sort-ind-8"></span><br><input type="text" class="filter-input" data-col="8" data-type="numeric" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Price (e.g. >2000)..."></th>
+      <th onclick="sortTable(9, event)">Size <span class="sort-indicator" id="sort-ind-9"></span><br><input type="text" class="filter-input" data-col="9" data-type="numeric" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Size (e.g. <50)..."></th>
+      <th onclick="sortTable(10, event)">£ / sqm <span class="sort-indicator" id="sort-ind-10"></span><br><input type="text" class="filter-input" data-col="10" data-type="numeric" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="£/sqm (e.g. >=40)..."></th>
       <th style="cursor: default; text-align: center;">Link</th>
       <th style="cursor: default; text-align: center;">⭐</th>
     </tr>

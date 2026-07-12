@@ -1,6 +1,7 @@
 const { isSeen, markAsSeen, markAsIgnored, updateLocationIfUnknown } = require('../utils/storage');
 const { extractSqmFromText } = require('../utils/parser');
 const { extractTextFromImage } = require('../utils/ocr');
+const { isDesiredAvailability } = require('../utils/availability');
 const config = require('../config.json');
 
 class RightmoveAdapter {

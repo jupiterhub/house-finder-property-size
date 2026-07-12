@@ -1,6 +1,10 @@
 {
   "maxPrice": 2700,
   "minSqm": 50,
+  "desiredLetAvailableDate": "2026-09-12",
+  "availabilityWindowDays": 7,
+  "filterAvailableNow": true,
+  "includeUnknownAvailability": true,
   "locations": [
     "Canary Wharf",
     "South Quay",
