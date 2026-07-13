@@ -28,21 +28,6 @@
 
 ---
 
-### [2026-05-27T14:03:03.158Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Unknown
-- **Location**: Canary Wharf
-- **Property Name**: Hutchings Street, Canary Wharf
-- **ID**: 88977495
-- **Price**: £2250 PCM
-- **Size**: 81.8 sqm
-- **Listing Update**: 2026-05-27
-- **Listing Status**: Added on 27/05/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/88977495](https://www.rightmove.co.uk/properties/88977495)
-
----
-
 ### [2026-06-23T13:27:08.844Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Unknown
@@ -103,21 +88,6 @@
 
 ---
 
-### [2026-07-13T08:14:12.473Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Waterview, Waterview Shad Thames
-- **Location**: Canary Wharf
-- **Property Name**: Cassilis Road, Canary Wharf
-- **ID**: 89849085
-- **Price**: £2500 PCM
-- **Size**: 62.1 sqm
-- **Listing Update**: 2026-07-08
-- **Listing Status**: Reduced on 08/07/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/89849085](https://www.rightmove.co.uk/properties/89849085)
-
----
-
 ### [2026-06-18T13:58:42.040Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Unknown
@@ -145,6 +115,21 @@
 - **Listing Status**: Added today
 - **Let Available**: 19/09/2026 (🦅 Early Bird: 68d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/90789642](https://www.rightmove.co.uk/properties/90789642)
+
+---
+
+### [2026-07-13T12:09:30.607Z] MATCH FOUND!
+- **Platform**: Johns&Co
+- **Marketed by**: JOHNS&CO
+- **Location**: Canary Wharf (E14)
+- **Property Name**: Curlew House
+- **ID**: 2668315
+- **Price**: £2254 PCM
+- **Size**: 59.27 sqm
+- **Listing Update**: 2026-07-13
+- **Listing Status**: Available
+- **Let Available**: Ask agent
+- **Link**: [https://www.johnsand.co/properties/curlew-house-2668315](https://www.johnsand.co/properties/curlew-house-2668315)
 
 ---
 
@@ -190,6 +175,21 @@
 - **Listing Status**: Added on 03/07/2026
 - **Let Available**: 05/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90471747](https://www.rightmove.co.uk/properties/90471747)
+
+---
+
+### [2026-07-13T12:09:34.602Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Life Residential, Canary Wharf Office
+- **Location**: Canary Wharf
+- **Property Name**: Tiller Road, Canary Wharf
+- **ID**: 90807477
+- **Price**: £2150 PCM
+- **Size**: 55.74 sqm
+- **Listing Update**: 2026-07-13
+- **Listing Status**: Added today
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/90807477](https://www.rightmove.co.uk/properties/90807477)
 
 ---
 
@@ -313,21 +313,6 @@
 
 ---
 
-### [2026-06-24T12:36:39.200Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Unknown
-- **Location**: Canary Wharf
-- **Property Name**: Williamsburg Plaza, Canary Wharf
-- **ID**: 90047667
-- **Price**: £2250 PCM
-- **Size**: 51 sqm
-- **Listing Update**: 2026-06-23
-- **Listing Status**: Added on 23/06/2026
-- **Let Available**: 11/09/2026 (🦅 Early Bird: 80d adv)
-- **Link**: [https://www.rightmove.co.uk/properties/90047667](https://www.rightmove.co.uk/properties/90047667)
-
----
-
 ### [2026-06-19T13:56:57.344Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Unknown
@@ -340,21 +325,6 @@
 - **Listing Status**: Added on 19/06/2026
 - **Let Available**: 10/09/2026 (🦅 Early Bird: 83d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/89915127](https://www.rightmove.co.uk/properties/89915127)
-
----
-
-### [2026-05-25T13:48:21.174Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Unknown
-- **Location**: Canary Wharf
-- **Property Name**: Ability Place, Canary Wharf, London
-- **ID**: 88898406
-- **Price**: £2450 PCM
-- **Size**: 49.8 sqm
-- **Listing Update**: 2026-06-15
-- **Listing Status**: Reduced on 15/06/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/88898406](https://www.rightmove.co.uk/properties/88898406)
 
 ---
 
@@ -418,21 +388,6 @@
 
 ---
 
-### [2026-07-05T12:02:24.853Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Unknown
-- **Location**: Canary Wharf
-- **Property Name**: Millharbour, Canary Wharf
-- **ID**: 90499383
-- **Price**: £2150 PCM
-- **Size**: 46.36 sqm
-- **Listing Update**: 2026-07-04
-- **Listing Status**: Added on 04/07/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/90499383](https://www.rightmove.co.uk/properties/90499383)
-
----
-
 ### [2026-06-20T12:17:31.434Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Unknown
@@ -450,7 +405,7 @@
 
 ### [2026-07-02T12:32:13.021Z] MATCH FOUND!
 - **Platform**: Rightmove
-- **Marketed by**: Unknown
+- **Marketed by**: Waterfronts, London
 - **Location**: Canary Wharf
 - **Property Name**: Aspen, Marsh Wall, Canary Wharf, London, E14
 - **ID**: 157618283
@@ -508,6 +463,21 @@
 
 ---
 
+### [2026-07-13T12:09:34.602Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: ARK Co-living, ARK Canary Wharf
+- **Location**: Canary Wharf
+- **Property Name**: ARK Canary Wharf, Crossharbour Plaza, London, E14 9YF
+- **ID**: 90808044
+- **Price**: £1699 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-13
+- **Listing Status**: Reduced today
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/90808044](https://www.rightmove.co.uk/properties/90808044)
+
+---
+
 ### [2026-07-13T08:32:40.393Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Regent Letting and Property Management, London
@@ -520,21 +490,6 @@
 - **Listing Status**: Reduced on 07/07/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/88433652](https://www.rightmove.co.uk/properties/88433652)
-
----
-
-### [2026-07-13T08:14:12.473Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Regent Letting and Property Management, London
-- **Location**: Canary Wharf
-- **Property Name**: Dock East Apartments, Selsdon Way, E14
-- **ID**: 90677925
-- **Price**: £2200 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-09
-- **Listing Status**: Added on 09/07/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/90677925](https://www.rightmove.co.uk/properties/90677925)
 
 ---
 
@@ -625,21 +580,6 @@
 - **Listing Status**: Reduced today
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/89831655](https://www.rightmove.co.uk/properties/89831655)
-
----
-
-### [2026-07-13T10:39:55.228Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Waterfronts, London
-- **Location**: Canary Wharf
-- **Property Name**: Amory Tower, Marsh Wall, London, E14
-- **ID**: 88695102
-- **Price**: £2450 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-13
-- **Listing Status**: Reduced today
-- **Let Available**: 31/08/2026
-- **Link**: [https://www.rightmove.co.uk/properties/88695102](https://www.rightmove.co.uk/properties/88695102)
 
 ---
 
