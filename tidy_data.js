@@ -551,10 +551,10 @@ async function main() {
     cleanSeen: false,
     migrate: false,
     verify: false,
-    targetDate: availabilityConfig.desiredDateStr || null,
-    window: availabilityConfig.windowDays !== undefined ? availabilityConfig.windowDays : 7,
+    targetDate: null,
+    window: availabilityConfig.windowDays !== undefined ? availabilityConfig.windowDays : 14,
     includeUnknownAvailability: availabilityConfig.includeUnknownAvailability,
-    filterAvailability: !!availabilityConfig.desiredDateStr,
+    filterAvailability: false,
     platform: null
   };
 

@@ -2,7 +2,7 @@
   "minPrice": 1900,
   "maxPrice": 2700,
   "minSqm": 45,
-  "desiredLetAvailableDate": "2026-09-12",
+  "desiredLetAvailableDate": null,
   "availabilityWindowDays": 14,
   "includeUnknownAvailability": true,
   "locations": [
