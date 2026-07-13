@@ -442,10 +442,13 @@ function matchesAllowedLocations(m, allowedLocations) {
   }
   const keywords = [];
   for (const loc of allowedLocations) {
-    const tokens = loc.split(/[\/\(\)]+/).map(t => t.trim().toLowerCase()).filter(Boolean);
+    const tokens = loc.split(/[\/\(\),]+/).map(t => t.trim().toLowerCase()).filter(Boolean);
     keywords.push(...tokens);
     if (loc.toLowerCase().includes('canary wharf')) keywords.push('e14', 'wood wharf');
+    if (loc.toLowerCase().includes('wood wharf')) keywords.push('e14', 'canary wharf', 'wood wharf');
     if (loc.toLowerCase().includes('south quay')) keywords.push('e14', 'marsh wall', 'millwall');
+    if (loc.toLowerCase().includes('greenwich peninsula')) keywords.push('se10', 'upper riverside', 'north greenwich');
+    if (loc.toLowerCase().includes('woolwich') || loc.toLowerCase().includes('royal arsenal')) keywords.push('se18', 'royal arsenal', 'woolwich');
     if (loc.toLowerCase().includes('paddington')) keywords.push('w2');
     if (loc.toLowerCase().includes('moorgate')) keywords.push('ec2');
     if (loc.toLowerCase().includes('bloomsbury')) keywords.push('russell square', 'wc1');

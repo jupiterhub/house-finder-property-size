@@ -27,6 +27,7 @@ class RightmoveAdapter {
 
     const LOCATION_IDENTIFIERS = {
       "canary wharf": "STATION^1724",
+      "wood wharf": "STATION^1724",
       "south quay": "STATION^8432",
       "south quay station": "STATION^8432",
       "custom house / royal victoria": "STATION^2540",
@@ -36,6 +37,7 @@ class RightmoveAdapter {
       "north greenwich": "STATION^6719",
       "woolwich": "REGION^70391",
       "woolwich (royal arsenal)": "STATION^15846",
+      "royal arsenal, woolwich": "STATION^15846",
       "royal arsenal": "STATION^15846",
       "paddington": "STATION^6965",
       "moorgate": "STATION^6332",
