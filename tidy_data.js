@@ -942,18 +942,18 @@ async function main() {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 25px;
+    margin-bottom: 12px;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 12px;
     background: var(--card-bg);
-    padding: 20px 25px;
-    border-radius: 12px;
+    padding: 12px 18px;
+    border-radius: 10px;
     border: 1px solid var(--border);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
   }
   .title-area h2 {
     margin: 0;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     font-weight: 700;
     background: linear-gradient(135deg, #60a5fa, #3b82f6);
     -webkit-background-clip: text;
@@ -961,8 +961,8 @@ async function main() {
   }
   .stats {
     color: var(--text-muted);
-    font-size: 0.9em;
-    margin-top: 5px;
+    font-size: 0.85em;
+    margin-top: 2px;
     display: flex;
     align-items: center;
     gap: 12px;
@@ -1071,13 +1071,13 @@ async function main() {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 16px;
+    gap: 12px;
     flex-wrap: wrap;
     background: rgba(255, 255, 255, 0.02);
-    padding: 12px 18px;
-    border-radius: 12px;
+    padding: 8px 14px;
+    border-radius: 8px;
     border: 1px solid var(--border);
-    margin: 15px 0;
+    margin: 6px 0;
   }
   .action-group {
     display: flex;
@@ -1135,6 +1135,18 @@ async function main() {
     border-color: #38bdf8;
     color: white;
     box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+  }
+  .filter-chip.chip-goodvalue.active {
+    background: linear-gradient(135deg, #059669, #10b981);
+    border-color: #34d399;
+    color: white;
+    box-shadow: 0 0 12px rgba(16, 185, 129, 0.4);
+  }
+  .filter-chip.chip-excludenow.active {
+    background: linear-gradient(135deg, #dc2626, #ef4444);
+    border-color: #f87171;
+    color: white;
+    box-shadow: 0 0 12px rgba(239, 68, 68, 0.4);
   }
   .badge-earlybird {
     background: linear-gradient(135deg, rgba(168, 85, 247, 0.2), rgba(236, 72, 153, 0.2));
@@ -1326,38 +1338,38 @@ async function main() {
     box-shadow: 0 0 15px rgba(52, 211, 153, 0.4);
   }
   .move-in-assistant {
-    background: linear-gradient(135deg, rgba(30, 41, 59, 0.85), rgba(15, 23, 42, 0.95));
-    border: 1px solid rgba(56, 189, 248, 0.3);
-    border-radius: 12px;
-    padding: 16px 20px;
-    margin: 15px 0;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    background: rgba(30, 41, 59, 0.6);
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    border-radius: 8px;
+    padding: 8px 14px;
+    margin: 6px 0;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
     gap: 12px;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
   }
   .move-in-assistant:hover {
-    border-color: rgba(56, 189, 248, 0.5);
-    box-shadow: 0 12px 36px rgba(56, 189, 248, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    border-color: rgba(56, 189, 248, 0.45);
   }
   .assistant-header {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
   }
   .assistant-icon {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
   .assistant-title {
-    font-size: 1.05rem;
+    font-size: 0.95rem;
     font-weight: 700;
     color: #38bdf8;
-    letter-spacing: 0.02em;
   }
   .assistant-subtitle {
-    font-size: 0.85rem;
-    color: var(--text-muted);
+    display: none;
   }
   .assistant-controls {
     display: flex;
@@ -1881,6 +1893,23 @@ function filterTable() {
       continue;
     }
 
+    if (activeQuickFilter === "GoodValue" && tr[i].getAttribute("data-deal") !== "good" && tr[i].getAttribute("data-deal") !== "bargain") {
+      tr[i].style.display = "none";
+      continue;
+    }
+
+    if (activeQuickFilter === "ExcludeNow") {
+      var availTd = tr[i].getElementsByTagName("td")[3];
+      if (availTd) {
+        var availText = availTd.textContent.toLowerCase();
+        var isNow = (availText.indexOf("now") !== -1 || availText.indexOf("immediate") !== -1 || availText.indexOf("today") !== -1);
+        if (isNow) {
+          tr[i].style.display = "none";
+          continue;
+        }
+      }
+    }
+
     if (activeQuickFilter === "Viewing" && tr[i].getAttribute("data-crm-status") !== "viewing") {
       tr[i].style.display = "none";
       continue;
@@ -2078,6 +2107,15 @@ function setQuickFilter(filterType) {
     } else if (filterType === "Bargain") {
       var bgBtn = document.getElementById("chipBargain");
       if (bgBtn) bgBtn.classList.add("active");
+    } else if (filterType === "GoodValue") {
+      var gvBtn = document.getElementById("chipGoodValue");
+      if (gvBtn) gvBtn.classList.add("active");
+    } else if (filterType === "EarlyBird") {
+      var ebBtn = document.getElementById("chipEarlyBird");
+      if (ebBtn) ebBtn.classList.add("active");
+    } else if (filterType === "ExcludeNow") {
+      var enBtn = document.getElementById("chipExcludeNow");
+      if (enBtn) enBtn.classList.add("active");
     } else if (filterType === "Viewing") {
       var vwBtn = document.getElementById("chipViewing");
       if (vwBtn) vwBtn.classList.add("active");
@@ -2515,20 +2553,13 @@ document.addEventListener("DOMContentLoaded", function() {
     <div class="quick-filters action-group">
       <span class="filter-label">Quick Filters:</span>
       <button id="chipAll" class="filter-chip active" onclick="setQuickFilter('')">All</button>
-      <button id="chipBargain" class="filter-chip chip-bargain" onclick="setQuickFilter('Bargain')">💎 Best Deals</button>
-      <button id="chipRightmove" class="filter-chip" onclick="setQuickFilter('Rightmove')">🏠 Rightmove</button>
-      <button id="chipJLL" class="filter-chip" onclick="setQuickFilter('JLL')">🏢 JLL</button>
-      <button id="chipJohns" class="filter-chip" onclick="setQuickFilter('JOHNS&CO')">🏙️ JOHNS&CO</button>
-      <button id="chipKF" class="filter-chip" onclick="setQuickFilter('Knight Frank')">🏰 Knight Frank</button>
-      <button id="chipOpenRent" class="filter-chip chip-openrent" onclick="setQuickFilter('OpenRent')">✨ OpenRent Only</button>
-      <button id="chipEarlyBird" class="filter-chip chip-earlybird" onclick="setQuickFilter('EarlyBird')">🦅 Early Bird Deals</button>
-      <button id="chipStarred" class="filter-chip chip-starred" onclick="setQuickFilter('Starred')">⭐ Starred (0)</button>
+      <button id="chipBargain" class="filter-chip chip-bargain" onclick="setQuickFilter('Bargain')">💎 Bargain</button>
+      <button id="chipGoodValue" class="filter-chip chip-goodvalue" onclick="setQuickFilter('GoodValue')">👍 Good Value</button>
+      <button id="chipEarlyBird" class="filter-chip chip-earlybird" onclick="setQuickFilter('EarlyBird')">🦅 Early Bird</button>
+      <button id="chipExcludeNow" class="filter-chip chip-excludenow" onclick="setQuickFilter('ExcludeNow')">🚫 Exclude Now</button>
       <button id="chipViewed" class="filter-chip chip-viewed" onclick="setQuickFilter('Viewed')">✓ Viewed</button>
       <button id="chipUnviewed" class="filter-chip chip-unviewed" onclick="setQuickFilter('Unviewed')">👀 Unviewed</button>
-    </div>
-    <div class="action-divider"></div>
-    <div class="quick-export action-group">
-      <button class="btn-export" onclick="copyShortlistToClipboard()" title="Copy Starred properties ready for WhatsApp or Email">📋 Copy Shortlist</button>
+      <button id="chipStarred" class="filter-chip chip-starred" onclick="setQuickFilter('Starred')">⭐ Starred (<span id="starredCount">0</span>)</button>
     </div>
     <div class="action-divider"></div>
     <div class="quick-sorts action-group">

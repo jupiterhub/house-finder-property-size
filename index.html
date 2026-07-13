@@ -30,18 +30,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 25px;
+    margin-bottom: 12px;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 12px;
     background: var(--card-bg);
-    padding: 20px 25px;
-    border-radius: 12px;
+    padding: 12px 18px;
+    border-radius: 10px;
     border: 1px solid var(--border);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
   }
   .title-area h2 {
     margin: 0;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     font-weight: 700;
     background: linear-gradient(135deg, #60a5fa, #3b82f6);
     -webkit-background-clip: text;
@@ -49,8 +49,8 @@
   }
   .stats {
     color: var(--text-muted);
-    font-size: 0.9em;
-    margin-top: 5px;
+    font-size: 0.85em;
+    margin-top: 2px;
     display: flex;
     align-items: center;
     gap: 12px;
@@ -159,13 +159,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 16px;
+    gap: 12px;
     flex-wrap: wrap;
     background: rgba(255, 255, 255, 0.02);
-    padding: 12px 18px;
-    border-radius: 12px;
+    padding: 8px 14px;
+    border-radius: 8px;
     border: 1px solid var(--border);
-    margin: 15px 0;
+    margin: 6px 0;
   }
   .action-group {
     display: flex;
@@ -223,6 +223,18 @@
     border-color: #38bdf8;
     color: white;
     box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+  }
+  .filter-chip.chip-goodvalue.active {
+    background: linear-gradient(135deg, #059669, #10b981);
+    border-color: #34d399;
+    color: white;
+    box-shadow: 0 0 12px rgba(16, 185, 129, 0.4);
+  }
+  .filter-chip.chip-excludenow.active {
+    background: linear-gradient(135deg, #dc2626, #ef4444);
+    border-color: #f87171;
+    color: white;
+    box-shadow: 0 0 12px rgba(239, 68, 68, 0.4);
   }
   .badge-earlybird {
     background: linear-gradient(135deg, rgba(168, 85, 247, 0.2), rgba(236, 72, 153, 0.2));
@@ -414,38 +426,38 @@
     box-shadow: 0 0 15px rgba(52, 211, 153, 0.4);
   }
   .move-in-assistant {
-    background: linear-gradient(135deg, rgba(30, 41, 59, 0.85), rgba(15, 23, 42, 0.95));
-    border: 1px solid rgba(56, 189, 248, 0.3);
-    border-radius: 12px;
-    padding: 16px 20px;
-    margin: 15px 0;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    background: rgba(30, 41, 59, 0.6);
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    border-radius: 8px;
+    padding: 8px 14px;
+    margin: 6px 0;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
     gap: 12px;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
   }
   .move-in-assistant:hover {
-    border-color: rgba(56, 189, 248, 0.5);
-    box-shadow: 0 12px 36px rgba(56, 189, 248, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    border-color: rgba(56, 189, 248, 0.45);
   }
   .assistant-header {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
   }
   .assistant-icon {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
   .assistant-title {
-    font-size: 1.05rem;
+    font-size: 0.95rem;
     font-weight: 700;
     color: #38bdf8;
-    letter-spacing: 0.02em;
   }
   .assistant-subtitle {
-    font-size: 0.85rem;
-    color: var(--text-muted);
+    display: none;
   }
   .assistant-controls {
     display: flex;
@@ -969,6 +981,23 @@ function filterTable() {
       continue;
     }
 
+    if (activeQuickFilter === "GoodValue" && tr[i].getAttribute("data-deal") !== "good" && tr[i].getAttribute("data-deal") !== "bargain") {
+      tr[i].style.display = "none";
+      continue;
+    }
+
+    if (activeQuickFilter === "ExcludeNow") {
+      var availTd = tr[i].getElementsByTagName("td")[3];
+      if (availTd) {
+        var availText = availTd.textContent.toLowerCase();
+        var isNow = (availText.indexOf("now") !== -1 || availText.indexOf("immediate") !== -1 || availText.indexOf("today") !== -1);
+        if (isNow) {
+          tr[i].style.display = "none";
+          continue;
+        }
+      }
+    }
+
     if (activeQuickFilter === "Viewing" && tr[i].getAttribute("data-crm-status") !== "viewing") {
       tr[i].style.display = "none";
       continue;
@@ -1166,6 +1195,15 @@ function setQuickFilter(filterType) {
     } else if (filterType === "Bargain") {
       var bgBtn = document.getElementById("chipBargain");
       if (bgBtn) bgBtn.classList.add("active");
+    } else if (filterType === "GoodValue") {
+      var gvBtn = document.getElementById("chipGoodValue");
+      if (gvBtn) gvBtn.classList.add("active");
+    } else if (filterType === "EarlyBird") {
+      var ebBtn = document.getElementById("chipEarlyBird");
+      if (ebBtn) ebBtn.classList.add("active");
+    } else if (filterType === "ExcludeNow") {
+      var enBtn = document.getElementById("chipExcludeNow");
+      if (enBtn) enBtn.classList.add("active");
     } else if (filterType === "Viewing") {
       var vwBtn = document.getElementById("chipViewing");
       if (vwBtn) vwBtn.classList.add("active");
@@ -1556,7 +1594,7 @@ document.addEventListener("DOMContentLoaded", function() {
   <div class="title-area">
     <h2>Property Matches</h2>
     <div class="stats">
-      Showing <span id="visibleCount">147</span> of 147 properties found
+      Showing <span id="visibleCount">148</span> of 148 properties found
       <button id="resetStarredBtn" onclick="resetStarred()" style="display:none;">Clear Saved (<span id="starredCount">0</span>)</button>
       <button id="resetSeenBtn" onclick="resetSeen()" style="display:none;">Reset Viewed (<span id="seenCount">0</span>)</button>
     </div>
@@ -1603,20 +1641,13 @@ document.addEventListener("DOMContentLoaded", function() {
     <div class="quick-filters action-group">
       <span class="filter-label">Quick Filters:</span>
       <button id="chipAll" class="filter-chip active" onclick="setQuickFilter('')">All</button>
-      <button id="chipBargain" class="filter-chip chip-bargain" onclick="setQuickFilter('Bargain')">💎 Best Deals</button>
-      <button id="chipRightmove" class="filter-chip" onclick="setQuickFilter('Rightmove')">🏠 Rightmove</button>
-      <button id="chipJLL" class="filter-chip" onclick="setQuickFilter('JLL')">🏢 JLL</button>
-      <button id="chipJohns" class="filter-chip" onclick="setQuickFilter('JOHNS&CO')">🏙️ JOHNS&CO</button>
-      <button id="chipKF" class="filter-chip" onclick="setQuickFilter('Knight Frank')">🏰 Knight Frank</button>
-      <button id="chipOpenRent" class="filter-chip chip-openrent" onclick="setQuickFilter('OpenRent')">✨ OpenRent Only</button>
-      <button id="chipEarlyBird" class="filter-chip chip-earlybird" onclick="setQuickFilter('EarlyBird')">🦅 Early Bird Deals</button>
-      <button id="chipStarred" class="filter-chip chip-starred" onclick="setQuickFilter('Starred')">⭐ Starred (0)</button>
+      <button id="chipBargain" class="filter-chip chip-bargain" onclick="setQuickFilter('Bargain')">💎 Bargain</button>
+      <button id="chipGoodValue" class="filter-chip chip-goodvalue" onclick="setQuickFilter('GoodValue')">👍 Good Value</button>
+      <button id="chipEarlyBird" class="filter-chip chip-earlybird" onclick="setQuickFilter('EarlyBird')">🦅 Early Bird</button>
+      <button id="chipExcludeNow" class="filter-chip chip-excludenow" onclick="setQuickFilter('ExcludeNow')">🚫 Exclude Now</button>
       <button id="chipViewed" class="filter-chip chip-viewed" onclick="setQuickFilter('Viewed')">✓ Viewed</button>
       <button id="chipUnviewed" class="filter-chip chip-unviewed" onclick="setQuickFilter('Unviewed')">👀 Unviewed</button>
-    </div>
-    <div class="action-divider"></div>
-    <div class="quick-export action-group">
-      <button class="btn-export" onclick="copyShortlistToClipboard()" title="Copy Starred properties ready for WhatsApp or Email">📋 Copy Shortlist</button>
+      <button id="chipStarred" class="filter-chip chip-starred" onclick="setQuickFilter('Starred')">⭐ Starred (<span id="starredCount">0</span>)</button>
     </div>
     <div class="action-divider"></div>
     <div class="quick-sorts action-group">
@@ -1682,7 +1713,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <td data-value="1783945925337">2026-07-13 12:32:05</td>
           <td data-value="1783728000000">2026-07-11</td>
           <td data-value="Reduced on 11/07/2026">Reduced on 11/07/2026</td>
-          <td data-value="1783949589240"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-value="1783950075923"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Madison Brook, Lewisham"><span class="agent-name">Madison Brook, Lewisham</span></td>
           <td data-value="Woolwich">Woolwich</td>
@@ -1746,7 +1777,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <td data-value="1783946387739">2026-07-13 12:39:47</td>
           <td data-value="1782950400000">2026-07-02</td>
           <td data-value="Reduced on 02/07/2026">Reduced on 02/07/2026</td>
-          <td data-value="1783949589240"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-value="1783950075923"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Regent and Wood, London"><span class="agent-name">Regent and Wood, London</span></td>
           <td data-value="Woolwich">Woolwich</td>
@@ -1794,7 +1825,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <td data-value="1783945925337">2026-07-13 12:32:05</td>
           <td data-value="1783728000000">2026-07-11</td>
           <td data-value="Reduced on 11/07/2026">Reduced on 11/07/2026</td>
-          <td data-value="1783949589240"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-value="1783950075923"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Hamptons, Blackheath"><span class="agent-name">Hamptons, Blackheath</span></td>
           <td data-value="Woolwich">Woolwich</td>
@@ -1890,7 +1921,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <td data-value="1783945925337">2026-07-13 12:32:05</td>
           <td data-value="1783728000000">2026-07-11</td>
           <td data-value="Reduced on 11/07/2026">Reduced on 11/07/2026</td>
-          <td data-value="1783949589240"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-value="1783950075923"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Hamptons, Blackheath"><span class="agent-name">Hamptons, Blackheath</span></td>
           <td data-value="Woolwich">Woolwich</td>
@@ -1922,7 +1953,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <td data-value="1783946387738">2026-07-13 12:39:47</td>
           <td data-value="1782259200000">2026-06-24</td>
           <td data-value="Added on 24/06/2026">Added on 24/06/2026</td>
-          <td data-value="1783949589240"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-value="1783950075923"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="1st Avenue, London"><span class="agent-name">1st Avenue, London</span></td>
           <td data-value="Greenwich Peninsula">Greenwich Peninsula</td>
@@ -1938,7 +1969,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <td data-value="1783946387739">2026-07-13 12:39:47</td>
           <td data-value="1782864000000">2026-07-01</td>
           <td data-value="Added on 01/07/2026">Added on 01/07/2026</td>
-          <td data-value="1783949589240"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-value="1783950075923"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Truepenny"><span class="agent-name">Truepenny</span></td>
           <td data-value="Woolwich">Woolwich</td>
@@ -2002,7 +2033,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <td data-value="1783946387738">2026-07-13 12:39:47</td>
           <td data-value="1781827200000">2026-06-19</td>
           <td data-value="Added on 19/06/2026">Added on 19/06/2026</td>
-          <td data-value="1783949589240"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-value="1783950075923"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Greenwich Peninsula, London"><span class="agent-name">Greenwich Peninsula, London</span></td>
           <td data-value="Greenwich Peninsula">Greenwich Peninsula</td>
@@ -2018,7 +2049,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <td data-value="1783945925336">2026-07-13 12:32:05</td>
           <td data-value="1783036800000">2026-07-03</td>
           <td data-value="Added on 03/07/2026">Added on 03/07/2026</td>
-          <td data-value="1783949589240"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-value="1783950075923"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="APARTMENT PROPERTY MANAGEMENT AND SALES, London"><span class="agent-name">APARTMENT PROPERTY MANAGEMENT AND SALES, London</span></td>
           <td data-value="Greenwich Peninsula">Greenwich Peninsula</td>
@@ -2034,7 +2065,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <td data-value="1783945925335">2026-07-13 12:32:05</td>
           <td data-value="1783555200000">2026-07-09</td>
           <td data-value="Added on 09/07/2026">Added on 09/07/2026</td>
-          <td data-value="1783949589240"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-value="1783950075923"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Greenwich Peninsula, London"><span class="agent-name">Greenwich Peninsula, London</span></td>
           <td data-value="Greenwich Peninsula">Greenwich Peninsula</td>
@@ -2050,7 +2081,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <td data-value="1783945925336">2026-07-13 12:32:05</td>
           <td data-value="1783382400000">2026-07-07</td>
           <td data-value="Reduced on 07/07/2026">Reduced on 07/07/2026</td>
-          <td data-value="1783949589240"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-value="1783950075923"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Hello Neighbour, London"><span class="agent-name">Hello Neighbour, London</span></td>
           <td data-value="Woolwich">Woolwich</td>
@@ -2146,7 +2177,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <td data-value="1783946387738">2026-07-13 12:39:47</td>
           <td data-value="1782950400000">2026-07-02</td>
           <td data-value="Added on 02/07/2026">Added on 02/07/2026</td>
-          <td data-value="1783949589240"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-value="1783950075923"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="changingproperty"><span class="agent-name">changingproperty</span></td>
           <td data-value="Woolwich">Woolwich</td>
@@ -2178,7 +2209,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <td data-value="1783945925337">2026-07-13 12:32:05</td>
           <td data-value="1783641600000">2026-07-10</td>
           <td data-value="Added on 10/07/2026">Added on 10/07/2026</td>
-          <td data-value="1783949589240"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-value="1783950075923"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="OpenRent, London"><span class="badge badge-openrent">✨ OpenRent, London</span></td>
           <td data-value="Woolwich">Woolwich</td>
@@ -2194,7 +2225,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <td data-value="1783945925337">2026-07-13 12:32:05</td>
           <td data-value="1783468800000">2026-07-08</td>
           <td data-value="Reduced on 08/07/2026">Reduced on 08/07/2026</td>
-          <td data-value="1783949589240"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-value="1783950075923"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="OpenRent, London"><span class="badge badge-openrent">✨ OpenRent, London</span></td>
           <td data-value="Woolwich">Woolwich</td>
@@ -2226,7 +2257,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <td data-value="1783945925335">2026-07-13 12:32:05</td>
           <td data-value="1783641600000">2026-07-10</td>
           <td data-value="Added on 10/07/2026">Added on 10/07/2026</td>
-          <td data-value="1783949589240"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-value="1783950075923"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Knight Frank - Lettings, New Homes"><span class="agent-name">Knight Frank - Lettings, New Homes</span></td>
           <td data-value="Greenwich Peninsula">Greenwich Peninsula</td>
@@ -2258,7 +2289,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <td data-value="1783945925337">2026-07-13 12:32:05</td>
           <td data-value="1783468800000">2026-07-08</td>
           <td data-value="Added on 08/07/2026">Added on 08/07/2026</td>
-          <td data-value="1783949589240"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-value="1783950075923"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="TAUK, Covering Nationwide"><span class="agent-name">TAUK, Covering Nationwide</span></td>
           <td data-value="Woolwich">Woolwich</td>
@@ -2578,7 +2609,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <td data-value="1783945925337">2026-07-13 12:32:05</td>
           <td data-value="1783555200000">2026-07-09</td>
           <td data-value="Reduced on 09/07/2026">Reduced on 09/07/2026</td>
-          <td data-value="1783949589240"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-value="1783950075923"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Hamptons, Build to Rent"><span class="agent-name">Hamptons, Build to Rent</span></td>
           <td data-value="Woolwich">Woolwich</td>
@@ -2594,7 +2625,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <td data-value="1783945925337">2026-07-13 12:32:05</td>
           <td data-value="1783728000000">2026-07-11</td>
           <td data-value="Reduced on 11/07/2026">Reduced on 11/07/2026</td>
-          <td data-value="1783949589240"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-value="1783950075923"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Hamptons, Blackheath"><span class="agent-name">Hamptons, Blackheath</span></td>
           <td data-value="Woolwich">Woolwich</td>
@@ -2724,7 +2755,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <td data-value="Added on 26/06/2026">Added on 26/06/2026</td>
           <td data-value="0"><span class="avail-text">Ask agent</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
-          <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
+          <td data-value="PropertyLoop, London"><span class="agent-name">PropertyLoop, London</span></td>
           <td data-value="Canary Wharf">Canary Wharf</td>
           <td data-value="Pan Peninsula Square, Canary Wharf, London, E14"><a href="https://www.google.com/maps/search/?api=1&query=Pan%20Peninsula%20Square%2C%20Canary%20Wharf%2C%20London%2C%20E14" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">Pan Peninsula Square, Canary Wharf, London, E14</a></td>
           <td class="numeric" data-value="2500">£2500</td>
@@ -2754,7 +2785,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <td data-value="1783945925338">2026-07-13 12:32:05</td>
           <td data-value="1783296000000">2026-07-06</td>
           <td data-value="Added on 06/07/2026">Added on 06/07/2026</td>
-          <td data-value="1783949589240"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-value="1783950075923"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Regal Hampton Properties, London"><span class="agent-name">Regal Hampton Properties, London</span></td>
           <td data-value="Woolwich">Woolwich</td>
@@ -2770,7 +2801,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <td data-value="1783945153604">2026-07-13 12:19:13</td>
           <td data-value="1782172800000">2026-06-23</td>
           <td data-value="Added on 23/06/2026">Added on 23/06/2026</td>
-          <td data-value="1783949589240"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-value="1783950075923"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Stuarts Property Services, Cheadle"><span class="agent-name">Stuarts Property Services, Cheadle</span></td>
           <td data-value="Woolwich">Woolwich</td>
@@ -2834,7 +2865,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <td data-value="1783945925336">2026-07-13 12:32:05</td>
           <td data-value="1782777600000">2026-06-30</td>
           <td data-value="Reduced on 30/06/2026">Reduced on 30/06/2026</td>
-          <td data-value="1783949589240"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-value="1783950075923"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Benham and Reeves -  Woolwich, Woolwich"><span class="agent-name">Benham and Reeves -  Woolwich, Woolwich</span></td>
           <td data-value="Greenwich Peninsula">Greenwich Peninsula</td>
@@ -2962,7 +2993,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <td data-value="1783945153602">2026-07-13 12:19:13</td>
           <td data-value="1783728000000">2026-07-11</td>
           <td data-value="Reduced on 11/07/2026">Reduced on 11/07/2026</td>
-          <td data-value="1783949589240"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-value="1783950075923"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="HYBR, Covering Manchester"><span class="agent-name">HYBR, Covering Manchester</span></td>
           <td data-value="Greenwich Peninsula">Greenwich Peninsula</td>
@@ -2978,7 +3009,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <td data-value="1783945153603">2026-07-13 12:19:13</td>
           <td data-value="1762905600000">2025-11-12</td>
           <td data-value="Added on 12/11/2025">Added on 12/11/2025</td>
-          <td data-value="1783949589240"><span class="avail-text">Now</span><span class="compat-indicator"></span><br><span class="badge badge-earlybird" title="Listed 244 days before let available date!">🦅 Early Bird (244d adv)</span></td>
+          <td data-value="1783950075923"><span class="avail-text">Now</span><span class="compat-indicator"></span><br><span class="badge badge-earlybird" title="Listed 244 days before let available date!">🦅 Early Bird (244d adv)</span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Gascoigne Halman, Heaton Moor - Lettings"><span class="agent-name">Gascoigne Halman, Heaton Moor - Lettings</span></td>
           <td data-value="Greenwich Peninsula">Greenwich Peninsula</td>
@@ -2994,7 +3025,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <td data-value="1783945153603">2026-07-13 12:19:13</td>
           <td data-value="1781136000000">2026-06-11</td>
           <td data-value="Added on 11/06/2026">Added on 11/06/2026</td>
-          <td data-value="1783949589240"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-value="1783950075923"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Gascoigne Halman, Heaton Moor - Lettings"><span class="agent-name">Gascoigne Halman, Heaton Moor - Lettings</span></td>
           <td data-value="Greenwich Peninsula">Greenwich Peninsula</td>
@@ -3026,7 +3057,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <td data-value="1783945153603">2026-07-13 12:19:13</td>
           <td data-value="1781654400000">2026-06-17</td>
           <td data-value="Reduced on 17/06/2026">Reduced on 17/06/2026</td>
-          <td data-value="1783949589240"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-value="1783950075923"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Bridgfords Lettings, Stockport"><span class="agent-name">Bridgfords Lettings, Stockport</span></td>
           <td data-value="Greenwich Peninsula">Greenwich Peninsula</td>
@@ -3042,7 +3073,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <td data-value="1783945153604">2026-07-13 12:19:13</td>
           <td data-value="1783036800000">2026-07-03</td>
           <td data-value="Reduced on 03/07/2026">Reduced on 03/07/2026</td>
-          <td data-value="1783949589240"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-value="1783950075923"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Roger Dean, Heald Green"><span class="agent-name">Roger Dean, Heald Green</span></td>
           <td data-value="Woolwich">Woolwich</td>
@@ -3058,7 +3089,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <td data-value="1783945153603">2026-07-13 12:19:13</td>
           <td data-value="1780531200000">2026-06-04</td>
           <td data-value="Added on 04/06/2026">Added on 04/06/2026</td>
-          <td data-value="1783949589240"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-value="1783950075923"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Leighton Snow, Bramhall"><span class="agent-name">Leighton Snow, Bramhall</span></td>
           <td data-value="Greenwich Peninsula">Greenwich Peninsula</td>
@@ -3074,7 +3105,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <td data-value="1783945925337">2026-07-13 12:32:05</td>
           <td data-value="1783555200000">2026-07-09</td>
           <td data-value="Added on 09/07/2026">Added on 09/07/2026</td>
-          <td data-value="1783949589240"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-value="1783950075923"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="OpenRent, London"><span class="badge badge-openrent">✨ OpenRent, London</span></td>
           <td data-value="Woolwich">Woolwich</td>
@@ -3090,7 +3121,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <td data-value="1783945153602">2026-07-13 12:19:13</td>
           <td data-value="1782950400000">2026-07-02</td>
           <td data-value="Added on 02/07/2026">Added on 02/07/2026</td>
-          <td data-value="1783949589240"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-value="1783950075923"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Abode Property Management, Greater Manchester"><span class="agent-name">Abode Property Management, Greater Manchester</span></td>
           <td data-value="Greenwich Peninsula">Greenwich Peninsula</td>
@@ -3106,7 +3137,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <td data-value="1783945925336">2026-07-13 12:32:05</td>
           <td data-value="1783382400000">2026-07-07</td>
           <td data-value="Reduced on 07/07/2026">Reduced on 07/07/2026</td>
-          <td data-value="1783949589240"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-value="1783950075923"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="1st Avenue, London"><span class="agent-name">1st Avenue, London</span></td>
           <td data-value="Greenwich Peninsula">Greenwich Peninsula</td>
@@ -3122,7 +3153,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <td data-value="1783945153603">2026-07-13 12:19:13</td>
           <td data-value="1780876800000">2026-06-08</td>
           <td data-value="Reduced on 08/06/2026">Reduced on 08/06/2026</td>
-          <td data-value="1783949589240"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-value="1783950075923"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Bridgfords Lettings, Stockport"><span class="agent-name">Bridgfords Lettings, Stockport</span></td>
           <td data-value="Greenwich Peninsula">Greenwich Peninsula</td>
@@ -3138,7 +3169,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <td data-value="1783945153603">2026-07-13 12:19:13</td>
           <td data-value="1783296000000">2026-07-06</td>
           <td data-value="Added on 06/07/2026">Added on 06/07/2026</td>
-          <td data-value="1783949589240"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-value="1783950075923"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Bridgfords Lettings, Cheadle Hulme"><span class="agent-name">Bridgfords Lettings, Cheadle Hulme</span></td>
           <td data-value="Woolwich">Woolwich</td>
@@ -3234,7 +3265,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <td data-value="1783945153603">2026-07-13 12:19:13</td>
           <td data-value="1781222400000">2026-06-12</td>
           <td data-value="Added on 12/06/2026">Added on 12/06/2026</td>
-          <td data-value="1783949589240"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-value="1783950075923"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Joules Estate Agency, Heaton Mersey"><span class="agent-name">Joules Estate Agency, Heaton Mersey</span></td>
           <td data-value="Greenwich Peninsula">Greenwich Peninsula</td>
@@ -3250,7 +3281,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <td data-value="1783945153602">2026-07-13 12:19:13</td>
           <td data-value="1783296000000">2026-07-06</td>
           <td data-value="Added on 06/07/2026">Added on 06/07/2026</td>
-          <td data-value="1783949589240"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-value="1783950075923"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Madina Property, Manchester"><span class="agent-name">Madina Property, Manchester</span></td>
           <td data-value="Greenwich Peninsula">Greenwich Peninsula</td>
@@ -3298,7 +3329,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <td data-value="1783945153604">2026-07-13 12:19:13</td>
           <td data-value="1782345600000">2026-06-25</td>
           <td data-value="Reduced on 25/06/2026">Reduced on 25/06/2026</td>
-          <td data-value="1783949589240"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-value="1783950075923"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Bridgfords Lettings, Cheadle Hulme"><span class="agent-name">Bridgfords Lettings, Cheadle Hulme</span></td>
           <td data-value="Woolwich">Woolwich</td>
@@ -3314,7 +3345,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <td data-value="1783945153602">2026-07-13 12:19:13</td>
           <td data-value="1782691200000">2026-06-29</td>
           <td data-value="Reduced on 29/06/2026">Reduced on 29/06/2026</td>
-          <td data-value="1783949589240"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-value="1783950075923"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Ian Tonge Property Services Limited, Hazel Grove"><span class="agent-name">Ian Tonge Property Services Limited, Hazel Grove</span></td>
           <td data-value="Greenwich Peninsula">Greenwich Peninsula</td>
@@ -3346,7 +3377,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <td data-value="1783945153602">2026-07-13 12:19:13</td>
           <td data-value="1783382400000">2026-07-07</td>
           <td data-value="Added on 07/07/2026">Added on 07/07/2026</td>
-          <td data-value="1783949589240"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-value="1783950075923"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Bridgfords Lettings, Stockport"><span class="agent-name">Bridgfords Lettings, Stockport</span></td>
           <td data-value="Greenwich Peninsula">Greenwich Peninsula</td>
@@ -3394,7 +3425,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <td data-value="1783945153604">2026-07-13 12:19:13</td>
           <td data-value="1783123200000">2026-07-04</td>
           <td data-value="Added on 04/07/2026">Added on 04/07/2026</td>
-          <td data-value="1783949589240"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-value="1783950075923"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Bridgfords Lettings, Cheadle Hulme"><span class="agent-name">Bridgfords Lettings, Cheadle Hulme</span></td>
           <td data-value="Woolwich">Woolwich</td>
@@ -3410,7 +3441,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <td data-value="1783945153604">2026-07-13 12:19:13</td>
           <td data-value="1781740800000">2026-06-18</td>
           <td data-value="Added on 18/06/2026">Added on 18/06/2026</td>
-          <td data-value="1783949589240"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-value="1783950075923"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Jordan Fishwick, Wilmslow"><span class="agent-name">Jordan Fishwick, Wilmslow</span></td>
           <td data-value="Woolwich">Woolwich</td>
@@ -3426,7 +3457,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <td data-value="1783945153604">2026-07-13 12:19:13</td>
           <td data-value="1771804800000">2026-02-23</td>
           <td data-value="Added on 23/02/2026">Added on 23/02/2026</td>
-          <td data-value="1783949589240"><span class="avail-text">Now</span><span class="compat-indicator"></span><br><span class="badge badge-earlybird" title="Listed 141 days before let available date!">🦅 Early Bird (141d adv)</span></td>
+          <td data-value="1783950075923"><span class="avail-text">Now</span><span class="compat-indicator"></span><br><span class="badge badge-earlybird" title="Listed 141 days before let available date!">🦅 Early Bird (141d adv)</span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Main and Main, Heald Green"><span class="agent-name">Main and Main, Heald Green</span></td>
           <td data-value="Woolwich">Woolwich</td>
@@ -3442,7 +3473,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <td data-value="1783945153604">2026-07-13 12:19:13</td>
           <td data-value="1771804800000">2026-02-23</td>
           <td data-value="Added on 23/02/2026">Added on 23/02/2026</td>
-          <td data-value="1783949589240"><span class="avail-text">Now</span><span class="compat-indicator"></span><br><span class="badge badge-earlybird" title="Listed 141 days before let available date!">🦅 Early Bird (141d adv)</span></td>
+          <td data-value="1783950075923"><span class="avail-text">Now</span><span class="compat-indicator"></span><br><span class="badge badge-earlybird" title="Listed 141 days before let available date!">🦅 Early Bird (141d adv)</span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Main and Main, Heald Green"><span class="agent-name">Main and Main, Heald Green</span></td>
           <td data-value="Woolwich">Woolwich</td>
@@ -3474,7 +3505,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <td data-value="1783945925337">2026-07-13 12:32:05</td>
           <td data-value="1783555200000">2026-07-09</td>
           <td data-value="Reduced on 09/07/2026">Reduced on 09/07/2026</td>
-          <td data-value="1783949589240"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-value="1783950075923"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Woodfell, London"><span class="agent-name">Woodfell, London</span></td>
           <td data-value="Woolwich">Woolwich</td>
@@ -3490,7 +3521,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <td data-value="1783945925337">2026-07-13 12:32:05</td>
           <td data-value="1783555200000">2026-07-09</td>
           <td data-value="Added on 09/07/2026">Added on 09/07/2026</td>
-          <td data-value="1783949589240"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-value="1783950075923"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Makeurmove"><span class="agent-name">Makeurmove</span></td>
           <td data-value="Woolwich">Woolwich</td>
@@ -3522,7 +3553,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <td data-value="1783945925338">2026-07-13 12:32:05</td>
           <td data-value="1783382400000">2026-07-07</td>
           <td data-value="Added on 07/07/2026">Added on 07/07/2026</td>
-          <td data-value="1783949589240"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-value="1783950075923"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Robinson Jackson, Plumstead"><span class="agent-name">Robinson Jackson, Plumstead</span></td>
           <td data-value="Woolwich">Woolwich</td>
@@ -3538,7 +3569,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <td data-value="1783945925337">2026-07-13 12:32:05</td>
           <td data-value="1783382400000">2026-07-07</td>
           <td data-value="Added on 07/07/2026">Added on 07/07/2026</td>
-          <td data-value="1783949589240"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-value="1783950075923"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Mann Lettings, Woolwich"><span class="agent-name">Mann Lettings, Woolwich</span></td>
           <td data-value="Woolwich">Woolwich</td>
@@ -3618,7 +3649,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <td data-value="1783949397615">2026-07-13 13:29:57</td>
           <td data-value="1782345600000">2026-06-25</td>
           <td data-value="Reduced on 25/06/2026">Reduced on 25/06/2026</td>
-          <td data-value="1783949589240"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-value="1783950075923"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Hamptons, Blackheath"><span class="agent-name">Hamptons, Blackheath</span></td>
           <td data-value="Royal Arsenal, Woolwich">Royal Arsenal, Woolwich</td>
@@ -3694,7 +3725,23 @@ document.addEventListener("DOMContentLoaded", function() {
           <td style="text-align: center;"><a href="https://www.johnsand.co/properties/vermillion-tower-2669433" target="_blank" class="view-btn" onclick="markRowSeen('2669433')" onauxclick="if (event.button === 1) markRowSeen('2669433')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('2669433', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="2709495" data-index="127" data-platform="Johns&Co" data-deal="fair" data-early-bird="false">
+<tr data-id="89174985" data-index="127" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
+          <td data-value="1783950068749">2026-07-13 13:41:08</td>
+          <td data-value="1780358400000">2026-06-02</td>
+          <td data-value="Added on 02/06/2026">Added on 02/06/2026</td>
+          <td data-value="1785369600000"><span class="avail-text">30/07/2026</span><span class="compat-indicator"></span></td>
+          <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
+          <td data-value="1st Avenue, London"><span class="agent-name">1st Avenue, London</span></td>
+          <td data-value="Greenwich Peninsula">Greenwich Peninsula</td>
+          <td data-value="Warman Walk, London, SE10"><a href="https://www.google.com/maps/search/?api=1&query=Warman%20Walk%2C%20London%2C%20SE10%2C%20Greenwich%20Peninsula" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">Warman Walk, London, SE10</a></td>
+          <td class="numeric" data-value="2050">£2050</td>
+          <td class="numeric" data-value="0">Unknown</td>
+          <td class="numeric" data-value="0">N/A</td>
+          <td style="text-align: center;"><button class="note-btn note-icon-btn" id="note-btn-89174985" onclick="openNoteModal('89174985')" title="Add / View Note">📝</button></td>
+          <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/89174985" target="_blank" class="view-btn" onclick="markRowSeen('89174985')" onauxclick="if (event.button === 1) markRowSeen('89174985')">View</a></td>
+          <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('89174985', this)" title="Save Property">☆</button></td>
+        </tr>
+<tr data-id="2709495" data-index="128" data-platform="Johns&Co" data-deal="fair" data-early-bird="false">
           <td data-value="1783944879471">2026-07-13 12:14:39</td>
           <td data-value="1783900800000">2026-07-13</td>
           <td data-value="Available">Available</td>
@@ -3710,11 +3757,11 @@ document.addEventListener("DOMContentLoaded", function() {
           <td style="text-align: center;"><a href="https://www.johnsand.co/properties/goldsmith-apartments-2709495" target="_blank" class="view-btn" onclick="markRowSeen('2709495')" onauxclick="if (event.button === 1) markRowSeen('2709495')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('2709495', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="82281140" data-index="128" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
+<tr data-id="82281140" data-index="129" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
           <td data-value="1783949397615">2026-07-13 13:29:57</td>
           <td data-value="1782432000000">2026-06-26</td>
           <td data-value="Reduced on 26/06/2026">Reduced on 26/06/2026</td>
-          <td data-value="1783949589240"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-value="1783950075923"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Royal Arsenal Residential, London"><span class="agent-name">Royal Arsenal Residential, London</span></td>
           <td data-value="Royal Arsenal, Woolwich">Royal Arsenal, Woolwich</td>
@@ -3726,11 +3773,11 @@ document.addEventListener("DOMContentLoaded", function() {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/82281140" target="_blank" class="view-btn" onclick="markRowSeen('82281140')" onauxclick="if (event.button === 1) markRowSeen('82281140')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('82281140', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="90275217" data-index="129" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
+<tr data-id="90275217" data-index="130" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
           <td data-value="1783945925336">2026-07-13 12:32:05</td>
           <td data-value="1782691200000">2026-06-29</td>
           <td data-value="Added on 29/06/2026">Added on 29/06/2026</td>
-          <td data-value="1783949589240"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-value="1783950075923"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="CHARLES WILLIAM PROPERTY INVESTMENT, London"><span class="agent-name">CHARLES WILLIAM PROPERTY INVESTMENT, London</span></td>
           <td data-value="Greenwich Peninsula">Greenwich Peninsula</td>
@@ -3742,7 +3789,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90275217" target="_blank" class="view-btn" onclick="markRowSeen('90275217')" onauxclick="if (event.button === 1) markRowSeen('90275217')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('90275217', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="90129495" data-index="130" data-platform="Rightmove" data-deal="fair" data-early-bird="true">
+<tr data-id="90129495" data-index="131" data-platform="Rightmove" data-deal="fair" data-early-bird="true">
           <td data-value="1783945925336">2026-07-13 12:32:05</td>
           <td data-value="1782345600000">2026-06-25</td>
           <td data-value="Added on 25/06/2026">Added on 25/06/2026</td>
@@ -3758,11 +3805,11 @@ document.addEventListener("DOMContentLoaded", function() {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90129495" target="_blank" class="view-btn" onclick="markRowSeen('90129495')" onauxclick="if (event.button === 1) markRowSeen('90129495')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('90129495', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="88433652" data-index="131" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
+<tr data-id="88433652" data-index="132" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
           <td data-value="1783931560393">2026-07-13 08:32:40</td>
           <td data-value="1783382400000">2026-07-07</td>
           <td data-value="Reduced on 07/07/2026">Reduced on 07/07/2026</td>
-          <td data-value="1783949589240"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-value="1783950075923"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Regent Letting and Property Management, London"><span class="agent-name">Regent Letting and Property Management, London</span></td>
           <td data-value="South Quay">South Quay</td>
@@ -3774,7 +3821,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/88433652" target="_blank" class="view-btn" onclick="markRowSeen('88433652')" onauxclick="if (event.button === 1) markRowSeen('88433652')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('88433652', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="90408405" data-index="132" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
+<tr data-id="90408405" data-index="133" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
           <td data-value="1783930452473">2026-07-13 08:14:12</td>
           <td data-value="1783641600000">2026-07-10</td>
           <td data-value="Reduced on 10/07/2026">Reduced on 10/07/2026</td>
@@ -3790,7 +3837,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90408405" target="_blank" class="view-btn" onclick="markRowSeen('90408405')" onauxclick="if (event.button === 1) markRowSeen('90408405')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('90408405', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="90755244" data-index="133" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
+<tr data-id="90755244" data-index="134" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
           <td data-value="1783930452472">2026-07-13 08:14:12</td>
           <td data-value="1783641600000">2026-07-10</td>
           <td data-value="Added on 10/07/2026">Added on 10/07/2026</td>
@@ -3806,7 +3853,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90755244" target="_blank" class="view-btn" onclick="markRowSeen('90755244')" onauxclick="if (event.button === 1) markRowSeen('90755244')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('90755244', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="2721340" data-index="134" data-platform="Johns&Co" data-deal="fair" data-early-bird="false">
+<tr data-id="2721340" data-index="135" data-platform="Johns&Co" data-deal="fair" data-early-bird="false">
           <td data-value="1783944879470">2026-07-13 12:14:39</td>
           <td data-value="1783900800000">2026-07-13</td>
           <td data-value="Available">Available</td>
@@ -3822,11 +3869,11 @@ document.addEventListener("DOMContentLoaded", function() {
           <td style="text-align: center;"><a href="https://www.johnsand.co/properties/the-sphere-2721340" target="_blank" class="view-btn" onclick="markRowSeen('2721340')" onauxclick="if (event.button === 1) markRowSeen('2721340')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('2721340', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="89072094" data-index="135" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
+<tr data-id="89072094" data-index="136" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
           <td data-value="1783945925335">2026-07-13 12:32:05</td>
           <td data-value="1783641600000">2026-07-10</td>
           <td data-value="Reduced on 10/07/2026">Reduced on 10/07/2026</td>
-          <td data-value="1783949589240"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-value="1783950075923"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Citian and Partners, London"><span class="agent-name">Citian and Partners, London</span></td>
           <td data-value="Greenwich Peninsula">Greenwich Peninsula</td>
@@ -3838,7 +3885,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/89072094" target="_blank" class="view-btn" onclick="markRowSeen('89072094')" onauxclick="if (event.button === 1) markRowSeen('89072094')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('89072094', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="90732897" data-index="136" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
+<tr data-id="90732897" data-index="137" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
           <td data-value="1783930452473">2026-07-13 08:14:12</td>
           <td data-value="1783641600000">2026-07-10</td>
           <td data-value="Added on 10/07/2026">Added on 10/07/2026</td>
@@ -3854,7 +3901,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90732897" target="_blank" class="view-btn" onclick="markRowSeen('90732897')" onauxclick="if (event.button === 1) markRowSeen('90732897')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('90732897', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="88635138" data-index="137" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
+<tr data-id="88635138" data-index="138" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
           <td data-value="1783930452472">2026-07-13 08:14:12</td>
           <td data-value="1783900800000">2026-07-13</td>
           <td data-value="Reduced today">Reduced today</td>
@@ -3870,11 +3917,11 @@ document.addEventListener("DOMContentLoaded", function() {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/88635138" target="_blank" class="view-btn" onclick="markRowSeen('88635138')" onauxclick="if (event.button === 1) markRowSeen('88635138')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('88635138', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="89479191" data-index="138" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
+<tr data-id="89479191" data-index="139" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
           <td data-value="1783946387738">2026-07-13 12:39:47</td>
           <td data-value="1782950400000">2026-07-02</td>
           <td data-value="Added on 02/07/2026">Added on 02/07/2026</td>
-          <td data-value="1783949589240"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-value="1783950075923"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Hamptons, Blackheath"><span class="agent-name">Hamptons, Blackheath</span></td>
           <td data-value="Woolwich">Woolwich</td>
@@ -3886,7 +3933,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/89479191" target="_blank" class="view-btn" onclick="markRowSeen('89479191')" onauxclick="if (event.button === 1) markRowSeen('89479191')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('89479191', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="90423855" data-index="139" data-platform="Rightmove" data-deal="fair" data-early-bird="true">
+<tr data-id="90423855" data-index="140" data-platform="Rightmove" data-deal="fair" data-early-bird="true">
           <td data-value="1783932003007">2026-07-13 08:40:03</td>
           <td data-value="1782950400000">2026-07-02</td>
           <td data-value="Added on 02/07/2026">Added on 02/07/2026</td>
@@ -3902,7 +3949,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90423855" target="_blank" class="view-btn" onclick="markRowSeen('90423855')" onauxclick="if (event.button === 1) markRowSeen('90423855')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('90423855', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="2674003" data-index="140" data-platform="Johns&Co" data-deal="fair" data-early-bird="false">
+<tr data-id="2674003" data-index="141" data-platform="Johns&Co" data-deal="fair" data-early-bird="false">
           <td data-value="1783944879471">2026-07-13 12:14:39</td>
           <td data-value="1783900800000">2026-07-13</td>
           <td data-value="Available">Available</td>
@@ -3918,11 +3965,11 @@ document.addEventListener("DOMContentLoaded", function() {
           <td style="text-align: center;"><a href="https://www.johnsand.co/properties/venice-corte-2674003" target="_blank" class="view-btn" onclick="markRowSeen('2674003')" onauxclick="if (event.button === 1) markRowSeen('2674003')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('2674003', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="89831655" data-index="141" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
+<tr data-id="89831655" data-index="142" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
           <td data-value="1783939195228">2026-07-13 10:39:55</td>
           <td data-value="1783900800000">2026-07-13</td>
           <td data-value="Reduced today">Reduced today</td>
-          <td data-value="1783949589240"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-value="1783950075923"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Waterfronts, London"><span class="agent-name">Waterfronts, London</span></td>
           <td data-value="Canary Wharf">Canary Wharf</td>
@@ -3934,11 +3981,11 @@ document.addEventListener("DOMContentLoaded", function() {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/89831655" target="_blank" class="view-btn" onclick="markRowSeen('89831655')" onauxclick="if (event.button === 1) markRowSeen('89831655')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('89831655', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="90005799" data-index="142" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
+<tr data-id="90005799" data-index="143" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
           <td data-value="1783946387738">2026-07-13 12:39:47</td>
           <td data-value="1782086400000">2026-06-22</td>
           <td data-value="Added on 22/06/2026">Added on 22/06/2026</td>
-          <td data-value="1783949589240"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-value="1783950075923"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Felicity J Lord, Greenwich Lettings"><span class="agent-name">Felicity J Lord, Greenwich Lettings</span></td>
           <td data-value="Greenwich Peninsula">Greenwich Peninsula</td>
@@ -3950,7 +3997,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90005799" target="_blank" class="view-btn" onclick="markRowSeen('90005799')" onauxclick="if (event.button === 1) markRowSeen('90005799')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('90005799', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="2656558" data-index="143" data-platform="Johns&Co" data-deal="fair" data-early-bird="false">
+<tr data-id="2656558" data-index="144" data-platform="Johns&Co" data-deal="fair" data-early-bird="false">
           <td data-value="1783944879471">2026-07-13 12:14:39</td>
           <td data-value="1783900800000">2026-07-13</td>
           <td data-value="Available">Available</td>
@@ -3966,7 +4013,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <td style="text-align: center;"><a href="https://www.johnsand.co/properties/phoenix-court-2656558" target="_blank" class="view-btn" onclick="markRowSeen('2656558')" onauxclick="if (event.button === 1) markRowSeen('2656558')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('2656558', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="90633570" data-index="144" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
+<tr data-id="90633570" data-index="145" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
           <td data-value="1783930452473">2026-07-13 08:14:12</td>
           <td data-value="1783468800000">2026-07-08</td>
           <td data-value="Added on 08/07/2026">Added on 08/07/2026</td>
@@ -3982,7 +4029,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90633570" target="_blank" class="view-btn" onclick="markRowSeen('90633570')" onauxclick="if (event.button === 1) markRowSeen('90633570')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('90633570', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="90667305" data-index="145" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
+<tr data-id="90667305" data-index="146" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
           <td data-value="1783945925335">2026-07-13 12:32:05</td>
           <td data-value="1783555200000">2026-07-09</td>
           <td data-value="Added on 09/07/2026">Added on 09/07/2026</td>
@@ -3998,7 +4045,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90667305" target="_blank" class="view-btn" onclick="markRowSeen('90667305')" onauxclick="if (event.button === 1) markRowSeen('90667305')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('90667305', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="90747393" data-index="146" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
+<tr data-id="90747393" data-index="147" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
           <td data-value="1783930452473">2026-07-13 08:14:12</td>
           <td data-value="1783641600000">2026-07-10</td>
           <td data-value="Added on 10/07/2026">Added on 10/07/2026</td>

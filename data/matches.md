@@ -990,7 +990,7 @@
 
 ### [2026-06-27T12:01:20.007Z] MATCH FOUND!
 - **Platform**: Rightmove
-- **Marketed by**: Unknown
+- **Marketed by**: PropertyLoop, London
 - **Location**: Canary Wharf
 - **Property Name**: Pan Peninsula Square, Canary Wharf, London, E14
 - **ID**: 90191994
@@ -1900,6 +1900,21 @@
 - **Listing Status**: Available
 - **Let Available**: Ask agent
 - **Link**: [https://www.johnsand.co/properties/vermillion-tower-2669433](https://www.johnsand.co/properties/vermillion-tower-2669433)
+
+---
+
+### [2026-07-13T13:41:08.749Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: 1st Avenue, London
+- **Location**: Greenwich Peninsula
+- **Property Name**: Warman Walk, London, SE10
+- **ID**: 89174985
+- **Price**: £2050 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-06-02
+- **Listing Status**: Added on 02/06/2026
+- **Let Available**: 30/07/2026
+- **Link**: [https://www.rightmove.co.uk/properties/89174985](https://www.rightmove.co.uk/properties/89174985)
 
 ---
 
