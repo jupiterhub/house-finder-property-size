@@ -437,6 +437,39 @@ async function verifyMatches(matches) {
   return results;
 }
 
+function hasElizabethLineConnection(m) {
+  const allText = `${m.location || ''} ${m.propertyName || ''} ${m.description || ''}`.toLowerCase();
+  const noLizKeywords = [
+    'south quay', 'marsh wall', 'millwall', 'crossharbour', 'peninsula court', 
+    'arena tower', 'baltimore tower', 'pan peninsula', 'wardian', 'south quay plaza', 'sqp',
+    'harbour way', 'indescon', 'lanthorn', 'glengall', 'pepper street', 'mastmaker',
+    'cubitt town', 'ovex close', 'undine road', 'island gardens', 'mudchute', 'manchester road',
+    'westferry road', 'hutchings street', 'maritime quay', 'knighthead point', 'ability place',
+    'cold harbour', 'millharbour', 'limeharbour', 'lanterns way', 'tiller road', 'manilla street',
+    'cascades tower', 'newport avenue', 'bartholomew court',
+    'blackwall', 'epstein square', 'felix point', 'aberfeldy', 'tellicherry', 'east india',
+    'limehouse', 'hallmark court', 'ursula gould', 'carmen street', 'langdon park',
+    'greenwich peninsula', 'north greenwich', 'se10', 'bessemer place', 'upper riverside', 'lower riverside',
+    'royal victoria', 'warehouse w', 'gateway tower', 'hoola', 'western gateway', 'coral apartments',
+    'aegean', 'adriatic', 'grainstore', 'silvertown', 'pontoon dock', 'royal docks west', 'royal eden',
+    'canning town', 'mercury house', 'fortunes dock', 'sovereign tower', 'baltic apartments',
+    'k warehouse', 'north lodge', 'wesley avenue', 'jane austen', 'howard house', 'henry purcell',
+    'widgeon close', 'gatcombe road', 'britannia village', 'tidal basin', 'golden plover',
+    'westgate'
+  ];
+  for (const kw of noLizKeywords) {
+    if (allText.includes(kw)) return false;
+  }
+  if (allText.includes('custom house') || allText.includes('seagull lane') || allText.includes('freemasons road') ||
+      allText.includes('canary wharf') || allText.includes('e14') ||
+      allText.includes('wood wharf') || allText.includes('park drive') || allText.includes('newfoundland') ||
+      allText.includes('landmark pinnacle') || allText.includes('cabot square') || allText.includes('west india quay') ||
+      allText.includes('woolwich') || allText.includes('royal arsenal')) {
+    return true;
+  }
+  return false;
+}
+
 function matchesAllowedLocations(m, allowedLocations) {
   if (!allowedLocations || !Array.isArray(allowedLocations) || allowedLocations.length === 0) {
     return true;
@@ -621,6 +654,12 @@ async function main() {
     const preLocCount = result.length;
     result = result.filter(m => matchesAllowedLocations(m, config.locations));
     console.log(`Filtered out locations not in config.json (${config.locations.length} active areas): ${preLocCount} -> ${result.length} matches.`);
+  }
+
+  if (config.elizabethLineOnly) {
+    const preLizCount = result.length;
+    result = result.filter(m => hasElizabethLineConnection(m));
+    console.log(`Filtered out non-Elizabeth Line properties (Direct Farringdon commute only): ${preLizCount} -> ${result.length} matches.`);
   }
 
   if (config.excludedAgents && Array.isArray(config.excludedAgents) && config.excludedAgents.length > 0) {
@@ -816,40 +855,6 @@ async function main() {
     // Generate HTML
     const htmlFile = flags.output ? flags.output.replace(/\.md$/, '.html') : HTML_FILE;
     if (htmlFile !== targetFile) {
-      // Helper: classify properties that are within genuine walking distance of an Elizabeth Line station with direct connection to Farringdon
-      function hasElizabethLineConnection(m) {
-        const allText = `${m.location || ''} ${m.propertyName || ''} ${m.description || ''}`.toLowerCase();
-        const noLizKeywords = [
-          'south quay', 'marsh wall', 'millwall', 'crossharbour', 'peninsula court', 
-          'arena tower', 'baltimore tower', 'pan peninsula', 'wardian', 'south quay plaza', 'sqp',
-          'harbour way', 'indescon', 'lanthorn', 'glengall', 'pepper street', 'mastmaker',
-          'cubitt town', 'ovex close', 'undine road', 'island gardens', 'mudchute', 'manchester road',
-          'westferry road', 'hutchings street', 'maritime quay', 'knighthead point', 'ability place',
-          'cold harbour', 'millharbour', 'limeharbour', 'lanterns way', 'tiller road', 'manilla street',
-          'cascades tower', 'newport avenue', 'bartholomew court',
-          'blackwall', 'epstein square', 'felix point', 'aberfeldy', 'tellicherry', 'east india',
-          'limehouse', 'hallmark court', 'ursula gould', 'carmen street', 'langdon park',
-          'greenwich peninsula', 'north greenwich', 'se10', 'bessemer place', 'upper riverside', 'lower riverside',
-          'royal victoria', 'warehouse w', 'gateway tower', 'hoola', 'western gateway', 'coral apartments',
-          'aegean', 'adriatic', 'grainstore', 'silvertown', 'pontoon dock', 'royal docks west', 'royal eden',
-          'canning town', 'mercury house', 'fortunes dock', 'sovereign tower', 'baltic apartments',
-          'k warehouse', 'north lodge', 'wesley avenue', 'jane austen', 'howard house', 'henry purcell',
-          'widgeon close', 'gatcombe road', 'britannia village', 'tidal basin', 'golden plover',
-          'westgate'
-        ];
-        for (const kw of noLizKeywords) {
-          if (allText.includes(kw)) return false;
-        }
-        if (allText.includes('custom house') || allText.includes('seagull lane') || allText.includes('freemasons road') ||
-            allText.includes('canary wharf') || allText.includes('e14') ||
-            allText.includes('wood wharf') || allText.includes('park drive') || allText.includes('newfoundland') ||
-            allText.includes('landmark pinnacle') || allText.includes('cabot square') || allText.includes('west india quay') ||
-            allText.includes('woolwich') || allText.includes('royal arsenal')) {
-          return true;
-        }
-        return false;
-      }
-
       // Calculate Deal Rating / Value Score Percentiles separately by Transport Tier
       const lizPpsqms = result
         .filter(m => m.price && m.size && m.size > 0 && hasElizabethLineConnection(m))

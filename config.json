@@ -5,13 +5,11 @@
   "desiredLetAvailableDate": null,
   "availabilityWindowDays": 14,
   "includeUnknownAvailability": true,
+  "elizabethLineOnly": true,
   "locations": [
     "Canary Wharf",
-    "South Quay",
-    "Crossharbour",
     "Custom House",
-    "Royal Victoria Docks",
-    "Greenwich Peninsula"
+    "Woolwich"
   ],
   "excludedAgents": [
     "Foxtons"
