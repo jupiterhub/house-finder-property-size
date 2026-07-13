@@ -23,6 +23,17 @@ class JohnsAndCoAdapter {
       `https://www.johnsand.co/rent?location=South%20Quay&minPrice=${priceMin}&maxPrice=${priceMax}&order=newest`
     ];
 
+    const locs = (config.locations || []).map(l => l.toLowerCase());
+    if (locs.some(l => l.includes('custom house') || l.includes('royal victoria') || l.includes('e16'))) {
+      searchUrls.push(`https://www.johnsand.co/rent?location=E16&minPrice=${priceMin}&maxPrice=${priceMax}&order=newest`);
+    }
+    if (locs.some(l => l.includes('greenwich') || l.includes('se10'))) {
+      searchUrls.push(`https://www.johnsand.co/rent?location=SE10&minPrice=${priceMin}&maxPrice=${priceMax}&order=newest`);
+    }
+    if (locs.some(l => l.includes('woolwich') || l.includes('se18'))) {
+      searchUrls.push(`https://www.johnsand.co/rent?location=SE18&minPrice=${priceMin}&maxPrice=${priceMax}&order=newest`);
+    }
+
     const allLinks = new Set();
     try {
       for (const url of searchUrls) {

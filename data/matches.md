@@ -73,6 +73,36 @@
 
 ---
 
+### [2026-07-13T12:14:39.471Z] MATCH FOUND!
+- **Platform**: Johns&Co
+- **Marketed by**: JOHNS&CO
+- **Location**: Canary Wharf (E14)
+- **Property Name**: Erebus Drive
+- **ID**: 2726684
+- **Price**: £2150 PCM
+- **Size**: 69.63 sqm
+- **Listing Update**: 2026-07-13
+- **Listing Status**: Available
+- **Let Available**: Ask agent
+- **Link**: [https://www.johnsand.co/properties/erebus-drive-2726684](https://www.johnsand.co/properties/erebus-drive-2726684)
+
+---
+
+### [2026-07-13T12:14:39.470Z] MATCH FOUND!
+- **Platform**: Johns&Co
+- **Marketed by**: JOHNS&CO
+- **Location**: Canary Wharf (E14)
+- **Property Name**: Waterside Heights
+- **ID**: 2661931
+- **Price**: £2297 PCM
+- **Size**: 64 sqm
+- **Listing Update**: 2026-07-13
+- **Listing Status**: Available
+- **Let Available**: Ask agent
+- **Link**: [https://www.johnsand.co/properties/waterside-heights-2661931](https://www.johnsand.co/properties/waterside-heights-2661931)
+
+---
+
 ### [2026-07-13T08:14:12.473Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Dexters, Canary Wharf
@@ -118,6 +148,21 @@
 
 ---
 
+### [2026-07-13T12:14:39.471Z] MATCH FOUND!
+- **Platform**: Johns&Co
+- **Marketed by**: JOHNS&CO
+- **Location**: Canary Wharf (E14)
+- **Property Name**: Victoria Hall
+- **ID**: 2653241
+- **Price**: £2098 PCM
+- **Size**: 61.71 sqm
+- **Listing Update**: 2026-07-13
+- **Listing Status**: Available
+- **Let Available**: Ask agent
+- **Link**: [https://www.johnsand.co/properties/victoria-hall-2653241](https://www.johnsand.co/properties/victoria-hall-2653241)
+
+---
+
 ### [2026-07-13T12:09:30.607Z] MATCH FOUND!
 - **Platform**: Johns&Co
 - **Marketed by**: JOHNS&CO
@@ -160,6 +205,36 @@
 - **Listing Status**: Added on 09/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90708627](https://www.rightmove.co.uk/properties/90708627)
+
+---
+
+### [2026-07-13T12:14:39.470Z] MATCH FOUND!
+- **Platform**: Johns&Co
+- **Marketed by**: JOHNS&CO
+- **Location**: Canary Wharf (E14)
+- **Property Name**: India House
+- **ID**: 2707853
+- **Price**: £2297 PCM
+- **Size**: 56.67 sqm
+- **Listing Update**: 2026-07-13
+- **Listing Status**: Available
+- **Let Available**: Ask agent
+- **Link**: [https://www.johnsand.co/properties/india-house-2707853](https://www.johnsand.co/properties/india-house-2707853)
+
+---
+
+### [2026-07-13T12:14:39.471Z] MATCH FOUND!
+- **Platform**: Johns&Co
+- **Marketed by**: JOHNS&CO
+- **Location**: Canary Wharf (E14)
+- **Property Name**: Kelly Avenue
+- **ID**: 2714713
+- **Price**: £2249 PCM
+- **Size**: 56.22 sqm
+- **Listing Update**: 2026-07-13
+- **Listing Status**: Available
+- **Let Available**: Ask agent
+- **Link**: [https://www.johnsand.co/properties/kelly-avenue-2714713](https://www.johnsand.co/properties/kelly-avenue-2714713)
 
 ---
 
@@ -268,6 +343,66 @@
 
 ---
 
+### [2026-07-13T12:14:39.471Z] MATCH FOUND!
+- **Platform**: Johns&Co
+- **Marketed by**: JOHNS&CO
+- **Location**: Canary Wharf (E14)
+- **Property Name**: Summerston House
+- **ID**: 2371984
+- **Price**: £2050 PCM
+- **Size**: 53.7 sqm
+- **Listing Update**: 2026-07-13
+- **Listing Status**: Available
+- **Let Available**: Ask agent
+- **Link**: [https://www.johnsand.co/properties/summerston-house-2371984](https://www.johnsand.co/properties/summerston-house-2371984)
+
+---
+
+### [2026-07-13T12:14:39.471Z] MATCH FOUND!
+- **Platform**: Johns&Co
+- **Marketed by**: JOHNS&CO
+- **Location**: Canary Wharf (E14)
+- **Property Name**: Summerston House
+- **ID**: 2372210
+- **Price**: £2150 PCM
+- **Size**: 53.7 sqm
+- **Listing Update**: 2026-07-13
+- **Listing Status**: Available
+- **Let Available**: Ask agent
+- **Link**: [https://www.johnsand.co/properties/summerston-house-2372210](https://www.johnsand.co/properties/summerston-house-2372210)
+
+---
+
+### [2026-07-13T12:14:39.471Z] MATCH FOUND!
+- **Platform**: Johns&Co
+- **Marketed by**: JOHNS&CO
+- **Location**: Canary Wharf (E14)
+- **Property Name**: Mercier Court
+- **ID**: 2425271
+- **Price**: £2050 PCM
+- **Size**: 53.14 sqm
+- **Listing Update**: 2026-07-13
+- **Listing Status**: Available
+- **Let Available**: Ask agent
+- **Link**: [https://www.johnsand.co/properties/mercier-court-2425271](https://www.johnsand.co/properties/mercier-court-2425271)
+
+---
+
+### [2026-07-13T12:14:39.470Z] MATCH FOUND!
+- **Platform**: Johns&Co
+- **Marketed by**: JOHNS&CO
+- **Location**: Canary Wharf (E14)
+- **Property Name**: Discovery Tower
+- **ID**: 2720043
+- **Price**: £2202 PCM
+- **Size**: 53.05 sqm
+- **Listing Update**: 2026-07-13
+- **Listing Status**: Available
+- **Let Available**: Ask agent
+- **Link**: [https://www.johnsand.co/properties/discovery-tower-2720043](https://www.johnsand.co/properties/discovery-tower-2720043)
+
+---
+
 ### [2026-07-04T11:57:12.810Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Unknown
@@ -310,6 +445,36 @@
 - **Listing Status**: Added on 10/07/2026
 - **Let Available**: 17/09/2026 (🦅 Early Bird: 69d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/90754224](https://www.rightmove.co.uk/properties/90754224)
+
+---
+
+### [2026-07-13T12:14:39.470Z] MATCH FOUND!
+- **Platform**: Johns&Co
+- **Marketed by**: JOHNS&CO
+- **Location**: Canary Wharf (E14)
+- **Property Name**: The Silverton
+- **ID**: 2732598
+- **Price**: £2098 PCM
+- **Size**: 51.84 sqm
+- **Listing Update**: 2026-07-13
+- **Listing Status**: Available
+- **Let Available**: Ask agent
+- **Link**: [https://www.johnsand.co/properties/the-silverton-2732598](https://www.johnsand.co/properties/the-silverton-2732598)
+
+---
+
+### [2026-07-13T12:14:39.470Z] MATCH FOUND!
+- **Platform**: Johns&Co
+- **Marketed by**: JOHNS&CO
+- **Location**: Canary Wharf (E14)
+- **Property Name**: Abram Building
+- **ID**: 2668100
+- **Price**: £2249 PCM
+- **Size**: 51.28 sqm
+- **Listing Update**: 2026-07-13
+- **Listing Status**: Available
+- **Let Available**: Ask agent
+- **Link**: [https://www.johnsand.co/properties/abram-building-2668100](https://www.johnsand.co/properties/abram-building-2668100)
 
 ---
 
@@ -370,6 +535,21 @@
 - **Listing Status**: Added on 10/06/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/89570763](https://www.rightmove.co.uk/properties/89570763)
+
+---
+
+### [2026-07-13T12:14:39.471Z] MATCH FOUND!
+- **Platform**: Johns&Co
+- **Marketed by**: JOHNS&CO
+- **Location**: Canary Wharf (E14)
+- **Property Name**: Arc House
+- **ID**: 2318731
+- **Price**: £2600 PCM
+- **Size**: 47 sqm
+- **Listing Update**: 2026-07-13
+- **Listing Status**: Available
+- **Let Available**: Ask agent
+- **Link**: [https://www.johnsand.co/properties/arc-house-2318731](https://www.johnsand.co/properties/arc-house-2318731)
 
 ---
 
@@ -478,6 +658,36 @@
 
 ---
 
+### [2026-07-13T12:14:39.470Z] MATCH FOUND!
+- **Platform**: Johns&Co
+- **Marketed by**: JOHNS&CO
+- **Location**: Canary Wharf (E14)
+- **Property Name**: Vermillion Tower
+- **ID**: 2669433
+- **Price**: £2002 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-13
+- **Listing Status**: Available
+- **Let Available**: Ask agent
+- **Link**: [https://www.johnsand.co/properties/vermillion-tower-2669433](https://www.johnsand.co/properties/vermillion-tower-2669433)
+
+---
+
+### [2026-07-13T12:14:39.471Z] MATCH FOUND!
+- **Platform**: Johns&Co
+- **Marketed by**: JOHNS&CO
+- **Location**: Canary Wharf (E14)
+- **Property Name**: Goldsmith Apartments
+- **ID**: 2709495
+- **Price**: £2050 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-13
+- **Listing Status**: Available
+- **Let Available**: Ask agent
+- **Link**: [https://www.johnsand.co/properties/goldsmith-apartments-2709495](https://www.johnsand.co/properties/goldsmith-apartments-2709495)
+
+---
+
 ### [2026-07-13T08:32:40.393Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Regent Letting and Property Management, London
@@ -520,6 +730,21 @@
 - **Listing Status**: Added on 10/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90755244](https://www.rightmove.co.uk/properties/90755244)
+
+---
+
+### [2026-07-13T12:14:39.470Z] MATCH FOUND!
+- **Platform**: Johns&Co
+- **Marketed by**: JOHNS&CO
+- **Location**: Canary Wharf (E14)
+- **Property Name**: The Sphere
+- **ID**: 2721340
+- **Price**: £2297 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-13
+- **Listing Status**: Available
+- **Let Available**: Ask agent
+- **Link**: [https://www.johnsand.co/properties/the-sphere-2721340](https://www.johnsand.co/properties/the-sphere-2721340)
 
 ---
 
@@ -568,6 +793,21 @@
 
 ---
 
+### [2026-07-13T12:14:39.471Z] MATCH FOUND!
+- **Platform**: Johns&Co
+- **Marketed by**: JOHNS&CO
+- **Location**: Canary Wharf (E14)
+- **Property Name**: Venice Corte
+- **ID**: 2674003
+- **Price**: £2397 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-13
+- **Listing Status**: Available
+- **Let Available**: Ask agent
+- **Link**: [https://www.johnsand.co/properties/venice-corte-2674003](https://www.johnsand.co/properties/venice-corte-2674003)
+
+---
+
 ### [2026-07-13T10:39:55.228Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Waterfronts, London
@@ -580,6 +820,21 @@
 - **Listing Status**: Reduced today
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/89831655](https://www.rightmove.co.uk/properties/89831655)
+
+---
+
+### [2026-07-13T12:14:39.471Z] MATCH FOUND!
+- **Platform**: Johns&Co
+- **Marketed by**: JOHNS&CO
+- **Location**: Canary Wharf (E14)
+- **Property Name**: Phoenix Court
+- **ID**: 2656558
+- **Price**: £2600 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-13
+- **Listing Status**: Available
+- **Let Available**: Ask agent
+- **Link**: [https://www.johnsand.co/properties/phoenix-court-2656558](https://www.johnsand.co/properties/phoenix-court-2656558)
 
 ---
 

@@ -6,7 +6,10 @@
   "includeUnknownAvailability": true,
   "locations": [
     "Canary Wharf",
-    "South Quay"
+    "South Quay",
+    "Custom House / Royal Victoria",
+    "Greenwich Peninsula",
+    "Woolwich"
   ],
   "excludedAgents": [
     "Foxtons"
