@@ -142,7 +142,7 @@
 - **Price**: £2300 PCM
 - **Size**: 55 sqm
 - **Listing Update**: 2026-07-11
-- **Listing Status**: Reduced yesterday
+- **Listing Status**: Reduced on 11/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90542760](https://www.rightmove.co.uk/properties/90542760)
 
