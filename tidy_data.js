@@ -6,6 +6,7 @@ const TXT_FILE = path.join(DATA_DIR, 'matches.txt');
 const MD_FILE = path.join(DATA_DIR, 'matches.md');
 const HTML_FILE = path.join(DATA_DIR, 'matches.html');
 const SEEN_FILE = path.join(DATA_DIR, 'seen_properties.json');
+const STARRED_FILE = path.join(DATA_DIR, 'starred_properties.json');
 const { isDesiredAvailability, getDesiredAvailabilityConfig } = require('./utils/availability');
 let config = {};
 try {
@@ -629,6 +630,19 @@ async function main() {
       return !config.excludedAgents.some(ex => agentStr.includes(ex.toLowerCase()));
     });
     console.log(`Filtered out excluded agents (${config.excludedAgents.join(', ')}): ${preAgentCount} -> ${result.length} matches.`);
+  }
+
+  // Auto-prune listings older than 60 days
+  const MAX_AGE_DAYS = 60;
+  const cutoffTime = Date.now() - (MAX_AGE_DAYS * 24 * 60 * 60 * 1000);
+  const preAgeCount = result.length;
+  result = result.filter(m => {
+    if (!m.timestamp) return true;
+    const ts = new Date(m.timestamp).getTime();
+    return !isNaN(ts) && ts >= cutoffTime;
+  });
+  if (preAgeCount !== result.length) {
+    console.log(`Pruned listings older than ${MAX_AGE_DAYS} days: ${preAgeCount} -> ${result.length} matches.`);
   }
 
   if (flags.maxPrice) {
