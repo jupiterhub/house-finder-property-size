@@ -768,16 +768,9 @@ async function main() {
           dealType = 'fair';
         }
 
-        const crmSelect = `<select class="crm-status-select" onchange="updateRowStatus('${m.id}', this.value)" onclick="event.stopPropagation()" title="Hunt Status">
-          <option value="exploring" title="Exploring">⚪</option>
-          <option value="contacted" title="Contacted">📞</option>
-          <option value="viewing" title="Viewing Booked">🗓️</option>
-          <option value="ruledout" title="Ruled Out">❌</option>
-        </select>`;
-
         const noteBtn = `<button class="note-btn note-icon-btn" id="note-btn-${m.id}" onclick="openNoteModal('${m.id}')" title="Add / View Note">📝</button>`;
 
-        return `<tr data-id="${m.id}" data-index="${idx}" data-platform="${platformStr}" data-deal="${dealType}" data-crm-status="exploring" data-early-bird="${isEarlyBird ? 'true' : 'false'}">
+        return `<tr data-id="${m.id}" data-index="${idx}" data-platform="${platformStr}" data-deal="${dealType}" data-early-bird="${isEarlyBird ? 'true' : 'false'}">
           <td data-value="${timestamp}">${dateStr}</td>
           <td data-value="${updateTs}">${listingUpdateStr}</td>
           <td data-value="${listingStatusStr}">${listingStatusStr}</td>
@@ -789,7 +782,6 @@ async function main() {
           <td class="numeric" data-value="${m.price || 0}">£${m.price || 0}</td>
           <td class="numeric" data-value="${m.size || 0}">${m.size || 0} sqm</td>
           <td class="numeric" data-value="${pricePerSqmValue}">£${pricePerSqm}${dealBadge}</td>
-          <td style="text-align: center;">${crmSelect}</td>
           <td style="text-align: center;">${noteBtn}</td>
           <td style="text-align: center;"><a href="${m.link}" target="_blank" class="view-btn" onclick="markRowSeen('${m.id}')" onauxclick="if (event.button === 1) markRowSeen('${m.id}')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('${m.id}', this)" title="Save Property">☆</button></td>
@@ -2390,9 +2382,6 @@ document.addEventListener("DOMContentLoaded", function() {
       <button id="chipOpenRent" class="filter-chip chip-openrent" onclick="setQuickFilter('OpenRent')">✨ OpenRent Only</button>
       <button id="chipEarlyBird" class="filter-chip chip-earlybird" onclick="setQuickFilter('EarlyBird')">🦅 Early Bird Deals</button>
       <button id="chipStarred" class="filter-chip chip-starred" onclick="setQuickFilter('Starred')">⭐ Starred (0)</button>
-      <button id="chipViewing" class="filter-chip" onclick="setQuickFilter('Viewing')">🗓️ Booked Viewings</button>
-      <button id="chipContacted" class="filter-chip" onclick="setQuickFilter('Contacted')">📞 Contacted</button>
-      <button id="chipRuledOut" class="filter-chip" onclick="setQuickFilter('RuledOut')">❌ Ruled Out</button>
       <button id="chipViewed" class="filter-chip chip-viewed" onclick="setQuickFilter('Viewed')">✓ Viewed</button>
       <button id="chipUnviewed" class="filter-chip chip-unviewed" onclick="setQuickFilter('Unviewed')">👀 Unviewed</button>
     </div>
@@ -2438,7 +2427,6 @@ document.addEventListener("DOMContentLoaded", function() {
       <th onclick="sortTable(8, event)">Price <span class="sort-indicator" id="sort-ind-8"></span><br><input type="text" class="filter-input" data-col="8" data-type="numeric" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Price (e.g. >2000)..."></th>
       <th onclick="sortTable(9, event)">Size <span class="sort-indicator" id="sort-ind-9"></span><br><input type="text" class="filter-input" data-col="9" data-type="numeric" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Size (e.g. <50)..."></th>
       <th onclick="sortTable(10, event)">£ / sqm <span class="sort-indicator" id="sort-ind-10"></span><br><input type="text" class="filter-input" data-col="10" data-type="numeric" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="£/sqm (e.g. >=40)..."></th>
-      <th style="cursor: default; text-align: center; width: 44px;" title="Hunt Status (⚪ Exploring / 📞 Contacted / 🗓️ Booked / ❌ Ruled Out)">🏷️</th>
       <th style="cursor: default; text-align: center; width: 40px;" title="Personal Notes">📝</th>
       <th style="cursor: default; text-align: center;">Link</th>
       <th style="cursor: default; text-align: center;">⭐</th>

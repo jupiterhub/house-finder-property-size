@@ -53,98 +53,102 @@ class RightmoveAdapter {
         continue;
       }
 
-      let url;
-      if (identifier.startsWith('http')) {
-        url = identifier;
-      } else {
-        const encodedId = encodeURIComponent(identifier);
-        url = `https://www.rightmove.co.uk/property-to-rent/find.html?useLocationIdentifier=true&locationIdentifier=${encodedId}&_includeLetAgreed=false&maxBedrooms=2&index=0&sortType=6&channel=RENT&transactionType=LETTING&maxPrice=${config.maxPrice}`;
-      }
-      
-      console.log(`Navigating to search URL: ${url} (${locationName})`);
-      await this.page.goto(url, { waitUntil: 'domcontentloaded' });
-      
-      await this.acceptCookies();
-      
-      // Wait for property cards
-      await this.page.waitForSelector('.propertyCard-link', { timeout: 10000 }).catch(() => {});
-      
-      // Extract links and prices
-      let listings = await this.page.$$eval('div', els => {
-          return Array.from(document.querySelectorAll('div')).map(div => {
-              const a = div.querySelector('a[href*="/properties/"]');
-              if (!a) return null;
-              const text = div.innerText;
-              const priceMatch = text.match(/£[\d,]+/);
-              if (priceMatch && a.href.includes('properties/')) {
-                  if (div.innerText.length < 2000) {
-                      const link = a.href;
-                      const idMatch = link.match(/properties\/(\d+)/);
-                      if (!idMatch) return null;
-                      
-                      const priceText = priceMatch[0].replace(/£|,/g, '').trim();
-                      const price = parseInt(priceText, 10);
-                      
-                      return { id: idMatch[1], link, price, divLength: div.innerText.length };
+      for (const pageIndex of [0, 24]) {
+        let url;
+        if (identifier.startsWith('http')) {
+          url = pageIndex === 0 ? identifier : identifier + (identifier.includes('?') ? '&' : '?') + `index=${pageIndex}`;
+        } else {
+          const encodedId = encodeURIComponent(identifier);
+          url = `https://www.rightmove.co.uk/property-to-rent/find.html?useLocationIdentifier=true&locationIdentifier=${encodedId}&_includeLetAgreed=false&maxBedrooms=2&index=${pageIndex}&sortType=6&channel=RENT&transactionType=LETTING&maxPrice=${config.maxPrice}`;
+        }
+        
+        console.log(`Navigating to search URL: ${url} (${locationName}, index=${pageIndex})`);
+        await this.page.goto(url, { waitUntil: 'domcontentloaded' });
+        await this.acceptCookies();
+        await this.page.waitForSelector('.propertyCard-link', { timeout: 10000 }).catch(() => {});
+
+        // Extract search page dates and listings from __NEXT_DATA__ if available
+        const { searchPageDates, nextListings } = await this.page.evaluate(() => {
+          const map = {};
+          const list = [];
+          try {
+            const script = document.querySelector('script#__NEXT_DATA__');
+            if (script) {
+              const data = JSON.parse(script.textContent);
+              const props = data?.props?.pageProps?.searchResults?.properties || [];
+              for (const p of props) {
+                if (p && p.id) {
+                  map[String(p.id)] = {
+                    firstVisibleDate: p.firstVisibleDate || null,
+                    listingUpdateDate: p?.listingUpdate?.listingUpdateDate || p.firstVisibleDate || null,
+                    addedOrReduced: p.addedOrReduced || null,
+                    letAvailableDate: p.letAvailableDate || null,
+                    displayAddress: p.displayAddress || null
+                  };
+                  if (p.price?.amount) {
+                    list.push({
+                      id: String(p.id),
+                      link: `https://www.rightmove.co.uk/properties/${p.id}`,
+                      price: p.price.amount
+                    });
                   }
-              }
-              return null;
-          }).filter(Boolean).sort((a,b) => a.divLength - b.divLength);
-      });
-
-      // Deduplicate by ID
-      const seenId = new Set();
-      const uniqueListings = [];
-      for (const item of listings) {
-          if (!seenId.has(item.id)) {
-              seenId.add(item.id);
-              uniqueListings.push(item);
-          }
-      }
-      listings = uniqueListings;
-
-      console.log(`Found ${listings.length} listings on this page.`);
-
-      // Extract search page dates from __NEXT_DATA__ if available
-      const searchPageDates = await this.page.evaluate(() => {
-        const map = {};
-        try {
-          const script = document.querySelector('script#__NEXT_DATA__');
-          if (script) {
-            const data = JSON.parse(script.textContent);
-            const props = data?.props?.pageProps?.searchResults?.properties || [];
-            for (const p of props) {
-              if (p && p.id) {
-                map[String(p.id)] = {
-                  firstVisibleDate: p.firstVisibleDate || null,
-                  listingUpdateDate: p?.listingUpdate?.listingUpdateDate || p.firstVisibleDate || null,
-                  addedOrReduced: p.addedOrReduced || null,
-                  letAvailableDate: p.letAvailableDate || null,
-                  displayAddress: p.displayAddress || null
-                };
+                }
               }
             }
+          } catch(e) {}
+          return { searchPageDates: map, nextListings: list };
+        }).catch(() => ({ searchPageDates: {}, nextListings: [] }));
+
+        // Extract links and prices from DOM fallback
+        let domListings = await this.page.$$eval('div', els => {
+            return Array.from(document.querySelectorAll('div')).map(div => {
+                const a = div.querySelector('a[href*="/properties/"]');
+                if (!a) return null;
+                const text = div.innerText;
+                const priceMatch = text.match(/£[\d,]+/);
+                if (priceMatch && a.href.includes('properties/')) {
+                    if (div.innerText.length < 2000) {
+                        const link = a.href;
+                        const idMatch = link.match(/properties\/(\d+)/);
+                        if (!idMatch) return null;
+                        const priceText = priceMatch[0].replace(/£|,/g, '').trim();
+                        const price = parseInt(priceText, 10);
+                        return { id: idMatch[1], link, price, divLength: div.innerText.length };
+                    }
+                }
+                return null;
+            }).filter(Boolean).sort((a,b) => a.divLength - b.divLength);
+        });
+
+        // Merge and deduplicate
+        const seenId = new Set();
+        const listings = [];
+        for (const item of [...nextListings, ...domListings]) {
+            if (!seenId.has(item.id)) {
+                seenId.add(item.id);
+                listings.push(item);
+            }
+        }
+
+        console.log(`Found ${listings.length} listings on page index=${pageIndex}.`);
+
+        for (const listing of listings) {
+          if (isSeen(listing.id, this.platformName)) {
+            console.log(`Skipping already seen property: ${listing.id}`);
+            continue;
           }
-        } catch(e) {}
-        return map;
-      }).catch(() => ({}));
 
-      for (const listing of listings) {
-        if (isSeen(listing.id, this.platformName)) {
-          console.log(`Skipping already seen property: ${listing.id}`);
-          continue;
-        }
+          if (listing.price > config.maxPrice) {
+            console.log(`Skipping property ${listing.id} (Price ${listing.price} exceeds max ${config.maxPrice})`);
+            markAsIgnored(listing.id, this.platformName, `Price £${listing.price} exceeds max £${config.maxPrice}`);
+            continue;
+          }
 
-        if (listing.price > config.maxPrice) {
-          console.log(`Skipping property ${listing.id} (Price ${listing.price} exceeds max ${config.maxPrice})`);
-          markAsIgnored(listing.id, this.platformName, `Price £${listing.price} exceeds max £${config.maxPrice}`);
-          continue;
-        }
-
-        const match = await this.processListing(listing, locationName, searchPageDates[listing.id] || {});
-        if (match) {
-          markAsSeen(listing.id, this.platformName);
-          results.push(match);
+          const match = await this.processListing(listing, locationName, searchPageDates[listing.id] || {});
+          if (match) {
+            markAsSeen(listing.id, this.platformName);
+            results.push(match);
+          }
         }
       }
     }
@@ -208,9 +212,7 @@ class RightmoveAdapter {
           const text = await extractTextFromImage(imageBuffer || targetImage);
           sqm = extractSqmFromText(text);
         } else {
-          console.log(`No floorplan image found for ${listing.id}. Discarding.`);
-          markAsIgnored(listing.id, this.platformName, "No floorplan image found");
-          return null;
+          console.log(`No floorplan image found for ${listing.id}. Continuing with size check.`);
         }
       }
 
@@ -413,26 +415,26 @@ class RightmoveAdapter {
         }
       }
 
-      if (sqm && sqm >= config.minSqm) {
-        return {
-          platform: this.platformName,
-          id: listing.id,
-          price: listing.price,
-          sqm: sqm,
-          location: locationName,
-          propertyName: propertyName,
-          agent: agentName || 'Unknown',
-          url: `https://www.rightmove.co.uk/properties/${listing.id}`,
-          listingUpdate: listingUpdate,
-          listingStatus: listingStatus,
-          letAvailableDate: letAvailableFormatted
-        };
-      } else {
-        const reason = sqm ? `Size ${sqm} sqm below min ${config.minSqm}` : "Could not determine size";
+      if (sqm && sqm < config.minSqm) {
+        const reason = `Size ${sqm} sqm below min ${config.minSqm}`;
         console.log(`Property ${listing.id} ignored: ${reason}`);
         markAsIgnored(listing.id, this.platformName, reason);
         return null;
       }
+
+      return {
+        platform: this.platformName,
+        id: listing.id,
+        price: listing.price,
+        sqm: sqm || 0,
+        location: locationName,
+        propertyName: propertyName,
+        agent: agentName || 'Unknown',
+        url: `https://www.rightmove.co.uk/properties/${listing.id}`,
+        listingUpdate: listingUpdate,
+        listingStatus: listingStatus,
+        letAvailableDate: letAvailableFormatted
+      };
 
     } catch (error) {
       console.error(`Error processing ${listing.id}:`, error.message);

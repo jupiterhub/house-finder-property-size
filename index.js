@@ -13,9 +13,10 @@ async function main() {
   // Using a persistent context is ideal for retaining cookies/sessions,
   // but for simplicity in this script we launch a normal headless instance.
   // To avoid bot detection, you might want headless: false or use a stealth plugin.
-  const isCI = !!process.env.CI;
+  const isCI = !!(process.env.CI || process.env.GITHUB_ACTIONS);
+  const useHeadless = isCI || process.env.HEADLESS !== 'false';
   const browser = await chromium.launch({ 
-    headless: isCI,
+    headless: useHeadless,
     args: [
       '--disable-blink-features=AutomationControlled',
       '--disable-features=IsolateOrigins,site-per-process'
