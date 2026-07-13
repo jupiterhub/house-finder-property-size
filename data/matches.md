@@ -73,6 +73,21 @@
 
 ---
 
+### [2026-07-13T19:40:09.467Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: David Andrew, Highbury
+- **Location**: Canary Wharf
+- **Property Name**: Hutchings Street, Hutchings Wharf, E14
+- **ID**: 89266041
+- **Price**: £2400 PCM
+- **Size**: 76 sqm
+- **Listing Update**: 2026-07-08
+- **Listing Status**: Reduced on 08/07/2026
+- **Let Available**: 04/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/89266041](https://www.rightmove.co.uk/properties/89266041)
+
+---
+
 ### [2026-07-13T16:22:49.585Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Dexters, Canary Wharf
@@ -572,8 +587,7 @@
 - **Platform**: Rightmove
 - **Marketed by**: Chestertons, Canary Wharf and Docklands
 - **Location**: Canary Wharf
-- **Property Name**: Pan Peninsula East, 
-Millwall, E14
+- **Property Name**: Pan Peninsula East,
 - **ID**: 90827625
 - **Price**: £2500 PCM
 - **Size**: 49 sqm
@@ -581,6 +595,21 @@ Millwall, E14
 - **Listing Status**: Added today
 - **Let Available**: 17/09/2026 (🦅 Early Bird: 66d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/90827625](https://www.rightmove.co.uk/properties/90827625)
+
+---
+
+### [2026-07-13T19:40:09.468Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Life Residential, Canary Wharf Office
+- **Location**: Canary Wharf
+- **Property Name**: Tiller Road, Canary Wharf
+- **ID**: 90832248
+- **Price**: £2000 PCM
+- **Size**: 46.45 sqm
+- **Listing Update**: 2026-07-13
+- **Listing Status**: Added today
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/90832248](https://www.rightmove.co.uk/properties/90832248)
 
 ---
 
