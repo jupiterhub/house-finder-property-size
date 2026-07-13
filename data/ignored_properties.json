@@ -644,6 +644,10 @@
       "reason": "Size 33 sqm below min 40",
       "timestamp": "2026-06-08T14:38:12.855Z"
     },
+    "89439492": {
+      "reason": "Size 31.9 sqm below min 45",
+      "timestamp": "2026-07-13T12:18:55.405Z"
+    },
     "89440905": {
       "reason": "Size 34 sqm below min 40",
       "timestamp": "2026-06-08T14:38:29.232Z"
@@ -884,6 +888,10 @@
       "reason": "Size 35 sqm below min 40",
       "timestamp": "2026-06-18T13:58:30.680Z"
     },
+    "89859327": {
+      "reason": "Size 28 sqm below min 45",
+      "timestamp": "2026-07-13T12:18:45.901Z"
+    },
     "89864853": {
       "reason": "Size 30 sqm below min 40",
       "timestamp": "2026-06-22T15:38:09.124Z"
@@ -1012,6 +1020,10 @@
       "reason": "Size 34 sqm below min 40",
       "timestamp": "2026-07-02T17:20:47.370Z"
     },
+    "90039384": {
+      "reason": "Size 35 sqm below min 45",
+      "timestamp": "2026-07-13T12:19:06.746Z"
+    },
     "90072882": {
       "reason": "Size 12 sqm below min 40",
       "timestamp": "2026-06-24T12:36:36.696Z"
@@ -1139,6 +1151,10 @@
     "90223239": {
       "reason": "Size 38 sqm below min 40",
       "timestamp": "2026-07-02T17:19:49.555Z"
+    },
+    "90228369": {
+      "reason": "Size 44.76 sqm below min 45",
+      "timestamp": "2026-07-13T12:18:38.796Z"
     },
     "90232680": {
       "reason": "Size 39.95 sqm below min 40",
@@ -1924,6 +1940,10 @@
       "reason": "Size 37 sqm below min 50",
       "timestamp": "2026-07-10T10:44:05.787Z"
     },
+    "90732480": {
+      "reason": "Size 24.6 sqm below min 45",
+      "timestamp": "2026-07-13T12:18:39.686Z"
+    },
     "90733632": {
       "reason": "Size 45 sqm below min 50",
       "timestamp": "2026-07-10T13:24:02.808Z"
@@ -2171,6 +2191,14 @@
     "173865764": {
       "reason": "Size 29 sqm below min 40",
       "timestamp": "2026-05-19T13:45:04.800Z"
+    },
+    "173924570": {
+      "reason": "Size 11.71 sqm below min 45",
+      "timestamp": "2026-07-13T12:18:41.428Z"
+    },
+    "173924573": {
+      "reason": "Size 3.66 sqm below min 45",
+      "timestamp": "2026-07-13T12:18:40.712Z"
     },
     "174145472": {
       "reason": "Size 31 sqm below min 40",

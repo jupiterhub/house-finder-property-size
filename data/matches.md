@@ -28,6 +28,21 @@
 
 ---
 
+### [2026-07-13T12:19:13.602Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Luxury Hub, Congleton
+- **Location**: Greenwich Peninsula
+- **Property Name**: Longshut Lane West, Stockport, Greater Manchester, SK2
+- **ID**: 90398220
+- **Price**: £1100 PCM
+- **Size**: 78.97 sqm
+- **Listing Update**: 2026-07-02
+- **Listing Status**: Added on 02/07/2026
+- **Let Available**: 01/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/90398220](https://www.rightmove.co.uk/properties/90398220)
+
+---
+
 ### [2026-06-23T13:27:08.844Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Unknown
@@ -85,6 +100,51 @@
 - **Listing Status**: Available
 - **Let Available**: Ask agent
 - **Link**: [https://www.johnsand.co/properties/erebus-drive-2726684](https://www.johnsand.co/properties/erebus-drive-2726684)
+
+---
+
+### [2026-07-13T12:19:13.604Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Keller Williams Plus, Covering Nationwide
+- **Location**: Woolwich
+- **Property Name**: Jackson Street, Cheadle, SK8
+- **ID**: 90363378
+- **Price**: £1350 PCM
+- **Size**: 69.1 sqm
+- **Listing Update**: 2026-07-01
+- **Listing Status**: Added on 01/07/2026
+- **Let Available**: 29/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/90363378](https://www.rightmove.co.uk/properties/90363378)
+
+---
+
+### [2026-07-13T12:19:13.601Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Vicary and Co, Bridport
+- **Location**: Custom House / Royal Victoria
+- **Property Name**: Foxglove Way, Bridport
+- **ID**: 90448824
+- **Price**: £1150 PCM
+- **Size**: 67 sqm
+- **Listing Update**: 2026-07-03
+- **Listing Status**: Added on 03/07/2026
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/90448824](https://www.rightmove.co.uk/properties/90448824)
+
+---
+
+### [2026-07-13T12:19:13.602Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: McCarthy and Stone, Nationwide
+- **Location**: Custom House / Royal Victoria
+- **Property Name**: Flood Lane, Bridport, Dorset, DT6 3FZ
+- **ID**: 150494177
+- **Price**: £2700 PCM
+- **Size**: 65 sqm
+- **Listing Update**: 2025-02-07
+- **Listing Status**: Reduced on 07/02/2025
+- **Let Available**: Now (🦅 Early Bird: 522d adv)
+- **Link**: [https://www.rightmove.co.uk/properties/150494177](https://www.rightmove.co.uk/properties/150494177)
 
 ---
 
@@ -523,6 +583,21 @@
 
 ---
 
+### [2026-07-13T12:19:13.604Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Stuarts Property Services, Cheadle
+- **Location**: Woolwich
+- **Property Name**: Washington Close, Cheadle Hulme
+- **ID**: 90114366
+- **Price**: £1100 PCM
+- **Size**: 48 sqm
+- **Listing Update**: 2026-06-23
+- **Listing Status**: Added on 23/06/2026
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/90114366](https://www.rightmove.co.uk/properties/90114366)
+
+---
+
 ### [2026-06-11T14:26:20.170Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Unknown
@@ -640,6 +715,516 @@
 - **Listing Status**: Added on 07/07/2026
 - **Let Available**: 24/09/2026 (🦅 Early Bird: 79d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/161697050](https://www.rightmove.co.uk/properties/161697050)
+
+---
+
+### [2026-07-13T12:19:13.602Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: HYBR, Covering Manchester
+- **Location**: Greenwich Peninsula
+- **Property Name**: Wellington Road South, Stockport, SK2
+- **ID**: 89586663
+- **Price**: £595 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-11
+- **Listing Status**: Reduced on 11/07/2026
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/89586663](https://www.rightmove.co.uk/properties/89586663)
+
+---
+
+### [2026-07-13T12:19:13.603Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Gascoigne Halman, Heaton Moor - Lettings
+- **Location**: Greenwich Peninsula
+- **Property Name**: Wellington Road South,
+- **ID**: 174868622
+- **Price**: £675 PCM
+- **Size**: Unknown
+- **Listing Update**: 2025-11-12
+- **Listing Status**: Added on 12/11/2025
+- **Let Available**: Now (🦅 Early Bird: 244d adv)
+- **Link**: [https://www.rightmove.co.uk/properties/174868622](https://www.rightmove.co.uk/properties/174868622)
+
+---
+
+### [2026-07-13T12:19:13.603Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Gascoigne Halman, Heaton Moor - Lettings
+- **Location**: Greenwich Peninsula
+- **Property Name**: Crosby Street, Cale Green, Stockport
+- **ID**: 89577516
+- **Price**: £700 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-06-11
+- **Listing Status**: Added on 11/06/2026
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/89577516](https://www.rightmove.co.uk/properties/89577516)
+
+---
+
+### [2026-07-13T12:19:13.602Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Sterling Properties, Bury
+- **Location**: Greenwich Peninsula
+- **Property Name**: Buxton Road, Stockport, Greater Manchester, SK2
+- **ID**: 136281857
+- **Price**: £750 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-06-18
+- **Listing Status**: Added on 18/06/2026
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/136281857](https://www.rightmove.co.uk/properties/136281857)
+
+---
+
+### [2026-07-13T12:19:13.603Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Bridgfords Lettings, Stockport
+- **Location**: Greenwich Peninsula
+- **Property Name**: Kennerley Road SK2
+- **ID**: 88167738
+- **Price**: £795 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-06-17
+- **Listing Status**: Reduced on 17/06/2026
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/88167738](https://www.rightmove.co.uk/properties/88167738)
+
+---
+
+### [2026-07-13T12:19:13.604Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Roger Dean, Heald Green
+- **Location**: Woolwich
+- **Property Name**: 206A Finney Lane, Cheadle, Greater Manchester, SK8
+- **ID**: 174517166
+- **Price**: £800 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-03
+- **Listing Status**: Reduced on 03/07/2026
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/174517166](https://www.rightmove.co.uk/properties/174517166)
+
+---
+
+### [2026-07-13T12:19:13.603Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Leighton Snow, Bramhall
+- **Location**: Greenwich Peninsula
+- **Property Name**: Shaw Heath, Stockport, SK2
+- **ID**: 89306088
+- **Price**: £800 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-06-04
+- **Listing Status**: Added on 04/06/2026
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/89306088](https://www.rightmove.co.uk/properties/89306088)
+
+---
+
+### [2026-07-13T12:19:13.602Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Goadsby, Weymouth
+- **Location**: Custom House / Royal Victoria
+- **Property Name**: Bridport Town
+- **ID**: 89256384
+- **Price**: £850 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-06-03
+- **Listing Status**: Added on 03/06/2026
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/89256384](https://www.rightmove.co.uk/properties/89256384)
+
+---
+
+### [2026-07-13T12:19:13.602Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Abode Property Management, Greater Manchester
+- **Location**: Greenwich Peninsula
+- **Property Name**: Buxton Road, Stockport,
+- **ID**: 90412290
+- **Price**: £850 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-02
+- **Listing Status**: Added on 02/07/2026
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/90412290](https://www.rightmove.co.uk/properties/90412290)
+
+---
+
+### [2026-07-13T12:19:13.601Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Symonds and Sampson, Bridport
+- **Location**: Custom House / Royal Victoria
+- **Property Name**: West Street, Bridport
+- **ID**: 90685080
+- **Price**: £895 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-09
+- **Listing Status**: Added on 09/07/2026
+- **Let Available**: 18/09/2026 (🦅 Early Bird: 71d adv)
+- **Link**: [https://www.rightmove.co.uk/properties/90685080](https://www.rightmove.co.uk/properties/90685080)
+
+---
+
+### [2026-07-13T12:19:13.603Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Bridgfords Lettings, Stockport
+- **Location**: Greenwich Peninsula
+- **Property Name**: Kennerley Road SK2
+- **ID**: 173968274
+- **Price**: £900 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-06-08
+- **Listing Status**: Reduced on 08/06/2026
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/173968274](https://www.rightmove.co.uk/properties/173968274)
+
+---
+
+### [2026-07-13T12:19:13.603Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Bridgfords Lettings, Cheadle Hulme
+- **Location**: Woolwich
+- **Property Name**: Fabrick, Cheadle Hulme SK8
+- **ID**: 90531813
+- **Price**: £900 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-06
+- **Listing Status**: Added on 06/07/2026
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/90531813](https://www.rightmove.co.uk/properties/90531813)
+
+---
+
+### [2026-07-13T12:19:13.602Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Spencer Harvey, Stockport
+- **Location**: Greenwich Peninsula
+- **Property Name**: Wellington Road South, Stockport
+- **ID**: 90752595
+- **Price**: £900 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-10
+- **Listing Status**: Added on 10/07/2026
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/90752595](https://www.rightmove.co.uk/properties/90752595)
+
+---
+
+### [2026-07-13T12:19:13.604Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Roger Dean, Heald Green
+- **Location**: Woolwich
+- **Property Name**: Flat, Pendlebury Road, Gatley, Cheadle, Stockport
+- **ID**: 90305670
+- **Price**: £925 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-06-30
+- **Listing Status**: Added on 30/06/2026
+- **Let Available**: 07/09/2026 (🦅 Early Bird: 69d adv)
+- **Link**: [https://www.rightmove.co.uk/properties/90305670](https://www.rightmove.co.uk/properties/90305670)
+
+---
+
+### [2026-07-13T12:19:13.602Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Vicary and Co, Bridport
+- **Location**: Custom House / Royal Victoria
+- **Property Name**: St James Park, Bridport
+- **ID**: 90057429
+- **Price**: £950 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-05-29
+- **Listing Status**: Added on 29/05/2026
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/90057429](https://www.rightmove.co.uk/properties/90057429)
+
+---
+
+### [2026-07-13T12:19:13.601Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: My Future Living, My Future Living
+- **Location**: Custom House / Royal Victoria
+- **Property Name**: Peelers Court, St Andrews Road, Bridport, DT6
+- **ID**: 90244398
+- **Price**: £950 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-06-29
+- **Listing Status**: Added on 29/06/2026
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/90244398](https://www.rightmove.co.uk/properties/90244398)
+
+---
+
+### [2026-07-13T12:19:13.603Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Citrus Commercial Circle, Manchester
+- **Location**: Greenwich Peninsula
+- **Property Name**: Kennerley Road, Stockport, Greater Manchester, SK2
+- **ID**: 88819779
+- **Price**: £995 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-06-10
+- **Listing Status**: Reduced on 10/06/2026
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/88819779](https://www.rightmove.co.uk/properties/88819779)
+
+---
+
+### [2026-07-13T12:19:13.604Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Mishkan Estates, Manchester
+- **Location**: Woolwich
+- **Property Name**: Silverdale Road, Gatley, Cheadle
+- **ID**: 88651272
+- **Price**: £1025 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-05-19
+- **Listing Status**: Added on 19/05/2026
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/88651272](https://www.rightmove.co.uk/properties/88651272)
+
+---
+
+### [2026-07-13T12:19:13.604Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Mishkan Estates, Manchester
+- **Location**: Woolwich
+- **Property Name**: Silverdale Road, Gatley, Cheadle
+- **ID**: 88904817
+- **Price**: £1095 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-05-26
+- **Listing Status**: Added on 26/05/2026
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/88904817](https://www.rightmove.co.uk/properties/88904817)
+
+---
+
+### [2026-07-13T12:19:13.603Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Joules Estate Agency, Heaton Mersey
+- **Location**: Greenwich Peninsula
+- **Property Name**: Russell Street, Stockport
+- **ID**: 89657472
+- **Price**: £1100 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-06-12
+- **Listing Status**: Added on 12/06/2026
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/89657472](https://www.rightmove.co.uk/properties/89657472)
+
+---
+
+### [2026-07-13T12:19:13.602Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Madina Property, Manchester
+- **Location**: Greenwich Peninsula
+- **Property Name**: Hampstead House, Stockport, Stockport, SK2
+- **ID**: 90527805
+- **Price**: £1150 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-06
+- **Listing Status**: Added on 06/07/2026
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/90527805](https://www.rightmove.co.uk/properties/90527805)
+
+---
+
+### [2026-07-13T12:19:13.601Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Symonds and Sampson, Bridport
+- **Location**: Custom House / Royal Victoria
+- **Property Name**: Higher Eype, Bridport
+- **ID**: 90318081
+- **Price**: £1150 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-06-30
+- **Listing Status**: Added on 30/06/2026
+- **Let Available**: 12/10/2026 (🦅 Early Bird: 104d adv)
+- **Link**: [https://www.rightmove.co.uk/properties/90318081](https://www.rightmove.co.uk/properties/90318081)
+
+---
+
+### [2026-07-13T12:19:13.603Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Openhall Estate Agents, Covering Cheshire
+- **Location**: Woolwich
+- **Property Name**: Flat, Stockport Road, Cheadle
+- **ID**: 173039207
+- **Price**: £1175 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-07
+- **Listing Status**: Reduced on 07/07/2026
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/173039207](https://www.rightmove.co.uk/properties/173039207)
+
+---
+
+### [2026-07-13T12:19:13.604Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Openhall Estate Agents, Covering Cheshire
+- **Location**: Woolwich
+- **Property Name**: Flat, 185 Stockport Road, Cheadle
+- **ID**: 88373190
+- **Price**: £1195 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-05-12
+- **Listing Status**: Added on 12/05/2026
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/88373190](https://www.rightmove.co.uk/properties/88373190)
+
+---
+
+### [2026-07-13T12:19:13.604Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Bridgfords Lettings, Cheadle Hulme
+- **Location**: Woolwich
+- **Property Name**: Wilmslow Road, SK8
+- **ID**: 173194430
+- **Price**: £1200 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-06-25
+- **Listing Status**: Reduced on 25/06/2026
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/173194430](https://www.rightmove.co.uk/properties/173194430)
+
+---
+
+### [2026-07-13T12:19:13.602Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Ian Tonge Property Services Limited, Hazel Grove
+- **Location**: Greenwich Peninsula
+- **Property Name**: Cherry Tree Lane, Great Moor, Stockport, SK2
+- **ID**: 88542177
+- **Price**: £1200 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-06-29
+- **Listing Status**: Reduced on 29/06/2026
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/88542177](https://www.rightmove.co.uk/properties/88542177)
+
+---
+
+### [2026-07-13T12:19:13.604Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Openhall Estate Agents, Covering Cheshire
+- **Location**: Woolwich
+- **Property Name**: Flat, Stockport Road, Cheadle
+- **ID**: 172526075
+- **Price**: £1225 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-04-28
+- **Listing Status**: Reduced on 28/04/2026
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/172526075](https://www.rightmove.co.uk/properties/172526075)
+
+---
+
+### [2026-07-13T12:19:13.602Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Bridgfords Lettings, Stockport
+- **Location**: Greenwich Peninsula
+- **Property Name**: Meadow Street SK2
+- **ID**: 90563637
+- **Price**: £1250 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-07
+- **Listing Status**: Added on 07/07/2026
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/90563637](https://www.rightmove.co.uk/properties/90563637)
+
+---
+
+### [2026-07-13T12:19:13.604Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Main and Main, Heald Green
+- **Location**: Woolwich
+- **Property Name**: Formby Drive, Heald Green
+- **ID**: 90685503
+- **Price**: £1300 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-01
+- **Listing Status**: Added on 01/07/2026
+- **Let Available**: 31/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/90685503](https://www.rightmove.co.uk/properties/90685503)
+
+---
+
+### [2026-07-13T12:19:13.603Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Andrew J Dawson, Cheadle
+- **Location**: Woolwich
+- **Property Name**: Ernest Street, Cheadle, SK8 1PN
+- **ID**: 90527748
+- **Price**: £1300 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-06
+- **Listing Status**: Added on 06/07/2026
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/90527748](https://www.rightmove.co.uk/properties/90527748)
+
+---
+
+### [2026-07-13T12:19:13.604Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Bridgfords Lettings, Cheadle Hulme
+- **Location**: Woolwich
+- **Property Name**: Alderley Lodge; Cheadle Hulme; SK8
+- **ID**: 90570120
+- **Price**: £1400 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-04
+- **Listing Status**: Added on 04/07/2026
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/90570120](https://www.rightmove.co.uk/properties/90570120)
+
+---
+
+### [2026-07-13T12:19:13.604Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Jordan Fishwick, Wilmslow
+- **Location**: Woolwich
+- **Property Name**: Griffin Farm Drive, Heald Green, Cheadle
+- **ID**: 89858289
+- **Price**: £1500 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-06-18
+- **Listing Status**: Added on 18/06/2026
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/89858289](https://www.rightmove.co.uk/properties/89858289)
+
+---
+
+### [2026-07-13T12:19:13.604Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Main and Main, Heald Green
+- **Location**: Woolwich
+- **Property Name**: Gladville Drive, Cheadle
+- **ID**: 90177831
+- **Price**: £1550 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-02-23
+- **Listing Status**: Added on 23/02/2026
+- **Let Available**: Now (🦅 Early Bird: 141d adv)
+- **Link**: [https://www.rightmove.co.uk/properties/90177831](https://www.rightmove.co.uk/properties/90177831)
+
+---
+
+### [2026-07-13T12:19:13.604Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Main and Main, Heald Green
+- **Location**: Woolwich
+- **Property Name**: Gladville Drive, Cheadle
+- **ID**: 90176493
+- **Price**: £1600 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-02-23
+- **Listing Status**: Added on 23/02/2026
+- **Let Available**: Now (🦅 Early Bird: 141d adv)
+- **Link**: [https://www.rightmove.co.uk/properties/90176493](https://www.rightmove.co.uk/properties/90176493)
 
 ---
 
