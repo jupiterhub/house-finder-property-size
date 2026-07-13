@@ -5,11 +5,11 @@
   "desiredLetAvailableDate": null,
   "availabilityWindowDays": 14,
   "includeUnknownAvailability": true,
-  "elizabethLineOnly": true,
+  "elizabethLineOnly": false,
   "locations": [
     "Canary Wharf",
-    "Custom House",
-    "Woolwich"
+    "South Quay",
+    "Custom House"
   ],
   "excludedAgents": [
     "Foxtons"

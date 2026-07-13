@@ -13,6 +13,156 @@
 
 ---
 
+### [2026-07-13T15:58:01.615Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Madison Brook, Docklands
+- **Location**: Custom House
+- **Property Name**: Warehouse W, Royal Victoria Dock, E16
+- **ID**: 90118005
+- **Price**: £2500 PCM
+- **Size**: 103 sqm
+- **Listing Update**: 2026-07-13
+- **Listing Status**: Reduced today
+- **Let Available**: 05/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/90118005](https://www.rightmove.co.uk/properties/90118005)
+
+---
+
+### [2026-07-13T15:58:01.614Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: W J Meade, Mile End and Bow
+- **Location**: South Quay
+- **Property Name**: Peninsula Court, Canary Wharf, E14
+- **ID**: 90412020
+- **Price**: £2500 PCM
+- **Size**: 88 sqm
+- **Listing Update**: 2026-07-11
+- **Listing Status**: Reduced on 11/07/2026
+- **Let Available**: 06/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/90412020](https://www.rightmove.co.uk/properties/90412020)
+
+---
+
+### [2026-07-13T15:58:01.616Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Complete Prime Residential Ltd, London
+- **Location**: Custom House
+- **Property Name**: Gateway Tower, Western Gateway, London, E16
+- **ID**: 90307392
+- **Price**: £2450 PCM
+- **Size**: 86 sqm
+- **Listing Update**: 2026-06-30
+- **Listing Status**: Added on 30/06/2026
+- **Let Available**: 21/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/90307392](https://www.rightmove.co.uk/properties/90307392)
+
+---
+
+### [2026-07-13T15:58:30.927Z] MATCH FOUND!
+- **Platform**: KnightFrank
+- **Marketed by**: Knight Frank
+- **Location**: Canary Wharf (E14)
+- **Property Name**: Undine Road, London, E14.
+- **ID**: CWQ012513513
+- **Price**: £2362 PCM
+- **Size**: 77.67 sqm
+- **Listing Update**: 2026-07-13
+- **Listing Status**: Available
+- **Let Available**: Ask agent
+- **Link**: [https://www.knightfrank.co.uk/properties/residential/to-let/undine-road-london-e14/cwq012513513](https://www.knightfrank.co.uk/properties/residential/to-let/undine-road-london-e14/cwq012513513)
+
+---
+
+### [2026-07-13T15:58:01.614Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: David Andrew, Highbury
+- **Location**: Canary Wharf
+- **Property Name**: Hutchings Street, Hutchings Wharf, E14
+- **ID**: 89266041
+- **Price**: £2400 PCM
+- **Size**: 76 sqm
+- **Listing Update**: 2026-07-08
+- **Listing Status**: Reduced on 08/07/2026
+- **Let Available**: 04/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/89266041](https://www.rightmove.co.uk/properties/89266041)
+
+---
+
+### [2026-07-13T15:58:01.614Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Dexters, Canary Wharf
+- **Location**: Canary Wharf
+- **Property Name**: Knighthead Point, Canary Wharf
+- **ID**: 90735000
+- **Price**: £1900 PCM
+- **Size**: 75.4 sqm
+- **Listing Update**: 2026-07-10
+- **Listing Status**: Added on 10/07/2026
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/90735000](https://www.rightmove.co.uk/properties/90735000)
+
+---
+
+### [2026-07-13T15:58:30.926Z] MATCH FOUND!
+- **Platform**: KnightFrank
+- **Marketed by**: Knight Frank
+- **Location**: Canary Wharf (E14)
+- **Property Name**: Lotus House, Ovex Close, London, E14
+- **ID**: CWQ012656973LG
+- **Price**: £2600 PCM
+- **Size**: 75.16 sqm
+- **Listing Update**: 2026-07-13
+- **Listing Status**: Available
+- **Let Available**: Ask agent
+- **Link**: [https://www.knightfrank.co.uk/properties/residential/to-let/lotus-house-ovex-close-london-e14/cwq012656973lg](https://www.knightfrank.co.uk/properties/residential/to-let/lotus-house-ovex-close-london-e14/cwq012656973lg)
+
+---
+
+### [2026-07-13T15:58:01.616Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: OpenRent, London
+- **Location**: Custom House
+- **Property Name**: Westgate, London, E16
+- **ID**: 90236922
+- **Price**: £2200 PCM
+- **Size**: 75.1 sqm
+- **Listing Update**: 2026-06-28
+- **Listing Status**: Added on 28/06/2026
+- **Let Available**: 03/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/90236922](https://www.rightmove.co.uk/properties/90236922)
+
+---
+
+### [2026-07-13T15:58:30.926Z] MATCH FOUND!
+- **Platform**: KnightFrank
+- **Marketed by**: Knight Frank
+- **Location**: Canary Wharf (E14)
+- **Property Name**: Maritime Quay, London, E14
+- **ID**: CWQ012602012LG
+- **Price**: £2275 PCM
+- **Size**: 73.48 sqm
+- **Listing Update**: 2026-07-13
+- **Listing Status**: Available
+- **Let Available**: Ask agent
+- **Link**: [https://www.knightfrank.co.uk/properties/residential/to-let/maritime-quay-london-e14/cwq012602012lg](https://www.knightfrank.co.uk/properties/residential/to-let/maritime-quay-london-e14/cwq012602012lg)
+
+---
+
+### [2026-07-13T15:58:30.926Z] MATCH FOUND!
+- **Platform**: KnightFrank
+- **Marketed by**: Knight Frank
+- **Location**: Canary Wharf (E14)
+- **Property Name**: Bartholomew Court, 10 Newport Avenue, London E14
+- **ID**: CWQ012613787LG
+- **Price**: £2600 PCM
+- **Size**: 73.07 sqm
+- **Listing Update**: 2026-07-13
+- **Listing Status**: Available
+- **Let Available**: Ask agent
+- **Link**: [https://www.knightfrank.co.uk/properties/residential/to-let/bartholomew-court-10-newport-avenue-london-e14/cwq012613787lg](https://www.knightfrank.co.uk/properties/residential/to-let/bartholomew-court-10-newport-avenue-london-e14/cwq012613787lg)
+
+---
+
 ### [2026-07-13T15:58:30.926Z] MATCH FOUND!
 - **Platform**: KnightFrank
 - **Marketed by**: Knight Frank
@@ -25,6 +175,36 @@
 - **Listing Status**: Available
 - **Let Available**: Ask agent
 - **Link**: [https://www.knightfrank.co.uk/properties/residential/to-let/port-east-apartments-hertsmere-road-london-e14/cwq012601572lg](https://www.knightfrank.co.uk/properties/residential/to-let/port-east-apartments-hertsmere-road-london-e14/cwq012601572lg)
+
+---
+
+### [2026-07-13T15:57:30.548Z] MATCH FOUND!
+- **Platform**: JLL
+- **Marketed by**: JLL
+- **Location**: Canary Wharf (E14)
+- **Property Name**: Felix Point, Epstein Square, E14
+- **ID**: P169165
+- **Price**: £2513 PCM
+- **Size**: 73 sqm
+- **Listing Update**: 2026-07-13
+- **Listing Status**: Available
+- **Let Available**: Ask agent
+- **Link**: [https://residential.jll.co.uk/rent-flat/london-e14-6fx-p169165](https://residential.jll.co.uk/rent-flat/london-e14-6fx-p169165)
+
+---
+
+### [2026-07-13T15:58:01.614Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Keatons, Bow
+- **Location**: Canary Wharf
+- **Property Name**: Cascades Tower, 4 Westferry Road, Canary Wharf, London, E14
+- **ID**: 90707175
+- **Price**: £2650 PCM
+- **Size**: 73 sqm
+- **Listing Update**: 2026-07-09
+- **Listing Status**: Added on 09/07/2026
+- **Let Available**: 14/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/90707175](https://www.rightmove.co.uk/properties/90707175)
 
 ---
 
@@ -43,6 +223,66 @@
 
 ---
 
+### [2026-07-13T15:58:30.927Z] MATCH FOUND!
+- **Platform**: KnightFrank
+- **Marketed by**: Knight Frank
+- **Location**: Canary Wharf (E14)
+- **Property Name**: Hallmark Court, Ursula Gould Way, Limehouse Cut, London, E14
+- **ID**: CWQ012620877LG
+- **Price**: £2275 PCM
+- **Size**: 72.06 sqm
+- **Listing Update**: 2026-07-13
+- **Listing Status**: Available
+- **Let Available**: Ask agent
+- **Link**: [https://www.knightfrank.co.uk/properties/residential/to-let/hallmark-court-ursula-gould-way-limehouse-cut-london-e14/cwq012620877lg](https://www.knightfrank.co.uk/properties/residential/to-let/hallmark-court-ursula-gould-way-limehouse-cut-london-e14/cwq012620877lg)
+
+---
+
+### [2026-07-13T15:58:30.926Z] MATCH FOUND!
+- **Platform**: KnightFrank
+- **Marketed by**: Knight Frank
+- **Location**: Canary Wharf (E14)
+- **Property Name**: City Tower, Limeharbour, Nr Canary Wharf, London, E14
+- **ID**: CWQ012608835LG
+- **Price**: £2496 PCM
+- **Size**: 71.16 sqm
+- **Listing Update**: 2026-07-13
+- **Listing Status**: Available
+- **Let Available**: Ask agent
+- **Link**: [https://www.knightfrank.co.uk/properties/residential/to-let/city-tower-limeharbour-nr-canary-wharf-london-e14/cwq012608835lg](https://www.knightfrank.co.uk/properties/residential/to-let/city-tower-limeharbour-nr-canary-wharf-london-e14/cwq012608835lg)
+
+---
+
+### [2026-07-13T15:58:01.616Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: OpenRent, London
+- **Location**: Custom House
+- **Property Name**: Baltic Apartments, London, E16
+- **ID**: 90108975
+- **Price**: £2350 PCM
+- **Size**: 68.5 sqm
+- **Listing Update**: 2026-06-24
+- **Listing Status**: Added on 24/06/2026
+- **Let Available**: 01/09/2026 (🦅 Early Bird: 69d adv)
+- **Link**: [https://www.rightmove.co.uk/properties/90108975](https://www.rightmove.co.uk/properties/90108975)
+
+---
+
+### [2026-07-13T15:58:01.615Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: OpenRent, London
+- **Location**: Custom House
+- **Property Name**: K Warehouse, London, E16
+- **ID**: 90783483
+- **Price**: £1900 PCM
+- **Size**: 67.2 sqm
+- **Listing Update**: 2026-07-11
+- **Listing Status**: Added on 11/07/2026
+- **Let Available**: 14/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/90783483](https://www.rightmove.co.uk/properties/90783483)
+
+---
+
 ### [2026-07-13T15:58:30.926Z] MATCH FOUND!
 - **Platform**: KnightFrank
 - **Marketed by**: Knight Frank
@@ -55,6 +295,21 @@
 - **Listing Status**: Available
 - **Let Available**: Ask agent
 - **Link**: [https://www.knightfrank.co.uk/properties/residential/to-let/port-east-apartments-hertsmere-road-nr-canary-wharf-london-e14/cwq012628380lg](https://www.knightfrank.co.uk/properties/residential/to-let/port-east-apartments-hertsmere-road-nr-canary-wharf-london-e14/cwq012628380lg)
+
+---
+
+### [2026-07-13T15:58:30.927Z] MATCH FOUND!
+- **Platform**: KnightFrank
+- **Marketed by**: Knight Frank
+- **Location**: Canary Wharf (E14)
+- **Property Name**: Seacon Tower, Hutchings Street, Nr Canary Wharf, London, E14
+- **ID**: CWQ012628373LG
+- **Price**: £2600 PCM
+- **Size**: 65.96 sqm
+- **Listing Update**: 2026-07-13
+- **Listing Status**: Available
+- **Let Available**: Ask agent
+- **Link**: [https://www.knightfrank.co.uk/properties/residential/to-let/seacon-tower-hutchings-street-nr-canary-wharf-london-e14/cwq012628373lg](https://www.knightfrank.co.uk/properties/residential/to-let/seacon-tower-hutchings-street-nr-canary-wharf-london-e14/cwq012628373lg)
 
 ---
 
@@ -88,6 +343,36 @@
 
 ---
 
+### [2026-07-13T15:58:01.613Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Campbell Residential, Docklands
+- **Location**: Canary Wharf
+- **Property Name**: Ability Place 37 Millharbour E14 9DF
+- **ID**: 90820317
+- **Price**: £2300 PCM
+- **Size**: 64 sqm
+- **Listing Update**: 2026-07-13
+- **Listing Status**: Added today
+- **Let Available**: 01/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/90820317](https://www.rightmove.co.uk/properties/90820317)
+
+---
+
+### [2026-07-13T15:58:01.619Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Dexters, Canary Wharf
+- **Location**: Greenwich Peninsula
+- **Property Name**: Cold Harbour, Canary Wharf
+- **ID**: 89187000
+- **Price**: £1950 PCM
+- **Size**: 62.4 sqm
+- **Listing Update**: 2026-06-18
+- **Listing Status**: Reduced on 18/06/2026
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/89187000](https://www.rightmove.co.uk/properties/89187000)
+
+---
+
 ### [2026-07-13T15:57:48.285Z] MATCH FOUND!
 - **Platform**: Johns&Co
 - **Marketed by**: JOHNS&CO
@@ -103,6 +388,51 @@
 
 ---
 
+### [2026-07-13T15:58:01.614Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Dexters, Canary Wharf
+- **Location**: Canary Wharf
+- **Property Name**: Carmen Street, Canary Wharf
+- **ID**: 90732897
+- **Price**: £2300 PCM
+- **Size**: 61.6 sqm
+- **Listing Update**: 2026-07-10
+- **Listing Status**: Added on 10/07/2026
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/90732897](https://www.rightmove.co.uk/properties/90732897)
+
+---
+
+### [2026-07-13T15:58:01.615Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Keatons, Stratford
+- **Location**: Custom House
+- **Property Name**: North  Lodge, 17 Wesley Avenue, London, E16
+- **ID**: 90759954
+- **Price**: £1950 PCM
+- **Size**: 61.5 sqm
+- **Listing Update**: 2026-07-10
+- **Listing Status**: Added on 10/07/2026
+- **Let Available**: 27/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/90759954](https://www.rightmove.co.uk/properties/90759954)
+
+---
+
+### [2026-07-13T15:58:01.615Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: NEXIS Property, London
+- **Location**: Custom House
+- **Property Name**: Galleria House, 12b Western Gateway, London, E16
+- **ID**: 90651105
+- **Price**: £2650 PCM
+- **Size**: 61 sqm
+- **Listing Update**: 2026-07-08
+- **Listing Status**: Added on 08/07/2026
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/90651105](https://www.rightmove.co.uk/properties/90651105)
+
+---
+
 ### [2026-07-13T15:58:30.927Z] MATCH FOUND!
 - **Platform**: KnightFrank
 - **Marketed by**: Knight Frank
@@ -115,6 +445,21 @@
 - **Listing Status**: Available
 - **Let Available**: Ask agent
 - **Link**: [https://www.knightfrank.co.uk/properties/residential/to-let/wharfside-point-south-prestons-road-london-e14/cwq012510790](https://www.knightfrank.co.uk/properties/residential/to-let/wharfside-point-south-prestons-road-london-e14/cwq012510790)
+
+---
+
+### [2026-07-13T15:58:01.616Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Complete Prime Residential Ltd, London
+- **Location**: Custom House
+- **Property Name**: Gateway Tower, Western Gateway, Royal Victoria, E16
+- **ID**: 90414087
+- **Price**: £2150 PCM
+- **Size**: 60 sqm
+- **Listing Update**: 2026-07-02
+- **Listing Status**: Added on 02/07/2026
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/90414087](https://www.rightmove.co.uk/properties/90414087)
 
 ---
 
@@ -148,6 +493,21 @@
 
 ---
 
+### [2026-07-13T15:58:01.616Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Madison Brook, Docklands
+- **Location**: Custom House
+- **Property Name**: Hoola Apartments, Royal Victoria Dock, E16
+- **ID**: 89442750
+- **Price**: £2050 PCM
+- **Size**: 59 sqm
+- **Listing Update**: 2026-07-07
+- **Listing Status**: Added on 07/07/2026
+- **Let Available**: 05/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/89442750](https://www.rightmove.co.uk/properties/89442750)
+
+---
+
 ### [2026-07-13T15:57:48.284Z] MATCH FOUND!
 - **Platform**: Johns&Co
 - **Marketed by**: JOHNS&CO
@@ -175,6 +535,156 @@
 - **Listing Status**: Available
 - **Let Available**: Ask agent
 - **Link**: [https://www.johnsand.co/properties/salvour-tower-2733328](https://www.johnsand.co/properties/salvour-tower-2733328)
+
+---
+
+### [2026-07-13T15:58:01.615Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Properly, London
+- **Location**: Custom House
+- **Property Name**: Golden Plover Close, London, E16
+- **ID**: 174490808
+- **Price**: £1900 PCM
+- **Size**: 58.1 sqm
+- **Listing Update**: 2026-07-08
+- **Listing Status**: Reduced on 08/07/2026
+- **Let Available**: 15/07/2026
+- **Link**: [https://www.rightmove.co.uk/properties/174490808](https://www.rightmove.co.uk/properties/174490808)
+
+---
+
+### [2026-07-13T15:58:01.613Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Oakland Estates, Barkingside
+- **Location**: Canary Wharf
+- **Property Name**: Lanterns Way, Denison House, E14
+- **ID**: 89325786
+- **Price**: £2100 PCM
+- **Size**: 58 sqm
+- **Listing Update**: 2026-07-13
+- **Listing Status**: Reduced today
+- **Let Available**: 01/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/89325786](https://www.rightmove.co.uk/properties/89325786)
+
+---
+
+### [2026-07-13T15:58:01.615Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: DCS Residential, Covering London
+- **Location**: Custom House
+- **Property Name**: Gatcombe Road, London
+- **ID**: 90496914
+- **Price**: £2200 PCM
+- **Size**: 58 sqm
+- **Listing Update**: 2026-07-13
+- **Listing Status**: Reduced today
+- **Let Available**: 25/07/2026
+- **Link**: [https://www.rightmove.co.uk/properties/90496914](https://www.rightmove.co.uk/properties/90496914)
+
+---
+
+### [2026-07-13T15:58:01.614Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Life Residential, Canary Wharf Office
+- **Location**: Canary Wharf
+- **Property Name**: Lanterns Way, Canary Wharf
+- **ID**: 90708627
+- **Price**: £2280 PCM
+- **Size**: 58 sqm
+- **Listing Update**: 2026-07-09
+- **Listing Status**: Added on 09/07/2026
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/90708627](https://www.rightmove.co.uk/properties/90708627)
+
+---
+
+### [2026-07-13T15:58:01.614Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Benham and Reeves - Canary Wharf, Canary Wharf
+- **Location**: Canary Wharf
+- **Property Name**: Millharbour, Canary Wharf, E14
+- **ID**: 90733836
+- **Price**: £2600 PCM
+- **Size**: 57.3 sqm
+- **Listing Update**: 2026-07-10
+- **Listing Status**: Added on 10/07/2026
+- **Let Available**: 25/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/90733836](https://www.rightmove.co.uk/properties/90733836)
+
+---
+
+### [2026-07-13T15:58:30.927Z] MATCH FOUND!
+- **Platform**: KnightFrank
+- **Marketed by**: Knight Frank
+- **Location**: Canary Wharf (E14)
+- **Property Name**: Millharbour, London, E14
+- **ID**: CWQ012518178
+- **Price**: £2275 PCM
+- **Size**: 57.23 sqm
+- **Listing Update**: 2026-07-13
+- **Listing Status**: Available
+- **Let Available**: Ask agent
+- **Link**: [https://www.knightfrank.co.uk/properties/residential/to-let/millharbour-london-e14/cwq012518178](https://www.knightfrank.co.uk/properties/residential/to-let/millharbour-london-e14/cwq012518178)
+
+---
+
+### [2026-07-13T15:58:01.616Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Madison Brook, Docklands
+- **Location**: Custom House
+- **Property Name**: West Lodge, Britannia Village, E16
+- **ID**: 90344400
+- **Price**: £2000 PCM
+- **Size**: 57 sqm
+- **Listing Update**: 2026-07-01
+- **Listing Status**: Added on 01/07/2026
+- **Let Available**: 03/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/90344400](https://www.rightmove.co.uk/properties/90344400)
+
+---
+
+### [2026-07-13T15:58:01.615Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Strawberry Star, E16
+- **Location**: Custom House
+- **Property Name**: 1 Tidal Basin Road, London, E16
+- **ID**: 90646695
+- **Price**: £2000 PCM
+- **Size**: 57 sqm
+- **Listing Update**: 2026-07-08
+- **Listing Status**: Added on 08/07/2026
+- **Let Available**: 28/09/2026 (🦅 Early Bird: 82d adv)
+- **Link**: [https://www.rightmove.co.uk/properties/90646695](https://www.rightmove.co.uk/properties/90646695)
+
+---
+
+### [2026-07-13T15:58:01.616Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Unihood, London
+- **Location**: Custom House
+- **Property Name**: Tidal Basin Road, Silvertown, Newham, London
+- **ID**: 90015990
+- **Price**: £2060 PCM
+- **Size**: 57 sqm
+- **Listing Update**: 2026-06-23
+- **Listing Status**: Added on 23/06/2026
+- **Let Available**: 12/09/2026 (🦅 Early Bird: 81d adv)
+- **Link**: [https://www.rightmove.co.uk/properties/90015990](https://www.rightmove.co.uk/properties/90015990)
+
+---
+
+### [2026-07-13T15:58:01.616Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Romans and Partners, London
+- **Location**: Custom House
+- **Property Name**: Ellipse House, Royal Eden Dock, E16
+- **ID**: 90382683
+- **Price**: £2100 PCM
+- **Size**: 57 sqm
+- **Listing Update**: 2026-07-04
+- **Listing Status**: Reduced on 04/07/2026
+- **Let Available**: 02/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/90382683](https://www.rightmove.co.uk/properties/90382683)
 
 ---
 
@@ -208,6 +718,21 @@
 
 ---
 
+### [2026-07-13T15:58:30.927Z] MATCH FOUND!
+- **Platform**: KnightFrank
+- **Marketed by**: Knight Frank
+- **Location**: Canary Wharf (E14)
+- **Property Name**: Westferry Road, London, E14.
+- **ID**: CWQ012698307LG
+- **Price**: £1972 PCM
+- **Size**: 56.58 sqm
+- **Listing Update**: 2026-07-13
+- **Listing Status**: Available
+- **Let Available**: Ask agent
+- **Link**: [https://www.knightfrank.co.uk/properties/residential/to-let/westferry-road-london-e14/cwq012698307lg](https://www.knightfrank.co.uk/properties/residential/to-let/westferry-road-london-e14/cwq012698307lg)
+
+---
+
 ### [2026-07-13T15:57:48.285Z] MATCH FOUND!
 - **Platform**: Johns&Co
 - **Marketed by**: JOHNS&CO
@@ -223,6 +748,51 @@
 
 ---
 
+### [2026-07-13T15:58:01.616Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Huttons and Partners, London
+- **Location**: Custom House
+- **Property Name**: Widgeon Close, Canning Town, E16
+- **ID**: 90149562
+- **Price**: £2100 PCM
+- **Size**: 56 sqm
+- **Listing Update**: 2026-06-25
+- **Listing Status**: Added on 25/06/2026
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/90149562](https://www.rightmove.co.uk/properties/90149562)
+
+---
+
+### [2026-07-13T15:58:01.613Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Life Residential, Canary Wharf Office
+- **Location**: Canary Wharf
+- **Property Name**: Tiller Road, Canary Wharf
+- **ID**: 90807477
+- **Price**: £2150 PCM
+- **Size**: 55.74 sqm
+- **Listing Update**: 2026-07-13
+- **Listing Status**: Added today
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/90807477](https://www.rightmove.co.uk/properties/90807477)
+
+---
+
+### [2026-07-13T15:58:01.615Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Samuel King, Canning Town
+- **Location**: Custom House
+- **Property Name**: Canning Town, London, E16
+- **ID**: 90082950
+- **Price**: £2000 PCM
+- **Size**: 55.57 sqm
+- **Listing Update**: 2026-06-24
+- **Listing Status**: Added on 24/06/2026
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/90082950](https://www.rightmove.co.uk/properties/90082950)
+
+---
+
 ### [2026-07-13T15:57:48.285Z] MATCH FOUND!
 - **Platform**: Johns&Co
 - **Marketed by**: JOHNS&CO
@@ -235,6 +805,51 @@
 - **Listing Status**: Available
 - **Let Available**: Ask agent
 - **Link**: [https://www.johnsand.co/properties/malcolm-sargent-house-2664375](https://www.johnsand.co/properties/malcolm-sargent-house-2664375)
+
+---
+
+### [2026-07-13T15:58:01.616Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Edward Chase, Ilford
+- **Location**: Custom House
+- **Property Name**: Western Gateway, London, E16
+- **ID**: 87848298
+- **Price**: £2100 PCM
+- **Size**: 55.09 sqm
+- **Listing Update**: 2026-06-29
+- **Listing Status**: Reduced on 29/06/2026
+- **Let Available**: 18/07/2026
+- **Link**: [https://www.rightmove.co.uk/properties/87848298](https://www.rightmove.co.uk/properties/87848298)
+
+---
+
+### [2026-07-13T15:58:01.615Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Keatons, Stratford
+- **Location**: Custom House
+- **Property Name**: Jane Austen Hall, 21 Wesley Avenue, London, E16
+- **ID**: 90604023
+- **Price**: £1900 PCM
+- **Size**: 55 sqm
+- **Listing Update**: 2026-07-07
+- **Listing Status**: Added on 07/07/2026
+- **Let Available**: 18/09/2026 (🦅 Early Bird: 73d adv)
+- **Link**: [https://www.rightmove.co.uk/properties/90604023](https://www.rightmove.co.uk/properties/90604023)
+
+---
+
+### [2026-07-13T15:58:01.613Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Dexters, Canary Wharf
+- **Location**: Canary Wharf
+- **Property Name**: Manilla Street, Canary Wharf
+- **ID**: 90755244
+- **Price**: £2000 PCM
+- **Size**: 55 sqm
+- **Listing Update**: 2026-07-13
+- **Listing Status**: Reduced today
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/90755244](https://www.rightmove.co.uk/properties/90755244)
 
 ---
 
@@ -265,6 +880,21 @@
 - **Listing Status**: Available
 - **Let Available**: Ask agent
 - **Link**: [https://www.johnsand.co/properties/laker-house-2337018](https://www.johnsand.co/properties/laker-house-2337018)
+
+---
+
+### [2026-07-13T15:58:01.615Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Ernest Brooks International, Canary Wharf
+- **Location**: Custom House
+- **Property Name**: Howard House, 9 Wesley Avenue, Silvertown, E16
+- **ID**: 90658119
+- **Price**: £2000 PCM
+- **Size**: 54 sqm
+- **Listing Update**: 2026-07-08
+- **Listing Status**: Added on 08/07/2026
+- **Let Available**: 04/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/90658119](https://www.rightmove.co.uk/properties/90658119)
 
 ---
 
@@ -328,6 +958,36 @@
 
 ---
 
+### [2026-07-13T15:58:30.927Z] MATCH FOUND!
+- **Platform**: KnightFrank
+- **Marketed by**: Knight Frank
+- **Location**: Canary Wharf (E14)
+- **Property Name**: Tellicherry Court, Aberfeldy Square, London, E14
+- **ID**: CWQ012654414LG
+- **Price**: £2145 PCM
+- **Size**: 52.58 sqm
+- **Listing Update**: 2026-07-13
+- **Listing Status**: Available
+- **Let Available**: Ask agent
+- **Link**: [https://www.knightfrank.co.uk/properties/residential/to-let/tellicherry-court-aberfeldy-square-london-e14/cwq012654414lg](https://www.knightfrank.co.uk/properties/residential/to-let/tellicherry-court-aberfeldy-square-london-e14/cwq012654414lg)
+
+---
+
+### [2026-07-13T15:58:30.927Z] MATCH FOUND!
+- **Platform**: KnightFrank
+- **Marketed by**: Knight Frank
+- **Location**: Canary Wharf (E14)
+- **Property Name**: Tellicherry Court, Aberfeldy Square, London, E14
+- **ID**: CWQ012699385
+- **Price**: £2058 PCM
+- **Size**: 52.39 sqm
+- **Listing Update**: 2026-07-13
+- **Listing Status**: Available
+- **Let Available**: Ask agent
+- **Link**: [https://www.knightfrank.co.uk/properties/residential/to-let/tellicherry-court-aberfeldy-square-london-e14/cwq012699385](https://www.knightfrank.co.uk/properties/residential/to-let/tellicherry-court-aberfeldy-square-london-e14/cwq012699385)
+
+---
+
 ### [2026-07-13T15:57:48.284Z] MATCH FOUND!
 - **Platform**: Johns&Co
 - **Marketed by**: JOHNS&CO
@@ -358,6 +1018,21 @@
 
 ---
 
+### [2026-07-13T15:58:01.616Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Holland Properties, London
+- **Location**: Custom House
+- **Property Name**: Henry Purcell House, E16
+- **ID**: 89425242
+- **Price**: £1900 PCM
+- **Size**: 52 sqm
+- **Listing Update**: 2026-07-02
+- **Listing Status**: Reduced on 02/07/2026
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/89425242](https://www.rightmove.co.uk/properties/89425242)
+
+---
+
 ### [2026-07-13T15:57:30.548Z] MATCH FOUND!
 - **Platform**: JLL
 - **Marketed by**: JLL
@@ -373,6 +1048,36 @@
 
 ---
 
+### [2026-07-13T15:57:30.548Z] MATCH FOUND!
+- **Platform**: JLL
+- **Marketed by**: JLL
+- **Location**: Canary Wharf (E14)
+- **Property Name**: Landmark East Tower, Marsh Wall, E14
+- **ID**: P169226
+- **Price**: £2340 PCM
+- **Size**: 52 sqm
+- **Listing Update**: 2026-07-13
+- **Listing Status**: Available
+- **Let Available**: Ask agent
+- **Link**: [https://residential.jll.co.uk/rent-flat/london-e14-9bt-p169226](https://residential.jll.co.uk/rent-flat/london-e14-9bt-p169226)
+
+---
+
+### [2026-07-13T15:58:01.616Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: CROWN LUXURY HOMES LIMITED, London
+- **Location**: Custom House
+- **Property Name**: Galleria House, Royal Victoria, E16
+- **ID**: 90068493
+- **Price**: £2350 PCM
+- **Size**: 52 sqm
+- **Listing Update**: 2026-06-24
+- **Listing Status**: Added on 24/06/2026
+- **Let Available**: 01/09/2026 (🦅 Early Bird: 69d adv)
+- **Link**: [https://www.rightmove.co.uk/properties/90068493](https://www.rightmove.co.uk/properties/90068493)
+
+---
+
 ### [2026-07-13T15:57:48.285Z] MATCH FOUND!
 - **Platform**: Johns&Co
 - **Marketed by**: JOHNS&CO
@@ -385,6 +1090,21 @@
 - **Listing Status**: Available
 - **Let Available**: Ask agent
 - **Link**: [https://www.johnsand.co/properties/the-silverton-2732598](https://www.johnsand.co/properties/the-silverton-2732598)
+
+---
+
+### [2026-07-13T15:58:30.926Z] MATCH FOUND!
+- **Platform**: KnightFrank
+- **Marketed by**: Knight Frank
+- **Location**: Canary Wharf (E14)
+- **Property Name**: Maine Tower, Harbour Way, London, E14.
+- **ID**: CWQ012667992LG
+- **Price**: £2400 PCM
+- **Size**: 51.38 sqm
+- **Listing Update**: 2026-07-13
+- **Listing Status**: Available
+- **Let Available**: Ask agent
+- **Link**: [https://www.knightfrank.co.uk/properties/residential/to-let/maine-tower-harbour-way-london-e14/cwq012667992lg](https://www.knightfrank.co.uk/properties/residential/to-let/maine-tower-harbour-way-london-e14/cwq012667992lg)
 
 ---
 
@@ -433,6 +1153,21 @@
 
 ---
 
+### [2026-07-13T15:57:30.548Z] MATCH FOUND!
+- **Platform**: JLL
+- **Marketed by**: JLL
+- **Location**: Canary Wharf (E14)
+- **Property Name**: Landmark East Tower, Marsh Wall, E14
+- **ID**: P169031
+- **Price**: £2492 PCM
+- **Size**: 50.45 sqm
+- **Listing Update**: 2026-07-13
+- **Listing Status**: Available
+- **Let Available**: Ask agent
+- **Link**: [https://residential.jll.co.uk/rent-apartment/london-e14-9eb-p169031](https://residential.jll.co.uk/rent-apartment/london-e14-9eb-p169031)
+
+---
+
 ### [2026-07-13T15:57:48.284Z] MATCH FOUND!
 - **Platform**: Johns&Co
 - **Marketed by**: JOHNS&CO
@@ -463,6 +1198,21 @@
 
 ---
 
+### [2026-07-13T15:58:01.613Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Dawn Sandoval Residential, Canary Wharf
+- **Location**: Canary Wharf
+- **Property Name**: Edison Building, Millennium Harbour, Westferry Road, London
+- **ID**: 90044970
+- **Price**: £2100 PCM
+- **Size**: 46 sqm
+- **Listing Update**: 2026-07-13
+- **Listing Status**: Reduced today
+- **Let Available**: 15/07/2026
+- **Link**: [https://www.rightmove.co.uk/properties/90044970](https://www.rightmove.co.uk/properties/90044970)
+
+---
+
 ### [2026-07-13T15:57:48.284Z] MATCH FOUND!
 - **Platform**: Johns&Co
 - **Marketed by**: JOHNS&CO
@@ -478,6 +1228,21 @@
 
 ---
 
+### [2026-07-13T15:58:01.613Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: PropertyLoop, London
+- **Location**: Canary Wharf
+- **Property Name**: Pan Peninsula Square, London, E14
+- **ID**: 90794577
+- **Price**: £2500 PCM
+- **Size**: 45.28 sqm
+- **Listing Update**: 2026-07-13
+- **Listing Status**: Added today
+- **Let Available**: 15/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/90794577](https://www.rightmove.co.uk/properties/90794577)
+
+---
+
 ### [2026-07-13T15:58:01.617Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: OpenRent, London
@@ -490,6 +1255,21 @@
 - **Listing Status**: Added on 20/06/2026
 - **Let Available**: 17/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/89948127](https://www.rightmove.co.uk/properties/89948127)
+
+---
+
+### [2026-07-13T15:58:01.616Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Felicity J Lord, Canary Wharf Lettings
+- **Location**: Custom House
+- **Property Name**: Western Gateway, London
+- **ID**: 90138741
+- **Price**: £1900 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-06-25
+- **Listing Status**: Added on 25/06/2026
+- **Let Available**: 17/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/90138741](https://www.rightmove.co.uk/properties/90138741)
 
 ---
 
@@ -553,6 +1333,21 @@
 
 ---
 
+### [2026-07-13T15:58:01.617Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Huttons and Partners, London
+- **Location**: Royal Victoria Docks
+- **Property Name**: Dulke House, Canary Wharf, E14
+- **ID**: 90398499
+- **Price**: £1980 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-02
+- **Listing Status**: Added on 02/07/2026
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/90398499](https://www.rightmove.co.uk/properties/90398499)
+
+---
+
 ### [2026-07-13T15:57:30.549Z] MATCH FOUND!
 - **Platform**: JLL
 - **Marketed by**: JLL
@@ -580,6 +1375,21 @@
 - **Listing Status**: Added on 21/06/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/89959323](https://www.rightmove.co.uk/properties/89959323)
+
+---
+
+### [2026-07-13T15:57:30.548Z] MATCH FOUND!
+- **Platform**: JLL
+- **Marketed by**: JLL
+- **Location**: Canary Wharf (E14)
+- **Property Name**: River Gardens Walk London SE10
+- **ID**: P169094
+- **Price**: £2000 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-13
+- **Listing Status**: Available
+- **Let Available**: Ask agent
+- **Link**: [https://residential.jll.co.uk/rent-apartment/london-se10-0gb-p169094](https://residential.jll.co.uk/rent-apartment/london-se10-0gb-p169094)
 
 ---
 
@@ -673,6 +1483,51 @@
 
 ---
 
+### [2026-07-13T15:58:01.616Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: OpenRent, London
+- **Location**: Custom House
+- **Property Name**: K Warehouse, London, E16
+- **ID**: 90483345
+- **Price**: £2150 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-06-26
+- **Listing Status**: Added on 26/06/2026
+- **Let Available**: 15/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/90483345](https://www.rightmove.co.uk/properties/90483345)
+
+---
+
+### [2026-07-13T15:58:01.615Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Lifestyle Property, Docklands
+- **Location**: Custom House
+- **Property Name**: Western Beach Apartments, 36 Hanover Avenue, Silvertown
+- **ID**: 89854548
+- **Price**: £2150 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-09
+- **Listing Status**: Reduced on 09/07/2026
+- **Let Available**: 18/07/2026
+- **Link**: [https://www.rightmove.co.uk/properties/89854548](https://www.rightmove.co.uk/properties/89854548)
+
+---
+
+### [2026-07-13T15:58:01.615Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Estate Ark, Ilford
+- **Location**: Custom House
+- **Property Name**: Widgeon Close, Canning Town, Newham, London
+- **ID**: 90585087
+- **Price**: £2150 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-07
+- **Listing Status**: Added on 07/07/2026
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/90585087](https://www.rightmove.co.uk/properties/90585087)
+
+---
+
 ### [2026-07-13T15:57:48.285Z] MATCH FOUND!
 - **Platform**: Johns&Co
 - **Marketed by**: JOHNS&CO
@@ -703,6 +1558,21 @@
 
 ---
 
+### [2026-07-13T15:58:01.614Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: OpenRent, London
+- **Location**: South Quay
+- **Property Name**: Montford House, London, E14
+- **ID**: 90397644
+- **Price**: £2195 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-12
+- **Listing Status**: Reduced yesterday
+- **Let Available**: 15/07/2026
+- **Link**: [https://www.rightmove.co.uk/properties/90397644](https://www.rightmove.co.uk/properties/90397644)
+
+---
+
 ### [2026-07-13T15:58:01.615Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Hamptons, Canary Wharf
@@ -715,6 +1585,21 @@
 - **Listing Status**: Added today
 - **Let Available**: 29/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90808650](https://www.rightmove.co.uk/properties/90808650)
+
+---
+
+### [2026-07-13T15:58:01.615Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Ernest Brooks International, Canary Wharf
+- **Location**: South Quay
+- **Property Name**: Roosevelt Tower, 18 Williamsburg Plaza, Poplar, E14
+- **ID**: 90408405
+- **Price**: £2200 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-10
+- **Listing Status**: Reduced on 10/07/2026
+- **Let Available**: 08/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/90408405](https://www.rightmove.co.uk/properties/90408405)
 
 ---
 
@@ -767,6 +1652,21 @@
 - **Platform**: JLL
 - **Marketed by**: JLL
 - **Location**: Canary Wharf (E14)
+- **Property Name**: Amory Tower, Marsh Wall, E14
+- **ID**: P169261
+- **Price**: £2275 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-13
+- **Listing Status**: Available
+- **Let Available**: Ask agent
+- **Link**: [https://residential.jll.co.uk/rent-flat/london-e14-9zn-p169261](https://residential.jll.co.uk/rent-flat/london-e14-9zn-p169261)
+
+---
+
+### [2026-07-13T15:57:30.548Z] MATCH FOUND!
+- **Platform**: JLL
+- **Marketed by**: JLL
+- **Location**: Canary Wharf (E14)
 - **Property Name**: 161 Evelyn Street London SE8
 - **ID**: P169198
 - **Price**: £2275 PCM
@@ -805,6 +1705,21 @@
 - **Listing Status**: Reduced on 02/07/2026
 - **Let Available**: 25/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90231966](https://www.rightmove.co.uk/properties/90231966)
+
+---
+
+### [2026-07-13T15:58:01.614Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Coopers, London
+- **Location**: Canary Wharf
+- **Property Name**: Wardian London, Wards Place, London, E14
+- **ID**: 89208084
+- **Price**: £2300 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-10
+- **Listing Status**: Reduced on 10/07/2026
+- **Let Available**: 07/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/89208084](https://www.rightmove.co.uk/properties/89208084)
 
 ---
 
@@ -853,6 +1768,51 @@
 
 ---
 
+### [2026-07-13T15:58:01.613Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Waterfronts, London
+- **Location**: Canary Wharf
+- **Property Name**: Amory Tower, Marsh Wall, London, E14
+- **ID**: 88695102
+- **Price**: £2450 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-13
+- **Listing Status**: Reduced today
+- **Let Available**: 31/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/88695102](https://www.rightmove.co.uk/properties/88695102)
+
+---
+
+### [2026-07-13T15:58:01.615Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: OpenRent, London
+- **Location**: Custom House
+- **Property Name**: Adriatic Apartments, London, E16
+- **ID**: 90677979
+- **Price**: £2500 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-09
+- **Listing Status**: Added on 09/07/2026
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/90677979](https://www.rightmove.co.uk/properties/90677979)
+
+---
+
+### [2026-07-13T15:57:30.548Z] MATCH FOUND!
+- **Platform**: JLL
+- **Marketed by**: JLL
+- **Location**: Canary Wharf (E14)
+- **Property Name**: Landmark Pinnacle, Marsh Wall, E14
+- **ID**: P169185
+- **Price**: £2513 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-13
+- **Listing Status**: Available
+- **Let Available**: Ask agent
+- **Link**: [https://residential.jll.co.uk/rent-apartment/london-e14-9fy-p169185](https://residential.jll.co.uk/rent-apartment/london-e14-9fy-p169185)
+
+---
+
 ### [2026-07-13T15:58:01.616Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: haart, Stratford - Lettings
@@ -898,6 +1858,21 @@
 
 ---
 
+### [2026-07-13T15:58:01.614Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Hamptons, Canary Wharf
+- **Location**: South Quay
+- **Property Name**: East Ferry Road, E14
+- **ID**: 90814404
+- **Price**: £2600 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-13
+- **Listing Status**: Added today
+- **Let Available**: 20/07/2026
+- **Link**: [https://www.rightmove.co.uk/properties/90814404](https://www.rightmove.co.uk/properties/90814404)
+
+---
+
 ### [2026-07-13T15:57:48.286Z] MATCH FOUND!
 - **Platform**: Johns&Co
 - **Marketed by**: JOHNS&CO
@@ -910,6 +1885,51 @@
 - **Listing Status**: Available
 - **Let Available**: Ask agent
 - **Link**: [https://www.johnsand.co/properties/phoenix-court-2656558](https://www.johnsand.co/properties/phoenix-court-2656558)
+
+---
+
+### [2026-07-13T15:57:48.284Z] MATCH FOUND!
+- **Platform**: Johns&Co
+- **Marketed by**: JOHNS&CO
+- **Location**: Canary Wharf (E14)
+- **Property Name**: Pan Peninsula Square
+- **ID**: 2720320
+- **Price**: £2648 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-13
+- **Listing Status**: Available
+- **Let Available**: Ask agent
+- **Link**: [https://www.johnsand.co/properties/pan-peninsula-square-2720320](https://www.johnsand.co/properties/pan-peninsula-square-2720320)
+
+---
+
+### [2026-07-13T15:57:30.548Z] MATCH FOUND!
+- **Platform**: JLL
+- **Marketed by**: JLL
+- **Location**: Canary Wharf (E14)
+- **Property Name**: Landmark Pinnacle, Marsh Wall, E14
+- **ID**: P168970
+- **Price**: £2687 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-13
+- **Listing Status**: Available
+- **Let Available**: Ask agent
+- **Link**: [https://residential.jll.co.uk/rent-apartment/london-e14-9xz-p168970](https://residential.jll.co.uk/rent-apartment/london-e14-9xz-p168970)
+
+---
+
+### [2026-07-13T15:58:01.614Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Lionsgate Property Management, London
+- **Location**: South Quay
+- **Property Name**: One Park Drive, London, E14
+- **ID**: 90270450
+- **Price**: £2700 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-03
+- **Listing Status**: Reduced on 03/07/2026
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/90270450](https://www.rightmove.co.uk/properties/90270450)
 
 ---
 
