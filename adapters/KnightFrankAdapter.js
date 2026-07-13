@@ -29,10 +29,11 @@ class KnightFrankAdapter {
       for (const url of searchUrls) {
         console.log(`Navigating to ${this.platformName} search URL: ${url}`);
         await this.page.goto(url, { waitUntil: 'domcontentloaded', timeout: 30000 });
+        await this.page.waitForSelector('a[href*="/properties/residential/to-let/"]', { timeout: 15000 }).catch(() => {});
         await this.page.waitForTimeout(2000);
 
         const links = await this.page.$$eval('a', els =>
-          els.map(a => a.href).filter(h => h.includes('/properties/residential/to-let/') && h.match(/\/cwq[a-z0-9]+/i))
+          els.map(a => a.href).filter(h => h.includes('/properties/residential/to-let/') && !h.includes('/all-types/') && /\/([a-z0-9]{6,})/i.test(h))
         );
         links.forEach(l => allLinks.add(l));
       }
@@ -40,7 +41,7 @@ class KnightFrankAdapter {
       console.log(`Found ${uniqueLinks.length} unique property links across Canary Wharf, South Quay & E14 on ${this.platformName}.`);
 
       for (const link of uniqueLinks) {
-        const idMatch = link.match(/\/(cwq[a-z0-9]+)/i);
+        const idMatch = link.match(/\/([a-z0-9]{6,})(?:\?|$)/i);
         const id = idMatch ? idMatch[1].toUpperCase() : link;
 
         if (isSeen(id, this.platformName)) {
@@ -65,7 +66,7 @@ class KnightFrankAdapter {
     console.log(`[${this.platformName}] Processing listing: ${link}`);
     try {
       await this.page.goto(link, { waitUntil: 'domcontentloaded', timeout: 30000 });
-      await this.page.waitForTimeout(2000);
+      await this.page.waitForTimeout(3500);
 
       const pageData = await this.page.evaluate(() => {
         const bodyText = document.body.innerText || '';

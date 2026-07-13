@@ -178,6 +178,36 @@
 
 ---
 
+### [2026-07-13T09:03:52.737Z] MATCH FOUND!
+- **Platform**: KnightFrank
+- **Marketed by**: Knight Frank
+- **Location**: Canary Wharf (E14)
+- **Property Name**: Hampton Tower, London, E14
+- **ID**: CUS012211337
+- **Price**: £2600 PCM
+- **Size**: 59.34 sqm
+- **Listing Update**: 2026-07-13
+- **Listing Status**: Available
+- **Let Available**: Ask agent
+- **Link**: [https://www.knightfrank.co.uk/properties/residential/to-let/hampton-tower-london-e14/cus012211337](https://www.knightfrank.co.uk/properties/residential/to-let/hampton-tower-london-e14/cus012211337)
+
+---
+
+### [2026-07-13T08:59:57.596Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: JOHNSandCO, Canary Wharf
+- **Location**: Canary Wharf
+- **Property Name**: Salvour Tower, Canary Wharf
+- **ID**: 90587526
+- **Price**: £600 PCM
+- **Size**: 58 sqm
+- **Listing Update**: 2026-07-07
+- **Listing Status**: Added on 07/07/2026
+- **Let Available**: 07/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/90587526](https://www.rightmove.co.uk/properties/90587526)
+
+---
+
 ### [2026-07-13T08:14:12.473Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Life Residential, Canary Wharf Office
@@ -343,6 +373,21 @@
 
 ---
 
+### [2026-07-13T08:32:21.877Z] MATCH FOUND!
+- **Platform**: Johns&Co
+- **Marketed by**: JOHNS&CO
+- **Location**: Canary Wharf (E14)
+- **Property Name**: Roosevelt Tower
+- **ID**: 2402342
+- **Price**: £2340 PCM
+- **Size**: 51.28 sqm
+- **Listing Update**: 2026-07-13
+- **Listing Status**: Available
+- **Let Available**: Ask agent
+- **Link**: [https://www.johnsand.co/properties/roosevelt-tower-2402342](https://www.johnsand.co/properties/roosevelt-tower-2402342)
+
+---
+
 ### [2026-06-24T12:36:39.200Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Unknown
@@ -478,6 +523,21 @@
 
 ---
 
+### [2026-07-13T08:13:35.521Z] MATCH FOUND!
+- **Platform**: Johns&Co
+- **Marketed by**: JOHNS&CO
+- **Location**: Canary Wharf (E14)
+- **Property Name**: Pan Peninsula
+- **ID**: 2342322
+- **Price**: £2496 PCM
+- **Size**: 44.39 sqm
+- **Listing Update**: 2026-07-13
+- **Listing Status**: Available
+- **Let Available**: Ask agent
+- **Link**: [https://www.johnsand.co/properties/pan-peninsula-2342322](https://www.johnsand.co/properties/pan-peninsula-2342322)
+
+---
+
 ### [2026-06-20T12:17:31.434Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Unknown
@@ -575,7 +635,7 @@
 - **Property Name**: Inverness Terrace, City Of Westminster, London
 - **ID**: 90527991
 - **Price**: £345 PCM
-- **Size**: 0 sqm
+- **Size**: Unknown
 - **Listing Update**: 2026-07-06
 - **Listing Status**: Added on 06/07/2026
 - **Let Available**: Now
@@ -590,7 +650,7 @@
 - **Property Name**: Edgware Road, Paddington, W2
 - **ID**: 90618570
 - **Price**: £1675 PCM
-- **Size**: 0 sqm
+- **Size**: Unknown
 - **Listing Update**: 2026-07-08
 - **Listing Status**: Added on 08/07/2026
 - **Let Available**: Now
@@ -605,7 +665,7 @@
 - **Property Name**: Charterhouse Square, Farringdon
 - **ID**: 89984841
 - **Price**: £1750 PCM
-- **Size**: 0 sqm
+- **Size**: Unknown
 - **Listing Update**: 2026-07-10
 - **Listing Status**: Reduced on 10/07/2026
 - **Let Available**: Ask agent
@@ -620,7 +680,7 @@
 - **Property Name**: River Gardens Walk London SE10
 - **ID**: P169094
 - **Price**: £2000 PCM
-- **Size**: 0 sqm
+- **Size**: Unknown
 - **Listing Update**: 2026-07-13
 - **Listing Status**: Available
 - **Let Available**: Ask agent
@@ -635,7 +695,7 @@
 - **Property Name**: 161 Evelyn Street London SE8
 - **ID**: P169197
 - **Price**: £2018 PCM
-- **Size**: 0 sqm
+- **Size**: Unknown
 - **Listing Update**: 2026-07-13
 - **Listing Status**: Available
 - **Let Available**: Ask agent
@@ -650,7 +710,7 @@
 - **Property Name**: Zinc Street Sugar House Island E15
 - **ID**: P169260
 - **Price**: £2100 PCM
-- **Size**: 0 sqm
+- **Size**: Unknown
 - **Listing Update**: 2026-07-13
 - **Listing Status**: Available
 - **Let Available**: Ask agent
@@ -665,7 +725,7 @@
 - **Property Name**: New Providence Wharf
 - **ID**: 2708246
 - **Price**: £2102 PCM
-- **Size**: 0 sqm
+- **Size**: Unknown
 - **Listing Update**: 2026-07-13
 - **Listing Status**: Available
 - **Let Available**: Ask agent
@@ -680,11 +740,26 @@
 - **Property Name**: Copperworks Wharf Sugar House Island E15
 - **ID**: P169268
 - **Price**: £2150 PCM
-- **Size**: 0 sqm
+- **Size**: Unknown
 - **Listing Update**: 2026-07-13
 - **Listing Status**: Available
 - **Let Available**: Ask agent
 - **Link**: [https://residential.jll.co.uk/rent-flat/london-e15-2bw-p169268](https://residential.jll.co.uk/rent-flat/london-e15-2bw-p169268)
+
+---
+
+### [2026-07-13T08:32:40.393Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Regent Letting and Property Management, London
+- **Location**: South Quay
+- **Property Name**: Dock East Apartments, Selsdon Way, E14
+- **ID**: 88433652
+- **Price**: £2200 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-07
+- **Listing Status**: Reduced on 07/07/2026
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/88433652](https://www.rightmove.co.uk/properties/88433652)
 
 ---
 
@@ -695,7 +770,7 @@
 - **Property Name**: Dock East Apartments, Selsdon Way, E14
 - **ID**: 90677925
 - **Price**: £2200 PCM
-- **Size**: 0 sqm
+- **Size**: Unknown
 - **Listing Update**: 2026-07-09
 - **Listing Status**: Added on 09/07/2026
 - **Let Available**: Now
@@ -710,7 +785,7 @@
 - **Property Name**: Roosevelt Tower, 18 Williamsburg Plaza, Poplar, E14
 - **ID**: 90408405
 - **Price**: £2200 PCM
-- **Size**: 0 sqm
+- **Size**: Unknown
 - **Listing Update**: 2026-07-10
 - **Listing Status**: Reduced on 10/07/2026
 - **Let Available**: 08/09/2026
@@ -725,7 +800,7 @@
 - **Property Name**: Manilla Street, Canary Wharf
 - **ID**: 90755244
 - **Price**: £2200 PCM
-- **Size**: 0 sqm
+- **Size**: Unknown
 - **Listing Update**: 2026-07-10
 - **Listing Status**: Added on 10/07/2026
 - **Let Available**: Ask agent
@@ -740,7 +815,7 @@
 - **Property Name**: Torquay Court
 - **ID**: 2732711
 - **Price**: £2202 PCM
-- **Size**: 0 sqm
+- **Size**: Unknown
 - **Listing Update**: 2026-07-13
 - **Listing Status**: Available
 - **Let Available**: Ask agent
@@ -755,7 +830,7 @@
 - **Property Name**: Spencer Heights, 28 Bartholomew Close, London
 - **ID**: 90392160
 - **Price**: £2250 PCM
-- **Size**: 0 sqm
+- **Size**: Unknown
 - **Listing Update**: 2026-07-02
 - **Listing Status**: Added on 02/07/2026
 - **Let Available**: Ask agent
@@ -770,7 +845,7 @@
 - **Property Name**: Orsett Terrace, Hyde Park
 - **ID**: 90705138
 - **Price**: £2250 PCM
-- **Size**: 0 sqm
+- **Size**: Unknown
 - **Listing Update**: 2026-07-09
 - **Listing Status**: Added on 09/07/2026
 - **Let Available**: Ask agent
@@ -785,7 +860,7 @@
 - **Property Name**: John Trundle Court, John Trundle Highwalk, Barbican, City Of London, London
 - **ID**: 90525966
 - **Price**: £2275 PCM
-- **Size**: 0 sqm
+- **Size**: Unknown
 - **Listing Update**: 2026-07-06
 - **Listing Status**: Added on 06/07/2026
 - **Let Available**: Ask agent
@@ -800,7 +875,7 @@
 - **Property Name**: 161 Evelyn Street London SE8
 - **ID**: P169198
 - **Price**: £2275 PCM
-- **Size**: 0 sqm
+- **Size**: Unknown
 - **Listing Update**: 2026-07-13
 - **Listing Status**: Available
 - **Let Available**: Ask agent
@@ -815,7 +890,7 @@
 - **Property Name**: Amory Tower, Marsh Wall, E14
 - **ID**: P169261
 - **Price**: £2275 PCM
-- **Size**: 0 sqm
+- **Size**: Unknown
 - **Listing Update**: 2026-07-13
 - **Listing Status**: Available
 - **Let Available**: Ask agent
@@ -830,7 +905,7 @@
 - **Property Name**: Bezier Apartments, City Road, Old Street, Shoreditch, London, EC1Y
 - **ID**: 173369096
 - **Price**: £2300 PCM
-- **Size**: 0 sqm
+- **Size**: Unknown
 - **Listing Update**: 2026-04-30
 - **Listing Status**: Reduced on 30/04/2026
 - **Let Available**: Now (🦅 Early Bird: 74d adv)
@@ -845,7 +920,7 @@
 - **Property Name**: Carmen Street, Canary Wharf
 - **ID**: 90732897
 - **Price**: £2300 PCM
-- **Size**: 0 sqm
+- **Size**: Unknown
 - **Listing Update**: 2026-07-10
 - **Listing Status**: Added on 10/07/2026
 - **Let Available**: Ask agent
@@ -860,7 +935,7 @@
 - **Property Name**: Porchester Road, London, W2
 - **ID**: 90393171
 - **Price**: £2300 PCM
-- **Size**: 0 sqm
+- **Size**: Unknown
 - **Listing Update**: 2026-07-10
 - **Listing Status**: Reduced on 10/07/2026
 - **Let Available**: Now
@@ -875,11 +950,26 @@
 - **Property Name**: Amory Tower, Canary Wharf
 - **ID**: 88635138
 - **Price**: £2300 PCM
-- **Size**: 0 sqm
+- **Size**: Unknown
 - **Listing Update**: 2026-07-13
 - **Listing Status**: Reduced today
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/88635138](https://www.rightmove.co.uk/properties/88635138)
+
+---
+
+### [2026-07-13T08:40:03.007Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: One Move Group, London
+- **Location**: South Quay
+- **Property Name**: Turnberry Quay, Waterford Court, E14
+- **ID**: 90423855
+- **Price**: £2350 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-02
+- **Listing Status**: Added on 02/07/2026
+- **Let Available**: 14/09/2026 (🦅 Early Bird: 74d adv)
+- **Link**: [https://www.rightmove.co.uk/properties/90423855](https://www.rightmove.co.uk/properties/90423855)
 
 ---
 
@@ -890,26 +980,11 @@
 - **Property Name**: Miles Buildings, Marylebone Quarter NW1
 - **ID**: 90787257
 - **Price**: £2400 PCM
-- **Size**: 0 sqm
+- **Size**: Unknown
 - **Listing Update**: 2026-07-12
 - **Listing Status**: Added yesterday
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90787257](https://www.rightmove.co.uk/properties/90787257)
-
----
-
-### [2026-07-13T08:13:35.521Z] MATCH FOUND!
-- **Platform**: Johns&Co
-- **Marketed by**: JOHNS&CO
-- **Location**: Canary Wharf (E14)
-- **Property Name**: Pan Peninsula
-- **ID**: 2342322
-- **Price**: £2496 PCM
-- **Size**: 0 sqm
-- **Listing Update**: 2026-07-13
-- **Listing Status**: Available
-- **Let Available**: Ask agent
-- **Link**: [https://www.johnsand.co/properties/pan-peninsula-2342322](https://www.johnsand.co/properties/pan-peninsula-2342322)
 
 ---
 
@@ -920,7 +995,7 @@
 - **Property Name**: The Old Lofts,Crescent Row,London,EC1Y 0SP
 - **ID**: 21622421
 - **Price**: £2500 PCM
-- **Size**: 0 sqm
+- **Size**: Unknown
 - **Listing Update**: 2026-06-26
 - **Listing Status**: Added on 26/06/2026
 - **Let Available**: 11/09/2026 (🦅 Early Bird: 77d adv)
@@ -935,7 +1010,7 @@
 - **Property Name**: Landmark Pinnacle, Marsh Wall, E14
 - **ID**: P169185
 - **Price**: £2513 PCM
-- **Size**: 0 sqm
+- **Size**: Unknown
 - **Listing Update**: 2026-07-13
 - **Listing Status**: Available
 - **Let Available**: Ask agent
@@ -950,7 +1025,7 @@
 - **Property Name**: Landmark Pinnacle, Marsh Wall, E14
 - **ID**: P169117
 - **Price**: £2513 PCM
-- **Size**: 0 sqm
+- **Size**: Unknown
 - **Listing Update**: 2026-07-13
 - **Listing Status**: Available
 - **Let Available**: Ask agent
@@ -965,7 +1040,7 @@
 - **Property Name**: Copperworks Wharf, Sugar House Island, E15
 - **ID**: P169204
 - **Price**: £2550 PCM
-- **Size**: 0 sqm
+- **Size**: Unknown
 - **Listing Update**: 2026-07-13
 - **Listing Status**: Available
 - **Let Available**: Ask agent
@@ -980,7 +1055,7 @@
 - **Property Name**: Copperworks Wharf London E15
 - **ID**: P169193
 - **Price**: £2550 PCM
-- **Size**: 0 sqm
+- **Size**: Unknown
 - **Listing Update**: 2026-07-13
 - **Listing Status**: Available
 - **Let Available**: Ask agent
@@ -995,7 +1070,7 @@
 - **Property Name**: Copper Works Wharf Sugar House Island E15
 - **ID**: P169264
 - **Price**: £2550 PCM
-- **Size**: 0 sqm
+- **Size**: Unknown
 - **Listing Update**: 2026-07-13
 - **Listing Status**: Available
 - **Let Available**: Ask agent
@@ -1010,7 +1085,7 @@
 - **Property Name**: Landmark Pinnacle, Marsh Wall, E14
 - **ID**: P168955
 - **Price**: £2557 PCM
-- **Size**: 0 sqm
+- **Size**: Unknown
 - **Listing Update**: 2026-07-13
 - **Listing Status**: Available
 - **Let Available**: Ask agent
@@ -1025,7 +1100,7 @@
 - **Property Name**: Wormwood Street, EC2M
 - **ID**: 90675807
 - **Price**: £2600 PCM
-- **Size**: 0 sqm
+- **Size**: Unknown
 - **Listing Update**: 2026-07-06
 - **Listing Status**: Added on 06/07/2026
 - **Let Available**: Ask agent
@@ -1040,7 +1115,7 @@
 - **Property Name**: Wormwood Street, EC2M
 - **ID**: 89379114
 - **Price**: £2600 PCM
-- **Size**: 0 sqm
+- **Size**: Unknown
 - **Listing Update**: 2026-07-06
 - **Listing Status**: Added on 06/07/2026
 - **Let Available**: Ask agent
@@ -1055,7 +1130,7 @@
 - **Property Name**: Arena Tower, Crossharbour Plaza, Canary Wharf, E14
 - **ID**: 90633570
 - **Price**: £2600 PCM
-- **Size**: 0 sqm
+- **Size**: Unknown
 - **Listing Update**: 2026-07-08
 - **Listing Status**: Added on 08/07/2026
 - **Let Available**: 01/09/2026
@@ -1070,7 +1145,7 @@
 - **Property Name**: Pan Peninsula Square
 - **ID**: 2720320
 - **Price**: £2648 PCM
-- **Size**: 0 sqm
+- **Size**: Unknown
 - **Listing Update**: 2026-07-13
 - **Listing Status**: Available
 - **Let Available**: Ask agent
@@ -1085,7 +1160,7 @@
 - **Property Name**: Landmark Pinnacle, Marsh Wall, E14
 - **ID**: P168970
 - **Price**: £2687 PCM
-- **Size**: 0 sqm
+- **Size**: Unknown
 - **Listing Update**: 2026-07-13
 - **Listing Status**: Available
 - **Let Available**: Ask agent
@@ -1100,7 +1175,7 @@
 - **Property Name**: Amory Tower, Marsh Wall, Tower Hamlets, London
 - **ID**: 90747393
 - **Price**: £2700 PCM
-- **Size**: 0 sqm
+- **Size**: Unknown
 - **Listing Update**: 2026-07-10
 - **Listing Status**: Added on 10/07/2026
 - **Let Available**: Ask agent

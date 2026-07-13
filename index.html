@@ -768,6 +768,15 @@
     background: #059669;
     color: white;
   }
+  .property-maps-link {
+    color: #60a5fa;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .property-maps-link:hover {
+    color: #93c5fd;
+    text-decoration: underline;
+  }
 </style>
 <script>
 const STARRED_STORAGE_KEY = 'house_finder_starred_ids';
@@ -1033,7 +1042,7 @@ function filterTable() {
         var filterValue = input.value.trim();
         if (!filterValue) continue;
         
-        var colIndex = input.getAttribute("data-col");
+        var colIndex = parseInt(input.getAttribute("data-col"), 10);
         var td = tr[i].getElementsByTagName("td")[colIndex];
         if (!td) continue;
 
@@ -1043,9 +1052,9 @@ function filterTable() {
         var isDate = type === "date";
 
         if (isNumeric || isDate) {
-          var numCellValue = parseFloat(cellValue || td.textContent.trim());
-          var operatorMatch = filterValue.match(/^(>=|<=|>|<)?\s*(.*)/);
-          var operator = operatorMatch ? (operatorMatch[1] || '>=') : '>=';
+          var numCellValue = parseFloat(cellValue !== null && cellValue !== "" ? cellValue : td.textContent.trim());
+          var operatorMatch = filterValue.match(/^(>=|<=|>|<|=)?\s*(.*)/);
+          var operator = (operatorMatch && operatorMatch[1]) ? operatorMatch[1] : '';
           var filterRaw = operatorMatch ? operatorMatch[2].trim() : filterValue;
           
           if (filterRaw) {
@@ -1063,6 +1072,10 @@ function filterTable() {
               else if (operator === '<=') match = numCellValue <= numFilterValue;
               else if (operator === '>') match = numCellValue > numFilterValue;
               else if (operator === '<') match = numCellValue < numFilterValue;
+              else if (operator === '=') match = numCellValue === numFilterValue;
+              else {
+                match = (numCellValue === numFilterValue) || td.textContent.toLowerCase().includes(filterValue.toLowerCase());
+              }
               
               if (!match) {
                 display = "none";
@@ -1076,8 +1089,9 @@ function filterTable() {
             }
           }
         } else {
-          var textValue = td.textContent.trim();
-          if (textValue.toLowerCase().indexOf(filterValue.toLowerCase()) === -1) {
+          var textValue = (cellValue !== null && cellValue !== "" ? cellValue : td.textContent).trim();
+          if (textValue.toLowerCase().indexOf(filterValue.toLowerCase()) === -1 &&
+              td.textContent.toLowerCase().indexOf(filterValue.toLowerCase()) === -1) {
             display = "none";
             break;
           }
@@ -1097,7 +1111,9 @@ function setQuickFilter(filterType) {
   var inputs = document.querySelectorAll("thead .filter-input");
   for (var i = 0; i < inputs.length; i++) {
     var col = inputs[i].getAttribute("data-col");
-    if (col === "4") {
+    if (!filterType) {
+      inputs[i].value = "";
+    } else if (col === "4") {
       if (["Rightmove", "JLL", "JOHNS&CO", "Knight Frank"].includes(filterType)) {
         if (filterType === "Knight Frank") inputs[i].value = "Knight";
         else if (filterType === "JOHNS&CO") inputs[i].value = "Johns";
@@ -1330,19 +1346,23 @@ function applySort() {
       var valA = cellA.getAttribute("data-value") !== null && cellA.getAttribute("data-value") !== "" ? cellA.getAttribute("data-value") : cellA.textContent.toLowerCase().trim();
       var valB = cellB.getAttribute("data-value") !== null && cellB.getAttribute("data-value") !== "" ? cellB.getAttribute("data-value") : cellB.textContent.toLowerCase().trim();
 
-      var numA = parseFloat(valA);
-      var numB = parseFloat(valB);
-      if (!isNaN(numA) && !isNaN(numB)) {
-        valA = numA;
-        valB = numB;
+      var isNumericCol = (colIdx === 0 || colIdx === 1 || colIdx === 3 || colIdx === 8 || colIdx === 9 || colIdx === 10);
+      if (isNumericCol) {
+        var nA = parseFloat(valA);
+        var nB = parseFloat(valB);
+        if (isNaN(nA)) nA = dir === 'asc' ? Infinity : -Infinity;
+        if (isNaN(nB)) nB = dir === 'asc' ? Infinity : -Infinity;
+        if (nA !== nB) {
+          if (dir === 'asc') return nA - nB;
+          return nB - nA;
+        }
       } else {
-        valA = String(valA).toLowerCase();
-        valB = String(valB).toLowerCase();
-      }
-
-      if (valA !== valB) {
-        if (dir === 'asc') return valA > valB ? 1 : -1;
-        return valA < valB ? 1 : -1;
+        var sA = String(valA).toLowerCase();
+        var sB = String(valB).toLowerCase();
+        if (sA !== sB) {
+          if (dir === 'asc') return sA.localeCompare(sB);
+          return sB.localeCompare(sA);
+        }
       }
     }
     return 0;
@@ -1356,7 +1376,7 @@ function applySort() {
 }
 
 function updateSortIndicators() {
-  for (var c = 0; c <= 9; c++) {
+  for (var c = 0; c <= 10; c++) {
     var ind = document.getElementById("sort-ind-" + c);
     if (ind) ind.textContent = "";
   }
@@ -1379,7 +1399,7 @@ function setMultiSort(criteria) {
   var sortBtns = document.querySelectorAll(".quick-sorts .filter-chip");
   for (var i = 0; i < sortBtns.length; i++) sortBtns[i].classList.remove("active");
   
-  if (criteria.length === 2 && criteria[0].col === 0 && criteria[1].col === 7) {
+  if (criteria.length === 2 && criteria[0].col === 0 && criteria[1].col === 8) {
     var btn = document.getElementById("sortDatePrice");
     if (btn) btn.classList.add("active");
   }
@@ -1503,7 +1523,7 @@ function copyShortlistToClipboard() {
       const platform = tr.getAttribute('data-platform') || 'Rightmove';
       const agent = tr.children[5].textContent.trim();
       const avail = tr.children[3].querySelector('.avail-text') ? tr.children[3].querySelector('.avail-text').textContent : tr.children[3].textContent.trim();
-      const linkEl = tr.children[13].querySelector('a');
+      const linkEl = tr.children[12].querySelector('a');
       const url = linkEl ? linkEl.href : '';
 
       summary += count + '. ' + propName + ' — ' + price + ' (' + sqm + ' | ' + ppsqmText + ')\n';
@@ -1521,7 +1541,6 @@ function copyShortlistToClipboard() {
     alert(summary);
   }
 }
-
 document.addEventListener("DOMContentLoaded", function() {
   applyStarred();
   applySeen();
@@ -1537,7 +1556,7 @@ document.addEventListener("DOMContentLoaded", function() {
   <div class="title-area">
     <h2>Property Matches</h2>
     <div class="stats">
-      Showing <span id="visibleCount">74</span> of 74 properties found
+      Showing <span id="visibleCount">79</span> of 79 properties found
       <button id="resetStarredBtn" onclick="resetStarred()" style="display:none;">Clear Saved (<span id="starredCount">0</span>)</button>
       <button id="resetSeenBtn" onclick="resetSeen()" style="display:none;">Reset Viewed (<span id="seenCount">0</span>)</button>
     </div>
@@ -1626,17 +1645,17 @@ document.addEventListener("DOMContentLoaded", function() {
 <table id="matchesTable">
   <thead>
     <tr>
-      <th onclick="sortTable(0, event)">Date <span class="sort-indicator" id="sort-ind-0"></span><br><input type="text" class="filter-input" data-col="0" data-type="date" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Date (e.g. >2026-05-01)..."></th>
-      <th onclick="sortTable(1, event)">Listed / Updated <span class="sort-indicator" id="sort-ind-1"></span><br><input type="text" class="filter-input" data-col="1" data-type="date" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Date (e.g. >2026-07-01)..."></th>
-      <th onclick="sortTable(2, event)">Status <span class="sort-indicator" id="sort-ind-2"></span><br><input type="text" class="filter-input" data-col="2" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Filter (e.g. yesterday)..."></th>
-      <th onclick="sortTable(3, event)">Let Available <span class="sort-indicator" id="sort-ind-3"></span><br><input type="text" class="filter-input" data-col="3" data-type="date" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Date (e.g. >2026-07-01)..."></th>
-      <th onclick="sortTable(4, event)">Source <span class="sort-indicator" id="sort-ind-4"></span><br><input type="text" class="filter-input" data-col="4" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Source (e.g. Rightmove, JLL)..."></th>
-      <th onclick="sortTable(5, event)">Marketed By <span class="sort-indicator" id="sort-ind-5"></span><br><input type="text" class="filter-input" data-col="5" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Filter (e.g. OpenRent)..."></th>
-      <th onclick="sortTable(6, event)">Location <span class="sort-indicator" id="sort-ind-6"></span><br><input type="text" class="filter-input" data-col="6" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Filter..."></th>
-      <th onclick="sortTable(7, event)">Property Name <span class="sort-indicator" id="sort-ind-7"></span><br><input type="text" class="filter-input" data-col="7" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Filter (e.g. Landmark)..."></th>
-      <th onclick="sortTable(8, event)">Price <span class="sort-indicator" id="sort-ind-8"></span><br><input type="text" class="filter-input" data-col="8" data-type="numeric" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Price (e.g. >2000)..."></th>
-      <th onclick="sortTable(9, event)">Size <span class="sort-indicator" id="sort-ind-9"></span><br><input type="text" class="filter-input" data-col="9" data-type="numeric" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Size (e.g. <50)..."></th>
-      <th onclick="sortTable(10, event)">£ / sqm <span class="sort-indicator" id="sort-ind-10"></span><br><input type="text" class="filter-input" data-col="10" data-type="numeric" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="£/sqm (e.g. >=40)..."></th>
+      <th onclick="sortTable(0, event)">Date <span class="sort-indicator" id="sort-ind-0"></span><br><input type="text" class="filter-input" data-col="0" data-type="date" oninput="filterTable()" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Date (e.g. >2026-05-01)..."></th>
+      <th onclick="sortTable(1, event)">Listed / Updated <span class="sort-indicator" id="sort-ind-1"></span><br><input type="text" class="filter-input" data-col="1" data-type="date" oninput="filterTable()" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Date (e.g. >2026-07-01)..."></th>
+      <th onclick="sortTable(2, event)">Status <span class="sort-indicator" id="sort-ind-2"></span><br><input type="text" class="filter-input" data-col="2" oninput="filterTable()" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Filter (e.g. yesterday)..."></th>
+      <th onclick="sortTable(3, event)">Let Available <span class="sort-indicator" id="sort-ind-3"></span><br><input type="text" class="filter-input" data-col="3" data-type="date" oninput="filterTable()" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Date (e.g. >2026-07-01)..."></th>
+      <th onclick="sortTable(4, event)">Source <span class="sort-indicator" id="sort-ind-4"></span><br><input type="text" class="filter-input" data-col="4" oninput="filterTable()" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Source (e.g. Rightmove, JLL)..."></th>
+      <th onclick="sortTable(5, event)">Marketed By <span class="sort-indicator" id="sort-ind-5"></span><br><input type="text" class="filter-input" data-col="5" oninput="filterTable()" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Filter (e.g. OpenRent)..."></th>
+      <th onclick="sortTable(6, event)">Location <span class="sort-indicator" id="sort-ind-6"></span><br><input type="text" class="filter-input" data-col="6" oninput="filterTable()" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Filter..."></th>
+      <th onclick="sortTable(7, event)">Property Name <span class="sort-indicator" id="sort-ind-7"></span><br><input type="text" class="filter-input" data-col="7" oninput="filterTable()" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Filter (e.g. Landmark)..."></th>
+      <th onclick="sortTable(8, event)">Price <span class="sort-indicator" id="sort-ind-8"></span><br><input type="text" class="filter-input" data-col="8" data-type="numeric" oninput="filterTable()" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Price (e.g. >2000)..."></th>
+      <th onclick="sortTable(9, event)">Size <span class="sort-indicator" id="sort-ind-9"></span><br><input type="text" class="filter-input" data-col="9" data-type="numeric" oninput="filterTable()" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Size (e.g. <50)..."></th>
+      <th onclick="sortTable(10, event)">£ / sqm <span class="sort-indicator" id="sort-ind-10"></span><br><input type="text" class="filter-input" data-col="10" data-type="numeric" oninput="filterTable()" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="£/sqm (e.g. >=40)..."></th>
       <th style="cursor: default; text-align: center; width: 40px;" title="Personal Notes">📝</th>
       <th style="cursor: default; text-align: center;">Link</th>
       <th style="cursor: default; text-align: center;">⭐</th>
@@ -1650,8 +1669,8 @@ document.addEventListener("DOMContentLoaded", function() {
           <td data-value="0"><span class="avail-text">Ask agent</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Vertus, Canary Wharf"><span class="agent-name">Vertus, Canary Wharf</span></td>
-          <td>Canary Wharf</td>
-          <td>50 Charter Street, London, E22</td>
+          <td data-value="Canary Wharf">Canary Wharf</td>
+          <td data-value="50 Charter Street, London, E22"><a href="https://www.google.com/maps/search/?api=1&query=50%20Charter%20Street%2C%20London%2C%20E22%2C%20Canary%20Wharf" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">50 Charter Street, London, E22</a></td>
           <td class="numeric" data-value="2518">£2518</td>
           <td class="numeric" data-value="4869">4869 sqm</td>
           <td class="numeric" data-value="0.5171493119737113">£0.52<br><span class="badge badge-deal badge-deal-bargain" title="Top 20% lowest £/sqm value!">💎 Bargain</span></td>
@@ -1666,8 +1685,8 @@ document.addEventListener("DOMContentLoaded", function() {
           <td data-value="0"><span class="avail-text">Ask agent</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
-          <td>Canary Wharf</td>
-          <td>Hutchings Street, Canary Wharf</td>
+          <td data-value="Canary Wharf">Canary Wharf</td>
+          <td data-value="Hutchings Street, Canary Wharf"><a href="https://www.google.com/maps/search/?api=1&query=Hutchings%20Street%2C%20Canary%20Wharf" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">Hutchings Street, Canary Wharf</a></td>
           <td class="numeric" data-value="2250">£2250</td>
           <td class="numeric" data-value="81.8">81.8 sqm</td>
           <td class="numeric" data-value="27.506112469437653">£27.51<br><span class="badge badge-deal badge-deal-bargain" title="Top 20% lowest £/sqm value!">💎 Bargain</span></td>
@@ -1682,8 +1701,8 @@ document.addEventListener("DOMContentLoaded", function() {
           <td data-value="0"><span class="avail-text">Ask agent</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
-          <td>Canary Wharf</td>
-          <td>Hutchings Street, Canary Wharf</td>
+          <td data-value="Canary Wharf">Canary Wharf</td>
+          <td data-value="Hutchings Street, Canary Wharf"><a href="https://www.google.com/maps/search/?api=1&query=Hutchings%20Street%2C%20Canary%20Wharf" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">Hutchings Street, Canary Wharf</a></td>
           <td class="numeric" data-value="2250">£2250</td>
           <td class="numeric" data-value="81.8">81.8 sqm</td>
           <td class="numeric" data-value="27.506112469437653">£27.51<br><span class="badge badge-deal badge-deal-bargain" title="Top 20% lowest £/sqm value!">💎 Bargain</span></td>
@@ -1698,8 +1717,8 @@ document.addEventListener("DOMContentLoaded", function() {
           <td data-value="1789344000000"><span class="avail-text">14/09/2026</span><span class="compat-indicator"></span><br><span class="badge badge-earlybird" title="Listed 83 days before let available date!">🦅 Early Bird (83d adv)</span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
-          <td>Canary Wharf</td>
-          <td>Boardwalk Place, Canary Wharf E14</td>
+          <td data-value="Canary Wharf">Canary Wharf</td>
+          <td data-value="Boardwalk Place, Canary Wharf E14"><a href="https://www.google.com/maps/search/?api=1&query=Boardwalk%20Place%2C%20Canary%20Wharf%20E14" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">Boardwalk Place, Canary Wharf E14</a></td>
           <td class="numeric" data-value="2400">£2400</td>
           <td class="numeric" data-value="76">76 sqm</td>
           <td class="numeric" data-value="31.57894736842105">£31.58<br><span class="badge badge-deal badge-deal-bargain" title="Top 20% lowest £/sqm value!">💎 Bargain</span></td>
@@ -1714,8 +1733,8 @@ document.addEventListener("DOMContentLoaded", function() {
           <td data-value="0"><span class="avail-text">Ask agent</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Dexters, Canary Wharf"><span class="agent-name">Dexters, Canary Wharf</span></td>
-          <td>Canary Wharf</td>
-          <td>Knighthead Point, Canary Wharf</td>
+          <td data-value="Canary Wharf">Canary Wharf</td>
+          <td data-value="Knighthead Point, Canary Wharf"><a href="https://www.google.com/maps/search/?api=1&query=Knighthead%20Point%2C%20Canary%20Wharf" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">Knighthead Point, Canary Wharf</a></td>
           <td class="numeric" data-value="1900">£1900</td>
           <td class="numeric" data-value="75.4">75.4 sqm</td>
           <td class="numeric" data-value="25.19893899204244">£25.20<br><span class="badge badge-deal badge-deal-bargain" title="Top 20% lowest £/sqm value!">💎 Bargain</span></td>
@@ -1730,8 +1749,8 @@ document.addEventListener("DOMContentLoaded", function() {
           <td data-value="0"><span class="avail-text">Ask agent</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
-          <td>Canary Wharf</td>
-          <td>Lawn House Close, Canary Wharf</td>
+          <td data-value="Canary Wharf">Canary Wharf</td>
+          <td data-value="Lawn House Close, Canary Wharf"><a href="https://www.google.com/maps/search/?api=1&query=Lawn%20House%20Close%2C%20Canary%20Wharf" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">Lawn House Close, Canary Wharf</a></td>
           <td class="numeric" data-value="2350">£2350</td>
           <td class="numeric" data-value="74.51">74.51 sqm</td>
           <td class="numeric" data-value="31.539390685813984">£31.54<br><span class="badge badge-deal badge-deal-bargain" title="Top 20% lowest £/sqm value!">💎 Bargain</span></td>
@@ -1746,8 +1765,8 @@ document.addEventListener("DOMContentLoaded", function() {
           <td data-value="1789948800000"><span class="avail-text">21/09/2026</span><span class="compat-indicator"></span><br><span class="badge badge-earlybird" title="Listed 81 days before let available date!">🦅 Early Bird (81d adv)</span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Fraser and Co, London West End"><span class="agent-name">Fraser and Co, London West End</span></td>
-          <td>Paddington</td>
-          <td>Westbourne Terrace, W2</td>
+          <td data-value="Paddington">Paddington</td>
+          <td data-value="Westbourne Terrace, W2"><a href="https://www.google.com/maps/search/?api=1&query=Westbourne%20Terrace%2C%20W2%2C%20Paddington" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">Westbourne Terrace, W2</a></td>
           <td class="numeric" data-value="600">£600</td>
           <td class="numeric" data-value="71">71 sqm</td>
           <td class="numeric" data-value="8.450704225352112">£8.45<br><span class="badge badge-deal badge-deal-bargain" title="Top 20% lowest £/sqm value!">💎 Bargain</span></td>
@@ -1762,8 +1781,8 @@ document.addEventListener("DOMContentLoaded", function() {
           <td data-value="0"><span class="avail-text">Ask agent</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Frank Harris and Co"><span class="agent-name">Frank Harris and Co</span></td>
-          <td>Moorgate</td>
-          <td>Cornhill, Bank, City of London</td>
+          <td data-value="Moorgate">Moorgate</td>
+          <td data-value="Cornhill, Bank, City of London"><a href="https://www.google.com/maps/search/?api=1&query=Cornhill%2C%20Bank%2C%20City%20of%20London%2C%20Moorgate" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">Cornhill, Bank, City of London</a></td>
           <td class="numeric" data-value="575">£575</td>
           <td class="numeric" data-value="62.6">62.6 sqm</td>
           <td class="numeric" data-value="9.185303514376997">£9.19<br><span class="badge badge-deal badge-deal-bargain" title="Top 20% lowest £/sqm value!">💎 Bargain</span></td>
@@ -1778,8 +1797,8 @@ document.addEventListener("DOMContentLoaded", function() {
           <td data-value="0"><span class="avail-text">Ask agent</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Dexters, Canary Wharf"><span class="agent-name">Dexters, Canary Wharf</span></td>
-          <td>Canary Wharf</td>
-          <td>Cassilis Road, Canary Wharf</td>
+          <td data-value="Canary Wharf">Canary Wharf</td>
+          <td data-value="Cassilis Road, Canary Wharf"><a href="https://www.google.com/maps/search/?api=1&query=Cassilis%20Road%2C%20Canary%20Wharf" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">Cassilis Road, Canary Wharf</a></td>
           <td class="numeric" data-value="2500">£2500</td>
           <td class="numeric" data-value="62.1">62.1 sqm</td>
           <td class="numeric" data-value="40.25764895330113">£40.26<br><span class="badge badge-deal badge-deal-good" title="Good £/sqm value">👍 Good Value</span></td>
@@ -1794,8 +1813,8 @@ document.addEventListener("DOMContentLoaded", function() {
           <td data-value="0"><span class="avail-text">Ask agent</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Waterview, Waterview Shad Thames"><span class="agent-name">Waterview, Waterview Shad Thames</span></td>
-          <td>Canary Wharf</td>
-          <td>Cassilis Road, Canary Wharf</td>
+          <td data-value="Canary Wharf">Canary Wharf</td>
+          <td data-value="Cassilis Road, Canary Wharf"><a href="https://www.google.com/maps/search/?api=1&query=Cassilis%20Road%2C%20Canary%20Wharf" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">Cassilis Road, Canary Wharf</a></td>
           <td class="numeric" data-value="2500">£2500</td>
           <td class="numeric" data-value="62.1">62.1 sqm</td>
           <td class="numeric" data-value="40.25764895330113">£40.26<br><span class="badge badge-deal badge-deal-good" title="Good £/sqm value">👍 Good Value</span></td>
@@ -1810,8 +1829,8 @@ document.addEventListener("DOMContentLoaded", function() {
           <td data-value="0"><span class="avail-text">Ask agent</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
-          <td>Canary Wharf</td>
-          <td>Manilla Street, Canary Wharf, London, E14</td>
+          <td data-value="Canary Wharf">Canary Wharf</td>
+          <td data-value="Manilla Street, Canary Wharf, London, E14"><a href="https://www.google.com/maps/search/?api=1&query=Manilla%20Street%2C%20Canary%20Wharf%2C%20London%2C%20E14" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">Manilla Street, Canary Wharf, London, E14</a></td>
           <td class="numeric" data-value="2384">£2384</td>
           <td class="numeric" data-value="62">62 sqm</td>
           <td class="numeric" data-value="38.45161290322581">£38.45<br><span class="badge badge-deal badge-deal-good" title="Good £/sqm value">👍 Good Value</span></td>
@@ -1826,8 +1845,8 @@ document.addEventListener("DOMContentLoaded", function() {
           <td data-value="1789776000000"><span class="avail-text">19/09/2026</span><span class="compat-indicator"></span><br><span class="badge badge-earlybird" title="Listed 68 days before let available date!">🦅 Early Bird (68d adv)</span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="OpenRent, London"><span class="badge badge-openrent">✨ OpenRent, London</span></td>
-          <td>Canary Wharf</td>
-          <td>Ability Place, London, E14</td>
+          <td data-value="Canary Wharf">Canary Wharf</td>
+          <td data-value="Ability Place, London, E14"><a href="https://www.google.com/maps/search/?api=1&query=Ability%20Place%2C%20London%2C%20E14%2C%20Canary%20Wharf" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">Ability Place, London, E14</a></td>
           <td class="numeric" data-value="2455">£2455</td>
           <td class="numeric" data-value="61.95">61.95 sqm</td>
           <td class="numeric" data-value="39.62873284907183">£39.63<br><span class="badge badge-deal badge-deal-good" title="Good £/sqm value">👍 Good Value</span></td>
@@ -1835,15 +1854,47 @@ document.addEventListener("DOMContentLoaded", function() {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90789642" target="_blank" class="view-btn" onclick="markRowSeen('90789642')" onauxclick="if (event.button === 1) markRowSeen('90789642')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('90789642', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="90708627" data-index="12" data-platform="Rightmove" data-deal="good" data-early-bird="false">
+<tr data-id="CUS012211337" data-index="12" data-platform="KnightFrank" data-deal="fair" data-early-bird="false">
+          <td data-value="1783933432737">2026-07-13 09:03:52</td>
+          <td data-value="1783900800000">2026-07-13</td>
+          <td data-value="Available">Available</td>
+          <td data-value="0"><span class="avail-text">Ask agent</span><span class="compat-indicator"></span></td>
+          <td data-value="KnightFrank"><span class="badge-platform badge-platform-knightfrank">🏰 KnightFrank</span></td>
+          <td data-value="Knight Frank"><span class="agent-name">Knight Frank</span></td>
+          <td data-value="Canary Wharf (E14)">Canary Wharf (E14)</td>
+          <td data-value="Hampton Tower, London, E14"><a href="https://www.google.com/maps/search/?api=1&query=Hampton%20Tower%2C%20London%2C%20E14%2C%20Canary%20Wharf%20(E14)" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">Hampton Tower, London, E14</a></td>
+          <td class="numeric" data-value="2600">£2600</td>
+          <td class="numeric" data-value="59.34">59.34 sqm</td>
+          <td class="numeric" data-value="43.81530165149983">£43.82<br><span class="badge badge-deal badge-deal-fair">⚖️ Market Rate</span></td>
+          <td style="text-align: center;"><button class="note-btn note-icon-btn" id="note-btn-CUS012211337" onclick="openNoteModal('CUS012211337')" title="Add / View Note">📝</button></td>
+          <td style="text-align: center;"><a href="https://www.knightfrank.co.uk/properties/residential/to-let/hampton-tower-london-e14/cus012211337" target="_blank" class="view-btn" onclick="markRowSeen('CUS012211337')" onauxclick="if (event.button === 1) markRowSeen('CUS012211337')">View</a></td>
+          <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('CUS012211337', this)" title="Save Property">☆</button></td>
+        </tr>
+<tr data-id="90587526" data-index="13" data-platform="Rightmove" data-deal="bargain" data-early-bird="false">
+          <td data-value="1783933197596">2026-07-13 08:59:57</td>
+          <td data-value="1783382400000">2026-07-07</td>
+          <td data-value="Added on 07/07/2026">Added on 07/07/2026</td>
+          <td data-value="1788739200000"><span class="avail-text">07/09/2026</span><span class="compat-indicator"></span></td>
+          <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
+          <td data-value="JOHNSandCO, Canary Wharf"><span class="agent-name">JOHNSandCO, Canary Wharf</span></td>
+          <td data-value="Canary Wharf">Canary Wharf</td>
+          <td data-value="Salvour Tower, Canary Wharf"><a href="https://www.google.com/maps/search/?api=1&query=Salvour%20Tower%2C%20Canary%20Wharf" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">Salvour Tower, Canary Wharf</a></td>
+          <td class="numeric" data-value="600">£600</td>
+          <td class="numeric" data-value="58">58 sqm</td>
+          <td class="numeric" data-value="10.344827586206897">£10.34<br><span class="badge badge-deal badge-deal-bargain" title="Top 20% lowest £/sqm value!">💎 Bargain</span></td>
+          <td style="text-align: center;"><button class="note-btn note-icon-btn" id="note-btn-90587526" onclick="openNoteModal('90587526')" title="Add / View Note">📝</button></td>
+          <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90587526" target="_blank" class="view-btn" onclick="markRowSeen('90587526')" onauxclick="if (event.button === 1) markRowSeen('90587526')">View</a></td>
+          <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('90587526', this)" title="Save Property">☆</button></td>
+        </tr>
+<tr data-id="90708627" data-index="14" data-platform="Rightmove" data-deal="good" data-early-bird="false">
           <td data-value="1783930452473">2026-07-13 08:14:12</td>
           <td data-value="1783555200000">2026-07-09</td>
           <td data-value="Added on 09/07/2026">Added on 09/07/2026</td>
           <td data-value="0"><span class="avail-text">Ask agent</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Life Residential, Canary Wharf Office"><span class="agent-name">Life Residential, Canary Wharf Office</span></td>
-          <td>Canary Wharf</td>
-          <td>Lanterns Way, Canary Wharf</td>
+          <td data-value="Canary Wharf">Canary Wharf</td>
+          <td data-value="Lanterns Way, Canary Wharf"><a href="https://www.google.com/maps/search/?api=1&query=Lanterns%20Way%2C%20Canary%20Wharf" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">Lanterns Way, Canary Wharf</a></td>
           <td class="numeric" data-value="2280">£2280</td>
           <td class="numeric" data-value="58">58 sqm</td>
           <td class="numeric" data-value="39.310344827586206">£39.31<br><span class="badge badge-deal badge-deal-good" title="Good £/sqm value">👍 Good Value</span></td>
@@ -1851,15 +1902,15 @@ document.addEventListener("DOMContentLoaded", function() {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90708627" target="_blank" class="view-btn" onclick="markRowSeen('90708627')" onauxclick="if (event.button === 1) markRowSeen('90708627')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('90708627', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="90628713" data-index="13" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
+<tr data-id="90628713" data-index="15" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
           <td data-value="1783930452474">2026-07-13 08:14:12</td>
           <td data-value="1783296000000">2026-07-06</td>
           <td data-value="Reduced on 06/07/2026">Reduced on 06/07/2026</td>
-          <td data-value="1783930452708"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-value="1783933432838"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Parker James Estates, London"><span class="agent-name">Parker James Estates, London</span></td>
-          <td>Paddington</td>
-          <td>Sussex Gardens, Marylebone</td>
+          <td data-value="Paddington">Paddington</td>
+          <td data-value="Sussex Gardens, Marylebone"><a href="https://www.google.com/maps/search/?api=1&query=Sussex%20Gardens%2C%20Marylebone%2C%20Paddington" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">Sussex Gardens, Marylebone</a></td>
           <td class="numeric" data-value="2700">£2700</td>
           <td class="numeric" data-value="58">58 sqm</td>
           <td class="numeric" data-value="46.55172413793103">£46.55<br><span class="badge badge-deal badge-deal-fair">⚖️ Market Rate</span></td>
@@ -1867,15 +1918,15 @@ document.addEventListener("DOMContentLoaded", function() {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90628713" target="_blank" class="view-btn" onclick="markRowSeen('90628713')" onauxclick="if (event.button === 1) markRowSeen('90628713')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('90628713', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="90471747" data-index="14" data-platform="Rightmove" data-deal="good" data-early-bird="false">
+<tr data-id="90471747" data-index="16" data-platform="Rightmove" data-deal="good" data-early-bird="false">
           <td data-value="1783166232810">2026-07-04 11:57:12</td>
           <td data-value="1783036800000">2026-07-03</td>
           <td data-value="Added on 03/07/2026">Added on 03/07/2026</td>
           <td data-value="1788566400000"><span class="avail-text">05/09/2026</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
-          <td>Canary Wharf</td>
-          <td>Orchard Place, Canary Wharf, London, E14</td>
+          <td data-value="Canary Wharf">Canary Wharf</td>
+          <td data-value="Orchard Place, Canary Wharf, London, E14"><a href="https://www.google.com/maps/search/?api=1&query=Orchard%20Place%2C%20Canary%20Wharf%2C%20London%2C%20E14" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">Orchard Place, Canary Wharf, London, E14</a></td>
           <td class="numeric" data-value="2400">£2400</td>
           <td class="numeric" data-value="56">56 sqm</td>
           <td class="numeric" data-value="42.857142857142854">£42.86<br><span class="badge badge-deal badge-deal-good" title="Good £/sqm value">👍 Good Value</span></td>
@@ -1883,15 +1934,15 @@ document.addEventListener("DOMContentLoaded", function() {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90471747" target="_blank" class="view-btn" onclick="markRowSeen('90471747')" onauxclick="if (event.button === 1) markRowSeen('90471747')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('90471747', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="89444691" data-index="15" data-platform="Rightmove" data-deal="good" data-early-bird="false">
+<tr data-id="89444691" data-index="17" data-platform="Rightmove" data-deal="good" data-early-bird="false">
           <td data-value="1780929529646">2026-06-08 14:38:49</td>
           <td data-value="1780876800000">2026-06-08</td>
           <td data-value="Added on 08/06/2026">Added on 08/06/2026</td>
           <td data-value="0"><span class="avail-text">Ask agent</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
-          <td>Canary Wharf</td>
-          <td>Millharbour, London</td>
+          <td data-value="Canary Wharf">Canary Wharf</td>
+          <td data-value="Millharbour, London"><a href="https://www.google.com/maps/search/?api=1&query=Millharbour%2C%20London%2C%20Canary%20Wharf" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">Millharbour, London</a></td>
           <td class="numeric" data-value="2250">£2250</td>
           <td class="numeric" data-value="55.74">55.74 sqm</td>
           <td class="numeric" data-value="40.36598493003229">£40.37<br><span class="badge badge-deal badge-deal-good" title="Good £/sqm value">👍 Good Value</span></td>
@@ -1899,15 +1950,15 @@ document.addEventListener("DOMContentLoaded", function() {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/89444691" target="_blank" class="view-btn" onclick="markRowSeen('89444691')" onauxclick="if (event.button === 1) markRowSeen('89444691')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('89444691', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="90542760" data-index="16" data-platform="Rightmove" data-deal="good" data-early-bird="false">
+<tr data-id="90542760" data-index="18" data-platform="Rightmove" data-deal="good" data-early-bird="false">
           <td data-value="1783347488558">2026-07-06 14:18:08</td>
           <td data-value="1783728000000">2026-07-11</td>
           <td data-value="Reduced on 11/07/2026">Reduced on 11/07/2026</td>
           <td data-value="0"><span class="avail-text">Ask agent</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Martin and Co, Twickenham"><span class="agent-name">Martin and Co, Twickenham</span></td>
-          <td>Canary Wharf</td>
-          <td>Regatta Point, Manilla Street, Canary Wharf</td>
+          <td data-value="Canary Wharf">Canary Wharf</td>
+          <td data-value="Regatta Point, Manilla Street, Canary Wharf"><a href="https://www.google.com/maps/search/?api=1&query=Regatta%20Point%2C%20Manilla%20Street%2C%20Canary%20Wharf" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">Regatta Point, Manilla Street, Canary Wharf</a></td>
           <td class="numeric" data-value="2300">£2300</td>
           <td class="numeric" data-value="55">55 sqm</td>
           <td class="numeric" data-value="41.81818181818182">£41.82<br><span class="badge badge-deal badge-deal-good" title="Good £/sqm value">👍 Good Value</span></td>
@@ -1915,15 +1966,15 @@ document.addEventListener("DOMContentLoaded", function() {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90542760" target="_blank" class="view-btn" onclick="markRowSeen('90542760')" onauxclick="if (event.button === 1) markRowSeen('90542760')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('90542760', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="88839924" data-index="17" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
+<tr data-id="88839924" data-index="19" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
           <td data-value="1783703810152">2026-07-10 17:16:50</td>
           <td data-value="1783641600000">2026-07-10</td>
           <td data-value="Reduced on 10/07/2026">Reduced on 10/07/2026</td>
           <td data-value="0"><span class="avail-text">Ask agent</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Knight Frank - Lettings, Canary  Wharf"><span class="agent-name">Knight Frank - Lettings, Canary  Wharf</span></td>
-          <td>Canary Wharf</td>
-          <td>No 1 West India Quay, Hertsmere Road, Nr Canary Wharf, London, E14</td>
+          <td data-value="Canary Wharf">Canary Wharf</td>
+          <td data-value="No 1 West India Quay, Hertsmere Road, Nr Canary Wharf, London, E14"><a href="https://www.google.com/maps/search/?api=1&query=No%201%20West%20India%20Quay%2C%20Hertsmere%20Road%2C%20Nr%20Canary%20Wharf%2C%20London%2C%20E14" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">No 1 West India Quay, Hertsmere Road, Nr Canary Wharf, London, E14</a></td>
           <td class="numeric" data-value="2496">£2496</td>
           <td class="numeric" data-value="55">55 sqm</td>
           <td class="numeric" data-value="45.38181818181818">£45.38<br><span class="badge badge-deal badge-deal-fair">⚖️ Market Rate</span></td>
@@ -1931,15 +1982,15 @@ document.addEventListener("DOMContentLoaded", function() {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/88839924" target="_blank" class="view-btn" onclick="markRowSeen('88839924')" onauxclick="if (event.button === 1) markRowSeen('88839924')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('88839924', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="90602829" data-index="18" data-platform="Rightmove" data-deal="good" data-early-bird="true">
+<tr data-id="90602829" data-index="20" data-platform="Rightmove" data-deal="good" data-early-bird="true">
           <td data-value="1783445371531">2026-07-07 17:29:31</td>
           <td data-value="1783382400000">2026-07-07</td>
           <td data-value="Added on 07/07/2026">Added on 07/07/2026</td>
           <td data-value="1789948800000"><span class="avail-text">21/09/2026</span><span class="compat-indicator"></span><br><span class="badge badge-earlybird" title="Listed 76 days before let available date!">🦅 Early Bird (76d adv)</span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Franklyn James, Limehouse and Wapping"><span class="agent-name">Franklyn James, Limehouse and Wapping</span></td>
-          <td>Canary Wharf</td>
-          <td>Fairlead House, London, E14</td>
+          <td data-value="Canary Wharf">Canary Wharf</td>
+          <td data-value="Fairlead House, London, E14"><a href="https://www.google.com/maps/search/?api=1&query=Fairlead%20House%2C%20London%2C%20E14%2C%20Canary%20Wharf" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">Fairlead House, London, E14</a></td>
           <td class="numeric" data-value="2050">£2050</td>
           <td class="numeric" data-value="54">54 sqm</td>
           <td class="numeric" data-value="37.96296296296296">£37.96<br><span class="badge badge-deal badge-deal-good" title="Good £/sqm value">👍 Good Value</span></td>
@@ -1947,15 +1998,15 @@ document.addEventListener("DOMContentLoaded", function() {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90602829" target="_blank" class="view-btn" onclick="markRowSeen('90602829')" onauxclick="if (event.button === 1) markRowSeen('90602829')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('90602829', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="88702539" data-index="19" data-platform="Rightmove" data-deal="good" data-early-bird="false">
+<tr data-id="88702539" data-index="21" data-platform="Rightmove" data-deal="good" data-early-bird="false">
           <td data-value="1779283499549">2026-05-20 13:24:59</td>
           <td data-value="1779148800000">2026-05-19</td>
           <td data-value="Added on 19/05/2026">Added on 19/05/2026</td>
           <td data-value="0"><span class="avail-text">Ask agent</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
-          <td>Canary Wharf</td>
-          <td>41 Millharbour, Tower Hamlets, London, E14</td>
+          <td data-value="Canary Wharf">Canary Wharf</td>
+          <td data-value="41 Millharbour, Tower Hamlets, London, E14"><a href="https://www.google.com/maps/search/?api=1&query=41%20Millharbour%2C%20Tower%20Hamlets%2C%20London%2C%20E14%2C%20Canary%20Wharf" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">41 Millharbour, Tower Hamlets, London, E14</a></td>
           <td class="numeric" data-value="2145">£2145</td>
           <td class="numeric" data-value="54">54 sqm</td>
           <td class="numeric" data-value="39.72222222222222">£39.72<br><span class="badge badge-deal badge-deal-good" title="Good £/sqm value">👍 Good Value</span></td>
@@ -1963,15 +2014,15 @@ document.addEventListener("DOMContentLoaded", function() {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/88702539" target="_blank" class="view-btn" onclick="markRowSeen('88702539')" onauxclick="if (event.button === 1) markRowSeen('88702539')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('88702539', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="90453585" data-index="20" data-platform="Rightmove" data-deal="fair" data-early-bird="true">
+<tr data-id="90453585" data-index="22" data-platform="Rightmove" data-deal="fair" data-early-bird="true">
           <td data-value="1783166232810">2026-07-04 11:57:12</td>
           <td data-value="1783036800000">2026-07-03</td>
           <td data-value="Added on 03/07/2026">Added on 03/07/2026</td>
           <td data-value="1788739200000"><span class="avail-text">07/09/2026</span><span class="compat-indicator"></span><br><span class="badge badge-earlybird" title="Listed 66 days before let available date!">🦅 Early Bird (66d adv)</span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
-          <td>Canary Wharf</td>
-          <td>Roosevelt Tower, Williamsburg Plaza, London, E14</td>
+          <td data-value="Canary Wharf">Canary Wharf</td>
+          <td data-value="Roosevelt Tower, Williamsburg Plaza, London, E14"><a href="https://www.google.com/maps/search/?api=1&query=Roosevelt%20Tower%2C%20Williamsburg%20Plaza%2C%20London%2C%20E14%2C%20Canary%20Wharf" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">Roosevelt Tower, Williamsburg Plaza, London, E14</a></td>
           <td class="numeric" data-value="2250">£2250</td>
           <td class="numeric" data-value="52">52 sqm</td>
           <td class="numeric" data-value="43.26923076923077">£43.27<br><span class="badge badge-deal badge-deal-fair">⚖️ Market Rate</span></td>
@@ -1979,15 +2030,15 @@ document.addEventListener("DOMContentLoaded", function() {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90453585" target="_blank" class="view-btn" onclick="markRowSeen('90453585')" onauxclick="if (event.button === 1) markRowSeen('90453585')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('90453585', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="89891085" data-index="21" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
+<tr data-id="89891085" data-index="23" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
           <td data-value="1781877417343">2026-06-19 13:56:57</td>
           <td data-value="1781740800000">2026-06-18</td>
           <td data-value="Added on 18/06/2026">Added on 18/06/2026</td>
           <td data-value="0"><span class="avail-text">Ask agent</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
-          <td>Canary Wharf</td>
-          <td>Cobalt Point, Canary Wharf, London, E14</td>
+          <td data-value="Canary Wharf">Canary Wharf</td>
+          <td data-value="Cobalt Point, Canary Wharf, London, E14"><a href="https://www.google.com/maps/search/?api=1&query=Cobalt%20Point%2C%20Canary%20Wharf%2C%20London%2C%20E14" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">Cobalt Point, Canary Wharf, London, E14</a></td>
           <td class="numeric" data-value="2297">£2297</td>
           <td class="numeric" data-value="52">52 sqm</td>
           <td class="numeric" data-value="44.17307692307692">£44.17<br><span class="badge badge-deal badge-deal-fair">⚖️ Market Rate</span></td>
@@ -1995,15 +2046,15 @@ document.addEventListener("DOMContentLoaded", function() {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/89891085" target="_blank" class="view-btn" onclick="markRowSeen('89891085')" onauxclick="if (event.button === 1) markRowSeen('89891085')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('89891085', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="90754224" data-index="22" data-platform="Rightmove" data-deal="fair" data-early-bird="true">
+<tr data-id="90754224" data-index="24" data-platform="Rightmove" data-deal="fair" data-early-bird="true">
           <td data-value="1783703810152">2026-07-10 17:16:50</td>
           <td data-value="1783641600000">2026-07-10</td>
           <td data-value="Added on 10/07/2026">Added on 10/07/2026</td>
           <td data-value="1789603200000"><span class="avail-text">17/09/2026</span><span class="compat-indicator"></span><br><span class="badge badge-earlybird" title="Listed 69 days before let available date!">🦅 Early Bird (69d adv)</span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Chase Evans, Canary Wharf"><span class="agent-name">Chase Evans, Canary Wharf</span></td>
-          <td>Canary Wharf</td>
-          <td>Roosevelt Tower, Manhattan Plaza, 18 Williamsburg Plaza, Canary Wharf, London, E14</td>
+          <td data-value="Canary Wharf">Canary Wharf</td>
+          <td data-value="Roosevelt Tower, Manhattan Plaza, 18 Williamsburg Plaza, Canary Wharf, London, E14"><a href="https://www.google.com/maps/search/?api=1&query=Roosevelt%20Tower%2C%20Manhattan%20Plaza%2C%2018%20Williamsburg%20Plaza%2C%20Canary%20Wharf%2C%20London%2C%20E14" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">Roosevelt Tower, Manhattan Plaza, 18 Williamsburg Plaza, Canary Wharf, London, E14</a></td>
           <td class="numeric" data-value="2383">£2383</td>
           <td class="numeric" data-value="52">52 sqm</td>
           <td class="numeric" data-value="45.82692307692308">£45.83<br><span class="badge badge-deal badge-deal-fair">⚖️ Market Rate</span></td>
@@ -2011,15 +2062,31 @@ document.addEventListener("DOMContentLoaded", function() {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90754224" target="_blank" class="view-btn" onclick="markRowSeen('90754224')" onauxclick="if (event.button === 1) markRowSeen('90754224')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('90754224', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="90047667" data-index="23" data-platform="Rightmove" data-deal="fair" data-early-bird="true">
+<tr data-id="2402342" data-index="25" data-platform="Johns&Co" data-deal="fair" data-early-bird="false">
+          <td data-value="1783931541877">2026-07-13 08:32:21</td>
+          <td data-value="1783900800000">2026-07-13</td>
+          <td data-value="Available">Available</td>
+          <td data-value="0"><span class="avail-text">Ask agent</span><span class="compat-indicator"></span></td>
+          <td data-value="Johns&Co"><span class="badge-platform badge-platform-johnsandco">🏙️ Johns&Co</span></td>
+          <td data-value="JOHNS&CO"><span class="agent-name">JOHNS&CO</span></td>
+          <td data-value="Canary Wharf (E14)">Canary Wharf (E14)</td>
+          <td data-value="Roosevelt Tower"><a href="https://www.google.com/maps/search/?api=1&query=Roosevelt%20Tower%2C%20Canary%20Wharf%20(E14)" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">Roosevelt Tower</a></td>
+          <td class="numeric" data-value="2340">£2340</td>
+          <td class="numeric" data-value="51.28">51.28 sqm</td>
+          <td class="numeric" data-value="45.63182527301092">£45.63<br><span class="badge badge-deal badge-deal-fair">⚖️ Market Rate</span></td>
+          <td style="text-align: center;"><button class="note-btn note-icon-btn" id="note-btn-2402342" onclick="openNoteModal('2402342')" title="Add / View Note">📝</button></td>
+          <td style="text-align: center;"><a href="https://www.johnsand.co/properties/roosevelt-tower-2402342" target="_blank" class="view-btn" onclick="markRowSeen('2402342')" onauxclick="if (event.button === 1) markRowSeen('2402342')">View</a></td>
+          <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('2402342', this)" title="Save Property">☆</button></td>
+        </tr>
+<tr data-id="90047667" data-index="26" data-platform="Rightmove" data-deal="fair" data-early-bird="true">
           <td data-value="1782304599200">2026-06-24 12:36:39</td>
           <td data-value="1782172800000">2026-06-23</td>
           <td data-value="Added on 23/06/2026">Added on 23/06/2026</td>
           <td data-value="1789084800000"><span class="avail-text">11/09/2026</span><span class="compat-indicator"></span><br><span class="badge badge-earlybird" title="Listed 80 days before let available date!">🦅 Early Bird (80d adv)</span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
-          <td>Canary Wharf</td>
-          <td>Williamsburg Plaza, Canary Wharf</td>
+          <td data-value="Canary Wharf">Canary Wharf</td>
+          <td data-value="Williamsburg Plaza, Canary Wharf"><a href="https://www.google.com/maps/search/?api=1&query=Williamsburg%20Plaza%2C%20Canary%20Wharf" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">Williamsburg Plaza, Canary Wharf</a></td>
           <td class="numeric" data-value="2250">£2250</td>
           <td class="numeric" data-value="51">51 sqm</td>
           <td class="numeric" data-value="44.11764705882353">£44.12<br><span class="badge badge-deal badge-deal-fair">⚖️ Market Rate</span></td>
@@ -2027,15 +2094,15 @@ document.addEventListener("DOMContentLoaded", function() {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90047667" target="_blank" class="view-btn" onclick="markRowSeen('90047667')" onauxclick="if (event.button === 1) markRowSeen('90047667')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('90047667', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="89915127" data-index="24" data-platform="Rightmove" data-deal="fair" data-early-bird="true">
+<tr data-id="89915127" data-index="27" data-platform="Rightmove" data-deal="fair" data-early-bird="true">
           <td data-value="1781877417344">2026-06-19 13:56:57</td>
           <td data-value="1781827200000">2026-06-19</td>
           <td data-value="Added on 19/06/2026">Added on 19/06/2026</td>
           <td data-value="1788998400000"><span class="avail-text">10/09/2026</span><span class="compat-indicator"></span><br><span class="badge badge-earlybird" title="Listed 83 days before let available date!">🦅 Early Bird (83d adv)</span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
-          <td>Canary Wharf</td>
-          <td>The Landmark, Canary Wharf, E14</td>
+          <td data-value="Canary Wharf">Canary Wharf</td>
+          <td data-value="The Landmark, Canary Wharf, E14"><a href="https://www.google.com/maps/search/?api=1&query=The%20Landmark%2C%20Canary%20Wharf%2C%20E14" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">The Landmark, Canary Wharf, E14</a></td>
           <td class="numeric" data-value="2400">£2400</td>
           <td class="numeric" data-value="51">51 sqm</td>
           <td class="numeric" data-value="47.05882352941177">£47.06<br><span class="badge badge-deal badge-deal-fair">⚖️ Market Rate</span></td>
@@ -2043,15 +2110,15 @@ document.addEventListener("DOMContentLoaded", function() {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/89915127" target="_blank" class="view-btn" onclick="markRowSeen('89915127')" onauxclick="if (event.button === 1) markRowSeen('89915127')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('89915127', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="88898406" data-index="25" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
+<tr data-id="88898406" data-index="28" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
           <td data-value="1779716901174">2026-05-25 13:48:21</td>
           <td data-value="1781481600000">2026-06-15</td>
           <td data-value="Reduced on 15/06/2026">Reduced on 15/06/2026</td>
           <td data-value="0"><span class="avail-text">Ask agent</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
-          <td>Canary Wharf</td>
-          <td>Ability Place, Canary Wharf, London</td>
+          <td data-value="Canary Wharf">Canary Wharf</td>
+          <td data-value="Ability Place, Canary Wharf, London"><a href="https://www.google.com/maps/search/?api=1&query=Ability%20Place%2C%20Canary%20Wharf%2C%20London" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">Ability Place, Canary Wharf, London</a></td>
           <td class="numeric" data-value="2450">£2450</td>
           <td class="numeric" data-value="49.8">49.8 sqm</td>
           <td class="numeric" data-value="49.19678714859438">£49.20<br><span class="badge badge-deal badge-deal-fair">⚖️ Market Rate</span></td>
@@ -2059,15 +2126,15 @@ document.addEventListener("DOMContentLoaded", function() {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/88898406" target="_blank" class="view-btn" onclick="markRowSeen('88898406')" onauxclick="if (event.button === 1) markRowSeen('88898406')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('88898406', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="90191994" data-index="26" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
+<tr data-id="90191994" data-index="29" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
           <td data-value="1782561680007">2026-06-27 12:01:20</td>
           <td data-value="1782432000000">2026-06-26</td>
           <td data-value="Added on 26/06/2026">Added on 26/06/2026</td>
           <td data-value="0"><span class="avail-text">Ask agent</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
-          <td>Canary Wharf</td>
-          <td>Pan Peninsula Square, Canary Wharf, London, E14</td>
+          <td data-value="Canary Wharf">Canary Wharf</td>
+          <td data-value="Pan Peninsula Square, Canary Wharf, London, E14"><a href="https://www.google.com/maps/search/?api=1&query=Pan%20Peninsula%20Square%2C%20Canary%20Wharf%2C%20London%2C%20E14" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">Pan Peninsula Square, Canary Wharf, London, E14</a></td>
           <td class="numeric" data-value="2500">£2500</td>
           <td class="numeric" data-value="49">49 sqm</td>
           <td class="numeric" data-value="51.02040816326531">£51.02<br><span class="badge badge-deal badge-deal-fair">⚖️ Market Rate</span></td>
@@ -2075,15 +2142,15 @@ document.addEventListener("DOMContentLoaded", function() {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90191994" target="_blank" class="view-btn" onclick="markRowSeen('90191994')" onauxclick="if (event.button === 1) markRowSeen('90191994')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('90191994', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="89874699" data-index="27" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
+<tr data-id="89874699" data-index="30" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
           <td data-value="1781877417344">2026-06-19 13:56:57</td>
           <td data-value="1781740800000">2026-06-18</td>
           <td data-value="Added on 18/06/2026">Added on 18/06/2026</td>
           <td data-value="0"><span class="avail-text">Ask agent</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
-          <td>Canary Wharf</td>
-          <td>Duckman Tower, Canary Wharf, London</td>
+          <td data-value="Canary Wharf">Canary Wharf</td>
+          <td data-value="Duckman Tower, Canary Wharf, London"><a href="https://www.google.com/maps/search/?api=1&query=Duckman%20Tower%2C%20Canary%20Wharf%2C%20London" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">Duckman Tower, Canary Wharf, London</a></td>
           <td class="numeric" data-value="2400">£2400</td>
           <td class="numeric" data-value="48.4">48.4 sqm</td>
           <td class="numeric" data-value="49.586776859504134">£49.59<br><span class="badge badge-deal badge-deal-fair">⚖️ Market Rate</span></td>
@@ -2091,15 +2158,15 @@ document.addEventListener("DOMContentLoaded", function() {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/89874699" target="_blank" class="view-btn" onclick="markRowSeen('89874699')" onauxclick="if (event.button === 1) markRowSeen('89874699')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('89874699', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="89570763" data-index="28" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
+<tr data-id="89570763" data-index="31" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
           <td data-value="1781187980170">2026-06-11 14:26:20</td>
           <td data-value="1781049600000">2026-06-10</td>
           <td data-value="Added on 10/06/2026">Added on 10/06/2026</td>
           <td data-value="0"><span class="avail-text">Ask agent</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
-          <td>Canary Wharf</td>
-          <td>Gainsborough House, Canary Wharf</td>
+          <td data-value="Canary Wharf">Canary Wharf</td>
+          <td data-value="Gainsborough House, Canary Wharf"><a href="https://www.google.com/maps/search/?api=1&query=Gainsborough%20House%2C%20Canary%20Wharf" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">Gainsborough House, Canary Wharf</a></td>
           <td class="numeric" data-value="2200">£2200</td>
           <td class="numeric" data-value="48">48 sqm</td>
           <td class="numeric" data-value="45.833333333333336">£45.83<br><span class="badge badge-deal badge-deal-fair">⚖️ Market Rate</span></td>
@@ -2107,15 +2174,15 @@ document.addEventListener("DOMContentLoaded", function() {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/89570763" target="_blank" class="view-btn" onclick="markRowSeen('89570763')" onauxclick="if (event.button === 1) markRowSeen('89570763')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('89570763', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="90076083" data-index="29" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
+<tr data-id="90076083" data-index="32" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
           <td data-value="1782304599200">2026-06-24 12:36:39</td>
           <td data-value="1782259200000">2026-06-24</td>
           <td data-value="Added on 24/06/2026">Added on 24/06/2026</td>
           <td data-value="0"><span class="avail-text">Ask agent</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
-          <td>Canary Wharf</td>
-          <td>Constable House, Cassilis Road, Canary Wharf, South Quay, London, E14 9LH</td>
+          <td data-value="Canary Wharf">Canary Wharf</td>
+          <td data-value="Constable House, Cassilis Road, Canary Wharf, South Quay, London, E14 9LH"><a href="https://www.google.com/maps/search/?api=1&query=Constable%20House%2C%20Cassilis%20Road%2C%20Canary%20Wharf%2C%20South%20Quay%2C%20London%2C%20E14%209LH" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">Constable House, Cassilis Road, Canary Wharf, South Quay, London, E14 9LH</a></td>
           <td class="numeric" data-value="2253">£2253</td>
           <td class="numeric" data-value="46.45">46.45 sqm</td>
           <td class="numeric" data-value="48.5037674919268">£48.50<br><span class="badge badge-deal badge-deal-fair">⚖️ Market Rate</span></td>
@@ -2123,15 +2190,15 @@ document.addEventListener("DOMContentLoaded", function() {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90076083" target="_blank" class="view-btn" onclick="markRowSeen('90076083')" onauxclick="if (event.button === 1) markRowSeen('90076083')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('90076083', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="90499383" data-index="30" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
+<tr data-id="90499383" data-index="33" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
           <td data-value="1783252944853">2026-07-05 12:02:24</td>
           <td data-value="1783123200000">2026-07-04</td>
           <td data-value="Added on 04/07/2026">Added on 04/07/2026</td>
           <td data-value="0"><span class="avail-text">Ask agent</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
-          <td>Canary Wharf</td>
-          <td>Millharbour, Canary Wharf</td>
+          <td data-value="Canary Wharf">Canary Wharf</td>
+          <td data-value="Millharbour, Canary Wharf"><a href="https://www.google.com/maps/search/?api=1&query=Millharbour%2C%20Canary%20Wharf" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">Millharbour, Canary Wharf</a></td>
           <td class="numeric" data-value="2150">£2150</td>
           <td class="numeric" data-value="46.36">46.36 sqm</td>
           <td class="numeric" data-value="46.37618636755824">£46.38<br><span class="badge badge-deal badge-deal-fair">⚖️ Market Rate</span></td>
@@ -2139,15 +2206,15 @@ document.addEventListener("DOMContentLoaded", function() {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90499383" target="_blank" class="view-btn" onclick="markRowSeen('90499383')" onauxclick="if (event.button === 1) markRowSeen('90499383')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('90499383', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="90404763" data-index="31" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
+<tr data-id="90404763" data-index="34" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
           <td data-value="1782995533021">2026-07-02 12:32:13</td>
           <td data-value="1782950400000">2026-07-02</td>
           <td data-value="Added on 02/07/2026">Added on 02/07/2026</td>
           <td data-value="0"><span class="avail-text">Ask agent</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
-          <td>Farringdon</td>
-          <td>Goswell Road, Clerkenwell, London, EC1V</td>
+          <td data-value="Farringdon">Farringdon</td>
+          <td data-value="Goswell Road, Clerkenwell, London, EC1V"><a href="https://www.google.com/maps/search/?api=1&query=Goswell%20Road%2C%20Clerkenwell%2C%20London%2C%20EC1V%2C%20Farringdon" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">Goswell Road, Clerkenwell, London, EC1V</a></td>
           <td class="numeric" data-value="2500">£2500</td>
           <td class="numeric" data-value="45">45 sqm</td>
           <td class="numeric" data-value="55.55555555555556">£55.56<br><span class="badge badge-deal badge-deal-fair">⚖️ Market Rate</span></td>
@@ -2155,15 +2222,31 @@ document.addEventListener("DOMContentLoaded", function() {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90404763" target="_blank" class="view-btn" onclick="markRowSeen('90404763')" onauxclick="if (event.button === 1) markRowSeen('90404763')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('90404763', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="89936142" data-index="32" data-platform="Rightmove" data-deal="fair" data-early-bird="true">
+<tr data-id="2342322" data-index="35" data-platform="Johns&Co" data-deal="fair" data-early-bird="false">
+          <td data-value="1783930415521">2026-07-13 08:13:35</td>
+          <td data-value="1783900800000">2026-07-13</td>
+          <td data-value="Available">Available</td>
+          <td data-value="0"><span class="avail-text">Ask agent</span><span class="compat-indicator"></span></td>
+          <td data-value="Johns&Co"><span class="badge-platform badge-platform-johnsandco">🏙️ Johns&Co</span></td>
+          <td data-value="JOHNS&CO"><span class="agent-name">JOHNS&CO</span></td>
+          <td data-value="Canary Wharf (E14)">Canary Wharf (E14)</td>
+          <td data-value="Pan Peninsula"><a href="https://www.google.com/maps/search/?api=1&query=Pan%20Peninsula%2C%20Canary%20Wharf%20(E14)" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">Pan Peninsula</a></td>
+          <td class="numeric" data-value="2496">£2496</td>
+          <td class="numeric" data-value="44.39">44.39 sqm</td>
+          <td class="numeric" data-value="56.228880378463614">£56.23<br><span class="badge badge-deal badge-deal-fair">⚖️ Market Rate</span></td>
+          <td style="text-align: center;"><button class="note-btn note-icon-btn" id="note-btn-2342322" onclick="openNoteModal('2342322')" title="Add / View Note">📝</button></td>
+          <td style="text-align: center;"><a href="https://www.johnsand.co/properties/pan-peninsula-2342322" target="_blank" class="view-btn" onclick="markRowSeen('2342322')" onauxclick="if (event.button === 1) markRowSeen('2342322')">View</a></td>
+          <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('2342322', this)" title="Save Property">☆</button></td>
+        </tr>
+<tr data-id="89936142" data-index="36" data-platform="Rightmove" data-deal="fair" data-early-bird="true">
           <td data-value="1781957851434">2026-06-20 12:17:31</td>
           <td data-value="1781827200000">2026-06-19</td>
           <td data-value="Added on 19/06/2026">Added on 19/06/2026</td>
           <td data-value="1789603200000"><span class="avail-text">17/09/2026</span><span class="compat-indicator"></span><br><span class="badge badge-earlybird" title="Listed 90 days before let available date!">🦅 Early Bird (90d adv)</span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
-          <td>Canary Wharf</td>
-          <td>Talisman Tower, Lincoln Plaza, Canary Wharf, London</td>
+          <td data-value="Canary Wharf">Canary Wharf</td>
+          <td data-value="Talisman Tower, Lincoln Plaza, Canary Wharf, London"><a href="https://www.google.com/maps/search/?api=1&query=Talisman%20Tower%2C%20Lincoln%20Plaza%2C%20Canary%20Wharf%2C%20London" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">Talisman Tower, Lincoln Plaza, Canary Wharf, London</a></td>
           <td class="numeric" data-value="2400">£2400</td>
           <td class="numeric" data-value="43.77">43.77 sqm</td>
           <td class="numeric" data-value="54.83207676490747">£54.83<br><span class="badge badge-deal badge-deal-fair">⚖️ Market Rate</span></td>
@@ -2171,15 +2254,15 @@ document.addEventListener("DOMContentLoaded", function() {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/89936142" target="_blank" class="view-btn" onclick="markRowSeen('89936142')" onauxclick="if (event.button === 1) markRowSeen('89936142')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('89936142', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="157618283" data-index="33" data-platform="Rightmove" data-deal="fair" data-early-bird="true">
+<tr data-id="157618283" data-index="37" data-platform="Rightmove" data-deal="fair" data-early-bird="true">
           <td data-value="1782995533021">2026-07-02 12:32:13</td>
           <td data-value="1782864000000">2026-07-01</td>
           <td data-value="Added on 01/07/2026">Added on 01/07/2026</td>
           <td data-value="1789430400000"><span class="avail-text">15/09/2026</span><span class="compat-indicator"></span><br><span class="badge badge-earlybird" title="Listed 76 days before let available date!">🦅 Early Bird (76d adv)</span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
-          <td>Canary Wharf</td>
-          <td>Aspen, Marsh Wall, Canary Wharf, London, E14</td>
+          <td data-value="Canary Wharf">Canary Wharf</td>
+          <td data-value="Aspen, Marsh Wall, Canary Wharf, London, E14"><a href="https://www.google.com/maps/search/?api=1&query=Aspen%2C%20Marsh%20Wall%2C%20Canary%20Wharf%2C%20London%2C%20E14" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">Aspen, Marsh Wall, Canary Wharf, London, E14</a></td>
           <td class="numeric" data-value="2448">£2448</td>
           <td class="numeric" data-value="42.09">42.09 sqm</td>
           <td class="numeric" data-value="58.16108339272986">£58.16<br><span class="badge badge-deal badge-deal-fair">⚖️ Market Rate</span></td>
@@ -2187,15 +2270,15 @@ document.addEventListener("DOMContentLoaded", function() {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/157618283" target="_blank" class="view-btn" onclick="markRowSeen('157618283')" onauxclick="if (event.button === 1) markRowSeen('157618283')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('157618283', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="90473625" data-index="34" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
+<tr data-id="90473625" data-index="38" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
           <td data-value="1783166232810">2026-07-04 11:57:12</td>
           <td data-value="1783036800000">2026-07-03</td>
           <td data-value="Added on 03/07/2026">Added on 03/07/2026</td>
           <td data-value="0"><span class="avail-text">Ask agent</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
-          <td>Canary Wharf</td>
-          <td>Baltimore Wharf, Canary Wharf</td>
+          <td data-value="Canary Wharf">Canary Wharf</td>
+          <td data-value="Baltimore Wharf, Canary Wharf"><a href="https://www.google.com/maps/search/?api=1&query=Baltimore%20Wharf%2C%20Canary%20Wharf" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">Baltimore Wharf, Canary Wharf</a></td>
           <td class="numeric" data-value="2250">£2250</td>
           <td class="numeric" data-value="41">41 sqm</td>
           <td class="numeric" data-value="54.8780487804878">£54.88<br><span class="badge badge-deal badge-deal-fair">⚖️ Market Rate</span></td>
@@ -2203,15 +2286,15 @@ document.addEventListener("DOMContentLoaded", function() {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90473625" target="_blank" class="view-btn" onclick="markRowSeen('90473625')" onauxclick="if (event.button === 1) markRowSeen('90473625')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('90473625', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="88695372" data-index="35" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
+<tr data-id="88695372" data-index="39" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
           <td data-value="1781791122040">2026-06-18 13:58:42</td>
           <td data-value="1781654400000">2026-06-17</td>
           <td data-value="Reduced on 17/06/2026">Reduced on 17/06/2026</td>
           <td data-value="0"><span class="avail-text">Ask agent</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
-          <td>Canary Wharf</td>
-          <td>Park Drive, Canary Wharf, London, E14</td>
+          <td data-value="Canary Wharf">Canary Wharf</td>
+          <td data-value="Park Drive, Canary Wharf, London, E14"><a href="https://www.google.com/maps/search/?api=1&query=Park%20Drive%2C%20Canary%20Wharf%2C%20London%2C%20E14" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">Park Drive, Canary Wharf, London, E14</a></td>
           <td class="numeric" data-value="2384">£2384</td>
           <td class="numeric" data-value="41">41 sqm</td>
           <td class="numeric" data-value="58.146341463414636">£58.15<br><span class="badge badge-deal badge-deal-fair">⚖️ Market Rate</span></td>
@@ -2219,15 +2302,15 @@ document.addEventListener("DOMContentLoaded", function() {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/88695372" target="_blank" class="view-btn" onclick="markRowSeen('88695372')" onauxclick="if (event.button === 1) markRowSeen('88695372')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('88695372', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="19588097" data-index="36" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
+<tr data-id="19588097" data-index="40" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
           <td data-value="1779371322933">2026-05-21 13:48:42</td>
           <td data-value="1781568000000">2026-06-16</td>
           <td data-value="Reduced on 16/06/2026">Reduced on 16/06/2026</td>
           <td data-value="0"><span class="avail-text">Ask agent</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Unknown"><span class="agent-name">Unknown</span></td>
-          <td>Farringdon</td>
-          <td>Fetter Lane,London,EC4A</td>
+          <td data-value="Farringdon">Farringdon</td>
+          <td data-value="Fetter Lane,London,EC4A"><a href="https://www.google.com/maps/search/?api=1&query=Fetter%20Lane%2CLondon%2CEC4A%2C%20Farringdon" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">Fetter Lane,London,EC4A</a></td>
           <td class="numeric" data-value="2275">£2275</td>
           <td class="numeric" data-value="40">40 sqm</td>
           <td class="numeric" data-value="56.875">£56.88<br><span class="badge badge-deal badge-deal-fair">⚖️ Market Rate</span></td>
@@ -2235,15 +2318,15 @@ document.addEventListener("DOMContentLoaded", function() {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/19588097" target="_blank" class="view-btn" onclick="markRowSeen('19588097')" onauxclick="if (event.button === 1) markRowSeen('19588097')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('19588097', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="90558996" data-index="37" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
+<tr data-id="90558996" data-index="41" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
           <td data-value="1783429514906">2026-07-07 13:05:14</td>
           <td data-value="1783296000000">2026-07-06</td>
           <td data-value="Added on 06/07/2026">Added on 06/07/2026</td>
           <td data-value="0"><span class="avail-text">Ask agent</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Hurford Salvi Carr, Britton Street"><span class="agent-name">Hurford Salvi Carr, Britton Street</span></td>
-          <td>Farringdon / Clerkenwell</td>
-          <td>Barbican, EC2Y</td>
+          <td data-value="Farringdon / Clerkenwell">Farringdon / Clerkenwell</td>
+          <td data-value="Barbican, EC2Y"><a href="https://www.google.com/maps/search/?api=1&query=Barbican%2C%20EC2Y%2C%20Farringdon%20%2F%20Clerkenwell" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">Barbican, EC2Y</a></td>
           <td class="numeric" data-value="2500">£2500</td>
           <td class="numeric" data-value="40">40 sqm</td>
           <td class="numeric" data-value="62.5">£62.50<br><span class="badge badge-deal badge-deal-fair">⚖️ Market Rate</span></td>
@@ -2251,578 +2334,594 @@ document.addEventListener("DOMContentLoaded", function() {
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90558996" target="_blank" class="view-btn" onclick="markRowSeen('90558996')" onauxclick="if (event.button === 1) markRowSeen('90558996')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('90558996', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="90527991" data-index="38" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
+<tr data-id="90527991" data-index="42" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
           <td data-value="1783930452474">2026-07-13 08:14:12</td>
           <td data-value="1783296000000">2026-07-06</td>
           <td data-value="Added on 06/07/2026">Added on 06/07/2026</td>
-          <td data-value="1783930452708"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-value="1783933432838"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Hellas-Helvetia, London"><span class="agent-name">Hellas-Helvetia, London</span></td>
-          <td>Paddington</td>
-          <td>Inverness Terrace, City Of Westminster, London</td>
+          <td data-value="Paddington">Paddington</td>
+          <td data-value="Inverness Terrace, City Of Westminster, London"><a href="https://www.google.com/maps/search/?api=1&query=Inverness%20Terrace%2C%20City%20Of%20Westminster%2C%20London%2C%20Paddington" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">Inverness Terrace, City Of Westminster, London</a></td>
           <td class="numeric" data-value="345">£345</td>
-          <td class="numeric" data-value="0">0 sqm</td>
-          <td class="numeric" data-value="0">£N/A</td>
+          <td class="numeric" data-value="0">Unknown</td>
+          <td class="numeric" data-value="0">N/A</td>
           <td style="text-align: center;"><button class="note-btn note-icon-btn" id="note-btn-90527991" onclick="openNoteModal('90527991')" title="Add / View Note">📝</button></td>
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90527991" target="_blank" class="view-btn" onclick="markRowSeen('90527991')" onauxclick="if (event.button === 1) markRowSeen('90527991')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('90527991', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="90618570" data-index="39" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
+<tr data-id="90618570" data-index="43" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
           <td data-value="1783930452474">2026-07-13 08:14:12</td>
           <td data-value="1783468800000">2026-07-08</td>
           <td data-value="Added on 08/07/2026">Added on 08/07/2026</td>
-          <td data-value="1783930452708"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-value="1783933432838"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Leo Newman, London"><span class="agent-name">Leo Newman, London</span></td>
-          <td>Paddington</td>
-          <td>Edgware Road, Paddington, W2</td>
+          <td data-value="Paddington">Paddington</td>
+          <td data-value="Edgware Road, Paddington, W2"><a href="https://www.google.com/maps/search/?api=1&query=Edgware%20Road%2C%20Paddington%2C%20W2" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">Edgware Road, Paddington, W2</a></td>
           <td class="numeric" data-value="1675">£1675</td>
-          <td class="numeric" data-value="0">0 sqm</td>
-          <td class="numeric" data-value="0">£N/A</td>
+          <td class="numeric" data-value="0">Unknown</td>
+          <td class="numeric" data-value="0">N/A</td>
           <td style="text-align: center;"><button class="note-btn note-icon-btn" id="note-btn-90618570" onclick="openNoteModal('90618570')" title="Add / View Note">📝</button></td>
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90618570" target="_blank" class="view-btn" onclick="markRowSeen('90618570')" onauxclick="if (event.button === 1) markRowSeen('90618570')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('90618570', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="89984841" data-index="40" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
+<tr data-id="89984841" data-index="44" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
           <td data-value="1783930452474">2026-07-13 08:14:12</td>
           <td data-value="1783641600000">2026-07-10</td>
           <td data-value="Reduced on 10/07/2026">Reduced on 10/07/2026</td>
           <td data-value="0"><span class="avail-text">Ask agent</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Dexters, Clerkenwell"><span class="agent-name">Dexters, Clerkenwell</span></td>
-          <td>Moorgate</td>
-          <td>Charterhouse Square, Farringdon</td>
+          <td data-value="Moorgate">Moorgate</td>
+          <td data-value="Charterhouse Square, Farringdon"><a href="https://www.google.com/maps/search/?api=1&query=Charterhouse%20Square%2C%20Farringdon%2C%20Moorgate" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">Charterhouse Square, Farringdon</a></td>
           <td class="numeric" data-value="1750">£1750</td>
-          <td class="numeric" data-value="0">0 sqm</td>
-          <td class="numeric" data-value="0">£N/A</td>
+          <td class="numeric" data-value="0">Unknown</td>
+          <td class="numeric" data-value="0">N/A</td>
           <td style="text-align: center;"><button class="note-btn note-icon-btn" id="note-btn-89984841" onclick="openNoteModal('89984841')" title="Add / View Note">📝</button></td>
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/89984841" target="_blank" class="view-btn" onclick="markRowSeen('89984841')" onauxclick="if (event.button === 1) markRowSeen('89984841')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('89984841', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="P169094" data-index="41" data-platform="JLL" data-deal="fair" data-early-bird="false">
+<tr data-id="P169094" data-index="45" data-platform="JLL" data-deal="fair" data-early-bird="false">
           <td data-value="1783930449993">2026-07-13 08:14:09</td>
           <td data-value="1783900800000">2026-07-13</td>
           <td data-value="Available">Available</td>
           <td data-value="0"><span class="avail-text">Ask agent</span><span class="compat-indicator"></span></td>
           <td data-value="JLL"><span class="badge-platform badge-platform-jll">🏢 JLL</span></td>
           <td data-value="JLL"><span class="agent-name">JLL</span></td>
-          <td>Canary Wharf (E14)</td>
-          <td>River Gardens Walk London SE10</td>
+          <td data-value="Canary Wharf (E14)">Canary Wharf (E14)</td>
+          <td data-value="River Gardens Walk London SE10"><a href="https://www.google.com/maps/search/?api=1&query=River%20Gardens%20Walk%20London%20SE10%2C%20Canary%20Wharf%20(E14)" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">River Gardens Walk London SE10</a></td>
           <td class="numeric" data-value="2000">£2000</td>
-          <td class="numeric" data-value="0">0 sqm</td>
-          <td class="numeric" data-value="0">£N/A</td>
+          <td class="numeric" data-value="0">Unknown</td>
+          <td class="numeric" data-value="0">N/A</td>
           <td style="text-align: center;"><button class="note-btn note-icon-btn" id="note-btn-P169094" onclick="openNoteModal('P169094')" title="Add / View Note">📝</button></td>
           <td style="text-align: center;"><a href="https://residential.jll.co.uk/rent-apartment/london-se10-0gb-p169094" target="_blank" class="view-btn" onclick="markRowSeen('P169094')" onauxclick="if (event.button === 1) markRowSeen('P169094')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('P169094', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="P169197" data-index="42" data-platform="JLL" data-deal="fair" data-early-bird="false">
+<tr data-id="P169197" data-index="46" data-platform="JLL" data-deal="fair" data-early-bird="false">
           <td data-value="1783930449993">2026-07-13 08:14:09</td>
           <td data-value="1783900800000">2026-07-13</td>
           <td data-value="Available">Available</td>
           <td data-value="0"><span class="avail-text">Ask agent</span><span class="compat-indicator"></span></td>
           <td data-value="JLL"><span class="badge-platform badge-platform-jll">🏢 JLL</span></td>
           <td data-value="JLL"><span class="agent-name">JLL</span></td>
-          <td>Canary Wharf (E14)</td>
-          <td>161 Evelyn Street London SE8</td>
+          <td data-value="Canary Wharf (E14)">Canary Wharf (E14)</td>
+          <td data-value="161 Evelyn Street London SE8"><a href="https://www.google.com/maps/search/?api=1&query=161%20Evelyn%20Street%20London%20SE8%2C%20Canary%20Wharf%20(E14)" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">161 Evelyn Street London SE8</a></td>
           <td class="numeric" data-value="2018">£2018</td>
-          <td class="numeric" data-value="0">0 sqm</td>
-          <td class="numeric" data-value="0">£N/A</td>
+          <td class="numeric" data-value="0">Unknown</td>
+          <td class="numeric" data-value="0">N/A</td>
           <td style="text-align: center;"><button class="note-btn note-icon-btn" id="note-btn-P169197" onclick="openNoteModal('P169197')" title="Add / View Note">📝</button></td>
           <td style="text-align: center;"><a href="https://residential.jll.co.uk/rent-flat/london-se8-5fz-p169197" target="_blank" class="view-btn" onclick="markRowSeen('P169197')" onauxclick="if (event.button === 1) markRowSeen('P169197')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('P169197', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="P169260" data-index="43" data-platform="JLL" data-deal="fair" data-early-bird="false">
+<tr data-id="P169260" data-index="47" data-platform="JLL" data-deal="fair" data-early-bird="false">
           <td data-value="1783930449993">2026-07-13 08:14:09</td>
           <td data-value="1783900800000">2026-07-13</td>
           <td data-value="Available">Available</td>
           <td data-value="0"><span class="avail-text">Ask agent</span><span class="compat-indicator"></span></td>
           <td data-value="JLL"><span class="badge-platform badge-platform-jll">🏢 JLL</span></td>
           <td data-value="JLL"><span class="agent-name">JLL</span></td>
-          <td>Canary Wharf (E14)</td>
-          <td>Zinc Street Sugar House Island E15</td>
+          <td data-value="Canary Wharf (E14)">Canary Wharf (E14)</td>
+          <td data-value="Zinc Street Sugar House Island E15"><a href="https://www.google.com/maps/search/?api=1&query=Zinc%20Street%20Sugar%20House%20Island%20E15%2C%20Canary%20Wharf%20(E14)" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">Zinc Street Sugar House Island E15</a></td>
           <td class="numeric" data-value="2100">£2100</td>
-          <td class="numeric" data-value="0">0 sqm</td>
-          <td class="numeric" data-value="0">£N/A</td>
+          <td class="numeric" data-value="0">Unknown</td>
+          <td class="numeric" data-value="0">N/A</td>
           <td style="text-align: center;"><button class="note-btn note-icon-btn" id="note-btn-P169260" onclick="openNoteModal('P169260')" title="Add / View Note">📝</button></td>
           <td style="text-align: center;"><a href="https://residential.jll.co.uk/rent-flat/london-e15-2qz-p169260" target="_blank" class="view-btn" onclick="markRowSeen('P169260')" onauxclick="if (event.button === 1) markRowSeen('P169260')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('P169260', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="2708246" data-index="44" data-platform="Johns&Co" data-deal="fair" data-early-bird="false">
+<tr data-id="2708246" data-index="48" data-platform="Johns&Co" data-deal="fair" data-early-bird="false">
           <td data-value="1783930415521">2026-07-13 08:13:35</td>
           <td data-value="1783900800000">2026-07-13</td>
           <td data-value="Available">Available</td>
           <td data-value="0"><span class="avail-text">Ask agent</span><span class="compat-indicator"></span></td>
           <td data-value="Johns&Co"><span class="badge-platform badge-platform-johnsandco">🏙️ Johns&Co</span></td>
           <td data-value="JOHNS&CO"><span class="agent-name">JOHNS&CO</span></td>
-          <td>Canary Wharf (E14)</td>
-          <td>New Providence Wharf</td>
+          <td data-value="Canary Wharf (E14)">Canary Wharf (E14)</td>
+          <td data-value="New Providence Wharf"><a href="https://www.google.com/maps/search/?api=1&query=New%20Providence%20Wharf%2C%20Canary%20Wharf%20(E14)" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">New Providence Wharf</a></td>
           <td class="numeric" data-value="2102">£2102</td>
-          <td class="numeric" data-value="0">0 sqm</td>
-          <td class="numeric" data-value="0">£N/A</td>
+          <td class="numeric" data-value="0">Unknown</td>
+          <td class="numeric" data-value="0">N/A</td>
           <td style="text-align: center;"><button class="note-btn note-icon-btn" id="note-btn-2708246" onclick="openNoteModal('2708246')" title="Add / View Note">📝</button></td>
           <td style="text-align: center;"><a href="https://www.johnsand.co/properties/new-providence-wharf-2708246" target="_blank" class="view-btn" onclick="markRowSeen('2708246')" onauxclick="if (event.button === 1) markRowSeen('2708246')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('2708246', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="P169268" data-index="45" data-platform="JLL" data-deal="fair" data-early-bird="false">
+<tr data-id="P169268" data-index="49" data-platform="JLL" data-deal="fair" data-early-bird="false">
           <td data-value="1783930449992">2026-07-13 08:14:09</td>
           <td data-value="1783900800000">2026-07-13</td>
           <td data-value="Available">Available</td>
           <td data-value="0"><span class="avail-text">Ask agent</span><span class="compat-indicator"></span></td>
           <td data-value="JLL"><span class="badge-platform badge-platform-jll">🏢 JLL</span></td>
           <td data-value="JLL"><span class="agent-name">JLL</span></td>
-          <td>Canary Wharf (E14)</td>
-          <td>Copperworks Wharf Sugar House Island E15</td>
+          <td data-value="Canary Wharf (E14)">Canary Wharf (E14)</td>
+          <td data-value="Copperworks Wharf Sugar House Island E15"><a href="https://www.google.com/maps/search/?api=1&query=Copperworks%20Wharf%20Sugar%20House%20Island%20E15%2C%20Canary%20Wharf%20(E14)" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">Copperworks Wharf Sugar House Island E15</a></td>
           <td class="numeric" data-value="2150">£2150</td>
-          <td class="numeric" data-value="0">0 sqm</td>
-          <td class="numeric" data-value="0">£N/A</td>
+          <td class="numeric" data-value="0">Unknown</td>
+          <td class="numeric" data-value="0">N/A</td>
           <td style="text-align: center;"><button class="note-btn note-icon-btn" id="note-btn-P169268" onclick="openNoteModal('P169268')" title="Add / View Note">📝</button></td>
           <td style="text-align: center;"><a href="https://residential.jll.co.uk/rent-flat/london-e15-2bw-p169268" target="_blank" class="view-btn" onclick="markRowSeen('P169268')" onauxclick="if (event.button === 1) markRowSeen('P169268')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('P169268', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="90677925" data-index="46" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
+<tr data-id="88433652" data-index="50" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
+          <td data-value="1783931560393">2026-07-13 08:32:40</td>
+          <td data-value="1783382400000">2026-07-07</td>
+          <td data-value="Reduced on 07/07/2026">Reduced on 07/07/2026</td>
+          <td data-value="1783933432838"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
+          <td data-value="Regent Letting and Property Management, London"><span class="agent-name">Regent Letting and Property Management, London</span></td>
+          <td data-value="South Quay">South Quay</td>
+          <td data-value="Dock East Apartments, Selsdon Way, E14"><a href="https://www.google.com/maps/search/?api=1&query=Dock%20East%20Apartments%2C%20Selsdon%20Way%2C%20E14%2C%20South%20Quay" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">Dock East Apartments, Selsdon Way, E14</a></td>
+          <td class="numeric" data-value="2200">£2200</td>
+          <td class="numeric" data-value="0">Unknown</td>
+          <td class="numeric" data-value="0">N/A</td>
+          <td style="text-align: center;"><button class="note-btn note-icon-btn" id="note-btn-88433652" onclick="openNoteModal('88433652')" title="Add / View Note">📝</button></td>
+          <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/88433652" target="_blank" class="view-btn" onclick="markRowSeen('88433652')" onauxclick="if (event.button === 1) markRowSeen('88433652')">View</a></td>
+          <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('88433652', this)" title="Save Property">☆</button></td>
+        </tr>
+<tr data-id="90677925" data-index="51" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
           <td data-value="1783930452473">2026-07-13 08:14:12</td>
           <td data-value="1783555200000">2026-07-09</td>
           <td data-value="Added on 09/07/2026">Added on 09/07/2026</td>
-          <td data-value="1783930452708"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-value="1783933432838"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Regent Letting and Property Management, London"><span class="agent-name">Regent Letting and Property Management, London</span></td>
-          <td>Canary Wharf</td>
-          <td>Dock East Apartments, Selsdon Way, E14</td>
+          <td data-value="Canary Wharf">Canary Wharf</td>
+          <td data-value="Dock East Apartments, Selsdon Way, E14"><a href="https://www.google.com/maps/search/?api=1&query=Dock%20East%20Apartments%2C%20Selsdon%20Way%2C%20E14%2C%20Canary%20Wharf" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">Dock East Apartments, Selsdon Way, E14</a></td>
           <td class="numeric" data-value="2200">£2200</td>
-          <td class="numeric" data-value="0">0 sqm</td>
-          <td class="numeric" data-value="0">£N/A</td>
+          <td class="numeric" data-value="0">Unknown</td>
+          <td class="numeric" data-value="0">N/A</td>
           <td style="text-align: center;"><button class="note-btn note-icon-btn" id="note-btn-90677925" onclick="openNoteModal('90677925')" title="Add / View Note">📝</button></td>
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90677925" target="_blank" class="view-btn" onclick="markRowSeen('90677925')" onauxclick="if (event.button === 1) markRowSeen('90677925')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('90677925', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="90408405" data-index="47" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
+<tr data-id="90408405" data-index="52" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
           <td data-value="1783930452473">2026-07-13 08:14:12</td>
           <td data-value="1783641600000">2026-07-10</td>
           <td data-value="Reduced on 10/07/2026">Reduced on 10/07/2026</td>
           <td data-value="1788825600000"><span class="avail-text">08/09/2026</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Ernest Brooks International, Canary Wharf"><span class="agent-name">Ernest Brooks International, Canary Wharf</span></td>
-          <td>South Quay</td>
-          <td>Roosevelt Tower, 18 Williamsburg Plaza, Poplar, E14</td>
+          <td data-value="South Quay">South Quay</td>
+          <td data-value="Roosevelt Tower, 18 Williamsburg Plaza, Poplar, E14"><a href="https://www.google.com/maps/search/?api=1&query=Roosevelt%20Tower%2C%2018%20Williamsburg%20Plaza%2C%20Poplar%2C%20E14%2C%20South%20Quay" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">Roosevelt Tower, 18 Williamsburg Plaza, Poplar, E14</a></td>
           <td class="numeric" data-value="2200">£2200</td>
-          <td class="numeric" data-value="0">0 sqm</td>
-          <td class="numeric" data-value="0">£N/A</td>
+          <td class="numeric" data-value="0">Unknown</td>
+          <td class="numeric" data-value="0">N/A</td>
           <td style="text-align: center;"><button class="note-btn note-icon-btn" id="note-btn-90408405" onclick="openNoteModal('90408405')" title="Add / View Note">📝</button></td>
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90408405" target="_blank" class="view-btn" onclick="markRowSeen('90408405')" onauxclick="if (event.button === 1) markRowSeen('90408405')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('90408405', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="90755244" data-index="48" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
+<tr data-id="90755244" data-index="53" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
           <td data-value="1783930452472">2026-07-13 08:14:12</td>
           <td data-value="1783641600000">2026-07-10</td>
           <td data-value="Added on 10/07/2026">Added on 10/07/2026</td>
           <td data-value="0"><span class="avail-text">Ask agent</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Dexters, Canary Wharf"><span class="agent-name">Dexters, Canary Wharf</span></td>
-          <td>Canary Wharf</td>
-          <td>Manilla Street, Canary Wharf</td>
+          <td data-value="Canary Wharf">Canary Wharf</td>
+          <td data-value="Manilla Street, Canary Wharf"><a href="https://www.google.com/maps/search/?api=1&query=Manilla%20Street%2C%20Canary%20Wharf" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">Manilla Street, Canary Wharf</a></td>
           <td class="numeric" data-value="2200">£2200</td>
-          <td class="numeric" data-value="0">0 sqm</td>
-          <td class="numeric" data-value="0">£N/A</td>
+          <td class="numeric" data-value="0">Unknown</td>
+          <td class="numeric" data-value="0">N/A</td>
           <td style="text-align: center;"><button class="note-btn note-icon-btn" id="note-btn-90755244" onclick="openNoteModal('90755244')" title="Add / View Note">📝</button></td>
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90755244" target="_blank" class="view-btn" onclick="markRowSeen('90755244')" onauxclick="if (event.button === 1) markRowSeen('90755244')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('90755244', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="2732711" data-index="49" data-platform="Johns&Co" data-deal="fair" data-early-bird="false">
+<tr data-id="2732711" data-index="54" data-platform="Johns&Co" data-deal="fair" data-early-bird="false">
           <td data-value="1783930415521">2026-07-13 08:13:35</td>
           <td data-value="1783900800000">2026-07-13</td>
           <td data-value="Available">Available</td>
           <td data-value="0"><span class="avail-text">Ask agent</span><span class="compat-indicator"></span></td>
           <td data-value="Johns&Co"><span class="badge-platform badge-platform-johnsandco">🏙️ Johns&Co</span></td>
           <td data-value="JOHNS&CO"><span class="agent-name">JOHNS&CO</span></td>
-          <td>Canary Wharf (E14)</td>
-          <td>Torquay Court</td>
+          <td data-value="Canary Wharf (E14)">Canary Wharf (E14)</td>
+          <td data-value="Torquay Court"><a href="https://www.google.com/maps/search/?api=1&query=Torquay%20Court%2C%20Canary%20Wharf%20(E14)" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">Torquay Court</a></td>
           <td class="numeric" data-value="2202">£2202</td>
-          <td class="numeric" data-value="0">0 sqm</td>
-          <td class="numeric" data-value="0">£N/A</td>
+          <td class="numeric" data-value="0">Unknown</td>
+          <td class="numeric" data-value="0">N/A</td>
           <td style="text-align: center;"><button class="note-btn note-icon-btn" id="note-btn-2732711" onclick="openNoteModal('2732711')" title="Add / View Note">📝</button></td>
           <td style="text-align: center;"><a href="https://www.johnsand.co/properties/torquay-court-2732711" target="_blank" class="view-btn" onclick="markRowSeen('2732711')" onauxclick="if (event.button === 1) markRowSeen('2732711')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('2732711', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="90392160" data-index="50" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
+<tr data-id="90392160" data-index="55" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
           <td data-value="1783930452474">2026-07-13 08:14:12</td>
           <td data-value="1782950400000">2026-07-02</td>
           <td data-value="Added on 02/07/2026">Added on 02/07/2026</td>
           <td data-value="0"><span class="avail-text">Ask agent</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Scott City Residential, London"><span class="agent-name">Scott City Residential, London</span></td>
-          <td>Moorgate</td>
-          <td>Spencer Heights, 28 Bartholomew Close, London</td>
+          <td data-value="Moorgate">Moorgate</td>
+          <td data-value="Spencer Heights, 28 Bartholomew Close, London"><a href="https://www.google.com/maps/search/?api=1&query=Spencer%20Heights%2C%2028%20Bartholomew%20Close%2C%20London%2C%20Moorgate" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">Spencer Heights, 28 Bartholomew Close, London</a></td>
           <td class="numeric" data-value="2250">£2250</td>
-          <td class="numeric" data-value="0">0 sqm</td>
-          <td class="numeric" data-value="0">£N/A</td>
+          <td class="numeric" data-value="0">Unknown</td>
+          <td class="numeric" data-value="0">N/A</td>
           <td style="text-align: center;"><button class="note-btn note-icon-btn" id="note-btn-90392160" onclick="openNoteModal('90392160')" title="Add / View Note">📝</button></td>
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90392160" target="_blank" class="view-btn" onclick="markRowSeen('90392160')" onauxclick="if (event.button === 1) markRowSeen('90392160')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('90392160', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="90705138" data-index="51" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
+<tr data-id="90705138" data-index="56" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
           <td data-value="1783930452474">2026-07-13 08:14:12</td>
           <td data-value="1783555200000">2026-07-09</td>
           <td data-value="Added on 09/07/2026">Added on 09/07/2026</td>
           <td data-value="0"><span class="avail-text">Ask agent</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Dexters, Hyde Park and Bayswater"><span class="agent-name">Dexters, Hyde Park and Bayswater</span></td>
-          <td>Paddington</td>
-          <td>Orsett Terrace, Hyde Park</td>
+          <td data-value="Paddington">Paddington</td>
+          <td data-value="Orsett Terrace, Hyde Park"><a href="https://www.google.com/maps/search/?api=1&query=Orsett%20Terrace%2C%20Hyde%20Park%2C%20Paddington" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">Orsett Terrace, Hyde Park</a></td>
           <td class="numeric" data-value="2250">£2250</td>
-          <td class="numeric" data-value="0">0 sqm</td>
-          <td class="numeric" data-value="0">£N/A</td>
+          <td class="numeric" data-value="0">Unknown</td>
+          <td class="numeric" data-value="0">N/A</td>
           <td style="text-align: center;"><button class="note-btn note-icon-btn" id="note-btn-90705138" onclick="openNoteModal('90705138')" title="Add / View Note">📝</button></td>
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90705138" target="_blank" class="view-btn" onclick="markRowSeen('90705138')" onauxclick="if (event.button === 1) markRowSeen('90705138')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('90705138', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="90525966" data-index="52" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
+<tr data-id="90525966" data-index="57" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
           <td data-value="1783930452474">2026-07-13 08:14:12</td>
           <td data-value="1783296000000">2026-07-06</td>
           <td data-value="Added on 06/07/2026">Added on 06/07/2026</td>
           <td data-value="0"><span class="avail-text">Ask agent</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="AWCHILDS LTD, London"><span class="agent-name">AWCHILDS LTD, London</span></td>
-          <td>Moorgate</td>
-          <td>John Trundle Court, John Trundle Highwalk, Barbican, City Of London, London</td>
+          <td data-value="Moorgate">Moorgate</td>
+          <td data-value="John Trundle Court, John Trundle Highwalk, Barbican, City Of London, London"><a href="https://www.google.com/maps/search/?api=1&query=John%20Trundle%20Court%2C%20John%20Trundle%20Highwalk%2C%20Barbican%2C%20City%20Of%20London%2C%20London%2C%20Moorgate" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">John Trundle Court, John Trundle Highwalk, Barbican, City Of London, London</a></td>
           <td class="numeric" data-value="2275">£2275</td>
-          <td class="numeric" data-value="0">0 sqm</td>
-          <td class="numeric" data-value="0">£N/A</td>
+          <td class="numeric" data-value="0">Unknown</td>
+          <td class="numeric" data-value="0">N/A</td>
           <td style="text-align: center;"><button class="note-btn note-icon-btn" id="note-btn-90525966" onclick="openNoteModal('90525966')" title="Add / View Note">📝</button></td>
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90525966" target="_blank" class="view-btn" onclick="markRowSeen('90525966')" onauxclick="if (event.button === 1) markRowSeen('90525966')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('90525966', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="P169198" data-index="53" data-platform="JLL" data-deal="fair" data-early-bird="false">
+<tr data-id="P169198" data-index="58" data-platform="JLL" data-deal="fair" data-early-bird="false">
           <td data-value="1783930449993">2026-07-13 08:14:09</td>
           <td data-value="1783900800000">2026-07-13</td>
           <td data-value="Available">Available</td>
           <td data-value="0"><span class="avail-text">Ask agent</span><span class="compat-indicator"></span></td>
           <td data-value="JLL"><span class="badge-platform badge-platform-jll">🏢 JLL</span></td>
           <td data-value="JLL"><span class="agent-name">JLL</span></td>
-          <td>Canary Wharf (E14)</td>
-          <td>161 Evelyn Street London SE8</td>
+          <td data-value="Canary Wharf (E14)">Canary Wharf (E14)</td>
+          <td data-value="161 Evelyn Street London SE8"><a href="https://www.google.com/maps/search/?api=1&query=161%20Evelyn%20Street%20London%20SE8%2C%20Canary%20Wharf%20(E14)" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">161 Evelyn Street London SE8</a></td>
           <td class="numeric" data-value="2275">£2275</td>
-          <td class="numeric" data-value="0">0 sqm</td>
-          <td class="numeric" data-value="0">£N/A</td>
+          <td class="numeric" data-value="0">Unknown</td>
+          <td class="numeric" data-value="0">N/A</td>
           <td style="text-align: center;"><button class="note-btn note-icon-btn" id="note-btn-P169198" onclick="openNoteModal('P169198')" title="Add / View Note">📝</button></td>
           <td style="text-align: center;"><a href="https://residential.jll.co.uk/rent-flat/london-se8-5fy-p169198" target="_blank" class="view-btn" onclick="markRowSeen('P169198')" onauxclick="if (event.button === 1) markRowSeen('P169198')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('P169198', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="P169261" data-index="54" data-platform="JLL" data-deal="fair" data-early-bird="false">
+<tr data-id="P169261" data-index="59" data-platform="JLL" data-deal="fair" data-early-bird="false">
           <td data-value="1783930449992">2026-07-13 08:14:09</td>
           <td data-value="1783900800000">2026-07-13</td>
           <td data-value="Available">Available</td>
           <td data-value="0"><span class="avail-text">Ask agent</span><span class="compat-indicator"></span></td>
           <td data-value="JLL"><span class="badge-platform badge-platform-jll">🏢 JLL</span></td>
           <td data-value="JLL"><span class="agent-name">JLL</span></td>
-          <td>Canary Wharf (E14)</td>
-          <td>Amory Tower, Marsh Wall, E14</td>
+          <td data-value="Canary Wharf (E14)">Canary Wharf (E14)</td>
+          <td data-value="Amory Tower, Marsh Wall, E14"><a href="https://www.google.com/maps/search/?api=1&query=Amory%20Tower%2C%20Marsh%20Wall%2C%20E14%2C%20Canary%20Wharf%20(E14)" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">Amory Tower, Marsh Wall, E14</a></td>
           <td class="numeric" data-value="2275">£2275</td>
-          <td class="numeric" data-value="0">0 sqm</td>
-          <td class="numeric" data-value="0">£N/A</td>
+          <td class="numeric" data-value="0">Unknown</td>
+          <td class="numeric" data-value="0">N/A</td>
           <td style="text-align: center;"><button class="note-btn note-icon-btn" id="note-btn-P169261" onclick="openNoteModal('P169261')" title="Add / View Note">📝</button></td>
           <td style="text-align: center;"><a href="https://residential.jll.co.uk/rent-flat/london-e14-9zn-p169261" target="_blank" class="view-btn" onclick="markRowSeen('P169261')" onauxclick="if (event.button === 1) markRowSeen('P169261')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('P169261', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="173369096" data-index="55" data-platform="Rightmove" data-deal="fair" data-early-bird="true">
+<tr data-id="173369096" data-index="60" data-platform="Rightmove" data-deal="fair" data-early-bird="true">
           <td data-value="1783930452475">2026-07-13 08:14:12</td>
           <td data-value="1777507200000">2026-04-30</td>
           <td data-value="Reduced on 30/04/2026">Reduced on 30/04/2026</td>
-          <td data-value="1783930452708"><span class="avail-text">Now</span><span class="compat-indicator"></span><br><span class="badge badge-earlybird" title="Listed 74 days before let available date!">🦅 Early Bird (74d adv)</span></td>
+          <td data-value="1783933432838"><span class="avail-text">Now</span><span class="compat-indicator"></span><br><span class="badge badge-earlybird" title="Listed 74 days before let available date!">🦅 Early Bird (74d adv)</span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="relocate-me"><span class="agent-name">relocate-me</span></td>
-          <td>Moorgate</td>
-          <td>Bezier Apartments, City Road, Old Street, Shoreditch, London, EC1Y</td>
+          <td data-value="Moorgate">Moorgate</td>
+          <td data-value="Bezier Apartments, City Road, Old Street, Shoreditch, London, EC1Y"><a href="https://www.google.com/maps/search/?api=1&query=Bezier%20Apartments%2C%20City%20Road%2C%20Old%20Street%2C%20Shoreditch%2C%20London%2C%20EC1Y%2C%20Moorgate" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">Bezier Apartments, City Road, Old Street, Shoreditch, London, EC1Y</a></td>
           <td class="numeric" data-value="2300">£2300</td>
-          <td class="numeric" data-value="0">0 sqm</td>
-          <td class="numeric" data-value="0">£N/A</td>
+          <td class="numeric" data-value="0">Unknown</td>
+          <td class="numeric" data-value="0">N/A</td>
           <td style="text-align: center;"><button class="note-btn note-icon-btn" id="note-btn-173369096" onclick="openNoteModal('173369096')" title="Add / View Note">📝</button></td>
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/173369096" target="_blank" class="view-btn" onclick="markRowSeen('173369096')" onauxclick="if (event.button === 1) markRowSeen('173369096')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('173369096', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="90732897" data-index="56" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
+<tr data-id="90732897" data-index="61" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
           <td data-value="1783930452473">2026-07-13 08:14:12</td>
           <td data-value="1783641600000">2026-07-10</td>
           <td data-value="Added on 10/07/2026">Added on 10/07/2026</td>
           <td data-value="0"><span class="avail-text">Ask agent</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Dexters, Canary Wharf"><span class="agent-name">Dexters, Canary Wharf</span></td>
-          <td>Canary Wharf</td>
-          <td>Carmen Street, Canary Wharf</td>
+          <td data-value="Canary Wharf">Canary Wharf</td>
+          <td data-value="Carmen Street, Canary Wharf"><a href="https://www.google.com/maps/search/?api=1&query=Carmen%20Street%2C%20Canary%20Wharf" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">Carmen Street, Canary Wharf</a></td>
           <td class="numeric" data-value="2300">£2300</td>
-          <td class="numeric" data-value="0">0 sqm</td>
-          <td class="numeric" data-value="0">£N/A</td>
+          <td class="numeric" data-value="0">Unknown</td>
+          <td class="numeric" data-value="0">N/A</td>
           <td style="text-align: center;"><button class="note-btn note-icon-btn" id="note-btn-90732897" onclick="openNoteModal('90732897')" title="Add / View Note">📝</button></td>
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90732897" target="_blank" class="view-btn" onclick="markRowSeen('90732897')" onauxclick="if (event.button === 1) markRowSeen('90732897')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('90732897', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="90393171" data-index="57" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
+<tr data-id="90393171" data-index="62" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
           <td data-value="1783930452473">2026-07-13 08:14:12</td>
           <td data-value="1783641600000">2026-07-10</td>
           <td data-value="Reduced on 10/07/2026">Reduced on 10/07/2026</td>
-          <td data-value="1783930452708"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-value="1783933432838"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="OpenRent, London"><span class="badge badge-openrent">✨ OpenRent, London</span></td>
-          <td>Paddington</td>
-          <td>Porchester Road, London, W2</td>
+          <td data-value="Paddington">Paddington</td>
+          <td data-value="Porchester Road, London, W2"><a href="https://www.google.com/maps/search/?api=1&query=Porchester%20Road%2C%20London%2C%20W2%2C%20Paddington" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">Porchester Road, London, W2</a></td>
           <td class="numeric" data-value="2300">£2300</td>
-          <td class="numeric" data-value="0">0 sqm</td>
-          <td class="numeric" data-value="0">£N/A</td>
+          <td class="numeric" data-value="0">Unknown</td>
+          <td class="numeric" data-value="0">N/A</td>
           <td style="text-align: center;"><button class="note-btn note-icon-btn" id="note-btn-90393171" onclick="openNoteModal('90393171')" title="Add / View Note">📝</button></td>
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90393171" target="_blank" class="view-btn" onclick="markRowSeen('90393171')" onauxclick="if (event.button === 1) markRowSeen('90393171')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('90393171', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="88635138" data-index="58" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
+<tr data-id="88635138" data-index="63" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
           <td data-value="1783930452472">2026-07-13 08:14:12</td>
           <td data-value="1783900800000">2026-07-13</td>
           <td data-value="Reduced today">Reduced today</td>
           <td data-value="0"><span class="avail-text">Ask agent</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Life Residential, Canary Wharf Office"><span class="agent-name">Life Residential, Canary Wharf Office</span></td>
-          <td>Canary Wharf</td>
-          <td>Amory Tower, Canary Wharf</td>
+          <td data-value="Canary Wharf">Canary Wharf</td>
+          <td data-value="Amory Tower, Canary Wharf"><a href="https://www.google.com/maps/search/?api=1&query=Amory%20Tower%2C%20Canary%20Wharf" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">Amory Tower, Canary Wharf</a></td>
           <td class="numeric" data-value="2300">£2300</td>
-          <td class="numeric" data-value="0">0 sqm</td>
-          <td class="numeric" data-value="0">£N/A</td>
+          <td class="numeric" data-value="0">Unknown</td>
+          <td class="numeric" data-value="0">N/A</td>
           <td style="text-align: center;"><button class="note-btn note-icon-btn" id="note-btn-88635138" onclick="openNoteModal('88635138')" title="Add / View Note">📝</button></td>
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/88635138" target="_blank" class="view-btn" onclick="markRowSeen('88635138')" onauxclick="if (event.button === 1) markRowSeen('88635138')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('88635138', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="90787257" data-index="59" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
+<tr data-id="90423855" data-index="64" data-platform="Rightmove" data-deal="fair" data-early-bird="true">
+          <td data-value="1783932003007">2026-07-13 08:40:03</td>
+          <td data-value="1782950400000">2026-07-02</td>
+          <td data-value="Added on 02/07/2026">Added on 02/07/2026</td>
+          <td data-value="1789344000000"><span class="avail-text">14/09/2026</span><span class="compat-indicator"></span><br><span class="badge badge-earlybird" title="Listed 74 days before let available date!">🦅 Early Bird (74d adv)</span></td>
+          <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
+          <td data-value="One Move Group, London"><span class="agent-name">One Move Group, London</span></td>
+          <td data-value="South Quay">South Quay</td>
+          <td data-value="Turnberry Quay, Waterford Court, E14"><a href="https://www.google.com/maps/search/?api=1&query=Turnberry%20Quay%2C%20Waterford%20Court%2C%20E14%2C%20South%20Quay" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">Turnberry Quay, Waterford Court, E14</a></td>
+          <td class="numeric" data-value="2350">£2350</td>
+          <td class="numeric" data-value="0">Unknown</td>
+          <td class="numeric" data-value="0">N/A</td>
+          <td style="text-align: center;"><button class="note-btn note-icon-btn" id="note-btn-90423855" onclick="openNoteModal('90423855')" title="Add / View Note">📝</button></td>
+          <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90423855" target="_blank" class="view-btn" onclick="markRowSeen('90423855')" onauxclick="if (event.button === 1) markRowSeen('90423855')">View</a></td>
+          <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('90423855', this)" title="Save Property">☆</button></td>
+        </tr>
+<tr data-id="90787257" data-index="65" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
           <td data-value="1783930452473">2026-07-13 08:14:12</td>
           <td data-value="1783814400000">2026-07-12</td>
           <td data-value="Added yesterday">Added yesterday</td>
-          <td data-value="1783930452708"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-value="1783933432838"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Home Made, London"><span class="agent-name">Home Made, London</span></td>
-          <td>Paddington</td>
-          <td>Miles Buildings, Marylebone Quarter NW1</td>
+          <td data-value="Paddington">Paddington</td>
+          <td data-value="Miles Buildings, Marylebone Quarter NW1"><a href="https://www.google.com/maps/search/?api=1&query=Miles%20Buildings%2C%20Marylebone%20Quarter%20NW1%2C%20Paddington" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">Miles Buildings, Marylebone Quarter NW1</a></td>
           <td class="numeric" data-value="2400">£2400</td>
-          <td class="numeric" data-value="0">0 sqm</td>
-          <td class="numeric" data-value="0">£N/A</td>
+          <td class="numeric" data-value="0">Unknown</td>
+          <td class="numeric" data-value="0">N/A</td>
           <td style="text-align: center;"><button class="note-btn note-icon-btn" id="note-btn-90787257" onclick="openNoteModal('90787257')" title="Add / View Note">📝</button></td>
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90787257" target="_blank" class="view-btn" onclick="markRowSeen('90787257')" onauxclick="if (event.button === 1) markRowSeen('90787257')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('90787257', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="2342322" data-index="60" data-platform="Johns&Co" data-deal="fair" data-early-bird="false">
-          <td data-value="1783930415521">2026-07-13 08:13:35</td>
-          <td data-value="1783900800000">2026-07-13</td>
-          <td data-value="Available">Available</td>
-          <td data-value="0"><span class="avail-text">Ask agent</span><span class="compat-indicator"></span></td>
-          <td data-value="Johns&Co"><span class="badge-platform badge-platform-johnsandco">🏙️ Johns&Co</span></td>
-          <td data-value="JOHNS&CO"><span class="agent-name">JOHNS&CO</span></td>
-          <td>Canary Wharf (E14)</td>
-          <td>Pan Peninsula</td>
-          <td class="numeric" data-value="2496">£2496</td>
-          <td class="numeric" data-value="0">0 sqm</td>
-          <td class="numeric" data-value="0">£N/A</td>
-          <td style="text-align: center;"><button class="note-btn note-icon-btn" id="note-btn-2342322" onclick="openNoteModal('2342322')" title="Add / View Note">📝</button></td>
-          <td style="text-align: center;"><a href="https://www.johnsand.co/properties/pan-peninsula-2342322" target="_blank" class="view-btn" onclick="markRowSeen('2342322')" onauxclick="if (event.button === 1) markRowSeen('2342322')">View</a></td>
-          <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('2342322', this)" title="Save Property">☆</button></td>
-        </tr>
-<tr data-id="21622421" data-index="61" data-platform="Rightmove" data-deal="fair" data-early-bird="true">
+<tr data-id="21622421" data-index="66" data-platform="Rightmove" data-deal="fair" data-early-bird="true">
           <td data-value="1783930452474">2026-07-13 08:14:12</td>
           <td data-value="1782432000000">2026-06-26</td>
           <td data-value="Added on 26/06/2026">Added on 26/06/2026</td>
           <td data-value="1789084800000"><span class="avail-text">11/09/2026</span><span class="compat-indicator"></span><br><span class="badge badge-earlybird" title="Listed 77 days before let available date!">🦅 Early Bird (77d adv)</span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Tower Quay Limited, London"><span class="agent-name">Tower Quay Limited, London</span></td>
-          <td>Moorgate</td>
-          <td>The Old Lofts,Crescent Row,London,EC1Y 0SP</td>
+          <td data-value="Moorgate">Moorgate</td>
+          <td data-value="The Old Lofts,Crescent Row,London,EC1Y 0SP"><a href="https://www.google.com/maps/search/?api=1&query=The%20Old%20Lofts%2CCrescent%20Row%2CLondon%2CEC1Y%200SP%2C%20Moorgate" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">The Old Lofts,Crescent Row,London,EC1Y 0SP</a></td>
           <td class="numeric" data-value="2500">£2500</td>
-          <td class="numeric" data-value="0">0 sqm</td>
-          <td class="numeric" data-value="0">£N/A</td>
+          <td class="numeric" data-value="0">Unknown</td>
+          <td class="numeric" data-value="0">N/A</td>
           <td style="text-align: center;"><button class="note-btn note-icon-btn" id="note-btn-21622421" onclick="openNoteModal('21622421')" title="Add / View Note">📝</button></td>
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/21622421" target="_blank" class="view-btn" onclick="markRowSeen('21622421')" onauxclick="if (event.button === 1) markRowSeen('21622421')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('21622421', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="P169185" data-index="62" data-platform="JLL" data-deal="fair" data-early-bird="false">
+<tr data-id="P169185" data-index="67" data-platform="JLL" data-deal="fair" data-early-bird="false">
           <td data-value="1783930449993">2026-07-13 08:14:09</td>
           <td data-value="1783900800000">2026-07-13</td>
           <td data-value="Available">Available</td>
           <td data-value="0"><span class="avail-text">Ask agent</span><span class="compat-indicator"></span></td>
           <td data-value="JLL"><span class="badge-platform badge-platform-jll">🏢 JLL</span></td>
           <td data-value="JLL"><span class="agent-name">JLL</span></td>
-          <td>Canary Wharf (E14)</td>
-          <td>Landmark Pinnacle, Marsh Wall, E14</td>
+          <td data-value="Canary Wharf (E14)">Canary Wharf (E14)</td>
+          <td data-value="Landmark Pinnacle, Marsh Wall, E14"><a href="https://www.google.com/maps/search/?api=1&query=Landmark%20Pinnacle%2C%20Marsh%20Wall%2C%20E14%2C%20Canary%20Wharf%20(E14)" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">Landmark Pinnacle, Marsh Wall, E14</a></td>
           <td class="numeric" data-value="2513">£2513</td>
-          <td class="numeric" data-value="0">0 sqm</td>
-          <td class="numeric" data-value="0">£N/A</td>
+          <td class="numeric" data-value="0">Unknown</td>
+          <td class="numeric" data-value="0">N/A</td>
           <td style="text-align: center;"><button class="note-btn note-icon-btn" id="note-btn-P169185" onclick="openNoteModal('P169185')" title="Add / View Note">📝</button></td>
           <td style="text-align: center;"><a href="https://residential.jll.co.uk/rent-apartment/london-e14-9fy-p169185" target="_blank" class="view-btn" onclick="markRowSeen('P169185')" onauxclick="if (event.button === 1) markRowSeen('P169185')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('P169185', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="P169117" data-index="63" data-platform="JLL" data-deal="fair" data-early-bird="false">
+<tr data-id="P169117" data-index="68" data-platform="JLL" data-deal="fair" data-early-bird="false">
           <td data-value="1783930449993">2026-07-13 08:14:09</td>
           <td data-value="1783900800000">2026-07-13</td>
           <td data-value="Available">Available</td>
           <td data-value="0"><span class="avail-text">Ask agent</span><span class="compat-indicator"></span></td>
           <td data-value="JLL"><span class="badge-platform badge-platform-jll">🏢 JLL</span></td>
           <td data-value="JLL"><span class="agent-name">JLL</span></td>
-          <td>Canary Wharf (E14)</td>
-          <td>Landmark Pinnacle, Marsh Wall, E14</td>
+          <td data-value="Canary Wharf (E14)">Canary Wharf (E14)</td>
+          <td data-value="Landmark Pinnacle, Marsh Wall, E14"><a href="https://www.google.com/maps/search/?api=1&query=Landmark%20Pinnacle%2C%20Marsh%20Wall%2C%20E14%2C%20Canary%20Wharf%20(E14)" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">Landmark Pinnacle, Marsh Wall, E14</a></td>
           <td class="numeric" data-value="2513">£2513</td>
-          <td class="numeric" data-value="0">0 sqm</td>
-          <td class="numeric" data-value="0">£N/A</td>
+          <td class="numeric" data-value="0">Unknown</td>
+          <td class="numeric" data-value="0">N/A</td>
           <td style="text-align: center;"><button class="note-btn note-icon-btn" id="note-btn-P169117" onclick="openNoteModal('P169117')" title="Add / View Note">📝</button></td>
           <td style="text-align: center;"><a href="https://residential.jll.co.uk/rent-flat/london-e14-9fr-p169117" target="_blank" class="view-btn" onclick="markRowSeen('P169117')" onauxclick="if (event.button === 1) markRowSeen('P169117')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('P169117', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="P169204" data-index="64" data-platform="JLL" data-deal="fair" data-early-bird="false">
+<tr data-id="P169204" data-index="69" data-platform="JLL" data-deal="fair" data-early-bird="false">
           <td data-value="1783930449993">2026-07-13 08:14:09</td>
           <td data-value="1783900800000">2026-07-13</td>
           <td data-value="Available">Available</td>
           <td data-value="0"><span class="avail-text">Ask agent</span><span class="compat-indicator"></span></td>
           <td data-value="JLL"><span class="badge-platform badge-platform-jll">🏢 JLL</span></td>
           <td data-value="JLL"><span class="agent-name">JLL</span></td>
-          <td>Canary Wharf (E14)</td>
-          <td>Copperworks Wharf, Sugar House Island, E15</td>
+          <td data-value="Canary Wharf (E14)">Canary Wharf (E14)</td>
+          <td data-value="Copperworks Wharf, Sugar House Island, E15"><a href="https://www.google.com/maps/search/?api=1&query=Copperworks%20Wharf%2C%20Sugar%20House%20Island%2C%20E15%2C%20Canary%20Wharf%20(E14)" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">Copperworks Wharf, Sugar House Island, E15</a></td>
           <td class="numeric" data-value="2550">£2550</td>
-          <td class="numeric" data-value="0">0 sqm</td>
-          <td class="numeric" data-value="0">£N/A</td>
+          <td class="numeric" data-value="0">Unknown</td>
+          <td class="numeric" data-value="0">N/A</td>
           <td style="text-align: center;"><button class="note-btn note-icon-btn" id="note-btn-P169204" onclick="openNoteModal('P169204')" title="Add / View Note">📝</button></td>
           <td style="text-align: center;"><a href="https://residential.jll.co.uk/rent-flat/london-e15-2zt-p169204" target="_blank" class="view-btn" onclick="markRowSeen('P169204')" onauxclick="if (event.button === 1) markRowSeen('P169204')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('P169204', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="P169193" data-index="65" data-platform="JLL" data-deal="fair" data-early-bird="false">
+<tr data-id="P169193" data-index="70" data-platform="JLL" data-deal="fair" data-early-bird="false">
           <td data-value="1783930449993">2026-07-13 08:14:09</td>
           <td data-value="1783900800000">2026-07-13</td>
           <td data-value="Available">Available</td>
           <td data-value="0"><span class="avail-text">Ask agent</span><span class="compat-indicator"></span></td>
           <td data-value="JLL"><span class="badge-platform badge-platform-jll">🏢 JLL</span></td>
           <td data-value="JLL"><span class="agent-name">JLL</span></td>
-          <td>Canary Wharf (E14)</td>
-          <td>Copperworks Wharf London E15</td>
+          <td data-value="Canary Wharf (E14)">Canary Wharf (E14)</td>
+          <td data-value="Copperworks Wharf London E15"><a href="https://www.google.com/maps/search/?api=1&query=Copperworks%20Wharf%20London%20E15%2C%20Canary%20Wharf%20(E14)" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">Copperworks Wharf London E15</a></td>
           <td class="numeric" data-value="2550">£2550</td>
-          <td class="numeric" data-value="0">0 sqm</td>
-          <td class="numeric" data-value="0">£N/A</td>
+          <td class="numeric" data-value="0">Unknown</td>
+          <td class="numeric" data-value="0">N/A</td>
           <td style="text-align: center;"><button class="note-btn note-icon-btn" id="note-btn-P169193" onclick="openNoteModal('P169193')" title="Add / View Note">📝</button></td>
           <td style="text-align: center;"><a href="https://residential.jll.co.uk/rent-apartment/london-e15-2zt-p169193" target="_blank" class="view-btn" onclick="markRowSeen('P169193')" onauxclick="if (event.button === 1) markRowSeen('P169193')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('P169193', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="P169264" data-index="66" data-platform="JLL" data-deal="fair" data-early-bird="false">
+<tr data-id="P169264" data-index="71" data-platform="JLL" data-deal="fair" data-early-bird="false">
           <td data-value="1783930449992">2026-07-13 08:14:09</td>
           <td data-value="1783900800000">2026-07-13</td>
           <td data-value="Available">Available</td>
           <td data-value="0"><span class="avail-text">Ask agent</span><span class="compat-indicator"></span></td>
           <td data-value="JLL"><span class="badge-platform badge-platform-jll">🏢 JLL</span></td>
           <td data-value="JLL"><span class="agent-name">JLL</span></td>
-          <td>Canary Wharf (E14)</td>
-          <td>Copper Works Wharf Sugar House Island E15</td>
+          <td data-value="Canary Wharf (E14)">Canary Wharf (E14)</td>
+          <td data-value="Copper Works Wharf Sugar House Island E15"><a href="https://www.google.com/maps/search/?api=1&query=Copper%20Works%20Wharf%20Sugar%20House%20Island%20E15%2C%20Canary%20Wharf%20(E14)" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">Copper Works Wharf Sugar House Island E15</a></td>
           <td class="numeric" data-value="2550">£2550</td>
-          <td class="numeric" data-value="0">0 sqm</td>
-          <td class="numeric" data-value="0">£N/A</td>
+          <td class="numeric" data-value="0">Unknown</td>
+          <td class="numeric" data-value="0">N/A</td>
           <td style="text-align: center;"><button class="note-btn note-icon-btn" id="note-btn-P169264" onclick="openNoteModal('P169264')" title="Add / View Note">📝</button></td>
           <td style="text-align: center;"><a href="https://residential.jll.co.uk/rent-flat/london-e15-2zt-p169264" target="_blank" class="view-btn" onclick="markRowSeen('P169264')" onauxclick="if (event.button === 1) markRowSeen('P169264')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('P169264', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="P168955" data-index="67" data-platform="JLL" data-deal="fair" data-early-bird="false">
+<tr data-id="P168955" data-index="72" data-platform="JLL" data-deal="fair" data-early-bird="false">
           <td data-value="1783930449993">2026-07-13 08:14:09</td>
           <td data-value="1783900800000">2026-07-13</td>
           <td data-value="Available">Available</td>
           <td data-value="0"><span class="avail-text">Ask agent</span><span class="compat-indicator"></span></td>
           <td data-value="JLL"><span class="badge-platform badge-platform-jll">🏢 JLL</span></td>
           <td data-value="JLL"><span class="agent-name">JLL</span></td>
-          <td>Canary Wharf (E14)</td>
-          <td>Landmark Pinnacle, Marsh Wall, E14</td>
+          <td data-value="Canary Wharf (E14)">Canary Wharf (E14)</td>
+          <td data-value="Landmark Pinnacle, Marsh Wall, E14"><a href="https://www.google.com/maps/search/?api=1&query=Landmark%20Pinnacle%2C%20Marsh%20Wall%2C%20E14%2C%20Canary%20Wharf%20(E14)" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">Landmark Pinnacle, Marsh Wall, E14</a></td>
           <td class="numeric" data-value="2557">£2557</td>
-          <td class="numeric" data-value="0">0 sqm</td>
-          <td class="numeric" data-value="0">£N/A</td>
+          <td class="numeric" data-value="0">Unknown</td>
+          <td class="numeric" data-value="0">N/A</td>
           <td style="text-align: center;"><button class="note-btn note-icon-btn" id="note-btn-P168955" onclick="openNoteModal('P168955')" title="Add / View Note">📝</button></td>
           <td style="text-align: center;"><a href="https://residential.jll.co.uk/rent-apartment/london-e14-9fr-p168955" target="_blank" class="view-btn" onclick="markRowSeen('P168955')" onauxclick="if (event.button === 1) markRowSeen('P168955')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('P168955', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="90675807" data-index="68" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
+<tr data-id="90675807" data-index="73" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
           <td data-value="1783930452474">2026-07-13 08:14:12</td>
           <td data-value="1783296000000">2026-07-06</td>
           <td data-value="Added on 06/07/2026">Added on 06/07/2026</td>
           <td data-value="0"><span class="avail-text">Ask agent</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Hurford Salvi Carr, Aldgate"><span class="agent-name">Hurford Salvi Carr, Aldgate</span></td>
-          <td>Moorgate</td>
-          <td>Wormwood Street, EC2M</td>
+          <td data-value="Moorgate">Moorgate</td>
+          <td data-value="Wormwood Street, EC2M"><a href="https://www.google.com/maps/search/?api=1&query=Wormwood%20Street%2C%20EC2M%2C%20Moorgate" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">Wormwood Street, EC2M</a></td>
           <td class="numeric" data-value="2600">£2600</td>
-          <td class="numeric" data-value="0">0 sqm</td>
-          <td class="numeric" data-value="0">£N/A</td>
+          <td class="numeric" data-value="0">Unknown</td>
+          <td class="numeric" data-value="0">N/A</td>
           <td style="text-align: center;"><button class="note-btn note-icon-btn" id="note-btn-90675807" onclick="openNoteModal('90675807')" title="Add / View Note">📝</button></td>
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90675807" target="_blank" class="view-btn" onclick="markRowSeen('90675807')" onauxclick="if (event.button === 1) markRowSeen('90675807')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('90675807', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="89379114" data-index="69" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
+<tr data-id="89379114" data-index="74" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
           <td data-value="1783930452474">2026-07-13 08:14:12</td>
           <td data-value="1783296000000">2026-07-06</td>
           <td data-value="Added on 06/07/2026">Added on 06/07/2026</td>
           <td data-value="0"><span class="avail-text">Ask agent</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Hurford Salvi Carr, Britton Street"><span class="agent-name">Hurford Salvi Carr, Britton Street</span></td>
-          <td>Moorgate</td>
-          <td>Wormwood Street, EC2M</td>
+          <td data-value="Moorgate">Moorgate</td>
+          <td data-value="Wormwood Street, EC2M"><a href="https://www.google.com/maps/search/?api=1&query=Wormwood%20Street%2C%20EC2M%2C%20Moorgate" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">Wormwood Street, EC2M</a></td>
           <td class="numeric" data-value="2600">£2600</td>
-          <td class="numeric" data-value="0">0 sqm</td>
-          <td class="numeric" data-value="0">£N/A</td>
+          <td class="numeric" data-value="0">Unknown</td>
+          <td class="numeric" data-value="0">N/A</td>
           <td style="text-align: center;"><button class="note-btn note-icon-btn" id="note-btn-89379114" onclick="openNoteModal('89379114')" title="Add / View Note">📝</button></td>
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/89379114" target="_blank" class="view-btn" onclick="markRowSeen('89379114')" onauxclick="if (event.button === 1) markRowSeen('89379114')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('89379114', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="90633570" data-index="70" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
+<tr data-id="90633570" data-index="75" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
           <td data-value="1783930452473">2026-07-13 08:14:12</td>
           <td data-value="1783468800000">2026-07-08</td>
           <td data-value="Added on 08/07/2026">Added on 08/07/2026</td>
           <td data-value="1788220800000"><span class="avail-text">01/09/2026</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Claremont Estates, London"><span class="agent-name">Claremont Estates, London</span></td>
-          <td>South Quay</td>
-          <td>Arena Tower, Crossharbour Plaza, Canary Wharf, E14</td>
+          <td data-value="South Quay">South Quay</td>
+          <td data-value="Arena Tower, Crossharbour Plaza, Canary Wharf, E14"><a href="https://www.google.com/maps/search/?api=1&query=Arena%20Tower%2C%20Crossharbour%20Plaza%2C%20Canary%20Wharf%2C%20E14%2C%20South%20Quay" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">Arena Tower, Crossharbour Plaza, Canary Wharf, E14</a></td>
           <td class="numeric" data-value="2600">£2600</td>
-          <td class="numeric" data-value="0">0 sqm</td>
-          <td class="numeric" data-value="0">£N/A</td>
+          <td class="numeric" data-value="0">Unknown</td>
+          <td class="numeric" data-value="0">N/A</td>
           <td style="text-align: center;"><button class="note-btn note-icon-btn" id="note-btn-90633570" onclick="openNoteModal('90633570')" title="Add / View Note">📝</button></td>
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90633570" target="_blank" class="view-btn" onclick="markRowSeen('90633570')" onauxclick="if (event.button === 1) markRowSeen('90633570')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('90633570', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="2720320" data-index="71" data-platform="Johns&Co" data-deal="fair" data-early-bird="false">
+<tr data-id="2720320" data-index="76" data-platform="Johns&Co" data-deal="fair" data-early-bird="false">
           <td data-value="1783930415521">2026-07-13 08:13:35</td>
           <td data-value="1783900800000">2026-07-13</td>
           <td data-value="Available">Available</td>
           <td data-value="0"><span class="avail-text">Ask agent</span><span class="compat-indicator"></span></td>
           <td data-value="Johns&Co"><span class="badge-platform badge-platform-johnsandco">🏙️ Johns&Co</span></td>
           <td data-value="JOHNS&CO"><span class="agent-name">JOHNS&CO</span></td>
-          <td>Canary Wharf (E14)</td>
-          <td>Pan Peninsula Square</td>
+          <td data-value="Canary Wharf (E14)">Canary Wharf (E14)</td>
+          <td data-value="Pan Peninsula Square"><a href="https://www.google.com/maps/search/?api=1&query=Pan%20Peninsula%20Square%2C%20Canary%20Wharf%20(E14)" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">Pan Peninsula Square</a></td>
           <td class="numeric" data-value="2648">£2648</td>
-          <td class="numeric" data-value="0">0 sqm</td>
-          <td class="numeric" data-value="0">£N/A</td>
+          <td class="numeric" data-value="0">Unknown</td>
+          <td class="numeric" data-value="0">N/A</td>
           <td style="text-align: center;"><button class="note-btn note-icon-btn" id="note-btn-2720320" onclick="openNoteModal('2720320')" title="Add / View Note">📝</button></td>
           <td style="text-align: center;"><a href="https://www.johnsand.co/properties/pan-peninsula-square-2720320" target="_blank" class="view-btn" onclick="markRowSeen('2720320')" onauxclick="if (event.button === 1) markRowSeen('2720320')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('2720320', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="P168970" data-index="72" data-platform="JLL" data-deal="fair" data-early-bird="false">
+<tr data-id="P168970" data-index="77" data-platform="JLL" data-deal="fair" data-early-bird="false">
           <td data-value="1783930449993">2026-07-13 08:14:09</td>
           <td data-value="1783900800000">2026-07-13</td>
           <td data-value="Available">Available</td>
           <td data-value="0"><span class="avail-text">Ask agent</span><span class="compat-indicator"></span></td>
           <td data-value="JLL"><span class="badge-platform badge-platform-jll">🏢 JLL</span></td>
           <td data-value="JLL"><span class="agent-name">JLL</span></td>
-          <td>Canary Wharf (E14)</td>
-          <td>Landmark Pinnacle, Marsh Wall, E14</td>
+          <td data-value="Canary Wharf (E14)">Canary Wharf (E14)</td>
+          <td data-value="Landmark Pinnacle, Marsh Wall, E14"><a href="https://www.google.com/maps/search/?api=1&query=Landmark%20Pinnacle%2C%20Marsh%20Wall%2C%20E14%2C%20Canary%20Wharf%20(E14)" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">Landmark Pinnacle, Marsh Wall, E14</a></td>
           <td class="numeric" data-value="2687">£2687</td>
-          <td class="numeric" data-value="0">0 sqm</td>
-          <td class="numeric" data-value="0">£N/A</td>
+          <td class="numeric" data-value="0">Unknown</td>
+          <td class="numeric" data-value="0">N/A</td>
           <td style="text-align: center;"><button class="note-btn note-icon-btn" id="note-btn-P168970" onclick="openNoteModal('P168970')" title="Add / View Note">📝</button></td>
           <td style="text-align: center;"><a href="https://residential.jll.co.uk/rent-apartment/london-e14-9xz-p168970" target="_blank" class="view-btn" onclick="markRowSeen('P168970')" onauxclick="if (event.button === 1) markRowSeen('P168970')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('P168970', this)" title="Save Property">☆</button></td>
         </tr>
-<tr data-id="90747393" data-index="73" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
+<tr data-id="90747393" data-index="78" data-platform="Rightmove" data-deal="fair" data-early-bird="false">
           <td data-value="1783930452473">2026-07-13 08:14:12</td>
           <td data-value="1783641600000">2026-07-10</td>
           <td data-value="Added on 10/07/2026">Added on 10/07/2026</td>
           <td data-value="0"><span class="avail-text">Ask agent</span><span class="compat-indicator"></span></td>
           <td data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-value="Right Now Residential, London"><span class="agent-name">Right Now Residential, London</span></td>
-          <td>Canary Wharf</td>
-          <td>Amory Tower, Marsh Wall, Tower Hamlets, London</td>
+          <td data-value="Canary Wharf">Canary Wharf</td>
+          <td data-value="Amory Tower, Marsh Wall, Tower Hamlets, London"><a href="https://www.google.com/maps/search/?api=1&query=Amory%20Tower%2C%20Marsh%20Wall%2C%20Tower%20Hamlets%2C%20London%2C%20Canary%20Wharf" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">Amory Tower, Marsh Wall, Tower Hamlets, London</a></td>
           <td class="numeric" data-value="2700">£2700</td>
-          <td class="numeric" data-value="0">0 sqm</td>
-          <td class="numeric" data-value="0">£N/A</td>
+          <td class="numeric" data-value="0">Unknown</td>
+          <td class="numeric" data-value="0">N/A</td>
           <td style="text-align: center;"><button class="note-btn note-icon-btn" id="note-btn-90747393" onclick="openNoteModal('90747393')" title="Add / View Note">📝</button></td>
           <td style="text-align: center;"><a href="https://www.rightmove.co.uk/properties/90747393" target="_blank" class="view-btn" onclick="markRowSeen('90747393')" onauxclick="if (event.button === 1) markRowSeen('90747393')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('90747393', this)" title="Save Property">☆</button></td>

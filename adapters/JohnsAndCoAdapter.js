@@ -109,15 +109,38 @@ class JohnsAndCoAdapter {
       // Fallback: Check floorplan image OCR if not found in text
       if (!sqm) {
         try {
-          const imageUrls = await this.page.$$eval('img, a', els =>
-            els.map(el => el.src || el.href).filter(url => url && (/floorplan|floor-plan|floor_plan/i.test(url) || /floorplan/i.test(el.alt || el.title || el.innerText || '')))
-          );
+          const imageUrls = await this.page.$$eval('img, a', els => {
+            const urls = [];
+            for (const el of els) {
+              let rawUrl = el.src || el.href || '';
+              if (!rawUrl && el.srcset) {
+                rawUrl = el.srcset.split(' ')[0];
+              }
+              if (!rawUrl) continue;
+              const nextMatch = rawUrl.match(/[?&]url=([^&]+)/);
+              const decodedUrl = nextMatch ? decodeURIComponent(nextMatch[1]) : rawUrl;
+
+              const isFloorplanName = /floorplan|floor-plan|floor_plan|l?fp\d*[\._-]/i.test(decodedUrl);
+              const altText = (el.alt || el.title || el.innerText || '').toLowerCase();
+              const isFloorplanAlt = /floorplan|floor plan|layout/i.test(altText);
+              const w = parseInt(el.getAttribute('width') || '0', 10);
+              const h = parseInt(el.getAttribute('height') || '0', 10);
+              const isFloorplanDim = (h > 1500 && w > 1000 && h > w);
+
+              if (isFloorplanName || isFloorplanAlt || isFloorplanDim) {
+                urls.push(decodedUrl);
+              }
+            }
+            return urls;
+          });
           if (imageUrls.length > 0) {
-            console.log(`[${this.platformName}] Running OCR on floorplan image...`);
+            console.log(`[${this.platformName}] Running OCR on floorplan image: ${imageUrls[0]}...`);
             const text = await extractTextFromImage(imageUrls[0]);
             sqm = extractSqmFromText(text);
           }
-        } catch (ocrErr) {}
+        } catch (ocrErr) {
+          console.error(`[${this.platformName}] OCR Error:`, ocrErr.message);
+        }
       }
 
       if (sqm && sqm < config.minSqm) {

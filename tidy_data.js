@@ -51,8 +51,14 @@ function parseMatches(content) {
 
     // Parse Property Name
     const propNameMatch = block.match(/(?:Property Name:|\*\*Property Name\*\*:) (.*)/);
-    if (propNameMatch) match.propertyName = propNameMatch[1].trim();
-    else match.propertyName = 'Unknown';
+    if (propNameMatch) {
+      let rawName = propNameMatch[1].trim();
+      rawName = rawName.replace(/\[+([^\]]+)\]\(.*?\)/g, '$1');
+      rawName = rawName.replace(/^\[+/, '');
+      rawName = rawName.replace(/\]+.*$/, '');
+      match.propertyName = rawName.trim();
+    } else match.propertyName = 'Unknown';
+
 
     // Parse ID
     const idMatch = block.match(/(?:ID:|\*\*ID\*\*:) (.*)/);
@@ -96,6 +102,29 @@ function parseMatches(content) {
   return matches;
 }
 
+function escapeHtml(str) {
+  if (!str) return '';
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
+}
+
+function getGoogleMapsQuery(m) {
+  let query = '';
+  if (m.propertyName && m.propertyName !== 'Unknown') {
+    query = m.propertyName;
+    if (m.location && m.location !== 'Unknown' && !query.toLowerCase().includes(m.location.toLowerCase())) {
+      query = `${query}, ${m.location}`;
+    }
+  } else if (m.location && m.location !== 'Unknown') {
+    query = m.location;
+  }
+  return query;
+}
+
 function formatMatchMarkdown(match) {
   const ts = match.timestamp ? match.timestamp.toISOString() : new Date().toISOString();
   let earlyBirdStr = '';
@@ -123,14 +152,15 @@ function formatMatchMarkdown(match) {
     }
   }
   const cleanAvail = (match.letAvailableDate || 'Unknown').replace(/\s*\(\s*🦅\s*Early\s+Bird[^\)]*\)/gi, '').trim();
+  const propertyNameDisplay = match.propertyName || 'Unknown';
   return `### [${ts}] MATCH FOUND!\n` +
     `- **Platform**: ${match.platform || 'Rightmove'}\n` +
     `- **Marketed by**: ${match.agent || 'Unknown'}\n` +
     `- **Location**: ${match.location || 'Unknown'}\n` +
-    `- **Property Name**: ${match.propertyName || 'Unknown'}\n` +
+    `- **Property Name**: ${propertyNameDisplay}\n` +
     `- **ID**: ${match.id}\n` +
     `- **Price**: £${match.price} PCM\n` +
-    `- **Size**: ${match.size} sqm\n` +
+    `- **Size**: ${(match.size && match.size !== 0 && match.size !== '0') ? match.size + ' sqm' : 'Unknown'}\n` +
     `- **Listing Update**: ${match.listingUpdate || 'Unknown'}\n` +
     `- **Listing Status**: ${match.listingStatus || 'Unknown'}\n` +
     `- **Let Available**: ${cleanAvail}${earlyBirdStr}\n` +
@@ -768,7 +798,18 @@ async function main() {
           dealType = 'fair';
         }
 
+        const mapsQuery = getGoogleMapsQuery(m);
+        const mapsSearchUrl = mapsQuery ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(mapsQuery)}` : '';
+        let propertyNameCell = `${escapeHtml(m.propertyName || 'Unknown')}`;
+        if (mapsSearchUrl && m.propertyName && m.propertyName !== 'Unknown') {
+          propertyNameCell = `<a href="${mapsSearchUrl}" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">${escapeHtml(m.propertyName)}</a>`;
+        }
+
+
         const noteBtn = `<button class="note-btn note-icon-btn" id="note-btn-${m.id}" onclick="openNoteModal('${m.id}')" title="Add / View Note">📝</button>`;
+        const hasSize = (m.size && m.size !== 0 && m.size !== '0');
+        const sizeDisplay = hasSize ? `${m.size} sqm` : 'Unknown';
+        const ppsqmDisplay = hasSize && pricePerSqm !== 'N/A' ? `£${pricePerSqm}${dealBadge}` : 'N/A';
 
         return `<tr data-id="${m.id}" data-index="${idx}" data-platform="${platformStr}" data-deal="${dealType}" data-early-bird="${isEarlyBird ? 'true' : 'false'}">
           <td data-value="${timestamp}">${dateStr}</td>
@@ -777,11 +818,11 @@ async function main() {
           <td data-value="${availTs}"><span class="avail-text">${letAvailableStr}</span><span class="compat-indicator"></span>${earlyBirdBadge}</td>
           <td data-value="${platformStr}">${platformBadge}</td>
           <td data-value="${agentStr}">${agentBadge}</td>
-          <td>${m.location || 'Unknown'}</td>
-          <td>${m.propertyName || 'Unknown'}</td>
+          <td data-value="${escapeHtml(m.location || 'Unknown')}">${m.location || 'Unknown'}</td>
+          <td data-value="${escapeHtml(m.propertyName || 'Unknown')}">${propertyNameCell}</td>
           <td class="numeric" data-value="${m.price || 0}">£${m.price || 0}</td>
-          <td class="numeric" data-value="${m.size || 0}">${m.size || 0} sqm</td>
-          <td class="numeric" data-value="${pricePerSqmValue}">£${pricePerSqm}${dealBadge}</td>
+          <td class="numeric" data-value="${m.size || 0}">${sizeDisplay}</td>
+          <td class="numeric" data-value="${pricePerSqmValue}">${ppsqmDisplay}</td>
           <td style="text-align: center;">${noteBtn}</td>
           <td style="text-align: center;"><a href="${m.link}" target="_blank" class="view-btn" onclick="markRowSeen('${m.id}')" onauxclick="if (event.button === 1) markRowSeen('${m.id}')">View</a></td>
           <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('${m.id}', this)" title="Save Property">☆</button></td>
@@ -1558,6 +1599,15 @@ async function main() {
     background: #059669;
     color: white;
   }
+  .property-maps-link {
+    color: #60a5fa;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .property-maps-link:hover {
+    color: #93c5fd;
+    text-decoration: underline;
+  }
 </style>
 <script>
 const STARRED_STORAGE_KEY = 'house_finder_starred_ids';
@@ -1823,7 +1873,7 @@ function filterTable() {
         var filterValue = input.value.trim();
         if (!filterValue) continue;
         
-        var colIndex = input.getAttribute("data-col");
+        var colIndex = parseInt(input.getAttribute("data-col"), 10);
         var td = tr[i].getElementsByTagName("td")[colIndex];
         if (!td) continue;
 
@@ -1833,9 +1883,9 @@ function filterTable() {
         var isDate = type === "date";
 
         if (isNumeric || isDate) {
-          var numCellValue = parseFloat(cellValue || td.textContent.trim());
-          var operatorMatch = filterValue.match(/^(>=|<=|>|<)?\\s*(.*)/);
-          var operator = operatorMatch ? (operatorMatch[1] || '>=') : '>=';
+          var numCellValue = parseFloat(cellValue !== null && cellValue !== "" ? cellValue : td.textContent.trim());
+          var operatorMatch = filterValue.match(/^(>=|<=|>|<|=)?\\s*(.*)/);
+          var operator = (operatorMatch && operatorMatch[1]) ? operatorMatch[1] : '';
           var filterRaw = operatorMatch ? operatorMatch[2].trim() : filterValue;
           
           if (filterRaw) {
@@ -1853,6 +1903,10 @@ function filterTable() {
               else if (operator === '<=') match = numCellValue <= numFilterValue;
               else if (operator === '>') match = numCellValue > numFilterValue;
               else if (operator === '<') match = numCellValue < numFilterValue;
+              else if (operator === '=') match = numCellValue === numFilterValue;
+              else {
+                match = (numCellValue === numFilterValue) || td.textContent.toLowerCase().includes(filterValue.toLowerCase());
+              }
               
               if (!match) {
                 display = "none";
@@ -1866,8 +1920,9 @@ function filterTable() {
             }
           }
         } else {
-          var textValue = td.textContent.trim();
-          if (textValue.toLowerCase().indexOf(filterValue.toLowerCase()) === -1) {
+          var textValue = (cellValue !== null && cellValue !== "" ? cellValue : td.textContent).trim();
+          if (textValue.toLowerCase().indexOf(filterValue.toLowerCase()) === -1 &&
+              td.textContent.toLowerCase().indexOf(filterValue.toLowerCase()) === -1) {
             display = "none";
             break;
           }
@@ -1887,7 +1942,9 @@ function setQuickFilter(filterType) {
   var inputs = document.querySelectorAll("thead .filter-input");
   for (var i = 0; i < inputs.length; i++) {
     var col = inputs[i].getAttribute("data-col");
-    if (col === "4") {
+    if (!filterType) {
+      inputs[i].value = "";
+    } else if (col === "4") {
       if (["Rightmove", "JLL", "JOHNS&CO", "Knight Frank"].includes(filterType)) {
         if (filterType === "Knight Frank") inputs[i].value = "Knight";
         else if (filterType === "JOHNS&CO") inputs[i].value = "Johns";
@@ -2120,19 +2177,23 @@ function applySort() {
       var valA = cellA.getAttribute("data-value") !== null && cellA.getAttribute("data-value") !== "" ? cellA.getAttribute("data-value") : cellA.textContent.toLowerCase().trim();
       var valB = cellB.getAttribute("data-value") !== null && cellB.getAttribute("data-value") !== "" ? cellB.getAttribute("data-value") : cellB.textContent.toLowerCase().trim();
 
-      var numA = parseFloat(valA);
-      var numB = parseFloat(valB);
-      if (!isNaN(numA) && !isNaN(numB)) {
-        valA = numA;
-        valB = numB;
+      var isNumericCol = (colIdx === 0 || colIdx === 1 || colIdx === 3 || colIdx === 8 || colIdx === 9 || colIdx === 10);
+      if (isNumericCol) {
+        var nA = parseFloat(valA);
+        var nB = parseFloat(valB);
+        if (isNaN(nA)) nA = dir === 'asc' ? Infinity : -Infinity;
+        if (isNaN(nB)) nB = dir === 'asc' ? Infinity : -Infinity;
+        if (nA !== nB) {
+          if (dir === 'asc') return nA - nB;
+          return nB - nA;
+        }
       } else {
-        valA = String(valA).toLowerCase();
-        valB = String(valB).toLowerCase();
-      }
-
-      if (valA !== valB) {
-        if (dir === 'asc') return valA > valB ? 1 : -1;
-        return valA < valB ? 1 : -1;
+        var sA = String(valA).toLowerCase();
+        var sB = String(valB).toLowerCase();
+        if (sA !== sB) {
+          if (dir === 'asc') return sA.localeCompare(sB);
+          return sB.localeCompare(sA);
+        }
       }
     }
     return 0;
@@ -2146,7 +2207,7 @@ function applySort() {
 }
 
 function updateSortIndicators() {
-  for (var c = 0; c <= 9; c++) {
+  for (var c = 0; c <= 10; c++) {
     var ind = document.getElementById("sort-ind-" + c);
     if (ind) ind.textContent = "";
   }
@@ -2169,7 +2230,7 @@ function setMultiSort(criteria) {
   var sortBtns = document.querySelectorAll(".quick-sorts .filter-chip");
   for (var i = 0; i < sortBtns.length; i++) sortBtns[i].classList.remove("active");
   
-  if (criteria.length === 2 && criteria[0].col === 0 && criteria[1].col === 7) {
+  if (criteria.length === 2 && criteria[0].col === 0 && criteria[1].col === 8) {
     var btn = document.getElementById("sortDatePrice");
     if (btn) btn.classList.add("active");
   }
@@ -2293,7 +2354,7 @@ function copyShortlistToClipboard() {
       const platform = tr.getAttribute('data-platform') || 'Rightmove';
       const agent = tr.children[5].textContent.trim();
       const avail = tr.children[3].querySelector('.avail-text') ? tr.children[3].querySelector('.avail-text').textContent : tr.children[3].textContent.trim();
-      const linkEl = tr.children[13].querySelector('a');
+      const linkEl = tr.children[12].querySelector('a');
       const url = linkEl ? linkEl.href : '';
 
       summary += count + '. ' + propName + ' — ' + price + ' (' + sqm + ' | ' + ppsqmText + ')\\n';
@@ -2311,7 +2372,6 @@ function copyShortlistToClipboard() {
     alert(summary);
   }
 }
-
 document.addEventListener("DOMContentLoaded", function() {
   applyStarred();
   applySeen();
@@ -2416,17 +2476,17 @@ document.addEventListener("DOMContentLoaded", function() {
 <table id="matchesTable">
   <thead>
     <tr>
-      <th onclick="sortTable(0, event)">Date <span class="sort-indicator" id="sort-ind-0"></span><br><input type="text" class="filter-input" data-col="0" data-type="date" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Date (e.g. >2026-05-01)..."></th>
-      <th onclick="sortTable(1, event)">Listed / Updated <span class="sort-indicator" id="sort-ind-1"></span><br><input type="text" class="filter-input" data-col="1" data-type="date" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Date (e.g. >2026-07-01)..."></th>
-      <th onclick="sortTable(2, event)">Status <span class="sort-indicator" id="sort-ind-2"></span><br><input type="text" class="filter-input" data-col="2" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Filter (e.g. yesterday)..."></th>
-      <th onclick="sortTable(3, event)">Let Available <span class="sort-indicator" id="sort-ind-3"></span><br><input type="text" class="filter-input" data-col="3" data-type="date" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Date (e.g. >2026-07-01)..."></th>
-      <th onclick="sortTable(4, event)">Source <span class="sort-indicator" id="sort-ind-4"></span><br><input type="text" class="filter-input" data-col="4" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Source (e.g. Rightmove, JLL)..."></th>
-      <th onclick="sortTable(5, event)">Marketed By <span class="sort-indicator" id="sort-ind-5"></span><br><input type="text" class="filter-input" data-col="5" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Filter (e.g. OpenRent)..."></th>
-      <th onclick="sortTable(6, event)">Location <span class="sort-indicator" id="sort-ind-6"></span><br><input type="text" class="filter-input" data-col="6" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Filter..."></th>
-      <th onclick="sortTable(7, event)">Property Name <span class="sort-indicator" id="sort-ind-7"></span><br><input type="text" class="filter-input" data-col="7" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Filter (e.g. Landmark)..."></th>
-      <th onclick="sortTable(8, event)">Price <span class="sort-indicator" id="sort-ind-8"></span><br><input type="text" class="filter-input" data-col="8" data-type="numeric" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Price (e.g. >2000)..."></th>
-      <th onclick="sortTable(9, event)">Size <span class="sort-indicator" id="sort-ind-9"></span><br><input type="text" class="filter-input" data-col="9" data-type="numeric" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Size (e.g. <50)..."></th>
-      <th onclick="sortTable(10, event)">£ / sqm <span class="sort-indicator" id="sort-ind-10"></span><br><input type="text" class="filter-input" data-col="10" data-type="numeric" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="£/sqm (e.g. >=40)..."></th>
+      <th onclick="sortTable(0, event)">Date <span class="sort-indicator" id="sort-ind-0"></span><br><input type="text" class="filter-input" data-col="0" data-type="date" oninput="filterTable()" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Date (e.g. >2026-05-01)..."></th>
+      <th onclick="sortTable(1, event)">Listed / Updated <span class="sort-indicator" id="sort-ind-1"></span><br><input type="text" class="filter-input" data-col="1" data-type="date" oninput="filterTable()" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Date (e.g. >2026-07-01)..."></th>
+      <th onclick="sortTable(2, event)">Status <span class="sort-indicator" id="sort-ind-2"></span><br><input type="text" class="filter-input" data-col="2" oninput="filterTable()" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Filter (e.g. yesterday)..."></th>
+      <th onclick="sortTable(3, event)">Let Available <span class="sort-indicator" id="sort-ind-3"></span><br><input type="text" class="filter-input" data-col="3" data-type="date" oninput="filterTable()" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Date (e.g. >2026-07-01)..."></th>
+      <th onclick="sortTable(4, event)">Source <span class="sort-indicator" id="sort-ind-4"></span><br><input type="text" class="filter-input" data-col="4" oninput="filterTable()" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Source (e.g. Rightmove, JLL)..."></th>
+      <th onclick="sortTable(5, event)">Marketed By <span class="sort-indicator" id="sort-ind-5"></span><br><input type="text" class="filter-input" data-col="5" oninput="filterTable()" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Filter (e.g. OpenRent)..."></th>
+      <th onclick="sortTable(6, event)">Location <span class="sort-indicator" id="sort-ind-6"></span><br><input type="text" class="filter-input" data-col="6" oninput="filterTable()" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Filter..."></th>
+      <th onclick="sortTable(7, event)">Property Name <span class="sort-indicator" id="sort-ind-7"></span><br><input type="text" class="filter-input" data-col="7" oninput="filterTable()" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Filter (e.g. Landmark)..."></th>
+      <th onclick="sortTable(8, event)">Price <span class="sort-indicator" id="sort-ind-8"></span><br><input type="text" class="filter-input" data-col="8" data-type="numeric" oninput="filterTable()" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Price (e.g. >2000)..."></th>
+      <th onclick="sortTable(9, event)">Size <span class="sort-indicator" id="sort-ind-9"></span><br><input type="text" class="filter-input" data-col="9" data-type="numeric" oninput="filterTable()" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="Size (e.g. <50)..."></th>
+      <th onclick="sortTable(10, event)">£ / sqm <span class="sort-indicator" id="sort-ind-10"></span><br><input type="text" class="filter-input" data-col="10" data-type="numeric" oninput="filterTable()" onkeyup="filterTable()" onclick="event.stopPropagation()" placeholder="£/sqm (e.g. >=40)..."></th>
       <th style="cursor: default; text-align: center; width: 40px;" title="Personal Notes">📝</th>
       <th style="cursor: default; text-align: center;">Link</th>
       <th style="cursor: default; text-align: center;">⭐</th>
