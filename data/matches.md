@@ -88,36 +88,6 @@
 
 ---
 
-### [2026-07-13T08:14:12.474Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Fraser and Co, London West End
-- **Location**: Paddington
-- **Property Name**: Westbourne Terrace, W2
-- **ID**: 90399642
-- **Price**: £600 PCM
-- **Size**: 71 sqm
-- **Listing Update**: 2026-07-02
-- **Listing Status**: Added on 02/07/2026
-- **Let Available**: 21/09/2026 (🦅 Early Bird: 81d adv)
-- **Link**: [https://www.rightmove.co.uk/properties/90399642](https://www.rightmove.co.uk/properties/90399642)
-
----
-
-### [2026-07-13T08:14:12.474Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Frank Harris and Co
-- **Location**: Moorgate
-- **Property Name**: Cornhill, Bank, City of London
-- **ID**: 90676557
-- **Price**: £575 PCM
-- **Size**: 62.6 sqm
-- **Listing Update**: 2026-07-09
-- **Listing Status**: Added on 09/07/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/90676557](https://www.rightmove.co.uk/properties/90676557)
-
----
-
 ### [2026-07-13T08:14:12.473Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Dexters, Canary Wharf
@@ -178,21 +148,6 @@
 
 ---
 
-### [2026-07-13T09:03:52.737Z] MATCH FOUND!
-- **Platform**: KnightFrank
-- **Marketed by**: Knight Frank
-- **Location**: Canary Wharf (E14)
-- **Property Name**: Hampton Tower, London, E14
-- **ID**: CUS012211337
-- **Price**: £2600 PCM
-- **Size**: 59.34 sqm
-- **Listing Update**: 2026-07-13
-- **Listing Status**: Available
-- **Let Available**: Ask agent
-- **Link**: [https://www.knightfrank.co.uk/properties/residential/to-let/hampton-tower-london-e14/cus012211337](https://www.knightfrank.co.uk/properties/residential/to-let/hampton-tower-london-e14/cus012211337)
-
----
-
 ### [2026-07-13T08:59:57.596Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: JOHNSandCO, Canary Wharf
@@ -220,21 +175,6 @@
 - **Listing Status**: Added on 09/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90708627](https://www.rightmove.co.uk/properties/90708627)
-
----
-
-### [2026-07-13T08:14:12.474Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Parker James Estates, London
-- **Location**: Paddington
-- **Property Name**: Sussex Gardens, Marylebone
-- **ID**: 90628713
-- **Price**: £2700 PCM
-- **Size**: 58 sqm
-- **Listing Update**: 2026-07-06
-- **Listing Status**: Reduced on 06/07/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/90628713](https://www.rightmove.co.uk/properties/90628713)
 
 ---
 
@@ -373,21 +313,6 @@
 
 ---
 
-### [2026-07-13T08:32:21.877Z] MATCH FOUND!
-- **Platform**: Johns&Co
-- **Marketed by**: JOHNS&CO
-- **Location**: Canary Wharf (E14)
-- **Property Name**: Roosevelt Tower
-- **ID**: 2402342
-- **Price**: £2340 PCM
-- **Size**: 51.28 sqm
-- **Listing Update**: 2026-07-13
-- **Listing Status**: Available
-- **Let Available**: Ask agent
-- **Link**: [https://www.johnsand.co/properties/roosevelt-tower-2402342](https://www.johnsand.co/properties/roosevelt-tower-2402342)
-
----
-
 ### [2026-06-24T12:36:39.200Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Unknown
@@ -508,36 +433,6 @@
 
 ---
 
-### [2026-07-02T12:32:13.021Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Unknown
-- **Location**: Farringdon
-- **Property Name**: Goswell Road, Clerkenwell, London, EC1V
-- **ID**: 90404763
-- **Price**: £2500 PCM
-- **Size**: 45 sqm
-- **Listing Update**: 2026-07-02
-- **Listing Status**: Added on 02/07/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/90404763](https://www.rightmove.co.uk/properties/90404763)
-
----
-
-### [2026-07-13T08:13:35.521Z] MATCH FOUND!
-- **Platform**: Johns&Co
-- **Marketed by**: JOHNS&CO
-- **Location**: Canary Wharf (E14)
-- **Property Name**: Pan Peninsula
-- **ID**: 2342322
-- **Price**: £2496 PCM
-- **Size**: 44.39 sqm
-- **Listing Update**: 2026-07-13
-- **Listing Status**: Available
-- **Let Available**: Ask agent
-- **Link**: [https://www.johnsand.co/properties/pan-peninsula-2342322](https://www.johnsand.co/properties/pan-peninsula-2342322)
-
----
-
 ### [2026-06-20T12:17:31.434Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Unknown
@@ -598,153 +493,18 @@
 
 ---
 
-### [2026-05-21T13:48:42.933Z] MATCH FOUND!
+### [2026-07-13T10:39:55.228Z] MATCH FOUND!
 - **Platform**: Rightmove
-- **Marketed by**: Unknown
-- **Location**: Farringdon
-- **Property Name**: Fetter Lane,London,EC4A
-- **ID**: 19588097
-- **Price**: £2275 PCM
-- **Size**: 40 sqm
-- **Listing Update**: 2026-06-16
-- **Listing Status**: Reduced on 16/06/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/19588097](https://www.rightmove.co.uk/properties/19588097)
-
----
-
-### [2026-07-07T13:05:14.906Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Hurford Salvi Carr, Britton Street
-- **Location**: Farringdon / Clerkenwell
-- **Property Name**: Barbican, EC2Y
-- **ID**: 90558996
-- **Price**: £2500 PCM
-- **Size**: 40 sqm
-- **Listing Update**: 2026-07-06
-- **Listing Status**: Added on 06/07/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/90558996](https://www.rightmove.co.uk/properties/90558996)
-
----
-
-### [2026-07-13T08:14:12.474Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Hellas-Helvetia, London
-- **Location**: Paddington
-- **Property Name**: Inverness Terrace, City Of Westminster, London
-- **ID**: 90527991
-- **Price**: £345 PCM
+- **Marketed by**: JOHNSandCO, Canary Wharf
+- **Location**: Canary Wharf
+- **Property Name**: Baltimore Warf E14
+- **ID**: 161697050
+- **Price**: £461 PCM
 - **Size**: Unknown
-- **Listing Update**: 2026-07-06
-- **Listing Status**: Added on 06/07/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/90527991](https://www.rightmove.co.uk/properties/90527991)
-
----
-
-### [2026-07-13T08:14:12.474Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Leo Newman, London
-- **Location**: Paddington
-- **Property Name**: Edgware Road, Paddington, W2
-- **ID**: 90618570
-- **Price**: £1675 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-08
-- **Listing Status**: Added on 08/07/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/90618570](https://www.rightmove.co.uk/properties/90618570)
-
----
-
-### [2026-07-13T08:14:12.474Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Dexters, Clerkenwell
-- **Location**: Moorgate
-- **Property Name**: Charterhouse Square, Farringdon
-- **ID**: 89984841
-- **Price**: £1750 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-10
-- **Listing Status**: Reduced on 10/07/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/89984841](https://www.rightmove.co.uk/properties/89984841)
-
----
-
-### [2026-07-13T08:14:09.993Z] MATCH FOUND!
-- **Platform**: JLL
-- **Marketed by**: JLL
-- **Location**: Canary Wharf (E14)
-- **Property Name**: River Gardens Walk London SE10
-- **ID**: P169094
-- **Price**: £2000 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-13
-- **Listing Status**: Available
-- **Let Available**: Ask agent
-- **Link**: [https://residential.jll.co.uk/rent-apartment/london-se10-0gb-p169094](https://residential.jll.co.uk/rent-apartment/london-se10-0gb-p169094)
-
----
-
-### [2026-07-13T08:14:09.993Z] MATCH FOUND!
-- **Platform**: JLL
-- **Marketed by**: JLL
-- **Location**: Canary Wharf (E14)
-- **Property Name**: 161 Evelyn Street London SE8
-- **ID**: P169197
-- **Price**: £2018 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-13
-- **Listing Status**: Available
-- **Let Available**: Ask agent
-- **Link**: [https://residential.jll.co.uk/rent-flat/london-se8-5fz-p169197](https://residential.jll.co.uk/rent-flat/london-se8-5fz-p169197)
-
----
-
-### [2026-07-13T08:14:09.993Z] MATCH FOUND!
-- **Platform**: JLL
-- **Marketed by**: JLL
-- **Location**: Canary Wharf (E14)
-- **Property Name**: Zinc Street Sugar House Island E15
-- **ID**: P169260
-- **Price**: £2100 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-13
-- **Listing Status**: Available
-- **Let Available**: Ask agent
-- **Link**: [https://residential.jll.co.uk/rent-flat/london-e15-2qz-p169260](https://residential.jll.co.uk/rent-flat/london-e15-2qz-p169260)
-
----
-
-### [2026-07-13T08:13:35.521Z] MATCH FOUND!
-- **Platform**: Johns&Co
-- **Marketed by**: JOHNS&CO
-- **Location**: Canary Wharf (E14)
-- **Property Name**: New Providence Wharf
-- **ID**: 2708246
-- **Price**: £2102 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-13
-- **Listing Status**: Available
-- **Let Available**: Ask agent
-- **Link**: [https://www.johnsand.co/properties/new-providence-wharf-2708246](https://www.johnsand.co/properties/new-providence-wharf-2708246)
-
----
-
-### [2026-07-13T08:14:09.992Z] MATCH FOUND!
-- **Platform**: JLL
-- **Marketed by**: JLL
-- **Location**: Canary Wharf (E14)
-- **Property Name**: Copperworks Wharf Sugar House Island E15
-- **ID**: P169268
-- **Price**: £2150 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-13
-- **Listing Status**: Available
-- **Let Available**: Ask agent
-- **Link**: [https://residential.jll.co.uk/rent-flat/london-e15-2bw-p169268](https://residential.jll.co.uk/rent-flat/london-e15-2bw-p169268)
+- **Listing Update**: 2026-07-07
+- **Listing Status**: Added on 07/07/2026
+- **Let Available**: 24/09/2026 (🦅 Early Bird: 79d adv)
+- **Link**: [https://www.rightmove.co.uk/properties/161697050](https://www.rightmove.co.uk/properties/161697050)
 
 ---
 
@@ -808,111 +568,6 @@
 
 ---
 
-### [2026-07-13T08:13:35.521Z] MATCH FOUND!
-- **Platform**: Johns&Co
-- **Marketed by**: JOHNS&CO
-- **Location**: Canary Wharf (E14)
-- **Property Name**: Torquay Court
-- **ID**: 2732711
-- **Price**: £2202 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-13
-- **Listing Status**: Available
-- **Let Available**: Ask agent
-- **Link**: [https://www.johnsand.co/properties/torquay-court-2732711](https://www.johnsand.co/properties/torquay-court-2732711)
-
----
-
-### [2026-07-13T08:14:12.474Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Scott City Residential, London
-- **Location**: Moorgate
-- **Property Name**: Spencer Heights, 28 Bartholomew Close, London
-- **ID**: 90392160
-- **Price**: £2250 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-02
-- **Listing Status**: Added on 02/07/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/90392160](https://www.rightmove.co.uk/properties/90392160)
-
----
-
-### [2026-07-13T08:14:12.474Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Dexters, Hyde Park and Bayswater
-- **Location**: Paddington
-- **Property Name**: Orsett Terrace, Hyde Park
-- **ID**: 90705138
-- **Price**: £2250 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-09
-- **Listing Status**: Added on 09/07/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/90705138](https://www.rightmove.co.uk/properties/90705138)
-
----
-
-### [2026-07-13T08:14:12.474Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: AWCHILDS LTD, London
-- **Location**: Moorgate
-- **Property Name**: John Trundle Court, John Trundle Highwalk, Barbican, City Of London, London
-- **ID**: 90525966
-- **Price**: £2275 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-06
-- **Listing Status**: Added on 06/07/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/90525966](https://www.rightmove.co.uk/properties/90525966)
-
----
-
-### [2026-07-13T08:14:09.993Z] MATCH FOUND!
-- **Platform**: JLL
-- **Marketed by**: JLL
-- **Location**: Canary Wharf (E14)
-- **Property Name**: 161 Evelyn Street London SE8
-- **ID**: P169198
-- **Price**: £2275 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-13
-- **Listing Status**: Available
-- **Let Available**: Ask agent
-- **Link**: [https://residential.jll.co.uk/rent-flat/london-se8-5fy-p169198](https://residential.jll.co.uk/rent-flat/london-se8-5fy-p169198)
-
----
-
-### [2026-07-13T08:14:09.992Z] MATCH FOUND!
-- **Platform**: JLL
-- **Marketed by**: JLL
-- **Location**: Canary Wharf (E14)
-- **Property Name**: Amory Tower, Marsh Wall, E14
-- **ID**: P169261
-- **Price**: £2275 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-13
-- **Listing Status**: Available
-- **Let Available**: Ask agent
-- **Link**: [https://residential.jll.co.uk/rent-flat/london-e14-9zn-p169261](https://residential.jll.co.uk/rent-flat/london-e14-9zn-p169261)
-
----
-
-### [2026-07-13T08:14:12.475Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: relocate-me
-- **Location**: Moorgate
-- **Property Name**: Bezier Apartments, City Road, Old Street, Shoreditch, London, EC1Y
-- **ID**: 173369096
-- **Price**: £2300 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-04-30
-- **Listing Status**: Reduced on 30/04/2026
-- **Let Available**: Now (🦅 Early Bird: 74d adv)
-- **Link**: [https://www.rightmove.co.uk/properties/173369096](https://www.rightmove.co.uk/properties/173369096)
-
----
-
 ### [2026-07-13T08:14:12.473Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Dexters, Canary Wharf
@@ -925,21 +580,6 @@
 - **Listing Status**: Added on 10/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90732897](https://www.rightmove.co.uk/properties/90732897)
-
----
-
-### [2026-07-13T08:14:12.473Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: OpenRent, London
-- **Location**: Paddington
-- **Property Name**: Porchester Road, London, W2
-- **ID**: 90393171
-- **Price**: £2300 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-10
-- **Listing Status**: Reduced on 10/07/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/90393171](https://www.rightmove.co.uk/properties/90393171)
 
 ---
 
@@ -973,153 +613,33 @@
 
 ---
 
-### [2026-07-13T08:14:12.473Z] MATCH FOUND!
+### [2026-07-13T10:39:55.228Z] MATCH FOUND!
 - **Platform**: Rightmove
-- **Marketed by**: Home Made, London
-- **Location**: Paddington
-- **Property Name**: Miles Buildings, Marylebone Quarter NW1
-- **ID**: 90787257
+- **Marketed by**: Waterfronts, London
+- **Location**: Canary Wharf
+- **Property Name**: Bagshaw Building, Wards Place, London, E14
+- **ID**: 89831655
 - **Price**: £2400 PCM
 - **Size**: Unknown
-- **Listing Update**: 2026-07-12
-- **Listing Status**: Added yesterday
+- **Listing Update**: 2026-07-13
+- **Listing Status**: Reduced today
 - **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/90787257](https://www.rightmove.co.uk/properties/90787257)
+- **Link**: [https://www.rightmove.co.uk/properties/89831655](https://www.rightmove.co.uk/properties/89831655)
 
 ---
 
-### [2026-07-13T08:14:12.474Z] MATCH FOUND!
+### [2026-07-13T10:39:55.228Z] MATCH FOUND!
 - **Platform**: Rightmove
-- **Marketed by**: Tower Quay Limited, London
-- **Location**: Moorgate
-- **Property Name**: The Old Lofts,Crescent Row,London,EC1Y 0SP
-- **ID**: 21622421
-- **Price**: £2500 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-06-26
-- **Listing Status**: Added on 26/06/2026
-- **Let Available**: 11/09/2026 (🦅 Early Bird: 77d adv)
-- **Link**: [https://www.rightmove.co.uk/properties/21622421](https://www.rightmove.co.uk/properties/21622421)
-
----
-
-### [2026-07-13T08:14:09.993Z] MATCH FOUND!
-- **Platform**: JLL
-- **Marketed by**: JLL
-- **Location**: Canary Wharf (E14)
-- **Property Name**: Landmark Pinnacle, Marsh Wall, E14
-- **ID**: P169185
-- **Price**: £2513 PCM
+- **Marketed by**: Waterfronts, London
+- **Location**: Canary Wharf
+- **Property Name**: Amory Tower, Marsh Wall, London, E14
+- **ID**: 88695102
+- **Price**: £2450 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-13
-- **Listing Status**: Available
-- **Let Available**: Ask agent
-- **Link**: [https://residential.jll.co.uk/rent-apartment/london-e14-9fy-p169185](https://residential.jll.co.uk/rent-apartment/london-e14-9fy-p169185)
-
----
-
-### [2026-07-13T08:14:09.993Z] MATCH FOUND!
-- **Platform**: JLL
-- **Marketed by**: JLL
-- **Location**: Canary Wharf (E14)
-- **Property Name**: Landmark Pinnacle, Marsh Wall, E14
-- **ID**: P169117
-- **Price**: £2513 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-13
-- **Listing Status**: Available
-- **Let Available**: Ask agent
-- **Link**: [https://residential.jll.co.uk/rent-flat/london-e14-9fr-p169117](https://residential.jll.co.uk/rent-flat/london-e14-9fr-p169117)
-
----
-
-### [2026-07-13T08:14:09.993Z] MATCH FOUND!
-- **Platform**: JLL
-- **Marketed by**: JLL
-- **Location**: Canary Wharf (E14)
-- **Property Name**: Copperworks Wharf, Sugar House Island, E15
-- **ID**: P169204
-- **Price**: £2550 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-13
-- **Listing Status**: Available
-- **Let Available**: Ask agent
-- **Link**: [https://residential.jll.co.uk/rent-flat/london-e15-2zt-p169204](https://residential.jll.co.uk/rent-flat/london-e15-2zt-p169204)
-
----
-
-### [2026-07-13T08:14:09.993Z] MATCH FOUND!
-- **Platform**: JLL
-- **Marketed by**: JLL
-- **Location**: Canary Wharf (E14)
-- **Property Name**: Copperworks Wharf London E15
-- **ID**: P169193
-- **Price**: £2550 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-13
-- **Listing Status**: Available
-- **Let Available**: Ask agent
-- **Link**: [https://residential.jll.co.uk/rent-apartment/london-e15-2zt-p169193](https://residential.jll.co.uk/rent-apartment/london-e15-2zt-p169193)
-
----
-
-### [2026-07-13T08:14:09.992Z] MATCH FOUND!
-- **Platform**: JLL
-- **Marketed by**: JLL
-- **Location**: Canary Wharf (E14)
-- **Property Name**: Copper Works Wharf Sugar House Island E15
-- **ID**: P169264
-- **Price**: £2550 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-13
-- **Listing Status**: Available
-- **Let Available**: Ask agent
-- **Link**: [https://residential.jll.co.uk/rent-flat/london-e15-2zt-p169264](https://residential.jll.co.uk/rent-flat/london-e15-2zt-p169264)
-
----
-
-### [2026-07-13T08:14:09.993Z] MATCH FOUND!
-- **Platform**: JLL
-- **Marketed by**: JLL
-- **Location**: Canary Wharf (E14)
-- **Property Name**: Landmark Pinnacle, Marsh Wall, E14
-- **ID**: P168955
-- **Price**: £2557 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-13
-- **Listing Status**: Available
-- **Let Available**: Ask agent
-- **Link**: [https://residential.jll.co.uk/rent-apartment/london-e14-9fr-p168955](https://residential.jll.co.uk/rent-apartment/london-e14-9fr-p168955)
-
----
-
-### [2026-07-13T08:14:12.474Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Hurford Salvi Carr, Aldgate
-- **Location**: Moorgate
-- **Property Name**: Wormwood Street, EC2M
-- **ID**: 90675807
-- **Price**: £2600 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-06
-- **Listing Status**: Added on 06/07/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/90675807](https://www.rightmove.co.uk/properties/90675807)
-
----
-
-### [2026-07-13T08:14:12.474Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Hurford Salvi Carr, Britton Street
-- **Location**: Moorgate
-- **Property Name**: Wormwood Street, EC2M
-- **ID**: 89379114
-- **Price**: £2600 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-06
-- **Listing Status**: Added on 06/07/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/89379114](https://www.rightmove.co.uk/properties/89379114)
+- **Listing Status**: Reduced today
+- **Let Available**: 31/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/88695102](https://www.rightmove.co.uk/properties/88695102)
 
 ---
 
@@ -1135,36 +655,6 @@
 - **Listing Status**: Added on 08/07/2026
 - **Let Available**: 01/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90633570](https://www.rightmove.co.uk/properties/90633570)
-
----
-
-### [2026-07-13T08:13:35.521Z] MATCH FOUND!
-- **Platform**: Johns&Co
-- **Marketed by**: JOHNS&CO
-- **Location**: Canary Wharf (E14)
-- **Property Name**: Pan Peninsula Square
-- **ID**: 2720320
-- **Price**: £2648 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-13
-- **Listing Status**: Available
-- **Let Available**: Ask agent
-- **Link**: [https://www.johnsand.co/properties/pan-peninsula-square-2720320](https://www.johnsand.co/properties/pan-peninsula-square-2720320)
-
----
-
-### [2026-07-13T08:14:09.993Z] MATCH FOUND!
-- **Platform**: JLL
-- **Marketed by**: JLL
-- **Location**: Canary Wharf (E14)
-- **Property Name**: Landmark Pinnacle, Marsh Wall, E14
-- **ID**: P168970
-- **Price**: £2687 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-13
-- **Listing Status**: Available
-- **Let Available**: Ask agent
-- **Link**: [https://residential.jll.co.uk/rent-apartment/london-e14-9xz-p168970](https://residential.jll.co.uk/rent-apartment/london-e14-9xz-p168970)
 
 ---
 
