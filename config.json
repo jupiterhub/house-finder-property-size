@@ -7,10 +7,11 @@
   "includeUnknownAvailability": true,
   "locations": [
     "Canary Wharf",
-    "Wood Wharf",
     "South Quay",
-    "Greenwich Peninsula",
-    "Royal Arsenal, Woolwich"
+    "Crossharbour",
+    "Custom House",
+    "Royal Victoria Docks",
+    "Greenwich Peninsula"
   ],
   "excludedAgents": [
     "Foxtons"

@@ -887,12 +887,27 @@ async function main() {
         }
 
 
+        const textToCheck = `${m.propertyName || ''} ${m.description || ''} ${m.location || ''}`.toLowerCase();
+        let targetTowerName = '';
+        if (textToCheck.includes('hoola')) targetTowerName = 'Hoola';
+        else if (textToCheck.includes('royal eden')) targetTowerName = 'Royal Eden Docks';
+        else if (textToCheck.includes('royal docks west')) targetTowerName = 'Royal Docks West';
+        else if (textToCheck.includes('pan peninsula')) targetTowerName = 'Pan Peninsula';
+        else if (textToCheck.includes('arena tower') || textToCheck.includes('baltimore tower')) targetTowerName = 'Arena Tower';
+        else if (textToCheck.includes('south quay plaza') || textToCheck.includes('sqp')) targetTowerName = 'South Quay Plaza';
+        else if (textToCheck.includes('wardian')) targetTowerName = 'Wardian';
+        else if (textToCheck.includes('upper riverside')) targetTowerName = 'Upper Riverside';
+        else if (textToCheck.includes('peninsula gardens')) targetTowerName = 'Peninsula Gardens';
+        else if (textToCheck.includes('lower riverside')) targetTowerName = 'Lower Riverside';
+
+        const targetTowerBadge = targetTowerName ? `<br><span class="badge badge-targettower" title="Key Target Glass Tower Development">🏛️ Key Tower: ${targetTowerName}</span>` : '';
+
         const noteBtn = `<button class="note-btn note-icon-btn" id="note-btn-${m.id}" onclick="openNoteModal('${m.id}')" title="Add / View Note">📝</button>`;
         const hasSize = (m.size && m.size !== 0 && m.size !== '0');
         const sizeDisplay = hasSize ? `${m.size} sqm` : 'Unknown';
         const ppsqmDisplay = hasSize && pricePerSqm !== 'N/A' ? `£${pricePerSqm}${dealBadge}` : 'N/A';
 
-        return `<tr data-id="${m.id}" data-index="${idx}" data-platform="${platformStr}" data-deal="${dealType}" data-early-bird="${isEarlyBird ? 'true' : 'false'}">
+        return `<tr data-id="${m.id}" data-index="${idx}" data-platform="${platformStr}" data-deal="${dealType}" data-early-bird="${isEarlyBird ? 'true' : 'false'}" data-target-tower="${targetTowerName ? 'true' : 'false'}">
           <td data-value="${timestamp}">${dateStr}</td>
           <td data-value="${updateTs}">${listingUpdateStr}</td>
           <td data-value="${listingStatusStr}">${listingStatusStr}</td>
@@ -900,7 +915,7 @@ async function main() {
           <td data-value="${platformStr}">${platformBadge}</td>
           <td data-value="${agentStr}">${agentBadge}</td>
           <td data-value="${escapeHtml(m.location || 'Unknown')}">${m.location || 'Unknown'}</td>
-          <td data-value="${escapeHtml(m.propertyName || 'Unknown')}">${propertyNameCell}</td>
+          <td data-value="${escapeHtml(m.propertyName || 'Unknown')}">${propertyNameCell}${targetTowerBadge}</td>
           <td class="numeric" data-value="${m.price || 0}">£${m.price || 0}</td>
           <td class="numeric" data-value="${m.size || 0}">${sizeDisplay}</td>
           <td class="numeric" data-value="${pricePerSqmValue}">${ppsqmDisplay}</td>
@@ -1147,6 +1162,18 @@ async function main() {
     border-color: #f87171;
     color: white;
     box-shadow: 0 0 12px rgba(239, 68, 68, 0.4);
+  }
+  .filter-chip.chip-targettower.active {
+    background: linear-gradient(135deg, #d97706, #f59e0b);
+    border-color: #fbbf24;
+    color: white;
+    box-shadow: 0 0 15px rgba(245, 158, 11, 0.4);
+  }
+  .badge-targettower {
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(217, 119, 6, 0.2));
+    color: #fbbf24;
+    border: 1px solid rgba(245, 158, 11, 0.4);
+    font-weight: 700;
   }
   .badge-earlybird {
     background: linear-gradient(135deg, rgba(168, 85, 247, 0.2), rgba(236, 72, 153, 0.2));
@@ -1898,6 +1925,11 @@ function filterTable() {
       continue;
     }
 
+    if (activeQuickFilter === "TargetTower" && tr[i].getAttribute("data-target-tower") !== "true") {
+      tr[i].style.display = "none";
+      continue;
+    }
+
     if (activeQuickFilter === "ExcludeNow") {
       var availTd = tr[i].getElementsByTagName("td")[3];
       if (availTd) {
@@ -2095,6 +2127,9 @@ function setQuickFilter(filterType) {
     } else if (filterType === "EarlyBird") {
       var ebBtn = document.getElementById("chipEarlyBird");
       if (ebBtn) ebBtn.classList.add("active");
+    } else if (filterType === "TargetTower") {
+      var ttBtn = document.getElementById("chipTargetTower");
+      if (ttBtn) ttBtn.classList.add("active");
     } else if (filterType === "Starred") {
       var stBtn = document.getElementById("chipStarred");
       if (stBtn) stBtn.classList.add("active");
@@ -2555,6 +2590,7 @@ document.addEventListener("DOMContentLoaded", function() {
       <button id="chipAll" class="filter-chip active" onclick="setQuickFilter('')">All</button>
       <button id="chipBargain" class="filter-chip chip-bargain" onclick="setQuickFilter('Bargain')">💎 Bargain</button>
       <button id="chipGoodValue" class="filter-chip chip-goodvalue" onclick="setQuickFilter('GoodValue')">👍 Good Value</button>
+      <button id="chipTargetTower" class="filter-chip chip-targettower" onclick="setQuickFilter('TargetTower')">🏛️ Target Towers</button>
       <button id="chipEarlyBird" class="filter-chip chip-earlybird" onclick="setQuickFilter('EarlyBird')">🦅 Early Bird</button>
       <button id="chipExcludeNow" class="filter-chip chip-excludenow" onclick="setQuickFilter('ExcludeNow')">🚫 Exclude Now</button>
       <button id="chipViewed" class="filter-chip chip-viewed" onclick="setQuickFilter('Viewed')">✓ Viewed</button>

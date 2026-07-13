@@ -1,63 +1,3 @@
-### [2026-07-10T17:16:50.152Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Vertus, Canary Wharf
-- **Location**: Canary Wharf
-- **Property Name**: 50 Charter Street, London, E22
-- **ID**: 172155143
-- **Price**: £2518 PCM
-- **Size**: 4869 sqm
-- **Listing Update**: 2026-07-10
-- **Listing Status**: Added on 10/07/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/172155143](https://www.rightmove.co.uk/properties/172155143)
-
----
-
-### [2026-07-13T12:32:05.337Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Madison Brook, Lewisham
-- **Location**: Woolwich
-- **Property Name**: Wick Tower, Woolwich, SE18
-- **ID**: 89812200
-- **Price**: £2300 PCM
-- **Size**: 94 sqm
-- **Listing Update**: 2026-07-11
-- **Listing Status**: Reduced on 11/07/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/89812200](https://www.rightmove.co.uk/properties/89812200)
-
----
-
-### [2026-07-13T13:29:57.615Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Chestertons, Canary Wharf and Docklands
-- **Location**: Royal Arsenal, Woolwich
-- **Property Name**: Building 48,
-- **ID**: 90174753
-- **Price**: £2550 PCM
-- **Size**: 84 sqm
-- **Listing Update**: 2026-06-26
-- **Listing Status**: Added on 26/06/2026
-- **Let Available**: 04/09/2026 (🦅 Early Bird: 70d adv)
-- **Link**: [https://www.rightmove.co.uk/properties/90174753](https://www.rightmove.co.uk/properties/90174753)
-
----
-
-### [2026-05-27T14:03:03.159Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Unknown
-- **Location**: Canary Wharf
-- **Property Name**: Hutchings Street, Canary Wharf
-- **ID**: 88977246
-- **Price**: £2250 PCM
-- **Size**: 81.8 sqm
-- **Listing Update**: 2026-05-27
-- **Listing Status**: Added on 27/05/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/88977246](https://www.rightmove.co.uk/properties/88977246)
-
----
-
 ### [2026-07-13T12:39:47.738Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: 1st Avenue, London
@@ -70,21 +10,6 @@
 - **Listing Status**: Added on 24/06/2026
 - **Let Available**: 03/09/2026 (🦅 Early Bird: 71d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/90086712](https://www.rightmove.co.uk/properties/90086712)
-
----
-
-### [2026-07-13T12:39:47.739Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Regent and Wood, London
-- **Location**: Woolwich
-- **Property Name**: Calderwood Street, The Vista Building, SE18
-- **ID**: 173678006
-- **Price**: £1925 PCM
-- **Size**: 79 sqm
-- **Listing Update**: 2026-07-02
-- **Listing Status**: Reduced on 02/07/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/173678006](https://www.rightmove.co.uk/properties/173678006)
 
 ---
 
@@ -103,36 +28,6 @@
 
 ---
 
-### [2026-07-13T12:32:05.337Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Dexters, Blackheath
-- **Location**: Woolwich
-- **Property Name**: Powis Street, Woolwich
-- **ID**: 174238409
-- **Price**: £2200 PCM
-- **Size**: 76.9 sqm
-- **Listing Update**: 2026-07-10
-- **Listing Status**: Reduced on 10/07/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/174238409](https://www.rightmove.co.uk/properties/174238409)
-
----
-
-### [2026-07-13T12:32:05.337Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Hamptons, Blackheath
-- **Location**: Woolwich
-- **Property Name**: Mast Quay London SE18
-- **ID**: 90783114
-- **Price**: £2300 PCM
-- **Size**: 76.3 sqm
-- **Listing Update**: 2026-07-11
-- **Listing Status**: Reduced on 11/07/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/90783114](https://www.rightmove.co.uk/properties/90783114)
-
----
-
 ### [2026-06-23T13:27:08.844Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Unknown
@@ -145,51 +40,6 @@
 - **Listing Status**: Added on 23/06/2026
 - **Let Available**: 14/09/2026 (🦅 Early Bird: 83d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/90025377](https://www.rightmove.co.uk/properties/90025377)
-
----
-
-### [2026-07-10T13:24:20.943Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Dexters, Canary Wharf
-- **Location**: Canary Wharf
-- **Property Name**: Knighthead Point, Canary Wharf
-- **ID**: 90735000
-- **Price**: £1900 PCM
-- **Size**: 75.4 sqm
-- **Listing Update**: 2026-07-10
-- **Listing Status**: Added on 10/07/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/90735000](https://www.rightmove.co.uk/properties/90735000)
-
----
-
-### [2026-07-13T12:39:47.738Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Royal Arsenal Residential, London
-- **Location**: Woolwich
-- **Property Name**: Building 22, Cadogan Road, Royal Arsenal SE18
-- **ID**: 90432153
-- **Price**: £2150 PCM
-- **Size**: 75 sqm
-- **Listing Update**: 2026-07-02
-- **Listing Status**: Added on 02/07/2026
-- **Let Available**: 05/09/2026
-- **Link**: [https://www.rightmove.co.uk/properties/90432153](https://www.rightmove.co.uk/properties/90432153)
-
----
-
-### [2026-06-02T14:39:45.426Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Unknown
-- **Location**: Canary Wharf
-- **Property Name**: Lawn House Close, Canary Wharf
-- **ID**: 89164764
-- **Price**: £2350 PCM
-- **Size**: 74.51 sqm
-- **Listing Update**: 2026-06-01
-- **Listing Status**: Added on 01/06/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/89164764](https://www.rightmove.co.uk/properties/89164764)
 
 ---
 
@@ -208,33 +58,18 @@
 
 ---
 
-### [2026-07-13T12:32:05.337Z] MATCH FOUND!
+### [2026-07-13T14:45:59.555Z] MATCH FOUND!
 - **Platform**: Rightmove
-- **Marketed by**: Hamptons, Blackheath
-- **Location**: Woolwich
-- **Property Name**: Mast Quay London SE18
-- **ID**: 90783291
-- **Price**: £2200 PCM
-- **Size**: 73.9 sqm
-- **Listing Update**: 2026-07-11
-- **Listing Status**: Reduced on 11/07/2026
+- **Marketed by**: Portico, Docklands Lettings
+- **Location**: Royal Victoria Docks
+- **Property Name**: Mercury House, 2 Jude Street, E16
+- **ID**: 90806412
+- **Price**: £2250 PCM
+- **Size**: 73.39 sqm
+- **Listing Update**: 2026-07-13
+- **Listing Status**: Added today
 - **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/90783291](https://www.rightmove.co.uk/properties/90783291)
-
----
-
-### [2026-07-13T12:39:47.739Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Marsh and Parsons, Charlton
-- **Location**: Woolwich
-- **Property Name**: Artillery Place, Woolwich
-- **ID**: 87960963
-- **Price**: £2000 PCM
-- **Size**: 72.4 sqm
-- **Listing Update**: 2026-06-29
-- **Listing Status**: Reduced on 29/06/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/87960963](https://www.rightmove.co.uk/properties/87960963)
+- **Link**: [https://www.rightmove.co.uk/properties/90806412](https://www.rightmove.co.uk/properties/90806412)
 
 ---
 
@@ -253,18 +88,63 @@
 
 ---
 
-### [2026-07-13T12:39:47.739Z] MATCH FOUND!
+### [2026-07-13T14:45:59.556Z] MATCH FOUND!
 - **Platform**: Rightmove
-- **Marketed by**: Truepenny
-- **Location**: Woolwich
-- **Property Name**: Mizzen Mast House, Mast Quay, Woolwich, SE18
-- **ID**: 90372018
-- **Price**: £2500 PCM
-- **Size**: 70.42 sqm
-- **Listing Update**: 2026-07-01
-- **Listing Status**: Added on 01/07/2026
+- **Marketed by**: Grainger, Fortunes Dock
+- **Location**: Royal Victoria Docks
+- **Property Name**: Fortunes Dock, Canning Town London E16
+- **ID**: 90445353
+- **Price**: £2640 PCM
+- **Size**: 72 sqm
+- **Listing Update**: 2026-07-03
+- **Listing Status**: Added on 03/07/2026
 - **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/90372018](https://www.rightmove.co.uk/properties/90372018)
+- **Link**: [https://www.rightmove.co.uk/properties/90445353](https://www.rightmove.co.uk/properties/90445353)
+
+---
+
+### [2026-07-13T14:45:59.556Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Grainger, Fortunes Dock
+- **Location**: Royal Victoria Docks
+- **Property Name**: Fortunes Dock, Canning Town London E16
+- **ID**: 90001929
+- **Price**: £2665 PCM
+- **Size**: 71 sqm
+- **Listing Update**: 2026-06-22
+- **Listing Status**: Added on 22/06/2026
+- **Let Available**: 24/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/90001929](https://www.rightmove.co.uk/properties/90001929)
+
+---
+
+### [2026-07-13T14:45:59.555Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Grainger, Fortunes Dock
+- **Location**: Royal Victoria Docks
+- **Property Name**: Fortunes Dock, Canning Town London E16
+- **ID**: 90817683
+- **Price**: £2685 PCM
+- **Size**: 71 sqm
+- **Listing Update**: 2026-07-13
+- **Listing Status**: Added today
+- **Let Available**: 15/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/90817683](https://www.rightmove.co.uk/properties/90817683)
+
+---
+
+### [2026-07-13T14:45:59.555Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Dexters, Royal Wharf
+- **Location**: Royal Victoria Docks
+- **Property Name**: Sovereign Tower, Canning Town, London
+- **ID**: 90270708
+- **Price**: £2500 PCM
+- **Size**: 70 sqm
+- **Listing Update**: 2026-07-09
+- **Listing Status**: Reduced on 09/07/2026
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/90270708](https://www.rightmove.co.uk/properties/90270708)
 
 ---
 
@@ -298,21 +178,6 @@
 
 ---
 
-### [2026-07-13T12:19:13.604Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Keller Williams Plus, Covering Nationwide
-- **Location**: Woolwich
-- **Property Name**: Jackson Street, Cheadle, SK8
-- **ID**: 90363378
-- **Price**: £1350 PCM
-- **Size**: 69.1 sqm
-- **Listing Update**: 2026-07-01
-- **Listing Status**: Added on 01/07/2026
-- **Let Available**: 29/08/2026
-- **Link**: [https://www.rightmove.co.uk/properties/90363378](https://www.rightmove.co.uk/properties/90363378)
-
----
-
 ### [2026-07-13T12:39:47.738Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Greenwich Peninsula, London
@@ -325,6 +190,21 @@
 - **Listing Status**: Added on 19/06/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/89936343](https://www.rightmove.co.uk/properties/89936343)
+
+---
+
+### [2026-07-13T14:45:59.555Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Grainger, Fortunes Dock
+- **Location**: Royal Victoria Docks
+- **Property Name**: Fortunes Dock, Canning Town London E16
+- **ID**: 90669663
+- **Price**: £2575 PCM
+- **Size**: 67 sqm
+- **Listing Update**: 2026-07-09
+- **Listing Status**: Added on 09/07/2026
+- **Let Available**: 14/09/2026 (🦅 Early Bird: 67d adv)
+- **Link**: [https://www.rightmove.co.uk/properties/90669663](https://www.rightmove.co.uk/properties/90669663)
 
 ---
 
@@ -343,6 +223,21 @@
 
 ---
 
+### [2026-07-13T14:45:59.555Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Look Property Services Ltd, Bow
+- **Location**: Royal Victoria Docks
+- **Property Name**: Hallsville Road, Canning Town, E16
+- **ID**: 90195711
+- **Price**: £2200 PCM
+- **Size**: 65.71 sqm
+- **Listing Update**: 2026-07-11
+- **Listing Status**: Reduced on 11/07/2026
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/90195711](https://www.rightmove.co.uk/properties/90195711)
+
+---
+
 ### [2026-07-13T12:32:05.335Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Greenwich Peninsula, London
@@ -355,21 +250,6 @@
 - **Listing Status**: Added on 09/07/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90692586](https://www.rightmove.co.uk/properties/90692586)
-
----
-
-### [2026-07-13T12:32:05.336Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Hello Neighbour, London
-- **Location**: Woolwich
-- **Property Name**: Plumstead Road, London, SE18
-- **ID**: 89775219
-- **Price**: £1600 PCM
-- **Size**: 64 sqm
-- **Listing Update**: 2026-07-07
-- **Listing Status**: Reduced on 07/07/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/89775219](https://www.rightmove.co.uk/properties/89775219)
 
 ---
 
@@ -388,18 +268,33 @@
 
 ---
 
-### [2026-07-13T08:14:12.473Z] MATCH FOUND!
+### [2026-07-13T14:45:59.555Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Campbell Residential, Docklands
+- **Location**: Canary Wharf
+- **Property Name**: Ability Place 37 Millharbour E14 9DF
+- **ID**: 90820317
+- **Price**: £2300 PCM
+- **Size**: 64 sqm
+- **Listing Update**: 2026-07-13
+- **Listing Status**: Added today
+- **Let Available**: 01/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/90820317](https://www.rightmove.co.uk/properties/90820317)
+
+---
+
+### [2026-07-13T14:45:59.556Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Dexters, Canary Wharf
-- **Location**: Canary Wharf
-- **Property Name**: Cassilis Road, Canary Wharf
-- **ID**: 89849076
-- **Price**: £2500 PCM
-- **Size**: 62.1 sqm
-- **Listing Update**: 2026-07-08
-- **Listing Status**: Reduced on 08/07/2026
+- **Location**: Greenwich Peninsula
+- **Property Name**: Cold Harbour, Canary Wharf
+- **ID**: 89187000
+- **Price**: £1950 PCM
+- **Size**: 62.4 sqm
+- **Listing Update**: 2026-06-18
+- **Listing Status**: Reduced on 18/06/2026
 - **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/89849076](https://www.rightmove.co.uk/properties/89849076)
+- **Link**: [https://www.rightmove.co.uk/properties/89187000](https://www.rightmove.co.uk/properties/89187000)
 
 ---
 
@@ -448,21 +343,6 @@
 
 ---
 
-### [2026-07-13T12:39:47.738Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: changingproperty
-- **Location**: Woolwich
-- **Property Name**: Florence House, Shooters Hill
-- **ID**: 90420258
-- **Price**: £1995 PCM
-- **Size**: 61.3 sqm
-- **Listing Update**: 2026-07-02
-- **Listing Status**: Added on 02/07/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/90420258](https://www.rightmove.co.uk/properties/90420258)
-
----
-
 ### [2026-07-13T12:09:30.607Z] MATCH FOUND!
 - **Platform**: Johns&Co
 - **Marketed by**: JOHNS&CO
@@ -475,51 +355,6 @@
 - **Listing Status**: Available
 - **Let Available**: Ask agent
 - **Link**: [https://www.johnsand.co/properties/curlew-house-2668315](https://www.johnsand.co/properties/curlew-house-2668315)
-
----
-
-### [2026-07-13T12:32:05.337Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: OpenRent, London
-- **Location**: Woolwich
-- **Property Name**: London, London, SE18
-- **ID**: 90712287
-- **Price**: £2400 PCM
-- **Size**: 59 sqm
-- **Listing Update**: 2026-07-10
-- **Listing Status**: Added on 10/07/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/90712287](https://www.rightmove.co.uk/properties/90712287)
-
----
-
-### [2026-07-13T12:32:05.337Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: OpenRent, London
-- **Location**: Woolwich
-- **Property Name**: Royal Herbert Pavilions, London, SE18
-- **ID**: 90809856
-- **Price**: £1900 PCM
-- **Size**: 58.53 sqm
-- **Listing Update**: 2026-07-08
-- **Listing Status**: Reduced on 08/07/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/90809856](https://www.rightmove.co.uk/properties/90809856)
-
----
-
-### [2026-07-13T08:59:57.596Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: JOHNSandCO, Canary Wharf
-- **Location**: Canary Wharf
-- **Property Name**: Salvour Tower, Canary Wharf
-- **ID**: 90587526
-- **Price**: £600 PCM
-- **Size**: 58 sqm
-- **Listing Update**: 2026-07-07
-- **Listing Status**: Added on 07/07/2026
-- **Let Available**: 07/09/2026
-- **Link**: [https://www.rightmove.co.uk/properties/90587526](https://www.rightmove.co.uk/properties/90587526)
 
 ---
 
@@ -538,33 +373,33 @@
 
 ---
 
-### [2026-07-13T08:14:12.473Z] MATCH FOUND!
+### [2026-07-13T14:45:59.556Z] MATCH FOUND!
 - **Platform**: Rightmove
-- **Marketed by**: Life Residential, Canary Wharf Office
-- **Location**: Canary Wharf
-- **Property Name**: Lanterns Way, Canary Wharf
-- **ID**: 90708627
-- **Price**: £2280 PCM
+- **Marketed by**: KARE ESTATES, London
+- **Location**: Greenwich Peninsula
+- **Property Name**: 57 Chandlers Avenue, London
+- **ID**: 88746276
+- **Price**: £2250 PCM
 - **Size**: 58 sqm
-- **Listing Update**: 2026-07-09
-- **Listing Status**: Added on 09/07/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/90708627](https://www.rightmove.co.uk/properties/90708627)
+- **Listing Update**: 2026-05-22
+- **Listing Status**: Added on 22/05/2026
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/88746276](https://www.rightmove.co.uk/properties/88746276)
 
 ---
 
-### [2026-07-13T12:32:05.337Z] MATCH FOUND!
+### [2026-07-13T14:45:59.556Z] MATCH FOUND!
 - **Platform**: Rightmove
-- **Marketed by**: TAUK, Covering Nationwide
-- **Location**: Woolwich
-- **Property Name**: Gunyard Mews, London, SE18
-- **ID**: 90610929
-- **Price**: £1850 PCM
+- **Marketed by**: Greenwich Peninsula, London
+- **Location**: Greenwich Peninsula
+- **Property Name**: No.1, Upper Riverside, Cutter Lane, Greenwich Peninsula, SE10
+- **ID**: 89709588
+- **Price**: £2550 PCM
 - **Size**: 57 sqm
-- **Listing Update**: 2026-07-08
-- **Listing Status**: Added on 08/07/2026
+- **Listing Update**: 2026-06-15
+- **Listing Status**: Added on 15/06/2026
 - **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/90610929](https://www.rightmove.co.uk/properties/90610929)
+- **Link**: [https://www.rightmove.co.uk/properties/89709588](https://www.rightmove.co.uk/properties/89709588)
 
 ---
 
@@ -628,48 +463,18 @@
 
 ---
 
-### [2026-07-13T12:09:34.602Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Life Residential, Canary Wharf Office
-- **Location**: Canary Wharf
-- **Property Name**: Tiller Road, Canary Wharf
-- **ID**: 90807477
-- **Price**: £2150 PCM
-- **Size**: 55.74 sqm
+### [2026-07-13T14:45:01.969Z] MATCH FOUND!
+- **Platform**: Johns&Co
+- **Marketed by**: JOHNS&CO
+- **Location**: Canary Wharf (E14)
+- **Property Name**: Malcolm Sargent House
+- **ID**: 2664375
+- **Price**: £2349 PCM
+- **Size**: 55.5 sqm
 - **Listing Update**: 2026-07-13
-- **Listing Status**: Added today
+- **Listing Status**: Available
 - **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/90807477](https://www.rightmove.co.uk/properties/90807477)
-
----
-
-### [2026-06-08T14:38:49.646Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Unknown
-- **Location**: Canary Wharf
-- **Property Name**: Millharbour, London
-- **ID**: 89444691
-- **Price**: £2250 PCM
-- **Size**: 55.74 sqm
-- **Listing Update**: 2026-06-08
-- **Listing Status**: Added on 08/06/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/89444691](https://www.rightmove.co.uk/properties/89444691)
-
----
-
-### [2026-07-06T14:18:08.558Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Martin and Co, Twickenham
-- **Location**: Canary Wharf
-- **Property Name**: Regatta Point, Manilla Street, Canary Wharf
-- **ID**: 90542760
-- **Price**: £2300 PCM
-- **Size**: 55 sqm
-- **Listing Update**: 2026-07-11
-- **Listing Status**: Reduced on 11/07/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/90542760](https://www.rightmove.co.uk/properties/90542760)
+- **Link**: [https://www.johnsand.co/properties/malcolm-sargent-house-2664375](https://www.johnsand.co/properties/malcolm-sargent-house-2664375)
 
 ---
 
@@ -685,6 +490,21 @@
 - **Listing Status**: Reduced on 10/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/88839924](https://www.rightmove.co.uk/properties/88839924)
+
+---
+
+### [2026-07-13T14:45:01.969Z] MATCH FOUND!
+- **Platform**: Johns&Co
+- **Marketed by**: JOHNS&CO
+- **Location**: Canary Wharf (E14)
+- **Property Name**: Laker House
+- **ID**: 2337018
+- **Price**: £2150 PCM
+- **Size**: 54.63 sqm
+- **Listing Update**: 2026-07-13
+- **Listing Status**: Available
+- **Let Available**: Ask agent
+- **Link**: [https://www.johnsand.co/properties/laker-house-2337018](https://www.johnsand.co/properties/laker-house-2337018)
 
 ---
 
@@ -715,6 +535,21 @@
 - **Listing Status**: Added on 19/05/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/88702539](https://www.rightmove.co.uk/properties/88702539)
+
+---
+
+### [2026-07-13T14:45:59.555Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Fizzy Living, East 16
+- **Location**: Royal Victoria Docks
+- **Property Name**: Fizzy East16 B - 15 Silvertown Way London E16 1JT
+- **ID**: 90813738
+- **Price**: £2160 PCM
+- **Size**: 54 sqm
+- **Listing Update**: 2026-07-13
+- **Listing Status**: Added today
+- **Let Available**: 07/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/90813738](https://www.rightmove.co.uk/properties/90813738)
 
 ---
 
@@ -808,6 +643,36 @@
 
 ---
 
+### [2026-07-13T14:45:59.556Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Grainger, Fortunes Dock
+- **Location**: Royal Victoria Docks
+- **Property Name**: Argo Apartments, Canning Town London E16
+- **ID**: 90378072
+- **Price**: £2160 PCM
+- **Size**: 52 sqm
+- **Listing Update**: 2026-07-01
+- **Listing Status**: Added on 01/07/2026
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/90378072](https://www.rightmove.co.uk/properties/90378072)
+
+---
+
+### [2026-07-13T14:45:59.556Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Grainger, Fortunes Dock
+- **Location**: Royal Victoria Docks
+- **Property Name**: Fortunes Dock, Canning Town London E16
+- **ID**: 90447369
+- **Price**: £2230 PCM
+- **Size**: 52 sqm
+- **Listing Update**: 2026-07-03
+- **Listing Status**: Added on 03/07/2026
+- **Let Available**: 11/09/2026 (🦅 Early Bird: 70d adv)
+- **Link**: [https://www.rightmove.co.uk/properties/90447369](https://www.rightmove.co.uk/properties/90447369)
+
+---
+
 ### [2026-07-04T11:57:12.810Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Unknown
@@ -850,36 +715,6 @@
 - **Listing Status**: Added on 10/07/2026
 - **Let Available**: 17/09/2026 (🦅 Early Bird: 69d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/90754224](https://www.rightmove.co.uk/properties/90754224)
-
----
-
-### [2026-07-13T12:32:05.337Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Hamptons, Build to Rent
-- **Location**: Woolwich
-- **Property Name**: Woolwich Church Street Woolwich SE18
-- **ID**: 90684543
-- **Price**: £1750 PCM
-- **Size**: 51.9 sqm
-- **Listing Update**: 2026-07-09
-- **Listing Status**: Reduced on 09/07/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/90684543](https://www.rightmove.co.uk/properties/90684543)
-
----
-
-### [2026-07-13T12:32:05.337Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Hamptons, Blackheath
-- **Location**: Woolwich
-- **Property Name**: Mast Quay London SE18
-- **ID**: 90783342
-- **Price**: £1850 PCM
-- **Size**: 51.85 sqm
-- **Listing Update**: 2026-07-11
-- **Listing Status**: Reduced on 11/07/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/90783342](https://www.rightmove.co.uk/properties/90783342)
 
 ---
 
@@ -943,21 +778,6 @@
 
 ---
 
-### [2026-07-13T12:39:47.739Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Regent Letting and Property Management, London
-- **Location**: Woolwich
-- **Property Name**: Forbes Apartments, Brigadier Walk,SE18
-- **ID**: 90302985
-- **Price**: £2100 PCM
-- **Size**: 50.8 sqm
-- **Listing Update**: 2026-06-30
-- **Listing Status**: Added on 30/06/2026
-- **Let Available**: 30/08/2026
-- **Link**: [https://www.rightmove.co.uk/properties/90302985](https://www.rightmove.co.uk/properties/90302985)
-
----
-
 ### [2026-07-13T12:39:20.066Z] MATCH FOUND!
 - **Platform**: Johns&Co
 - **Marketed by**: JOHNS&CO
@@ -973,18 +793,48 @@
 
 ---
 
-### [2026-07-13T12:32:05.337Z] MATCH FOUND!
+### [2026-07-13T14:45:59.556Z] MATCH FOUND!
 - **Platform**: Rightmove
-- **Marketed by**: Settio Property Experience Ltd, London
-- **Location**: Woolwich
-- **Property Name**: Windsor Square, SE18
-- **ID**: 90637104
-- **Price**: £2000 PCM
+- **Marketed by**: Greenwich Peninsula, London
+- **Location**: Greenwich Peninsula
+- **Property Name**: No.4, Upper Riverside, Cutter Lane, Greenwich Peninsula, SE10
+- **ID**: 89711598
+- **Price**: £2450 PCM
 - **Size**: 50 sqm
-- **Listing Update**: 2026-07-08
-- **Listing Status**: Added on 08/07/2026
-- **Let Available**: 10/09/2026
-- **Link**: [https://www.rightmove.co.uk/properties/90637104](https://www.rightmove.co.uk/properties/90637104)
+- **Listing Update**: 2026-06-15
+- **Listing Status**: Added on 15/06/2026
+- **Let Available**: 21/08/2026 (🦅 Early Bird: 67d adv)
+- **Link**: [https://www.rightmove.co.uk/properties/89711598](https://www.rightmove.co.uk/properties/89711598)
+
+---
+
+### [2026-07-13T14:45:59.556Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: KARE ESTATES, London
+- **Location**: Greenwich Peninsula
+- **Property Name**: East Parkside, London
+- **ID**: 88746285
+- **Price**: £2600 PCM
+- **Size**: 50 sqm
+- **Listing Update**: 2026-05-22
+- **Listing Status**: Added on 22/05/2026
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/88746285](https://www.rightmove.co.uk/properties/88746285)
+
+---
+
+### [2026-07-13T14:45:59.557Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: KARE ESTATES, London
+- **Location**: Greenwich Peninsula
+- **Property Name**: Chandlers Avenue, London
+- **ID**: 88746312
+- **Price**: £1975 PCM
+- **Size**: 49 sqm
+- **Listing Update**: 2026-05-22
+- **Listing Status**: Added on 22/05/2026
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/88746312](https://www.rightmove.co.uk/properties/88746312)
 
 ---
 
@@ -1003,63 +853,18 @@
 
 ---
 
-### [2026-06-19T13:56:57.344Z] MATCH FOUND!
+### [2026-07-13T14:45:59.556Z] MATCH FOUND!
 - **Platform**: Rightmove
-- **Marketed by**: Unknown
-- **Location**: Canary Wharf
-- **Property Name**: Duckman Tower, Canary Wharf, London
-- **ID**: 89874699
-- **Price**: £2400 PCM
-- **Size**: 48.4 sqm
-- **Listing Update**: 2026-06-18
-- **Listing Status**: Added on 18/06/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/89874699](https://www.rightmove.co.uk/properties/89874699)
-
----
-
-### [2026-07-13T12:32:05.338Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Regal Hampton Properties, London
-- **Location**: Woolwich
-- **Property Name**: Windsor Square, Woolwich, London, SE18
-- **ID**: 90555021
-- **Price**: £2200 PCM
-- **Size**: 48.3 sqm
-- **Listing Update**: 2026-07-06
-- **Listing Status**: Added on 06/07/2026
+- **Marketed by**: KARE ESTATES, London
+- **Location**: Greenwich Peninsula
+- **Property Name**: Pilot Walk, London
+- **ID**: 88746282
+- **Price**: £2050 PCM
+- **Size**: 47 sqm
+- **Listing Update**: 2026-05-22
+- **Listing Status**: Added on 22/05/2026
 - **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/90555021](https://www.rightmove.co.uk/properties/90555021)
-
----
-
-### [2026-07-13T12:19:13.604Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Stuarts Property Services, Cheadle
-- **Location**: Woolwich
-- **Property Name**: Washington Close, Cheadle Hulme
-- **ID**: 90114366
-- **Price**: £1100 PCM
-- **Size**: 48 sqm
-- **Listing Update**: 2026-06-23
-- **Listing Status**: Added on 23/06/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/90114366](https://www.rightmove.co.uk/properties/90114366)
-
----
-
-### [2026-06-11T14:26:20.170Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Unknown
-- **Location**: Canary Wharf
-- **Property Name**: Gainsborough House, Canary Wharf
-- **ID**: 89570763
-- **Price**: £2200 PCM
-- **Size**: 48 sqm
-- **Listing Update**: 2026-06-10
-- **Listing Status**: Added on 10/06/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/89570763](https://www.rightmove.co.uk/properties/89570763)
+- **Link**: [https://www.rightmove.co.uk/properties/88746282](https://www.rightmove.co.uk/properties/88746282)
 
 ---
 
@@ -1108,36 +913,6 @@
 
 ---
 
-### [2026-07-13T12:32:05.337Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Marsh and Parsons, Charlton
-- **Location**: Woolwich
-- **Property Name**: Sandbach Place, Plumstead
-- **ID**: 90695463
-- **Price**: £1600 PCM
-- **Size**: 45.1 sqm
-- **Listing Update**: 2026-07-09
-- **Listing Status**: Added on 09/07/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/90695463](https://www.rightmove.co.uk/properties/90695463)
-
----
-
-### [2026-06-20T12:17:31.434Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Unknown
-- **Location**: Canary Wharf
-- **Property Name**: Talisman Tower, Lincoln Plaza, Canary Wharf, London
-- **ID**: 89936142
-- **Price**: £2400 PCM
-- **Size**: 43.77 sqm
-- **Listing Update**: 2026-06-19
-- **Listing Status**: Added on 19/06/2026
-- **Let Available**: 17/09/2026 (🦅 Early Bird: 90d adv)
-- **Link**: [https://www.rightmove.co.uk/properties/89936142](https://www.rightmove.co.uk/properties/89936142)
-
----
-
 ### [2026-07-02T12:32:13.021Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Waterfronts, London
@@ -1150,21 +925,6 @@
 - **Listing Status**: Added on 01/07/2026
 - **Let Available**: 15/09/2026 (🦅 Early Bird: 76d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/157618283](https://www.rightmove.co.uk/properties/157618283)
-
----
-
-### [2026-07-04T11:57:12.810Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Unknown
-- **Location**: Canary Wharf
-- **Property Name**: Baltimore Wharf, Canary Wharf
-- **ID**: 90473625
-- **Price**: £2250 PCM
-- **Size**: 41 sqm
-- **Listing Update**: 2026-07-03
-- **Listing Status**: Added on 03/07/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/90473625](https://www.rightmove.co.uk/properties/90473625)
 
 ---
 
@@ -1195,21 +955,6 @@
 - **Listing Status**: Added on 07/07/2026
 - **Let Available**: 24/09/2026 (🦅 Early Bird: 79d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/161697050](https://www.rightmove.co.uk/properties/161697050)
-
----
-
-### [2026-07-13T12:32:05.338Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Prime Land Property, London
-- **Location**: Woolwich
-- **Property Name**: Mast Quay, London, SE18 5NP
-- **ID**: 90555975
-- **Price**: £554 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-06
-- **Listing Status**: Added on 06/07/2026
-- **Let Available**: 03/09/2026
-- **Link**: [https://www.rightmove.co.uk/properties/90555975](https://www.rightmove.co.uk/properties/90555975)
 
 ---
 
@@ -1288,21 +1033,6 @@
 
 ---
 
-### [2026-07-13T12:19:13.604Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Roger Dean, Heald Green
-- **Location**: Woolwich
-- **Property Name**: 206A Finney Lane, Cheadle, Greater Manchester, SK8
-- **ID**: 174517166
-- **Price**: £800 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-03
-- **Listing Status**: Reduced on 03/07/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/174517166](https://www.rightmove.co.uk/properties/174517166)
-
----
-
 ### [2026-07-13T12:19:13.603Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Leighton Snow, Bramhall
@@ -1315,21 +1045,6 @@
 - **Listing Status**: Added on 04/06/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/89306088](https://www.rightmove.co.uk/properties/89306088)
-
----
-
-### [2026-07-13T12:32:05.337Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: OpenRent, London
-- **Location**: Woolwich
-- **Property Name**: Burrage Road, London, SE18
-- **ID**: 90686439
-- **Price**: £820 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-09
-- **Listing Status**: Added on 09/07/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/90686439](https://www.rightmove.co.uk/properties/90686439)
 
 ---
 
@@ -1378,21 +1093,6 @@
 
 ---
 
-### [2026-07-13T12:19:13.603Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Bridgfords Lettings, Cheadle Hulme
-- **Location**: Woolwich
-- **Property Name**: Fabrick, Cheadle Hulme SK8
-- **ID**: 90531813
-- **Price**: £900 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-06
-- **Listing Status**: Added on 06/07/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/90531813](https://www.rightmove.co.uk/properties/90531813)
-
----
-
 ### [2026-07-13T12:19:13.602Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Spencer Harvey, Stockport
@@ -1408,21 +1108,6 @@
 
 ---
 
-### [2026-07-13T12:19:13.604Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Roger Dean, Heald Green
-- **Location**: Woolwich
-- **Property Name**: Flat, Pendlebury Road, Gatley, Cheadle, Stockport
-- **ID**: 90305670
-- **Price**: £925 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-06-30
-- **Listing Status**: Added on 30/06/2026
-- **Let Available**: 07/09/2026 (🦅 Early Bird: 69d adv)
-- **Link**: [https://www.rightmove.co.uk/properties/90305670](https://www.rightmove.co.uk/properties/90305670)
-
----
-
 ### [2026-07-13T12:19:13.603Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Citrus Commercial Circle, Manchester
@@ -1435,36 +1120,6 @@
 - **Listing Status**: Reduced on 10/06/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/88819779](https://www.rightmove.co.uk/properties/88819779)
-
----
-
-### [2026-07-13T12:19:13.604Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Mishkan Estates, Manchester
-- **Location**: Woolwich
-- **Property Name**: Silverdale Road, Gatley, Cheadle
-- **ID**: 88651272
-- **Price**: £1025 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-05-19
-- **Listing Status**: Added on 19/05/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/88651272](https://www.rightmove.co.uk/properties/88651272)
-
----
-
-### [2026-07-13T12:19:13.604Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Mishkan Estates, Manchester
-- **Location**: Woolwich
-- **Property Name**: Silverdale Road, Gatley, Cheadle
-- **ID**: 88904817
-- **Price**: £1095 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-05-26
-- **Listing Status**: Added on 26/05/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/88904817](https://www.rightmove.co.uk/properties/88904817)
 
 ---
 
@@ -1498,51 +1153,6 @@
 
 ---
 
-### [2026-07-13T12:19:13.603Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Openhall Estate Agents, Covering Cheshire
-- **Location**: Woolwich
-- **Property Name**: Flat, Stockport Road, Cheadle
-- **ID**: 173039207
-- **Price**: £1175 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-07
-- **Listing Status**: Reduced on 07/07/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/173039207](https://www.rightmove.co.uk/properties/173039207)
-
----
-
-### [2026-07-13T12:19:13.604Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Openhall Estate Agents, Covering Cheshire
-- **Location**: Woolwich
-- **Property Name**: Flat, 185 Stockport Road, Cheadle
-- **ID**: 88373190
-- **Price**: £1195 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-05-12
-- **Listing Status**: Added on 12/05/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/88373190](https://www.rightmove.co.uk/properties/88373190)
-
----
-
-### [2026-07-13T12:19:13.604Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Bridgfords Lettings, Cheadle Hulme
-- **Location**: Woolwich
-- **Property Name**: Wilmslow Road, SK8
-- **ID**: 173194430
-- **Price**: £1200 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-06-25
-- **Listing Status**: Reduced on 25/06/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/173194430](https://www.rightmove.co.uk/properties/173194430)
-
----
-
 ### [2026-07-13T12:19:13.602Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Ian Tonge Property Services Limited, Hazel Grove
@@ -1555,21 +1165,6 @@
 - **Listing Status**: Reduced on 29/06/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/88542177](https://www.rightmove.co.uk/properties/88542177)
-
----
-
-### [2026-07-13T12:19:13.604Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Openhall Estate Agents, Covering Cheshire
-- **Location**: Woolwich
-- **Property Name**: Flat, Stockport Road, Cheadle
-- **ID**: 172526075
-- **Price**: £1225 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-04-28
-- **Listing Status**: Reduced on 28/04/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/172526075](https://www.rightmove.co.uk/properties/172526075)
 
 ---
 
@@ -1588,96 +1183,6 @@
 
 ---
 
-### [2026-07-13T12:19:13.604Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Main and Main, Heald Green
-- **Location**: Woolwich
-- **Property Name**: Formby Drive, Heald Green
-- **ID**: 90685503
-- **Price**: £1300 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-01
-- **Listing Status**: Added on 01/07/2026
-- **Let Available**: 31/08/2026
-- **Link**: [https://www.rightmove.co.uk/properties/90685503](https://www.rightmove.co.uk/properties/90685503)
-
----
-
-### [2026-07-13T12:19:13.603Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Andrew J Dawson, Cheadle
-- **Location**: Woolwich
-- **Property Name**: Ernest Street, Cheadle, SK8 1PN
-- **ID**: 90527748
-- **Price**: £1300 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-06
-- **Listing Status**: Added on 06/07/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/90527748](https://www.rightmove.co.uk/properties/90527748)
-
----
-
-### [2026-07-13T12:19:13.604Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Bridgfords Lettings, Cheadle Hulme
-- **Location**: Woolwich
-- **Property Name**: Alderley Lodge; Cheadle Hulme; SK8
-- **ID**: 90570120
-- **Price**: £1400 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-04
-- **Listing Status**: Added on 04/07/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/90570120](https://www.rightmove.co.uk/properties/90570120)
-
----
-
-### [2026-07-13T12:19:13.604Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Jordan Fishwick, Wilmslow
-- **Location**: Woolwich
-- **Property Name**: Griffin Farm Drive, Heald Green, Cheadle
-- **ID**: 89858289
-- **Price**: £1500 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-06-18
-- **Listing Status**: Added on 18/06/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/89858289](https://www.rightmove.co.uk/properties/89858289)
-
----
-
-### [2026-07-13T12:19:13.604Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Main and Main, Heald Green
-- **Location**: Woolwich
-- **Property Name**: Gladville Drive, Cheadle
-- **ID**: 90177831
-- **Price**: £1550 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-02-23
-- **Listing Status**: Added on 23/02/2026
-- **Let Available**: Now (🦅 Early Bird: 141d adv)
-- **Link**: [https://www.rightmove.co.uk/properties/90177831](https://www.rightmove.co.uk/properties/90177831)
-
----
-
-### [2026-07-13T12:19:13.604Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Main and Main, Heald Green
-- **Location**: Woolwich
-- **Property Name**: Gladville Drive, Cheadle
-- **ID**: 90176493
-- **Price**: £1600 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-02-23
-- **Listing Status**: Added on 23/02/2026
-- **Let Available**: Now (🦅 Early Bird: 141d adv)
-- **Link**: [https://www.rightmove.co.uk/properties/90176493](https://www.rightmove.co.uk/properties/90176493)
-
----
-
 ### [2026-07-13T12:09:34.602Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: ARK Co-living, ARK Canary Wharf
@@ -1690,81 +1195,6 @@
 - **Listing Status**: Reduced today
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90808044](https://www.rightmove.co.uk/properties/90808044)
-
----
-
-### [2026-07-13T12:32:05.337Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Woodfell, London
-- **Location**: Woolwich
-- **Property Name**: Centurion Court, Rushgrove Street, London, SE18 5DP
-- **ID**: 90354495
-- **Price**: £1700 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-09
-- **Listing Status**: Reduced on 09/07/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/90354495](https://www.rightmove.co.uk/properties/90354495)
-
----
-
-### [2026-07-13T12:32:05.337Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Makeurmove
-- **Location**: Woolwich
-- **Property Name**: Building, Argyll Road, London, SE18
-- **ID**: 90670560
-- **Price**: £1700 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-09
-- **Listing Status**: Added on 09/07/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/90670560](https://www.rightmove.co.uk/properties/90670560)
-
----
-
-### [2026-07-13T12:32:05.338Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Royal Arsenal Residential, London
-- **Location**: Woolwich
-- **Property Name**: Building 45, Hopton Road, Royal Arsenal SE18
-- **ID**: 90580704
-- **Price**: £1750 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-07
-- **Listing Status**: Added on 07/07/2026
-- **Let Available**: 12/09/2026 (🦅 Early Bird: 67d adv)
-- **Link**: [https://www.rightmove.co.uk/properties/90580704](https://www.rightmove.co.uk/properties/90580704)
-
----
-
-### [2026-07-13T12:32:05.338Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Robinson Jackson, Plumstead
-- **Location**: Woolwich
-- **Property Name**: Ankerdine Crescent, London, SE18
-- **ID**: 90567150
-- **Price**: £1750 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-07
-- **Listing Status**: Added on 07/07/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/90567150](https://www.rightmove.co.uk/properties/90567150)
-
----
-
-### [2026-07-13T12:32:05.337Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Mann Lettings, Woolwich
-- **Location**: Woolwich
-- **Property Name**: Gunner Lane, SE18
-- **ID**: 90594168
-- **Price**: £1750 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-07
-- **Listing Status**: Added on 07/07/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/90594168](https://www.rightmove.co.uk/properties/90594168)
 
 ---
 
@@ -1828,21 +1258,6 @@
 
 ---
 
-### [2026-07-13T13:29:57.615Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Hamptons, Blackheath
-- **Location**: Royal Arsenal, Woolwich
-- **Property Name**: Wotton Court 2 Rolfe Terrace SE18
-- **ID**: 172991174
-- **Price**: £1950 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-06-25
-- **Listing Status**: Reduced on 25/06/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/172991174](https://www.rightmove.co.uk/properties/172991174)
-
----
-
 ### [2026-07-13T12:39:20.065Z] MATCH FOUND!
 - **Platform**: Johns&Co
 - **Marketed by**: JOHNS&CO
@@ -1855,6 +1270,21 @@
 - **Listing Status**: Available
 - **Let Available**: Ask agent
 - **Link**: [https://www.johnsand.co/properties/skyline-apartments-2692792](https://www.johnsand.co/properties/skyline-apartments-2692792)
+
+---
+
+### [2026-07-13T14:45:59.556Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Huttons and Partners, London
+- **Location**: Royal Victoria Docks
+- **Property Name**: Dulke House, Canary Wharf, E14
+- **ID**: 90398499
+- **Price**: £1980 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-02
+- **Listing Status**: Added on 02/07/2026
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/90398499](https://www.rightmove.co.uk/properties/90398499)
 
 ---
 
@@ -1933,18 +1363,18 @@
 
 ---
 
-### [2026-07-13T13:29:57.615Z] MATCH FOUND!
+### [2026-07-13T14:45:59.557Z] MATCH FOUND!
 - **Platform**: Rightmove
-- **Marketed by**: Royal Arsenal Residential, London
-- **Location**: Royal Arsenal, Woolwich
-- **Property Name**: Building 22, Cadogan Road, Royal Arsenal SE18
-- **ID**: 82281140
+- **Marketed by**: KARE ESTATES, London
+- **Location**: Greenwich Peninsula
+- **Property Name**: Peninsula Square, Greenwich, London
+- **ID**: 88746270
 - **Price**: £2100 PCM
 - **Size**: Unknown
-- **Listing Update**: 2026-06-26
-- **Listing Status**: Reduced on 26/06/2026
+- **Listing Update**: 2026-05-22
+- **Listing Status**: Added on 22/05/2026
 - **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/82281140](https://www.rightmove.co.uk/properties/82281140)
+- **Link**: [https://www.rightmove.co.uk/properties/88746270](https://www.rightmove.co.uk/properties/88746270)
 
 ---
 
@@ -1978,6 +1408,36 @@
 
 ---
 
+### [2026-07-13T14:45:01.969Z] MATCH FOUND!
+- **Platform**: Johns&Co
+- **Marketed by**: JOHNS&CO
+- **Location**: Canary Wharf (E14)
+- **Property Name**: James Cook Building
+- **ID**: 2733649
+- **Price**: £2150 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-13
+- **Listing Status**: Available
+- **Let Available**: Ask agent
+- **Link**: [https://www.johnsand.co/properties/james-cook-building-2733649](https://www.johnsand.co/properties/james-cook-building-2733649)
+
+---
+
+### [2026-07-13T14:45:59.556Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: 1st Avenue, London
+- **Location**: Greenwich Peninsula
+- **Property Name**: Barge Walk, London, SE10
+- **ID**: 89235633
+- **Price**: £2180 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-13
+- **Listing Status**: Reduced today
+- **Let Available**: 27/07/2026
+- **Link**: [https://www.rightmove.co.uk/properties/89235633](https://www.rightmove.co.uk/properties/89235633)
+
+---
+
 ### [2026-07-13T08:32:40.393Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Regent Letting and Property Management, London
@@ -2008,18 +1468,18 @@
 
 ---
 
-### [2026-07-13T08:14:12.472Z] MATCH FOUND!
+### [2026-07-13T14:45:59.555Z] MATCH FOUND!
 - **Platform**: Rightmove
-- **Marketed by**: Dexters, Canary Wharf
-- **Location**: Canary Wharf
-- **Property Name**: Manilla Street, Canary Wharf
-- **ID**: 90755244
-- **Price**: £2200 PCM
+- **Marketed by**: Blackstones Residential, London
+- **Location**: Royal Victoria Docks
+- **Property Name**: 8 Shirley Street, Canning Town, E16
+- **ID**: 90724365
+- **Price**: £2250 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-10
 - **Listing Status**: Added on 10/07/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/90755244](https://www.rightmove.co.uk/properties/90755244)
+- **Let Available**: 01/10/2026 (🦅 Early Bird: 83d adv)
+- **Link**: [https://www.rightmove.co.uk/properties/90724365](https://www.rightmove.co.uk/properties/90724365)
 
 ---
 
@@ -2050,51 +1510,6 @@
 - **Listing Status**: Reduced on 10/07/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/89072094](https://www.rightmove.co.uk/properties/89072094)
-
----
-
-### [2026-07-13T08:14:12.473Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Dexters, Canary Wharf
-- **Location**: Canary Wharf
-- **Property Name**: Carmen Street, Canary Wharf
-- **ID**: 90732897
-- **Price**: £2300 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-10
-- **Listing Status**: Added on 10/07/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/90732897](https://www.rightmove.co.uk/properties/90732897)
-
----
-
-### [2026-07-13T08:14:12.472Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Life Residential, Canary Wharf Office
-- **Location**: Canary Wharf
-- **Property Name**: Amory Tower, Canary Wharf
-- **ID**: 88635138
-- **Price**: £2300 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-13
-- **Listing Status**: Reduced today
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/88635138](https://www.rightmove.co.uk/properties/88635138)
-
----
-
-### [2026-07-13T12:39:47.738Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Hamptons, Blackheath
-- **Location**: Woolwich
-- **Property Name**: Brumwell Avenue Woolwich SE18
-- **ID**: 89479191
-- **Price**: £2350 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-02
-- **Listing Status**: Added on 02/07/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/89479191](https://www.rightmove.co.uk/properties/89479191)
 
 ---
 
@@ -2155,6 +1570,21 @@
 - **Listing Status**: Added on 22/06/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90005799](https://www.rightmove.co.uk/properties/90005799)
+
+---
+
+### [2026-07-13T14:45:59.556Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: OpenRent, London
+- **Location**: Greenwich Peninsula
+- **Property Name**: Cutter Lane, London, SE10
+- **ID**: 89686530
+- **Price**: £2600 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-06-14
+- **Listing Status**: Added on 14/06/2026
+- **Let Available**: 24/08/2026 (🦅 Early Bird: 71d adv)
+- **Link**: [https://www.rightmove.co.uk/properties/89686530](https://www.rightmove.co.uk/properties/89686530)
 
 ---
 

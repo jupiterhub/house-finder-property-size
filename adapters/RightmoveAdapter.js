@@ -29,11 +29,19 @@ class RightmoveAdapter {
       "canary wharf": "STATION^1724",
       "wood wharf": "STATION^1724",
       "south quay": "STATION^8432",
+      "south quay / canary wharf south": "STATION^8432",
+      "canary wharf south": "STATION^8432",
       "south quay station": "STATION^8432",
+      "crossharbour": "STATION^2504",
+      "crossharbour station": "STATION^2504",
+      "custom house / royal victoria docks": "STATION^2540",
       "custom house / royal victoria": "STATION^2540",
+      "custom house / royal dock": "STATION^2540",
+      "custom house / royal docks": "STATION^2540",
       "custom house": "STATION^2540",
       "royal victoria": "STATION^7835",
-      "greenwich peninsula": "REGION^94238",
+      "royal victoria docks": "STATION^7835",
+      "greenwich peninsula": "STATION^6719",
       "north greenwich": "STATION^6719",
       "woolwich": "REGION^70391",
       "woolwich (royal arsenal)": "STATION^15846",
@@ -70,7 +78,8 @@ class RightmoveAdapter {
         } else {
           const encodedId = encodeURIComponent(identifier);
           const minP = config.minPrice || 1900;
-          url = `https://www.rightmove.co.uk/property-to-rent/find.html?useLocationIdentifier=true&locationIdentifier=${encodedId}&_includeLetAgreed=false&maxBedrooms=2&index=${pageIndex}&sortType=6&channel=RENT&transactionType=LETTING&minPrice=${minP}&maxPrice=${config.maxPrice}`;
+          const radiusParam = identifier.startsWith('STATION^') ? '&radius=0.5' : '';
+          url = `https://www.rightmove.co.uk/property-to-rent/find.html?useLocationIdentifier=true&locationIdentifier=${encodedId}${radiusParam}&_includeLetAgreed=false&maxBedrooms=2&index=${pageIndex}&sortType=6&channel=RENT&transactionType=LETTING&minPrice=${minP}&maxPrice=${config.maxPrice}`;
         }
         
         console.log(`Navigating to search URL: ${url} (${locationName}, index=${pageIndex})`);

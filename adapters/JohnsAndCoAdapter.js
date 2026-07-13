@@ -24,7 +24,7 @@ class JohnsAndCoAdapter {
     ];
 
     const locs = (config.locations || []).map(l => l.toLowerCase());
-    if (locs.some(l => l.includes('custom house') || l.includes('royal victoria') || l.includes('e16'))) {
+    if (locs.some(l => l.includes('custom house') || l.includes('royal victoria') || l.includes('royal dock') || l.includes('e16'))) {
       searchUrls.push(`https://www.johnsand.co/rent?location=E16&minPrice=${priceMin}&maxPrice=${priceMax}&order=newest`);
     }
     if (locs.some(l => l.includes('greenwich') || l.includes('se10'))) {
