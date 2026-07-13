@@ -816,16 +816,59 @@ async function main() {
     // Generate HTML
     const htmlFile = flags.output ? flags.output.replace(/\.md$/, '.html') : HTML_FILE;
     if (htmlFile !== targetFile) {
-      // Calculate Deal Rating / Value Score Percentiles across all matches
-      const allPpsqms = result
-        .filter(m => m.price && m.size && m.size > 0)
+      // Helper: classify properties that are within genuine walking distance of an Elizabeth Line station with direct connection to Farringdon
+      function hasElizabethLineConnection(m) {
+        const allText = `${m.location || ''} ${m.propertyName || ''} ${m.description || ''}`.toLowerCase();
+        const noLizKeywords = [
+          'south quay', 'marsh wall', 'millwall', 'crossharbour', 'peninsula court', 
+          'arena tower', 'baltimore tower', 'pan peninsula', 'wardian', 'south quay plaza', 'sqp',
+          'harbour way', 'indescon', 'lanthorn', 'glengall', 'pepper street', 'mastmaker',
+          'cubitt town', 'ovex close', 'undine road', 'island gardens', 'mudchute', 'manchester road',
+          'westferry road', 'hutchings street', 'maritime quay', 'knighthead point', 'ability place',
+          'cold harbour', 'millharbour', 'limeharbour', 'lanterns way', 'tiller road', 'manilla street',
+          'cascades tower', 'newport avenue', 'bartholomew court',
+          'blackwall', 'epstein square', 'felix point', 'aberfeldy', 'tellicherry', 'east india',
+          'limehouse', 'hallmark court', 'ursula gould', 'carmen street', 'langdon park',
+          'greenwich peninsula', 'north greenwich', 'se10', 'bessemer place', 'upper riverside', 'lower riverside',
+          'royal victoria', 'warehouse w', 'gateway tower', 'hoola', 'western gateway', 'coral apartments',
+          'aegean', 'adriatic', 'grainstore', 'silvertown', 'pontoon dock', 'royal docks west', 'royal eden',
+          'canning town', 'mercury house', 'fortunes dock', 'sovereign tower', 'baltic apartments',
+          'k warehouse', 'north lodge', 'wesley avenue', 'jane austen', 'howard house', 'henry purcell',
+          'widgeon close', 'gatcombe road', 'britannia village', 'tidal basin', 'golden plover',
+          'westgate'
+        ];
+        for (const kw of noLizKeywords) {
+          if (allText.includes(kw)) return false;
+        }
+        if (allText.includes('custom house') || allText.includes('seagull lane') || allText.includes('freemasons road') ||
+            allText.includes('canary wharf') || allText.includes('e14') ||
+            allText.includes('wood wharf') || allText.includes('park drive') || allText.includes('newfoundland') ||
+            allText.includes('landmark pinnacle') || allText.includes('cabot square') || allText.includes('west india quay') ||
+            allText.includes('woolwich') || allText.includes('royal arsenal')) {
+          return true;
+        }
+        return false;
+      }
+
+      // Calculate Deal Rating / Value Score Percentiles separately by Transport Tier
+      const lizPpsqms = result
+        .filter(m => m.price && m.size && m.size > 0 && hasElizabethLineConnection(m))
         .map(m => m.price / m.size)
         .sort((a, b) => a - b);
-      let p20Ppsqm = 999;
-      let p40Ppsqm = 999;
-      if (allPpsqms.length > 0) {
-        p20Ppsqm = allPpsqms[Math.floor(allPpsqms.length * 0.2)] || 40;
-        p40Ppsqm = allPpsqms[Math.floor(allPpsqms.length * 0.45)] || 45;
+      const nonLizPpsqms = result
+        .filter(m => m.price && m.size && m.size > 0 && !hasElizabethLineConnection(m))
+        .map(m => m.price / m.size)
+        .sort((a, b) => a - b);
+
+      let p20Liz = 999, p40Liz = 999;
+      if (lizPpsqms.length > 0) {
+        p20Liz = lizPpsqms[Math.floor(lizPpsqms.length * 0.2)] || 40;
+        p40Liz = lizPpsqms[Math.floor(lizPpsqms.length * 0.45)] || 45;
+      }
+      let p20NonLiz = 999, p40NonLiz = 999;
+      if (nonLizPpsqms.length > 0) {
+        p20NonLiz = nonLizPpsqms[Math.floor(nonLizPpsqms.length * 0.2)] || 35;
+        p40NonLiz = nonLizPpsqms[Math.floor(nonLizPpsqms.length * 0.45)] || 38;
       }
 
       const htmlRows = result.map((m, idx) => {
@@ -880,16 +923,25 @@ async function main() {
                               platformLower.includes('knight') ? 'badge-platform-knightfrank' : 'badge-platform-rightmove';
         const platformBadge = `<span class="badge-platform ${platformClass}">${platformIcon}${platformStr}</span>`;
 
+        const isElizabethLine = hasElizabethLineConnection(m);
+        const lizBadge = isElizabethLine ?
+          `<br><span class="badge badge-lizline" title="Direct Elizabeth Line connection to Farringdon (8-14 mins)">🚆 Elizabeth Line</span>` :
+          `<br><span class="badge badge-no-lizline" title="Requires DLR/Jubilee transfer - No direct Elizabeth Line link to Farringdon">🔄 DLR / Jubilee</span>`;
+
         let dealBadge = '';
         let dealType = 'fair';
-        if (pricePerSqmValue > 0 && pricePerSqmValue <= p20Ppsqm) {
-          dealBadge = `<br><span class="badge badge-deal badge-deal-bargain" title="Top 20% lowest £/sqm value!">💎 Bargain</span>`;
+        const targetP20 = isElizabethLine ? p20Liz : p20NonLiz;
+        const targetP40 = isElizabethLine ? p40Liz : p40NonLiz;
+        const tierLabel = isElizabethLine ? 'Liz Line' : 'DLR/Jubilee';
+
+        if (pricePerSqmValue > 0 && pricePerSqmValue <= targetP20) {
+          dealBadge = `<br><span class="badge badge-deal badge-deal-bargain" title="Top 20% lowest £/sqm value among ${tierLabel} properties!">💎 Bargain (${tierLabel})</span>`;
           dealType = 'bargain';
-        } else if (pricePerSqmValue > 0 && pricePerSqmValue <= p40Ppsqm) {
-          dealBadge = `<br><span class="badge badge-deal badge-deal-good" title="Good £/sqm value">👍 Good Value</span>`;
+        } else if (pricePerSqmValue > 0 && pricePerSqmValue <= targetP40) {
+          dealBadge = `<br><span class="badge badge-deal badge-deal-good" title="Top 40% lowest £/sqm value among ${tierLabel} properties">👍 Good Value (${tierLabel})</span>`;
           dealType = 'good';
         } else if (pricePerSqmValue > 0) {
-          dealBadge = `<br><span class="badge badge-deal badge-deal-fair">⚖️ Market Rate</span>`;
+          dealBadge = `<br><span class="badge badge-deal badge-deal-fair" title="Market rate for ${tierLabel} properties">⚖️ Market Rate</span>`;
           dealType = 'fair';
         }
 
@@ -921,14 +973,14 @@ async function main() {
         const sizeDisplay = hasSize ? `${m.size} sqm` : 'Unknown';
         const ppsqmDisplay = hasSize && pricePerSqm !== 'N/A' ? `£${pricePerSqm}${dealBadge}` : 'N/A';
 
-        return `<tr data-id="${m.id}" data-index="${idx}" data-platform="${platformStr}" data-deal="${dealType}" data-early-bird="${isEarlyBird ? 'true' : 'false'}" data-target-tower="${targetTowerName ? 'true' : 'false'}">
+        return `<tr data-id="${m.id}" data-index="${idx}" data-platform="${platformStr}" data-deal="${dealType}" data-liz-line="${isElizabethLine ? 'true' : 'false'}" data-early-bird="${isEarlyBird ? 'true' : 'false'}" data-target-tower="${targetTowerName ? 'true' : 'false'}">
           <td data-value="${timestamp}">${dateStr}</td>
           <td data-value="${updateTs}">${listingUpdateStr}</td>
           <td data-value="${listingStatusStr}">${listingStatusStr}</td>
           <td data-value="${availTs}"><span class="avail-text">${letAvailableStr}</span><span class="compat-indicator"></span>${earlyBirdBadge}</td>
           <td data-value="${platformStr}">${platformBadge}</td>
           <td data-value="${agentStr}">${agentBadge}</td>
-          <td data-value="${escapeHtml(m.location || 'Unknown')}">${m.location || 'Unknown'}</td>
+          <td data-value="${escapeHtml(m.location || 'Unknown')}">${m.location || 'Unknown'}${lizBadge}</td>
           <td data-value="${escapeHtml(m.propertyName || 'Unknown')}">${propertyNameCell}${targetTowerBadge}</td>
           <td class="numeric" data-value="${m.price || 0}">£${m.price || 0}</td>
           <td class="numeric" data-value="${m.size || 0}">${sizeDisplay}</td>
@@ -1246,6 +1298,23 @@ async function main() {
     background: rgba(148,163,184,0.1);
     color: #94a3b8;
     border: 1px solid rgba(148,163,184,0.2);
+  }
+  .badge-lizline {
+    background: linear-gradient(135deg, rgba(139,92,246,0.22), rgba(124,58,237,0.28));
+    color: #c4b5fd;
+    border: 1px solid rgba(167,139,250,0.45);
+    box-shadow: 0 0 10px rgba(139,92,246,0.25);
+    font-weight: 700;
+    margin-top: 4px;
+    display: inline-block;
+  }
+  .badge-no-lizline {
+    background: rgba(100,116,139,0.14);
+    color: #94a3b8;
+    border: 1px solid rgba(148,163,184,0.22);
+    font-weight: 600;
+    margin-top: 4px;
+    display: inline-block;
   }
   .crm-status-select {
     background: #1e293b;
@@ -1939,6 +2008,19 @@ function filterTable() {
       continue;
     }
 
+    if (activeQuickFilter === "ElizabethLine" && tr[i].getAttribute("data-liz-line") !== "true") {
+      tr[i].style.display = "none";
+      continue;
+    }
+
+    if (activeQuickFilter === "LizLineDeals") {
+      if (tr[i].getAttribute("data-liz-line") !== "true" ||
+          (tr[i].getAttribute("data-deal") !== "bargain" && tr[i].getAttribute("data-deal") !== "good")) {
+        tr[i].style.display = "none";
+        continue;
+      }
+    }
+
     if (activeQuickFilter === "TargetTower" && tr[i].getAttribute("data-target-tower") !== "true") {
       tr[i].style.display = "none";
       continue;
@@ -2159,6 +2241,12 @@ function setQuickFilter(filterType) {
     } else if (filterType === "GoodValue") {
       var gvBtn = document.getElementById("chipGoodValue");
       if (gvBtn) gvBtn.classList.add("active");
+    } else if (filterType === "ElizabethLine") {
+      var lizBtn = document.getElementById("chipElizabethLine");
+      if (lizBtn) lizBtn.classList.add("active");
+    } else if (filterType === "LizLineDeals") {
+      var lzdBtn = document.getElementById("chipLizLineDeals");
+      if (lzdBtn) lzdBtn.classList.add("active");
     } else if (filterType === "EarlyBird") {
       var ebBtn = document.getElementById("chipEarlyBird");
       if (ebBtn) ebBtn.classList.add("active");
@@ -2604,6 +2692,8 @@ document.addEventListener("DOMContentLoaded", function() {
       <button id="chipAll" class="filter-chip active" onclick="setQuickFilter('')">All</button>
       <button id="chipBargain" class="filter-chip chip-bargain" onclick="setQuickFilter('Bargain')">💎 Bargain</button>
       <button id="chipGoodValue" class="filter-chip chip-goodvalue" onclick="setQuickFilter('GoodValue')">👍 Good Value</button>
+      <button id="chipElizabethLine" class="filter-chip chip-lizline" onclick="setQuickFilter('ElizabethLine')" title="Show only properties with Direct Elizabeth Line to Farringdon">🚆 Elizabeth Line</button>
+      <button id="chipLizLineDeals" class="filter-chip chip-lizline-deals" onclick="setQuickFilter('LizLineDeals')" title="Show only Elizabeth Line properties rated Bargain or Good Value">💎 Liz Line Deals</button>
       <button id="chipTargetTower" class="filter-chip chip-targettower" onclick="setQuickFilter('TargetTower')">🏛️ Target Towers</button>
       <button id="chipEarlyBird" class="filter-chip chip-earlybird" onclick="setQuickFilter('EarlyBird')">🦅 Early Bird</button>
       <button id="chipExcludeNow" class="filter-chip chip-excludenow" onclick="setQuickFilter('ExcludeNow')">🚫 Exclude Now</button>
