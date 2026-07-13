@@ -13,36 +13,6 @@
 
 ---
 
-### [2026-07-13T12:32:05.333Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: UKmate, London
-- **Location**: Custom House / Royal Victoria
-- **Property Name**: Wellspring House, 11 Seagull Lane
-- **ID**: 90719544
-- **Price**: £2050 PCM
-- **Size**: 467.02 sqm
-- **Listing Update**: 2026-07-10
-- **Listing Status**: Added on 10/07/2026
-- **Let Available**: 16/09/2026 (🦅 Early Bird: 68d adv)
-- **Link**: [https://www.rightmove.co.uk/properties/90719544](https://www.rightmove.co.uk/properties/90719544)
-
----
-
-### [2026-07-13T12:32:05.333Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Madison Brook, Docklands
-- **Location**: Custom House / Royal Victoria
-- **Property Name**: Warehouse W, Royal Victoria Dock, E16
-- **ID**: 90118005
-- **Price**: £2500 PCM
-- **Size**: 103 sqm
-- **Listing Update**: 2026-07-13
-- **Listing Status**: Reduced today
-- **Let Available**: 05/09/2026
-- **Link**: [https://www.rightmove.co.uk/properties/90118005](https://www.rightmove.co.uk/properties/90118005)
-
----
-
 ### [2026-07-13T12:32:05.337Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Madison Brook, Lewisham
@@ -55,6 +25,21 @@
 - **Listing Status**: Reduced on 11/07/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/89812200](https://www.rightmove.co.uk/properties/89812200)
+
+---
+
+### [2026-07-13T13:29:57.615Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Chestertons, Canary Wharf and Docklands
+- **Location**: Royal Arsenal, Woolwich
+- **Property Name**: Building 48,
+- **ID**: 90174753
+- **Price**: £2550 PCM
+- **Size**: 84 sqm
+- **Listing Update**: 2026-06-26
+- **Listing Status**: Added on 26/06/2026
+- **Let Available**: 04/09/2026 (🦅 Early Bird: 70d adv)
+- **Link**: [https://www.rightmove.co.uk/properties/90174753](https://www.rightmove.co.uk/properties/90174753)
 
 ---
 
@@ -343,36 +328,6 @@
 
 ---
 
-### [2026-07-13T12:39:47.738Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: OpenRent, London
-- **Location**: Custom House / Royal Victoria
-- **Property Name**: Baltic Apartments, London, E16
-- **ID**: 90108975
-- **Price**: £2350 PCM
-- **Size**: 68.5 sqm
-- **Listing Update**: 2026-06-24
-- **Listing Status**: Added on 24/06/2026
-- **Let Available**: 01/09/2026 (🦅 Early Bird: 69d adv)
-- **Link**: [https://www.rightmove.co.uk/properties/90108975](https://www.rightmove.co.uk/properties/90108975)
-
----
-
-### [2026-07-13T12:19:13.601Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Vicary and Co, Bridport
-- **Location**: Custom House / Royal Victoria
-- **Property Name**: Foxglove Way, Bridport
-- **ID**: 90448824
-- **Price**: £1150 PCM
-- **Size**: 67 sqm
-- **Listing Update**: 2026-07-03
-- **Listing Status**: Added on 03/07/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/90448824](https://www.rightmove.co.uk/properties/90448824)
-
----
-
 ### [2026-07-13T12:32:05.336Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: APARTMENT PROPERTY MANAGEMENT AND SALES, London
@@ -400,21 +355,6 @@
 - **Listing Status**: Added on 09/07/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90692586](https://www.rightmove.co.uk/properties/90692586)
-
----
-
-### [2026-07-13T12:19:13.602Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: McCarthy and Stone, Nationwide
-- **Location**: Custom House / Royal Victoria
-- **Property Name**: Flood Lane, Bridport, Dorset, DT6 3FZ
-- **ID**: 150494177
-- **Price**: £2700 PCM
-- **Size**: 65 sqm
-- **Listing Update**: 2025-02-07
-- **Listing Status**: Reduced on 07/02/2025
-- **Let Available**: Now (🦅 Early Bird: 522d adv)
-- **Link**: [https://www.rightmove.co.uk/properties/150494177](https://www.rightmove.co.uk/properties/150494177)
 
 ---
 
@@ -493,21 +433,6 @@
 
 ---
 
-### [2026-07-13T12:32:05.334Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: JOHNSandCO, Royal Docks
-- **Location**: Custom House / Royal Victoria
-- **Property Name**: Victoria Hall, Britannia Village, London, E16
-- **ID**: 147550244
-- **Price**: £484 PCM
-- **Size**: 61.71 sqm
-- **Listing Update**: 2026-07-06
-- **Listing Status**: Added on 06/07/2026
-- **Let Available**: 17/09/2026 (🦅 Early Bird: 73d adv)
-- **Link**: [https://www.rightmove.co.uk/properties/147550244](https://www.rightmove.co.uk/properties/147550244)
-
----
-
 ### [2026-07-13T12:14:39.471Z] MATCH FOUND!
 - **Platform**: Johns&Co
 - **Marketed by**: JOHNS&CO
@@ -535,36 +460,6 @@
 - **Listing Status**: Added on 02/07/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90420258](https://www.rightmove.co.uk/properties/90420258)
-
----
-
-### [2026-07-13T12:32:05.334Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: NEXIS Property, London
-- **Location**: Custom House / Royal Victoria
-- **Property Name**: Galleria House, 12b Western Gateway, London, E16
-- **ID**: 90651105
-- **Price**: £2650 PCM
-- **Size**: 61 sqm
-- **Listing Update**: 2026-07-08
-- **Listing Status**: Added on 08/07/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/90651105](https://www.rightmove.co.uk/properties/90651105)
-
----
-
-### [2026-07-13T12:32:05.335Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Complete Prime Residential Ltd, London
-- **Location**: Custom House / Royal Victoria
-- **Property Name**: Gateway Tower, Western Gateway, Royal Victoria, E16
-- **ID**: 90414087
-- **Price**: £2150 PCM
-- **Size**: 60 sqm
-- **Listing Update**: 2026-07-02
-- **Listing Status**: Added on 02/07/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/90414087](https://www.rightmove.co.uk/properties/90414087)
 
 ---
 
@@ -643,21 +538,6 @@
 
 ---
 
-### [2026-07-13T12:32:05.334Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: DCS Residential, Covering London
-- **Location**: Custom House / Royal Victoria
-- **Property Name**: Gatcombe Road, London
-- **ID**: 90496914
-- **Price**: £2250 PCM
-- **Size**: 58 sqm
-- **Listing Update**: 2026-07-07
-- **Listing Status**: Added on 07/07/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/90496914](https://www.rightmove.co.uk/properties/90496914)
-
----
-
 ### [2026-07-13T08:14:12.473Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Life Residential, Canary Wharf Office
@@ -685,66 +565,6 @@
 - **Listing Status**: Added on 08/07/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90610929](https://www.rightmove.co.uk/properties/90610929)
-
----
-
-### [2026-07-13T12:32:05.335Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Madison Brook, Docklands
-- **Location**: Custom House / Royal Victoria
-- **Property Name**: West Lodge, Britannia Village, E16
-- **ID**: 90344400
-- **Price**: £2000 PCM
-- **Size**: 57 sqm
-- **Listing Update**: 2026-07-01
-- **Listing Status**: Added on 01/07/2026
-- **Let Available**: 03/09/2026
-- **Link**: [https://www.rightmove.co.uk/properties/90344400](https://www.rightmove.co.uk/properties/90344400)
-
----
-
-### [2026-07-13T12:32:05.334Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Strawberry Star, E16
-- **Location**: Custom House / Royal Victoria
-- **Property Name**: 1 Tidal Basin Road, London, E16
-- **ID**: 90646695
-- **Price**: £2000 PCM
-- **Size**: 57 sqm
-- **Listing Update**: 2026-07-08
-- **Listing Status**: Added on 08/07/2026
-- **Let Available**: 28/09/2026 (🦅 Early Bird: 82d adv)
-- **Link**: [https://www.rightmove.co.uk/properties/90646695](https://www.rightmove.co.uk/properties/90646695)
-
----
-
-### [2026-07-13T12:39:47.738Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Unihood, London
-- **Location**: Custom House / Royal Victoria
-- **Property Name**: Tidal Basin Road, Silvertown, Newham, London
-- **ID**: 90015990
-- **Price**: £2060 PCM
-- **Size**: 57 sqm
-- **Listing Update**: 2026-06-23
-- **Listing Status**: Added on 23/06/2026
-- **Let Available**: 12/09/2026 (🦅 Early Bird: 81d adv)
-- **Link**: [https://www.rightmove.co.uk/properties/90015990](https://www.rightmove.co.uk/properties/90015990)
-
----
-
-### [2026-07-13T12:32:05.334Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Romans and Partners, London
-- **Location**: Custom House / Royal Victoria
-- **Property Name**: Ellipse House, Royal Eden Dock, E16
-- **ID**: 90382683
-- **Price**: £2100 PCM
-- **Size**: 57 sqm
-- **Listing Update**: 2026-07-04
-- **Listing Status**: Reduced on 04/07/2026
-- **Let Available**: 02/09/2026
-- **Link**: [https://www.rightmove.co.uk/properties/90382683](https://www.rightmove.co.uk/properties/90382683)
 
 ---
 
@@ -793,21 +613,6 @@
 
 ---
 
-### [2026-07-13T12:39:47.737Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Huttons and Partners, London
-- **Location**: Custom House / Royal Victoria
-- **Property Name**: Widgeon Close, Canning Town, E16
-- **ID**: 90149562
-- **Price**: £2100 PCM
-- **Size**: 56 sqm
-- **Listing Update**: 2026-06-25
-- **Listing Status**: Added on 25/06/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/90149562](https://www.rightmove.co.uk/properties/90149562)
-
----
-
 ### [2026-07-04T11:57:12.810Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Unknown
@@ -853,66 +658,6 @@
 
 ---
 
-### [2026-07-13T12:32:05.333Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Samuel King, Canning Town
-- **Location**: Custom House / Royal Victoria
-- **Property Name**: Canning Town, London, E16
-- **ID**: 90082950
-- **Price**: £2000 PCM
-- **Size**: 55.57 sqm
-- **Listing Update**: 2026-06-24
-- **Listing Status**: Added on 24/06/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/90082950](https://www.rightmove.co.uk/properties/90082950)
-
----
-
-### [2026-07-13T12:39:47.738Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Benham and Reeves - Canary Wharf, Canary Wharf
-- **Location**: Custom House / Royal Victoria
-- **Property Name**: Western Gateway, London
-- **ID**: 166149350
-- **Price**: £2100 PCM
-- **Size**: 55.09 sqm
-- **Listing Update**: 2026-06-18
-- **Listing Status**: Added on 18/06/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/166149350](https://www.rightmove.co.uk/properties/166149350)
-
----
-
-### [2026-07-13T12:32:05.334Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Unihood, London
-- **Location**: Custom House / Royal Victoria
-- **Property Name**: Wellspring House, Seagull Lane, London
-- **ID**: 90681819
-- **Price**: £540 PCM
-- **Size**: 55 sqm
-- **Listing Update**: 2026-07-09
-- **Listing Status**: Added on 09/07/2026
-- **Let Available**: 15/09/2026 (🦅 Early Bird: 68d adv)
-- **Link**: [https://www.rightmove.co.uk/properties/90681819](https://www.rightmove.co.uk/properties/90681819)
-
----
-
-### [2026-07-13T12:32:05.334Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Keatons, Stratford
-- **Location**: Custom House / Royal Victoria
-- **Property Name**: Jane Austen Hall, 21 Wesley Avenue, London, E16
-- **ID**: 90604023
-- **Price**: £1900 PCM
-- **Size**: 55 sqm
-- **Listing Update**: 2026-07-07
-- **Listing Status**: Added on 07/07/2026
-- **Let Available**: 18/09/2026 (🦅 Early Bird: 73d adv)
-- **Link**: [https://www.rightmove.co.uk/properties/90604023](https://www.rightmove.co.uk/properties/90604023)
-
----
-
 ### [2026-07-06T14:18:08.558Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Martin and Co, Twickenham
@@ -940,21 +685,6 @@
 - **Listing Status**: Reduced on 10/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/88839924](https://www.rightmove.co.uk/properties/88839924)
-
----
-
-### [2026-07-13T12:32:05.334Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Ernest Brooks International, Canary Wharf
-- **Location**: Custom House / Royal Victoria
-- **Property Name**: Howard House, 9 Wesley Avenue, Silvertown, E16
-- **ID**: 90658119
-- **Price**: £2000 PCM
-- **Size**: 54 sqm
-- **Listing Update**: 2026-07-08
-- **Listing Status**: Added on 08/07/2026
-- **Let Available**: 04/09/2026
-- **Link**: [https://www.rightmove.co.uk/properties/90658119](https://www.rightmove.co.uk/properties/90658119)
 
 ---
 
@@ -1078,21 +808,6 @@
 
 ---
 
-### [2026-07-13T12:32:05.335Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Holland Properties, London
-- **Location**: Custom House / Royal Victoria
-- **Property Name**: Henry Purcell House, E16
-- **ID**: 89425242
-- **Price**: £1900 PCM
-- **Size**: 52 sqm
-- **Listing Update**: 2026-07-02
-- **Listing Status**: Reduced on 02/07/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/89425242](https://www.rightmove.co.uk/properties/89425242)
-
----
-
 ### [2026-07-04T11:57:12.810Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Unknown
@@ -1120,21 +835,6 @@
 - **Listing Status**: Added on 18/06/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/89891085](https://www.rightmove.co.uk/properties/89891085)
-
----
-
-### [2026-07-13T12:39:47.738Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: CROWN LUXURY HOMES LIMITED, London
-- **Location**: Custom House / Royal Victoria
-- **Property Name**: Galleria House, Royal Victoria, E16
-- **ID**: 90068493
-- **Price**: £2350 PCM
-- **Size**: 52 sqm
-- **Listing Update**: 2026-06-24
-- **Listing Status**: Added on 24/06/2026
-- **Let Available**: 01/09/2026 (🦅 Early Bird: 69d adv)
-- **Link**: [https://www.rightmove.co.uk/properties/90068493](https://www.rightmove.co.uk/properties/90068493)
 
 ---
 
@@ -1360,21 +1060,6 @@
 - **Listing Status**: Added on 10/06/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/89570763](https://www.rightmove.co.uk/properties/89570763)
-
----
-
-### [2026-07-13T12:32:05.334Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: The Letting Experts, London
-- **Location**: Custom House / Royal Victoria
-- **Property Name**: Hastings Road, London, W13
-- **ID**: 90514050
-- **Price**: £1750 PCM
-- **Size**: 47 sqm
-- **Listing Update**: 2026-07-05
-- **Listing Status**: Added on 05/07/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/90514050](https://www.rightmove.co.uk/properties/90514050)
 
 ---
 
@@ -1650,21 +1335,6 @@
 
 ### [2026-07-13T12:19:13.602Z] MATCH FOUND!
 - **Platform**: Rightmove
-- **Marketed by**: Goadsby, Weymouth
-- **Location**: Custom House / Royal Victoria
-- **Property Name**: Bridport Town
-- **ID**: 89256384
-- **Price**: £850 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-06-03
-- **Listing Status**: Added on 03/06/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/89256384](https://www.rightmove.co.uk/properties/89256384)
-
----
-
-### [2026-07-13T12:19:13.602Z] MATCH FOUND!
-- **Platform**: Rightmove
 - **Marketed by**: Abode Property Management, Greater Manchester
 - **Location**: Greenwich Peninsula
 - **Property Name**: Buxton Road, Stockport,
@@ -1675,21 +1345,6 @@
 - **Listing Status**: Added on 02/07/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90412290](https://www.rightmove.co.uk/properties/90412290)
-
----
-
-### [2026-07-13T12:19:13.601Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Symonds and Sampson, Bridport
-- **Location**: Custom House / Royal Victoria
-- **Property Name**: West Street, Bridport
-- **ID**: 90685080
-- **Price**: £895 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-09
-- **Listing Status**: Added on 09/07/2026
-- **Let Available**: 18/09/2026 (🦅 Early Bird: 71d adv)
-- **Link**: [https://www.rightmove.co.uk/properties/90685080](https://www.rightmove.co.uk/properties/90685080)
 
 ---
 
@@ -1768,36 +1423,6 @@
 
 ---
 
-### [2026-07-13T12:19:13.602Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Vicary and Co, Bridport
-- **Location**: Custom House / Royal Victoria
-- **Property Name**: St James Park, Bridport
-- **ID**: 90057429
-- **Price**: £950 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-05-29
-- **Listing Status**: Added on 29/05/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/90057429](https://www.rightmove.co.uk/properties/90057429)
-
----
-
-### [2026-07-13T12:19:13.601Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: My Future Living, My Future Living
-- **Location**: Custom House / Royal Victoria
-- **Property Name**: Peelers Court, St Andrews Road, Bridport, DT6
-- **ID**: 90244398
-- **Price**: £950 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-06-29
-- **Listing Status**: Added on 29/06/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/90244398](https://www.rightmove.co.uk/properties/90244398)
-
----
-
 ### [2026-07-13T12:19:13.603Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Citrus Commercial Circle, Manchester
@@ -1870,21 +1495,6 @@
 - **Listing Status**: Added on 06/07/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90527805](https://www.rightmove.co.uk/properties/90527805)
-
----
-
-### [2026-07-13T12:19:13.601Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Symonds and Sampson, Bridport
-- **Location**: Custom House / Royal Victoria
-- **Property Name**: Higher Eype, Bridport
-- **ID**: 90318081
-- **Price**: £1150 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-06-30
-- **Listing Status**: Added on 30/06/2026
-- **Let Available**: 12/10/2026 (🦅 Early Bird: 104d adv)
-- **Link**: [https://www.rightmove.co.uk/properties/90318081](https://www.rightmove.co.uk/properties/90318081)
 
 ---
 
@@ -2005,21 +1615,6 @@
 - **Listing Status**: Added on 06/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90527748](https://www.rightmove.co.uk/properties/90527748)
-
----
-
-### [2026-07-13T12:32:05.334Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: OpenRent, London
-- **Location**: Custom House / Royal Victoria
-- **Property Name**: Bingley Road, London, E16
-- **ID**: 89973786
-- **Price**: £1400 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-06
-- **Listing Status**: Reduced on 06/07/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/89973786](https://www.rightmove.co.uk/properties/89973786)
 
 ---
 
@@ -2233,6 +1828,21 @@
 
 ---
 
+### [2026-07-13T13:29:57.615Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Hamptons, Blackheath
+- **Location**: Royal Arsenal, Woolwich
+- **Property Name**: Wotton Court 2 Rolfe Terrace SE18
+- **ID**: 172991174
+- **Price**: £1950 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-06-25
+- **Listing Status**: Reduced on 25/06/2026
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/172991174](https://www.rightmove.co.uk/properties/172991174)
+
+---
+
 ### [2026-07-13T12:39:20.065Z] MATCH FOUND!
 - **Platform**: Johns&Co
 - **Marketed by**: JOHNS&CO
@@ -2263,18 +1873,18 @@
 
 ---
 
-### [2026-07-13T12:39:47.738Z] MATCH FOUND!
+### [2026-07-13T13:29:57.614Z] MATCH FOUND!
 - **Platform**: Rightmove
-- **Marketed by**: OpenRent, London
-- **Location**: Custom House / Royal Victoria
-- **Property Name**: The Oxygen, London, E16
-- **ID**: 89959323
-- **Price**: £1995 PCM
+- **Marketed by**: Sandra Davidson Estate Agents, Redbridge
+- **Location**: South Quay
+- **Property Name**: Oakland Quay, London
+- **ID**: 90814569
+- **Price**: £2000 PCM
 - **Size**: Unknown
-- **Listing Update**: 2026-06-21
-- **Listing Status**: Added on 21/06/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/89959323](https://www.rightmove.co.uk/properties/89959323)
+- **Listing Update**: 2026-07-13
+- **Listing Status**: Added today
+- **Let Available**: 07/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/90814569](https://www.rightmove.co.uk/properties/90814569)
 
 ---
 
@@ -2308,6 +1918,21 @@
 
 ---
 
+### [2026-07-13T13:29:57.615Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Royal Arsenal Residential, London
+- **Location**: Royal Arsenal, Woolwich
+- **Property Name**: Building 22, Cadogan Road, Royal Arsenal SE18
+- **ID**: 82281140
+- **Price**: £2100 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-06-26
+- **Listing Status**: Reduced on 26/06/2026
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/82281140](https://www.rightmove.co.uk/properties/82281140)
+
+---
+
 ### [2026-07-13T12:32:05.336Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: CHARLES WILLIAM PROPERTY INVESTMENT, London
@@ -2335,21 +1960,6 @@
 - **Listing Status**: Added on 25/06/2026
 - **Let Available**: 31/08/2026 (🦅 Early Bird: 67d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/90129495](https://www.rightmove.co.uk/properties/90129495)
-
----
-
-### [2026-07-13T12:32:05.334Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Estate Ark, Ilford
-- **Location**: Custom House / Royal Victoria
-- **Property Name**: Widgeon Close, Canning Town, Newham, London
-- **ID**: 90585087
-- **Price**: £2150 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-07
-- **Listing Status**: Added on 07/07/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/90585087](https://www.rightmove.co.uk/properties/90585087)
 
 ---
 
@@ -2530,21 +2140,6 @@
 - **Listing Status**: Added on 22/06/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90005799](https://www.rightmove.co.uk/properties/90005799)
-
----
-
-### [2026-07-13T12:32:05.334Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: OpenRent, London
-- **Location**: Custom House / Royal Victoria
-- **Property Name**: Adriatic Apartments, London, E16
-- **ID**: 90677979
-- **Price**: £2500 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-09
-- **Listing Status**: Added on 09/07/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/90677979](https://www.rightmove.co.uk/properties/90677979)
 
 ---
 
