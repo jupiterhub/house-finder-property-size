@@ -460,6 +460,83 @@ function matchesAllowedLocations(m, allowedLocations) {
   });
 }
 
+function deduplicatePhysicalProperties(matches) {
+  const kept = [];
+  let mergedCount = 0;
+
+  function getNormalizedTokens(str) {
+    if (!str || str === 'Unknown') return [];
+    return str.toLowerCase()
+      .replace(/[^\w\s]/g, ' ')
+      .split(/\s+/)
+      .filter(w => w.length >= 3 && !['bedroom', 'apartment', 'flat', 'penthouse', 'studio', 'london', 'canary', 'wharf', 'floor', 'pcm', 'let', 'street', 'road', 'way', 'square', 'building', 'tower', 'place'].includes(w));
+  }
+
+  function areSameProperty(a, b) {
+    if (a.id === b.id) return true;
+    if (a.link && b.link && a.link === b.link) return true;
+
+    // Must have very close price (within £15 PCM tolerance)
+    const priceA = a.price || 0;
+    const priceB = b.price || 0;
+    if (!priceA || !priceB || Math.abs(priceA - priceB) > 15) return false;
+
+    // Check size if both are known (> 0), allowing up to 15 sqm tolerance for OCR or estimation inaccuracies
+    const sizeA = a.size || 0;
+    const sizeB = b.size || 0;
+    if (sizeA > 0 && sizeB > 0 && Math.abs(sizeA - sizeB) > 15) return false;
+
+    // Compare address / propertyName
+    const nameA = (a.propertyName || '').toLowerCase().trim();
+    const nameB = (b.propertyName || '').toLowerCase().trim();
+    if (nameA !== 'unknown' && nameB !== 'unknown' && nameA === nameB) {
+      return true;
+    }
+
+    const tokensA = getNormalizedTokens(a.propertyName);
+    const tokensB = getNormalizedTokens(b.propertyName);
+    if (tokensA.length === 0 || tokensB.length === 0) return false;
+
+    const common = tokensA.filter(t => tokensB.includes(t));
+    if (common.length >= 2) return true;
+
+    if (tokensA.every(t => tokensB.includes(t)) || tokensB.every(t => tokensA.includes(t))) {
+      return true;
+    }
+
+    return false;
+  }
+
+  for (const m of matches) {
+    const existingIdx = kept.findIndex(ex => areSameProperty(ex, m));
+    if (existingIdx === -1) {
+      kept.push(m);
+    } else {
+      mergedCount++;
+      const existing = kept[existingIdx];
+      // Keep the record with richer metadata
+      if ((!existing.size || existing.size === 0) && m.size && m.size > 0) {
+        existing.size = m.size;
+      }
+      if (existing.location === 'Unknown' && m.location && m.location !== 'Unknown') {
+        existing.location = m.location;
+      }
+      if (existing.agent === 'Unknown' && m.agent && m.agent !== 'Unknown') {
+        existing.agent = m.agent;
+      }
+      if (existing.letAvailableDate === 'Unknown' && m.letAvailableDate && m.letAvailableDate !== 'Unknown') {
+        existing.letAvailableDate = m.letAvailableDate;
+      }
+    }
+  }
+
+  if (mergedCount > 0) {
+    console.log(`Deduplicated ${mergedCount} cross-listing/cross-platform duplicate properties.`);
+  }
+
+  return kept;
+}
+
 async function main() {
   const args = process.argv.slice(2);
   const availabilityConfig = getDesiredAvailabilityConfig(config);
@@ -523,7 +600,8 @@ async function main() {
       }
     }
   }
-  const uniqueMatches = Array.from(uniqueMatchesMap.values());
+  let uniqueMatches = Array.from(uniqueMatchesMap.values());
+  uniqueMatches = deduplicatePhysicalProperties(uniqueMatches);
 
   let result = uniqueMatches;
 
