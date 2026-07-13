@@ -14,7 +14,7 @@ class JLLAdapter {
     const results = [];
     console.log(`Starting ${this.platformName} scraping...`);
 
-    const priceMin = config.minPrice !== undefined ? config.minPrice : 2000;
+    const priceMin = config.minPrice !== undefined ? config.minPrice : 1900;
     const priceMax = config.maxPrice !== undefined ? config.maxPrice : 2700;
 
     const searchUrls = [
@@ -152,7 +152,14 @@ class JLLAdapter {
         }
       }
 
-      if (price && price > config.maxPrice) {
+      if (price && config.minPrice && price < config.minPrice) {
+        const reason = `Price £${price} below min £${config.minPrice}`;
+        console.log(`[${this.platformName}] Property ${id} ignored: ${reason}`);
+        markAsIgnored(id, this.platformName, reason);
+        return null;
+      }
+
+      if (price && config.maxPrice && price > config.maxPrice) {
         const reason = `Price £${price} above max £${config.maxPrice}`;
         console.log(`[${this.platformName}] Property ${id} ignored: ${reason}`);
         markAsIgnored(id, this.platformName, reason);

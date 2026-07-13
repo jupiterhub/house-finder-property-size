@@ -67,7 +67,8 @@ class RightmoveAdapter {
           url = pageIndex === 0 ? identifier : identifier + (identifier.includes('?') ? '&' : '?') + `index=${pageIndex}`;
         } else {
           const encodedId = encodeURIComponent(identifier);
-          url = `https://www.rightmove.co.uk/property-to-rent/find.html?useLocationIdentifier=true&locationIdentifier=${encodedId}&_includeLetAgreed=false&maxBedrooms=2&index=${pageIndex}&sortType=6&channel=RENT&transactionType=LETTING&maxPrice=${config.maxPrice}`;
+          const minP = config.minPrice || 1900;
+          url = `https://www.rightmove.co.uk/property-to-rent/find.html?useLocationIdentifier=true&locationIdentifier=${encodedId}&_includeLetAgreed=false&maxBedrooms=2&index=${pageIndex}&sortType=6&channel=RENT&transactionType=LETTING&minPrice=${minP}&maxPrice=${config.maxPrice}`;
         }
         
         console.log(`Navigating to search URL: ${url} (${locationName}, index=${pageIndex})`);
@@ -149,6 +150,12 @@ class RightmoveAdapter {
           if (listing.price > config.maxPrice) {
             console.log(`Skipping property ${listing.id} (Price ${listing.price} exceeds max ${config.maxPrice})`);
             markAsIgnored(listing.id, this.platformName, `Price £${listing.price} exceeds max £${config.maxPrice}`);
+            continue;
+          }
+
+          if (config.minPrice && listing.price < config.minPrice) {
+            console.log(`Skipping property ${listing.id} (Price £${listing.price} below min £${config.minPrice})`);
+            markAsIgnored(listing.id, this.platformName, `Price £${listing.price} below min £${config.minPrice}`);
             continue;
           }
 

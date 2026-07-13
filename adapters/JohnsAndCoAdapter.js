@@ -108,6 +108,13 @@ class JohnsAndCoAdapter {
         }
       }
 
+      if (price && config.minPrice && price < config.minPrice) {
+        const reason = `Price £${price} below min £${config.minPrice}`;
+        console.log(`[${this.platformName}] Property ${id} ignored: ${reason}`);
+        markAsIgnored(id, this.platformName, reason);
+        return null;
+      }
+
       if (price && price > config.maxPrice) {
         const reason = `Price £${price} above max £${config.maxPrice}`;
         console.log(`[${this.platformName}] Property ${id} ignored: ${reason}`);

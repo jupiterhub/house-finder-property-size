@@ -14,7 +14,7 @@ class KnightFrankAdapter {
     const results = [];
     console.log(`Starting ${this.platformName} scraping...`);
 
-    const priceMin = config.minPrice !== undefined ? config.minPrice : 2000;
+    const priceMin = config.minPrice !== undefined ? config.minPrice : 1900;
     const priceMax = config.maxPrice !== undefined ? config.maxPrice : 2700;
 
     const searchUrls = [
@@ -97,6 +97,13 @@ class KnightFrankAdapter {
         if (priceMatch) {
           price = parseInt(priceMatch[1].replace(/,/g, ''), 10);
         }
+      }
+
+      if (price && config.minPrice && price < config.minPrice) {
+        const reason = `Price £${price} below min £${config.minPrice}`;
+        console.log(`[${this.platformName}] Property ${id} ignored: ${reason}`);
+        markAsIgnored(id, this.platformName, reason);
+        return null;
       }
 
       if (price && price > config.maxPrice) {
