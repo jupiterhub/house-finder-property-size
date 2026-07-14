@@ -614,6 +614,21 @@ Millwall, E14
 
 ---
 
+### [2026-07-14T09:27:32.225Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Docklands Prestige Residential, London
+- **Location**: South Quay
+- **Property Name**: 1 Baltimore Wharf, Canary Wharf, London, E14 9FS
+- **ID**: 90845349
+- **Price**: £1900 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-14
+- **Listing Status**: Added today
+- **Let Available**: 26/09/2026 (🦅 Early Bird: 74d adv)
+- **Link**: [https://www.rightmove.co.uk/properties/90845349](https://www.rightmove.co.uk/properties/90845349)
+
+---
+
 ### [2026-07-13T16:22:49.587Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: OpenRent, London
