@@ -979,20 +979,20 @@ async function main() {
         const ppsqmDisplay = hasSize && pricePerSqm !== 'N/A' ? `£${pricePerSqm}${dealBadge}` : 'N/A';
 
         return `<tr data-id="${m.id}" data-index="${idx}" data-platform="${platformStr}" data-deal="${dealType}" data-liz-line="${isElizabethLine ? 'true' : 'false'}" data-early-bird="${isEarlyBird ? 'true' : 'false'}" data-target-tower="${targetTowerName ? 'true' : 'false'}">
-          <td data-value="${timestamp}">${dateStr}</td>
-          <td data-value="${updateTs}">${listingUpdateStr}</td>
-          <td data-value="${listingStatusStr}">${listingStatusStr}</td>
-          <td data-value="${availTs}"><span class="avail-text">${letAvailableStr}</span><span class="compat-indicator"></span>${earlyBirdBadge}</td>
-          <td data-value="${platformStr}">${platformBadge}</td>
-          <td data-value="${agentStr}">${agentBadge}</td>
-          <td data-value="${escapeHtml(m.location || 'Unknown')}">${m.location || 'Unknown'}${lizBadge}</td>
-          <td data-value="${escapeHtml(m.propertyName || 'Unknown')}">${propertyNameCell}${targetTowerBadge}</td>
-          <td class="numeric" data-value="${m.price || 0}">£${m.price || 0}</td>
-          <td class="numeric" data-value="${m.size || 0}">${sizeDisplay}</td>
-          <td class="numeric" data-value="${pricePerSqmValue}">${ppsqmDisplay}</td>
-          <td style="text-align: center;">${noteBtn}</td>
-          <td style="text-align: center;"><a href="${m.link}" target="_blank" class="view-btn" onclick="markRowSeen('${m.id}')" onauxclick="if (event.button === 1) markRowSeen('${m.id}')">View</a></td>
-          <td style="text-align: center;"><button class="star-btn" onclick="toggleStar('${m.id}', this)" title="Save Property">☆</button></td>
+          <td data-label="Date" data-value="${timestamp}">${dateStr}</td>
+          <td data-label="Listed / Updated" data-value="${updateTs}">${listingUpdateStr}</td>
+          <td data-label="Status" data-value="${listingStatusStr}">${listingStatusStr}</td>
+          <td data-label="Let Available" data-value="${availTs}"><span class="avail-text">${letAvailableStr}</span><span class="compat-indicator"></span>${earlyBirdBadge}</td>
+          <td data-label="Source" data-value="${platformStr}">${platformBadge}</td>
+          <td data-label="Marketed By" data-value="${agentStr}">${agentBadge}</td>
+          <td data-label="Location" class="col-location" data-value="${escapeHtml(m.location || 'Unknown')}">${m.location || 'Unknown'}${lizBadge}</td>
+          <td data-label="Property Name" class="col-property" data-value="${escapeHtml(m.propertyName || 'Unknown')}">${propertyNameCell}${targetTowerBadge}</td>
+          <td data-label="Price" class="numeric col-price" data-value="${m.price || 0}">£${m.price || 0}</td>
+          <td data-label="Size" class="numeric col-size" data-value="${m.size || 0}">${sizeDisplay}</td>
+          <td data-label="£ / sqm" class="numeric col-ppsqm" data-value="${pricePerSqmValue}">${ppsqmDisplay}</td>
+          <td data-label="Notes" class="col-note" style="text-align: center;">${noteBtn}</td>
+          <td data-label="Action" class="col-view" style="text-align: center;"><a href="${m.link}" target="_blank" class="view-btn" onclick="markRowSeen('${m.id}')" onauxclick="if (event.button === 1) markRowSeen('${m.id}')">View</a></td>
+          <td data-label="Save" class="col-star" style="text-align: center;"><button class="star-btn" onclick="toggleStar('${m.id}', this)" title="Save Property">☆</button></td>
         </tr>`;
       }).join('\n');
 
@@ -1000,6 +1000,8 @@ async function main() {
 <html>
 <head>
 <title>Property Matches</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<meta name="theme-color" content="#0f172a">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
@@ -1816,6 +1818,591 @@ async function main() {
     color: #93c5fd;
     text-decoration: underline;
   }
+
+  /* --- View Toggle Button Group --- */
+  .view-toggle-group {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 2px;
+    margin-left: 12px;
+  }
+  .view-toggle-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    padding: 5px 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .view-toggle-btn:hover {
+    color: var(--text);
+  }
+  .view-toggle-btn.active {
+    background: var(--primary);
+    color: white;
+    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.35);
+  }
+
+  /* --- Mobile Filter Drawer & Toggle --- */
+  .mobile-only-toggle {
+    display: none;
+  }
+  .mobile-filter-drawer {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    animation: slideDown 0.25s ease-out;
+  }
+  @keyframes slideDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .drawer-section {
+    margin-bottom: 16px;
+  }
+  .drawer-section:last-child {
+    margin-bottom: 0;
+  }
+  .drawer-title {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    padding-bottom: 6px;
+  }
+  .drawer-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .drawer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 12px;
+  }
+  .drawer-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .drawer-input-group label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-muted);
+  }
+  .drawer-input {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 8px 12px;
+    color: var(--text);
+    font-size: 0.85rem;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+  }
+  .drawer-input:focus {
+    border-color: var(--primary);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+  }
+
+  /* --- Responsive Mobile & Card View Styles --- */
+  @media (max-width: 850px) {
+    body {
+      padding: 12px;
+    }
+    .header-container {
+      flex-direction: column;
+      align-items: stretch;
+      padding: 14px;
+      gap: 14px;
+    }
+    .title-area {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 6px;
+    }
+    .stats {
+      flex-wrap: wrap;
+      gap: 8px;
+      line-height: 1.6;
+    }
+    .view-toggle-group {
+      margin-left: 0;
+      margin-top: 4px;
+    }
+    .search-container {
+      max-width: none;
+      width: 100%;
+    }
+    #globalSearch {
+      padding: 12px 16px;
+      font-size: 1rem;
+    }
+    .move-in-assistant {
+      flex-direction: column;
+      align-items: stretch;
+      padding: 14px;
+      gap: 14px;
+    }
+    .assistant-controls {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 12px;
+    }
+    .control-group {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 4px;
+    }
+    .control-group input[type="date"], .control-group select {
+      width: 100%;
+      padding: 10px 12px;
+      font-size: 0.95rem;
+    }
+    .checkbox-group {
+      justify-content: center;
+      padding: 10px;
+    }
+    .quick-actions-bar {
+      flex-direction: column;
+      align-items: stretch;
+      padding: 12px;
+      gap: 12px;
+    }
+    .quick-filters, .quick-sorts {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 8px;
+      gap: 8px;
+      scrollbar-width: thin;
+    }
+    .quick-filters::-webkit-scrollbar, .quick-sorts::-webkit-scrollbar {
+      height: 4px;
+    }
+    .quick-filters::-webkit-scrollbar-thumb, .quick-sorts::-webkit-scrollbar-thumb {
+      background: var(--border);
+      border-radius: 4px;
+    }
+    .filter-chip {
+      flex-shrink: 0;
+      white-space: nowrap;
+      padding: 8px 14px;
+      min-height: 38px;
+      display: inline-flex;
+      align-items: center;
+    }
+    .mobile-only-toggle {
+      display: flex;
+      width: 100%;
+    }
+    .chip-mobile-filter {
+      width: 100%;
+      justify-content: center;
+      background: rgba(59, 130, 246, 0.15);
+      border-color: rgba(59, 130, 246, 0.4);
+      color: #60a5fa;
+      font-weight: 700;
+    }
+    .chip-mobile-filter:hover {
+      background: rgba(59, 130, 246, 0.25);
+    }
+    .action-divider {
+      display: none;
+    }
+  }
+
+  /* --- CARD VIEW CORE RULES --- */
+  #matchesTable.force-card-view thead,
+  @media (max-width: 850px) {
+    #matchesTable:not(.force-table-view) thead {
+      display: none;
+    }
+  }
+
+  #matchesTable.force-card-view,
+  #matchesTable.force-card-view tbody,
+  #matchesTable.force-card-view tr,
+  #matchesTable.force-card-view td,
+  @media (max-width: 850px) {
+    #matchesTable:not(.force-table-view),
+    #matchesTable:not(.force-table-view) tbody,
+    #matchesTable:not(.force-table-view) tr,
+    #matchesTable:not(.force-table-view) td {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+    }
+  }
+
+  #matchesTable.force-card-view,
+  @media (max-width: 850px) {
+    #matchesTable:not(.force-table-view) {
+      margin-top: 8px;
+    }
+    .table-wrapper:has(#matchesTable.force-card-view),
+    .table-wrapper:has(#matchesTable:not(.force-table-view)) {
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+      overflow: visible !important;
+      max-height: none !important;
+    }
+  }
+
+  #matchesTable.force-card-view tr,
+  @media (max-width: 850px) {
+    #matchesTable:not(.force-table-view) tr {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      margin-bottom: 18px;
+      padding: 18px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    }
+    #matchesTable:not(.force-table-view) tr:hover,
+    #matchesTable.force-card-view tr:hover {
+      border-color: rgba(59, 130, 246, 0.45);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+    }
+  }
+
+  #matchesTable.force-card-view td,
+  @media (max-width: 850px) {
+    #matchesTable:not(.force-table-view) td {
+      padding: 8px 4px;
+      border-bottom: 1px dashed rgba(255, 255, 255, 0.05);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-align: right;
+      font-size: 0.9rem;
+    }
+    #matchesTable:not(.force-table-view) td:last-child,
+    #matchesTable.force-card-view td:last-child {
+      border-bottom: none;
+    }
+  }
+
+  #matchesTable.force-card-view td::before,
+  @media (max-width: 850px) {
+    #matchesTable:not(.force-table-view) td::before {
+      content: attr(data-label);
+      font-weight: 700;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-right: 12px;
+      text-align: left;
+      flex-shrink: 0;
+    }
+  }
+
+  #matchesTable.force-card-view td.col-star,
+  @media (max-width: 850px) {
+    #matchesTable:not(.force-table-view) td.col-star {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      width: auto;
+      border: none;
+      padding: 0;
+      order: 1;
+    }
+    #matchesTable:not(.force-table-view) td.col-star::before,
+    #matchesTable.force-card-view td.col-star::before {
+      display: none;
+    }
+    #matchesTable:not(.force-table-view) .star-btn,
+    #matchesTable.force-card-view .star-btn {
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.06);
+    }
+  }
+
+  #matchesTable.force-card-view td[data-label="Source"],
+  @media (max-width: 850px) {
+    #matchesTable:not(.force-table-view) td[data-label="Source"] {
+      order: 2;
+      justify-content: flex-start;
+      border-bottom: none;
+      padding: 0 0 4px 0;
+    }
+    #matchesTable:not(.force-table-view) td[data-label="Source"]::before,
+    #matchesTable.force-card-view td[data-label="Source"]::before {
+      display: none;
+    }
+  }
+
+  #matchesTable.force-card-view td[data-label="Marketed By"],
+  @media (max-width: 850px) {
+    #matchesTable:not(.force-table-view) td[data-label="Marketed By"] {
+      order: 3;
+      justify-content: flex-start;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 0 0 10px 0;
+      margin-bottom: 4px;
+      color: #94a3b8;
+      font-size: 0.85rem;
+    }
+    #matchesTable:not(.force-table-view) td[data-label="Marketed By"]::before,
+    #matchesTable.force-card-view td[data-label="Marketed By"]::before {
+      display: none;
+    }
+  }
+
+  #matchesTable.force-card-view td.col-property,
+  @media (max-width: 850px) {
+    #matchesTable:not(.force-table-view) td.col-property {
+      order: 4;
+      display: block;
+      text-align: left;
+      font-size: 1.22rem;
+      font-weight: 700;
+      color: #60a5fa;
+      border-bottom: none;
+      padding: 6px 0 2px 0;
+      line-height: 1.35;
+    }
+    #matchesTable:not(.force-table-view) td.col-property::before,
+    #matchesTable.force-card-view td.col-property::before {
+      display: none;
+    }
+  }
+
+  #matchesTable.force-card-view td.col-location,
+  @media (max-width: 850px) {
+    #matchesTable:not(.force-table-view) td.col-location {
+      order: 5;
+      justify-content: flex-start;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 0 0 12px 0;
+      margin-bottom: 6px;
+      font-size: 0.95rem;
+      color: #e2e8f0;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    #matchesTable:not(.force-table-view) td.col-location::before,
+    #matchesTable.force-card-view td.col-location::before {
+      content: '📍 ';
+      font-size: 1.05rem;
+      margin-right: 2px;
+    }
+  }
+
+  #matchesTable.force-card-view td.col-price,
+  @media (max-width: 850px) {
+    #matchesTable:not(.force-table-view) td.col-price {
+      order: 6;
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      border-radius: 10px;
+      padding: 12px 14px;
+      margin: 4px 0;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #34d399;
+    }
+    #matchesTable:not(.force-table-view) td.col-price::before,
+    #matchesTable.force-card-view td.col-price::before {
+      color: #34d399;
+      font-size: 0.85rem;
+    }
+  }
+
+  #matchesTable.force-card-view td.col-size,
+  @media (max-width: 850px) {
+    #matchesTable:not(.force-table-view) td.col-size {
+      order: 7;
+      font-size: 1rem;
+      font-weight: 600;
+      padding: 10px 6px;
+    }
+  }
+
+  #matchesTable.force-card-view td.col-ppsqm,
+  @media (max-width: 850px) {
+    #matchesTable:not(.force-table-view) td.col-ppsqm {
+      order: 8;
+      font-size: 0.95rem;
+      padding: 10px 6px;
+    }
+  }
+
+  #matchesTable.force-card-view td[data-label="Let Available"],
+  @media (max-width: 850px) {
+    #matchesTable:not(.force-table-view) td[data-label="Let Available"] {
+      order: 9;
+      padding: 10px 6px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      margin-bottom: 4px;
+    }
+  }
+
+  #matchesTable.force-card-view td[data-label="Date"],
+  @media (max-width: 850px) {
+    #matchesTable:not(.force-table-view) td[data-label="Date"] {
+      order: 10;
+      font-size: 0.8rem;
+      color: #94a3b8;
+      padding: 6px 4px;
+    }
+  }
+
+  #matchesTable.force-card-view td[data-label="Listed / Updated"],
+  @media (max-width: 850px) {
+    #matchesTable:not(.force-table-view) td[data-label="Listed / Updated"] {
+      order: 11;
+      font-size: 0.8rem;
+      color: #94a3b8;
+      padding: 6px 4px;
+    }
+  }
+
+  #matchesTable.force-card-view td[data-label="Status"],
+  @media (max-width: 850px) {
+    #matchesTable:not(.force-table-view) td[data-label="Status"] {
+      order: 12;
+      font-size: 0.8rem;
+      color: #94a3b8;
+      padding: 6px 4px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      margin-bottom: 8px;
+    }
+  }
+
+  #matchesTable.force-card-view td.col-note,
+  @media (max-width: 850px) {
+    #matchesTable:not(.force-table-view) td.col-note {
+      order: 13;
+      justify-content: flex-start;
+      border-bottom: none;
+      padding: 6px 0 0 0;
+    }
+    #matchesTable:not(.force-table-view) td.col-note::before,
+    #matchesTable.force-card-view td.col-note::before {
+      content: '📝 Note: ';
+      margin-right: 8px;
+    }
+    #matchesTable:not(.force-table-view) .note-btn,
+    #matchesTable.force-card-view .note-btn {
+      padding: 8px 14px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 0.9rem;
+      color: var(--text);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+  }
+
+  #matchesTable.force-card-view td.col-view,
+  @media (max-width: 850px) {
+    #matchesTable:not(.force-table-view) td.col-view {
+      order: 14;
+      display: block;
+      border-bottom: none;
+      padding: 10px 0 0 0;
+      width: 100%;
+    }
+    #matchesTable:not(.force-table-view) td.col-view::before,
+    #matchesTable.force-card-view td.col-view::before {
+      display: none;
+    }
+    #matchesTable:not(.force-table-view) .view-btn,
+    #matchesTable.force-card-view .view-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: 14px;
+      font-size: 1.05rem;
+      font-weight: 700;
+      border-radius: 12px;
+      box-sizing: border-box;
+      background: linear-gradient(135deg, var(--primary), var(--primary-hover));
+      box-shadow: 0 4px 18px rgba(59, 130, 246, 0.35);
+      min-height: 46px;
+    }
+  }
+
+  /* --- Force Table View Overrides for Mobile --- */
+  @media (max-width: 850px) {
+    #matchesTable.force-table-view {
+      display: table !important;
+      width: 100% !important;
+    }
+    #matchesTable.force-table-view thead {
+      display: table-header-group !important;
+    }
+    #matchesTable.force-table-view tbody {
+      display: table-row-group !important;
+    }
+    #matchesTable.force-table-view tr {
+      display: table-row !important;
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+      margin-bottom: 0 !important;
+      padding: 0 !important;
+    }
+    #matchesTable.force-table-view td {
+      display: table-cell !important;
+      padding: 16px 20px !important;
+      border-bottom: 1px solid var(--border) !important;
+      text-align: left !important;
+      font-size: 0.92rem !important;
+    }
+    #matchesTable.force-table-view td::before {
+      display: none !important;
+    }
+    #matchesTable.force-table-view td.col-star {
+      position: static !important;
+      text-align: center !important;
+    }
+    #matchesTable.force-table-view td.col-property,
+    #matchesTable.force-table-view td.col-location,
+    #matchesTable.force-table-view td.col-price {
+      background: transparent !important;
+      border: none !important;
+      padding: 16px 20px !important;
+      margin: 0 !important;
+      font-size: 0.92rem !important;
+    }
+  }
 </style>
 <script>
 const STARRED_STORAGE_KEY = 'house_finder_starred_ids';
@@ -2503,7 +3090,7 @@ function clearSort() {
   if (globalSearch) globalSearch.value = "";
   var compatSelect = document.getElementById("compatLabelSelect");
   if (compatSelect) compatSelect.value = "";
-  var inputs = document.querySelectorAll("thead .filter-input");
+  var inputs = document.querySelectorAll("thead .filter-input, .drawer-input");
   for (var i = 0; i < inputs.length; i++) inputs[i].value = "";
   var chips = document.querySelectorAll(".quick-actions-bar .filter-chip, .quick-filters .filter-chip");
   for (var k = 0; k < chips.length; k++) chips[k].classList.remove("active");
@@ -2640,7 +3227,72 @@ document.addEventListener("DOMContentLoaded", function() {
   applySort();
   updateSortIndicators();
   updateCompatibilityBadges();
+  initViewMode();
 });
+
+function setViewMode(mode) {
+  const table = document.getElementById('matchesTable');
+  const btnCards = document.getElementById('viewCardsBtn');
+  const btnTable = document.getElementById('viewTableBtn');
+  if (!table) return;
+  
+  if (mode === 'cards') {
+    table.classList.add('force-card-view');
+    table.classList.remove('force-table-view');
+    if (btnCards) btnCards.classList.add('active');
+    if (btnTable) btnTable.classList.remove('active');
+    localStorage.setItem('house_finder_view_mode', 'cards');
+  } else {
+    table.classList.add('force-table-view');
+    table.classList.remove('force-card-view');
+    if (btnTable) btnTable.classList.add('active');
+    if (btnCards) btnCards.classList.remove('active');
+    localStorage.setItem('house_finder_view_mode', 'table');
+  }
+}
+
+function initViewMode() {
+  const savedMode = localStorage.getItem('house_finder_view_mode');
+  const isMobile = window.innerWidth <= 850;
+  const btnCards = document.getElementById('viewCardsBtn');
+  const btnTable = document.getElementById('viewTableBtn');
+  const table = document.getElementById('matchesTable');
+  if (!table) return;
+
+  if (savedMode === 'cards' || (!savedMode && isMobile)) {
+    table.classList.add('force-card-view');
+    table.classList.remove('force-table-view');
+    if (btnCards) btnCards.classList.add('active');
+    if (btnTable) btnTable.classList.remove('active');
+  } else if (savedMode === 'table' || (!savedMode && !isMobile)) {
+    table.classList.add('force-table-view');
+    table.classList.remove('force-card-view');
+    if (btnTable) btnTable.classList.add('active');
+    if (btnCards) btnCards.classList.remove('active');
+  }
+}
+
+function toggleMobileDrawer() {
+  const drawer = document.getElementById('mobileFiltersDrawer');
+  const btn = document.getElementById('mobileFilterToggleBtn');
+  if (!drawer) return;
+  if (drawer.style.display === 'none' || !drawer.style.display) {
+    drawer.style.display = 'block';
+    if (btn) btn.classList.add('active');
+  } else {
+    drawer.style.display = 'none';
+    if (btn) btn.classList.remove('active');
+  }
+}
+
+function syncFromDrawer(inputElem) {
+  const col = inputElem.getAttribute('data-target-col');
+  const targetHeaderInput = document.querySelector('.filter-input[data-col="' + col + '"]');
+  if (targetHeaderInput) {
+    targetHeaderInput.value = inputElem.value;
+    filterTable();
+  }
+}
 </script>
 </head>
 <body>
@@ -2651,6 +3303,10 @@ document.addEventListener("DOMContentLoaded", function() {
       Showing <span id="visibleCount">${result.length}</span> of ${result.length} properties found
       <button id="resetStarredBtn" onclick="resetStarred()" style="display:none;">Clear Saved (<span id="starredCount">0</span>)</button>
       <button id="resetSeenBtn" onclick="resetSeen()" style="display:none;">Reset Viewed (<span id="seenCount">0</span>)</button>
+      <div class="view-toggle-group">
+        <button id="viewCardsBtn" class="view-toggle-btn active" onclick="setViewMode('cards')" title="Mobile Card View">🗂️ Cards</button>
+        <button id="viewTableBtn" class="view-toggle-btn" onclick="setViewMode('table')" title="Desktop Table View">📋 Table</button>
+      </div>
     </div>
   </div>
   <div class="move-in-assistant" id="moveInAssistant">
@@ -2722,10 +3378,58 @@ document.addEventListener("DOMContentLoaded", function() {
         </div>
       </div>
     </div>
+    <div class="action-divider mobile-only-toggle"></div>
+    <div class="mobile-only-toggle action-group" style="width: 100%;">
+      <button id="mobileFilterToggleBtn" class="filter-chip chip-mobile-filter" onclick="toggleMobileDrawer()">
+        <span>🎛️ Column Filters & Sort Options ▼</span>
+      </button>
+    </div>
   </div>
   <div class="search-container">
     <label for="globalSearch">Quick Search</label>
     <input type="text" id="globalSearch" onkeyup="filterTable()" placeholder="Search location, agent...">
+  </div>
+</div>
+
+<div id="mobileFiltersDrawer" class="mobile-filter-drawer" style="display: none;">
+  <div class="drawer-section">
+    <div class="drawer-title">⚡ Multi-Column Sort Options</div>
+    <div class="drawer-chips">
+      <button class="filter-chip" onclick="setMultiSort([{col: 0, dir: 'desc'}, {col: 8, dir: 'asc'}])">📅 Date → Price</button>
+      <button class="filter-chip" onclick="setMultiSort([{col: 8, dir: 'asc'}, {col: 9, dir: 'desc'}])">💷 Price → Size</button>
+      <button class="filter-chip" onclick="setMultiSort([{col: 10, dir: 'asc'}])">💎 Best £/sqm</button>
+      <button class="filter-chip chip-target" onclick="sortByTargetDate()">🎯 Match Proximity</button>
+      <button class="filter-chip chip-clear" onclick="clearSort()">✕ Clear Sort</button>
+    </div>
+  </div>
+  <div class="drawer-section">
+    <div class="drawer-title">🎯 Specific Column Filters</div>
+    <div class="drawer-grid">
+      <div class="drawer-input-group">
+        <label>Added Date:</label>
+        <input type="text" class="drawer-input" data-target-col="0" placeholder="e.g. >2026-05-01" oninput="syncFromDrawer(this)">
+      </div>
+      <div class="drawer-input-group">
+        <label>Let Available Date:</label>
+        <input type="text" class="drawer-input" data-target-col="3" placeholder="e.g. >2026-07-01" oninput="syncFromDrawer(this)">
+      </div>
+      <div class="drawer-input-group">
+        <label>Price Range (£):</label>
+        <input type="text" class="drawer-input" data-target-col="8" placeholder="e.g. <2600 or >2000" oninput="syncFromDrawer(this)">
+      </div>
+      <div class="drawer-input-group">
+        <label>Min Size (sqm):</label>
+        <input type="text" class="drawer-input" data-target-col="9" placeholder="e.g. >=50" oninput="syncFromDrawer(this)">
+      </div>
+      <div class="drawer-input-group">
+        <label>£ / sqm:</label>
+        <input type="text" class="drawer-input" data-target-col="10" placeholder="e.g. <=45" oninput="syncFromDrawer(this)">
+      </div>
+      <div class="drawer-input-group">
+        <label>Location / Area:</label>
+        <input type="text" class="drawer-input" data-target-col="6" placeholder="e.g. Canary Wharf" oninput="syncFromDrawer(this)">
+      </div>
+    </div>
   </div>
 </div>
 
