@@ -118,6 +118,21 @@
 
 ---
 
+### [2026-07-14T22:07:39.689Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Fisks Ltd, London
+- **Location**: Canary Wharf
+- **Property Name**: Garford Street, Wesferry Road, London
+- **ID**: 90884757
+- **Price**: £2150 PCM
+- **Size**: 73 sqm
+- **Listing Update**: 2026-07-14
+- **Listing Status**: Added today
+- **Let Available**: 25/07/2026
+- **Link**: [https://www.rightmove.co.uk/properties/90884757](https://www.rightmove.co.uk/properties/90884757)
+
+---
+
 ### [2026-07-13T16:22:49.585Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Keatons, Bow
@@ -221,21 +236,6 @@ Millwall, E14
 - **Listing Status**: Added on 10/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90732897](https://www.rightmove.co.uk/properties/90732897)
-
----
-
-### [2026-07-13T16:22:49.586Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Keatons, Stratford
-- **Location**: Custom House
-- **Property Name**: North  Lodge, 17 Wesley Avenue, London, E16
-- **ID**: 90759954
-- **Price**: £1950 PCM
-- **Size**: 61.5 sqm
-- **Listing Update**: 2026-07-10
-- **Listing Status**: Added on 10/07/2026
-- **Let Available**: 27/08/2026
-- **Link**: [https://www.rightmove.co.uk/properties/90759954](https://www.rightmove.co.uk/properties/90759954)
 
 ---
 
@@ -386,21 +386,6 @@ Millwall, E14
 - **Listing Status**: Added on 10/07/2026
 - **Let Available**: 25/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90733836](https://www.rightmove.co.uk/properties/90733836)
-
----
-
-### [2026-07-13T16:22:49.586Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Strawberry Star, E16
-- **Location**: Custom House
-- **Property Name**: 1 Tidal Basin Road, London, E16
-- **ID**: 90646695
-- **Price**: £2000 PCM
-- **Size**: 57 sqm
-- **Listing Update**: 2026-07-08
-- **Listing Status**: Added on 08/07/2026
-- **Let Available**: 28/09/2026 (🦅 Early Bird: 82d adv)
-- **Link**: [https://www.rightmove.co.uk/properties/90646695](https://www.rightmove.co.uk/properties/90646695)
 
 ---
 
@@ -629,6 +614,21 @@ Millwall, E14
 
 ---
 
+### [2026-07-14T22:07:39.689Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Regal Hampton Properties, London
+- **Location**: Custom House
+- **Property Name**: 3 Eden Place, Newham, London, E16
+- **ID**: 90886134
+- **Price**: £2250 PCM
+- **Size**: 51 sqm
+- **Listing Update**: 2026-07-14
+- **Listing Status**: Added today
+- **Let Available**: 09/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/90886134](https://www.rightmove.co.uk/properties/90886134)
+
+---
+
 ### [2026-07-13T16:22:49.584Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Urban Spaces, City Living
@@ -777,21 +777,6 @@ Millwall, E14
 - **Listing Status**: Added on 25/06/2026
 - **Let Available**: 17/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90138741](https://www.rightmove.co.uk/properties/90138741)
-
----
-
-### [2026-07-13T16:22:49.587Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: OpenRent, London
-- **Location**: Custom House
-- **Property Name**: The Oxygen, London, E16
-- **ID**: 89959323
-- **Price**: £1995 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-06-21
-- **Listing Status**: Added on 21/06/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/89959323](https://www.rightmove.co.uk/properties/89959323)
 
 ---
 
