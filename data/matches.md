@@ -178,6 +178,22 @@
 
 ---
 
+### [2026-07-14T16:44:34.270Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Chestertons, Canary Wharf and Docklands
+- **Location**: South Quay
+- **Property Name**: Pepper Street, 
+Millwall, E14
+- **ID**: 90872100
+- **Price**: £2150 PCM
+- **Size**: 63.17 sqm
+- **Listing Update**: 2026-07-14
+- **Listing Status**: Added today
+- **Let Available**: 03/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/90872100](https://www.rightmove.co.uk/properties/90872100)
+
+---
+
 ### [2026-07-13T16:22:49.586Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Bamboo Living, London
@@ -433,21 +449,6 @@
 
 ---
 
-### [2026-07-13T16:22:49.586Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Huttons and Partners, London
-- **Location**: Custom House
-- **Property Name**: Widgeon Close, Canning Town, E16
-- **ID**: 90149562
-- **Price**: £2100 PCM
-- **Size**: 56 sqm
-- **Listing Update**: 2026-06-25
-- **Listing Status**: Added on 25/06/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/90149562](https://www.rightmove.co.uk/properties/90149562)
-
----
-
 ### [2026-07-13T16:22:49.584Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Life Residential, Canary Wharf Office
@@ -538,6 +539,21 @@
 
 ---
 
+### [2026-07-14T16:44:34.270Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Winmac Properties, London
+- **Location**: Canary Wharf
+- **Property Name**: City Tower, Limeharbour, London
+- **ID**: 90880098
+- **Price**: £2100 PCM
+- **Size**: 54 sqm
+- **Listing Update**: 2026-07-14
+- **Listing Status**: Added today
+- **Let Available**: 01/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/90880098](https://www.rightmove.co.uk/properties/90880098)
+
+---
+
 ### [2026-07-13T16:22:49.586Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Holland Properties, London
@@ -583,6 +599,21 @@
 
 ---
 
+### [2026-07-14T16:44:34.270Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Life Residential, Canary Wharf Office
+- **Location**: Canary Wharf
+- **Property Name**: Harbour Way, Canary Wharf
+- **ID**: 90879975
+- **Price**: £2700 PCM
+- **Size**: 51.4 sqm
+- **Listing Update**: 2026-07-14
+- **Listing Status**: Added today
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/90879975](https://www.rightmove.co.uk/properties/90879975)
+
+---
+
 ### [2026-07-13T16:22:49.587Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Guide Point Properties Limited, London
@@ -610,6 +641,21 @@
 - **Listing Status**: Added on 22/05/2026
 - **Let Available**: 24/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/88854273](https://www.rightmove.co.uk/properties/88854273)
+
+---
+
+### [2026-07-14T16:44:34.270Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Dexters, Canary Wharf
+- **Location**: Canary Wharf
+- **Property Name**: Pan Peninsula Square, Canary Wharf
+- **ID**: 90880086
+- **Price**: £2600 PCM
+- **Size**: 50.2 sqm
+- **Listing Update**: 2026-07-14
+- **Listing Status**: Added today
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/90880086](https://www.rightmove.co.uk/properties/90880086)
 
 ---
 
@@ -674,6 +720,21 @@ Millwall, E14
 
 ---
 
+### [2026-07-13T16:22:49.586Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: OpenRent, London
+- **Location**: South Quay
+- **Property Name**: Montford House, London, E14
+- **ID**: 90397644
+- **Price**: £2195 PCM
+- **Size**: 46 sqm
+- **Listing Update**: 2026-07-12
+- **Listing Status**: Reduced on 12/07/2026
+- **Let Available**: 15/07/2026
+- **Link**: [https://www.rightmove.co.uk/properties/90397644](https://www.rightmove.co.uk/properties/90397644)
+
+---
+
 ### [2026-07-14T09:27:32.225Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Docklands Prestige Residential, London
@@ -731,6 +792,21 @@ Millwall, E14
 - **Listing Status**: Added on 21/06/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/89959323](https://www.rightmove.co.uk/properties/89959323)
+
+---
+
+### [2026-07-14T16:44:34.270Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: FMX PROPERTIES LTD, London
+- **Location**: South Quay
+- **Property Name**: Arnhem Place, London, E14
+- **ID**: 90813945
+- **Price**: £2000 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-14
+- **Listing Status**: Added today
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/90813945](https://www.rightmove.co.uk/properties/90813945)
 
 ---
 
@@ -821,21 +897,6 @@ Millwall, E14
 - **Listing Status**: Added on 07/07/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90585087](https://www.rightmove.co.uk/properties/90585087)
-
----
-
-### [2026-07-13T16:22:49.586Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: OpenRent, London
-- **Location**: South Quay
-- **Property Name**: Montford House, London, E14
-- **ID**: 90397644
-- **Price**: £2195 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-12
-- **Listing Status**: Reduced on 12/07/2026
-- **Let Available**: 15/07/2026
-- **Link**: [https://www.rightmove.co.uk/properties/90397644](https://www.rightmove.co.uk/properties/90397644)
 
 ---
 
@@ -1031,6 +1092,21 @@ Millwall, E14
 - **Listing Status**: Added yesterday
 - **Let Available**: 20/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90814404](https://www.rightmove.co.uk/properties/90814404)
+
+---
+
+### [2026-07-14T16:44:34.270Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Ernest Brooks International, Canary Wharf
+- **Location**: Canary Wharf
+- **Property Name**: One Thames Quay, Marsh Wall, Canary Wharf, E14
+- **ID**: 88577046
+- **Price**: £2650 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-14
+- **Listing Status**: Reduced today
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/88577046](https://www.rightmove.co.uk/properties/88577046)
 
 ---
 
