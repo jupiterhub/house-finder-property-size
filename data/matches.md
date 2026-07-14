@@ -22,7 +22,7 @@
 - **Price**: £2500 PCM
 - **Size**: 103 sqm
 - **Listing Update**: 2026-07-13
-- **Listing Status**: Reduced today
+- **Listing Status**: Reduced yesterday
 - **Let Available**: 05/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90118005](https://www.rightmove.co.uk/properties/90118005)
 
@@ -67,7 +67,7 @@
 - **Price**: £2700 PCM
 - **Size**: 86 sqm
 - **Listing Update**: 2026-07-13
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90830598](https://www.rightmove.co.uk/properties/90830598)
 
@@ -133,21 +133,6 @@
 
 ---
 
-### [2026-07-13T16:22:49.587Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: OpenRent, London
-- **Location**: Custom House
-- **Property Name**: Baltic Apartments, London, E16
-- **ID**: 90108975
-- **Price**: £2350 PCM
-- **Size**: 68.5 sqm
-- **Listing Update**: 2026-06-24
-- **Listing Status**: Added on 24/06/2026
-- **Let Available**: 01/09/2026 (🦅 Early Bird: 69d adv)
-- **Link**: [https://www.rightmove.co.uk/properties/90108975](https://www.rightmove.co.uk/properties/90108975)
-
----
-
 ### [2026-07-13T16:22:49.586Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: OpenRent, London
@@ -187,7 +172,7 @@
 - **Price**: £2300 PCM
 - **Size**: 64 sqm
 - **Listing Update**: 2026-07-13
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: 01/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90820317](https://www.rightmove.co.uk/properties/90820317)
 
@@ -307,7 +292,7 @@
 - **Price**: £2100 PCM
 - **Size**: 58 sqm
 - **Listing Update**: 2026-07-13
-- **Listing Status**: Reduced today
+- **Listing Status**: Reduced yesterday
 - **Let Available**: 01/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/89325786](https://www.rightmove.co.uk/properties/89325786)
 
@@ -322,7 +307,7 @@
 - **Price**: £2200 PCM
 - **Size**: 58 sqm
 - **Listing Update**: 2026-07-13
-- **Listing Status**: Reduced today
+- **Listing Status**: Reduced yesterday
 - **Let Available**: 25/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90496914](https://www.rightmove.co.uk/properties/90496914)
 
@@ -442,7 +427,7 @@
 - **Price**: £2150 PCM
 - **Size**: 55.74 sqm
 - **Listing Update**: 2026-07-13
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90807477](https://www.rightmove.co.uk/properties/90807477)
 
@@ -502,7 +487,7 @@
 - **Price**: £2000 PCM
 - **Size**: 55 sqm
 - **Listing Update**: 2026-07-13
-- **Listing Status**: Reduced today
+- **Listing Status**: Reduced yesterday
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90755244](https://www.rightmove.co.uk/properties/90755244)
 
@@ -587,12 +572,13 @@
 - **Platform**: Rightmove
 - **Marketed by**: Chestertons, Canary Wharf and Docklands
 - **Location**: Canary Wharf
-- **Property Name**: Pan Peninsula East,
+- **Property Name**: Pan Peninsula East, 
+Millwall, E14
 - **ID**: 90827625
 - **Price**: £2500 PCM
 - **Size**: 49 sqm
 - **Listing Update**: 2026-07-13
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: 17/09/2026 (🦅 Early Bird: 66d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/90827625](https://www.rightmove.co.uk/properties/90827625)
 
@@ -607,7 +593,7 @@
 - **Price**: £2000 PCM
 - **Size**: 46.45 sqm
 - **Listing Update**: 2026-07-13
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90832248](https://www.rightmove.co.uk/properties/90832248)
 
@@ -622,7 +608,7 @@
 - **Price**: £2100 PCM
 - **Size**: 46 sqm
 - **Listing Update**: 2026-07-13
-- **Listing Status**: Reduced today
+- **Listing Status**: Reduced yesterday
 - **Let Available**: 15/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90044970](https://www.rightmove.co.uk/properties/90044970)
 
@@ -670,6 +656,21 @@
 - **Listing Status**: Added on 21/06/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/89959323](https://www.rightmove.co.uk/properties/89959323)
+
+---
+
+### [2026-07-14T08:48:56.841Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: OpenRent, London
+- **Location**: Canary Wharf
+- **Property Name**: Denison House, London, E14
+- **ID**: 89150535
+- **Price**: £2050 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-13
+- **Listing Status**: Reduced yesterday
+- **Let Available**: 26/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/89150535](https://www.rightmove.co.uk/properties/89150535)
 
 ---
 
@@ -757,7 +758,7 @@
 - **Price**: £2195 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-12
-- **Listing Status**: Reduced yesterday
+- **Listing Status**: Reduced on 12/07/2026
 - **Let Available**: 15/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90397644](https://www.rightmove.co.uk/properties/90397644)
 
@@ -772,7 +773,7 @@
 - **Price**: £2200 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-13
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: 29/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90808650](https://www.rightmove.co.uk/properties/90808650)
 
@@ -862,7 +863,7 @@
 - **Price**: £2400 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-13
-- **Listing Status**: Reduced today
+- **Listing Status**: Reduced yesterday
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/89831655](https://www.rightmove.co.uk/properties/89831655)
 
@@ -877,7 +878,7 @@
 - **Price**: £2450 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-13
-- **Listing Status**: Reduced today
+- **Listing Status**: Reduced yesterday
 - **Let Available**: 31/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/88695102](https://www.rightmove.co.uk/properties/88695102)
 
@@ -913,6 +914,36 @@
 
 ---
 
+### [2026-07-14T08:48:56.841Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Winsor Real Estate, London
+- **Location**: Canary Wharf
+- **Property Name**: Park Drive, Tower Hamlets, London
+- **ID**: 90840777
+- **Price**: £2600 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-14
+- **Listing Status**: Added today
+- **Let Available**: 15/07/2026
+- **Link**: [https://www.rightmove.co.uk/properties/90840777](https://www.rightmove.co.uk/properties/90840777)
+
+---
+
+### [2026-07-14T08:48:56.841Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Celestial Globe, London - Lettings
+- **Location**: South Quay
+- **Property Name**: Marsh Wall, London
+- **ID**: 90794052
+- **Price**: £2600 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-06-02
+- **Listing Status**: Reduced on 02/06/2026
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/90794052](https://www.rightmove.co.uk/properties/90794052)
+
+---
+
 ### [2026-07-13T16:22:49.586Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Hamptons, Canary Wharf
@@ -922,9 +953,24 @@
 - **Price**: £2600 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-13
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: 20/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90814404](https://www.rightmove.co.uk/properties/90814404)
+
+---
+
+### [2026-07-14T08:48:56.842Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Regent Letting and Property Management, London
+- **Location**: Custom House
+- **Property Name**: Galleria House, Canning Town, E16
+- **ID**: 89882241
+- **Price**: £2700 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-06-18
+- **Listing Status**: Added on 18/06/2026
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/89882241](https://www.rightmove.co.uk/properties/89882241)
 
 ---
 
@@ -937,7 +983,7 @@
 - **Price**: £2700 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-13
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90820395](https://www.rightmove.co.uk/properties/90820395)
 
