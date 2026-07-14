@@ -1024,7 +1024,17 @@ async function main() {
     background: var(--bg);
     color: var(--text);
     line-height: 1.5;
-    margin: 0;
+  }
+  .header-container,
+  .quick-actions-bar,
+  .move-in-assistant,
+  .assistant-controls,
+  .control-group,
+  .quick-filters,
+  .quick-sorts,
+  .action-group {
+    min-width: 0;
+    max-width: 100%;
   }
   .header-container {
     display: flex;
@@ -1922,9 +1932,27 @@ async function main() {
   }
 
   /* --- Responsive Mobile & Card View Styles --- */
-  @media (max-width: 850px) {
-    body {
+  @media (max-width: 850px), (max-device-width: 850px) {
+    html, body {
+      max-width: 100vw;
+      overflow-x: hidden;
       padding: 12px;
+      box-sizing: border-box;
+    }
+    *, *:before, *:after {
+      box-sizing: inherit;
+    }
+    .header-container,
+    .quick-actions-bar,
+    .move-in-assistant,
+    .assistant-controls,
+    .control-group,
+    .quick-filters,
+    .quick-sorts,
+    .action-group {
+      min-width: 0;
+      max-width: 100%;
+      width: 100%;
     }
     .header-container {
       flex-direction: column;
@@ -1937,6 +1965,7 @@ async function main() {
       flex-direction: column;
       align-items: flex-start;
       gap: 6px;
+      width: 100%;
     }
     .stats {
       flex-wrap: wrap;
@@ -1955,21 +1984,20 @@ async function main() {
       padding: 12px 16px;
       font-size: 1rem;
     }
-    .move-in-assistant {
-      flex-direction: column;
-      align-items: stretch;
-      padding: 14px;
-      gap: 14px;
+    #moveInAssistant, .move-in-assistant, .quick-sorts, #mobileFiltersDrawer, .mobile-filter-drawer, #mobileFilterToggleBtn {
+      display: none !important;
     }
     .assistant-controls {
       flex-direction: column;
       align-items: stretch;
       gap: 12px;
+      width: 100%;
     }
     .control-group {
       flex-direction: column;
       align-items: stretch;
       gap: 4px;
+      width: 100%;
     }
     .control-group input[type="date"], .control-group select {
       width: 100%;
@@ -1979,6 +2007,7 @@ async function main() {
     .checkbox-group {
       justify-content: center;
       padding: 10px;
+      width: 100%;
     }
     .quick-actions-bar {
       flex-direction: column;
@@ -1986,21 +2015,22 @@ async function main() {
       padding: 12px;
       gap: 12px;
     }
-    .quick-filters, .quick-sorts {
+    .quick-filters {
       display: flex;
-      flex-wrap: nowrap;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-      padding-bottom: 8px;
+      flex-wrap: wrap;
+      overflow-x: visible;
+      padding-bottom: 0;
       gap: 8px;
-      scrollbar-width: thin;
+      width: 100%;
     }
-    .quick-filters::-webkit-scrollbar, .quick-sorts::-webkit-scrollbar {
-      height: 4px;
+    .quick-filters .filter-chip {
+      display: none !important;
     }
-    .quick-filters::-webkit-scrollbar-thumb, .quick-sorts::-webkit-scrollbar-thumb {
-      background: var(--border);
-      border-radius: 4px;
+    .quick-filters #chipAll,
+    .quick-filters #chipStarred,
+    .quick-filters #chipViewed,
+    .quick-filters #chipUnviewed {
+      display: inline-flex !important;
     }
     .filter-chip {
       flex-shrink: 0;
@@ -2010,357 +2040,304 @@ async function main() {
       display: inline-flex;
       align-items: center;
     }
-    .mobile-only-toggle {
-      display: flex;
+    .mobile-sort-date-bar {
+      display: flex !important;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 8px;
       width: 100%;
-    }
-    .chip-mobile-filter {
-      width: 100%;
-      justify-content: center;
-      background: rgba(59, 130, 246, 0.15);
-      border-color: rgba(59, 130, 246, 0.4);
-      color: #60a5fa;
-      font-weight: 700;
-    }
-    .chip-mobile-filter:hover {
-      background: rgba(59, 130, 246, 0.25);
+      align-items: center;
     }
     .action-divider {
       display: none;
     }
   }
 
-  /* --- CARD VIEW CORE RULES --- */
-  #matchesTable.force-card-view thead,
-  @media (max-width: 850px) {
-    #matchesTable:not(.force-table-view) thead {
-      display: none;
-    }
+  /* --- CARD VIEW CORE RULES (.force-card-view) --- */
+  #matchesTable.force-card-view thead {
+    display: none;
   }
-
   #matchesTable.force-card-view,
   #matchesTable.force-card-view tbody,
   #matchesTable.force-card-view tr,
-  #matchesTable.force-card-view td,
-  @media (max-width: 850px) {
-    #matchesTable:not(.force-table-view),
-    #matchesTable:not(.force-table-view) tbody,
-    #matchesTable:not(.force-table-view) tr,
-    #matchesTable:not(.force-table-view) td {
-      display: block;
-      width: 100%;
-      box-sizing: border-box;
-    }
+  #matchesTable.force-card-view td {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .table-wrapper:has(#matchesTable.force-card-view) {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    overflow: visible !important;
+    max-height: none !important;
+  }
+  #matchesTable.force-card-view {
+    margin-top: 8px;
+  }
+  #matchesTable.force-card-view tr {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    margin-bottom: 12px;
+    padding: 12px 14px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 6px;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  }
+  #matchesTable.force-card-view tr:hover {
+    border-color: rgba(59, 130, 246, 0.45);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  }
+  #matchesTable.force-card-view td {
+    padding: 4px;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+    font-size: 0.88rem;
+    box-sizing: border-box;
+  }
+  #matchesTable.force-card-view td::before {
+    content: attr(data-label);
+    font-weight: 700;
+    font-size: 0.74rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: block;
+    width: 100%;
+    margin-bottom: 2px;
+    text-align: left;
+  }
+  #matchesTable.force-card-view td.col-property {
+    order: 1;
+    display: block;
+    width: calc(100% - 40px);
+    text-align: left;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #60a5fa;
+    border: none;
+    padding: 0 0 4px 0;
+    line-height: 1.3;
+    margin: 0;
+  }
+  #matchesTable.force-card-view td.col-property::before {
+    display: none;
+  }
+  #matchesTable.force-card-view td.col-star {
+    order: 2;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 36px;
+    border: none;
+    padding: 0;
+  }
+  #matchesTable.force-card-view td.col-star::before {
+    display: none;
+  }
+  #matchesTable.force-card-view .star-btn {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.06);
+  }
+  #matchesTable.force-card-view td.col-location {
+    order: 3;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 6px;
+    margin-bottom: 4px;
+    font-size: 0.9rem;
+    color: #e2e8f0;
+    gap: 4px;
+  }
+  #matchesTable.force-card-view td.col-location::before {
+    content: '📍 ';
+    width: auto;
+    margin-bottom: 0;
+    font-size: 1rem;
+    margin-right: 2px;
+  }
+  #matchesTable.force-card-view td.col-price {
+    order: 4;
+    width: 48%;
+    background: rgba(16, 185, 129, 0.15);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    border-radius: 8px;
+    padding: 8px 10px;
+    margin: 2px 0;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #34d399;
+    justify-content: flex-start;
+  }
+  #matchesTable.force-card-view td.col-price::before {
+    color: #34d399;
+    font-size: 0.75rem;
+  }
+  #matchesTable.force-card-view td[data-label="Let Available"] {
+    order: 5;
+    width: 48%;
+    background: rgba(59, 130, 246, 0.12);
+    border: 1px solid rgba(59, 130, 246, 0.25);
+    border-radius: 8px;
+    padding: 8px 10px;
+    margin: 2px 0;
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: #60a5fa;
+    justify-content: flex-start;
+  }
+  #matchesTable.force-card-view td.col-size {
+    order: 6;
+    width: 48%;
+    font-size: 0.88rem;
+    font-weight: 600;
+    padding: 6px;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 6px;
+    color: #cbd5e1;
+  }
+  #matchesTable.force-card-view td.col-ppsqm {
+    order: 7;
+    width: 48%;
+    font-size: 0.88rem;
+    font-weight: 600;
+    padding: 6px;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 6px;
+    color: #cbd5e1;
+  }
+  #matchesTable.force-card-view td[data-label="Source"] {
+    order: 8;
+    width: 48%;
+    flex-direction: row;
+    align-items: center;
+    font-size: 0.78rem;
+    color: #94a3b8;
+    padding: 2px 4px;
+  }
+  #matchesTable.force-card-view td[data-label="Source"]::before {
+    display: none;
+  }
+  #matchesTable.force-card-view td[data-label="Marketed By"] {
+    order: 9;
+    width: 48%;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 0.78rem;
+    color: #94a3b8;
+    padding: 2px 4px;
+    margin: 0;
+  }
+  #matchesTable.force-card-view td[data-label="Marketed By"]::before {
+    display: none;
+  }
+  #matchesTable.force-card-view td[data-label="Date"] {
+    order: 10;
+    width: 48%;
+    font-size: 0.76rem;
+    color: #94a3b8;
+    padding: 2px 4px;
+  }
+  #matchesTable.force-card-view td[data-label="Listed / Updated"] {
+    order: 11;
+    width: 48%;
+    font-size: 0.76rem;
+    color: #94a3b8;
+    padding: 2px 4px;
+  }
+  #matchesTable.force-card-view td[data-label="Status"] {
+    order: 12;
+    width: 100%;
+    font-size: 0.76rem;
+    color: #94a3b8;
+    padding: 4px;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.08);
+    margin-bottom: 4px;
+  }
+  #matchesTable.force-card-view td.col-note {
+    order: 13;
+    width: calc(100% - 110px);
+    flex-direction: row;
+    align-items: center;
+    border: none;
+    padding: 2px 0;
+    margin: 0;
+  }
+  #matchesTable.force-card-view td.col-note::before {
+    content: '📝 Note: ';
+    width: auto;
+    margin-bottom: 0;
+    margin-right: 6px;
+  }
+  #matchesTable.force-card-view .note-btn {
+    padding: 6px 12px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 0.85rem;
+    color: var(--text);
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+  #matchesTable.force-card-view td.col-view {
+    order: 14;
+    width: 104px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    border: none;
+    padding: 2px 0;
+    margin: 0;
+  }
+  #matchesTable.force-card-view td.col-view::before {
+    display: none;
+  }
+  #matchesTable.force-card-view .view-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 0.88rem;
+    font-weight: 700;
+    border-radius: 8px;
+    box-sizing: border-box;
+    background: linear-gradient(135deg, var(--primary), var(--primary-hover));
+    box-shadow: 0 2px 10px rgba(59, 130, 246, 0.35);
+    min-height: 34px;
+  }
+  #matchesTable.force-card-view td br {
+    display: none;
+  }
+  #matchesTable.force-card-view td .badge {
+    margin-top: 4px;
+    display: inline-block;
   }
 
-  #matchesTable.force-card-view,
-  @media (max-width: 850px) {
-    #matchesTable:not(.force-table-view) {
-      margin-top: 8px;
-    }
-    .table-wrapper:has(#matchesTable.force-card-view),
-    .table-wrapper:has(#matchesTable:not(.force-table-view)) {
-      background: transparent !important;
-      border: none !important;
-      box-shadow: none !important;
-      overflow: visible !important;
-      max-height: none !important;
-    }
-  }
-
-  #matchesTable.force-card-view tr,
-  @media (max-width: 850px) {
-    #matchesTable:not(.force-table-view) tr {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      margin-bottom: 18px;
-      padding: 18px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
-    }
-    #matchesTable:not(.force-table-view) tr:hover,
-    #matchesTable.force-card-view tr:hover {
-      border-color: rgba(59, 130, 246, 0.45);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
-    }
-  }
-
-  #matchesTable.force-card-view td,
-  @media (max-width: 850px) {
-    #matchesTable:not(.force-table-view) td {
-      padding: 8px 4px;
-      border-bottom: 1px dashed rgba(255, 255, 255, 0.05);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      text-align: right;
-      font-size: 0.9rem;
-    }
-    #matchesTable:not(.force-table-view) td:last-child,
-    #matchesTable.force-card-view td:last-child {
-      border-bottom: none;
-    }
-  }
-
-  #matchesTable.force-card-view td::before,
-  @media (max-width: 850px) {
-    #matchesTable:not(.force-table-view) td::before {
-      content: attr(data-label);
-      font-weight: 700;
-      font-size: 0.78rem;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      margin-right: 12px;
-      text-align: left;
-      flex-shrink: 0;
-    }
-  }
-
-  #matchesTable.force-card-view td.col-star,
-  @media (max-width: 850px) {
-    #matchesTable:not(.force-table-view) td.col-star {
-      position: absolute;
-      top: 16px;
-      right: 16px;
-      width: auto;
-      border: none;
-      padding: 0;
-      order: 1;
-    }
-    #matchesTable:not(.force-table-view) td.col-star::before,
-    #matchesTable.force-card-view td.col-star::before {
-      display: none;
-    }
-    #matchesTable:not(.force-table-view) .star-btn,
-    #matchesTable.force-card-view .star-btn {
-      width: 44px;
-      height: 44px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.5rem;
-      border-radius: 12px;
-      background: rgba(255, 255, 255, 0.06);
-    }
-  }
-
-  #matchesTable.force-card-view td[data-label="Source"],
-  @media (max-width: 850px) {
-    #matchesTable:not(.force-table-view) td[data-label="Source"] {
-      order: 2;
-      justify-content: flex-start;
-      border-bottom: none;
-      padding: 0 0 4px 0;
-    }
-    #matchesTable:not(.force-table-view) td[data-label="Source"]::before,
-    #matchesTable.force-card-view td[data-label="Source"]::before {
-      display: none;
-    }
-  }
-
-  #matchesTable.force-card-view td[data-label="Marketed By"],
-  @media (max-width: 850px) {
-    #matchesTable:not(.force-table-view) td[data-label="Marketed By"] {
-      order: 3;
-      justify-content: flex-start;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      padding: 0 0 10px 0;
-      margin-bottom: 4px;
-      color: #94a3b8;
-      font-size: 0.85rem;
-    }
-    #matchesTable:not(.force-table-view) td[data-label="Marketed By"]::before,
-    #matchesTable.force-card-view td[data-label="Marketed By"]::before {
-      display: none;
-    }
-  }
-
-  #matchesTable.force-card-view td.col-property,
-  @media (max-width: 850px) {
-    #matchesTable:not(.force-table-view) td.col-property {
-      order: 4;
-      display: block;
-      text-align: left;
-      font-size: 1.22rem;
-      font-weight: 700;
-      color: #60a5fa;
-      border-bottom: none;
-      padding: 6px 0 2px 0;
-      line-height: 1.35;
-    }
-    #matchesTable:not(.force-table-view) td.col-property::before,
-    #matchesTable.force-card-view td.col-property::before {
-      display: none;
-    }
-  }
-
-  #matchesTable.force-card-view td.col-location,
-  @media (max-width: 850px) {
-    #matchesTable:not(.force-table-view) td.col-location {
-      order: 5;
-      justify-content: flex-start;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      padding: 0 0 12px 0;
-      margin-bottom: 6px;
-      font-size: 0.95rem;
-      color: #e2e8f0;
-      gap: 6px;
-      flex-wrap: wrap;
-    }
-    #matchesTable:not(.force-table-view) td.col-location::before,
-    #matchesTable.force-card-view td.col-location::before {
-      content: '📍 ';
-      font-size: 1.05rem;
-      margin-right: 2px;
-    }
-  }
-
-  #matchesTable.force-card-view td.col-price,
-  @media (max-width: 850px) {
-    #matchesTable:not(.force-table-view) td.col-price {
-      order: 6;
-      background: rgba(16, 185, 129, 0.1);
-      border: 1px solid rgba(16, 185, 129, 0.3);
-      border-radius: 10px;
-      padding: 12px 14px;
-      margin: 4px 0;
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: #34d399;
-    }
-    #matchesTable:not(.force-table-view) td.col-price::before,
-    #matchesTable.force-card-view td.col-price::before {
-      color: #34d399;
-      font-size: 0.85rem;
-    }
-  }
-
-  #matchesTable.force-card-view td.col-size,
-  @media (max-width: 850px) {
-    #matchesTable:not(.force-table-view) td.col-size {
-      order: 7;
-      font-size: 1rem;
-      font-weight: 600;
-      padding: 10px 6px;
-    }
-  }
-
-  #matchesTable.force-card-view td.col-ppsqm,
-  @media (max-width: 850px) {
-    #matchesTable:not(.force-table-view) td.col-ppsqm {
-      order: 8;
-      font-size: 0.95rem;
-      padding: 10px 6px;
-    }
-  }
-
-  #matchesTable.force-card-view td[data-label="Let Available"],
-  @media (max-width: 850px) {
-    #matchesTable:not(.force-table-view) td[data-label="Let Available"] {
-      order: 9;
-      padding: 10px 6px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      margin-bottom: 4px;
-    }
-  }
-
-  #matchesTable.force-card-view td[data-label="Date"],
-  @media (max-width: 850px) {
-    #matchesTable:not(.force-table-view) td[data-label="Date"] {
-      order: 10;
-      font-size: 0.8rem;
-      color: #94a3b8;
-      padding: 6px 4px;
-    }
-  }
-
-  #matchesTable.force-card-view td[data-label="Listed / Updated"],
-  @media (max-width: 850px) {
-    #matchesTable:not(.force-table-view) td[data-label="Listed / Updated"] {
-      order: 11;
-      font-size: 0.8rem;
-      color: #94a3b8;
-      padding: 6px 4px;
-    }
-  }
-
-  #matchesTable.force-card-view td[data-label="Status"],
-  @media (max-width: 850px) {
-    #matchesTable:not(.force-table-view) td[data-label="Status"] {
-      order: 12;
-      font-size: 0.8rem;
-      color: #94a3b8;
-      padding: 6px 4px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      margin-bottom: 8px;
-    }
-  }
-
-  #matchesTable.force-card-view td.col-note,
-  @media (max-width: 850px) {
-    #matchesTable:not(.force-table-view) td.col-note {
-      order: 13;
-      justify-content: flex-start;
-      border-bottom: none;
-      padding: 6px 0 0 0;
-    }
-    #matchesTable:not(.force-table-view) td.col-note::before,
-    #matchesTable.force-card-view td.col-note::before {
-      content: '📝 Note: ';
-      margin-right: 8px;
-    }
-    #matchesTable:not(.force-table-view) .note-btn,
-    #matchesTable.force-card-view .note-btn {
-      padding: 8px 14px;
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      font-size: 0.9rem;
-      color: var(--text);
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
-  }
-
-  #matchesTable.force-card-view td.col-view,
-  @media (max-width: 850px) {
-    #matchesTable:not(.force-table-view) td.col-view {
-      order: 14;
-      display: block;
-      border-bottom: none;
-      padding: 10px 0 0 0;
-      width: 100%;
-    }
-    #matchesTable:not(.force-table-view) td.col-view::before,
-    #matchesTable.force-card-view td.col-view::before {
-      display: none;
-    }
-    #matchesTable:not(.force-table-view) .view-btn,
-    #matchesTable.force-card-view .view-btn {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      padding: 14px;
-      font-size: 1.05rem;
-      font-weight: 700;
-      border-radius: 12px;
-      box-sizing: border-box;
-      background: linear-gradient(135deg, var(--primary), var(--primary-hover));
-      box-shadow: 0 4px 18px rgba(59, 130, 246, 0.35);
-      min-height: 46px;
-    }
-  }
-
-  /* --- Force Table View Overrides for Mobile --- */
-  @media (max-width: 850px) {
+  /* --- Force Table View Overrides for Mobile (.force-table-view) --- */
+  @media (max-width: 850px), (max-device-width: 850px) {
     #matchesTable.force-table-view {
       display: table !important;
       width: 100% !important;
@@ -2566,9 +2543,34 @@ function filterTable() {
   const starredIds = getStarredIds();
   const seenIds = getSeenIds();
 
+  var letAfterInput = document.getElementById("letAfterDateInput");
+  var clearLetBtn = document.getElementById("clearLetAfterBtn");
+  var letAfterVal = letAfterInput ? letAfterInput.value : "";
+  if (clearLetBtn) {
+    clearLetBtn.style.display = letAfterVal ? "inline-flex" : "none";
+  }
+  var letAfterTs = letAfterVal ? new Date(letAfterVal).getTime() : 0;
+
   for (var i = 0; i < tr.length; i++) {
     var display = "";
     var id = tr[i].getAttribute("data-id");
+
+    if (letAfterTs > 0) {
+      var availTd = tr[i].getElementsByTagName("td")[3];
+      if (availTd) {
+        var availTs = parseFloat(availTd.getAttribute("data-value")) || 0;
+        var availText = availTd.textContent.toLowerCase();
+        var isNow = (availText.indexOf("now") !== -1 || availText.indexOf("immediate") !== -1 || availText.indexOf("today") !== -1);
+        var effectiveTs = isNow ? Date.now() : availTs;
+        if (effectiveTs === 0 || effectiveTs < letAfterTs) {
+          tr[i].style.display = "none";
+          continue;
+        }
+      } else {
+        tr[i].style.display = "none";
+        continue;
+      }
+    }
     
     if (activeQuickFilter === "Starred" && !starredIds.includes(id)) {
       tr[i].style.display = "none";
@@ -2924,6 +2926,12 @@ function clearMoveInAssistant() {
   filterTable();
 }
 
+function clearLetAfterDate() {
+  var letAfterInput = document.getElementById("letAfterDateInput");
+  if (letAfterInput) letAfterInput.value = "";
+  filterTable();
+}
+
 function sortByTargetDate() {
   var targetInput = document.getElementById("targetDateInput");
   var targetDateVal = targetInput ? targetInput.value : "";
@@ -2938,8 +2946,7 @@ function sortByTargetDate() {
   currentSorts = [{col: 'target', targetTs: targetTs}];
   applySort();
   updateSortIndicators();
-  var sortBtns = document.querySelectorAll(".quick-sorts .filter-chip");
-  for (var i = 0; i < sortBtns.length; i++) sortBtns[i].classList.remove("active");
+  syncSortUI("target");
   var btn = document.getElementById("sortTargetDate");
   if (btn) btn.classList.add("active");
 }
@@ -3070,15 +3077,62 @@ function updateSortIndicators() {
   }
 }
 
+function syncSortUI(val) {
+  var select = document.getElementById("mobileSortSelect");
+  if (select && select.value !== val) select.value = val || "";
+  var sortBtns = document.querySelectorAll(".quick-sorts .filter-chip, .drawer-chips .filter-chip");
+  for (var i = 0; i < sortBtns.length; i++) sortBtns[i].classList.remove("active");
+}
+
+function setSingleSort(colIndex, direction, btnElement) {
+  if (colIndex === 0) {
+    currentSorts = [{col: 0, dir: direction}, {col: 8, dir: 'asc'}];
+    syncSortUI("date_desc");
+  } else if (colIndex === 3) {
+    currentSorts = [{col: 3, dir: direction}, {col: 8, dir: 'asc'}];
+    syncSortUI(direction === 'asc' ? 'let_asc' : 'let_desc');
+  } else if (colIndex === 8) {
+    currentSorts = [{col: 8, dir: direction}, {col: 9, dir: 'desc'}];
+    syncSortUI("price_asc");
+  } else if (colIndex === 9) {
+    currentSorts = [{col: 9, dir: direction}, {col: 8, dir: 'asc'}];
+    syncSortUI("size_desc");
+  } else if (colIndex === 10) {
+    currentSorts = [{col: 10, dir: direction}, {col: 8, dir: 'asc'}];
+    syncSortUI("ppsqm_asc");
+  } else {
+    currentSorts = [{col: colIndex, dir: direction}];
+    syncSortUI("");
+  }
+  applySort();
+  updateSortIndicators();
+  
+  if (btnElement) {
+    btnElement.classList.add("active");
+  } else if (typeof window !== 'undefined' && window.event && window.event.currentTarget && window.event.currentTarget.classList && window.event.currentTarget.classList.contains("filter-chip")) {
+    window.event.currentTarget.classList.add("active");
+  }
+}
+
+function handleSortSelect(val) {
+  if (val === 'date_desc') setSingleSort(0, 'desc');
+  else if (val === 'let_asc') setSingleSort(3, 'asc');
+  else if (val === 'let_desc') setSingleSort(3, 'desc');
+  else if (val === 'price_asc') setSingleSort(8, 'asc');
+  else if (val === 'size_desc') setSingleSort(9, 'desc');
+  else if (val === 'ppsqm_asc') setSingleSort(10, 'asc');
+  else if (val === 'target') sortByTargetDate();
+  else clearSort();
+}
+
 function setMultiSort(criteria) {
   currentSorts = criteria;
   applySort();
   updateSortIndicators();
   
-  var sortBtns = document.querySelectorAll(".quick-sorts .filter-chip");
-  for (var i = 0; i < sortBtns.length; i++) sortBtns[i].classList.remove("active");
-  
-  if (criteria.length === 2 && criteria[0].col === 0 && criteria[1].col === 8) {
+  syncSortUI("");
+  if (criteria.length === 2 && criteria[0].col === 0 && criteria[1].col === 8 && criteria[0].dir === 'desc') {
+    syncSortUI("date_desc");
     var btn = document.getElementById("sortDatePrice");
     if (btn) btn.classList.add("active");
   }
@@ -3088,6 +3142,8 @@ function clearSort() {
   activeQuickFilter = "";
   var globalSearch = document.getElementById("globalSearch");
   if (globalSearch) globalSearch.value = "";
+  var letAfterInput = document.getElementById("letAfterDateInput");
+  if (letAfterInput) letAfterInput.value = "";
   var compatSelect = document.getElementById("compatLabelSelect");
   if (compatSelect) compatSelect.value = "";
   var inputs = document.querySelectorAll("thead .filter-input, .drawer-input");
@@ -3099,6 +3155,7 @@ function clearSort() {
   filterTable();
 
   setMultiSort([]);
+  syncSortUI("");
   var clearBtn = document.getElementById("clearSortBtn");
   if (clearBtn) {
     clearBtn.classList.add("active");
@@ -3230,7 +3287,12 @@ document.addEventListener("DOMContentLoaded", function() {
   initViewMode();
 });
 
+window.addEventListener("resize", function() {
+  initViewMode();
+});
+
 function setViewMode(mode) {
+  const isMobile = window.innerWidth <= 850 || (window.screen && window.screen.width <= 850) || (window.matchMedia && window.matchMedia('(max-width: 850px), (max-device-width: 850px)').matches);
   const table = document.getElementById('matchesTable');
   const btnCards = document.getElementById('viewCardsBtn');
   const btnTable = document.getElementById('viewTableBtn');
@@ -3241,30 +3303,35 @@ function setViewMode(mode) {
     table.classList.remove('force-table-view');
     if (btnCards) btnCards.classList.add('active');
     if (btnTable) btnTable.classList.remove('active');
-    localStorage.setItem('house_finder_view_mode', 'cards');
   } else {
     table.classList.add('force-table-view');
     table.classList.remove('force-card-view');
     if (btnTable) btnTable.classList.add('active');
     if (btnCards) btnCards.classList.remove('active');
-    localStorage.setItem('house_finder_view_mode', 'table');
+  }
+
+  if (isMobile) {
+    localStorage.setItem('house_finder_mobile_view_mode', mode);
+  } else {
+    localStorage.setItem('house_finder_desktop_view_mode', mode);
   }
 }
 
 function initViewMode() {
-  const savedMode = localStorage.getItem('house_finder_view_mode');
-  const isMobile = window.innerWidth <= 850;
+  const isMobile = window.innerWidth <= 850 || (window.screen && window.screen.width <= 850) || (window.matchMedia && window.matchMedia('(max-width: 850px), (max-device-width: 850px)').matches);
   const btnCards = document.getElementById('viewCardsBtn');
   const btnTable = document.getElementById('viewTableBtn');
   const table = document.getElementById('matchesTable');
   if (!table) return;
+
+  const savedMode = isMobile ? localStorage.getItem('house_finder_mobile_view_mode') : localStorage.getItem('house_finder_desktop_view_mode');
 
   if (savedMode === 'cards' || (!savedMode && isMobile)) {
     table.classList.add('force-card-view');
     table.classList.remove('force-table-view');
     if (btnCards) btnCards.classList.add('active');
     if (btnTable) btnTable.classList.remove('active');
-  } else if (savedMode === 'table' || (!savedMode && !isMobile)) {
+  } else {
     table.classList.add('force-table-view');
     table.classList.remove('force-card-view');
     if (btnTable) btnTable.classList.add('active');
@@ -3365,24 +3432,41 @@ function syncFromDrawer(inputElem) {
     <div class="action-divider"></div>
     <div class="quick-sorts action-group">
       <span class="filter-label">Quick Sort:</span>
+      <button id="sortLatestDate" class="filter-chip" onclick="setSingleSort(0, 'desc', this)">📅 Latest Date</button>
+      <button id="sortLetSoonest" class="filter-chip" onclick="setSingleSort(3, 'asc', this)">🗝️ Let Available (Soonest)</button>
+      <button id="sortLetLatest" class="filter-chip" onclick="setSingleSort(3, 'desc', this)">🗝️ Let Available (Latest)</button>
+      <button id="sortPriceLow" class="filter-chip" onclick="setSingleSort(8, 'asc', this)">💰 Price (Lowest)</button>
+      <button id="sortSizeLarge" class="filter-chip" onclick="setSingleSort(9, 'desc', this)">📐 Size (Largest)</button>
+      <button id="sortPpsqmLow" class="filter-chip" onclick="setSingleSort(10, 'asc', this)">⚡ £/sqm (Lowest)</button>
       <button id="sortDatePrice" class="filter-chip" onclick="setMultiSort([{col: 0, dir: 'desc'}, {col: 8, dir: 'asc'}])">📅 Date → Price</button>
       <button id="sortTargetDate" class="filter-chip chip-target" onclick="sortByTargetDate()">🎯 Match Proximity</button>
-      <button id="clearSortBtn" class="filter-chip chip-clear" onclick="clearSort()">✕ Clear All</button>
+      <button id="clearSortBtn" class="filter-chip chip-clear" onclick="clearSort()">✕ Clear Sort</button>
       <div class="tooltip-container">
         <span class="tooltip-badge">ℹ️ Multi-Sort</span>
         <div class="tooltip-popup">
           <strong>⚡ Multi-Column Sorting Guide:</strong><br>
           • <strong>Hold SHIFT + Click</strong> any column header to add it as a secondary (2), tertiary (3), etc. sort column.<br>
           • <strong>Normal Click</strong> sets a smart 2-column default (e.g. Date then Price).<br>
-          • Click <strong>✕ Clear All</strong> to clear all filters and remove sorting.
+          • Click <strong>✕ Clear Sort</strong> to clear all filters and remove sorting.
         </div>
       </div>
     </div>
-    <div class="action-divider mobile-only-toggle"></div>
-    <div class="mobile-only-toggle action-group" style="width: 100%;">
-      <button id="mobileFilterToggleBtn" class="filter-chip chip-mobile-filter" onclick="toggleMobileDrawer()">
-        <span>🎛️ Column Filters & Sort Options ▼</span>
-      </button>
+    <div class="action-divider mobile-sort-date-bar" style="display: none;"></div>
+    <div class="mobile-sort-date-bar action-group" style="display: none; width: 100%; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 4px;">
+      <div class="sort-control-item" style="flex: 1; min-width: 150px; display: flex; align-items: center; gap: 6px;">
+        <span class="filter-label" style="white-space: nowrap; font-size: 0.85rem;">Sort:</span>
+        <select id="mobileSortSelect" class="sort-select-dropdown" onchange="handleSortSelect(this.value)" style="flex: 1; padding: 8px 10px; border-radius: 8px; background: var(--card-bg); color: var(--text); border: 1px solid var(--border); font-weight: 600; font-size: 0.88rem;">
+          <option value="">Sort: Default</option>
+          <option value="date_desc">📅 Latest Date</option>
+          <option value="let_asc">🗝️ Let Available (Soonest)</option>
+          <option value="let_desc">🗝️ Let Available (Latest)</option>
+        </select>
+      </div>
+      <div class="date-control-item" style="flex: 1; min-width: 170px; display: flex; align-items: center; gap: 6px;">
+        <span class="filter-label" style="white-space: nowrap; font-size: 0.85rem;">Let Avail ≥:</span>
+        <input type="date" id="letAfterDateInput" class="filter-input-date" onchange="filterTable()" style="flex: 1; padding: 7px 10px; border-radius: 8px; background: var(--card-bg); color: var(--text); border: 1px solid var(--border); font-weight: 600; font-size: 0.88rem;" title="Show properties with Let Available date on or after this date">
+        <button id="clearLetAfterBtn" class="filter-chip" onclick="clearLetAfterDate()" style="padding: 7px 10px; min-height: 36px; display: none;" title="Clear date filter">✕</button>
+      </div>
     </div>
   </div>
   <div class="search-container">
@@ -3393,11 +3477,15 @@ function syncFromDrawer(inputElem) {
 
 <div id="mobileFiltersDrawer" class="mobile-filter-drawer" style="display: none;">
   <div class="drawer-section">
-    <div class="drawer-title">⚡ Multi-Column Sort Options</div>
+    <div class="drawer-title">⚡ Multi-Column & Quick Sort Options</div>
     <div class="drawer-chips">
+      <button class="filter-chip" onclick="setSingleSort(0, 'desc', this)">📅 Latest Date</button>
+      <button class="filter-chip" onclick="setSingleSort(3, 'asc', this)">🗝️ Let Available (Soonest)</button>
+      <button class="filter-chip" onclick="setSingleSort(3, 'desc', this)">🗝️ Let Available (Furthest)</button>
+      <button class="filter-chip" onclick="setSingleSort(8, 'asc', this)">💰 Price (Lowest)</button>
+      <button class="filter-chip" onclick="setSingleSort(9, 'desc', this)">📐 Size (Largest)</button>
+      <button class="filter-chip" onclick="setSingleSort(10, 'asc', this)">⚡ £/sqm (Lowest)</button>
       <button class="filter-chip" onclick="setMultiSort([{col: 0, dir: 'desc'}, {col: 8, dir: 'asc'}])">📅 Date → Price</button>
-      <button class="filter-chip" onclick="setMultiSort([{col: 8, dir: 'asc'}, {col: 9, dir: 'desc'}])">💷 Price → Size</button>
-      <button class="filter-chip" onclick="setMultiSort([{col: 10, dir: 'asc'}])">💎 Best £/sqm</button>
       <button class="filter-chip chip-target" onclick="sortByTargetDate()">🎯 Match Proximity</button>
       <button class="filter-chip chip-clear" onclick="clearSort()">✕ Clear Sort</button>
     </div>
@@ -3458,6 +3546,7 @@ ${htmlRows}
   </tbody>
 </table>
 </div>
+<script>if (typeof initViewMode === 'function') initViewMode();</script>
 
 <div id="noteModal" class="modal-overlay" style="display: none;" onclick="if(event.target===this) closeNoteModal()">
   <div class="modal-card">
