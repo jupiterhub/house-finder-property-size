@@ -238,6 +238,21 @@
 
 ---
 
+### [2026-07-14T12:46:08.176Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: OpenRent, London
+- **Location**: South Quay
+- **Property Name**: Rugless House, London, E14
+- **ID**: 90851298
+- **Price**: £1900 PCM
+- **Size**: 60.5 sqm
+- **Listing Update**: 2026-07-14
+- **Listing Status**: Added today
+- **Let Available**: 10/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/90851298](https://www.rightmove.co.uk/properties/90851298)
+
+---
+
 ### [2026-07-13T16:22:49.586Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Complete Prime Residential Ltd, London
@@ -265,6 +280,21 @@
 - **Listing Status**: Added on 07/07/2026
 - **Let Available**: 05/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/89442750](https://www.rightmove.co.uk/properties/89442750)
+
+---
+
+### [2026-07-14T12:46:08.175Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Life Residential, Canary Wharf Office
+- **Location**: Canary Wharf
+- **Property Name**: Maine Tower, Canary Wharf, London
+- **ID**: 90473634
+- **Price**: £2100 PCM
+- **Size**: 59 sqm
+- **Listing Update**: 2026-07-14
+- **Listing Status**: Reduced today
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/90473634](https://www.rightmove.co.uk/properties/90473634)
 
 ---
 
@@ -523,6 +553,21 @@
 
 ---
 
+### [2026-07-14T12:46:08.175Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Franklyn James, Limehouse and Wapping
+- **Location**: Canary Wharf
+- **Property Name**: Ocean Wharf, 60 Westferry Road, E14
+- **ID**: 90856131
+- **Price**: £2000 PCM
+- **Size**: 52 sqm
+- **Listing Update**: 2026-07-14
+- **Listing Status**: Added today
+- **Let Available**: 30/07/2026
+- **Link**: [https://www.rightmove.co.uk/properties/90856131](https://www.rightmove.co.uk/properties/90856131)
+
+---
+
 ### [2026-07-13T16:22:49.587Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: CROWN LUXURY HOMES LIMITED, London
@@ -596,6 +641,21 @@ Millwall, E14
 - **Listing Status**: Added yesterday
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90832248](https://www.rightmove.co.uk/properties/90832248)
+
+---
+
+### [2026-07-14T12:46:08.175Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Douglas Pryce, Hither Green
+- **Location**: Canary Wharf
+- **Property Name**: Canary Central, London
+- **ID**: 90848949
+- **Price**: £1900 PCM
+- **Size**: 46 sqm
+- **Listing Update**: 2026-07-14
+- **Listing Status**: Added today
+- **Let Available**: 11/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/90848949](https://www.rightmove.co.uk/properties/90848949)
 
 ---
 
@@ -674,6 +734,21 @@ Millwall, E14
 
 ---
 
+### [2026-07-14T12:46:08.175Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Dexters, Canary Wharf
+- **Location**: Canary Wharf
+- **Property Name**: Limeharbour, Canary Wharf
+- **ID**: 90860154
+- **Price**: £2000 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-14
+- **Listing Status**: Added today
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/90860154](https://www.rightmove.co.uk/properties/90860154)
+
+---
+
 ### [2026-07-14T08:48:56.841Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: OpenRent, London
@@ -746,21 +821,6 @@ Millwall, E14
 - **Listing Status**: Added on 07/07/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90585087](https://www.rightmove.co.uk/properties/90585087)
-
----
-
-### [2026-07-13T16:22:49.586Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: OpenRent, London
-- **Location**: Custom House
-- **Property Name**: K Warehouse, London, E16
-- **ID**: 90483345
-- **Price**: £2150 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-06-26
-- **Listing Status**: Added on 26/06/2026
-- **Let Available**: 15/08/2026
-- **Link**: [https://www.rightmove.co.uk/properties/90483345](https://www.rightmove.co.uk/properties/90483345)
 
 ---
 
