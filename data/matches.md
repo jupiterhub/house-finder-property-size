@@ -148,21 +148,6 @@
 
 ---
 
-### [2026-07-13T16:22:49.585Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Keatons, Bow
-- **Location**: Canary Wharf
-- **Property Name**: Cascades Tower, 4 Westferry Road, Canary Wharf, London, E14
-- **ID**: 90707175
-- **Price**: £2650 PCM
-- **Size**: 73 sqm
-- **Listing Update**: 2026-07-09
-- **Listing Status**: Added on 09/07/2026
-- **Let Available**: 14/08/2026
-- **Link**: [https://www.rightmove.co.uk/properties/90707175](https://www.rightmove.co.uk/properties/90707175)
-
----
-
 ### [2026-07-15T16:50:33.032Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Allen Goldstein, Bloomsbury
@@ -242,7 +227,8 @@
 - **Platform**: Rightmove
 - **Marketed by**: Chestertons, Canary Wharf and Docklands
 - **Location**: South Quay
-- **Property Name**: Pepper Street,
+- **Property Name**: Pepper Street, 
+Millwall, E14
 - **ID**: 90872100
 - **Price**: £2150 PCM
 - **Size**: 63.17 sqm
@@ -707,7 +693,8 @@
 - **Platform**: Rightmove
 - **Marketed by**: Chestertons, Canary Wharf and Docklands
 - **Location**: Canary Wharf
-- **Property Name**: Pan Peninsula East,
+- **Property Name**: Pan Peninsula East, 
+Millwall, E14
 - **ID**: 90827625
 - **Price**: £2500 PCM
 - **Size**: 49 sqm
@@ -895,6 +882,21 @@
 - **Listing Status**: Reduced on 13/07/2026
 - **Let Available**: 26/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/89150535](https://www.rightmove.co.uk/properties/89150535)
+
+---
+
+### [2026-07-15T21:50:56.377Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: OpenRent, London
+- **Location**: Canary Wharf
+- **Property Name**: Jefferson Building, London, E14
+- **ID**: 90940836
+- **Price**: £2100 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-15
+- **Listing Status**: Added today
+- **Let Available**: 20/09/2026 (🦅 Early Bird: 67d adv)
+- **Link**: [https://www.rightmove.co.uk/properties/90940836](https://www.rightmove.co.uk/properties/90940836)
 
 ---
 
