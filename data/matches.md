@@ -73,6 +73,21 @@
 
 ---
 
+### [2026-07-15T16:50:33.033Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Complete Prime Residential Ltd, London
+- **Location**: Custom House
+- **Property Name**: Gateway Tower, Western Gateway, E16
+- **ID**: 90935958
+- **Price**: £2350 PCM
+- **Size**: 82 sqm
+- **Listing Update**: 2026-07-15
+- **Listing Status**: Added today
+- **Let Available**: 13/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/90935958](https://www.rightmove.co.uk/properties/90935958)
+
+---
+
 ### [2026-07-13T19:40:09.467Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: David Andrew, Highbury
@@ -148,6 +163,21 @@
 
 ---
 
+### [2026-07-15T16:50:33.032Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Allen Goldstein, Bloomsbury
+- **Location**: Canary Wharf
+- **Property Name**: Baltimore Wharf, London
+- **ID**: 149573198
+- **Price**: £2400 PCM
+- **Size**: 69.5 sqm
+- **Listing Update**: 2026-07-15
+- **Listing Status**: Reduced today
+- **Let Available**: 28/07/2026
+- **Link**: [https://www.rightmove.co.uk/properties/149573198](https://www.rightmove.co.uk/properties/149573198)
+
+---
+
 ### [2026-07-13T16:22:49.586Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: OpenRent, London
@@ -171,8 +201,8 @@
 - **ID**: 89841429
 - **Price**: £2650 PCM
 - **Size**: 66.1 sqm
-- **Listing Update**: 2026-06-17
-- **Listing Status**: Added on 17/06/2026
+- **Listing Update**: 2026-07-15
+- **Listing Status**: Reduced today
 - **Let Available**: 01/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/89841429](https://www.rightmove.co.uk/properties/89841429)
 
@@ -190,6 +220,21 @@
 - **Listing Status**: Added on 13/07/2026
 - **Let Available**: 01/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90820317](https://www.rightmove.co.uk/properties/90820317)
+
+---
+
+### [2026-07-15T16:50:33.032Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Flagstones Property Group, London
+- **Location**: Canary Wharf
+- **Property Name**: The Madison, Marsh Wall, Canary Wharf E14
+- **ID**: 90934689
+- **Price**: £2700 PCM
+- **Size**: 64 sqm
+- **Listing Update**: 2026-07-15
+- **Listing Status**: Added today
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/90934689](https://www.rightmove.co.uk/properties/90934689)
 
 ---
 
@@ -795,18 +840,18 @@ Millwall, E14
 
 ---
 
-### [2026-07-15T09:38:38.575Z] MATCH FOUND!
+### [2026-07-15T16:50:33.033Z] MATCH FOUND!
 - **Platform**: Rightmove
-- **Marketed by**: Hamptons, Canary Wharf
-- **Location**: South Quay
-- **Property Name**: Cassilis Road, E14
-- **ID**: 90628257
-- **Price**: £1950 PCM
+- **Marketed by**: Reeds Rains, Plaistow
+- **Location**: Custom House
+- **Property Name**: Bingley Road, London, E16
+- **ID**: 90928758
+- **Price**: £2000 PCM
 - **Size**: Unknown
-- **Listing Update**: 2026-07-08
-- **Listing Status**: Added on 08/07/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/90628257](https://www.rightmove.co.uk/properties/90628257)
+- **Listing Update**: 2026-07-15
+- **Listing Status**: Added today
+- **Let Available**: 27/07/2026
+- **Link**: [https://www.rightmove.co.uk/properties/90928758](https://www.rightmove.co.uk/properties/90928758)
 
 ---
 
