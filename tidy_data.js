@@ -958,7 +958,7 @@ async function main() {
         let propertyNameCell = `${escapeHtml(m.propertyName || 'Unknown')}`;
         if (mapsSearchUrl && m.propertyName && m.propertyName !== 'Unknown') {
           const searchLink = `<a href="${mapsSearchUrl}" target="_blank" class="property-maps-link" title="Open location in Google Maps (New Tab)" onclick="event.stopPropagation()">${escapeHtml(m.propertyName)}</a>`;
-          const dirIcon = mapsDirUrl ? `<a href="${mapsDirUrl}" target="_blank" class="dir-icon-link" title="Transit directions from ${escapeHtml(directionsOrigin)} in Google Maps (New Tab)" onclick="event.stopPropagation()">🧭</a>` : '';
+          const dirIcon = mapsDirUrl ? `<a href="${mapsDirUrl}" target="_blank" class="dir-icon-link" title="Transit directions from ${escapeHtml(directionsOrigin)} in Google Maps (New Tab)" onclick="event.stopPropagation()">➤</a>` : '';
           propertyNameCell = `${searchLink}${dirIcon}`;
         }
 
@@ -1343,11 +1343,13 @@ async function main() {
     align-items: center;
     justify-content: center;
     margin-left: 6px;
-    padding: 1px 6px;
+    padding: 2px 7px;
     background: rgba(56, 189, 248, 0.15);
     border: 1px solid rgba(56, 189, 248, 0.35);
     border-radius: 6px;
-    font-size: 0.9em;
+    font-size: 0.88em;
+    font-weight: 700;
+    color: #38bdf8;
     text-decoration: none;
     transition: all 0.2s;
     vertical-align: middle;
@@ -1355,6 +1357,7 @@ async function main() {
   .dir-icon-link:hover {
     background: rgba(56, 189, 248, 0.3);
     border-color: rgba(56, 189, 248, 0.7);
+    color: #ffffff;
     box-shadow: 0 0 8px rgba(56, 189, 248, 0.4);
     transform: scale(1.1);
   }
