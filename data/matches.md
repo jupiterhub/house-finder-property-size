@@ -242,8 +242,7 @@
 - **Platform**: Rightmove
 - **Marketed by**: Chestertons, Canary Wharf and Docklands
 - **Location**: South Quay
-- **Property Name**: Pepper Street, 
-Millwall, E14
+- **Property Name**: Pepper Street,
 - **ID**: 90872100
 - **Price**: £2150 PCM
 - **Size**: 63.17 sqm
@@ -708,8 +707,7 @@ Millwall, E14
 - **Platform**: Rightmove
 - **Marketed by**: Chestertons, Canary Wharf and Docklands
 - **Location**: Canary Wharf
-- **Property Name**: Pan Peninsula East, 
-Millwall, E14
+- **Property Name**: Pan Peninsula East,
 - **ID**: 90827625
 - **Price**: £2500 PCM
 - **Size**: 49 sqm

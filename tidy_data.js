@@ -2021,7 +2021,7 @@ async function main() {
       padding: 12px 16px;
       font-size: 1rem;
     }
-    #moveInAssistant, .move-in-assistant, .quick-sorts, #mobileFiltersDrawer, .mobile-filter-drawer, #mobileFilterToggleBtn {
+    #moveInAssistant, .move-in-assistant, .quick-sorts {
       display: none !important;
     }
     .assistant-controls {
@@ -2829,6 +2829,12 @@ function setQuickFilter(filterType) {
       }
     }
   }
+  var drawerInputs = document.querySelectorAll(".drawer-input");
+  for (var d = 0; d < drawerInputs.length; d++) {
+    var targetCol = drawerInputs[d].getAttribute("data-target-col");
+    var headerInput = document.querySelector('.filter-input[data-col="' + targetCol + '"]');
+    if (headerInput) drawerInputs[d].value = headerInput.value;
+  }
   filterTable();
   var chips = document.querySelectorAll(".quick-filters .filter-chip");
   if (chips.length > 0) {
@@ -3504,11 +3510,14 @@ function syncFromDrawer(inputElem) {
         <input type="date" id="letAfterDateInput" class="filter-input-date" onchange="filterTable()" style="flex: 1; padding: 7px 10px; border-radius: 8px; background: var(--card-bg); color: var(--text); border: 1px solid var(--border); font-weight: 600; font-size: 0.88rem;" title="Show properties with Let Available date on or after this date">
         <button id="clearLetAfterBtn" class="filter-chip" onclick="clearLetAfterDate()" style="padding: 7px 10px; min-height: 36px; display: none;" title="Clear date filter">✕</button>
       </div>
+      <div class="drawer-toggle-item" style="display: flex; align-items: center;">
+        <button id="mobileFilterToggleBtn" class="filter-chip" onclick="toggleMobileDrawer()" style="padding: 8px 14px; min-height: 36px; font-weight: 600; background: var(--primary); color: white; border: none; border-radius: 8px; cursor: pointer; display: flex; align-items: center; gap: 6px;" title="Open Specific Column Filters & Sort Options">🎯 Filters & Sort</button>
+      </div>
     </div>
   </div>
   <div class="search-container">
     <label for="globalSearch">Quick Search</label>
-    <input type="text" id="globalSearch" onkeyup="filterTable()" placeholder="Search location, agent...">
+    <input type="text" id="globalSearch" oninput="filterTable()" onkeyup="filterTable()" placeholder="Search location, agent...">
   </div>
 </div>
 
@@ -3531,28 +3540,40 @@ function syncFromDrawer(inputElem) {
     <div class="drawer-title">🎯 Specific Column Filters</div>
     <div class="drawer-grid">
       <div class="drawer-input-group">
-        <label>Added Date:</label>
-        <input type="text" class="drawer-input" data-target-col="0" placeholder="e.g. >2026-05-01" oninput="syncFromDrawer(this)">
-      </div>
-      <div class="drawer-input-group">
-        <label>Let Available Date:</label>
-        <input type="text" class="drawer-input" data-target-col="3" placeholder="e.g. >2026-07-01" oninput="syncFromDrawer(this)">
-      </div>
-      <div class="drawer-input-group">
-        <label>Price Range (£):</label>
-        <input type="text" class="drawer-input" data-target-col="8" placeholder="e.g. <2600 or >2000" oninput="syncFromDrawer(this)">
-      </div>
-      <div class="drawer-input-group">
-        <label>Min Size (sqm):</label>
-        <input type="text" class="drawer-input" data-target-col="9" placeholder="e.g. >=50" oninput="syncFromDrawer(this)">
-      </div>
-      <div class="drawer-input-group">
-        <label>£ / sqm:</label>
-        <input type="text" class="drawer-input" data-target-col="10" placeholder="e.g. <=45" oninput="syncFromDrawer(this)">
+        <label>Property Name / Keyword:</label>
+        <input type="text" class="drawer-input" data-target-col="7" placeholder="e.g. Landmark, Wardian" oninput="syncFromDrawer(this)" onkeyup="syncFromDrawer(this)">
       </div>
       <div class="drawer-input-group">
         <label>Location / Area:</label>
-        <input type="text" class="drawer-input" data-target-col="6" placeholder="e.g. Canary Wharf" oninput="syncFromDrawer(this)">
+        <input type="text" class="drawer-input" data-target-col="6" placeholder="e.g. Canary Wharf" oninput="syncFromDrawer(this)" onkeyup="syncFromDrawer(this)">
+      </div>
+      <div class="drawer-input-group">
+        <label>Price Range (£):</label>
+        <input type="text" class="drawer-input" data-target-col="8" placeholder="e.g. <2600 or >2000" oninput="syncFromDrawer(this)" onkeyup="syncFromDrawer(this)">
+      </div>
+      <div class="drawer-input-group">
+        <label>Min Size (sqm):</label>
+        <input type="text" class="drawer-input" data-target-col="9" placeholder="e.g. >=50" oninput="syncFromDrawer(this)" onkeyup="syncFromDrawer(this)">
+      </div>
+      <div class="drawer-input-group">
+        <label>£ / sqm:</label>
+        <input type="text" class="drawer-input" data-target-col="10" placeholder="e.g. <=45" oninput="syncFromDrawer(this)" onkeyup="syncFromDrawer(this)">
+      </div>
+      <div class="drawer-input-group">
+        <label>Source / Platform:</label>
+        <input type="text" class="drawer-input" data-target-col="4" placeholder="e.g. Rightmove, JLL" oninput="syncFromDrawer(this)" onkeyup="syncFromDrawer(this)">
+      </div>
+      <div class="drawer-input-group">
+        <label>Marketed By (Agent):</label>
+        <input type="text" class="drawer-input" data-target-col="5" placeholder="e.g. OpenRent, Knight" oninput="syncFromDrawer(this)" onkeyup="syncFromDrawer(this)">
+      </div>
+      <div class="drawer-input-group">
+        <label>Added Date:</label>
+        <input type="text" class="drawer-input" data-target-col="0" placeholder="e.g. >2026-05-01" oninput="syncFromDrawer(this)" onkeyup="syncFromDrawer(this)">
+      </div>
+      <div class="drawer-input-group">
+        <label>Let Available Date:</label>
+        <input type="text" class="drawer-input" data-target-col="3" placeholder="e.g. >2026-07-01" oninput="syncFromDrawer(this)" onkeyup="syncFromDrawer(this)">
       </div>
     </div>
   </div>

@@ -1009,7 +1009,7 @@
       padding: 12px 16px;
       font-size: 1rem;
     }
-    #moveInAssistant, .move-in-assistant, .quick-sorts, #mobileFiltersDrawer, .mobile-filter-drawer, #mobileFilterToggleBtn {
+    #moveInAssistant, .move-in-assistant, .quick-sorts {
       display: none !important;
     }
     .assistant-controls {
@@ -1817,6 +1817,12 @@ function setQuickFilter(filterType) {
       }
     }
   }
+  var drawerInputs = document.querySelectorAll(".drawer-input");
+  for (var d = 0; d < drawerInputs.length; d++) {
+    var targetCol = drawerInputs[d].getAttribute("data-target-col");
+    var headerInput = document.querySelector('.filter-input[data-col="' + targetCol + '"]');
+    if (headerInput) drawerInputs[d].value = headerInput.value;
+  }
   filterTable();
   var chips = document.querySelectorAll(".quick-filters .filter-chip");
   if (chips.length > 0) {
@@ -2492,11 +2498,14 @@ function syncFromDrawer(inputElem) {
         <input type="date" id="letAfterDateInput" class="filter-input-date" onchange="filterTable()" style="flex: 1; padding: 7px 10px; border-radius: 8px; background: var(--card-bg); color: var(--text); border: 1px solid var(--border); font-weight: 600; font-size: 0.88rem;" title="Show properties with Let Available date on or after this date">
         <button id="clearLetAfterBtn" class="filter-chip" onclick="clearLetAfterDate()" style="padding: 7px 10px; min-height: 36px; display: none;" title="Clear date filter">✕</button>
       </div>
+      <div class="drawer-toggle-item" style="display: flex; align-items: center;">
+        <button id="mobileFilterToggleBtn" class="filter-chip" onclick="toggleMobileDrawer()" style="padding: 8px 14px; min-height: 36px; font-weight: 600; background: var(--primary); color: white; border: none; border-radius: 8px; cursor: pointer; display: flex; align-items: center; gap: 6px;" title="Open Specific Column Filters & Sort Options">🎯 Filters & Sort</button>
+      </div>
     </div>
   </div>
   <div class="search-container">
     <label for="globalSearch">Quick Search</label>
-    <input type="text" id="globalSearch" onkeyup="filterTable()" placeholder="Search location, agent...">
+    <input type="text" id="globalSearch" oninput="filterTable()" onkeyup="filterTable()" placeholder="Search location, agent...">
   </div>
 </div>
 
@@ -2519,28 +2528,40 @@ function syncFromDrawer(inputElem) {
     <div class="drawer-title">🎯 Specific Column Filters</div>
     <div class="drawer-grid">
       <div class="drawer-input-group">
-        <label>Added Date:</label>
-        <input type="text" class="drawer-input" data-target-col="0" placeholder="e.g. >2026-05-01" oninput="syncFromDrawer(this)">
-      </div>
-      <div class="drawer-input-group">
-        <label>Let Available Date:</label>
-        <input type="text" class="drawer-input" data-target-col="3" placeholder="e.g. >2026-07-01" oninput="syncFromDrawer(this)">
-      </div>
-      <div class="drawer-input-group">
-        <label>Price Range (£):</label>
-        <input type="text" class="drawer-input" data-target-col="8" placeholder="e.g. <2600 or >2000" oninput="syncFromDrawer(this)">
-      </div>
-      <div class="drawer-input-group">
-        <label>Min Size (sqm):</label>
-        <input type="text" class="drawer-input" data-target-col="9" placeholder="e.g. >=50" oninput="syncFromDrawer(this)">
-      </div>
-      <div class="drawer-input-group">
-        <label>£ / sqm:</label>
-        <input type="text" class="drawer-input" data-target-col="10" placeholder="e.g. <=45" oninput="syncFromDrawer(this)">
+        <label>Property Name / Keyword:</label>
+        <input type="text" class="drawer-input" data-target-col="7" placeholder="e.g. Landmark, Wardian" oninput="syncFromDrawer(this)" onkeyup="syncFromDrawer(this)">
       </div>
       <div class="drawer-input-group">
         <label>Location / Area:</label>
-        <input type="text" class="drawer-input" data-target-col="6" placeholder="e.g. Canary Wharf" oninput="syncFromDrawer(this)">
+        <input type="text" class="drawer-input" data-target-col="6" placeholder="e.g. Canary Wharf" oninput="syncFromDrawer(this)" onkeyup="syncFromDrawer(this)">
+      </div>
+      <div class="drawer-input-group">
+        <label>Price Range (£):</label>
+        <input type="text" class="drawer-input" data-target-col="8" placeholder="e.g. <2600 or >2000" oninput="syncFromDrawer(this)" onkeyup="syncFromDrawer(this)">
+      </div>
+      <div class="drawer-input-group">
+        <label>Min Size (sqm):</label>
+        <input type="text" class="drawer-input" data-target-col="9" placeholder="e.g. >=50" oninput="syncFromDrawer(this)" onkeyup="syncFromDrawer(this)">
+      </div>
+      <div class="drawer-input-group">
+        <label>£ / sqm:</label>
+        <input type="text" class="drawer-input" data-target-col="10" placeholder="e.g. <=45" oninput="syncFromDrawer(this)" onkeyup="syncFromDrawer(this)">
+      </div>
+      <div class="drawer-input-group">
+        <label>Source / Platform:</label>
+        <input type="text" class="drawer-input" data-target-col="4" placeholder="e.g. Rightmove, JLL" oninput="syncFromDrawer(this)" onkeyup="syncFromDrawer(this)">
+      </div>
+      <div class="drawer-input-group">
+        <label>Marketed By (Agent):</label>
+        <input type="text" class="drawer-input" data-target-col="5" placeholder="e.g. OpenRent, Knight" oninput="syncFromDrawer(this)" onkeyup="syncFromDrawer(this)">
+      </div>
+      <div class="drawer-input-group">
+        <label>Added Date:</label>
+        <input type="text" class="drawer-input" data-target-col="0" placeholder="e.g. >2026-05-01" oninput="syncFromDrawer(this)" onkeyup="syncFromDrawer(this)">
+      </div>
+      <div class="drawer-input-group">
+        <label>Let Available Date:</label>
+        <input type="text" class="drawer-input" data-target-col="3" placeholder="e.g. >2026-07-01" oninput="syncFromDrawer(this)" onkeyup="syncFromDrawer(this)">
       </div>
     </div>
   </div>
@@ -2635,7 +2656,7 @@ function syncFromDrawer(inputElem) {
           <td data-label="Date" data-value="1783963721614">2026-07-13 17:28:41</td>
           <td data-label="Listed / Updated" data-value="1783900800000">2026-07-13</td>
           <td data-label="Status" data-value="Added on 13/07/2026">Added on 13/07/2026</td>
-          <td data-label="Let Available" data-value="1784134299404"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-label="Let Available" data-value="1784139448610"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-label="Source" data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-label="Marketed By" data-value="Madison Brook, Docklands"><span class="agent-name">Madison Brook, Docklands</span></td>
           <td data-label="Location" class="col-location" data-value="Custom House">Custom House<br><span class="badge badge-no-lizline" title="Requires DLR/Jubilee transfer - No direct Elizabeth Line link to Farringdon">🔄 DLR / Jubilee</span></td>
@@ -2831,9 +2852,7 @@ function syncFromDrawer(inputElem) {
           <td data-label="Source" data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-label="Marketed By" data-value="Chestertons, Canary Wharf and Docklands"><span class="agent-name">Chestertons, Canary Wharf and Docklands</span></td>
           <td data-label="Location" class="col-location" data-value="South Quay">South Quay<br><span class="badge badge-no-lizline" title="Requires DLR/Jubilee transfer - No direct Elizabeth Line link to Farringdon">🔄 DLR / Jubilee</span></td>
-          <td data-label="Property Name" class="col-property" data-value="Pepper Street, 
-Millwall, E14"><a href="https://www.google.com/maps/search/?api=1&query=Pepper%20Street%2C%20%0AMillwall%2C%20E14%2C%20South%20Quay" target="_blank" class="property-maps-link" title="Open location in Google Maps (New Tab)" onclick="event.stopPropagation()">Pepper Street, 
-Millwall, E14</a><a href="https://www.google.com/maps/dir/?api=1&origin=Farringdon%20Station%2C%20London&destination=Pepper%20Street%2C%20%0AMillwall%2C%20E14%2C%20South%20Quay&travelmode=transit" target="_blank" class="dir-icon-link" title="Transit directions from Farringdon Station, London in Google Maps (New Tab)" onclick="event.stopPropagation()">➤</a></td>
+          <td data-label="Property Name" class="col-property" data-value="Pepper Street,"><a href="https://www.google.com/maps/search/?api=1&query=Pepper%20Street%2C%2C%20South%20Quay" target="_blank" class="property-maps-link" title="Open location in Google Maps (New Tab)" onclick="event.stopPropagation()">Pepper Street,</a><a href="https://www.google.com/maps/dir/?api=1&origin=Farringdon%20Station%2C%20London&destination=Pepper%20Street%2C%2C%20South%20Quay&travelmode=transit" target="_blank" class="dir-icon-link" title="Transit directions from Farringdon Station, London in Google Maps (New Tab)" onclick="event.stopPropagation()">➤</a></td>
           <td data-label="Price" class="numeric col-price" data-value="2150">£2150</td>
           <td data-label="Size" class="numeric col-size" data-value="63.17">63.17 sqm</td>
           <td data-label="£ / sqm" class="numeric col-ppsqm" data-value="34.03514326420769">£34.04<br><span class="badge badge-deal badge-deal-good" title="Top 40% lowest £/sqm value among DLR/Jubilee properties">👍 Good Value (DLR/Jubilee)</span></td>
@@ -2877,7 +2896,7 @@ Millwall, E14</a><a href="https://www.google.com/maps/dir/?api=1&origin=Farringd
           <td data-label="Date" data-value="1783959769586">2026-07-13 16:22:49</td>
           <td data-label="Listed / Updated" data-value="1783468800000">2026-07-08</td>
           <td data-label="Status" data-value="Added on 08/07/2026">Added on 08/07/2026</td>
-          <td data-label="Let Available" data-value="1784134299404"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-label="Let Available" data-value="1784139448611"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-label="Source" data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-label="Marketed By" data-value="NEXIS Property, London"><span class="agent-name">NEXIS Property, London</span></td>
           <td data-label="Location" class="col-location" data-value="Custom House">Custom House<br><span class="badge badge-no-lizline" title="Requires DLR/Jubilee transfer - No direct Elizabeth Line link to Farringdon">🔄 DLR / Jubilee</span></td>
@@ -2909,7 +2928,7 @@ Millwall, E14</a><a href="https://www.google.com/maps/dir/?api=1&origin=Farringd
           <td data-label="Date" data-value="1783959769586">2026-07-13 16:22:49</td>
           <td data-label="Listed / Updated" data-value="1782950400000">2026-07-02</td>
           <td data-label="Status" data-value="Added on 02/07/2026">Added on 02/07/2026</td>
-          <td data-label="Let Available" data-value="1784134299404"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-label="Let Available" data-value="1784139448611"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-label="Source" data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-label="Marketed By" data-value="Complete Prime Residential Ltd, London"><span class="agent-name">Complete Prime Residential Ltd, London</span></td>
           <td data-label="Location" class="col-location" data-value="Custom House">Custom House<br><span class="badge badge-no-lizline" title="Requires DLR/Jubilee transfer - No direct Elizabeth Line link to Farringdon">🔄 DLR / Jubilee</span></td>
@@ -2941,7 +2960,7 @@ Millwall, E14</a><a href="https://www.google.com/maps/dir/?api=1&origin=Farringd
           <td data-label="Date" data-value="1783959769586">2026-07-13 16:22:49</td>
           <td data-label="Listed / Updated" data-value="1783468800000">2026-07-08</td>
           <td data-label="Status" data-value="Reduced on 08/07/2026">Reduced on 08/07/2026</td>
-          <td data-label="Let Available" data-value="1784134299405"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-label="Let Available" data-value="1784139448611"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-label="Source" data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-label="Marketed By" data-value="Properly, London"><span class="agent-name">Properly, London</span></td>
           <td data-label="Location" class="col-location" data-value="Custom House">Custom House<br><span class="badge badge-no-lizline" title="Requires DLR/Jubilee transfer - No direct Elizabeth Line link to Farringdon">🔄 DLR / Jubilee</span></td>
@@ -3085,7 +3104,7 @@ Millwall, E14</a><a href="https://www.google.com/maps/dir/?api=1&origin=Farringd
           <td data-label="Date" data-value="1783959769587">2026-07-13 16:22:49</td>
           <td data-label="Listed / Updated" data-value="1782259200000">2026-06-24</td>
           <td data-label="Status" data-value="Added on 24/06/2026">Added on 24/06/2026</td>
-          <td data-label="Let Available" data-value="1784134299405"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-label="Let Available" data-value="1784139448611"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-label="Source" data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-label="Marketed By" data-value="Samuel King, Canning Town"><span class="agent-name">Samuel King, Canning Town</span></td>
           <td data-label="Location" class="col-location" data-value="Custom House">Custom House<br><span class="badge badge-no-lizline" title="Requires DLR/Jubilee transfer - No direct Elizabeth Line link to Farringdon">🔄 DLR / Jubilee</span></td>
@@ -3197,7 +3216,7 @@ Millwall, E14</a><a href="https://www.google.com/maps/dir/?api=1&origin=Farringd
           <td data-label="Date" data-value="1783959769586">2026-07-13 16:22:49</td>
           <td data-label="Listed / Updated" data-value="1782950400000">2026-07-02</td>
           <td data-label="Status" data-value="Reduced on 02/07/2026">Reduced on 02/07/2026</td>
-          <td data-label="Let Available" data-value="1784134299405"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-label="Let Available" data-value="1784139448611"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-label="Source" data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-label="Marketed By" data-value="Holland Properties, London"><span class="agent-name">Holland Properties, London</span></td>
           <td data-label="Location" class="col-location" data-value="Custom House">Custom House<br><span class="badge badge-no-lizline" title="Requires DLR/Jubilee transfer - No direct Elizabeth Line link to Farringdon">🔄 DLR / Jubilee</span></td>
@@ -3329,9 +3348,7 @@ Millwall, E14</a><a href="https://www.google.com/maps/dir/?api=1&origin=Farringd
           <td data-label="Source" data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-label="Marketed By" data-value="Chestertons, Canary Wharf and Docklands"><span class="agent-name">Chestertons, Canary Wharf and Docklands</span></td>
           <td data-label="Location" class="col-location" data-value="Canary Wharf">Canary Wharf<br><span class="badge badge-no-lizline" title="Requires DLR/Jubilee transfer - No direct Elizabeth Line link to Farringdon">🔄 DLR / Jubilee</span></td>
-          <td data-label="Property Name" class="col-property" data-value="Pan Peninsula East, 
-Millwall, E14"><a href="https://www.google.com/maps/search/?api=1&query=Pan%20Peninsula%20East%2C%20%0AMillwall%2C%20E14%2C%20Canary%20Wharf" target="_blank" class="property-maps-link" title="Open location in Google Maps (New Tab)" onclick="event.stopPropagation()">Pan Peninsula East, 
-Millwall, E14</a><a href="https://www.google.com/maps/dir/?api=1&origin=Farringdon%20Station%2C%20London&destination=Pan%20Peninsula%20East%2C%20%0AMillwall%2C%20E14%2C%20Canary%20Wharf&travelmode=transit" target="_blank" class="dir-icon-link" title="Transit directions from Farringdon Station, London in Google Maps (New Tab)" onclick="event.stopPropagation()">➤</a><br><span class="badge badge-targettower" title="Key Target Glass Tower Development">🏛️ Key Tower: Pan Peninsula</span></td>
+          <td data-label="Property Name" class="col-property" data-value="Pan Peninsula East,"><a href="https://www.google.com/maps/search/?api=1&query=Pan%20Peninsula%20East%2C%2C%20Canary%20Wharf" target="_blank" class="property-maps-link" title="Open location in Google Maps (New Tab)" onclick="event.stopPropagation()">Pan Peninsula East,</a><a href="https://www.google.com/maps/dir/?api=1&origin=Farringdon%20Station%2C%20London&destination=Pan%20Peninsula%20East%2C%2C%20Canary%20Wharf&travelmode=transit" target="_blank" class="dir-icon-link" title="Transit directions from Farringdon Station, London in Google Maps (New Tab)" onclick="event.stopPropagation()">➤</a><br><span class="badge badge-targettower" title="Key Target Glass Tower Development">🏛️ Key Tower: Pan Peninsula</span></td>
           <td data-label="Price" class="numeric col-price" data-value="2500">£2500</td>
           <td data-label="Size" class="numeric col-size" data-value="49">49 sqm</td>
           <td data-label="£ / sqm" class="numeric col-ppsqm" data-value="51.02040816326531">£51.02<br><span class="badge badge-deal badge-deal-fair" title="Market rate for DLR/Jubilee properties">⚖️ Market Rate</span></td>
@@ -3375,7 +3392,7 @@ Millwall, E14</a><a href="https://www.google.com/maps/dir/?api=1&origin=Farringd
           <td data-label="Date" data-value="1783959769585">2026-07-13 16:22:49</td>
           <td data-label="Listed / Updated" data-value="1783900800000">2026-07-13</td>
           <td data-label="Status" data-value="Reduced on 13/07/2026">Reduced on 13/07/2026</td>
-          <td data-label="Let Available" data-value="1784134299405"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-label="Let Available" data-value="1784139448611"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-label="Source" data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-label="Marketed By" data-value="Dawn Sandoval Residential, Canary Wharf"><span class="agent-name">Dawn Sandoval Residential, Canary Wharf</span></td>
           <td data-label="Location" class="col-location" data-value="Canary Wharf">Canary Wharf<br><span class="badge badge-no-lizline" title="Requires DLR/Jubilee transfer - No direct Elizabeth Line link to Farringdon">🔄 DLR / Jubilee</span></td>
@@ -3391,7 +3408,7 @@ Millwall, E14</a><a href="https://www.google.com/maps/dir/?api=1&origin=Farringd
           <td data-label="Date" data-value="1783959769586">2026-07-13 16:22:49</td>
           <td data-label="Listed / Updated" data-value="1783814400000">2026-07-12</td>
           <td data-label="Status" data-value="Reduced on 12/07/2026">Reduced on 12/07/2026</td>
-          <td data-label="Let Available" data-value="1784134299405"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-label="Let Available" data-value="1784139448611"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-label="Source" data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-label="Marketed By" data-value="OpenRent, London"><span class="badge badge-openrent">✨ OpenRent, London</span></td>
           <td data-label="Location" class="col-location" data-value="South Quay">South Quay<br><span class="badge badge-no-lizline" title="Requires DLR/Jubilee transfer - No direct Elizabeth Line link to Farringdon">🔄 DLR / Jubilee</span></td>
@@ -3487,7 +3504,7 @@ Millwall, E14</a><a href="https://www.google.com/maps/dir/?api=1&origin=Farringd
           <td data-label="Date" data-value="1784047474270">2026-07-14 16:44:34</td>
           <td data-label="Listed / Updated" data-value="1783987200000">2026-07-14</td>
           <td data-label="Status" data-value="Added yesterday">Added yesterday</td>
-          <td data-label="Let Available" data-value="1784134299405"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-label="Let Available" data-value="1784139448611"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-label="Source" data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-label="Marketed By" data-value="FMX PROPERTIES LTD, London"><span class="agent-name">FMX PROPERTIES LTD, London</span></td>
           <td data-label="Location" class="col-location" data-value="South Quay">South Quay<br><span class="badge badge-no-lizline" title="Requires DLR/Jubilee transfer - No direct Elizabeth Line link to Farringdon">🔄 DLR / Jubilee</span></td>
@@ -3599,7 +3616,7 @@ Millwall, E14</a><a href="https://www.google.com/maps/dir/?api=1&origin=Farringd
           <td data-label="Date" data-value="1783959769586">2026-07-13 16:22:49</td>
           <td data-label="Listed / Updated" data-value="1783382400000">2026-07-07</td>
           <td data-label="Status" data-value="Added on 07/07/2026">Added on 07/07/2026</td>
-          <td data-label="Let Available" data-value="1784134299405"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-label="Let Available" data-value="1784139448611"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-label="Source" data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-label="Marketed By" data-value="Estate Ark, Ilford"><span class="agent-name">Estate Ark, Ilford</span></td>
           <td data-label="Location" class="col-location" data-value="Custom House">Custom House<br><span class="badge badge-no-lizline" title="Requires DLR/Jubilee transfer - No direct Elizabeth Line link to Farringdon">🔄 DLR / Jubilee</span></td>
@@ -3663,7 +3680,7 @@ Millwall, E14</a><a href="https://www.google.com/maps/dir/?api=1&origin=Farringd
           <td data-label="Date" data-value="1783959769585">2026-07-13 16:22:49</td>
           <td data-label="Listed / Updated" data-value="1783555200000">2026-07-09</td>
           <td data-label="Status" data-value="Added on 09/07/2026">Added on 09/07/2026</td>
-          <td data-label="Let Available" data-value="1784134299405"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-label="Let Available" data-value="1784139448611"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-label="Source" data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-label="Marketed By" data-value="Regent Letting and Property Management, London"><span class="agent-name">Regent Letting and Property Management, London</span></td>
           <td data-label="Location" class="col-location" data-value="Canary Wharf">Canary Wharf<br><span class="badge badge-lizline" title="Direct Elizabeth Line connection to Farringdon (8-14 mins)">🚆 Elizabeth Line</span></td>
@@ -3695,7 +3712,7 @@ Millwall, E14</a><a href="https://www.google.com/maps/dir/?api=1&origin=Farringd
           <td data-label="Date" data-value="1783963721614">2026-07-13 17:28:41</td>
           <td data-label="Listed / Updated" data-value="1779148800000">2026-05-19</td>
           <td data-label="Status" data-value="Reduced on 19/05/2026">Reduced on 19/05/2026</td>
-          <td data-label="Let Available" data-value="1784134299405"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-label="Let Available" data-value="1784139448611"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-label="Source" data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-label="Marketed By" data-value="Accommodation"><span class="agent-name">Accommodation</span></td>
           <td data-label="Location" class="col-location" data-value="Canary Wharf">Canary Wharf<br><span class="badge badge-lizline" title="Direct Elizabeth Line connection to Farringdon (8-14 mins)">🚆 Elizabeth Line</span></td>
@@ -3727,7 +3744,7 @@ Millwall, E14</a><a href="https://www.google.com/maps/dir/?api=1&origin=Farringd
           <td data-label="Date" data-value="1783959769585">2026-07-13 16:22:49</td>
           <td data-label="Listed / Updated" data-value="1783900800000">2026-07-13</td>
           <td data-label="Status" data-value="Reduced on 13/07/2026">Reduced on 13/07/2026</td>
-          <td data-label="Let Available" data-value="1784134299405"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-label="Let Available" data-value="1784139448612"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-label="Source" data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-label="Marketed By" data-value="Waterfronts, London"><span class="agent-name">Waterfronts, London</span></td>
           <td data-label="Location" class="col-location" data-value="Canary Wharf">Canary Wharf<br><span class="badge badge-lizline" title="Direct Elizabeth Line connection to Farringdon (8-14 mins)">🚆 Elizabeth Line</span></td>
@@ -3743,7 +3760,7 @@ Millwall, E14</a><a href="https://www.google.com/maps/dir/?api=1&origin=Farringd
           <td data-label="Date" data-value="1784102040022">2026-07-15 07:54:00</td>
           <td data-label="Listed / Updated" data-value="1784073600000">2026-07-15</td>
           <td data-label="Status" data-value="Reduced today">Reduced today</td>
-          <td data-label="Let Available" data-value="1784134299405"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-label="Let Available" data-value="1784139448612"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-label="Source" data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-label="Marketed By" data-value="OpenRent, London"><span class="badge badge-openrent">✨ OpenRent, London</span></td>
           <td data-label="Location" class="col-location" data-value="South Quay">South Quay<br><span class="badge badge-no-lizline" title="Requires DLR/Jubilee transfer - No direct Elizabeth Line link to Farringdon">🔄 DLR / Jubilee</span></td>
@@ -3791,7 +3808,7 @@ Millwall, E14</a><a href="https://www.google.com/maps/dir/?api=1&origin=Farringd
           <td data-label="Date" data-value="1784018936841">2026-07-14 08:48:56</td>
           <td data-label="Listed / Updated" data-value="1783987200000">2026-07-14</td>
           <td data-label="Status" data-value="Added yesterday">Added yesterday</td>
-          <td data-label="Let Available" data-value="1784134299405"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-label="Let Available" data-value="1784139448612"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-label="Source" data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-label="Marketed By" data-value="Winsor Real Estate, London"><span class="agent-name">Winsor Real Estate, London</span></td>
           <td data-label="Location" class="col-location" data-value="Canary Wharf">Canary Wharf<br><span class="badge badge-lizline" title="Direct Elizabeth Line connection to Farringdon (8-14 mins)">🚆 Elizabeth Line</span></td>
@@ -3823,7 +3840,7 @@ Millwall, E14</a><a href="https://www.google.com/maps/dir/?api=1&origin=Farringd
           <td data-label="Date" data-value="1784047474270">2026-07-14 16:44:34</td>
           <td data-label="Listed / Updated" data-value="1783987200000">2026-07-14</td>
           <td data-label="Status" data-value="Reduced yesterday">Reduced yesterday</td>
-          <td data-label="Let Available" data-value="1784134299405"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-label="Let Available" data-value="1784139448612"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-label="Source" data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-label="Marketed By" data-value="Ernest Brooks International, Canary Wharf"><span class="agent-name">Ernest Brooks International, Canary Wharf</span></td>
           <td data-label="Location" class="col-location" data-value="Canary Wharf">Canary Wharf<br><span class="badge badge-no-lizline" title="Requires DLR/Jubilee transfer - No direct Elizabeth Line link to Farringdon">🔄 DLR / Jubilee</span></td>
@@ -3855,7 +3872,7 @@ Millwall, E14</a><a href="https://www.google.com/maps/dir/?api=1&origin=Farringd
           <td data-label="Date" data-value="1784018936842">2026-07-14 08:48:56</td>
           <td data-label="Listed / Updated" data-value="1781740800000">2026-06-18</td>
           <td data-label="Status" data-value="Added on 18/06/2026">Added on 18/06/2026</td>
-          <td data-label="Let Available" data-value="1784134299405"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
+          <td data-label="Let Available" data-value="1784139448612"><span class="avail-text">Now</span><span class="compat-indicator"></span></td>
           <td data-label="Source" data-value="Rightmove"><span class="badge-platform badge-platform-rightmove">🏠 Rightmove</span></td>
           <td data-label="Marketed By" data-value="Regent Letting and Property Management, London"><span class="agent-name">Regent Letting and Property Management, London</span></td>
           <td data-label="Location" class="col-location" data-value="Custom House">Custom House<br><span class="badge badge-no-lizline" title="Requires DLR/Jubilee transfer - No direct Elizabeth Line link to Farringdon">🔄 DLR / Jubilee</span></td>
