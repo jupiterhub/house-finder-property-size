@@ -22,7 +22,7 @@
 - **Price**: £2500 PCM
 - **Size**: 103 sqm
 - **Listing Update**: 2026-07-13
-- **Listing Status**: Reduced yesterday
+- **Listing Status**: Reduced on 13/07/2026
 - **Let Available**: 05/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90118005](https://www.rightmove.co.uk/properties/90118005)
 
@@ -67,7 +67,7 @@
 - **Price**: £2700 PCM
 - **Size**: 86 sqm
 - **Listing Update**: 2026-07-13
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 13/07/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90830598](https://www.rightmove.co.uk/properties/90830598)
 
@@ -127,7 +127,7 @@
 - **Price**: £2150 PCM
 - **Size**: 73 sqm
 - **Listing Update**: 2026-07-14
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: 25/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90884757](https://www.rightmove.co.uk/properties/90884757)
 
@@ -187,7 +187,7 @@
 - **Price**: £2300 PCM
 - **Size**: 64 sqm
 - **Listing Update**: 2026-07-13
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 13/07/2026
 - **Let Available**: 01/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90820317](https://www.rightmove.co.uk/properties/90820317)
 
@@ -203,7 +203,7 @@ Millwall, E14
 - **Price**: £2150 PCM
 - **Size**: 63.17 sqm
 - **Listing Update**: 2026-07-14
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: 03/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90872100](https://www.rightmove.co.uk/properties/90872100)
 
@@ -263,7 +263,7 @@ Millwall, E14
 - **Price**: £1900 PCM
 - **Size**: 60.5 sqm
 - **Listing Update**: 2026-07-14
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: 10/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90851298](https://www.rightmove.co.uk/properties/90851298)
 
@@ -308,7 +308,7 @@ Millwall, E14
 - **Price**: £2100 PCM
 - **Size**: 59 sqm
 - **Listing Update**: 2026-07-14
-- **Listing Status**: Reduced today
+- **Listing Status**: Reduced yesterday
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90473634](https://www.rightmove.co.uk/properties/90473634)
 
@@ -324,7 +324,7 @@ Millwall, E14
 - **Size**: 58.1 sqm
 - **Listing Update**: 2026-07-08
 - **Listing Status**: Reduced on 08/07/2026
-- **Let Available**: 15/07/2026
+- **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/174490808](https://www.rightmove.co.uk/properties/174490808)
 
 ---
@@ -338,7 +338,7 @@ Millwall, E14
 - **Price**: £2100 PCM
 - **Size**: 58 sqm
 - **Listing Update**: 2026-07-13
-- **Listing Status**: Reduced yesterday
+- **Listing Status**: Reduced on 13/07/2026
 - **Let Available**: 01/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/89325786](https://www.rightmove.co.uk/properties/89325786)
 
@@ -353,7 +353,7 @@ Millwall, E14
 - **Price**: £2200 PCM
 - **Size**: 58 sqm
 - **Listing Update**: 2026-07-13
-- **Listing Status**: Reduced yesterday
+- **Listing Status**: Reduced on 13/07/2026
 - **Let Available**: 25/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90496914](https://www.rightmove.co.uk/properties/90496914)
 
@@ -443,7 +443,7 @@ Millwall, E14
 - **Price**: £2150 PCM
 - **Size**: 55.74 sqm
 - **Listing Update**: 2026-07-13
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 13/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90807477](https://www.rightmove.co.uk/properties/90807477)
 
@@ -503,9 +503,24 @@ Millwall, E14
 - **Price**: £2000 PCM
 - **Size**: 55 sqm
 - **Listing Update**: 2026-07-13
-- **Listing Status**: Reduced yesterday
+- **Listing Status**: Reduced on 13/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90755244](https://www.rightmove.co.uk/properties/90755244)
+
+---
+
+### [2026-07-15T07:54:00.022Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Madison Brook, Docklands
+- **Location**: Custom House
+- **Property Name**: Cumberland House, Silvertown, E16
+- **ID**: 90892800
+- **Price**: £2050 PCM
+- **Size**: 55 sqm
+- **Listing Update**: 2026-07-13
+- **Listing Status**: Added on 13/07/2026
+- **Let Available**: 04/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/90892800](https://www.rightmove.co.uk/properties/90892800)
 
 ---
 
@@ -533,7 +548,7 @@ Millwall, E14
 - **Price**: £2100 PCM
 - **Size**: 54 sqm
 - **Listing Update**: 2026-07-14
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: 01/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90880098](https://www.rightmove.co.uk/properties/90880098)
 
@@ -563,7 +578,7 @@ Millwall, E14
 - **Price**: £2000 PCM
 - **Size**: 52 sqm
 - **Listing Update**: 2026-07-14
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: 30/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90856131](https://www.rightmove.co.uk/properties/90856131)
 
@@ -593,7 +608,7 @@ Millwall, E14
 - **Price**: £2700 PCM
 - **Size**: 51.4 sqm
 - **Listing Update**: 2026-07-14
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90879975](https://www.rightmove.co.uk/properties/90879975)
 
@@ -623,7 +638,7 @@ Millwall, E14
 - **Price**: £2250 PCM
 - **Size**: 51 sqm
 - **Listing Update**: 2026-07-14
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: 09/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90886134](https://www.rightmove.co.uk/properties/90886134)
 
@@ -653,7 +668,7 @@ Millwall, E14
 - **Price**: £2600 PCM
 - **Size**: 50.2 sqm
 - **Listing Update**: 2026-07-14
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90880086](https://www.rightmove.co.uk/properties/90880086)
 
@@ -669,7 +684,7 @@ Millwall, E14
 - **Price**: £2500 PCM
 - **Size**: 49 sqm
 - **Listing Update**: 2026-07-13
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 13/07/2026
 - **Let Available**: 17/09/2026 (🦅 Early Bird: 66d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/90827625](https://www.rightmove.co.uk/properties/90827625)
 
@@ -684,7 +699,7 @@ Millwall, E14
 - **Price**: £2000 PCM
 - **Size**: 46.45 sqm
 - **Listing Update**: 2026-07-13
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 13/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90832248](https://www.rightmove.co.uk/properties/90832248)
 
@@ -699,7 +714,7 @@ Millwall, E14
 - **Price**: £1900 PCM
 - **Size**: 46 sqm
 - **Listing Update**: 2026-07-14
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: 11/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90848949](https://www.rightmove.co.uk/properties/90848949)
 
@@ -714,8 +729,8 @@ Millwall, E14
 - **Price**: £2100 PCM
 - **Size**: 46 sqm
 - **Listing Update**: 2026-07-13
-- **Listing Status**: Reduced yesterday
-- **Let Available**: 15/07/2026
+- **Listing Status**: Reduced on 13/07/2026
+- **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90044970](https://www.rightmove.co.uk/properties/90044970)
 
 ---
@@ -730,7 +745,7 @@ Millwall, E14
 - **Size**: 46 sqm
 - **Listing Update**: 2026-07-12
 - **Listing Status**: Reduced on 12/07/2026
-- **Let Available**: 15/07/2026
+- **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90397644](https://www.rightmove.co.uk/properties/90397644)
 
 ---
@@ -744,7 +759,7 @@ Millwall, E14
 - **Price**: £1900 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-14
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: 26/09/2026 (🦅 Early Bird: 74d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/90845349](https://www.rightmove.co.uk/properties/90845349)
 
@@ -789,7 +804,7 @@ Millwall, E14
 - **Price**: £2000 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-14
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90813945](https://www.rightmove.co.uk/properties/90813945)
 
@@ -804,7 +819,7 @@ Millwall, E14
 - **Price**: £2000 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-14
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90860154](https://www.rightmove.co.uk/properties/90860154)
 
@@ -819,7 +834,7 @@ Millwall, E14
 - **Price**: £2050 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-13
-- **Listing Status**: Reduced yesterday
+- **Listing Status**: Reduced on 13/07/2026
 - **Let Available**: 26/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/89150535](https://www.rightmove.co.uk/properties/89150535)
 
@@ -894,7 +909,7 @@ Millwall, E14
 - **Price**: £2200 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-13
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 13/07/2026
 - **Let Available**: 29/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90808650](https://www.rightmove.co.uk/properties/90808650)
 
@@ -984,9 +999,24 @@ Millwall, E14
 - **Price**: £2400 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-13
-- **Listing Status**: Reduced yesterday
+- **Listing Status**: Reduced on 13/07/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/89831655](https://www.rightmove.co.uk/properties/89831655)
+
+---
+
+### [2026-07-15T07:54:00.022Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: OpenRent, London
+- **Location**: South Quay
+- **Property Name**: Heritage Tower, London, E14
+- **ID**: 89566008
+- **Price**: £2450 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-15
+- **Listing Status**: Reduced today
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/89566008](https://www.rightmove.co.uk/properties/89566008)
 
 ---
 
@@ -999,7 +1029,7 @@ Millwall, E14
 - **Price**: £2450 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-13
-- **Listing Status**: Reduced yesterday
+- **Listing Status**: Reduced on 13/07/2026
 - **Let Available**: 31/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/88695102](https://www.rightmove.co.uk/properties/88695102)
 
@@ -1044,8 +1074,8 @@ Millwall, E14
 - **Price**: £2600 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-14
-- **Listing Status**: Added today
-- **Let Available**: 15/07/2026
+- **Listing Status**: Added yesterday
+- **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90840777](https://www.rightmove.co.uk/properties/90840777)
 
 ---
@@ -1074,7 +1104,7 @@ Millwall, E14
 - **Price**: £2600 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-13
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 13/07/2026
 - **Let Available**: 20/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90814404](https://www.rightmove.co.uk/properties/90814404)
 
@@ -1089,7 +1119,7 @@ Millwall, E14
 - **Price**: £2650 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-14
-- **Listing Status**: Reduced today
+- **Listing Status**: Reduced yesterday
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/88577046](https://www.rightmove.co.uk/properties/88577046)
 
@@ -1119,7 +1149,7 @@ Millwall, E14
 - **Price**: £2700 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-13
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 13/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90820395](https://www.rightmove.co.uk/properties/90820395)
 
