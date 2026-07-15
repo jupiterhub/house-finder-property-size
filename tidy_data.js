@@ -340,7 +340,7 @@ async function enrichMissingMetadata(matches) {
   };
 
   let count = 0;
-  const batchSize = 5;
+  const batchSize = 3; // Reduced batch size to evade Akamai rate limits
   for (let i = 0; i < toEnrich.length; i += batchSize) {
     const batch = toEnrich.slice(i, i + batchSize);
     await Promise.all(batch.map(async (item) => {
@@ -357,10 +357,11 @@ async function enrichMissingMetadata(matches) {
       } catch (err) {}
       count++;
     }));
-    if (count % 20 === 0 || count === toEnrich.length) {
+    if (count % 15 === 0 || count === toEnrich.length) {
       console.log(`Enriched ${count}/${toEnrich.length}...`);
     }
-    await new Promise(r => setTimeout(r, 100));
+    // Randomized jitter delay between batches (400-700ms)
+    await new Promise(r => setTimeout(r, 400 + Math.floor(Math.random() * 300)));
   }
   console.log(`Metadata enrichment complete.`);
   return matches;
@@ -390,8 +391,9 @@ async function verifyMatches(matches) {
     }
 
     try {
-      // 200ms delay to avoid rate limiting
-      await new Promise(r => setTimeout(r, 200));
+      // 600-1000ms jittered delay to avoid rate limiting and bot detection
+      const delay = 600 + Math.floor(Math.random() * 400);
+      await new Promise(r => setTimeout(r, delay));
 
       const res = await fetch(item.link, { headers });
       
@@ -400,6 +402,13 @@ async function verifyMatches(matches) {
         continue;
       }
       
+      if (res.status === 429) {
+        console.warn(`[Rate Limit] Rightmove returned 429 for property ${item.id}. Backing off 3s and preserving property...`);
+        await new Promise(r => setTimeout(r, 3000));
+        results.push(item);
+        continue;
+      }
+
       if (res.status !== 200) {
         // Keep it if status is not 200 but not off-market (e.g. rate limit / temporary block)
         results.push(item);

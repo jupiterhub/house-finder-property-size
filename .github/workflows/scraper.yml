@@ -2,12 +2,10 @@ name: Property Scraper
 
 on:
   schedule:
-    # 08:30 BST (07:30 UTC) - Morning rush & weekend notice processing
-    - cron: '30 7 * * *'
-    # 12:30 BST (11:30 UTC) - Midday listing wave
-    - cron: '30 11 * * *'
-    # 16:30 BST (15:30 UTC) - End-of-day wrap
-    - cron: '30 15 * * *'
+    # Hourly between 08:00 and 19:00 BST (07:00 to 18:00 UTC) for fast listing discovery
+    - cron: '0 7-18 * * *'
+    # Evening wrap at 22:00 BST (21:00 UTC)
+    - cron: '0 21 * * *'
   # Allow manual triggering from the GitHub Actions tab
   workflow_dispatch:
 

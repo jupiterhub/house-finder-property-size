@@ -62,7 +62,13 @@ class RightmoveAdapter {
     };
 
     const locationsToScrape = config.locations || [];
+    let isFirstLocation = true;
     for (const locationName of locationsToScrape) {
+      if (!isFirstLocation) {
+        // Human-like pause when switching between search locations (1.5s - 3s)
+        await this.page.waitForTimeout(1500 + Math.floor(Math.random() * 1500));
+      }
+      isFirstLocation = false;
       const key = locationName.toLowerCase().trim();
       const identifier = LOCATION_IDENTIFIERS[key];
       
@@ -72,6 +78,10 @@ class RightmoveAdapter {
       }
 
       for (const pageIndex of [0, 24]) {
+        if (pageIndex > 0) {
+          // Human-like jitter before navigating to the next search page index (1s - 2.5s)
+          await this.page.waitForTimeout(1000 + Math.floor(Math.random() * 1500));
+        }
         let url;
         if (identifier.startsWith('http')) {
           url = pageIndex === 0 ? identifier : identifier + (identifier.includes('?') ? '&' : '?') + `index=${pageIndex}`;
@@ -170,6 +180,8 @@ class RightmoveAdapter {
             continue;
           }
 
+          // Human-like jitter before visiting individual property floorplan page (1s - 2s)
+          await this.page.waitForTimeout(1000 + Math.floor(Math.random() * 1000));
           const match = await this.processListing(listing, locationName, searchPageDates[listing.id] || {});
           if (match) {
             markAsSeen(listing.id, this.platformName);
