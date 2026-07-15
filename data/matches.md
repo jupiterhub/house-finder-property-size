@@ -15,21 +15,6 @@
 
 ### [2026-07-13T16:22:49.586Z] MATCH FOUND!
 - **Platform**: Rightmove
-- **Marketed by**: UKmate, London
-- **Location**: Custom House
-- **Property Name**: Wellspring House, 11 Seagull Lane
-- **ID**: 90719544
-- **Price**: £2050 PCM
-- **Size**: 467.02 sqm
-- **Listing Update**: 2026-07-10
-- **Listing Status**: Added on 10/07/2026
-- **Let Available**: 16/09/2026 (🦅 Early Bird: 68d adv)
-- **Link**: [https://www.rightmove.co.uk/properties/90719544](https://www.rightmove.co.uk/properties/90719544)
-
----
-
-### [2026-07-13T16:22:49.586Z] MATCH FOUND!
-- **Platform**: Rightmove
 - **Marketed by**: Madison Brook, Docklands
 - **Location**: Custom House
 - **Property Name**: Warehouse W, Royal Victoria Dock, E16
@@ -212,7 +197,8 @@
 - **Platform**: Rightmove
 - **Marketed by**: Chestertons, Canary Wharf and Docklands
 - **Location**: South Quay
-- **Property Name**: Pepper Street,
+- **Property Name**: Pepper Street, 
+Millwall, E14
 - **ID**: 90872100
 - **Price**: £2150 PCM
 - **Size**: 63.17 sqm
@@ -265,21 +251,6 @@
 - **Listing Status**: Added on 08/07/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90651105](https://www.rightmove.co.uk/properties/90651105)
-
----
-
-### [2026-07-15T12:03:04.432Z] MATCH FOUND!
-- **Platform**: Johns&Co
-- **Marketed by**: JOHNS&CO
-- **Location**: Canary Wharf (E14)
-- **Property Name**: Arena Tower
-- **ID**: 2373547
-- **Price**: £2700 PCM
-- **Size**: 60.76 sqm
-- **Listing Update**: 2026-07-15
-- **Listing Status**: Available
-- **Let Available**: Ask agent
-- **Link**: [https://www.johnsand.co/properties/arena-tower-2373547](https://www.johnsand.co/properties/arena-tower-2373547)
 
 ---
 
@@ -692,7 +663,8 @@
 - **Platform**: Rightmove
 - **Marketed by**: Chestertons, Canary Wharf and Docklands
 - **Location**: Canary Wharf
-- **Property Name**: Pan Peninsula East,
+- **Property Name**: Pan Peninsula East, 
+Millwall, E14
 - **ID**: 90827625
 - **Price**: £2500 PCM
 - **Size**: 49 sqm
@@ -1110,21 +1082,6 @@
 
 ### [2026-07-13T16:22:49.586Z] MATCH FOUND!
 - **Platform**: Rightmove
-- **Marketed by**: OpenRent, London
-- **Location**: Custom House
-- **Property Name**: Adriatic Apartments, London, E16
-- **ID**: 90677979
-- **Price**: £2500 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-09
-- **Listing Status**: Added on 09/07/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/90677979](https://www.rightmove.co.uk/properties/90677979)
-
----
-
-### [2026-07-13T16:22:49.586Z] MATCH FOUND!
-- **Platform**: Rightmove
 - **Marketed by**: haart, Stratford - Lettings
 - **Location**: Custom House
 - **Property Name**: Young Road, LONDON
@@ -1210,21 +1167,6 @@
 - **Listing Status**: Added on 18/06/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/89882241](https://www.rightmove.co.uk/properties/89882241)
-
----
-
-### [2026-07-13T16:22:49.584Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Right Now Residential, London
-- **Location**: Canary Wharf
-- **Property Name**: Amory Tower, Marsh Wall, Tower Hamlets, London
-- **ID**: 90820395
-- **Price**: £2700 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-13
-- **Listing Status**: Added on 13/07/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/90820395](https://www.rightmove.co.uk/properties/90820395)
 
 ---
 
