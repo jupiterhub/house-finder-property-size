@@ -284,21 +284,6 @@ Millwall, E14
 
 ---
 
-### [2026-07-13T16:22:49.586Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Madison Brook, Docklands
-- **Location**: Custom House
-- **Property Name**: Hoola Apartments, Royal Victoria Dock, E16
-- **ID**: 89442750
-- **Price**: £2050 PCM
-- **Size**: 59 sqm
-- **Listing Update**: 2026-07-07
-- **Listing Status**: Added on 07/07/2026
-- **Let Available**: 05/08/2026
-- **Link**: [https://www.rightmove.co.uk/properties/89442750](https://www.rightmove.co.uk/properties/89442750)
-
----
-
 ### [2026-07-14T12:46:08.175Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Life Residential, Canary Wharf Office
@@ -1077,21 +1062,6 @@ Millwall, E14
 - **Listing Status**: Added yesterday
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90840777](https://www.rightmove.co.uk/properties/90840777)
-
----
-
-### [2026-07-14T08:48:56.841Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Celestial Globe, London - Lettings
-- **Location**: South Quay
-- **Property Name**: Marsh Wall, London
-- **ID**: 90794052
-- **Price**: £2600 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-06-02
-- **Listing Status**: Reduced on 02/06/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/90794052](https://www.rightmove.co.uk/properties/90794052)
 
 ---
 
