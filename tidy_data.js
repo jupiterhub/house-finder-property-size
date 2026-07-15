@@ -876,6 +876,8 @@ async function main() {
         p40NonLiz = nonLizPpsqms[Math.floor(nonLizPpsqms.length * 0.45)] || 38;
       }
 
+      const directionsOrigin = config.directionsFrom || config.commuteOrigin || 'Farringdon Station, London';
+      const directionsOriginShort = directionsOrigin.split(',')[0].trim();
       const htmlRows = result.map((m, idx) => {
         const dateStr = m.timestamp ? m.timestamp.toISOString().replace(/T/, ' ').replace(/\..+/, '') : '';
         const timestamp = m.timestamp ? m.timestamp.getTime() : 0;
@@ -952,9 +954,12 @@ async function main() {
 
         const mapsQuery = getGoogleMapsQuery(m);
         const mapsSearchUrl = mapsQuery ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(mapsQuery)}` : '';
+        const mapsDirUrl = mapsQuery ? `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(directionsOrigin)}&destination=${encodeURIComponent(mapsQuery)}&travelmode=transit` : '';
         let propertyNameCell = `${escapeHtml(m.propertyName || 'Unknown')}`;
         if (mapsSearchUrl && m.propertyName && m.propertyName !== 'Unknown') {
-          propertyNameCell = `<a href="${mapsSearchUrl}" target="_blank" class="property-maps-link" title="Open in Google Maps (New Tab)" onclick="event.stopPropagation()">${escapeHtml(m.propertyName)}</a>`;
+          const searchLink = `<a href="${mapsSearchUrl}" target="_blank" class="property-maps-link" title="Open location in Google Maps (New Tab)" onclick="event.stopPropagation()">${escapeHtml(m.propertyName)}</a>`;
+          const dirIcon = mapsDirUrl ? `<a href="${mapsDirUrl}" target="_blank" class="dir-icon-link" title="Transit directions from ${escapeHtml(directionsOrigin)} in Google Maps (New Tab)" onclick="event.stopPropagation()">🧭</a>` : '';
+          propertyNameCell = `${searchLink}${dirIcon}`;
         }
 
 
@@ -1332,6 +1337,26 @@ async function main() {
     font-weight: 600;
     margin-top: 4px;
     display: inline-block;
+  }
+  .dir-icon-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 6px;
+    padding: 1px 6px;
+    background: rgba(56, 189, 248, 0.15);
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    border-radius: 6px;
+    font-size: 0.9em;
+    text-decoration: none;
+    transition: all 0.2s;
+    vertical-align: middle;
+  }
+  .dir-icon-link:hover {
+    background: rgba(56, 189, 248, 0.3);
+    border-color: rgba(56, 189, 248, 0.7);
+    box-shadow: 0 0 8px rgba(56, 189, 248, 0.4);
+    transform: scale(1.1);
   }
   .crm-status-select {
     background: #1e293b;

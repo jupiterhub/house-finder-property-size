@@ -6,6 +6,7 @@
   "availabilityWindowDays": 14,
   "includeUnknownAvailability": true,
   "elizabethLineOnly": false,
+  "directionsFrom": "Farringdon Station, London",
   "locations": [
     "Canary Wharf",
     "South Quay",
