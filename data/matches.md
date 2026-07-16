@@ -885,6 +885,21 @@ Millwall, E14
 
 ---
 
+### [2026-07-16T17:08:00.647Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Life Residential, Canary Wharf Office
+- **Location**: Canary Wharf
+- **Property Name**: Lincoln Plaza, Canary Wharf
+- **ID**: 90984615
+- **Price**: £1950 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-16
+- **Listing Status**: Added today
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/90984615](https://www.rightmove.co.uk/properties/90984615)
+
+---
+
 ### [2026-07-15T12:03:11.386Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Portico, Docklands Lettings
