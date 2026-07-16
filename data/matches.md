@@ -299,6 +299,21 @@ Millwall, E14
 
 ---
 
+### [2026-07-16T11:29:32.999Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Waterview, Waterview Shad Thames
+- **Location**: Canary Wharf
+- **Property Name**: Clyde Square, Canary Wharf
+- **ID**: 90956748
+- **Price**: £2500 PCM
+- **Size**: 60.6 sqm
+- **Listing Update**: 2026-07-16
+- **Listing Status**: Added today
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/90956748](https://www.rightmove.co.uk/properties/90956748)
+
+---
+
 ### [2026-07-14T12:46:08.176Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: OpenRent, London
@@ -487,8 +502,8 @@ Millwall, E14
 - **ID**: 90807477
 - **Price**: £2150 PCM
 - **Size**: 55.74 sqm
-- **Listing Update**: 2026-07-13
-- **Listing Status**: Added on 13/07/2026
+- **Listing Update**: 2026-07-16
+- **Listing Status**: Reduced today
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90807477](https://www.rightmove.co.uk/properties/90807477)
 
@@ -765,6 +780,21 @@ Millwall, E14
 
 ---
 
+### [2026-07-16T11:29:32.999Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Maxwell Property, London
+- **Location**: Canary Wharf
+- **Property Name**: Moore House, Cassilis Road, Canary Central, London
+- **ID**: 90954489
+- **Price**: £1950 PCM
+- **Size**: 46 sqm
+- **Listing Update**: 2026-07-15
+- **Listing Status**: Reduced yesterday
+- **Let Available**: 21/07/2026
+- **Link**: [https://www.rightmove.co.uk/properties/90954489](https://www.rightmove.co.uk/properties/90954489)
+
+---
+
 ### [2026-07-13T16:22:49.585Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Dawn Sandoval Residential, Canary Wharf
@@ -897,6 +927,21 @@ Millwall, E14
 - **Listing Status**: Added on 14/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90860154](https://www.rightmove.co.uk/properties/90860154)
+
+---
+
+### [2026-07-16T11:29:32.999Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: OpenRent, London
+- **Location**: Custom House
+- **Property Name**: Alaska Apartments, London, E16
+- **ID**: 90956817
+- **Price**: £2050 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-16
+- **Listing Status**: Added today
+- **Let Available**: 09/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/90956817](https://www.rightmove.co.uk/properties/90956817)
 
 ---
 
@@ -1092,21 +1137,6 @@ Millwall, E14
 - **Listing Status**: Reduced on 19/05/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/87805383](https://www.rightmove.co.uk/properties/87805383)
-
----
-
-### [2026-07-13T16:22:49.585Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Coopers, London
-- **Location**: Canary Wharf
-- **Property Name**: Wardian London, Wards Place, London, E14
-- **ID**: 89208084
-- **Price**: £2300 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-10
-- **Listing Status**: Reduced on 10/07/2026
-- **Let Available**: 07/08/2026
-- **Link**: [https://www.rightmove.co.uk/properties/89208084](https://www.rightmove.co.uk/properties/89208084)
 
 ---
 
