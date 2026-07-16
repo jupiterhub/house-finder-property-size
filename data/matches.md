@@ -1230,6 +1230,21 @@ Millwall, E14
 
 ---
 
+### [2026-07-16T19:01:12.986Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Life Residential, Canary Wharf Office
+- **Location**: Canary Wharf
+- **Property Name**: Baltimore Wharf, Canary Wharf
+- **ID**: 90986817
+- **Price**: £2550 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-16
+- **Listing Status**: Added today
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/90986817](https://www.rightmove.co.uk/properties/90986817)
+
+---
+
 ### [2026-07-13T16:22:49.586Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: haart, Stratford - Lettings
