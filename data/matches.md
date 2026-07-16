@@ -434,21 +434,6 @@ Millwall, E14
 
 ---
 
-### [2026-07-13T16:22:49.585Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Benham and Reeves - Canary Wharf, Canary Wharf
-- **Location**: Canary Wharf
-- **Property Name**: Millharbour, Canary Wharf, E14
-- **ID**: 90733836
-- **Price**: £2600 PCM
-- **Size**: 57.3 sqm
-- **Listing Update**: 2026-07-10
-- **Listing Status**: Added on 10/07/2026
-- **Let Available**: 25/08/2026
-- **Link**: [https://www.rightmove.co.uk/properties/90733836](https://www.rightmove.co.uk/properties/90733836)
-
----
-
 ### [2026-07-13T16:22:49.586Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Madison Brook, Docklands
@@ -731,6 +716,21 @@ Millwall, E14
 - **Listing Status**: Added on 14/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90880086](https://www.rightmove.co.uk/properties/90880086)
+
+---
+
+### [2026-07-16T13:27:55.460Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Settio Property Experience Ltd, London
+- **Location**: Canary Wharf
+- **Property Name**: Talisman Tower, Lincoln Plaza, E14
+- **ID**: 90965670
+- **Price**: £2400 PCM
+- **Size**: 50 sqm
+- **Listing Update**: 2026-07-16
+- **Listing Status**: Added today
+- **Let Available**: 20/07/2026
+- **Link**: [https://www.rightmove.co.uk/properties/90965670](https://www.rightmove.co.uk/properties/90965670)
 
 ---
 
@@ -1227,21 +1227,6 @@ Millwall, E14
 - **Listing Status**: Added on 13/07/2026
 - **Let Available**: 20/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90814404](https://www.rightmove.co.uk/properties/90814404)
-
----
-
-### [2026-07-14T16:44:34.270Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Ernest Brooks International, Canary Wharf
-- **Location**: Canary Wharf
-- **Property Name**: One Thames Quay, Marsh Wall, Canary Wharf, E14
-- **ID**: 88577046
-- **Price**: £2650 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-14
-- **Listing Status**: Reduced on 14/07/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/88577046](https://www.rightmove.co.uk/properties/88577046)
 
 ---
 
