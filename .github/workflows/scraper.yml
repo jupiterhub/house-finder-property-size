@@ -3,7 +3,8 @@ name: Property Scraper
 on:
   schedule:
     # Hourly between 08:00 and 19:00 BST (07:00 to 18:00 UTC) for fast listing discovery
-    - cron: '0 7-18 * * *'
+    # Disable daily hourly execution, as i'm on holidays
+    # - cron: '0 7-18 * * *'
     # Evening wrap at 22:00 BST (21:00 UTC)
     - cron: '0 21 * * *'
   # Allow manual triggering from the GitHub Actions tab
