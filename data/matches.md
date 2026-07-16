@@ -337,8 +337,8 @@ Millwall, E14
 - **ID**: 90414087
 - **Price**: £2150 PCM
 - **Size**: 60 sqm
-- **Listing Update**: 2026-07-02
-- **Listing Status**: Added on 02/07/2026
+- **Listing Update**: 2026-07-16
+- **Listing Status**: Reduced today
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90414087](https://www.rightmove.co.uk/properties/90414087)
 
@@ -599,6 +599,21 @@ Millwall, E14
 
 ---
 
+### [2026-07-16T15:29:31.852Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Franklyn James, Limehouse and Wapping
+- **Location**: Canary Wharf
+- **Property Name**: The Landmark, Canary Wharf, London, E14
+- **ID**: 90974211
+- **Price**: £2350 PCM
+- **Size**: 54 sqm
+- **Listing Update**: 2026-07-16
+- **Listing Status**: Added today
+- **Let Available**: 28/09/2026 (🦅 Early Bird: 74d adv)
+- **Link**: [https://www.rightmove.co.uk/properties/90974211](https://www.rightmove.co.uk/properties/90974211)
+
+---
+
 ### [2026-07-13T16:22:49.586Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Holland Properties, London
@@ -780,21 +795,6 @@ Millwall, E14
 
 ---
 
-### [2026-07-16T11:29:32.999Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Maxwell Property, London
-- **Location**: Canary Wharf
-- **Property Name**: Moore House, Cassilis Road, Canary Central, London
-- **ID**: 90954489
-- **Price**: £1950 PCM
-- **Size**: 46 sqm
-- **Listing Update**: 2026-07-15
-- **Listing Status**: Reduced yesterday
-- **Let Available**: 21/07/2026
-- **Link**: [https://www.rightmove.co.uk/properties/90954489](https://www.rightmove.co.uk/properties/90954489)
-
----
-
 ### [2026-07-13T16:22:49.585Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Dawn Sandoval Residential, Canary Wharf
@@ -822,6 +822,21 @@ Millwall, E14
 - **Listing Status**: Reduced on 12/07/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90397644](https://www.rightmove.co.uk/properties/90397644)
+
+---
+
+### [2026-07-16T15:29:31.852Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Henry Wiltshire, Royal Docks
+- **Location**: South Quay
+- **Property Name**: Baltimore Wharf, E14
+- **ID**: 90915108
+- **Price**: £2200 PCM
+- **Size**: 46 sqm
+- **Listing Update**: 2026-06-26
+- **Listing Status**: Reduced on 26/06/2026
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/90915108](https://www.rightmove.co.uk/properties/90915108)
 
 ---
 
@@ -1107,6 +1122,21 @@ Millwall, E14
 - **Listing Status**: Added on 09/07/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90677925](https://www.rightmove.co.uk/properties/90677925)
+
+---
+
+### [2026-07-16T15:29:31.852Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Life Residential, Canary Wharf Office
+- **Location**: Canary Wharf
+- **Property Name**: Crossharbour Plaza, Canary Wharf
+- **ID**: 90980022
+- **Price**: £2250 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-16
+- **Listing Status**: Added today
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/90980022](https://www.rightmove.co.uk/properties/90980022)
 
 ---
 
