@@ -844,7 +844,7 @@ Millwall, E14
 - **Platform**: Rightmove
 - **Marketed by**: Portico, Docklands Lettings
 - **Location**: Custom House
-- **Property Name**: Western Gateway, 22 Western Gateway, London, E16
+- **Property Name**: Alaska Apartments, 22 Western Gateway, London, E16
 - **ID**: 90911880
 - **Price**: £1950 PCM
 - **Size**: Unknown
