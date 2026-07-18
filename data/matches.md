@@ -67,7 +67,7 @@
 - **Price**: £2250 PCM
 - **Size**: 83.61 sqm
 - **Listing Update**: 2026-07-17
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: 04/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91047198](https://www.rightmove.co.uk/properties/91047198)
 
@@ -112,7 +112,7 @@
 - **Price**: £2500 PCM
 - **Size**: 78.1 sqm
 - **Listing Update**: 2026-07-17
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/91016220](https://www.rightmove.co.uk/properties/91016220)
 
@@ -145,21 +145,6 @@
 - **Listing Status**: Added on 10/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90735000](https://www.rightmove.co.uk/properties/90735000)
-
----
-
-### [2026-07-13T16:22:49.586Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: OpenRent, London
-- **Location**: Custom House
-- **Property Name**: Westgate, London, E16
-- **ID**: 90236922
-- **Price**: £2200 PCM
-- **Size**: 75.1 sqm
-- **Listing Update**: 2026-06-28
-- **Listing Status**: Added on 28/06/2026
-- **Let Available**: 03/08/2026
-- **Link**: [https://www.rightmove.co.uk/properties/90236922](https://www.rightmove.co.uk/properties/90236922)
 
 ---
 
@@ -238,21 +223,6 @@
 
 ---
 
-### [2026-07-15T16:50:33.032Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Flagstones Property Group, London
-- **Location**: Canary Wharf
-- **Property Name**: The Madison, Marsh Wall, Canary Wharf E14
-- **ID**: 90934689
-- **Price**: £2700 PCM
-- **Size**: 64 sqm
-- **Listing Update**: 2026-07-15
-- **Listing Status**: Added on 15/07/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/90934689](https://www.rightmove.co.uk/properties/90934689)
-
----
-
 ### [2026-07-14T16:44:34.270Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Chestertons, Canary Wharf and Docklands
@@ -323,7 +293,7 @@ Millwall, E14
 - **Price**: £2500 PCM
 - **Size**: 60.6 sqm
 - **Listing Update**: 2026-07-16
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 16/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90956748](https://www.rightmove.co.uk/properties/90956748)
 
@@ -353,7 +323,7 @@ Millwall, E14
 - **Price**: £2150 PCM
 - **Size**: 60 sqm
 - **Listing Update**: 2026-07-16
-- **Listing Status**: Reduced yesterday
+- **Listing Status**: Reduced on 16/07/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90414087](https://www.rightmove.co.uk/properties/90414087)
 
@@ -398,7 +368,7 @@ Millwall, E14
 - **Price**: £2150 PCM
 - **Size**: 58 sqm
 - **Listing Update**: 2026-07-16
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 16/07/2026
 - **Let Available**: 05/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90946464](https://www.rightmove.co.uk/properties/90946464)
 
@@ -413,7 +383,7 @@ Millwall, E14
 - **Price**: £2200 PCM
 - **Size**: 58 sqm
 - **Listing Update**: 2026-07-17
-- **Listing Status**: Reduced today
+- **Listing Status**: Reduced yesterday
 - **Let Available**: 25/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90496914](https://www.rightmove.co.uk/properties/90496914)
 
@@ -473,7 +443,7 @@ Millwall, E14
 - **Price**: £2150 PCM
 - **Size**: 55.74 sqm
 - **Listing Update**: 2026-07-16
-- **Listing Status**: Reduced yesterday
+- **Listing Status**: Reduced on 16/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90807477](https://www.rightmove.co.uk/properties/90807477)
 
@@ -494,6 +464,21 @@ Millwall, E14
 
 ---
 
+### [2026-07-18T21:42:40.343Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Benham and Reeves - Canary Wharf, Canary Wharf
+- **Location**: Custom House
+- **Property Name**: Wellspring House, Seagull Lane, London
+- **ID**: 91042239
+- **Price**: £2100 PCM
+- **Size**: 55.09 sqm
+- **Listing Update**: 2026-06-18
+- **Listing Status**: Added on 18/06/2026
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/91042239](https://www.rightmove.co.uk/properties/91042239)
+
+---
+
 ### [2026-07-13T16:22:49.586Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Edward Chase, Ilford
@@ -504,7 +489,7 @@ Millwall, E14
 - **Size**: 55.09 sqm
 - **Listing Update**: 2026-06-29
 - **Listing Status**: Reduced on 29/06/2026
-- **Let Available**: 18/07/2026
+- **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/87848298](https://www.rightmove.co.uk/properties/87848298)
 
 ---
@@ -593,7 +578,7 @@ Millwall, E14
 - **Price**: £2350 PCM
 - **Size**: 54 sqm
 - **Listing Update**: 2026-07-16
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 16/07/2026
 - **Let Available**: 28/09/2026 (🦅 Early Bird: 74d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/90974211](https://www.rightmove.co.uk/properties/90974211)
 
@@ -728,7 +713,7 @@ Millwall, E14
 - **Price**: £2400 PCM
 - **Size**: 50 sqm
 - **Listing Update**: 2026-07-16
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 16/07/2026
 - **Let Available**: 20/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90965670](https://www.rightmove.co.uk/properties/90965670)
 
@@ -863,8 +848,8 @@ Millwall, E14
 - **ID**: 89948127
 - **Price**: £1900 PCM
 - **Size**: Unknown
-- **Listing Update**: 2026-06-20
-- **Listing Status**: Added on 20/06/2026
+- **Listing Update**: 2026-07-18
+- **Listing Status**: Reduced today
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/89948127](https://www.rightmove.co.uk/properties/89948127)
 
@@ -885,6 +870,21 @@ Millwall, E14
 
 ---
 
+### [2026-07-18T21:42:40.343Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: OpenRent, London
+- **Location**: Canary Wharf
+- **Property Name**: Indescon Square, London, E14
+- **ID**: 91063539
+- **Price**: £1950 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-18
+- **Listing Status**: Added today
+- **Let Available**: 01/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/91063539](https://www.rightmove.co.uk/properties/91063539)
+
+---
+
 ### [2026-07-17T21:44:52.812Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Life Residential, Canary Wharf Office
@@ -894,7 +894,7 @@ Millwall, E14
 - **Price**: £1950 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-17
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/91021713](https://www.rightmove.co.uk/properties/91021713)
 
@@ -909,7 +909,7 @@ Millwall, E14
 - **Price**: £1950 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-16
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 16/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90984615](https://www.rightmove.co.uk/properties/90984615)
 
@@ -927,6 +927,21 @@ Millwall, E14
 - **Listing Status**: Added on 15/07/2026
 - **Let Available**: 26/09/2026 (🦅 Early Bird: 73d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/90911880](https://www.rightmove.co.uk/properties/90911880)
+
+---
+
+### [2026-07-18T21:42:40.343Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: John D Wood and Co, Docklands and City
+- **Location**: South Quay
+- **Property Name**: Baltimore Wharf, London, E14
+- **ID**: 91064367
+- **Price**: £2000 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-18
+- **Listing Status**: Added today
+- **Let Available**: 01/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/91064367](https://www.rightmove.co.uk/properties/91064367)
 
 ---
 
@@ -984,7 +999,7 @@ Millwall, E14
 - **Price**: £2050 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-16
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 16/07/2026
 - **Let Available**: 09/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90956817](https://www.rightmove.co.uk/properties/90956817)
 
@@ -1060,7 +1075,7 @@ Millwall, E14
 - **Size**: Unknown
 - **Listing Update**: 2026-07-09
 - **Listing Status**: Reduced on 09/07/2026
-- **Let Available**: 18/07/2026
+- **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/89854548](https://www.rightmove.co.uk/properties/89854548)
 
 ---
@@ -1149,7 +1164,7 @@ Millwall, E14
 - **Price**: £2250 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-16
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 16/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90980022](https://www.rightmove.co.uk/properties/90980022)
 
@@ -1164,7 +1179,7 @@ Millwall, E14
 - **Price**: £2300 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-17
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: 04/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91025466](https://www.rightmove.co.uk/properties/91025466)
 
@@ -1194,7 +1209,7 @@ Millwall, E14
 - **Price**: £2400 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-17
-- **Listing Status**: Reduced today
+- **Listing Status**: Reduced yesterday
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/89498094](https://www.rightmove.co.uk/properties/89498094)
 
@@ -1254,7 +1269,7 @@ Millwall, E14
 - **Price**: £2550 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-16
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 16/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90986817](https://www.rightmove.co.uk/properties/90986817)
 
