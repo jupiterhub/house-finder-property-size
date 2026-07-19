@@ -67,7 +67,7 @@
 - **Price**: £2250 PCM
 - **Size**: 83.61 sqm
 - **Listing Update**: 2026-07-17
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 17/07/2026
 - **Let Available**: 04/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91047198](https://www.rightmove.co.uk/properties/91047198)
 
@@ -112,7 +112,7 @@
 - **Price**: £2500 PCM
 - **Size**: 78.1 sqm
 - **Listing Update**: 2026-07-17
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 17/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/91016220](https://www.rightmove.co.uk/properties/91016220)
 
@@ -220,6 +220,21 @@
 - **Listing Status**: Added on 13/07/2026
 - **Let Available**: 01/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90820317](https://www.rightmove.co.uk/properties/90820317)
+
+---
+
+### [2026-07-19T21:43:37.369Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Flagstones Property Group, London
+- **Location**: Canary Wharf
+- **Property Name**: The Madison, Marsh Wall, Canary Wharf E14
+- **ID**: 91069332
+- **Price**: £2700 PCM
+- **Size**: 64 sqm
+- **Listing Update**: 2026-07-19
+- **Listing Status**: Added today
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/91069332](https://www.rightmove.co.uk/properties/91069332)
 
 ---
 
@@ -383,7 +398,7 @@ Millwall, E14
 - **Price**: £2200 PCM
 - **Size**: 58 sqm
 - **Listing Update**: 2026-07-17
-- **Listing Status**: Reduced yesterday
+- **Listing Status**: Reduced on 17/07/2026
 - **Let Available**: 25/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90496914](https://www.rightmove.co.uk/properties/90496914)
 
@@ -849,7 +864,7 @@ Millwall, E14
 - **Price**: £1900 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-18
-- **Listing Status**: Reduced today
+- **Listing Status**: Reduced yesterday
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/89948127](https://www.rightmove.co.uk/properties/89948127)
 
@@ -879,7 +894,7 @@ Millwall, E14
 - **Price**: £1950 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-18
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: 01/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91063539](https://www.rightmove.co.uk/properties/91063539)
 
@@ -894,7 +909,7 @@ Millwall, E14
 - **Price**: £1950 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-17
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 17/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/91021713](https://www.rightmove.co.uk/properties/91021713)
 
@@ -939,7 +954,7 @@ Millwall, E14
 - **Price**: £2000 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-18
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: 01/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91064367](https://www.rightmove.co.uk/properties/91064367)
 
@@ -1179,7 +1194,7 @@ Millwall, E14
 - **Price**: £2300 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-17
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 17/07/2026
 - **Let Available**: 04/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91025466](https://www.rightmove.co.uk/properties/91025466)
 
@@ -1209,7 +1224,7 @@ Millwall, E14
 - **Price**: £2400 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-17
-- **Listing Status**: Reduced yesterday
+- **Listing Status**: Reduced on 17/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/89498094](https://www.rightmove.co.uk/properties/89498094)
 
@@ -1227,6 +1242,21 @@ Millwall, E14
 - **Listing Status**: Reduced on 13/07/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/89831655](https://www.rightmove.co.uk/properties/89831655)
+
+---
+
+### [2026-07-19T21:43:37.368Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: OpenRent, London
+- **Location**: Canary Wharf
+- **Property Name**: Millharbour, London, E14
+- **ID**: 88846197
+- **Price**: £2450 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-19
+- **Listing Status**: Reduced today
+- **Let Available**: 25/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/88846197](https://www.rightmove.co.uk/properties/88846197)
 
 ---
 

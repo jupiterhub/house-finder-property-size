@@ -2504,6 +2504,22 @@
       "reason": "Size 18 sqm below min 45",
       "timestamp": "2026-07-18T21:41:57.647Z"
     },
+    "91071585": {
+      "reason": "Size 18 sqm below min 45",
+      "timestamp": "2026-07-19T21:43:06.477Z"
+    },
+    "91071588": {
+      "reason": "Size 18 sqm below min 45",
+      "timestamp": "2026-07-19T21:42:54.976Z"
+    },
+    "91071600": {
+      "reason": "Size 30 sqm below min 45",
+      "timestamp": "2026-07-19T21:43:04.573Z"
+    },
+    "91071609": {
+      "reason": "Size 44.3 sqm below min 45",
+      "timestamp": "2026-07-19T21:42:52.348Z"
+    },
     "94898018": {
       "reason": "Size 30.56 sqm below min 40",
       "timestamp": "2026-06-25T13:04:33.057Z"
@@ -2615,6 +2631,10 @@
     "167270549": {
       "reason": "Size 18.58 sqm below min 40",
       "timestamp": "2026-05-19T13:45:13.074Z"
+    },
+    "170165072": {
+      "reason": "Size 41 sqm below min 45",
+      "timestamp": "2026-07-19T21:43:00.023Z"
     },
     "170165777": {
       "reason": "Size 38 sqm below min 50",
