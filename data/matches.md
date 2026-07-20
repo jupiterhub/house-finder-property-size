@@ -208,21 +208,6 @@
 
 ---
 
-### [2026-07-13T16:22:49.584Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Campbell Residential, Docklands
-- **Location**: Canary Wharf
-- **Property Name**: Ability Place 37 Millharbour E14 9DF
-- **ID**: 90820317
-- **Price**: £2300 PCM
-- **Size**: 64 sqm
-- **Listing Update**: 2026-07-13
-- **Listing Status**: Added on 13/07/2026
-- **Let Available**: 01/09/2026
-- **Link**: [https://www.rightmove.co.uk/properties/90820317](https://www.rightmove.co.uk/properties/90820317)
-
----
-
 ### [2026-07-19T21:43:37.369Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Flagstones Property Group, London
@@ -232,7 +217,7 @@
 - **Price**: £2700 PCM
 - **Size**: 64 sqm
 - **Listing Update**: 2026-07-19
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/91069332](https://www.rightmove.co.uk/properties/91069332)
 
@@ -277,8 +262,8 @@ Millwall, E14
 - **ID**: 90732897
 - **Price**: £2300 PCM
 - **Size**: 61.6 sqm
-- **Listing Update**: 2026-07-10
-- **Listing Status**: Added on 10/07/2026
+- **Listing Update**: 2026-07-20
+- **Listing Status**: Reduced today
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90732897](https://www.rightmove.co.uk/properties/90732897)
 
@@ -502,25 +487,10 @@ Millwall, E14
 - **ID**: 87848298
 - **Price**: £2100 PCM
 - **Size**: 55.09 sqm
-- **Listing Update**: 2026-06-29
-- **Listing Status**: Reduced on 29/06/2026
-- **Let Available**: Now
+- **Listing Update**: 2026-07-20
+- **Listing Status**: Reduced today
+- **Let Available**: 25/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/87848298](https://www.rightmove.co.uk/properties/87848298)
-
----
-
-### [2026-07-13T16:22:49.586Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Keatons, Stratford
-- **Location**: Custom House
-- **Property Name**: Jane Austen Hall, 21 Wesley Avenue, London, E16
-- **ID**: 90604023
-- **Price**: £1900 PCM
-- **Size**: 55 sqm
-- **Listing Update**: 2026-07-07
-- **Listing Status**: Added on 07/07/2026
-- **Let Available**: 18/09/2026 (🦅 Early Bird: 73d adv)
-- **Link**: [https://www.rightmove.co.uk/properties/90604023](https://www.rightmove.co.uk/properties/90604023)
 
 ---
 
@@ -609,38 +579,8 @@ Millwall, E14
 - **Size**: 52 sqm
 - **Listing Update**: 2026-07-02
 - **Listing Status**: Reduced on 02/07/2026
-- **Let Available**: Now
+- **Let Available**: 15/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/89425242](https://www.rightmove.co.uk/properties/89425242)
-
----
-
-### [2026-07-14T12:46:08.175Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Franklyn James, Limehouse and Wapping
-- **Location**: Canary Wharf
-- **Property Name**: Ocean Wharf, 60 Westferry Road, E14
-- **ID**: 90856131
-- **Price**: £2000 PCM
-- **Size**: 52 sqm
-- **Listing Update**: 2026-07-14
-- **Listing Status**: Added on 14/07/2026
-- **Let Available**: 30/07/2026
-- **Link**: [https://www.rightmove.co.uk/properties/90856131](https://www.rightmove.co.uk/properties/90856131)
-
----
-
-### [2026-07-13T16:22:49.587Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: CROWN LUXURY HOMES LIMITED, London
-- **Location**: Custom House
-- **Property Name**: Galleria House, Royal Victoria, E16
-- **ID**: 90068493
-- **Price**: £2350 PCM
-- **Size**: 52 sqm
-- **Listing Update**: 2026-06-24
-- **Listing Status**: Added on 24/06/2026
-- **Let Available**: 01/09/2026 (🦅 Early Bird: 69d adv)
-- **Link**: [https://www.rightmove.co.uk/properties/90068493](https://www.rightmove.co.uk/properties/90068493)
 
 ---
 
@@ -719,18 +659,19 @@ Millwall, E14
 
 ---
 
-### [2026-07-16T13:27:55.460Z] MATCH FOUND!
+### [2026-07-20T21:57:05.608Z] MATCH FOUND!
 - **Platform**: Rightmove
-- **Marketed by**: Settio Property Experience Ltd, London
-- **Location**: Canary Wharf
-- **Property Name**: Talisman Tower, Lincoln Plaza, E14
-- **ID**: 90965670
-- **Price**: £2400 PCM
-- **Size**: 50 sqm
-- **Listing Update**: 2026-07-16
-- **Listing Status**: Added on 16/07/2026
-- **Let Available**: 20/07/2026
-- **Link**: [https://www.rightmove.co.uk/properties/90965670](https://www.rightmove.co.uk/properties/90965670)
+- **Marketed by**: Chestertons, Canary Wharf and Docklands
+- **Location**: Custom House
+- **Property Name**: Halcyon House, 
+3 Eden Place, E16
+- **ID**: 91084500
+- **Price**: £2350 PCM
+- **Size**: 49 sqm
+- **Listing Update**: 2026-07-20
+- **Listing Status**: Reduced today
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/91084500](https://www.rightmove.co.uk/properties/91084500)
 
 ---
 
@@ -864,7 +805,7 @@ Millwall, E14
 - **Price**: £1900 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-18
-- **Listing Status**: Reduced yesterday
+- **Listing Status**: Reduced on 18/07/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/89948127](https://www.rightmove.co.uk/properties/89948127)
 
@@ -894,7 +835,7 @@ Millwall, E14
 - **Price**: £1950 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-18
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 18/07/2026
 - **Let Available**: 01/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91063539](https://www.rightmove.co.uk/properties/91063539)
 
@@ -954,7 +895,7 @@ Millwall, E14
 - **Price**: £2000 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-18
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 18/07/2026
 - **Let Available**: 01/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91064367](https://www.rightmove.co.uk/properties/91064367)
 
@@ -1032,6 +973,36 @@ Millwall, E14
 - **Listing Status**: Reduced on 13/07/2026
 - **Let Available**: 26/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/89150535](https://www.rightmove.co.uk/properties/89150535)
+
+---
+
+### [2026-07-20T21:57:05.608Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: OpenRent, London
+- **Location**: Custom House
+- **Property Name**: Jersey Road, London, E16
+- **ID**: 91088535
+- **Price**: £2100 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-20
+- **Listing Status**: Added today
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/91088535](https://www.rightmove.co.uk/properties/91088535)
+
+---
+
+### [2026-07-20T21:57:05.607Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Discover Residential Ltd, Loughton
+- **Location**: Canary Wharf
+- **Property Name**: Ability Place, London, E14
+- **ID**: 61420695
+- **Price**: £2100 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-20
+- **Listing Status**: Added today
+- **Let Available**: 20/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/61420695](https://www.rightmove.co.uk/properties/61420695)
 
 ---
 
@@ -1150,23 +1121,38 @@ Millwall, E14
 - **Size**: Unknown
 - **Listing Update**: 2026-07-11
 - **Listing Status**: Added on 11/07/2026
-- **Let Available**: 20/07/2026
+- **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/64568847](https://www.rightmove.co.uk/properties/64568847)
 
 ---
 
-### [2026-07-13T16:22:49.585Z] MATCH FOUND!
+### [2026-07-20T21:57:05.607Z] MATCH FOUND!
 - **Platform**: Rightmove
-- **Marketed by**: Regent Letting and Property Management, London
+- **Marketed by**: Felicity J Lord, Canary Wharf Lettings
 - **Location**: Canary Wharf
-- **Property Name**: Dock East Apartments, Selsdon Way, E14
-- **ID**: 90677925
-- **Price**: £2200 PCM
+- **Property Name**: Meridian Place, London
+- **ID**: 91125150
+- **Price**: £2250 PCM
 - **Size**: Unknown
-- **Listing Update**: 2026-07-09
-- **Listing Status**: Added on 09/07/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/90677925](https://www.rightmove.co.uk/properties/90677925)
+- **Listing Update**: 2026-07-20
+- **Listing Status**: Added today
+- **Let Available**: 06/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/91125150](https://www.rightmove.co.uk/properties/91125150)
+
+---
+
+### [2026-07-20T21:57:05.607Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Holland Properties, London
+- **Location**: Canary Wharf
+- **Property Name**: Denison House, E14
+- **ID**: 91097889
+- **Price**: £2250 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-20
+- **Listing Status**: Added today
+- **Let Available**: 31/07/2026
+- **Link**: [https://www.rightmove.co.uk/properties/91097889](https://www.rightmove.co.uk/properties/91097889)
 
 ---
 
@@ -1182,6 +1168,21 @@ Millwall, E14
 - **Listing Status**: Added on 16/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90980022](https://www.rightmove.co.uk/properties/90980022)
+
+---
+
+### [2026-07-20T21:57:05.608Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Life Residential, Canary Wharf Office
+- **Location**: South Quay
+- **Property Name**: Claire Place, Canary Wharf
+- **ID**: 91079727
+- **Price**: £2300 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-20
+- **Listing Status**: Added today
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/91079727](https://www.rightmove.co.uk/properties/91079727)
 
 ---
 
@@ -1212,6 +1213,21 @@ Millwall, E14
 - **Listing Status**: Reduced on 19/05/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/87805383](https://www.rightmove.co.uk/properties/87805383)
+
+---
+
+### [2026-07-20T21:57:05.608Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: OpenRent, London
+- **Location**: Custom House
+- **Property Name**: Capital East Aparts, London, E16
+- **ID**: 91095582
+- **Price**: £2400 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-08
+- **Listing Status**: Reduced on 08/07/2026
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/91095582](https://www.rightmove.co.uk/properties/91095582)
 
 ---
 
@@ -1254,7 +1270,7 @@ Millwall, E14
 - **Price**: £2450 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-19
-- **Listing Status**: Reduced today
+- **Listing Status**: Reduced yesterday
 - **Let Available**: 25/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/88846197](https://www.rightmove.co.uk/properties/88846197)
 
@@ -1345,7 +1361,7 @@ Millwall, E14
 - **Size**: Unknown
 - **Listing Update**: 2026-07-13
 - **Listing Status**: Added on 13/07/2026
-- **Let Available**: 20/07/2026
+- **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90814404](https://www.rightmove.co.uk/properties/90814404)
 
 ---
