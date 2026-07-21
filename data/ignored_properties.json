@@ -2870,6 +2870,10 @@
       "reason": "Size 41.9 sqm below min 45",
       "timestamp": "2026-07-13T15:56:45.518Z"
     },
+    "2638326": {
+      "reason": "Price £1885 below min £1900",
+      "timestamp": "2026-07-21T10:55:12.860Z"
+    },
     "2646020": {
       "reason": "Size 35.77 sqm below min 50",
       "timestamp": "2026-07-12T10:30:00.874Z"
