@@ -15,21 +15,6 @@
 
 ### [2026-07-13T16:22:49.586Z] MATCH FOUND!
 - **Platform**: Rightmove
-- **Marketed by**: W J Meade, Mile End and Bow
-- **Location**: South Quay
-- **Property Name**: Peninsula Court, Canary Wharf, E14
-- **ID**: 90412020
-- **Price**: £2500 PCM
-- **Size**: 88 sqm
-- **Listing Update**: 2026-07-11
-- **Listing Status**: Reduced on 11/07/2026
-- **Let Available**: 06/08/2026
-- **Link**: [https://www.rightmove.co.uk/properties/90412020](https://www.rightmove.co.uk/properties/90412020)
-
----
-
-### [2026-07-13T16:22:49.586Z] MATCH FOUND!
-- **Platform**: Rightmove
 - **Marketed by**: Complete Prime Residential Ltd, London
 - **Location**: Custom House
 - **Property Name**: Gateway Tower, Western Gateway, London, E16
@@ -329,21 +314,6 @@ Millwall, E14
 
 ---
 
-### [2026-07-13T16:22:49.584Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Oakland Estates, Barkingside
-- **Location**: Canary Wharf
-- **Property Name**: Lanterns Way, Denison House, E14
-- **ID**: 89325786
-- **Price**: £2100 PCM
-- **Size**: 58 sqm
-- **Listing Update**: 2026-07-13
-- **Listing Status**: Reduced on 13/07/2026
-- **Let Available**: 01/08/2026
-- **Link**: [https://www.rightmove.co.uk/properties/89325786](https://www.rightmove.co.uk/properties/89325786)
-
----
-
 ### [2026-07-16T08:20:27.384Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Property Inside London, Covering London
@@ -386,6 +356,21 @@ Millwall, E14
 - **Listing Status**: Added on 09/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90708627](https://www.rightmove.co.uk/properties/90708627)
+
+---
+
+### [2026-07-21T18:07:32.406Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Spencer James Residential, London
+- **Location**: Custom House
+- **Property Name**: 10 Windsor Hall, E16
+- **ID**: 91171662
+- **Price**: £1900 PCM
+- **Size**: 57.8 sqm
+- **Listing Update**: 2026-07-21
+- **Listing Status**: Added today
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/91171662](https://www.rightmove.co.uk/properties/91171662)
 
 ---
 
@@ -640,7 +625,7 @@ Millwall, E14
 - **Size**: 47 sqm
 - **Listing Update**: 2026-07-21
 - **Listing Status**: Added today
-- **Let Available**: 25/09/2026 (🦅 Early Bird: 66d adv)
+- **Let Available**: 15/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91158870](https://www.rightmove.co.uk/properties/91158870)
 
 ---
@@ -672,21 +657,6 @@ Millwall, E14
 - **Listing Status**: Added on 14/07/2026
 - **Let Available**: 11/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90848949](https://www.rightmove.co.uk/properties/90848949)
-
----
-
-### [2026-07-13T16:22:49.585Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Dawn Sandoval Residential, Canary Wharf
-- **Location**: Canary Wharf
-- **Property Name**: Edison Building, Millennium Harbour, Westferry Road, London
-- **ID**: 90044970
-- **Price**: £2100 PCM
-- **Size**: 46 sqm
-- **Listing Update**: 2026-07-13
-- **Listing Status**: Reduced on 13/07/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/90044970](https://www.rightmove.co.uk/properties/90044970)
 
 ---
 
@@ -1152,6 +1122,21 @@ Millwall, E14
 - **Listing Status**: Added on 16/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90980022](https://www.rightmove.co.uk/properties/90980022)
+
+---
+
+### [2026-07-21T18:07:32.406Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Ernest Brooks International, Canary Wharf
+- **Location**: Canary Wharf
+- **Property Name**: Landmark East Tower, 24 Marsh Wall, Canary Wharf, E14
+- **ID**: 91170438
+- **Price**: £2300 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-21
+- **Listing Status**: Added today
+- **Let Available**: 26/09/2026 (🦅 Early Bird: 67d adv)
+- **Link**: [https://www.rightmove.co.uk/properties/91170438](https://www.rightmove.co.uk/properties/91170438)
 
 ---
 
