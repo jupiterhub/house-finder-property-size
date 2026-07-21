@@ -208,21 +208,6 @@
 
 ---
 
-### [2026-07-19T21:43:37.369Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Flagstones Property Group, London
-- **Location**: Canary Wharf
-- **Property Name**: The Madison, Marsh Wall, Canary Wharf E14
-- **ID**: 91069332
-- **Price**: £2700 PCM
-- **Size**: 64 sqm
-- **Listing Update**: 2026-07-19
-- **Listing Status**: Added on 19/07/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/91069332](https://www.rightmove.co.uk/properties/91069332)
-
----
-
 ### [2026-07-14T16:44:34.270Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Chestertons, Canary Wharf and Docklands
@@ -645,6 +630,21 @@ Millwall, E14
 
 ---
 
+### [2026-07-21T14:54:07.844Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Stirling Ackroyd Lettings, Canary Wharf
+- **Location**: Canary Wharf
+- **Property Name**: Cassilis Road, London, E14
+- **ID**: 91158870
+- **Price**: £1900 PCM
+- **Size**: 47 sqm
+- **Listing Update**: 2026-07-21
+- **Listing Status**: Added today
+- **Let Available**: 25/09/2026 (🦅 Early Bird: 66d adv)
+- **Link**: [https://www.rightmove.co.uk/properties/91158870](https://www.rightmove.co.uk/properties/91158870)
+
+---
+
 ### [2026-07-13T19:40:09.468Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Life Residential, Canary Wharf Office
@@ -930,6 +930,21 @@ Millwall, E14
 
 ---
 
+### [2026-07-21T14:54:07.844Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: OpenRent, London
+- **Location**: Canary Wharf
+- **Property Name**: Naxos Building Seacon Wharf, London, E14
+- **ID**: 91157310
+- **Price**: £2100 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-21
+- **Listing Status**: Added today
+- **Let Available**: 03/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/91157310](https://www.rightmove.co.uk/properties/91157310)
+
+---
+
 ### [2026-07-20T21:57:05.608Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: OpenRent, London
@@ -1032,6 +1047,21 @@ Millwall, E14
 - **Listing Status**: Added on 07/07/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90585087](https://www.rightmove.co.uk/properties/90585087)
+
+---
+
+### [2026-07-21T14:54:07.844Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Abc Gone, Romford
+- **Location**: Custom House
+- **Property Name**: Windward Court, Gallions Road, Victoria Dock, E16
+- **ID**: 91135977
+- **Price**: £2200 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-21
+- **Listing Status**: Added today
+- **Let Available**: 28/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/91135977](https://www.rightmove.co.uk/properties/91135977)
 
 ---
 
@@ -1167,6 +1197,21 @@ Millwall, E14
 - **Listing Status**: Reduced on 19/05/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/87805383](https://www.rightmove.co.uk/properties/87805383)
+
+---
+
+### [2026-07-21T14:54:07.844Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: OpenRent, London
+- **Location**: Canary Wharf
+- **Property Name**: London, London, E22
+- **ID**: 91141362
+- **Price**: £2400 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-21
+- **Listing Status**: Added today
+- **Let Available**: 17/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/91141362](https://www.rightmove.co.uk/properties/91141362)
 
 ---
 
