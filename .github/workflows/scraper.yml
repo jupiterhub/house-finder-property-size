@@ -2,11 +2,9 @@ name: Property Scraper
 
 on:
   schedule:
-    # Hourly between 08:00 and 19:00 BST (07:00 to 18:00 UTC) for fast listing discovery
-    # Disable daily hourly execution, as i'm on holidays
-    # - cron: '0 7-18 * * *'
-    # Evening wrap at 22:00 BST (21:00 UTC)
-    - cron: '0 21 * * *'
+    # Strategic London property listing update windows (BST: 10:00, 14:00, 18:00, 21:00 | GMT: 09:00, 13:00, 17:00, 20:00)
+    # Aligned with letting agent business hour upload waves (morning, post-lunch, end-of-workday) and evening portal browsing peaks
+    - cron: '0 9,13,17,20 * * *'
   # Allow manual triggering from the GitHub Actions tab
   workflow_dispatch:
 
