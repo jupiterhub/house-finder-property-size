@@ -43,6 +43,21 @@
 
 ---
 
+### [2026-07-22T20:55:09.093Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Felicity J Lord, Canary Wharf Lettings
+- **Location**: E14
+- **Property Name**: Boardwalk Place, London
+- **ID**: 88658109
+- **Price**: £2700 PCM
+- **Size**: 102.19 sqm
+- **Listing Update**: 2026-05-19
+- **Listing Status**: Added on 19/05/2026
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/88658109](https://www.rightmove.co.uk/properties/88658109)
+
+---
+
 ### [2026-07-22T19:18:01.176Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: ea2, Wapping
@@ -77,7 +92,8 @@
 - **Platform**: Rightmove
 - **Marketed by**: Chestertons, Tower Bridge
 - **Location**: Wapping (London Dock - E1W)
-- **Property Name**: Kingsley Mews,
+- **Property Name**: Kingsley Mews, 
+Wapping, E1W
 - **ID**: 90873090
 - **Price**: £2500 PCM
 - **Size**: 90.67 sqm
@@ -182,7 +198,8 @@
 - **Platform**: Rightmove
 - **Marketed by**: Chestertons, Tower Bridge
 - **Location**: SE16
-- **Property Name**: Limasol Street,
+- **Property Name**: Limasol Street, 
+South Bermondsey, SE16
 - **ID**: 90876843
 - **Price**: £2500 PCM
 - **Size**: 78 sqm
@@ -572,7 +589,8 @@
 - **Platform**: Rightmove
 - **Marketed by**: Chestertons, Canary Wharf and Docklands
 - **Location**: South Quay
-- **Property Name**: Pepper Street,
+- **Property Name**: Pepper Street, 
+Millwall, E14
 - **ID**: 90872100
 - **Price**: £2150 PCM
 - **Size**: 63.17 sqm
@@ -737,7 +755,8 @@
 - **Platform**: Rightmove
 - **Marketed by**: Chestertons, Canary Wharf and Docklands
 - **Location**: Canary Wharf
-- **Property Name**: Millharbour,
+- **Property Name**: Millharbour, 
+Millwall, E14
 - **ID**: 90405759
 - **Price**: £2700 PCM
 - **Size**: 59 sqm
@@ -887,7 +906,8 @@
 - **Platform**: Rightmove
 - **Marketed by**: Chestertons, Islington
 - **Location**: King's Cross (N1C)
-- **Property Name**: Calshot Street,
+- **Property Name**: Calshot Street, 
+Islington, N1
 - **ID**: 89583771
 - **Price**: £2100 PCM
 - **Size**: 54 sqm
@@ -906,8 +926,8 @@
 - **ID**: 90880098
 - **Price**: £2100 PCM
 - **Size**: 54 sqm
-- **Listing Update**: 2026-07-14
-- **Listing Status**: Added on 14/07/2026
+- **Listing Update**: 2026-07-22
+- **Listing Status**: Reduced today
 - **Let Available**: 01/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90880098](https://www.rightmove.co.uk/properties/90880098)
 
@@ -1127,7 +1147,8 @@
 - **Platform**: Rightmove
 - **Marketed by**: Chestertons, Islington
 - **Location**: City Road Basin (EC1V)
-- **Property Name**: Wenlock Street,
+- **Property Name**: Wenlock Street, 
+Angel Wharf, N1
 - **ID**: 90813474
 - **Price**: £2150 PCM
 - **Size**: 49 sqm
@@ -1142,7 +1163,8 @@
 - **Platform**: Rightmove
 - **Marketed by**: Chestertons, Islington
 - **Location**: City Road Basin (EC1V)
-- **Property Name**: Gee Street,
+- **Property Name**: Gee Street, 
+Clerkenwell, EC1V
 - **ID**: 88223106
 - **Price**: £2200 PCM
 - **Size**: 49 sqm
