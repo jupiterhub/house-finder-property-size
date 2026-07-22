@@ -580,6 +580,10 @@
       "reason": "Size 36 sqm below min 40",
       "timestamp": "2026-06-20T12:17:30.152Z"
     },
+    "89280255": {
+      "reason": "Price £560 below min £1900",
+      "timestamp": "2026-07-22T10:56:31.486Z"
+    },
     "89282220": {
       "reason": "Size 34 sqm below min 40",
       "timestamp": "2026-06-04T13:46:45.396Z"
@@ -2720,6 +2724,10 @@
       "reason": "Size 43 sqm below min 45",
       "timestamp": "2026-07-13T15:56:13.780Z"
     },
+    "172252505": {
+      "reason": "Price £461 below min £1900",
+      "timestamp": "2026-07-22T10:57:37.147Z"
+    },
     "172426679": {
       "reason": "Price £565 below min £1900",
       "timestamp": "2026-07-16T17:07:29.229Z"
@@ -2847,6 +2855,10 @@
     "174992399": {
       "reason": "Size 39 sqm below min 40",
       "timestamp": "2026-06-01T16:28:06.284Z"
+    },
+    "175002320": {
+      "reason": "Price £610 below min £1900",
+      "timestamp": "2026-07-22T10:57:37.150Z"
     }
   },
   "Zoopla": {
@@ -2885,6 +2897,10 @@
     "2420382": {
       "reason": "Size 37.07 sqm below min 50",
       "timestamp": "2026-07-12T16:26:36.089Z"
+    },
+    "2439716": {
+      "reason": "Size 34.37 sqm below min 45",
+      "timestamp": "2026-07-22T10:56:41.891Z"
     },
     "2444735": {
       "reason": "Size 39.86 sqm below min 50",
