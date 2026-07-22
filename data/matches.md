@@ -28,6 +28,21 @@
 
 ---
 
+### [2026-07-22T14:53:42.157Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Felicity J Lord, Canary Wharf Lettings
+- **Location**: Canary Wharf
+- **Property Name**: Hertsmere Road, LONDON
+- **ID**: 175003271
+- **Price**: £2700 PCM
+- **Size**: 83.98 sqm
+- **Listing Update**: 2026-07-22
+- **Listing Status**: Added today
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/175003271](https://www.rightmove.co.uk/properties/175003271)
+
+---
+
 ### [2026-07-17T21:44:52.811Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: OpenRent, London
@@ -141,8 +156,8 @@
 - **ID**: 149573198
 - **Price**: £2400 PCM
 - **Size**: 69.5 sqm
-- **Listing Update**: 2026-07-15
-- **Listing Status**: Reduced on 15/07/2026
+- **Listing Update**: 2026-07-22
+- **Listing Status**: Reduced today
 - **Let Available**: 28/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/149573198](https://www.rightmove.co.uk/properties/149573198)
 
@@ -178,6 +193,21 @@
 
 ---
 
+### [2026-07-22T14:53:42.156Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Franklyn James, Limehouse and Wapping
+- **Location**: Canary Wharf
+- **Property Name**: Wayfair House South, Poplar High Street, London, E14
+- **ID**: 91198227
+- **Price**: £2400 PCM
+- **Size**: 64 sqm
+- **Listing Update**: 2026-07-22
+- **Listing Status**: Added today
+- **Let Available**: 25/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/91198227](https://www.rightmove.co.uk/properties/91198227)
+
+---
+
 ### [2026-07-14T16:44:34.270Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Chestertons, Canary Wharf and Docklands
@@ -191,6 +221,21 @@ Millwall, E14
 - **Listing Status**: Added on 14/07/2026
 - **Let Available**: 03/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90872100](https://www.rightmove.co.uk/properties/90872100)
+
+---
+
+### [2026-07-22T14:53:42.157Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Stirling Ackroyd Lettings, Canary Wharf
+- **Location**: Canary Wharf
+- **Property Name**: Baltimore Wharf, London, E14
+- **ID**: 91190286
+- **Price**: £2700 PCM
+- **Size**: 61.97 sqm
+- **Listing Update**: 2026-07-22
+- **Listing Status**: Added today
+- **Let Available**: 04/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/91190286](https://www.rightmove.co.uk/properties/91190286)
 
 ---
 
@@ -296,6 +341,22 @@ Millwall, E14
 - **Listing Status**: Reduced on 14/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90473634](https://www.rightmove.co.uk/properties/90473634)
+
+---
+
+### [2026-07-22T14:53:42.157Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Chestertons, Canary Wharf and Docklands
+- **Location**: Canary Wharf
+- **Property Name**: Millharbour, 
+Millwall, E14
+- **ID**: 90405759
+- **Price**: £2700 PCM
+- **Size**: 59 sqm
+- **Listing Update**: 2026-07-22
+- **Listing Status**: Reduced today
+- **Let Available**: 27/07/2026
+- **Link**: [https://www.rightmove.co.uk/properties/90405759](https://www.rightmove.co.uk/properties/90405759)
 
 ---
 
@@ -464,6 +525,21 @@ Millwall, E14
 
 ---
 
+### [2026-07-22T14:53:42.157Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Hamptons, Canary Wharf
+- **Location**: Canary Wharf
+- **Property Name**: Landmark East, E14
+- **ID**: 175007150
+- **Price**: £2650 PCM
+- **Size**: 54.3 sqm
+- **Listing Update**: 2026-07-22
+- **Listing Status**: Added today
+- **Let Available**: 25/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/175007150](https://www.rightmove.co.uk/properties/175007150)
+
+---
+
 ### [2026-07-13T16:22:49.586Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Ernest Brooks International, Canary Wharf
@@ -506,6 +582,21 @@ Millwall, E14
 - **Listing Status**: Added on 16/07/2026
 - **Let Available**: 28/09/2026 (🦅 Early Bird: 74d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/90974211](https://www.rightmove.co.uk/properties/90974211)
+
+---
+
+### [2026-07-22T14:53:42.156Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: AP Living London, London
+- **Location**: Canary Wharf
+- **Property Name**: 41 Millharbour, South Quay
+- **ID**: 90366564
+- **Price**: £2100 PCM
+- **Size**: 51 sqm
+- **Listing Update**: 2026-07-22
+- **Listing Status**: Reduced today
+- **Let Available**: 25/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/90366564](https://www.rightmove.co.uk/properties/90366564)
 
 ---
 
@@ -652,8 +743,8 @@ Millwall, E14
 - **ID**: 90984615
 - **Price**: £1950 PCM
 - **Size**: Unknown
-- **Listing Update**: 2026-07-16
-- **Listing Status**: Added on 16/07/2026
+- **Listing Update**: 2026-07-22
+- **Listing Status**: Reduced today
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90984615](https://www.rightmove.co.uk/properties/90984615)
 
@@ -944,6 +1035,21 @@ Millwall, E14
 
 ---
 
+### [2026-07-22T14:53:42.156Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Benham and Reeves - Canary Wharf, Canary Wharf
+- **Location**: Canary Wharf
+- **Property Name**: Premiere Place, Canary wharf, E14
+- **ID**: 91198845
+- **Price**: £2250 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-22
+- **Listing Status**: Added today
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/91198845](https://www.rightmove.co.uk/properties/91198845)
+
+---
+
 ### [2026-07-20T21:57:05.607Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Holland Properties, London
@@ -1196,6 +1302,21 @@ Millwall, E14
 - **Listing Status**: Added on 13/07/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90814404](https://www.rightmove.co.uk/properties/90814404)
+
+---
+
+### [2026-07-22T14:53:42.156Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Right Now Residential, London
+- **Location**: Canary Wharf
+- **Property Name**: Amory Tower, Marsh Wall, Tower Hamlets, London
+- **ID**: 91204194
+- **Price**: £2700 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-22
+- **Listing Status**: Reduced today
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/91204194](https://www.rightmove.co.uk/properties/91204194)
 
 ---
 
