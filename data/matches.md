@@ -630,6 +630,21 @@ Millwall, E14
 
 ---
 
+### [2026-07-22T18:00:14.667Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Life Residential, Canary Wharf Office
+- **Location**: Canary Wharf
+- **Property Name**: Trinity Tower, Canary Wharf
+- **ID**: 91218207
+- **Price**: £2200 PCM
+- **Size**: 47.6 sqm
+- **Listing Update**: 2026-07-22
+- **Listing Status**: Added today
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/91218207](https://www.rightmove.co.uk/properties/91218207)
+
+---
+
 ### [2026-07-14T12:46:08.175Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Douglas Pryce, Hither Green
@@ -1314,7 +1329,7 @@ Millwall, E14
 - **Price**: £2700 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-22
-- **Listing Status**: Reduced today
+- **Listing Status**: Added today
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/91204194](https://www.rightmove.co.uk/properties/91204194)
 
