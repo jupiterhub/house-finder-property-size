@@ -27,13 +27,20 @@ class RightmoveAdapter {
 
     const LOCATION_IDENTIFIERS = {
       "canary wharf": "STATION^1724",
+      "canary wharf (e14)": "STATION^1724",
       "wood wharf": "STATION^1724",
       "south quay": "STATION^8432",
+      "south quay (e14)": "STATION^8432",
       "south quay / canary wharf south": "STATION^8432",
       "canary wharf south": "STATION^8432",
       "south quay station": "STATION^8432",
-      "crossharbour": "STATION^2504",
-      "crossharbour station": "STATION^2504",
+      "e14": "OUTCODE^749",
+      "e14 5ab": "OUTCODE^749",
+      "e14 9by": "OUTCODE^749",
+      "e14 9gg": "OUTCODE^749",
+      "e14 9qa": "OUTCODE^749",
+      "crossharbour": "STATION^2465",
+      "crossharbour station": "STATION^2465",
       "custom house / royal victoria docks": "STATION^2540",
       "custom house / royal victoria": "STATION^2540",
       "custom house / royal dock": "STATION^2540",
@@ -44,14 +51,52 @@ class RightmoveAdapter {
       "greenwich peninsula": "STATION^6719",
       "north greenwich": "STATION^6719",
       "woolwich": "REGION^70391",
-      "woolwich (royal arsenal)": "STATION^15846",
-      "royal arsenal, woolwich": "STATION^15846",
-      "royal arsenal": "STATION^15846",
+      "woolwich (royal arsenal)": "STATION^10286",
+      "royal arsenal, woolwich": "STATION^10286",
+      "royal arsenal": "STATION^10286",
       "paddington": "STATION^6965",
       "moorgate": "STATION^6332",
       "bloomsbury (russell square)": "STATION^7877",
       "farringdon / clerkenwell": "STATION^3431",
+      "farringdon": "STATION^3431",
       "king's cross": "STATION^5162",
+      "king's cross (n1c)": "STATION^5162",
+      "kings cross (n1c)": "STATION^5162",
+      "n1c": "OUTCODE^6147",
+      "n1c 4ay": "OUTCODE^6147",
+      "n1c 4ab": "OUTCODE^6147",
+      "n1c 4ag": "OUTCODE^6147",
+      "n1c 4al": "OUTCODE^6147",
+      "n1c 4ax": "OUTCODE^6147",
+      "n1c 4bz": "OUTCODE^6147",
+      "n1": "OUTCODE^1666",
+      "city road basin": "STATION^6881",
+      "city road basin (ec1v)": "STATION^6881",
+      "city road": "STATION^6881",
+      "250 city road": "STATION^6881",
+      "old street": "STATION^6881",
+      "ec1v": "OUTCODE^770",
+      "ec1v 1af": "OUTCODE^770",
+      "ec1v 1ae": "OUTCODE^770",
+      "ec1v 2ab": "OUTCODE^770",
+      "ec1v 2pu": "OUTCODE^770",
+      "ec1v 1am": "OUTCODE^770",
+      "ec1v 1jh": "OUTCODE^770",
+      "canada water": "STATION^1721",
+      "canada water (se16)": "STATION^1721",
+      "se16": "OUTCODE^2316",
+      "se16 7ae": "OUTCODE^2316",
+      "se16 7ey": "OUTCODE^2316",
+      "se16 7ah": "OUTCODE^2316",
+      "wapping (london dock)": "STATION^9602",
+      "wapping (london dock - e1w)": "STATION^9602",
+      "wapping": "STATION^9602",
+      "london dock": "STATION^9602",
+      "e1w": "OUTCODE^754",
+      "e1w 2ag": "OUTCODE^754",
+      "e1w 2aa": "OUTCODE^754",
+      "e1w 2ax": "OUTCODE^754",
+      "e1w 2fu": "OUTCODE^754",
       "blackfriars": "STATION^1040",
       "ealing broadway": "STATION^3023",
       "london bridge": "STATION^5792",
@@ -60,8 +105,10 @@ class RightmoveAdapter {
       "highbury & islington": "STATION^4583",
       "openrent (london)": "https://www.rightmove.co.uk/estate-agents/agent/OpenRent/London-96668.html?transactionType=lettings"
     };
+    this.LOCATION_IDENTIFIERS = LOCATION_IDENTIFIERS;
 
-    const locationsToScrape = config.locations || [];
+    const rawLocations = [...(config.locations || []), ...(config.postcodes || [])];
+    const locationsToScrape = [...new Set(rawLocations)];
     let isFirstLocation = true;
     for (const locationName of locationsToScrape) {
       if (!isFirstLocation) {
@@ -460,6 +507,18 @@ class RightmoveAdapter {
         return null;
       }
 
+      let strategicMatch = null;
+      if (config.strategicKeywords) {
+        const allKw = Object.values(config.strategicKeywords).flat();
+        for (const kw of allKw) {
+          if ((propertyName && propertyName.toLowerCase().includes(kw.toLowerCase())) ||
+              (pageModelText && pageModelText.toLowerCase().includes(kw.toLowerCase()))) {
+            strategicMatch = kw;
+            break;
+          }
+        }
+      }
+
       return {
         platform: this.platformName,
         id: listing.id,
@@ -467,6 +526,7 @@ class RightmoveAdapter {
         sqm: sqm || 0,
         location: locationName,
         propertyName: propertyName,
+        strategicMatch: strategicMatch,
         agent: agentName || 'Unknown',
         url: `https://www.rightmove.co.uk/properties/${listing.id}`,
         listingUpdate: listingUpdate,

@@ -22,6 +22,20 @@ class JLLAdapter {
       `https://residential.jll.co.uk/search?tenureType=rent&placeName=South%20Quay%2C%20London&priceMin=${priceMin}&priceMax=${priceMax}&currencyType=GBP&radius=3.0&sortBy=newestListed&sortDirection=desc&page=1&frequency=monthly`
     ];
 
+    const locs = (config.locations || []).map(l => l.toLowerCase());
+    if (locs.some(l => l.includes("king's cross") || l.includes('n1c') || l.includes('n1'))) {
+      searchUrls.push(`https://residential.jll.co.uk/search?tenureType=rent&placeName=King%27s%20Cross%2C%20London&priceMin=${priceMin}&priceMax=${priceMax}&currencyType=GBP&radius=3.0&sortBy=newestListed&sortDirection=desc&page=1&frequency=monthly`);
+    }
+    if (locs.some(l => l.includes('city road') || l.includes('ec1v') || l.includes('old street') || l.includes('farringdon'))) {
+      searchUrls.push(`https://residential.jll.co.uk/search?tenureType=rent&placeName=Old%20Street%2C%20London&priceMin=${priceMin}&priceMax=${priceMax}&currencyType=GBP&radius=3.0&sortBy=newestListed&sortDirection=desc&page=1&frequency=monthly`);
+    }
+    if (locs.some(l => l.includes('canada water') || l.includes('se16'))) {
+      searchUrls.push(`https://residential.jll.co.uk/search?tenureType=rent&placeName=Canada%20Water%2C%20London&priceMin=${priceMin}&priceMax=${priceMax}&currencyType=GBP&radius=3.0&sortBy=newestListed&sortDirection=desc&page=1&frequency=monthly`);
+    }
+    if (locs.some(l => l.includes('wapping') || l.includes('london dock') || l.includes('e1w'))) {
+      searchUrls.push(`https://residential.jll.co.uk/search?tenureType=rent&placeName=Wapping%2C%20London&priceMin=${priceMin}&priceMax=${priceMax}&currencyType=GBP&radius=3.0&sortBy=newestListed&sortDirection=desc&page=1&frequency=monthly`);
+    }
+
     const allLinks = new Set();
     try {
       for (const url of searchUrls) {

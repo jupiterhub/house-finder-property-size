@@ -33,6 +33,22 @@ class JohnsAndCoAdapter {
     if (locs.some(l => l.includes('woolwich') || l.includes('se18'))) {
       searchUrls.push(`https://www.johnsand.co/rent?location=SE18&minPrice=${priceMin}&maxPrice=${priceMax}&order=newest`);
     }
+    if (locs.some(l => l.includes("king's cross") || l.includes('n1c') || l.includes('n1'))) {
+      searchUrls.push(`https://www.johnsand.co/rent?location=N1C&minPrice=${priceMin}&maxPrice=${priceMax}&order=newest`);
+      searchUrls.push(`https://www.johnsand.co/rent?location=King%27s%20Cross&minPrice=${priceMin}&maxPrice=${priceMax}&order=newest`);
+    }
+    if (locs.some(l => l.includes('city road') || l.includes('ec1v') || l.includes('old street') || l.includes('farringdon') || l.includes('angel'))) {
+      searchUrls.push(`https://www.johnsand.co/rent?location=EC1V&minPrice=${priceMin}&maxPrice=${priceMax}&order=newest`);
+      searchUrls.push(`https://www.johnsand.co/rent?location=City%20Road&minPrice=${priceMin}&maxPrice=${priceMax}&order=newest`);
+    }
+    if (locs.some(l => l.includes('canada water') || l.includes('se16'))) {
+      searchUrls.push(`https://www.johnsand.co/rent?location=SE16&minPrice=${priceMin}&maxPrice=${priceMax}&order=newest`);
+      searchUrls.push(`https://www.johnsand.co/rent?location=Canada%20Water&minPrice=${priceMin}&maxPrice=${priceMax}&order=newest`);
+    }
+    if (locs.some(l => l.includes('wapping') || l.includes('london dock') || l.includes('e1w'))) {
+      searchUrls.push(`https://www.johnsand.co/rent?location=E1W&minPrice=${priceMin}&maxPrice=${priceMax}&order=newest`);
+      searchUrls.push(`https://www.johnsand.co/rent?location=Wapping&minPrice=${priceMin}&maxPrice=${priceMax}&order=newest`);
+    }
 
     const allLinks = new Set();
     try {

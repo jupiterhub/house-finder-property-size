@@ -39,9 +39,9 @@ async function main() {
   
   const adapterClasses = [
     RightmoveAdapter,
-    JLLAdapter,
-    JohnsAndCoAdapter,
-    KnightFrankAdapter
+    // JLLAdapter,
+    // JohnsAndCoAdapter,
+    // KnightFrankAdapter
   ];
 
   try {

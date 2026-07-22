@@ -24,6 +24,21 @@ class KnightFrankAdapter {
       `https://www.knightfrank.co.uk/properties/residential/to-let/uk-greater-london-e14/all-types/all-beds;pricemin=${priceMin};pricemax=${priceMax};availability=available`
     ];
 
+    const locs = (config.locations || []).map(l => l.toLowerCase());
+    if (locs.some(l => l.includes("king's cross") || l.includes('n1c') || l.includes('n1'))) {
+      searchUrls.push(`https://www.knightfrank.co.uk/properties/residential/to-let/uk-greater-london-kings-cross/all-types/all-beds;pricemin=${priceMin};pricemax=${priceMax};availability=available`);
+    }
+    if (locs.some(l => l.includes('city road') || l.includes('ec1v') || l.includes('old street') || l.includes('farringdon') || l.includes('islington'))) {
+      searchUrls.push(`https://www.knightfrank.co.uk/properties/residential/to-let/uk-greater-london-islington/all-types/all-beds;pricemin=${priceMin};pricemax=${priceMax};availability=available`);
+      searchUrls.push(`https://www.knightfrank.co.uk/properties/residential/to-let/uk-greater-london-clerkenwell/all-types/all-beds;pricemin=${priceMin};pricemax=${priceMax};availability=available`);
+    }
+    if (locs.some(l => l.includes('canada water') || l.includes('se16'))) {
+      searchUrls.push(`https://www.knightfrank.co.uk/properties/residential/to-let/uk-greater-london-se16/all-types/all-beds;pricemin=${priceMin};pricemax=${priceMax};availability=available`);
+    }
+    if (locs.some(l => l.includes('wapping') || l.includes('london dock') || l.includes('e1w'))) {
+      searchUrls.push(`https://www.knightfrank.co.uk/properties/residential/to-let/uk-greater-london-wapping/all-types/all-beds;pricemin=${priceMin};pricemax=${priceMax};availability=available`);
+    }
+
     const allLinks = new Set();
     try {
       for (const url of searchUrls) {
