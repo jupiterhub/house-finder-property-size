@@ -11,7 +11,6 @@
     "King's Cross (N1C)",
     "Canary Wharf (E14)",
     "South Quay (E14)",
-    "City Road Basin (EC1V)",
     "Canada Water (SE16)",
     "Wapping (London Dock - E1W)"
   ],
@@ -29,7 +28,6 @@
       "South Quay Plaza", "Harcourt Tower", "Valiant Tower", "Maine Tower",
       "Pan Peninsula", "Baltimore Tower", "Landmark Pinnacle", "Consort Place", "Aspire"
     ],
-    "City Road Basin (EC1V)": ["250 City Road", "Carrara", "Valencia", "Atlas Building"],
     "Canada Water (SE16)": ["The Alba", "Mulberry Walk", "Maple Quays"],
     "Wapping (London Dock - E1W)": ["London Dock", "Cashmere Wharf", "Emery Wharf", "Ariel House"]
   },
