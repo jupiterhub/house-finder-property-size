@@ -180,21 +180,6 @@ South Bermondsey, SE16
 
 ---
 
-### [2026-07-22T19:18:01.173Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: YRT Residential, London
-- **Location**: City Road Basin (EC1V)
-- **Property Name**: Ebenezer Street, London, N1
-- **ID**: 90894294
-- **Price**: £2500 PCM
-- **Size**: 77 sqm
-- **Listing Update**: 2026-07-15
-- **Listing Status**: Added on 15/07/2026
-- **Let Available**: 21/09/2026 (🦅 Early Bird: 68d adv)
-- **Link**: [https://www.rightmove.co.uk/properties/90894294](https://www.rightmove.co.uk/properties/90894294)
-
----
-
 ### [2026-07-23T15:01:57.269Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: ENS Property Group Ltd, London
@@ -390,21 +375,6 @@ South Bermondsey, SE16
 
 ---
 
-### [2026-07-22T19:18:01.179Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Stirling Ackroyd Lettings, Clerkenwell
-- **Location**: EC1V
-- **Property Name**: St. John Street, London, EC1V
-- **ID**: 90840129
-- **Price**: £2600 PCM
-- **Size**: 71 sqm
-- **Listing Update**: 2026-07-14
-- **Listing Status**: Added on 14/07/2026
-- **Let Available**: 11/09/2026
-- **Link**: [https://www.rightmove.co.uk/properties/90840129](https://www.rightmove.co.uk/properties/90840129)
-
----
-
 ### [2026-07-22T19:18:01.176Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Hemmingfords, London
@@ -417,21 +387,6 @@ South Bermondsey, SE16
 - **Listing Status**: Reduced on 20/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90089886](https://www.rightmove.co.uk/properties/90089886)
-
----
-
-### [2026-07-22T19:18:01.174Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Tower Quay Limited, London
-- **Location**: City Road Basin (EC1V)
-- **Property Name**: The Old Lofts,Crescent Row,London,EC1Y 0SP
-- **ID**: 22088690
-- **Price**: £2600 PCM
-- **Size**: 70 sqm
-- **Listing Update**: 2026-06-05
-- **Listing Status**: Added on 05/06/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/22088690](https://www.rightmove.co.uk/properties/22088690)
 
 ---
 
@@ -552,21 +507,6 @@ South Bermondsey, SE16
 - **Listing Status**: Added yesterday
 - **Let Available**: 11/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91201974](https://www.rightmove.co.uk/properties/91201974)
-
----
-
-### [2026-07-22T19:18:01.174Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Victorstone, London
-- **Location**: City Road Basin (EC1V)
-- **Property Name**: City Reach, Dingley Road, Clerkenwell, London, EC1V
-- **ID**: 90809262
-- **Price**: £2675 PCM
-- **Size**: 65.9 sqm
-- **Listing Update**: 2026-07-13
-- **Listing Status**: Added on 13/07/2026
-- **Let Available**: 04/09/2026
-- **Link**: [https://www.rightmove.co.uk/properties/90809262](https://www.rightmove.co.uk/properties/90809262)
 
 ---
 
@@ -703,21 +643,6 @@ Millwall, E14
 - **Listing Status**: Added on 18/07/2026
 - **Let Available**: 25/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91063287](https://www.rightmove.co.uk/properties/91063287)
-
----
-
-### [2026-07-22T19:18:01.173Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Dexters, Shoreditch
-- **Location**: City Road Basin (EC1V)
-- **Property Name**: Boundary Street, Boundary Street
-- **ID**: 91207560
-- **Price**: £2300 PCM
-- **Size**: 60.85 sqm
-- **Listing Update**: 2026-07-22
-- **Listing Status**: Added yesterday
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/91207560](https://www.rightmove.co.uk/properties/91207560)
 
 ---
 
@@ -872,21 +797,6 @@ Millwall, E14
 
 ---
 
-### [2026-07-22T19:18:01.174Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Life Residential, North and City
-- **Location**: City Road Basin (EC1V)
-- **Property Name**: Rufus Street, Old Street
-- **ID**: 90879984
-- **Price**: £2400 PCM
-- **Size**: 56 sqm
-- **Listing Update**: 2026-07-14
-- **Listing Status**: Added on 14/07/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/90879984](https://www.rightmove.co.uk/properties/90879984)
-
----
-
 ### [2026-07-13T16:22:49.584Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Life Residential, Canary Wharf Office
@@ -899,21 +809,6 @@ Millwall, E14
 - **Listing Status**: Reduced on 16/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90807477](https://www.rightmove.co.uk/properties/90807477)
-
----
-
-### [2026-07-22T19:18:01.173Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Elkay Properties, London
-- **Location**: City Road Basin (EC1V)
-- **Property Name**: Old Street, London EC1
-- **ID**: 91105290
-- **Price**: £2550 PCM
-- **Size**: 55 sqm
-- **Listing Update**: 2026-07-20
-- **Listing Status**: Added on 20/07/2026
-- **Let Available**: 24/07/2026
-- **Link**: [https://www.rightmove.co.uk/properties/91105290](https://www.rightmove.co.uk/properties/91105290)
 
 ---
 
@@ -1023,21 +918,6 @@ Islington, N1
 
 ---
 
-### [2026-07-22T19:18:01.174Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Hurford Salvi Carr, Islington and Shoreditch
-- **Location**: City Road Basin (EC1V)
-- **Property Name**: Imperial Hall, EC1V
-- **ID**: 90217914
-- **Price**: £2300 PCM
-- **Size**: 53 sqm
-- **Listing Update**: 2026-07-11
-- **Listing Status**: Reduced on 11/07/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/90217914](https://www.rightmove.co.uk/properties/90217914)
-
----
-
 ### [2026-07-22T19:18:01.175Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Hastings International, Rotherhithe
@@ -1098,21 +978,6 @@ Islington, N1
 
 ---
 
-### [2026-07-22T19:18:01.173Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: OpenRent, London
-- **Location**: City Road Basin (EC1V)
-- **Property Name**: Shoreditch High Street, London, E1
-- **ID**: 91176240
-- **Price**: £2250 PCM
-- **Size**: 51 sqm
-- **Listing Update**: 2026-07-21
-- **Listing Status**: Added on 21/07/2026
-- **Let Available**: 28/08/2026
-- **Link**: [https://www.rightmove.co.uk/properties/91176240](https://www.rightmove.co.uk/properties/91176240)
-
----
-
 ### [2026-07-23T15:01:57.269Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Fizzy Living, Poplar
@@ -1158,21 +1023,6 @@ Islington, N1
 
 ---
 
-### [2026-07-22T19:18:01.174Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Dexters, Shoreditch
-- **Location**: City Road Basin (EC1V)
-- **Property Name**: Chapel Place, Shoreditch
-- **ID**: 89431254
-- **Price**: £2250 PCM
-- **Size**: 50.1 sqm
-- **Listing Update**: 2026-06-08
-- **Listing Status**: Added on 08/06/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/89431254](https://www.rightmove.co.uk/properties/89431254)
-
----
-
 ### [2026-07-23T15:01:57.269Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Jack Rose Estates Ltd, Covering London
@@ -1188,33 +1038,18 @@ Islington, N1
 
 ---
 
-### [2026-07-22T19:18:01.174Z] MATCH FOUND!
+### [2026-07-23T10:59:16.472Z] MATCH FOUND!
 - **Platform**: Rightmove
-- **Marketed by**: Dexters, Shoreditch
-- **Location**: City Road Basin (EC1V)
-- **Property Name**: New North Road, Shoreditch
-- **ID**: 90753069
+- **Marketed by**: Dexters, Wapping
+- **Location**: E1W
+- **Property Name**: Wapping Wall, Wapping
+- **ID**: 90175230
 - **Price**: £2500 PCM
-- **Size**: 49.8 sqm
-- **Listing Update**: 2026-06-25
-- **Listing Status**: Reduced on 25/06/2026
+- **Size**: 50 sqm
+- **Listing Update**: 2026-06-26
+- **Listing Status**: Added on 26/06/2026
 - **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/90753069](https://www.rightmove.co.uk/properties/90753069)
-
----
-
-### [2026-07-22T19:18:01.179Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Kinleigh Folkard and Hayward - Lettings, Islington
-- **Location**: EC1V
-- **Property Name**: Paton Street, London, EC1V
-- **ID**: 87908190
-- **Price**: £2500 PCM
-- **Size**: 49.7 sqm
-- **Listing Update**: 2026-04-30
-- **Listing Status**: Added on 30/04/2026
-- **Let Available**: Now (🦅 Early Bird: 85d adv)
-- **Link**: [https://www.rightmove.co.uk/properties/87908190](https://www.rightmove.co.uk/properties/87908190)
+- **Link**: [https://www.rightmove.co.uk/properties/90175230](https://www.rightmove.co.uk/properties/90175230)
 
 ---
 
@@ -1230,38 +1065,6 @@ Islington, N1
 - **Listing Status**: Reduced on 20/07/2026
 - **Let Available**: 01/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90677403](https://www.rightmove.co.uk/properties/90677403)
-
----
-
-### [2026-07-22T19:18:01.174Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Chestertons, Islington
-- **Location**: City Road Basin (EC1V)
-- **Property Name**: Wenlock Street, 
-Angel Wharf, N1
-- **ID**: 90813474
-- **Price**: £2150 PCM
-- **Size**: 49 sqm
-- **Listing Update**: 2026-07-07
-- **Listing Status**: Added on 07/07/2026
-- **Let Available**: 15/08/2026
-- **Link**: [https://www.rightmove.co.uk/properties/90813474](https://www.rightmove.co.uk/properties/90813474)
-
----
-
-### [2026-07-22T19:18:01.173Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Chestertons, Islington
-- **Location**: City Road Basin (EC1V)
-- **Property Name**: Gee Street, 
-Clerkenwell, EC1V
-- **ID**: 88223106
-- **Price**: £2200 PCM
-- **Size**: 49 sqm
-- **Listing Update**: 2026-07-20
-- **Listing Status**: Reduced on 20/07/2026
-- **Let Available**: 28/07/2026
-- **Link**: [https://www.rightmove.co.uk/properties/88223106](https://www.rightmove.co.uk/properties/88223106)
 
 ---
 
@@ -1400,33 +1203,18 @@ Clerkenwell, EC1V
 
 ---
 
-### [2026-07-22T19:18:01.179Z] MATCH FOUND!
+### [2026-07-23T18:08:23.178Z] MATCH FOUND!
 - **Platform**: Rightmove
-- **Marketed by**: Anthony Quirk and Co, Canvey Island
-- **Location**: EC1V
-- **Property Name**: Goswell Road, London, EC1V
-- **ID**: 91056924
-- **Price**: £2500 PCM
-- **Size**: 45 sqm
-- **Listing Update**: 2026-07-18
-- **Listing Status**: Added on 18/07/2026
-- **Let Available**: 24/07/2026
-- **Link**: [https://www.rightmove.co.uk/properties/91056924](https://www.rightmove.co.uk/properties/91056924)
-
----
-
-### [2026-07-22T19:18:01.179Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Felicity J Lord, Clerkenwell Lettings
-- **Location**: EC1V
-- **Property Name**: Masons Yard, LONDON
-- **ID**: 90350049
+- **Marketed by**: Daniel Ford, Kings Cross
+- **Location**: King's Cross (N1C)
+- **Property Name**: Argyle Square
+- **ID**: 173608733
 - **Price**: £1900 PCM
 - **Size**: Unknown
-- **Listing Update**: 2026-07-01
-- **Listing Status**: Added on 01/07/2026
-- **Let Available**: 11/08/2026
-- **Link**: [https://www.rightmove.co.uk/properties/90350049](https://www.rightmove.co.uk/properties/90350049)
+- **Listing Update**: 2026-07-02
+- **Listing Status**: Reduced on 02/07/2026
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/173608733](https://www.rightmove.co.uk/properties/173608733)
 
 ---
 
@@ -1610,6 +1398,21 @@ Clerkenwell, EC1V
 
 ---
 
+### [2026-07-23T18:08:23.178Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Hawk and Eagle Property Consultants, London
+- **Location**: E14
+- **Property Name**: Hobday Street, Poplar, E14 6AZ
+- **ID**: 91260018
+- **Price**: £2050 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-23
+- **Listing Status**: Added today
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/91260018](https://www.rightmove.co.uk/properties/91260018)
+
+---
+
 ### [2026-07-22T19:18:01.176Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Dexters, Wapping
@@ -1667,21 +1470,6 @@ Clerkenwell, EC1V
 - **Listing Status**: Added on 20/07/2026
 - **Let Available**: 31/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/131214350](https://www.rightmove.co.uk/properties/131214350)
-
----
-
-### [2026-07-22T19:18:01.173Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Homefinders, London
-- **Location**: City Road Basin (EC1V)
-- **Property Name**: Provost Estate, London, N1
-- **ID**: 91081188
-- **Price**: £2100 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-20
-- **Listing Status**: Added on 20/07/2026
-- **Let Available**: 11/09/2026
-- **Link**: [https://www.rightmove.co.uk/properties/91081188](https://www.rightmove.co.uk/properties/91081188)
 
 ---
 
@@ -1790,21 +1578,6 @@ Clerkenwell, EC1V
 
 ---
 
-### [2026-07-22T19:18:01.179Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: OpenRent, London
-- **Location**: EC1V
-- **Property Name**: City Road, London, EC1V
-- **ID**: 91197924
-- **Price**: £2150 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-22
-- **Listing Status**: Added yesterday
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/91197924](https://www.rightmove.co.uk/properties/91197924)
-
----
-
 ### [2026-07-22T19:18:01.176Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: OpenRent, London
@@ -1892,21 +1665,6 @@ Clerkenwell, EC1V
 - **Listing Status**: Added on 20/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/91082340](https://www.rightmove.co.uk/properties/91082340)
-
----
-
-### [2026-07-22T19:18:01.179Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Quest Property Services, London
-- **Location**: EC1V
-- **Property Name**: Seraph Court, Moreland Street, London
-- **ID**: 91042704
-- **Price**: £2200 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-07
-- **Listing Status**: Added on 07/07/2026
-- **Let Available**: 30/08/2026
-- **Link**: [https://www.rightmove.co.uk/properties/91042704](https://www.rightmove.co.uk/properties/91042704)
 
 ---
 
@@ -2030,6 +1788,21 @@ Clerkenwell, EC1V
 
 ---
 
+### [2026-07-23T18:08:23.179Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Felicity J Lord, Canary Wharf Lettings
+- **Location**: E14
+- **Property Name**: Lindfield Street, London
+- **ID**: 89399772
+- **Price**: £2300 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-23
+- **Listing Status**: Reduced today
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/89399772](https://www.rightmove.co.uk/properties/89399772)
+
+---
+
 ### [2026-07-23T10:59:16.471Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Waterview, Waterview Shad Thames
@@ -2057,21 +1830,6 @@ Clerkenwell, EC1V
 - **Listing Status**: Added on 21/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/91169268](https://www.rightmove.co.uk/properties/91169268)
-
----
-
-### [2026-07-22T19:18:01.173Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: OpenRent, London
-- **Location**: City Road Basin (EC1V)
-- **Property Name**: Gambier House, London, EC1V
-- **ID**: 91113729
-- **Price**: £2300 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-20
-- **Listing Status**: Added on 20/07/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/91113729](https://www.rightmove.co.uk/properties/91113729)
 
 ---
 
@@ -2192,6 +1950,21 @@ Clerkenwell, EC1V
 - **Listing Status**: Added today
 - **Let Available**: 31/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91229004](https://www.rightmove.co.uk/properties/91229004)
+
+---
+
+### [2026-07-23T18:08:23.178Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Felicity J Lord, Canary Wharf Lettings
+- **Location**: E14
+- **Property Name**: Lindfield Street, LONDON
+- **ID**: 90497283
+- **Price**: £2400 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-23
+- **Listing Status**: Reduced today
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/90497283](https://www.rightmove.co.uk/properties/90497283)
 
 ---
 
@@ -2407,21 +2180,6 @@ Clerkenwell, EC1V
 
 ### [2026-07-23T15:01:57.269Z] MATCH FOUND!
 - **Platform**: Rightmove
-- **Marketed by**: Dexters, Shoreditch
-- **Location**: City Road Basin (EC1V)
-- **Property Name**: Chart Street, Old Street
-- **ID**: 91240680
-- **Price**: £2500 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-23
-- **Listing Status**: Added today
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/91240680](https://www.rightmove.co.uk/properties/91240680)
-
----
-
-### [2026-07-23T15:01:57.269Z] MATCH FOUND!
-- **Platform**: Rightmove
 - **Marketed by**: Felicity J Lord, Canary Wharf Lettings
 - **Location**: E14
 - **Property Name**: Boatyard Apartments, LONDON
@@ -2447,21 +2205,6 @@ Clerkenwell, EC1V
 - **Listing Status**: Added today
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/91235559](https://www.rightmove.co.uk/properties/91235559)
-
----
-
-### [2026-07-23T10:59:16.472Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Dexters, Wapping
-- **Location**: E1W
-- **Property Name**: Wapping Wall, Wapping
-- **ID**: 90175230
-- **Price**: £2500 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-06-26
-- **Listing Status**: Added on 26/06/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/90175230](https://www.rightmove.co.uk/properties/90175230)
 
 ---
 
@@ -2510,6 +2253,21 @@ Clerkenwell, EC1V
 
 ---
 
+### [2026-07-23T18:08:23.179Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Blackstones Residential, London
+- **Location**: E14
+- **Property Name**: Panoramic Tower, Hay Currie Street, London E14
+- **ID**: 91255986
+- **Price**: £2600 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-23
+- **Listing Status**: Reduced today
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/91255986](https://www.rightmove.co.uk/properties/91255986)
+
+---
+
 ### [2026-07-23T15:01:57.269Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Celestial Globe, London - Lettings
@@ -2552,21 +2310,6 @@ Clerkenwell, EC1V
 - **Listing Status**: Added on 08/06/2026
 - **Let Available**: 17/08/2026 (🦅 Early Bird: 70d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/89449575](https://www.rightmove.co.uk/properties/89449575)
-
----
-
-### [2026-07-22T19:18:01.173Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Celestial Globe, London - Lettings
-- **Location**: City Road Basin (EC1V)
-- **Property Name**: City Road, Hackney, London
-- **ID**: 91188357
-- **Price**: £2600 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-20
-- **Listing Status**: Added on 20/07/2026
-- **Let Available**: 05/08/2026
-- **Link**: [https://www.rightmove.co.uk/properties/91188357](https://www.rightmove.co.uk/properties/91188357)
 
 ---
 
@@ -2615,66 +2358,6 @@ Clerkenwell, EC1V
 
 ---
 
-### [2026-07-22T19:18:01.174Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Thames Lettings Ltd, London
-- **Location**: City Road Basin (EC1V)
-- **Property Name**: Haberdasher Street, Old Street
-- **ID**: 91089792
-- **Price**: £2650 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-07
-- **Listing Status**: Added on 07/07/2026
-- **Let Available**: 12/09/2026 (🦅 Early Bird: 67d adv)
-- **Link**: [https://www.rightmove.co.uk/properties/91089792](https://www.rightmove.co.uk/properties/91089792)
-
----
-
-### [2026-07-22T19:18:01.173Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Austin Homes London, London
-- **Location**: City Road Basin (EC1V)
-- **Property Name**: City Road, Eagle Point City Road, EC1V
-- **ID**: 90969591
-- **Price**: £2650 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-16
-- **Listing Status**: Added on 16/07/2026
-- **Let Available**: 29/09/2026 (🦅 Early Bird: 75d adv)
-- **Link**: [https://www.rightmove.co.uk/properties/90969591](https://www.rightmove.co.uk/properties/90969591)
-
----
-
-### [2026-07-22T19:18:01.173Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Nova Realty, London
-- **Location**: City Road Basin (EC1V)
-- **Property Name**: Bevenden Street, London, N1
-- **ID**: 161394944
-- **Price**: £2655 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-22
-- **Listing Status**: Reduced yesterday
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/161394944](https://www.rightmove.co.uk/properties/161394944)
-
----
-
-### [2026-07-22T19:18:01.179Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: The Chant Group, Bank
-- **Location**: EC1V
-- **Property Name**: City Reach, Dingley Road, London, EC1V
-- **ID**: 173622770
-- **Price**: £2695 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-03-24
-- **Listing Status**: Added on 24/03/2026
-- **Let Available**: Now (🦅 Early Bird: 122d adv)
-- **Link**: [https://www.rightmove.co.uk/properties/173622770](https://www.rightmove.co.uk/properties/173622770)
-
----
-
 ### [2026-07-22T19:18:01.172Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Uni Living London, London
@@ -2698,8 +2381,8 @@ Clerkenwell, EC1V
 - **ID**: 91204194
 - **Price**: £2700 PCM
 - **Size**: Unknown
-- **Listing Update**: 2026-07-22
-- **Listing Status**: Added yesterday
+- **Listing Update**: 2026-07-23
+- **Listing Status**: Reduced today
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/91204194](https://www.rightmove.co.uk/properties/91204194)
 
