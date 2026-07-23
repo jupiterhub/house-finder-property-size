@@ -180,6 +180,21 @@ South Bermondsey, SE16
 
 ---
 
+### [2026-07-23T20:51:31.047Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Let UK Home, Covering London
+- **Location**: E14
+- **Property Name**: New Providence Wharf, 1 Fairmont Avenue, London E14
+- **ID**: 90061017
+- **Price**: £2700 PCM
+- **Size**: 78 sqm
+- **Listing Update**: 2026-07-10
+- **Listing Status**: Reduced on 10/07/2026
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/90061017](https://www.rightmove.co.uk/properties/90061017)
+
+---
+
 ### [2026-07-23T15:01:57.269Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: ENS Property Group Ltd, London
@@ -192,21 +207,6 @@ South Bermondsey, SE16
 - **Listing Status**: Reduced today
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90029532](https://www.rightmove.co.uk/properties/90029532)
-
----
-
-### [2026-07-22T19:18:01.180Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Kinleigh Folkard and Hayward - Lettings, Canada Water
-- **Location**: SE16
-- **Property Name**: Admiral Place, Surrey Quays, London, SE16
-- **ID**: 90896916
-- **Price**: £2250 PCM
-- **Size**: 76.8 sqm
-- **Listing Update**: 2026-07-21
-- **Listing Status**: Reduced on 21/07/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/90896916](https://www.rightmove.co.uk/properties/90896916)
 
 ---
 
@@ -1953,6 +1953,21 @@ Islington, N1
 
 ---
 
+### [2026-07-23T20:51:31.047Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Dexters, New Cross
+- **Location**: SE16
+- **Property Name**: Silwood Street, Rotherhithe
+- **ID**: 90525675
+- **Price**: £2400 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-13
+- **Listing Status**: Reduced on 13/07/2026
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/90525675](https://www.rightmove.co.uk/properties/90525675)
+
+---
+
 ### [2026-07-23T18:08:23.178Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Felicity J Lord, Canary Wharf Lettings
@@ -2160,21 +2175,6 @@ Islington, N1
 - **Listing Status**: Reduced on 13/07/2026
 - **Let Available**: 31/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/88695102](https://www.rightmove.co.uk/properties/88695102)
-
----
-
-### [2026-07-22T19:18:01.176Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Dexters, Wapping
-- **Location**: Wapping (London Dock - E1W)
-- **Property Name**: Milk Yard, Wapping
-- **ID**: 90831762
-- **Price**: £2495 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-20
-- **Listing Status**: Reduced on 20/07/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/90831762](https://www.rightmove.co.uk/properties/90831762)
 
 ---
 
