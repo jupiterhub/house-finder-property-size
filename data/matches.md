@@ -38,7 +38,7 @@
 - **Size**: 102.19 sqm
 - **Listing Update**: 2026-05-19
 - **Listing Status**: Added on 19/05/2026
-- **Let Available**: Now (🦅 Early Bird: 65d adv)
+- **Let Available**: Now (🦅 Early Bird: 66d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/88658109](https://www.rightmove.co.uk/properties/88658109)
 
 ---
@@ -195,6 +195,21 @@ South Bermondsey, SE16
 
 ---
 
+### [2026-07-23T15:01:57.269Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: ENS Property Group Ltd, London
+- **Location**: E14
+- **Property Name**: 7 Branch Road, London E14 7JX
+- **ID**: 90029532
+- **Price**: £2400 PCM
+- **Size**: 76.92 sqm
+- **Listing Update**: 2026-07-23
+- **Listing Status**: Reduced today
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/90029532](https://www.rightmove.co.uk/properties/90029532)
+
+---
+
 ### [2026-07-22T19:18:01.180Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Kinleigh Folkard and Hayward - Lettings, Canada Water
@@ -252,6 +267,21 @@ South Bermondsey, SE16
 - **Listing Status**: Added today
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/91226412](https://www.rightmove.co.uk/properties/91226412)
+
+---
+
+### [2026-07-23T15:01:57.269Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Dexters, Canary Wharf
+- **Location**: E14
+- **Property Name**: Ovex Close, Canary Wharf
+- **ID**: 91250994
+- **Price**: £2600 PCM
+- **Size**: 74.6 sqm
+- **Listing Update**: 2026-07-23
+- **Listing Status**: Added today
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/91250994](https://www.rightmove.co.uk/properties/91250994)
 
 ---
 
@@ -1038,6 +1068,21 @@ Islington, N1
 
 ---
 
+### [2026-07-23T15:01:57.269Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: SJW property management limited, London
+- **Location**: E14
+- **Property Name**: Hawser Lane, Curlew House, E14
+- **ID**: 91245495
+- **Price**: £2100 PCM
+- **Size**: 51 sqm
+- **Listing Update**: 2026-07-23
+- **Listing Status**: Added today
+- **Let Available**: 18/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/91245495](https://www.rightmove.co.uk/properties/91245495)
+
+---
+
 ### [2026-07-22T14:53:42.156Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: AP Living London, London
@@ -1065,6 +1110,21 @@ Islington, N1
 - **Listing Status**: Added on 21/07/2026
 - **Let Available**: 28/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91176240](https://www.rightmove.co.uk/properties/91176240)
+
+---
+
+### [2026-07-23T15:01:57.269Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Fizzy Living, Poplar
+- **Location**: E14
+- **Property Name**: Fizzy Poplar, Lindfield Street, Poplar E14 6GP
+- **ID**: 91246806
+- **Price**: £2320 PCM
+- **Size**: 51 sqm
+- **Listing Update**: 2026-07-23
+- **Listing Status**: Added today
+- **Let Available**: 07/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/91246806](https://www.rightmove.co.uk/properties/91246806)
 
 ---
 
@@ -1113,6 +1173,21 @@ Islington, N1
 
 ---
 
+### [2026-07-23T15:01:57.269Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Jack Rose Estates Ltd, Covering London
+- **Location**: E14
+- **Property Name**: Corson House, 157 City Island Way, London, E14
+- **ID**: 91251456
+- **Price**: £2350 PCM
+- **Size**: 50 sqm
+- **Listing Update**: 2026-07-23
+- **Listing Status**: Added today
+- **Let Available**: 17/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/91251456](https://www.rightmove.co.uk/properties/91251456)
+
+---
+
 ### [2026-07-22T19:18:01.174Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Dexters, Shoreditch
@@ -1138,7 +1213,7 @@ Islington, N1
 - **Size**: 49.7 sqm
 - **Listing Update**: 2026-04-30
 - **Listing Status**: Added on 30/04/2026
-- **Let Available**: Now (🦅 Early Bird: 84d adv)
+- **Let Available**: Now (🦅 Early Bird: 85d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/87908190](https://www.rightmove.co.uk/properties/87908190)
 
 ---
@@ -1325,21 +1400,6 @@ Clerkenwell, EC1V
 
 ---
 
-### [2026-07-22T19:18:01.174Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: OpenRent, London
-- **Location**: City Road Basin (EC1V)
-- **Property Name**: Shaftesbury Court, London, N1
-- **ID**: 90835344
-- **Price**: £2200 PCM
-- **Size**: 45 sqm
-- **Listing Update**: 2026-07-14
-- **Listing Status**: Added on 14/07/2026
-- **Let Available**: 24/08/2026
-- **Link**: [https://www.rightmove.co.uk/properties/90835344](https://www.rightmove.co.uk/properties/90835344)
-
----
-
 ### [2026-07-22T19:18:01.179Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Anthony Quirk and Co, Canvey Island
@@ -1415,6 +1475,21 @@ Clerkenwell, EC1V
 
 ---
 
+### [2026-07-23T15:01:57.268Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Houst, London
+- **Location**: King's Cross (N1C)
+- **Property Name**: Woburn Place, London, WC1H
+- **ID**: 90321876
+- **Price**: £2000 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-06-30
+- **Listing Status**: Added on 30/06/2026
+- **Let Available**: 20/12/2026 (🦅 Early Bird: 173d adv)
+- **Link**: [https://www.rightmove.co.uk/properties/90321876](https://www.rightmove.co.uk/properties/90321876)
+
+---
+
 ### [2026-07-22T19:18:01.180Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Dexters, Tower Bridge
@@ -1442,21 +1517,6 @@ Clerkenwell, EC1V
 - **Listing Status**: Added on 20/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/91084284](https://www.rightmove.co.uk/properties/91084284)
-
----
-
-### [2026-07-22T19:18:01.178Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Dexters, Wapping
-- **Location**: Wapping (London Dock - E1W)
-- **Property Name**: John Rennie Walk, Wapping
-- **ID**: 89870496
-- **Price**: £2000 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-07
-- **Listing Status**: Reduced on 07/07/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/89870496](https://www.rightmove.co.uk/properties/89870496)
 
 ---
 
@@ -2085,7 +2145,7 @@ Clerkenwell, EC1V
 - **Size**: Unknown
 - **Listing Update**: 2026-05-19
 - **Listing Status**: Reduced on 19/05/2026
-- **Let Available**: Now (🦅 Early Bird: 65d adv)
+- **Let Available**: Now (🦅 Early Bird: 66d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/87805383](https://www.rightmove.co.uk/properties/87805383)
 
 ---
@@ -2105,11 +2165,26 @@ Clerkenwell, EC1V
 
 ---
 
+### [2026-07-23T15:01:57.269Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Alliance London, London
+- **Location**: E14
+- **Property Name**: Clemence Street, London, E14
+- **ID**: 90977913
+- **Price**: £2350 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-23
+- **Listing Status**: Reduced today
+- **Let Available**: 01/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/90977913](https://www.rightmove.co.uk/properties/90977913)
+
+---
+
 ### [2026-07-23T10:59:16.472Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Ernest Brooks International, Canary Wharf
 - **Location**: E14
-- **Property Name**: 1 Forge Sqaure, London, E14
+- **Property Name**: 1 Forge Square, London, E14
 - **ID**: 91229004
 - **Price**: £2350 PCM
 - **Size**: Unknown
@@ -2330,18 +2405,33 @@ Clerkenwell, EC1V
 
 ---
 
-### [2026-07-22T19:18:01.173Z] MATCH FOUND!
+### [2026-07-23T15:01:57.269Z] MATCH FOUND!
 - **Platform**: Rightmove
-- **Marketed by**: OpenRent, London
+- **Marketed by**: Dexters, Shoreditch
 - **Location**: City Road Basin (EC1V)
-- **Property Name**: Provost Street, London, N1
-- **ID**: 90487242
-- **Price**: £2495 PCM
+- **Property Name**: Chart Street, Old Street
+- **ID**: 91240680
+- **Price**: £2500 PCM
 - **Size**: Unknown
-- **Listing Update**: 2026-07-21
-- **Listing Status**: Reduced on 21/07/2026
-- **Let Available**: 19/08/2026
-- **Link**: [https://www.rightmove.co.uk/properties/90487242](https://www.rightmove.co.uk/properties/90487242)
+- **Listing Update**: 2026-07-23
+- **Listing Status**: Added today
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/91240680](https://www.rightmove.co.uk/properties/91240680)
+
+---
+
+### [2026-07-23T15:01:57.269Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Felicity J Lord, Canary Wharf Lettings
+- **Location**: E14
+- **Property Name**: Boatyard Apartments, LONDON
+- **ID**: 88710684
+- **Price**: £2500 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-23
+- **Listing Status**: Added today
+- **Let Available**: 01/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/88710684](https://www.rightmove.co.uk/properties/88710684)
 
 ---
 
@@ -2372,36 +2462,6 @@ Clerkenwell, EC1V
 - **Listing Status**: Added on 26/06/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90175230](https://www.rightmove.co.uk/properties/90175230)
-
----
-
-### [2026-07-22T19:18:01.177Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Dexters, Wapping
-- **Location**: Wapping (London Dock - E1W)
-- **Property Name**: Scandrett Street, Wapping
-- **ID**: 88981515
-- **Price**: £2500 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-08
-- **Listing Status**: Reduced on 08/07/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/88981515](https://www.rightmove.co.uk/properties/88981515)
-
----
-
-### [2026-07-22T19:18:01.174Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Dexters, Wapping
-- **Location**: Canada Water (SE16)
-- **Property Name**: Wapping High Street, London
-- **ID**: 91117428
-- **Price**: £2500 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-20
-- **Listing Status**: Added on 20/07/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/91117428](https://www.rightmove.co.uk/properties/91117428)
 
 ---
 
@@ -2447,6 +2507,21 @@ Clerkenwell, EC1V
 - **Listing Status**: Added on 14/07/2026
 - **Let Available**: 31/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90886578](https://www.rightmove.co.uk/properties/90886578)
+
+---
+
+### [2026-07-23T15:01:57.269Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Celestial Globe, London - Lettings
+- **Location**: Canary Wharf (E14)
+- **Property Name**: Marsh Wall, London
+- **ID**: 175004939
+- **Price**: £2600 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-06-02
+- **Listing Status**: Reduced on 02/06/2026
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/175004939](https://www.rightmove.co.uk/properties/175004939)
 
 ---
 
@@ -2595,7 +2670,7 @@ Clerkenwell, EC1V
 - **Size**: Unknown
 - **Listing Update**: 2026-03-24
 - **Listing Status**: Added on 24/03/2026
-- **Let Available**: Now (🦅 Early Bird: 121d adv)
+- **Let Available**: Now (🦅 Early Bird: 122d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/173622770](https://www.rightmove.co.uk/properties/173622770)
 
 ---
