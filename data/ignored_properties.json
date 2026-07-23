@@ -464,6 +464,10 @@
       "reason": "Size 5 sqm below min 40",
       "timestamp": "2026-05-30T11:57:26.155Z"
     },
+    "89083314": {
+      "reason": "Price £600 below min £1900",
+      "timestamp": "2026-07-23T10:58:11.347Z"
+    },
     "89083398": {
       "reason": "Price £575 below min £1900",
       "timestamp": "2026-07-20T21:56:34.093Z"
@@ -1007,6 +1011,10 @@
     "89891088": {
       "reason": "Size 35 sqm below min 40",
       "timestamp": "2026-06-19T13:56:18.231Z"
+    },
+    "89892363": {
+      "reason": "Size 37.25 sqm below min 45",
+      "timestamp": "2026-07-23T10:58:51.461Z"
     },
     "89892573": {
       "reason": "Size 19.8 sqm below min 40",
@@ -2372,6 +2380,10 @@
       "reason": "Size 33 sqm below min 45",
       "timestamp": "2026-07-13T10:39:40.031Z"
     },
+    "90798150": {
+      "reason": "Price £623 below min £1900",
+      "timestamp": "2026-07-23T10:56:59.554Z"
+    },
     "90800532": {
       "reason": "Size 41 sqm below min 45",
       "timestamp": "2026-07-13T10:39:38.365Z"
@@ -2848,6 +2860,14 @@
       "reason": "Price £3805 exceeds max £2700",
       "timestamp": "2026-07-22T19:16:59.201Z"
     },
+    "91201431": {
+      "reason": "Price £3870 exceeds max £2700",
+      "timestamp": "2026-07-23T10:58:51.471Z"
+    },
+    "91201449": {
+      "reason": "Price £2990 exceeds max £2700",
+      "timestamp": "2026-07-23T10:58:51.469Z"
+    },
     "91201455": {
       "reason": "Price £3015 exceeds max £2700",
       "timestamp": "2026-07-22T19:16:59.200Z"
@@ -2931,6 +2951,18 @@
     "91219893": {
       "reason": "Size 36 sqm below min 45",
       "timestamp": "2026-07-22T20:52:54.378Z"
+    },
+    "91233264": {
+      "reason": "Price £450 below min £1900",
+      "timestamp": "2026-07-23T10:58:11.344Z"
+    },
+    "91235229": {
+      "reason": "Size 41 sqm below min 45",
+      "timestamp": "2026-07-23T10:58:34.323Z"
+    },
+    "91237881": {
+      "reason": "Size 27.96 sqm below min 45",
+      "timestamp": "2026-07-23T10:56:22.356Z"
     },
     "94898018": {
       "reason": "Size 30.56 sqm below min 40",

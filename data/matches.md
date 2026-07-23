@@ -22,24 +22,9 @@
 - **Price**: £2250 PCM
 - **Size**: 490 sqm
 - **Listing Update**: 2026-07-21
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 21/07/2026
 - **Let Available**: 03/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91133916](https://www.rightmove.co.uk/properties/91133916)
-
----
-
-### [2026-07-22T19:18:01.177Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: OpenRent, London
-- **Location**: Wapping (London Dock - E1W)
-- **Property Name**: Cannon Street Road, London, E1
-- **ID**: 90448212
-- **Price**: £2300 PCM
-- **Size**: 111.48 sqm
-- **Listing Update**: 2026-07-17
-- **Listing Status**: Reduced on 17/07/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/90448212](https://www.rightmove.co.uk/properties/90448212)
 
 ---
 
@@ -53,7 +38,7 @@
 - **Size**: 102.19 sqm
 - **Listing Update**: 2026-05-19
 - **Listing Status**: Added on 19/05/2026
-- **Let Available**: Now
+- **Let Available**: Now (🦅 Early Bird: 65d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/88658109](https://www.rightmove.co.uk/properties/88658109)
 
 ---
@@ -67,7 +52,7 @@
 - **Price**: £2650 PCM
 - **Size**: 94.7 sqm
 - **Listing Update**: 2026-07-22
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/91192659](https://www.rightmove.co.uk/properties/91192659)
 
@@ -128,7 +113,7 @@ Wapping, E1W
 - **Price**: £2700 PCM
 - **Size**: 83.98 sqm
 - **Listing Update**: 2026-07-22
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/175003271](https://www.rightmove.co.uk/properties/175003271)
 
@@ -173,24 +158,9 @@ Wapping, E1W
 - **Price**: £2500 PCM
 - **Size**: 79 sqm
 - **Listing Update**: 2026-07-22
-- **Listing Status**: Reduced today
+- **Listing Status**: Reduced yesterday
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90982011](https://www.rightmove.co.uk/properties/90982011)
-
----
-
-### [2026-07-17T21:44:52.812Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Life Residential, Canary Wharf Office
-- **Location**: Canary Wharf
-- **Property Name**: Millharbour, London
-- **ID**: 91016220
-- **Price**: £2500 PCM
-- **Size**: 78.1 sqm
-- **Listing Update**: 2026-07-17
-- **Listing Status**: Added on 17/07/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/91016220](https://www.rightmove.co.uk/properties/91016220)
 
 ---
 
@@ -204,7 +174,7 @@ South Bermondsey, SE16
 - **Price**: £2500 PCM
 - **Size**: 78 sqm
 - **Listing Update**: 2026-07-22
-- **Listing Status**: Reduced today
+- **Listing Status**: Reduced yesterday
 - **Let Available**: 15/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90876843](https://www.rightmove.co.uk/properties/90876843)
 
@@ -234,7 +204,7 @@ South Bermondsey, SE16
 - **Price**: £2250 PCM
 - **Size**: 76.8 sqm
 - **Listing Update**: 2026-07-21
-- **Listing Status**: Reduced yesterday
+- **Listing Status**: Reduced on 21/07/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90896916](https://www.rightmove.co.uk/properties/90896916)
 
@@ -270,6 +240,21 @@ South Bermondsey, SE16
 
 ---
 
+### [2026-07-23T10:59:16.472Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: ea2, Wapping
+- **Location**: E1W
+- **Property Name**: Thomas More Street, Wapping
+- **ID**: 91226412
+- **Price**: £2600 PCM
+- **Size**: 75 sqm
+- **Listing Update**: 2026-07-23
+- **Listing Status**: Added today
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/91226412](https://www.rightmove.co.uk/properties/91226412)
+
+---
+
 ### [2026-07-22T19:18:01.180Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Alex and Matteo, London
@@ -279,9 +264,24 @@ South Bermondsey, SE16
 - **Price**: £2700 PCM
 - **Size**: 74.5 sqm
 - **Listing Update**: 2026-07-21
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 21/07/2026
 - **Let Available**: 26/09/2026 (🦅 Early Bird: 67d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/91158501](https://www.rightmove.co.uk/properties/91158501)
+
+---
+
+### [2026-07-23T10:59:16.471Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Visum, Nationwide
+- **Location**: Canary Wharf (E14)
+- **Property Name**: 291 Boardwalk Place, London, E14 5GE
+- **ID**: 89549856
+- **Price**: £2500 PCM
+- **Size**: 74 sqm
+- **Listing Update**: 2026-07-23
+- **Listing Status**: Reduced today
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/89549856](https://www.rightmove.co.uk/properties/89549856)
 
 ---
 
@@ -414,7 +414,7 @@ South Bermondsey, SE16
 - **Price**: £2300 PCM
 - **Size**: 69.68 sqm
 - **Listing Update**: 2026-07-22
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/91207302](https://www.rightmove.co.uk/properties/91207302)
 
@@ -429,7 +429,7 @@ South Bermondsey, SE16
 - **Price**: £2400 PCM
 - **Size**: 69.5 sqm
 - **Listing Update**: 2026-07-22
-- **Listing Status**: Reduced today
+- **Listing Status**: Reduced yesterday
 - **Let Available**: 28/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/149573198](https://www.rightmove.co.uk/properties/149573198)
 
@@ -444,9 +444,24 @@ South Bermondsey, SE16
 - **Price**: £2200 PCM
 - **Size**: 69 sqm
 - **Listing Update**: 2026-07-22
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/91209303](https://www.rightmove.co.uk/properties/91209303)
+
+---
+
+### [2026-07-23T10:59:16.472Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Fraser and Co, Shoreditch
+- **Location**: E14
+- **Property Name**: Hallmark Court, London, E14
+- **ID**: 91220718
+- **Price**: £2350 PCM
+- **Size**: 69 sqm
+- **Listing Update**: 2026-07-22
+- **Listing Status**: Added yesterday
+- **Let Available**: 06/10/2026 (🦅 Early Bird: 76d adv)
+- **Link**: [https://www.rightmove.co.uk/properties/91220718](https://www.rightmove.co.uk/properties/91220718)
 
 ---
 
@@ -462,21 +477,6 @@ South Bermondsey, SE16
 - **Listing Status**: Added on 15/07/2026
 - **Let Available**: 29/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90911826](https://www.rightmove.co.uk/properties/90911826)
-
----
-
-### [2026-07-22T19:18:01.179Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Stirling Ackroyd Lettings, Canary Wharf
-- **Location**: E14
-- **Property Name**: Salton Square, London, E14
-- **ID**: 90989706
-- **Price**: £2250 PCM
-- **Size**: 67 sqm
-- **Listing Update**: 2026-07-22
-- **Listing Status**: Reduced today
-- **Let Available**: 09/09/2026
-- **Link**: [https://www.rightmove.co.uk/properties/90989706](https://www.rightmove.co.uk/properties/90989706)
 
 ---
 
@@ -519,7 +519,7 @@ South Bermondsey, SE16
 - **Price**: £2200 PCM
 - **Size**: 66 sqm
 - **Listing Update**: 2026-07-22
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: 11/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91201974](https://www.rightmove.co.uk/properties/91201974)
 
@@ -548,8 +548,8 @@ South Bermondsey, SE16
 - **ID**: 90513300
 - **Price**: £2300 PCM
 - **Size**: 65.03 sqm
-- **Listing Update**: 2026-07-20
-- **Listing Status**: Reduced on 20/07/2026
+- **Listing Update**: 2026-07-23
+- **Listing Status**: Reduced today
 - **Let Available**: 14/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90513300](https://www.rightmove.co.uk/properties/90513300)
 
@@ -579,7 +579,7 @@ South Bermondsey, SE16
 - **Price**: £2400 PCM
 - **Size**: 64 sqm
 - **Listing Update**: 2026-07-22
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: 25/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91198227](https://www.rightmove.co.uk/properties/91198227)
 
@@ -625,7 +625,7 @@ Millwall, E14
 - **Price**: £2700 PCM
 - **Size**: 61.97 sqm
 - **Listing Update**: 2026-07-22
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: 04/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91190286](https://www.rightmove.co.uk/properties/91190286)
 
@@ -685,7 +685,7 @@ Millwall, E14
 - **Price**: £2300 PCM
 - **Size**: 60.85 sqm
 - **Listing Update**: 2026-07-22
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/91207560](https://www.rightmove.co.uk/properties/91207560)
 
@@ -730,7 +730,7 @@ Millwall, E14
 - **Price**: £2550 PCM
 - **Size**: 60.2 sqm
 - **Listing Update**: 2026-07-22
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: 30/09/2026 (🦅 Early Bird: 70d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/175009400](https://www.rightmove.co.uk/properties/175009400)
 
@@ -761,7 +761,7 @@ Millwall, E14
 - **Price**: £2700 PCM
 - **Size**: 59 sqm
 - **Listing Update**: 2026-07-22
-- **Listing Status**: Reduced today
+- **Listing Status**: Reduced yesterday
 - **Let Available**: 27/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90405759](https://www.rightmove.co.uk/properties/90405759)
 
@@ -779,6 +779,21 @@ Millwall, E14
 - **Listing Status**: Added on 17/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/91039032](https://www.rightmove.co.uk/properties/91039032)
+
+---
+
+### [2026-07-23T10:59:16.472Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: OpenRent, London
+- **Location**: E14
+- **Property Name**: Lighterman Point, London, E14
+- **ID**: 91224966
+- **Price**: £2050 PCM
+- **Size**: 58 sqm
+- **Listing Update**: 2026-07-23
+- **Listing Status**: Added today
+- **Let Available**: 27/07/2026
+- **Link**: [https://www.rightmove.co.uk/properties/91224966](https://www.rightmove.co.uk/properties/91224966)
 
 ---
 
@@ -896,7 +911,7 @@ Millwall, E14
 - **Price**: £2650 PCM
 - **Size**: 54.3 sqm
 - **Listing Update**: 2026-07-22
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: 25/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/175007150](https://www.rightmove.co.uk/properties/175007150)
 
@@ -927,7 +942,7 @@ Islington, N1
 - **Price**: £2100 PCM
 - **Size**: 54 sqm
 - **Listing Update**: 2026-07-22
-- **Listing Status**: Reduced today
+- **Listing Status**: Reduced yesterday
 - **Let Available**: 01/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90880098](https://www.rightmove.co.uk/properties/90880098)
 
@@ -942,7 +957,7 @@ Islington, N1
 - **Price**: £2250 PCM
 - **Size**: 54 sqm
 - **Listing Update**: 2026-07-22
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/91218378](https://www.rightmove.co.uk/properties/91218378)
 
@@ -1008,6 +1023,21 @@ Islington, N1
 
 ---
 
+### [2026-07-23T10:59:16.472Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Douglas Pryce, Hither Green
+- **Location**: E14
+- **Property Name**: Modena House, London City Island
+- **ID**: 91227474
+- **Price**: £2250 PCM
+- **Size**: 52 sqm
+- **Listing Update**: 2026-07-23
+- **Listing Status**: Added today
+- **Let Available**: 20/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/91227474](https://www.rightmove.co.uk/properties/91227474)
+
+---
+
 ### [2026-07-22T14:53:42.156Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: AP Living London, London
@@ -1017,7 +1047,7 @@ Islington, N1
 - **Price**: £2100 PCM
 - **Size**: 51 sqm
 - **Listing Update**: 2026-07-22
-- **Listing Status**: Reduced today
+- **Listing Status**: Reduced yesterday
 - **Let Available**: 25/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90366564](https://www.rightmove.co.uk/properties/90366564)
 
@@ -1032,24 +1062,9 @@ Islington, N1
 - **Price**: £2250 PCM
 - **Size**: 51 sqm
 - **Listing Update**: 2026-07-21
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 21/07/2026
 - **Let Available**: 28/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91176240](https://www.rightmove.co.uk/properties/91176240)
-
----
-
-### [2026-07-22T19:18:01.177Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Hurford Salvi Carr, Aldgate
-- **Location**: Wapping (London Dock - E1W)
-- **Property Name**: Crowder Street, E1
-- **ID**: 91176645
-- **Price**: £2195 PCM
-- **Size**: 50.6 sqm
-- **Listing Update**: 2026-07-20
-- **Listing Status**: Added on 20/07/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/91176645](https://www.rightmove.co.uk/properties/91176645)
 
 ---
 
@@ -1199,7 +1214,7 @@ Clerkenwell, EC1V
 - **Price**: £1925 PCM
 - **Size**: 48 sqm
 - **Listing Update**: 2026-07-22
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: 31/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91212471](https://www.rightmove.co.uk/properties/91212471)
 
@@ -1229,7 +1244,7 @@ Clerkenwell, EC1V
 - **Price**: £2600 PCM
 - **Size**: 47.96 sqm
 - **Listing Update**: 2026-07-21
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 21/07/2026
 - **Let Available**: 06/10/2026 (🦅 Early Bird: 77d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/91156989](https://www.rightmove.co.uk/properties/91156989)
 
@@ -1244,7 +1259,7 @@ Clerkenwell, EC1V
 - **Price**: £2200 PCM
 - **Size**: 47.6 sqm
 - **Listing Update**: 2026-07-22
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/91218207](https://www.rightmove.co.uk/properties/91218207)
 
@@ -1280,21 +1295,6 @@ Clerkenwell, EC1V
 
 ---
 
-### [2026-07-15T12:03:11.385Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Blackstones Residential, London
-- **Location**: Canary Wharf
-- **Property Name**: Ability Place, 37-39 Millharbour, Canary Wharf E14
-- **ID**: 90913050
-- **Price**: £2150 PCM
-- **Size**: 46 sqm
-- **Listing Update**: 2026-07-15
-- **Listing Status**: Added on 15/07/2026
-- **Let Available**: 23/09/2026 (🦅 Early Bird: 70d adv)
-- **Link**: [https://www.rightmove.co.uk/properties/90913050](https://www.rightmove.co.uk/properties/90913050)
-
----
-
 ### [2026-07-13T16:22:49.586Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: OpenRent, London
@@ -1319,7 +1319,7 @@ Clerkenwell, EC1V
 - **Price**: £1900 PCM
 - **Size**: 45 sqm
 - **Listing Update**: 2026-07-22
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: 17/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91197945](https://www.rightmove.co.uk/properties/91197945)
 
@@ -1370,21 +1370,6 @@ Clerkenwell, EC1V
 
 ---
 
-### [2026-07-22T19:18:01.173Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Portico, Bloomsbury
-- **Location**: King's Cross (N1C)
-- **Property Name**: Woburn Place, London, WC1H
-- **ID**: 90680274
-- **Price**: £1950 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-09
-- **Listing Status**: Added on 09/07/2026
-- **Let Available**: 16/09/2026 (🦅 Early Bird: 69d adv)
-- **Link**: [https://www.rightmove.co.uk/properties/90680274](https://www.rightmove.co.uk/properties/90680274)
-
----
-
 ### [2026-07-18T21:42:40.343Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: OpenRent, London
@@ -1424,7 +1409,7 @@ Clerkenwell, EC1V
 - **Price**: £1950 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-22
-- **Listing Status**: Reduced today
+- **Listing Status**: Reduced yesterday
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90984615](https://www.rightmove.co.uk/properties/90984615)
 
@@ -1439,7 +1424,7 @@ Clerkenwell, EC1V
 - **Price**: £2000 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-21
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 21/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/91169271](https://www.rightmove.co.uk/properties/91169271)
 
@@ -1499,7 +1484,7 @@ Clerkenwell, EC1V
 - **Price**: £2000 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-21
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 21/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/91163577](https://www.rightmove.co.uk/properties/91163577)
 
@@ -1574,7 +1559,7 @@ Clerkenwell, EC1V
 - **Price**: £2050 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-21
-- **Listing Status**: Reduced yesterday
+- **Listing Status**: Reduced on 21/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90759711](https://www.rightmove.co.uk/properties/90759711)
 
@@ -1649,7 +1634,7 @@ Clerkenwell, EC1V
 - **Price**: £2100 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-21
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 21/07/2026
 - **Let Available**: 03/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91157310](https://www.rightmove.co.uk/properties/91157310)
 
@@ -1724,7 +1709,7 @@ Clerkenwell, EC1V
 - **Price**: £2150 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-22
-- **Listing Status**: Reduced today
+- **Listing Status**: Reduced yesterday
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90228759](https://www.rightmove.co.uk/properties/90228759)
 
@@ -1739,7 +1724,7 @@ Clerkenwell, EC1V
 - **Price**: £2150 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-22
-- **Listing Status**: Reduced today
+- **Listing Status**: Reduced yesterday
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/88689417](https://www.rightmove.co.uk/properties/88689417)
 
@@ -1754,7 +1739,7 @@ Clerkenwell, EC1V
 - **Price**: £2150 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-22
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/91197924](https://www.rightmove.co.uk/properties/91197924)
 
@@ -1790,18 +1775,33 @@ Clerkenwell, EC1V
 
 ---
 
-### [2026-07-22T19:18:01.175Z] MATCH FOUND!
+### [2026-07-23T10:59:16.472Z] MATCH FOUND!
 - **Platform**: Rightmove
-- **Marketed by**: The Alba by Morro, The Alba
-- **Location**: Canada Water (SE16)
-- **Property Name**: Mulberry Walk, London, SE16
-- **ID**: 90901758
-- **Price**: £2170 PCM
+- **Marketed by**: Dexters, Canary Wharf
+- **Location**: E14
+- **Property Name**: Millennium Drive, Canary Wharf
+- **ID**: 91235553
+- **Price**: £2200 PCM
 - **Size**: Unknown
-- **Listing Update**: 2026-07-15
-- **Listing Status**: Added on 15/07/2026
+- **Listing Update**: 2026-07-23
+- **Listing Status**: Added today
 - **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/90901758](https://www.rightmove.co.uk/properties/90901758)
+- **Link**: [https://www.rightmove.co.uk/properties/91235553](https://www.rightmove.co.uk/properties/91235553)
+
+---
+
+### [2026-07-23T10:59:16.472Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Felicity J Lord, Shad Thames Lettings
+- **Location**: SE16
+- **Property Name**: East Lane, Shad Thames, Tower Bridge, London
+- **ID**: 90842283
+- **Price**: £2200 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-14
+- **Listing Status**: Added on 14/07/2026
+- **Let Available**: 17/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/90842283](https://www.rightmove.co.uk/properties/90842283)
 
 ---
 
@@ -1904,7 +1904,7 @@ Clerkenwell, EC1V
 - **Price**: £2250 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-22
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: 16/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91193043](https://www.rightmove.co.uk/properties/91193043)
 
@@ -1919,7 +1919,7 @@ Clerkenwell, EC1V
 - **Price**: £2250 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-21
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 21/07/2026
 - **Let Available**: 10/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91130481](https://www.rightmove.co.uk/properties/91130481)
 
@@ -1934,7 +1934,7 @@ Clerkenwell, EC1V
 - **Price**: £2250 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-22
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/91198845](https://www.rightmove.co.uk/properties/91198845)
 
@@ -1970,6 +1970,21 @@ Clerkenwell, EC1V
 
 ---
 
+### [2026-07-23T10:59:16.471Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Waterview, Waterview Shad Thames
+- **Location**: Canary Wharf (E14)
+- **Property Name**: Westferry Road, Canary Wharf
+- **ID**: 91225413
+- **Price**: £2300 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-23
+- **Listing Status**: Added today
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/91225413](https://www.rightmove.co.uk/properties/91225413)
+
+---
+
 ### [2026-07-22T19:18:01.180Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Dexters, Tower Bridge
@@ -1979,7 +1994,7 @@ Clerkenwell, EC1V
 - **Price**: £2300 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-21
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 21/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/91169268](https://www.rightmove.co.uk/properties/91169268)
 
@@ -2009,7 +2024,7 @@ Clerkenwell, EC1V
 - **Price**: £2300 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-21
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 21/07/2026
 - **Let Available**: 20/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91173603](https://www.rightmove.co.uk/properties/91173603)
 
@@ -2039,7 +2054,7 @@ Clerkenwell, EC1V
 - **Price**: £2300 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-21
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 21/07/2026
 - **Let Available**: 26/09/2026 (🦅 Early Bird: 67d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/91170438](https://www.rightmove.co.uk/properties/91170438)
 
@@ -2070,7 +2085,7 @@ Clerkenwell, EC1V
 - **Size**: Unknown
 - **Listing Update**: 2026-05-19
 - **Listing Status**: Reduced on 19/05/2026
-- **Let Available**: Now
+- **Let Available**: Now (🦅 Early Bird: 65d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/87805383](https://www.rightmove.co.uk/properties/87805383)
 
 ---
@@ -2087,6 +2102,21 @@ Clerkenwell, EC1V
 - **Listing Status**: Added on 17/07/2026
 - **Let Available**: 21/09/2026 (🦅 Early Bird: 66d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/91022904](https://www.rightmove.co.uk/properties/91022904)
+
+---
+
+### [2026-07-23T10:59:16.472Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Ernest Brooks International, Canary Wharf
+- **Location**: E14
+- **Property Name**: 1 Forge Sqaure, London, E14
+- **ID**: 91229004
+- **Price**: £2350 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-23
+- **Listing Status**: Added today
+- **Let Available**: 31/07/2026
+- **Link**: [https://www.rightmove.co.uk/properties/91229004](https://www.rightmove.co.uk/properties/91229004)
 
 ---
 
@@ -2159,7 +2189,7 @@ Clerkenwell, EC1V
 - **Price**: £2400 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-21
-- **Listing Status**: Reduced yesterday
+- **Listing Status**: Reduced on 21/07/2026
 - **Let Available**: 09/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90468201](https://www.rightmove.co.uk/properties/90468201)
 
@@ -2174,7 +2204,7 @@ Clerkenwell, EC1V
 - **Price**: £2400 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-21
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 21/07/2026
 - **Let Available**: 17/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91141362](https://www.rightmove.co.uk/properties/91141362)
 
@@ -2195,18 +2225,18 @@ Clerkenwell, EC1V
 
 ---
 
-### [2026-07-22T19:18:01.174Z] MATCH FOUND!
+### [2026-07-23T10:59:16.472Z] MATCH FOUND!
 - **Platform**: Rightmove
-- **Marketed by**: The Alba by Morro, The Alba
-- **Location**: Canada Water (SE16)
-- **Property Name**: Mulberry Walk, London, SE16
-- **ID**: 90900765
-- **Price**: £2425 PCM
+- **Marketed by**: OpenRent, London
+- **Location**: E14
+- **Property Name**: Aurora Building, London, E14
+- **ID**: 91224972
+- **Price**: £2450 PCM
 - **Size**: Unknown
-- **Listing Update**: 2026-07-15
-- **Listing Status**: Added on 15/07/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/90900765](https://www.rightmove.co.uk/properties/90900765)
+- **Listing Update**: 2026-07-23
+- **Listing Status**: Added today
+- **Let Available**: 16/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/91224972](https://www.rightmove.co.uk/properties/91224972)
 
 ---
 
@@ -2219,7 +2249,7 @@ Clerkenwell, EC1V
 - **Price**: £2450 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-22
-- **Listing Status**: Reduced today
+- **Listing Status**: Reduced yesterday
 - **Let Available**: 08/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91185840](https://www.rightmove.co.uk/properties/91185840)
 
@@ -2237,21 +2267,6 @@ Clerkenwell, EC1V
 - **Listing Status**: Added on 01/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90338538](https://www.rightmove.co.uk/properties/90338538)
-
----
-
-### [2026-07-22T19:18:01.175Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: The Alba by Morro, The Alba
-- **Location**: Canada Water (SE16)
-- **Property Name**: Mulberry Walk, London, SE16
-- **ID**: 90901269
-- **Price**: £2450 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-15
-- **Listing Status**: Added on 15/07/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/90901269](https://www.rightmove.co.uk/properties/90901269)
 
 ---
 
@@ -2324,9 +2339,39 @@ Clerkenwell, EC1V
 - **Price**: £2495 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-21
-- **Listing Status**: Reduced yesterday
+- **Listing Status**: Reduced on 21/07/2026
 - **Let Available**: 19/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90487242](https://www.rightmove.co.uk/properties/90487242)
+
+---
+
+### [2026-07-23T10:59:16.472Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Dexters, Canary Wharf
+- **Location**: E14
+- **Property Name**: Crews Street, Canary Wharf
+- **ID**: 91235559
+- **Price**: £2500 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-23
+- **Listing Status**: Added today
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/91235559](https://www.rightmove.co.uk/properties/91235559)
+
+---
+
+### [2026-07-23T10:59:16.472Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Dexters, Wapping
+- **Location**: E1W
+- **Property Name**: Wapping Wall, Wapping
+- **ID**: 90175230
+- **Price**: £2500 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-06-26
+- **Listing Status**: Added on 26/06/2026
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/90175230](https://www.rightmove.co.uk/properties/90175230)
 
 ---
 
@@ -2402,6 +2447,21 @@ Clerkenwell, EC1V
 - **Listing Status**: Added on 14/07/2026
 - **Let Available**: 31/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90886578](https://www.rightmove.co.uk/properties/90886578)
+
+---
+
+### [2026-07-23T10:59:16.471Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Life Residential, Canary Wharf Office
+- **Location**: Canary Wharf (E14)
+- **Property Name**: Hampton Tower, Canary Wharf
+- **ID**: 91226580
+- **Price**: £2600 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-23
+- **Listing Status**: Added today
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/91226580](https://www.rightmove.co.uk/properties/91226580)
 
 ---
 
@@ -2519,7 +2579,7 @@ Clerkenwell, EC1V
 - **Price**: £2655 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-22
-- **Listing Status**: Reduced today
+- **Listing Status**: Reduced yesterday
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/161394944](https://www.rightmove.co.uk/properties/161394944)
 
@@ -2549,7 +2609,7 @@ Clerkenwell, EC1V
 - **Price**: £2699 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-22
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: 14/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/175005683](https://www.rightmove.co.uk/properties/175005683)
 
@@ -2564,7 +2624,7 @@ Clerkenwell, EC1V
 - **Price**: £2700 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-22
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/91204194](https://www.rightmove.co.uk/properties/91204194)
 
