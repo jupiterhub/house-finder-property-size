@@ -28,6 +28,21 @@
 
 ---
 
+### [2026-07-24T20:56:22.854Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Let UK Home, Covering London
+- **Location**: E14
+- **Property Name**: House Share-Brightlingsea Place, London, E14
+- **ID**: 172513145
+- **Price**: £1946 PCM
+- **Size**: 155 sqm
+- **Listing Update**: 2026-03-24
+- **Listing Status**: Reduced on 24/03/2026
+- **Let Available**: 01/10/2026 (🦅 Early Bird: 191d adv)
+- **Link**: [https://www.rightmove.co.uk/properties/172513145](https://www.rightmove.co.uk/properties/172513145)
+
+---
+
 ### [2026-07-22T20:55:09.093Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Felicity J Lord, Canary Wharf Lettings
@@ -594,7 +609,7 @@ Wapping, E1W
 - **Size**: 64.4 sqm
 - **Listing Update**: 2026-07-15
 - **Listing Status**: Added on 15/07/2026
-- **Let Available**: 22/08/2027 (🦅 Early Bird: 403d adv)
+- **Let Available**: 22/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90921774](https://www.rightmove.co.uk/properties/90921774)
 
 ---
@@ -657,6 +672,21 @@ Millwall, E14
 - **Listing Status**: Added on 24/06/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90101784](https://www.rightmove.co.uk/properties/90101784)
+
+---
+
+### [2026-07-24T20:56:22.854Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Way of Life - Balfron Tower, Balfron Tower
+- **Location**: E14
+- **Property Name**: Balfron Tower, 7 St Leonards Road, London, E14 0XU
+- **ID**: 91309059
+- **Price**: £2325 PCM
+- **Size**: 62 sqm
+- **Listing Update**: 2026-07-24
+- **Listing Status**: Added today
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/91309059](https://www.rightmove.co.uk/properties/91309059)
 
 ---
 
