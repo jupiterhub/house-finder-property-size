@@ -38,7 +38,7 @@
 - **Size**: 102.19 sqm
 - **Listing Update**: 2026-05-19
 - **Listing Status**: Added on 19/05/2026
-- **Let Available**: Now (🦅 Early Bird: 66d adv)
+- **Let Available**: Now (🦅 Early Bird: 67d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/88658109](https://www.rightmove.co.uk/properties/88658109)
 
 ---
@@ -540,6 +540,21 @@ South Bermondsey, SE16
 
 ---
 
+### [2026-07-24T14:44:02.571Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Propertymade Residential, London
+- **Location**: E14
+- **Property Name**: Handlebury House, Leamouth Road, London, E14
+- **ID**: 89631849
+- **Price**: £2500 PCM
+- **Size**: 66 sqm
+- **Listing Update**: 2026-07-24
+- **Listing Status**: Reduced today
+- **Let Available**: 03/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/89631849](https://www.rightmove.co.uk/properties/89631849)
+
+---
+
 ### [2026-07-22T19:18:01.180Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: OpenRent, London
@@ -872,6 +887,21 @@ Millwall, E14
 
 ---
 
+### [2026-07-24T14:44:02.571Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: The Online Letting Agents Ltd, Bury St Edmunds
+- **Location**: Canary Wharf (E14)
+- **Property Name**: Millharbour, London, E14
+- **ID**: 90350628
+- **Price**: £2100 PCM
+- **Size**: 54.3 sqm
+- **Listing Update**: 2026-07-24
+- **Listing Status**: Reduced today
+- **Let Available**: 01/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/90350628](https://www.rightmove.co.uk/properties/90350628)
+
+---
+
 ### [2026-07-22T14:53:42.157Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Hamptons, Canary Wharf
@@ -941,8 +971,8 @@ Islington, N1
 - **ID**: 90981231
 - **Price**: £2350 PCM
 - **Size**: 53.1 sqm
-- **Listing Update**: 2026-07-16
-- **Listing Status**: Added on 16/07/2026
+- **Listing Update**: 2026-07-24
+- **Listing Status**: Reduced today
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90981231](https://www.rightmove.co.uk/properties/90981231)
 
@@ -978,6 +1008,21 @@ Islington, N1
 
 ---
 
+### [2026-07-24T14:44:02.572Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Holland Properties, London
+- **Location**: E14
+- **Property Name**: Avalon Point, E14
+- **ID**: 89437065
+- **Price**: £2350 PCM
+- **Size**: 52 sqm
+- **Listing Update**: 2026-07-24
+- **Listing Status**: Reduced today
+- **Let Available**: 21/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/89437065](https://www.rightmove.co.uk/properties/89437065)
+
+---
+
 ### [2026-07-23T15:01:57.269Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: SJW property management limited, London
@@ -1005,21 +1050,6 @@ Islington, N1
 - **Listing Status**: Reduced on 22/07/2026
 - **Let Available**: 25/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90366564](https://www.rightmove.co.uk/properties/90366564)
-
----
-
-### [2026-07-23T15:01:57.269Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Fizzy Living, Poplar
-- **Location**: E14
-- **Property Name**: Fizzy Poplar, Lindfield Street, Poplar E14 6GP
-- **ID**: 91246806
-- **Price**: £2320 PCM
-- **Size**: 51 sqm
-- **Listing Update**: 2026-07-23
-- **Listing Status**: Added yesterday
-- **Let Available**: 07/09/2026
-- **Link**: [https://www.rightmove.co.uk/properties/91246806](https://www.rightmove.co.uk/properties/91246806)
 
 ---
 
@@ -1068,6 +1098,21 @@ Islington, N1
 
 ---
 
+### [2026-07-24T14:44:02.572Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: JLL, Canary Wharf
+- **Location**: E14
+- **Property Name**: Serapis House, Goodluck Hope Walk, E14
+- **ID**: 91289904
+- **Price**: £2430 PCM
+- **Size**: 50 sqm
+- **Listing Update**: 2026-07-24
+- **Listing Status**: Added today
+- **Let Available**: 15/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/91289904](https://www.rightmove.co.uk/properties/91289904)
+
+---
+
 ### [2026-07-23T10:59:16.472Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Dexters, Wapping
@@ -1095,6 +1140,21 @@ Islington, N1
 - **Listing Status**: Reduced on 20/07/2026
 - **Let Available**: 01/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90677403](https://www.rightmove.co.uk/properties/90677403)
+
+---
+
+### [2026-07-24T14:44:02.571Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Elms Estates, Bethnal Green
+- **Location**: Wapping (London Dock - E1W)
+- **Property Name**: Shadwell Gardens, London
+- **ID**: 89450421
+- **Price**: £2000 PCM
+- **Size**: 49 sqm
+- **Listing Update**: 2026-06-15
+- **Listing Status**: Reduced on 15/06/2026
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/89450421](https://www.rightmove.co.uk/properties/89450421)
 
 ---
 
@@ -1230,6 +1290,21 @@ Islington, N1
 - **Listing Status**: Added on 22/07/2026
 - **Let Available**: 17/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91197945](https://www.rightmove.co.uk/properties/91197945)
+
+---
+
+### [2026-07-24T14:44:02.572Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Benham and Reeves - Canary Wharf, Canary Wharf
+- **Location**: E14
+- **Property Name**: St. Anne's Street, Canary Wharf, E14
+- **ID**: 91290375
+- **Price**: £1900 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-24
+- **Listing Status**: Added today
+- **Let Available**: 12/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/91290375](https://www.rightmove.co.uk/properties/91290375)
 
 ---
 
@@ -1503,18 +1578,18 @@ Islington, N1
 
 ---
 
-### [2026-07-22T19:18:01.174Z] MATCH FOUND!
+### [2026-07-24T14:44:02.571Z] MATCH FOUND!
 - **Platform**: Rightmove
-- **Marketed by**: View Lettings, London
-- **Location**: Canada Water (SE16)
-- **Property Name**: Brunswick Quay, SE16
-- **ID**: 131214350
+- **Marketed by**: Benham and Reeves - Canary Wharf, Canary Wharf
+- **Location**: Canary Wharf (E14)
+- **Property Name**: Millharbou, Canary Wharf, E14
+- **ID**: 91288002
 - **Price**: £2100 PCM
 - **Size**: Unknown
-- **Listing Update**: 2026-07-20
-- **Listing Status**: Added on 20/07/2026
-- **Let Available**: 31/07/2026
-- **Link**: [https://www.rightmove.co.uk/properties/131214350](https://www.rightmove.co.uk/properties/131214350)
+- **Listing Update**: 2026-07-24
+- **Listing Status**: Added today
+- **Let Available**: 17/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/91288002](https://www.rightmove.co.uk/properties/91288002)
 
 ---
 
@@ -1575,6 +1650,21 @@ Islington, N1
 - **Listing Status**: Added on 20/07/2026
 - **Let Available**: 21/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91080015](https://www.rightmove.co.uk/properties/91080015)
+
+---
+
+### [2026-07-24T14:44:02.572Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Hawk and Eagle Property Consultants, London
+- **Location**: E14
+- **Property Name**: Wheat Sheaf Close, Isle of Dogs, E14 9UY
+- **ID**: 91285095
+- **Price**: £2150 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-24
+- **Listing Status**: Added today
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/91285095](https://www.rightmove.co.uk/properties/91285095)
 
 ---
 
@@ -1726,6 +1816,36 @@ Islington, N1
 - **Listing Status**: Added on 11/07/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/64568847](https://www.rightmove.co.uk/properties/64568847)
+
+---
+
+### [2026-07-24T14:44:02.572Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Benham and Reeves - Canary Wharf, Canary Wharf
+- **Location**: E14
+- **Property Name**: Hemlock Street, Poplar, E14
+- **ID**: 91286214
+- **Price**: £2250 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-24
+- **Listing Status**: Added today
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/91286214](https://www.rightmove.co.uk/properties/91286214)
+
+---
+
+### [2026-07-24T14:44:02.571Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Life Residential, Canary Wharf Office
+- **Location**: E14
+- **Property Name**: Horizons Tower, Canary Wharf, London
+- **ID**: 91296798
+- **Price**: £2250 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-24
+- **Listing Status**: Added today
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/91296798](https://www.rightmove.co.uk/properties/91296798)
 
 ---
 
@@ -1904,7 +2024,7 @@ Islington, N1
 - **Size**: Unknown
 - **Listing Update**: 2026-07-21
 - **Listing Status**: Added on 21/07/2026
-- **Let Available**: 26/09/2026 (🦅 Early Bird: 67d adv)
+- **Let Available**: 16/10/2026 (🦅 Early Bird: 87d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/91170438](https://www.rightmove.co.uk/properties/91170438)
 
 ---
@@ -1934,7 +2054,7 @@ Islington, N1
 - **Size**: Unknown
 - **Listing Update**: 2026-05-19
 - **Listing Status**: Reduced on 19/05/2026
-- **Let Available**: Now (🦅 Early Bird: 66d adv)
+- **Let Available**: Now (🦅 Early Bird: 67d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/87805383](https://www.rightmove.co.uk/properties/87805383)
 
 ---
@@ -2209,6 +2329,21 @@ Islington, N1
 
 ---
 
+### [2026-07-24T14:44:02.571Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Dexters, Canary Wharf
+- **Location**: Canary Wharf (E14)
+- **Property Name**: Westferry Road, Canary Wharf
+- **ID**: 91287369
+- **Price**: £2500 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-24
+- **Listing Status**: Added today
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/91287369](https://www.rightmove.co.uk/properties/91287369)
+
+---
+
 ### [2026-07-23T15:01:57.269Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Felicity J Lord, Canary Wharf Lettings
@@ -2266,6 +2401,21 @@ Islington, N1
 - **Listing Status**: Added on 16/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90986817](https://www.rightmove.co.uk/properties/90986817)
+
+---
+
+### [2026-07-24T14:44:02.572Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Benham and Reeves - Canary Wharf, Canary Wharf
+- **Location**: E14
+- **Property Name**: Curlew House, Hawser Lane, London
+- **ID**: 87996273
+- **Price**: £2575 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-17
+- **Listing Status**: Reduced on 17/07/2026
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/87996273](https://www.rightmove.co.uk/properties/87996273)
 
 ---
 
@@ -2404,21 +2554,6 @@ Islington, N1
 
 ---
 
-### [2026-07-22T14:53:42.156Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Right Now Residential, London
-- **Location**: Canary Wharf
-- **Property Name**: Amory Tower, Marsh Wall, Tower Hamlets, London
-- **ID**: 91204194
-- **Price**: £2700 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-23
-- **Listing Status**: Reduced yesterday
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/91204194](https://www.rightmove.co.uk/properties/91204194)
-
----
-
 ### [2026-07-15T12:03:11.385Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: OpenRent, London
@@ -2427,8 +2562,8 @@ Islington, N1
 - **ID**: 90913908
 - **Price**: £2700 PCM
 - **Size**: Unknown
-- **Listing Update**: 2026-07-15
-- **Listing Status**: Added on 15/07/2026
+- **Listing Update**: 2026-07-24
+- **Listing Status**: Reduced today
 - **Let Available**: 13/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90913908](https://www.rightmove.co.uk/properties/90913908)
 
