@@ -89,6 +89,21 @@ Wapping, E1W
 
 ---
 
+### [2026-07-24T18:11:55.407Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Dexters, Wapping
+- **Location**: E14
+- **Property Name**: Commercial Road, Limehouse
+- **ID**: 91299315
+- **Price**: £2600 PCM
+- **Size**: 88.26 sqm
+- **Listing Update**: 2026-07-24
+- **Listing Status**: Added today
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/91299315](https://www.rightmove.co.uk/properties/91299315)
+
+---
+
 ### [2026-07-17T21:44:52.812Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Dexters, Canary Wharf
@@ -161,22 +176,6 @@ Wapping, E1W
 - **Listing Status**: Reduced on 22/07/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90982011](https://www.rightmove.co.uk/properties/90982011)
-
----
-
-### [2026-07-22T19:18:01.180Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Chestertons, Tower Bridge
-- **Location**: SE16
-- **Property Name**: Limasol Street, 
-South Bermondsey, SE16
-- **ID**: 90876843
-- **Price**: £2500 PCM
-- **Size**: 78 sqm
-- **Listing Update**: 2026-07-22
-- **Listing Status**: Reduced on 22/07/2026
-- **Let Available**: 15/09/2026
-- **Link**: [https://www.rightmove.co.uk/properties/90876843](https://www.rightmove.co.uk/properties/90876843)
 
 ---
 
@@ -330,6 +329,21 @@ South Bermondsey, SE16
 
 ---
 
+### [2026-07-24T18:11:55.407Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: SJW property management limited, London
+- **Location**: E14
+- **Property Name**: Hawser Lane, Curlew House, E14
+- **ID**: 89744391
+- **Price**: £2350 PCM
+- **Size**: 72 sqm
+- **Listing Update**: 2026-07-24
+- **Listing Status**: Reduced today
+- **Let Available**: 12/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/89744391](https://www.rightmove.co.uk/properties/89744391)
+
+---
+
 ### [2026-07-22T19:18:01.181Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Hunters, Shoreditch
@@ -387,21 +401,6 @@ South Bermondsey, SE16
 - **Listing Status**: Reduced on 20/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90089886](https://www.rightmove.co.uk/properties/90089886)
-
----
-
-### [2026-07-22T19:18:01.178Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Right Now Residential, London
-- **Location**: E14
-- **Property Name**: Quest House South, Escapade Place, Tower Hamlets, London
-- **ID**: 91207302
-- **Price**: £2300 PCM
-- **Size**: 69.68 sqm
-- **Listing Update**: 2026-07-22
-- **Listing Status**: Added on 22/07/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/91207302](https://www.rightmove.co.uk/properties/91207302)
 
 ---
 
@@ -615,6 +614,21 @@ South Bermondsey, SE16
 
 ---
 
+### [2026-07-24T18:11:55.407Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Way of Life - Balfron Tower, Balfron Tower
+- **Location**: E14
+- **Property Name**: Balfron Tower, 7 St Leonards Road, London, E14 0UY
+- **ID**: 91297965
+- **Price**: £2510 PCM
+- **Size**: 64 sqm
+- **Listing Update**: 2026-07-24
+- **Listing Status**: Added today
+- **Let Available**: 23/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/91297965](https://www.rightmove.co.uk/properties/91297965)
+
+---
+
 ### [2026-07-14T16:44:34.270Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Chestertons, Canary Wharf and Docklands
@@ -643,6 +657,21 @@ Millwall, E14
 - **Listing Status**: Added on 24/06/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90101784](https://www.rightmove.co.uk/properties/90101784)
+
+---
+
+### [2026-07-24T18:11:55.407Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Way of Life - Balfron Tower, Balfron Tower
+- **Location**: E14
+- **Property Name**: Balfron Tower, 7 St Leonards Road, London, E14 0XU
+- **ID**: 91298058
+- **Price**: £2490 PCM
+- **Size**: 62 sqm
+- **Listing Update**: 2026-07-24
+- **Listing Status**: Added today
+- **Let Available**: 20/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/91298058](https://www.rightmove.co.uk/properties/91298058)
 
 ---
 
@@ -1151,8 +1180,8 @@ Islington, N1
 - **ID**: 89450421
 - **Price**: £2000 PCM
 - **Size**: 49 sqm
-- **Listing Update**: 2026-06-15
-- **Listing Status**: Reduced on 15/06/2026
+- **Listing Update**: 2026-07-24
+- **Listing Status**: Reduced today
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/89450421](https://www.rightmove.co.uk/properties/89450421)
 
@@ -1233,6 +1262,21 @@ Islington, N1
 
 ---
 
+### [2026-07-24T18:11:55.408Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Hamptons, Tower Bridge
+- **Location**: SE16
+- **Property Name**: Luna House, Bermondsey, SE16
+- **ID**: 91304406
+- **Price**: £2150 PCM
+- **Size**: 47.5 sqm
+- **Listing Update**: 2026-07-24
+- **Listing Status**: Added today
+- **Let Available**: 30/09/2026 (🦅 Early Bird: 68d adv)
+- **Link**: [https://www.rightmove.co.uk/properties/91304406](https://www.rightmove.co.uk/properties/91304406)
+
+---
+
 ### [2026-07-13T16:22:49.586Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Ernest Brooks International, Canary Wharf
@@ -1241,8 +1285,8 @@ Islington, N1
 - **ID**: 90408405
 - **Price**: £2200 PCM
 - **Size**: 47 sqm
-- **Listing Update**: 2026-07-10
-- **Listing Status**: Reduced on 10/07/2026
+- **Listing Update**: 2026-07-24
+- **Listing Status**: Reduced today
 - **Let Available**: 08/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90408405](https://www.rightmove.co.uk/properties/90408405)
 
@@ -1801,21 +1845,6 @@ Islington, N1
 - **Listing Status**: Added on 11/07/2026
 - **Let Available**: 01/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90780096](https://www.rightmove.co.uk/properties/90780096)
-
----
-
-### [2026-07-13T16:22:49.585Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Benham and Reeves - Canary Wharf, Canary Wharf
-- **Location**: Canary Wharf
-- **Property Name**: Garford Street, E14
-- **ID**: 64568847
-- **Price**: £2200 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-11
-- **Listing Status**: Added on 11/07/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/64568847](https://www.rightmove.co.uk/properties/64568847)
 
 ---
 
