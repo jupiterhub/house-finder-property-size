@@ -1353,21 +1353,6 @@ Poplar, E14
 
 ---
 
-### [2026-07-13T16:22:49.586Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: OpenRent, London
-- **Location**: South Quay
-- **Property Name**: Montford House, London, E14
-- **ID**: 90397644
-- **Price**: £2195 PCM
-- **Size**: 46 sqm
-- **Listing Update**: 2026-07-12
-- **Listing Status**: Reduced on 12/07/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/90397644](https://www.rightmove.co.uk/properties/90397644)
-
----
-
 ### [2026-07-22T19:18:01.178Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Stirling Ackroyd Lettings, Canary Wharf
@@ -1683,6 +1668,21 @@ Poplar, E14
 
 ---
 
+### [2026-07-25T20:41:05.410Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: CITY REALTOR LIMITED, London
+- **Location**: Wapping (London Dock - E1W)
+- **Property Name**: Lowood Street, London
+- **ID**: 91326258
+- **Price**: £2100 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-25
+- **Listing Status**: Added today
+- **Let Available**: 25/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/91326258](https://www.rightmove.co.uk/properties/91326258)
+
+---
+
 ### [2026-07-25T14:27:52.062Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Residential Links, London
@@ -1966,21 +1966,6 @@ Poplar, E14
 - **Listing Status**: Added on 16/07/2026
 - **Let Available**: 24/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90986586](https://www.rightmove.co.uk/properties/90986586)
-
----
-
-### [2026-07-22T19:18:01.179Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: LettingaProperty
-- **Location**: E14
-- **Property Name**: Undine Road, London, Greater London, E14 9UW
-- **ID**: 91193043
-- **Price**: £2250 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-22
-- **Listing Status**: Added on 22/07/2026
-- **Let Available**: 23/09/2026
-- **Link**: [https://www.rightmove.co.uk/properties/91193043](https://www.rightmove.co.uk/properties/91193043)
 
 ---
 

@@ -3172,6 +3172,14 @@
       "reason": "Price £3805 exceeds max £2700",
       "timestamp": "2026-07-25T17:48:24.609Z"
     },
+    "91323417": {
+      "reason": "Price £3975 exceeds max £2700",
+      "timestamp": "2026-07-25T20:40:47.395Z"
+    },
+    "91323432": {
+      "reason": "Price £2963 exceeds max £2700",
+      "timestamp": "2026-07-25T20:40:47.392Z"
+    },
     "91323435": {
       "reason": "Price £2970 exceeds max £2700",
       "timestamp": "2026-07-25T14:27:35.886Z"
