@@ -113,7 +113,7 @@ Wapping, E1W
 - **Price**: £2600 PCM
 - **Size**: 88.26 sqm
 - **Listing Update**: 2026-07-24
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/91299315](https://www.rightmove.co.uk/properties/91299315)
 
@@ -218,7 +218,7 @@ Wapping, E1W
 - **Price**: £2400 PCM
 - **Size**: 76.92 sqm
 - **Listing Update**: 2026-07-23
-- **Listing Status**: Reduced yesterday
+- **Listing Status**: Reduced on 23/07/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90029532](https://www.rightmove.co.uk/properties/90029532)
 
@@ -263,7 +263,7 @@ Wapping, E1W
 - **Price**: £2600 PCM
 - **Size**: 75 sqm
 - **Listing Update**: 2026-07-23
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 23/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/91226412](https://www.rightmove.co.uk/properties/91226412)
 
@@ -278,7 +278,7 @@ Wapping, E1W
 - **Price**: £2600 PCM
 - **Size**: 74.6 sqm
 - **Listing Update**: 2026-07-23
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 23/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/91250994](https://www.rightmove.co.uk/properties/91250994)
 
@@ -308,7 +308,7 @@ Wapping, E1W
 - **Price**: £2500 PCM
 - **Size**: 74 sqm
 - **Listing Update**: 2026-07-23
-- **Listing Status**: Reduced yesterday
+- **Listing Status**: Reduced on 23/07/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/89549856](https://www.rightmove.co.uk/properties/89549856)
 
@@ -339,7 +339,7 @@ Wapping, E1W
 - **Size**: 73 sqm
 - **Listing Update**: 2026-07-14
 - **Listing Status**: Added on 14/07/2026
-- **Let Available**: 25/07/2026
+- **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90884757](https://www.rightmove.co.uk/properties/90884757)
 
 ---
@@ -353,7 +353,7 @@ Wapping, E1W
 - **Price**: £2350 PCM
 - **Size**: 72 sqm
 - **Listing Update**: 2026-07-24
-- **Listing Status**: Reduced today
+- **Listing Status**: Reduced yesterday
 - **Let Available**: 12/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/89744391](https://www.rightmove.co.uk/properties/89744391)
 
@@ -458,7 +458,7 @@ Wapping, E1W
 - **Price**: £2250 PCM
 - **Size**: 69 sqm
 - **Listing Update**: 2026-07-23
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 23/07/2026
 - **Let Available**: 20/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91265760](https://www.rightmove.co.uk/properties/91265760)
 
@@ -474,7 +474,7 @@ Wapping, E1W
 - **Size**: 69 sqm
 - **Listing Update**: 2026-07-22
 - **Listing Status**: Added on 22/07/2026
-- **Let Available**: 06/10/2026 (🦅 Early Bird: 76d adv)
+- **Let Available**: 04/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91220718](https://www.rightmove.co.uk/properties/91220718)
 
 ---
@@ -548,7 +548,7 @@ Wapping, E1W
 - **Price**: £2450 PCM
 - **Size**: 66 sqm
 - **Listing Update**: 2026-07-24
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: 04/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91274943](https://www.rightmove.co.uk/properties/91274943)
 
@@ -563,7 +563,7 @@ Wapping, E1W
 - **Price**: £2500 PCM
 - **Size**: 66 sqm
 - **Listing Update**: 2026-07-24
-- **Listing Status**: Reduced today
+- **Listing Status**: Reduced yesterday
 - **Let Available**: 03/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/89631849](https://www.rightmove.co.uk/properties/89631849)
 
@@ -578,7 +578,7 @@ Wapping, E1W
 - **Price**: £2300 PCM
 - **Size**: 65.03 sqm
 - **Listing Update**: 2026-07-23
-- **Listing Status**: Reduced yesterday
+- **Listing Status**: Reduced on 23/07/2026
 - **Let Available**: 14/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90513300](https://www.rightmove.co.uk/properties/90513300)
 
@@ -593,7 +593,7 @@ Wapping, E1W
 - **Price**: £2150 PCM
 - **Size**: 64.7 sqm
 - **Listing Update**: 2026-07-24
-- **Listing Status**: Reduced today
+- **Listing Status**: Reduced yesterday
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90924282](https://www.rightmove.co.uk/properties/90924282)
 
@@ -638,7 +638,7 @@ Wapping, E1W
 - **Price**: £2510 PCM
 - **Size**: 64 sqm
 - **Listing Update**: 2026-07-24
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: 23/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91297965](https://www.rightmove.co.uk/properties/91297965)
 
@@ -684,7 +684,7 @@ Millwall, E14
 - **Price**: £2325 PCM
 - **Size**: 62 sqm
 - **Listing Update**: 2026-07-24
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/91309059](https://www.rightmove.co.uk/properties/91309059)
 
@@ -699,7 +699,7 @@ Millwall, E14
 - **Price**: £2490 PCM
 - **Size**: 62 sqm
 - **Listing Update**: 2026-07-24
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: 20/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91298058](https://www.rightmove.co.uk/properties/91298058)
 
@@ -760,7 +760,7 @@ Millwall, E14
 - **Size**: 61 sqm
 - **Listing Update**: 2026-07-18
 - **Listing Status**: Added on 18/07/2026
-- **Let Available**: 25/07/2026
+- **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/91063287](https://www.rightmove.co.uk/properties/91063287)
 
 ---
@@ -865,7 +865,7 @@ Millwall, E14
 - **Price**: £2050 PCM
 - **Size**: 58 sqm
 - **Listing Update**: 2026-07-23
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 23/07/2026
 - **Let Available**: 27/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91224966](https://www.rightmove.co.uk/properties/91224966)
 
@@ -883,36 +883,6 @@ Millwall, E14
 - **Listing Status**: Added on 09/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90708627](https://www.rightmove.co.uk/properties/90708627)
-
----
-
-### [2026-07-22T19:18:01.176Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Knight Frank - Lettings, Wapping
-- **Location**: Wapping (London Dock - E1W)
-- **Property Name**: King Henry Terrace, The Highway, London, E1W
-- **ID**: 91079655
-- **Price**: £2400 PCM
-- **Size**: 57 sqm
-- **Listing Update**: 2026-07-20
-- **Listing Status**: Added on 20/07/2026
-- **Let Available**: 10/09/2026
-- **Link**: [https://www.rightmove.co.uk/properties/91079655](https://www.rightmove.co.uk/properties/91079655)
-
----
-
-### [2026-07-22T19:18:01.181Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: The Bespoke Agent, London
-- **Location**: SE16
-- **Property Name**: Odessa Street, London, SE16
-- **ID**: 89383038
-- **Price**: £2000 PCM
-- **Size**: 56 sqm
-- **Listing Update**: 2026-07-14
-- **Listing Status**: Reduced on 14/07/2026
-- **Let Available**: 07/08/2026
-- **Link**: [https://www.rightmove.co.uk/properties/89383038](https://www.rightmove.co.uk/properties/89383038)
 
 ---
 
@@ -955,7 +925,7 @@ Millwall, E14
 - **Price**: £2100 PCM
 - **Size**: 54.3 sqm
 - **Listing Update**: 2026-07-24
-- **Listing Status**: Reduced today
+- **Listing Status**: Reduced yesterday
 - **Let Available**: 01/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90350628](https://www.rightmove.co.uk/properties/90350628)
 
@@ -1031,7 +1001,7 @@ Islington, N1
 - **Price**: £2350 PCM
 - **Size**: 53.1 sqm
 - **Listing Update**: 2026-07-24
-- **Listing Status**: Reduced today
+- **Listing Status**: Reduced yesterday
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90981231](https://www.rightmove.co.uk/properties/90981231)
 
@@ -1061,7 +1031,7 @@ Islington, N1
 - **Price**: £2250 PCM
 - **Size**: 52 sqm
 - **Listing Update**: 2026-07-23
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 23/07/2026
 - **Let Available**: 20/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91227474](https://www.rightmove.co.uk/properties/91227474)
 
@@ -1076,7 +1046,7 @@ Islington, N1
 - **Price**: £2350 PCM
 - **Size**: 52 sqm
 - **Listing Update**: 2026-07-24
-- **Listing Status**: Reduced today
+- **Listing Status**: Reduced yesterday
 - **Let Available**: 21/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/89437065](https://www.rightmove.co.uk/properties/89437065)
 
@@ -1091,7 +1061,7 @@ Islington, N1
 - **Price**: £2100 PCM
 - **Size**: 51 sqm
 - **Listing Update**: 2026-07-23
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 23/07/2026
 - **Let Available**: 18/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91245495](https://www.rightmove.co.uk/properties/91245495)
 
@@ -1151,7 +1121,7 @@ Islington, N1
 - **Price**: £2350 PCM
 - **Size**: 50 sqm
 - **Listing Update**: 2026-07-23
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 23/07/2026
 - **Let Available**: 17/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91251456](https://www.rightmove.co.uk/properties/91251456)
 
@@ -1166,7 +1136,7 @@ Islington, N1
 - **Price**: £2430 PCM
 - **Size**: 50 sqm
 - **Listing Update**: 2026-07-24
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: 15/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91289904](https://www.rightmove.co.uk/properties/91289904)
 
@@ -1211,7 +1181,7 @@ Islington, N1
 - **Price**: £2000 PCM
 - **Size**: 49 sqm
 - **Listing Update**: 2026-07-24
-- **Listing Status**: Reduced today
+- **Listing Status**: Reduced yesterday
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/89450421](https://www.rightmove.co.uk/properties/89450421)
 
@@ -1301,7 +1271,7 @@ Islington, N1
 - **Price**: £2150 PCM
 - **Size**: 47.5 sqm
 - **Listing Update**: 2026-07-24
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: 30/09/2026 (🦅 Early Bird: 68d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/91304406](https://www.rightmove.co.uk/properties/91304406)
 
@@ -1316,7 +1286,7 @@ Islington, N1
 - **Price**: £2200 PCM
 - **Size**: 47 sqm
 - **Listing Update**: 2026-07-24
-- **Listing Status**: Reduced today
+- **Listing Status**: Reduced yesterday
 - **Let Available**: 08/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90408405](https://www.rightmove.co.uk/properties/90408405)
 
@@ -1376,7 +1346,7 @@ Islington, N1
 - **Price**: £1900 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-24
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: 12/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91290375](https://www.rightmove.co.uk/properties/91290375)
 
@@ -1406,7 +1376,7 @@ Islington, N1
 - **Price**: £1950 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-24
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: 17/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/142893674](https://www.rightmove.co.uk/properties/142893674)
 
@@ -1601,7 +1571,7 @@ Islington, N1
 - **Price**: £2050 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-23
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 23/07/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/91260018](https://www.rightmove.co.uk/properties/91260018)
 
@@ -1661,7 +1631,7 @@ Islington, N1
 - **Price**: £2100 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-24
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: 17/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91288002](https://www.rightmove.co.uk/properties/91288002)
 
@@ -1736,7 +1706,7 @@ Islington, N1
 - **Price**: £2150 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-24
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/91285095](https://www.rightmove.co.uk/properties/91285095)
 
@@ -1797,7 +1767,7 @@ Islington, N1
 - **Price**: £2200 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-24
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: 28/09/2026 (🦅 Early Bird: 66d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/91272831](https://www.rightmove.co.uk/properties/91272831)
 
@@ -1812,7 +1782,7 @@ Islington, N1
 - **Price**: £2200 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-23
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 23/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/91235553](https://www.rightmove.co.uk/properties/91235553)
 
@@ -1887,7 +1857,7 @@ Islington, N1
 - **Price**: £2250 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-24
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/91286214](https://www.rightmove.co.uk/properties/91286214)
 
@@ -1902,7 +1872,7 @@ Islington, N1
 - **Price**: £2250 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-24
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/91296798](https://www.rightmove.co.uk/properties/91296798)
 
@@ -2007,7 +1977,7 @@ Islington, N1
 - **Price**: £2300 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-24
-- **Listing Status**: Reduced today
+- **Listing Status**: Reduced yesterday
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/89399772](https://www.rightmove.co.uk/properties/89399772)
 
@@ -2022,7 +1992,7 @@ Islington, N1
 - **Price**: £2300 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-23
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 23/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/91225413](https://www.rightmove.co.uk/properties/91225413)
 
@@ -2142,7 +2112,7 @@ Islington, N1
 - **Price**: £2350 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-23
-- **Listing Status**: Reduced yesterday
+- **Listing Status**: Reduced on 23/07/2026
 - **Let Available**: 01/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90977913](https://www.rightmove.co.uk/properties/90977913)
 
@@ -2157,7 +2127,7 @@ Islington, N1
 - **Price**: £2350 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-23
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 23/07/2026
 - **Let Available**: 31/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91229004](https://www.rightmove.co.uk/properties/91229004)
 
@@ -2187,7 +2157,7 @@ Islington, N1
 - **Price**: £2400 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-23
-- **Listing Status**: Reduced yesterday
+- **Listing Status**: Reduced on 23/07/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90497283](https://www.rightmove.co.uk/properties/90497283)
 
@@ -2307,7 +2277,7 @@ Islington, N1
 - **Price**: £2450 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-23
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 23/07/2026
 - **Let Available**: 16/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91224972](https://www.rightmove.co.uk/properties/91224972)
 
@@ -2397,7 +2367,7 @@ Islington, N1
 - **Price**: £2500 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-24
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/91287369](https://www.rightmove.co.uk/properties/91287369)
 
@@ -2412,7 +2382,7 @@ Islington, N1
 - **Price**: £2500 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-23
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 23/07/2026
 - **Let Available**: 01/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/88710684](https://www.rightmove.co.uk/properties/88710684)
 
@@ -2427,7 +2397,7 @@ Islington, N1
 - **Price**: £2500 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-23
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 23/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/91235559](https://www.rightmove.co.uk/properties/91235559)
 
@@ -2502,7 +2472,7 @@ Islington, N1
 - **Price**: £2600 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-23
-- **Listing Status**: Reduced yesterday
+- **Listing Status**: Reduced on 23/07/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/91255986](https://www.rightmove.co.uk/properties/91255986)
 
@@ -2517,7 +2487,7 @@ Islington, N1
 - **Price**: £2600 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-23
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 23/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/91226580](https://www.rightmove.co.uk/properties/91226580)
 
@@ -2577,7 +2547,7 @@ Islington, N1
 - **Price**: £2650 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-24
-- **Listing Status**: Reduced today
+- **Listing Status**: Reduced yesterday
 - **Let Available**: 12/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90653517](https://www.rightmove.co.uk/properties/90653517)
 
@@ -2622,7 +2592,7 @@ Islington, N1
 - **Price**: £2700 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-24
-- **Listing Status**: Reduced today
+- **Listing Status**: Reduced yesterday
 - **Let Available**: 13/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90913908](https://www.rightmove.co.uk/properties/90913908)
 
