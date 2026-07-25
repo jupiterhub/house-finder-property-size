@@ -164,6 +164,21 @@ Wapping, E1W
 
 ---
 
+### [2026-07-25T17:48:41.185Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: JBrown International, London
+- **Location**: South Quay (E14)
+- **Property Name**: Isle Of Dogs, Canary Wharf, London, E14
+- **ID**: 91324605
+- **Price**: £2300 PCM
+- **Size**: 83 sqm
+- **Listing Update**: 2026-07-25
+- **Listing Status**: Added today
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/91324605](https://www.rightmove.co.uk/properties/91324605)
+
+---
+
 ### [2026-07-22T19:18:01.178Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: QD Lettings, Thurrock
@@ -1964,7 +1979,7 @@ Poplar, E14
 - **Size**: Unknown
 - **Listing Update**: 2026-07-22
 - **Listing Status**: Added on 22/07/2026
-- **Let Available**: 16/09/2026
+- **Let Available**: 23/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91193043](https://www.rightmove.co.uk/properties/91193043)
 
 ---
@@ -2431,6 +2446,21 @@ Poplar, E14
 - **Listing Status**: Reduced on 13/07/2026
 - **Let Available**: 31/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/88695102](https://www.rightmove.co.uk/properties/88695102)
+
+---
+
+### [2026-07-25T17:48:41.185Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: LAND ROYALE UK, London
+- **Location**: South Quay (E14)
+- **Property Name**: Heritage Tower, East Ferry Road, Tower Hamlets, London
+- **ID**: 91324503
+- **Price**: £2499 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-25
+- **Listing Status**: Added today
+- **Let Available**: 26/07/2026
+- **Link**: [https://www.rightmove.co.uk/properties/91324503](https://www.rightmove.co.uk/properties/91324503)
 
 ---
 
