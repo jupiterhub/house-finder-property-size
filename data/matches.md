@@ -53,7 +53,7 @@
 - **Size**: 102.19 sqm
 - **Listing Update**: 2026-05-19
 - **Listing Status**: Added on 19/05/2026
-- **Let Available**: Now (🦅 Early Bird: 67d adv)
+- **Let Available**: Now (🦅 Early Bird: 68d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/88658109](https://www.rightmove.co.uk/properties/88658109)
 
 ---
@@ -1082,6 +1082,21 @@ Islington, N1
 
 ---
 
+### [2026-07-25T14:27:52.063Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Fizzy Living, Poplar
+- **Location**: E14
+- **Property Name**: Fizzy Poplar, Lindfield Street, Poplar E14 6GP
+- **ID**: 91323219
+- **Price**: £2320 PCM
+- **Size**: 51 sqm
+- **Listing Update**: 2026-07-25
+- **Listing Status**: Added today
+- **Let Available**: 07/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/91323219](https://www.rightmove.co.uk/properties/91323219)
+
+---
+
 ### [2026-07-22T19:18:01.175Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Benham and Reeves - Surrey Quays, Surrey Quays
@@ -1109,6 +1124,22 @@ Islington, N1
 - **Listing Status**: Added on 14/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90880086](https://www.rightmove.co.uk/properties/90880086)
+
+---
+
+### [2026-07-25T14:27:52.063Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Chestertons, Canary Wharf and Docklands
+- **Location**: E14
+- **Property Name**: St. Annes Street, 
+Poplar, E14
+- **ID**: 91320096
+- **Price**: £1950 PCM
+- **Size**: 50 sqm
+- **Listing Update**: 2026-07-25
+- **Listing Status**: Added today
+- **Let Available**: 24/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/91320096](https://www.rightmove.co.uk/properties/91320096)
 
 ---
 
@@ -1334,6 +1365,21 @@ Islington, N1
 - **Listing Status**: Added on 22/07/2026
 - **Let Available**: 17/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91197945](https://www.rightmove.co.uk/properties/91197945)
+
+---
+
+### [2026-07-25T14:27:52.063Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: OpenRent, London
+- **Location**: South Quay (E14)
+- **Property Name**: Peninsula Court, London, E14
+- **ID**: 91310712
+- **Price**: £1900 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-24
+- **Listing Status**: Added yesterday
+- **Let Available**: 08/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/91310712](https://www.rightmove.co.uk/properties/91310712)
 
 ---
 
@@ -1622,6 +1668,21 @@ Islington, N1
 
 ---
 
+### [2026-07-25T14:27:52.062Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Residential Links, London
+- **Location**: Canary Wharf (E14)
+- **Property Name**: Pan Peninsula, Canary Wharf, E14
+- **ID**: 91313781
+- **Price**: £2100 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-25
+- **Listing Status**: Added today
+- **Let Available**: 29/10/2026 (🦅 Early Bird: 96d adv)
+- **Link**: [https://www.rightmove.co.uk/properties/91313781](https://www.rightmove.co.uk/properties/91313781)
+
+---
+
 ### [2026-07-24T14:44:02.571Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Benham and Reeves - Canary Wharf, Canary Wharf
@@ -1697,6 +1758,21 @@ Islington, N1
 
 ---
 
+### [2026-07-25T14:27:52.063Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Oliver Jaques, Surrey Quays
+- **Location**: Canada Water (SE16)
+- **Property Name**: Howland Estate, Canada Water SE16
+- **ID**: 91319838
+- **Price**: £2150 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-25
+- **Listing Status**: Added today
+- **Let Available**: 04/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/91319838](https://www.rightmove.co.uk/properties/91319838)
+
+---
+
 ### [2026-07-24T14:44:02.572Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Hawk and Eagle Property Consultants, London
@@ -1709,21 +1785,6 @@ Islington, N1
 - **Listing Status**: Added yesterday
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/91285095](https://www.rightmove.co.uk/properties/91285095)
-
----
-
-### [2026-07-22T19:18:01.180Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Winkworth, Surrey Quays
-- **Location**: SE16
-- **Property Name**: Timbrell Place, London, SE16
-- **ID**: 90228759
-- **Price**: £2150 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-22
-- **Listing Status**: Reduced on 22/07/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/90228759](https://www.rightmove.co.uk/properties/90228759)
 
 ---
 
@@ -2083,7 +2144,7 @@ Islington, N1
 - **Size**: Unknown
 - **Listing Update**: 2026-05-19
 - **Listing Status**: Reduced on 19/05/2026
-- **Let Available**: Now (🦅 Early Bird: 67d adv)
+- **Let Available**: Now (🦅 Early Bird: 68d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/87805383](https://www.rightmove.co.uk/properties/87805383)
 
 ---
@@ -2130,6 +2191,21 @@ Islington, N1
 - **Listing Status**: Added on 23/07/2026
 - **Let Available**: 31/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91229004](https://www.rightmove.co.uk/properties/91229004)
+
+---
+
+### [2026-07-25T14:27:52.063Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Lionsgate Property Management, London
+- **Location**: E14
+- **Property Name**: Forge Square, E14
+- **ID**: 91310733
+- **Price**: £2400 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-24
+- **Listing Status**: Added yesterday
+- **Let Available**: 17/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/91310733](https://www.rightmove.co.uk/properties/91310733)
 
 ---
 
@@ -2355,6 +2431,21 @@ Islington, N1
 - **Listing Status**: Reduced on 13/07/2026
 - **Let Available**: 31/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/88695102](https://www.rightmove.co.uk/properties/88695102)
+
+---
+
+### [2026-07-25T14:27:52.062Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Frank Harris and Co
+- **Location**: King's Cross (N1C)
+- **Property Name**: Thanet Street, Thanet House
+- **ID**: 90254916
+- **Price**: £2500 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-06-29
+- **Listing Status**: Added on 29/06/2026
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/90254916](https://www.rightmove.co.uk/properties/90254916)
 
 ---
 
