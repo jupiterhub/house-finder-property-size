@@ -2179,6 +2179,21 @@ Poplar, E14
 
 ---
 
+### [2026-07-26T20:45:37.647Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Regent Letting and Property Management, London
+- **Location**: E14
+- **Property Name**: Rendel House, Goodluck Hope Walk, E14
+- **ID**: 91158090
+- **Price**: £2383 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-21
+- **Listing Status**: Added on 21/07/2026
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/91158090](https://www.rightmove.co.uk/properties/91158090)
+
+---
+
 ### [2026-07-25T14:27:52.063Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Lionsgate Property Management, London
