@@ -53,7 +53,7 @@
 - **Size**: 102.19 sqm
 - **Listing Update**: 2026-05-19
 - **Listing Status**: Added on 19/05/2026
-- **Let Available**: Now (🦅 Early Bird: 68d adv)
+- **Let Available**: Now (🦅 Early Bird: 69d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/88658109](https://www.rightmove.co.uk/properties/88658109)
 
 ---
@@ -1097,21 +1097,6 @@ Islington, N1
 
 ---
 
-### [2026-07-25T14:27:52.063Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Fizzy Living, Poplar
-- **Location**: E14
-- **Property Name**: Fizzy Poplar, Lindfield Street, Poplar E14 6GP
-- **ID**: 91323219
-- **Price**: £2320 PCM
-- **Size**: 51 sqm
-- **Listing Update**: 2026-07-25
-- **Listing Status**: Added yesterday
-- **Let Available**: 07/09/2026
-- **Link**: [https://www.rightmove.co.uk/properties/91323219](https://www.rightmove.co.uk/properties/91323219)
-
----
-
 ### [2026-07-22T19:18:01.175Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Benham and Reeves - Surrey Quays, Surrey Quays
@@ -1320,6 +1305,21 @@ Poplar, E14
 - **Listing Status**: Added on 24/07/2026
 - **Let Available**: 30/09/2026 (🦅 Early Bird: 68d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/91304406](https://www.rightmove.co.uk/properties/91304406)
+
+---
+
+### [2026-07-26T14:23:59.277Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Settio Property Experience Ltd, London
+- **Location**: E14
+- **Property Name**: Barnacle House, Heron Wharf, E14
+- **ID**: 90878985
+- **Price**: £2000 PCM
+- **Size**: 47 sqm
+- **Listing Update**: 2026-07-14
+- **Listing Status**: Added on 14/07/2026
+- **Let Available**: 04/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/90878985](https://www.rightmove.co.uk/properties/90878985)
 
 ---
 
@@ -2144,7 +2144,7 @@ Poplar, E14
 - **Size**: Unknown
 - **Listing Update**: 2026-05-19
 - **Listing Status**: Reduced on 19/05/2026
-- **Let Available**: Now (🦅 Early Bird: 68d adv)
+- **Let Available**: Now (🦅 Early Bird: 69d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/87805383](https://www.rightmove.co.uk/properties/87805383)
 
 ---
