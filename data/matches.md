@@ -113,7 +113,7 @@ Wapping, E1W
 - **Price**: £2600 PCM
 - **Size**: 88.26 sqm
 - **Listing Update**: 2026-07-24
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 24/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/91299315](https://www.rightmove.co.uk/properties/91299315)
 
@@ -173,7 +173,7 @@ Wapping, E1W
 - **Price**: £2300 PCM
 - **Size**: 83 sqm
 - **Listing Update**: 2026-07-25
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/91324605](https://www.rightmove.co.uk/properties/91324605)
 
@@ -368,7 +368,7 @@ Wapping, E1W
 - **Price**: £2350 PCM
 - **Size**: 72 sqm
 - **Listing Update**: 2026-07-24
-- **Listing Status**: Reduced yesterday
+- **Listing Status**: Reduced on 24/07/2026
 - **Let Available**: 12/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/89744391](https://www.rightmove.co.uk/properties/89744391)
 
@@ -563,7 +563,7 @@ Wapping, E1W
 - **Price**: £2450 PCM
 - **Size**: 66 sqm
 - **Listing Update**: 2026-07-24
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 24/07/2026
 - **Let Available**: 04/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91274943](https://www.rightmove.co.uk/properties/91274943)
 
@@ -578,7 +578,7 @@ Wapping, E1W
 - **Price**: £2500 PCM
 - **Size**: 66 sqm
 - **Listing Update**: 2026-07-24
-- **Listing Status**: Reduced yesterday
+- **Listing Status**: Reduced on 24/07/2026
 - **Let Available**: 03/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/89631849](https://www.rightmove.co.uk/properties/89631849)
 
@@ -608,7 +608,7 @@ Wapping, E1W
 - **Price**: £2150 PCM
 - **Size**: 64.7 sqm
 - **Listing Update**: 2026-07-24
-- **Listing Status**: Reduced yesterday
+- **Listing Status**: Reduced on 24/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90924282](https://www.rightmove.co.uk/properties/90924282)
 
@@ -653,7 +653,7 @@ Wapping, E1W
 - **Price**: £2510 PCM
 - **Size**: 64 sqm
 - **Listing Update**: 2026-07-24
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 24/07/2026
 - **Let Available**: 23/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91297965](https://www.rightmove.co.uk/properties/91297965)
 
@@ -699,7 +699,7 @@ Millwall, E14
 - **Price**: £2325 PCM
 - **Size**: 62 sqm
 - **Listing Update**: 2026-07-24
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 24/07/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/91309059](https://www.rightmove.co.uk/properties/91309059)
 
@@ -714,7 +714,7 @@ Millwall, E14
 - **Price**: £2490 PCM
 - **Size**: 62 sqm
 - **Listing Update**: 2026-07-24
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 24/07/2026
 - **Let Available**: 20/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91298058](https://www.rightmove.co.uk/properties/91298058)
 
@@ -940,7 +940,7 @@ Millwall, E14
 - **Price**: £2100 PCM
 - **Size**: 54.3 sqm
 - **Listing Update**: 2026-07-24
-- **Listing Status**: Reduced yesterday
+- **Listing Status**: Reduced on 24/07/2026
 - **Let Available**: 01/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90350628](https://www.rightmove.co.uk/properties/90350628)
 
@@ -1016,7 +1016,7 @@ Islington, N1
 - **Price**: £2350 PCM
 - **Size**: 53.1 sqm
 - **Listing Update**: 2026-07-24
-- **Listing Status**: Reduced yesterday
+- **Listing Status**: Reduced on 24/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90981231](https://www.rightmove.co.uk/properties/90981231)
 
@@ -1061,7 +1061,7 @@ Islington, N1
 - **Price**: £2350 PCM
 - **Size**: 52 sqm
 - **Listing Update**: 2026-07-24
-- **Listing Status**: Reduced yesterday
+- **Listing Status**: Reduced on 24/07/2026
 - **Let Available**: 21/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/89437065](https://www.rightmove.co.uk/properties/89437065)
 
@@ -1106,7 +1106,7 @@ Islington, N1
 - **Price**: £2320 PCM
 - **Size**: 51 sqm
 - **Listing Update**: 2026-07-25
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: 07/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91323219](https://www.rightmove.co.uk/properties/91323219)
 
@@ -1152,7 +1152,7 @@ Poplar, E14
 - **Price**: £1950 PCM
 - **Size**: 50 sqm
 - **Listing Update**: 2026-07-25
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: 24/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91320096](https://www.rightmove.co.uk/properties/91320096)
 
@@ -1182,7 +1182,7 @@ Poplar, E14
 - **Price**: £2430 PCM
 - **Size**: 50 sqm
 - **Listing Update**: 2026-07-24
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 24/07/2026
 - **Let Available**: 15/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91289904](https://www.rightmove.co.uk/properties/91289904)
 
@@ -1227,7 +1227,7 @@ Poplar, E14
 - **Price**: £2000 PCM
 - **Size**: 49 sqm
 - **Listing Update**: 2026-07-24
-- **Listing Status**: Reduced yesterday
+- **Listing Status**: Reduced on 24/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/89450421](https://www.rightmove.co.uk/properties/89450421)
 
@@ -1317,7 +1317,7 @@ Poplar, E14
 - **Price**: £2150 PCM
 - **Size**: 47.5 sqm
 - **Listing Update**: 2026-07-24
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 24/07/2026
 - **Let Available**: 30/09/2026 (🦅 Early Bird: 68d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/91304406](https://www.rightmove.co.uk/properties/91304406)
 
@@ -1332,7 +1332,7 @@ Poplar, E14
 - **Price**: £2200 PCM
 - **Size**: 47 sqm
 - **Listing Update**: 2026-07-24
-- **Listing Status**: Reduced yesterday
+- **Listing Status**: Reduced on 24/07/2026
 - **Let Available**: 08/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90408405](https://www.rightmove.co.uk/properties/90408405)
 
@@ -1377,7 +1377,7 @@ Poplar, E14
 - **Price**: £1900 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-24
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 24/07/2026
 - **Let Available**: 08/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91310712](https://www.rightmove.co.uk/properties/91310712)
 
@@ -1392,7 +1392,7 @@ Poplar, E14
 - **Price**: £1900 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-24
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 24/07/2026
 - **Let Available**: 12/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91290375](https://www.rightmove.co.uk/properties/91290375)
 
@@ -1422,7 +1422,7 @@ Poplar, E14
 - **Price**: £1950 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-24
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 24/07/2026
 - **Let Available**: 17/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/142893674](https://www.rightmove.co.uk/properties/142893674)
 
@@ -1677,7 +1677,7 @@ Poplar, E14
 - **Price**: £2100 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-25
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: 25/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91326258](https://www.rightmove.co.uk/properties/91326258)
 
@@ -1692,7 +1692,7 @@ Poplar, E14
 - **Price**: £2100 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-25
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: 29/10/2026 (🦅 Early Bird: 96d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/91313781](https://www.rightmove.co.uk/properties/91313781)
 
@@ -1707,7 +1707,7 @@ Poplar, E14
 - **Price**: £2100 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-24
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 24/07/2026
 - **Let Available**: 17/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91288002](https://www.rightmove.co.uk/properties/91288002)
 
@@ -1782,7 +1782,7 @@ Poplar, E14
 - **Price**: £2150 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-25
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: 04/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91319838](https://www.rightmove.co.uk/properties/91319838)
 
@@ -1797,7 +1797,7 @@ Poplar, E14
 - **Price**: £2150 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-24
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 24/07/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/91285095](https://www.rightmove.co.uk/properties/91285095)
 
@@ -1843,7 +1843,7 @@ Poplar, E14
 - **Price**: £2200 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-24
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 24/07/2026
 - **Let Available**: 28/09/2026 (🦅 Early Bird: 66d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/91272831](https://www.rightmove.co.uk/properties/91272831)
 
@@ -1933,7 +1933,7 @@ Poplar, E14
 - **Price**: £2250 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-24
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 24/07/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/91286214](https://www.rightmove.co.uk/properties/91286214)
 
@@ -1948,7 +1948,7 @@ Poplar, E14
 - **Price**: £2250 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-24
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 24/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/91296798](https://www.rightmove.co.uk/properties/91296798)
 
@@ -2038,7 +2038,7 @@ Poplar, E14
 - **Price**: £2300 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-24
-- **Listing Status**: Reduced yesterday
+- **Listing Status**: Reduced on 24/07/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/89399772](https://www.rightmove.co.uk/properties/89399772)
 
@@ -2179,21 +2179,6 @@ Poplar, E14
 
 ---
 
-### [2026-07-23T10:59:16.472Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Ernest Brooks International, Canary Wharf
-- **Location**: E14
-- **Property Name**: 1 Forge Square, London, E14
-- **ID**: 91229004
-- **Price**: £2350 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-23
-- **Listing Status**: Added on 23/07/2026
-- **Let Available**: 31/07/2026
-- **Link**: [https://www.rightmove.co.uk/properties/91229004](https://www.rightmove.co.uk/properties/91229004)
-
----
-
 ### [2026-07-25T14:27:52.063Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Lionsgate Property Management, London
@@ -2203,7 +2188,7 @@ Poplar, E14
 - **Price**: £2400 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-24
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 24/07/2026
 - **Let Available**: 17/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91310733](https://www.rightmove.co.uk/properties/91310733)
 
@@ -2414,7 +2399,7 @@ Poplar, E14
 - **Size**: Unknown
 - **Listing Update**: 2026-07-15
 - **Listing Status**: Reduced on 15/07/2026
-- **Let Available**: 26/07/2026
+- **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/89566008](https://www.rightmove.co.uk/properties/89566008)
 
 ---
@@ -2443,8 +2428,8 @@ Poplar, E14
 - **Price**: £2499 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-25
-- **Listing Status**: Added today
-- **Let Available**: 26/07/2026
+- **Listing Status**: Added yesterday
+- **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/91324503](https://www.rightmove.co.uk/properties/91324503)
 
 ---
@@ -2473,7 +2458,7 @@ Poplar, E14
 - **Price**: £2500 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-24
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 24/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/91287369](https://www.rightmove.co.uk/properties/91287369)
 
@@ -2653,7 +2638,7 @@ Poplar, E14
 - **Price**: £2650 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-24
-- **Listing Status**: Reduced yesterday
+- **Listing Status**: Reduced on 24/07/2026
 - **Let Available**: 12/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90653517](https://www.rightmove.co.uk/properties/90653517)
 
@@ -2698,7 +2683,7 @@ Poplar, E14
 - **Price**: £2700 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-24
-- **Listing Status**: Reduced yesterday
+- **Listing Status**: Reduced on 24/07/2026
 - **Let Available**: 13/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90913908](https://www.rightmove.co.uk/properties/90913908)
 
