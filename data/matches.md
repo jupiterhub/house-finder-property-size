@@ -53,7 +53,7 @@
 - **Size**: 102.19 sqm
 - **Listing Update**: 2026-05-19
 - **Listing Status**: Added on 19/05/2026
-- **Let Available**: Now (🦅 Early Bird: 69d adv)
+- **Let Available**: Now (🦅 Early Bird: 70d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/88658109](https://www.rightmove.co.uk/properties/88658109)
 
 ---
@@ -173,7 +173,7 @@ Wapping, E1W
 - **Price**: £2300 PCM
 - **Size**: 83 sqm
 - **Listing Update**: 2026-07-25
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 25/07/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/91324605](https://www.rightmove.co.uk/properties/91324605)
 
@@ -675,6 +675,21 @@ Millwall, E14
 
 ---
 
+### [2026-07-27T12:11:39.061Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Way of Life - Balfron Tower, Balfron Tower
+- **Location**: E14
+- **Property Name**: Balfron Tower, 7 St Leonards Road, London, E14 0XU
+- **ID**: 91333113
+- **Price**: £2455 PCM
+- **Size**: 63 sqm
+- **Listing Update**: 2026-07-26
+- **Listing Status**: Added yesterday
+- **Let Available**: 05/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/91333113](https://www.rightmove.co.uk/properties/91333113)
+
+---
+
 ### [2026-07-22T19:18:01.176Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Oppida, Surrey Quays - Lettings
@@ -825,6 +840,21 @@ Millwall, E14
 
 ---
 
+### [2026-07-27T12:11:39.061Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: ea2, Wapping
+- **Location**: Wapping (London Dock - E1W)
+- **Property Name**: Reardon Path, Wapping
+- **ID**: 91336602
+- **Price**: £2300 PCM
+- **Size**: 59.6 sqm
+- **Listing Update**: 2026-07-27
+- **Listing Status**: Added today
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/91336602](https://www.rightmove.co.uk/properties/91336602)
+
+---
+
 ### [2026-07-14T12:46:08.175Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Life Residential, Canary Wharf Office
@@ -840,6 +870,21 @@ Millwall, E14
 
 ---
 
+### [2026-07-27T12:11:39.061Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Harvey W James, London
+- **Location**: E14
+- **Property Name**: Hawser Lane, Curlew House, E14
+- **ID**: 91340157
+- **Price**: £2150 PCM
+- **Size**: 59 sqm
+- **Listing Update**: 2026-07-27
+- **Listing Status**: Added today
+- **Let Available**: 28/07/2026
+- **Link**: [https://www.rightmove.co.uk/properties/91340157](https://www.rightmove.co.uk/properties/91340157)
+
+---
+
 ### [2026-07-22T14:53:42.157Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Chestertons, Canary Wharf and Docklands
@@ -851,7 +896,7 @@ Millwall, E14
 - **Size**: 59 sqm
 - **Listing Update**: 2026-07-22
 - **Listing Status**: Reduced on 22/07/2026
-- **Let Available**: 27/07/2026
+- **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90405759](https://www.rightmove.co.uk/properties/90405759)
 
 ---
@@ -881,7 +926,7 @@ Millwall, E14
 - **Size**: 58 sqm
 - **Listing Update**: 2026-07-23
 - **Listing Status**: Added on 23/07/2026
-- **Let Available**: 27/07/2026
+- **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/91224966](https://www.rightmove.co.uk/properties/91224966)
 
 ---
@@ -898,6 +943,21 @@ Millwall, E14
 - **Listing Status**: Added on 09/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90708627](https://www.rightmove.co.uk/properties/90708627)
+
+---
+
+### [2026-07-27T12:11:39.060Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: OpenRent, London
+- **Location**: Canary Wharf (E14)
+- **Property Name**: Millharbour, London, E14
+- **ID**: 91333926
+- **Price**: £2000 PCM
+- **Size**: 55.74 sqm
+- **Listing Update**: 2026-07-27
+- **Listing Status**: Added today
+- **Let Available**: 03/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/91333926](https://www.rightmove.co.uk/properties/91333926)
 
 ---
 
@@ -989,6 +1049,22 @@ Islington, N1
 - **Listing Status**: Reduced on 22/07/2026
 - **Let Available**: 01/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90880098](https://www.rightmove.co.uk/properties/90880098)
+
+---
+
+### [2026-07-27T12:11:39.060Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Chestertons, Canary Wharf and Docklands
+- **Location**: Canary Wharf (E14)
+- **Property Name**: Landmark West Tower, 
+22 Marsh Wall, E14
+- **ID**: 91344669
+- **Price**: £2250 PCM
+- **Size**: 54 sqm
+- **Listing Update**: 2026-07-27
+- **Listing Status**: Added today
+- **Let Available**: 23/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/91344669](https://www.rightmove.co.uk/properties/91344669)
 
 ---
 
@@ -1127,6 +1203,21 @@ Islington, N1
 
 ---
 
+### [2026-07-27T12:11:39.061Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Chase Evans, Canary Wharf
+- **Location**: E14
+- **Property Name**: Carmine Wharf, 30 Copenhagen Place, Limehouse, London, E14
+- **ID**: 90758457
+- **Price**: £1900 PCM
+- **Size**: 50 sqm
+- **Listing Update**: 2026-07-27
+- **Listing Status**: Reduced today
+- **Let Available**: 10/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/90758457](https://www.rightmove.co.uk/properties/90758457)
+
+---
+
 ### [2026-07-25T14:27:52.063Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Chestertons, Canary Wharf and Docklands
@@ -1137,7 +1228,7 @@ Poplar, E14
 - **Price**: £1950 PCM
 - **Size**: 50 sqm
 - **Listing Update**: 2026-07-25
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 25/07/2026
 - **Let Available**: 24/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91320096](https://www.rightmove.co.uk/properties/91320096)
 
@@ -1185,6 +1276,21 @@ Poplar, E14
 - **Listing Status**: Added on 26/06/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90175230](https://www.rightmove.co.uk/properties/90175230)
+
+---
+
+### [2026-07-27T12:11:39.061Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Dexters, Canary Wharf
+- **Location**: E14
+- **Property Name**: Prestons Road, Canary Wharf
+- **ID**: 91348053
+- **Price**: £1950 PCM
+- **Size**: 49.9 sqm
+- **Listing Update**: 2026-07-27
+- **Listing Status**: Added today
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/91348053](https://www.rightmove.co.uk/properties/91348053)
 
 ---
 
@@ -1338,6 +1444,21 @@ Poplar, E14
 
 ---
 
+### [2026-07-27T12:11:39.061Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: ea2, Wapping
+- **Location**: Wapping (London Dock - E1W)
+- **Property Name**: Jewel Square, Wapping
+- **ID**: 91336608
+- **Price**: £2000 PCM
+- **Size**: 46.4 sqm
+- **Listing Update**: 2026-07-27
+- **Listing Status**: Added today
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/91336608](https://www.rightmove.co.uk/properties/91336608)
+
+---
+
 ### [2026-07-14T12:46:08.175Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Douglas Pryce, Hither Green
@@ -1353,6 +1474,21 @@ Poplar, E14
 
 ---
 
+### [2026-07-27T12:11:39.061Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Dexters, City
+- **Location**: Wapping (London Dock - E1W)
+- **Property Name**: Cable Street, Wapping
+- **ID**: 91131729
+- **Price**: £2000 PCM
+- **Size**: 45.1 sqm
+- **Listing Update**: 2026-07-15
+- **Listing Status**: Added on 15/07/2026
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/91131729](https://www.rightmove.co.uk/properties/91131729)
+
+---
+
 ### [2026-07-22T19:18:01.178Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Stirling Ackroyd Lettings, Canary Wharf
@@ -1365,6 +1501,21 @@ Poplar, E14
 - **Listing Status**: Added on 22/07/2026
 - **Let Available**: 17/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91197945](https://www.rightmove.co.uk/properties/91197945)
+
+---
+
+### [2026-07-27T12:11:39.061Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Knight Frank - Lettings, Wapping
+- **Location**: Wapping (London Dock - E1W)
+- **Property Name**: King Charles Terrace, Sovereign Court, Wapping, London E1W.
+- **ID**: 91335915
+- **Price**: £2000 PCM
+- **Size**: 45 sqm
+- **Listing Update**: 2026-07-27
+- **Listing Status**: Added today
+- **Let Available**: 01/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/91335915](https://www.rightmove.co.uk/properties/91335915)
 
 ---
 
@@ -1470,6 +1621,21 @@ Poplar, E14
 - **Listing Status**: Reduced on 22/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90984615](https://www.rightmove.co.uk/properties/90984615)
+
+---
+
+### [2026-07-27T12:11:39.061Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Dexters, Canada Water
+- **Location**: SE16
+- **Property Name**: Odessa Street, Rotherhithe
+- **ID**: 91345707
+- **Price**: £2000 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-27
+- **Listing Status**: Added today
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/91345707](https://www.rightmove.co.uk/properties/91345707)
 
 ---
 
@@ -1677,7 +1843,7 @@ Poplar, E14
 - **Price**: £2100 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-25
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 25/07/2026
 - **Let Available**: 25/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91326258](https://www.rightmove.co.uk/properties/91326258)
 
@@ -1692,7 +1858,7 @@ Poplar, E14
 - **Price**: £2100 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-25
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 25/07/2026
 - **Let Available**: 29/10/2026 (🦅 Early Bird: 96d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/91313781](https://www.rightmove.co.uk/properties/91313781)
 
@@ -1782,7 +1948,7 @@ Poplar, E14
 - **Price**: £2150 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-25
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 25/07/2026
 - **Let Available**: 04/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91319838](https://www.rightmove.co.uk/properties/91319838)
 
@@ -1924,6 +2090,21 @@ Poplar, E14
 
 ---
 
+### [2026-07-27T12:11:39.060Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Dexters, Canary Wharf
+- **Location**: Canary Wharf (E14)
+- **Property Name**: Westferry Road, Canary Wharf
+- **ID**: 91335786
+- **Price**: £2250 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-27
+- **Listing Status**: Added today
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/91335786](https://www.rightmove.co.uk/properties/91335786)
+
+---
+
 ### [2026-07-24T14:44:02.572Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Benham and Reeves - Canary Wharf, Canary Wharf
@@ -1943,7 +2124,7 @@ Poplar, E14
 - **Platform**: Rightmove
 - **Marketed by**: Life Residential, Canary Wharf Office
 - **Location**: E14
-- **Property Name**: Horizons Tower, Canary Wharf, London
+- **Property Name**: Yabsley Street, Canary Wharf
 - **ID**: 91296798
 - **Price**: £2250 PCM
 - **Size**: Unknown
@@ -1981,21 +2162,6 @@ Poplar, E14
 - **Listing Status**: Added on 21/07/2026
 - **Let Available**: 10/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91130481](https://www.rightmove.co.uk/properties/91130481)
-
----
-
-### [2026-07-22T14:53:42.156Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Benham and Reeves - Canary Wharf, Canary Wharf
-- **Location**: Canary Wharf
-- **Property Name**: Premiere Place, Canary wharf, E14
-- **ID**: 91198845
-- **Price**: £2250 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-22
-- **Listing Status**: Added on 22/07/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/91198845](https://www.rightmove.co.uk/properties/91198845)
 
 ---
 
@@ -2144,7 +2310,7 @@ Poplar, E14
 - **Size**: Unknown
 - **Listing Update**: 2026-05-19
 - **Listing Status**: Reduced on 19/05/2026
-- **Let Available**: Now (🦅 Early Bird: 69d adv)
+- **Let Available**: Now (🦅 Early Bird: 70d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/87805383](https://www.rightmove.co.uk/properties/87805383)
 
 ---
@@ -2443,9 +2609,24 @@ Poplar, E14
 - **Price**: £2499 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-25
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 25/07/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/91324503](https://www.rightmove.co.uk/properties/91324503)
+
+---
+
+### [2026-07-27T12:11:39.060Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: OpenRent, London
+- **Location**: King's Cross (N1C)
+- **Property Name**: Sandwich Street, London, WC1H
+- **ID**: 90238296
+- **Price**: £2500 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-06-28
+- **Listing Status**: Added on 28/06/2026
+- **Let Available**: 14/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/90238296](https://www.rightmove.co.uk/properties/90238296)
 
 ---
 
