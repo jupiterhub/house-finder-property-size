@@ -58,6 +58,22 @@
 
 ---
 
+### [2026-07-27T15:37:47.213Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Chestertons, Canary Wharf and Docklands
+- **Location**: South Quay (E14)
+- **Property Name**: Selsdon Way, 
+Millwall, E14
+- **ID**: 91356993
+- **Price**: £2700 PCM
+- **Size**: 95 sqm
+- **Listing Update**: 2026-07-27
+- **Listing Status**: Added today
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/91356993](https://www.rightmove.co.uk/properties/91356993)
+
+---
+
 ### [2026-07-22T19:18:01.176Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: ea2, Wapping
@@ -85,22 +101,6 @@
 - **Listing Status**: Added on 18/07/2026
 - **Let Available**: 03/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91057905](https://www.rightmove.co.uk/properties/91057905)
-
----
-
-### [2026-07-22T19:18:01.177Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Chestertons, Tower Bridge
-- **Location**: Wapping (London Dock - E1W)
-- **Property Name**: Kingsley Mews, 
-Wapping, E1W
-- **ID**: 90873090
-- **Price**: £2500 PCM
-- **Size**: 90.67 sqm
-- **Listing Update**: 2026-07-14
-- **Listing Status**: Added on 14/07/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/90873090](https://www.rightmove.co.uk/properties/90873090)
 
 ---
 
@@ -194,6 +194,21 @@ Wapping, E1W
 
 ---
 
+### [2026-07-27T15:37:47.213Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Living in London, Canada Water Tube Station
+- **Location**: Canada Water (SE16)
+- **Property Name**: Elephant Lane, London
+- **ID**: 91353177
+- **Price**: £2450 PCM
+- **Size**: 79.99 sqm
+- **Listing Update**: 2026-07-27
+- **Listing Status**: Added today
+- **Let Available**: 01/10/2026 (🦅 Early Bird: 66d adv)
+- **Link**: [https://www.rightmove.co.uk/properties/91353177](https://www.rightmove.co.uk/properties/91353177)
+
+---
+
 ### [2026-07-22T19:18:01.179Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Fisks Ltd, London
@@ -221,6 +236,21 @@ Wapping, E1W
 - **Listing Status**: Reduced on 10/07/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90061017](https://www.rightmove.co.uk/properties/90061017)
+
+---
+
+### [2026-07-27T15:37:47.213Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Knight Frank - Lettings, Aldgate
+- **Location**: Wapping (London Dock - E1W)
+- **Property Name**: Cannon Street Road, London E1
+- **ID**: 91356114
+- **Price**: £2450 PCM
+- **Size**: 77 sqm
+- **Listing Update**: 2026-07-27
+- **Listing Status**: Added today
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/91356114](https://www.rightmove.co.uk/properties/91356114)
 
 ---
 
@@ -266,6 +296,21 @@ Wapping, E1W
 - **Listing Status**: Added on 10/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90735000](https://www.rightmove.co.uk/properties/90735000)
+
+---
+
+### [2026-07-27T15:37:47.213Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Living in London, Canada Water Tube Station
+- **Location**: SE16
+- **Property Name**: Russell Place, London
+- **ID**: 91364463
+- **Price**: £2200 PCM
+- **Size**: 75 sqm
+- **Listing Update**: 2026-07-27
+- **Listing Status**: Added today
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/91364463](https://www.rightmove.co.uk/properties/91364463)
 
 ---
 
@@ -434,6 +479,36 @@ Wapping, E1W
 
 ---
 
+### [2026-07-27T15:37:47.213Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Independent London, London
+- **Location**: SE16
+- **Property Name**: Porter Building, Spa Road, Bermondsey, SE16 3FL
+- **ID**: 91356405
+- **Price**: £2500 PCM
+- **Size**: 70 sqm
+- **Listing Update**: 2026-07-27
+- **Listing Status**: Added today
+- **Let Available**: 09/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/91356405](https://www.rightmove.co.uk/properties/91356405)
+
+---
+
+### [2026-07-27T15:37:47.213Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Right Now Residential, London
+- **Location**: E14
+- **Property Name**: Quest House South, Escapade Place, Tower Hamlets, London
+- **ID**: 91362786
+- **Price**: £2300 PCM
+- **Size**: 69.68 sqm
+- **Listing Update**: 2026-07-27
+- **Listing Status**: Added today
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/91362786](https://www.rightmove.co.uk/properties/91362786)
+
+---
+
 ### [2026-07-15T16:50:33.032Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Allen Goldstein, Bloomsbury
@@ -506,6 +581,21 @@ Wapping, E1W
 - **Listing Status**: Added on 15/07/2026
 - **Let Available**: 29/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90911826](https://www.rightmove.co.uk/properties/90911826)
+
+---
+
+### [2026-07-27T15:37:47.213Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: City Relay, London
+- **Location**: SE16
+- **Property Name**: Cube House, Spa Road, SE16
+- **ID**: 91362336
+- **Price**: £2700 PCM
+- **Size**: 67 sqm
+- **Listing Update**: 2026-07-27
+- **Listing Status**: Reduced today
+- **Let Available**: 04/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/91362336](https://www.rightmove.co.uk/properties/91362336)
 
 ---
 
@@ -592,8 +682,8 @@ Wapping, E1W
 - **ID**: 90513300
 - **Price**: £2300 PCM
 - **Size**: 65.03 sqm
-- **Listing Update**: 2026-07-23
-- **Listing Status**: Reduced on 23/07/2026
+- **Listing Update**: 2026-07-27
+- **Listing Status**: Reduced today
 - **Let Available**: 14/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90513300](https://www.rightmove.co.uk/properties/90513300)
 
@@ -732,6 +822,21 @@ Millwall, E14
 - **Listing Status**: Added on 24/07/2026
 - **Let Available**: 20/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91298058](https://www.rightmove.co.uk/properties/91298058)
+
+---
+
+### [2026-07-27T15:37:47.213Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Stirling Ackroyd Lettings, London Bridge
+- **Location**: SE16
+- **Property Name**: Marine Street, London, SE16
+- **ID**: 91361187
+- **Price**: £2500 PCM
+- **Size**: 62 sqm
+- **Listing Update**: 2026-07-27
+- **Listing Status**: Added today
+- **Let Available**: 01/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/91361187](https://www.rightmove.co.uk/properties/91361187)
 
 ---
 
@@ -1173,6 +1278,21 @@ Islington, N1
 
 ---
 
+### [2026-07-27T15:37:47.213Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Fizzy Living, Poplar
+- **Location**: E14
+- **Property Name**: Fizzy Poplar, Lindfield Street, Poplar E14 6GP
+- **ID**: 91354992
+- **Price**: £2320 PCM
+- **Size**: 51 sqm
+- **Listing Update**: 2026-07-27
+- **Listing Status**: Added today
+- **Let Available**: 07/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/91354992](https://www.rightmove.co.uk/properties/91354992)
+
+---
+
 ### [2026-07-22T19:18:01.175Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Benham and Reeves - Surrey Quays, Surrey Quays
@@ -1291,21 +1411,6 @@ Poplar, E14
 - **Listing Status**: Added today
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/91348053](https://www.rightmove.co.uk/properties/91348053)
-
----
-
-### [2026-07-22T19:18:01.172Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Element Properties and Co, London
-- **Location**: King's Cross (N1C)
-- **Property Name**: Railway Street, London, N1
-- **ID**: 90677403
-- **Price**: £2500 PCM
-- **Size**: 49.7 sqm
-- **Listing Update**: 2026-07-20
-- **Listing Status**: Reduced on 20/07/2026
-- **Let Available**: 01/08/2026
-- **Link**: [https://www.rightmove.co.uk/properties/90677403](https://www.rightmove.co.uk/properties/90677403)
 
 ---
 
@@ -1474,21 +1579,6 @@ Poplar, E14
 
 ---
 
-### [2026-07-27T12:11:39.061Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Dexters, City
-- **Location**: Wapping (London Dock - E1W)
-- **Property Name**: Cable Street, Wapping
-- **ID**: 91131729
-- **Price**: £2000 PCM
-- **Size**: 45.1 sqm
-- **Listing Update**: 2026-07-15
-- **Listing Status**: Added on 15/07/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/91131729](https://www.rightmove.co.uk/properties/91131729)
-
----
-
 ### [2026-07-22T19:18:01.178Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Stirling Ackroyd Lettings, Canary Wharf
@@ -1501,6 +1591,21 @@ Poplar, E14
 - **Listing Status**: Added on 22/07/2026
 - **Let Available**: 17/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91197945](https://www.rightmove.co.uk/properties/91197945)
+
+---
+
+### [2026-07-27T15:37:47.213Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Franklyn James, Limehouse and Wapping
+- **Location**: E14
+- **Property Name**: Coral Apartments, Limehouse, E14
+- **ID**: 91360221
+- **Price**: £1950 PCM
+- **Size**: 45 sqm
+- **Listing Update**: 2026-07-27
+- **Listing Status**: Added today
+- **Let Available**: 22/10/2026 (🦅 Early Bird: 87d adv)
+- **Link**: [https://www.rightmove.co.uk/properties/91360221](https://www.rightmove.co.uk/properties/91360221)
 
 ---
 
@@ -1561,6 +1666,36 @@ Poplar, E14
 - **Listing Status**: Reduced on 02/07/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/173608733](https://www.rightmove.co.uk/properties/173608733)
+
+---
+
+### [2026-07-27T15:37:47.213Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Cranbrook Lettings and Sales, Ilford
+- **Location**: E14
+- **Property Name**: Commercial Road, E14 7JR
+- **ID**: 91361472
+- **Price**: £1950 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-27
+- **Listing Status**: Reduced today
+- **Let Available**: 10/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/91361472](https://www.rightmove.co.uk/properties/91361472)
+
+---
+
+### [2026-07-27T15:37:47.213Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Alliance London, London
+- **Location**: E14
+- **Property Name**: St. Davids Square, London, E14
+- **ID**: 91355868
+- **Price**: £1950 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-27
+- **Listing Status**: Added today
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/91355868](https://www.rightmove.co.uk/properties/91355868)
 
 ---
 
@@ -1954,21 +2089,6 @@ Poplar, E14
 
 ---
 
-### [2026-07-24T14:44:02.572Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Hawk and Eagle Property Consultants, London
-- **Location**: E14
-- **Property Name**: Wheat Sheaf Close, Isle of Dogs, E14 9UY
-- **ID**: 91285095
-- **Price**: £2150 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-24
-- **Listing Status**: Added on 24/07/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/91285095](https://www.rightmove.co.uk/properties/91285095)
-
----
-
 ### [2026-07-22T19:18:01.176Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: OpenRent, London
@@ -1996,6 +2116,21 @@ Poplar, E14
 - **Listing Status**: Added on 20/07/2026
 - **Let Available**: 21/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91079700](https://www.rightmove.co.uk/properties/91079700)
+
+---
+
+### [2026-07-27T15:37:47.213Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: The Online Letting Agents Ltd, Bury St Edmunds
+- **Location**: Wapping (London Dock - E1W)
+- **Property Name**: Spice Court, Asher Way, London, E1W
+- **ID**: 91362633
+- **Price**: £2200 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-27
+- **Listing Status**: Added today
+- **Let Available**: 06/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/91362633](https://www.rightmove.co.uk/properties/91362633)
 
 ---
 
@@ -2087,6 +2222,21 @@ Poplar, E14
 - **Listing Status**: Added on 11/07/2026
 - **Let Available**: 01/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90780096](https://www.rightmove.co.uk/properties/90780096)
+
+---
+
+### [2026-07-27T15:37:47.213Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Benham and Reeves - Canary Wharf, Canary Wharf
+- **Location**: E14
+- **Property Name**: Bowline House, Hemlock Street, London
+- **ID**: 91155174
+- **Price**: £2250 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-21
+- **Listing Status**: Added on 21/07/2026
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/91155174](https://www.rightmove.co.uk/properties/91155174)
 
 ---
 
@@ -2510,6 +2660,36 @@ Poplar, E14
 
 ---
 
+### [2026-07-27T15:37:47.213Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: The Alba by Morro, The Alba
+- **Location**: Canada Water (SE16)
+- **Property Name**: Mulberry Walk, London, SE16
+- **ID**: 91358973
+- **Price**: £2425 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-27
+- **Listing Status**: Added today
+- **Let Available**: 21/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/91358973](https://www.rightmove.co.uk/properties/91358973)
+
+---
+
+### [2026-07-27T15:37:47.213Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: The Alba by Morro, The Alba
+- **Location**: Canada Water (SE16)
+- **Property Name**: Mulberry Walk, London, SE16
+- **ID**: 91358916
+- **Price**: £2450 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-27
+- **Listing Status**: Added today
+- **Let Available**: 21/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/91358916](https://www.rightmove.co.uk/properties/91358916)
+
+---
+
 ### [2026-07-23T10:59:16.472Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: OpenRent, London
@@ -2867,6 +3047,21 @@ Poplar, E14
 - **Listing Status**: Added on 22/07/2026
 - **Let Available**: 14/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/175005683](https://www.rightmove.co.uk/properties/175005683)
+
+---
+
+### [2026-07-27T15:37:47.212Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Life Residential, Canary Wharf Office
+- **Location**: Canary Wharf (E14)
+- **Property Name**: Lincoln Plaza, Canary Wharf
+- **ID**: 89859912
+- **Price**: £2700 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-27
+- **Listing Status**: Reduced today
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/89859912](https://www.rightmove.co.uk/properties/89859912)
 
 ---
 
