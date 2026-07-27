@@ -2,7 +2,7 @@
   "minPrice": 1900,
   "maxPrice": 2700,
   "minSqm": 45,
-  "desiredLetAvailableDate": null,
+  "desiredLetAvailableDate": "2026-09-12",
   "availabilityWindowDays": 14,
   "includeUnknownAvailability": true,
   "elizabethLineOnly": false,
@@ -11,26 +11,39 @@
     "King's Cross (N1C)",
     "Canary Wharf (E14)",
     "South Quay (E14)",
-    "Greenwich Peninsula"
+    "Greenwich Peninsula",
+    "City Road (EC1V)",
+    "Shoreditch (EC2A)",
+    "Aldgate (E1)"
   ],
   "postcodes": [
     "N1C",
     "E14",
     "EC1V",
-    "SE10"
+    "SE10",
+    "EC2A",
+    "E1"
   ],
   "strategicKeywords": {
-    "King's Cross (N1C)": ["Plimsoll", "Capella", "Cadence"],
+    "King's Cross (N1C)": ["Plimsoll", "Capella", "Cadence", "Gasholders", "Fenman House", "Luma"],
     "Canary Wharf & South Quay (E14)": [
       "Wardian", "Bagshaw", "Hobart", "10 Park Drive", "50 Charter St", "Wood Wharf",
       "South Quay Plaza", "Harcourt Tower", "Valiant Tower", "Maine Tower",
-      "Pan Peninsula", "Baltimore Tower", "Landmark Pinnacle", "Consort Place", "Aspire"
-    ]
+      "Pan Peninsula", "Baltimore Tower", "Landmark Pinnacle", "Consort Place", "Aspire",
+      "Newfoundland", "One Park Drive", "8 Water Street"
+    ],
+    "City Road (EC1V)": ["250 City Road", "Canaletto", "The Lexicon", "Chronicle Tower", "Atlas Building"],
+    "Shoreditch (EC2A)": ["Principal Tower", "The Stage"],
+    "Greenwich Peninsula": ["Upper Riverside", "Arora Tower", "The Peninsula Tower", "The Waterman"],
+    "Aldgate (E1)": ["Goodman's Fields", "Catalina House", "Cashmere House", "Satin House", "Kingley House", "Perilla House", "Meranti House", "Leman Locke"]
   },
   "strategicPostcodes": {
     "King's Cross (N1C)": ["N1C 4AY", "N1C 4AB", "N1C 4AG", "N1C 4AL", "N1C 4AX", "N1C 4BZ"],
     "Canary Wharf & South Quay (E14)": ["E14 5AB", "E14 9BY", "E14 9GG", "E14 9QA"],
-    "City Road Basin (EC1V)": ["EC1V 1AF", "EC1V 1AE", "EC1V 2AB", "EC1V 2PU", "EC1V 1AM", "EC1V 1JH"]
+    "City Road Basin (EC1V)": ["EC1V 1AF", "EC1V 1AE", "EC1V 2AB", "EC1V 2PU", "EC1V 1AM", "EC1V 1JH"],
+    "Shoreditch (EC2A)": ["EC2A"],
+    "Greenwich Peninsula": ["SE10"],
+    "Aldgate (E1)": ["E1"]
   },
   "enabledPlatforms": [
     "Rightmove"
