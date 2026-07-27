@@ -11,15 +11,13 @@
     "King's Cross (N1C)",
     "Canary Wharf (E14)",
     "South Quay (E14)",
-    "Canada Water (SE16)",
-    "Wapping (London Dock - E1W)"
+    "Greenwich Peninsula"
   ],
   "postcodes": [
     "N1C",
     "E14",
     "EC1V",
-    "SE16",
-    "E1W"
+    "SE10"
   ],
   "strategicKeywords": {
     "King's Cross (N1C)": ["Plimsoll", "Capella", "Cadence"],
@@ -27,21 +25,24 @@
       "Wardian", "Bagshaw", "Hobart", "10 Park Drive", "50 Charter St", "Wood Wharf",
       "South Quay Plaza", "Harcourt Tower", "Valiant Tower", "Maine Tower",
       "Pan Peninsula", "Baltimore Tower", "Landmark Pinnacle", "Consort Place", "Aspire"
-    ],
-    "Canada Water (SE16)": ["The Alba", "Mulberry Walk", "Maple Quays"],
-    "Wapping (London Dock - E1W)": ["London Dock", "Cashmere Wharf", "Emery Wharf", "Ariel House"]
+    ]
   },
   "strategicPostcodes": {
     "King's Cross (N1C)": ["N1C 4AY", "N1C 4AB", "N1C 4AG", "N1C 4AL", "N1C 4AX", "N1C 4BZ"],
     "Canary Wharf & South Quay (E14)": ["E14 5AB", "E14 9BY", "E14 9GG", "E14 9QA"],
-    "City Road Basin (EC1V)": ["EC1V 1AF", "EC1V 1AE", "EC1V 2AB", "EC1V 2PU", "EC1V 1AM", "EC1V 1JH"],
-    "Canada Water (SE16)": ["SE16", "SE16 7AE", "SE16 7EY", "SE16 7AH"],
-    "Wapping (London Dock - E1W)": ["E1W 2AG", "E1W 2AA", "E1W 2AX", "E1W 2FU"]
+    "City Road Basin (EC1V)": ["EC1V 1AF", "EC1V 1AE", "EC1V 2AB", "EC1V 2PU", "EC1V 1AM", "EC1V 1JH"]
   },
   "enabledPlatforms": [
     "Rightmove"
   ],
   "excludedAgents": [
     "Foxtons"
+  ],
+  "excludedKeywords": [
+    "poplar",
+    "blackwall",
+    "blackwell",
+    "canada water",
+    "se16"
   ]
 }

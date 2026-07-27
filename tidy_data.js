@@ -680,6 +680,16 @@ async function main() {
     console.log(`Filtered out excluded agents (${config.excludedAgents.join(', ')}): ${preAgentCount} -> ${result.length} matches.`);
   }
 
+  if (config.excludedKeywords && Array.isArray(config.excludedKeywords) && config.excludedKeywords.length > 0) {
+    const preKwCount = result.length;
+    result = result.filter(m => {
+      const propStr = (m.propertyName || '').toLowerCase();
+      const locStr = (m.location || '').toLowerCase();
+      return !config.excludedKeywords.some(kw => propStr.includes(kw.toLowerCase()) || locStr.includes(kw.toLowerCase()));
+    });
+    console.log(`Filtered out excluded keywords (${config.excludedKeywords.join(', ')}): ${preKwCount} -> ${result.length} matches.`);
+  }
+
   // Auto-prune listings older than 60 days
   const MAX_AGE_DAYS = 60;
   const cutoffTime = Date.now() - (MAX_AGE_DAYS * 24 * 60 * 60 * 1000);

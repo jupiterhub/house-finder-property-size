@@ -507,6 +507,17 @@ class RightmoveAdapter {
         return null;
       }
 
+      if (config.excludedKeywords && config.excludedKeywords.length > 0) {
+        const textToCheck = `${propertyName} ${searchDates.displayAddress || ''}`.toLowerCase();
+        const excludedMatch = config.excludedKeywords.find(kw => textToCheck.includes(kw.toLowerCase()));
+        if (excludedMatch) {
+          const reason = `Contains excluded keyword: ${excludedMatch}`;
+          console.log(`Property ${listing.id} ignored: ${reason}`);
+          markAsIgnored(listing.id, this.platformName, reason);
+          return null;
+        }
+      }
+
       let strategicMatch = null;
       if (config.strategicKeywords) {
         const allKw = Object.values(config.strategicKeywords).flat();
