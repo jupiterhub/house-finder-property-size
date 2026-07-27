@@ -1,18 +1,3 @@
-### [2026-07-22T19:18:01.181Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Kinleigh Folkard and Hayward - Lettings, Canada Water
-- **Location**: SE16
-- **Property Name**: Goodwin Close, Bermondsey, London, SE16
-- **ID**: 89801361
-- **Price**: £2175 PCM
-- **Size**: 547 sqm
-- **Listing Update**: 2026-07-15
-- **Listing Status**: Reduced on 15/07/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/89801361](https://www.rightmove.co.uk/properties/89801361)
-
----
-
 ### [2026-07-22T19:18:01.176Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: EweMove, Covering Greater London
@@ -86,21 +71,6 @@ Millwall, E14
 - **Listing Status**: Added on 22/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/91192659](https://www.rightmove.co.uk/properties/91192659)
-
----
-
-### [2026-07-22T19:18:01.180Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Kinleigh Folkard and Hayward - Lettings, Canada Water
-- **Location**: SE16
-- **Property Name**: Rotherhithe Street, London, SE16
-- **ID**: 91057905
-- **Price**: £2200 PCM
-- **Size**: 90.9 sqm
-- **Listing Update**: 2026-07-18
-- **Listing Status**: Added on 18/07/2026
-- **Let Available**: 03/09/2026
-- **Link**: [https://www.rightmove.co.uk/properties/91057905](https://www.rightmove.co.uk/properties/91057905)
 
 ---
 
@@ -194,21 +164,6 @@ Millwall, E14
 
 ---
 
-### [2026-07-27T15:37:47.213Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Living in London, Canada Water Tube Station
-- **Location**: Canada Water (SE16)
-- **Property Name**: Elephant Lane, London
-- **ID**: 91353177
-- **Price**: £2450 PCM
-- **Size**: 79.99 sqm
-- **Listing Update**: 2026-07-27
-- **Listing Status**: Added today
-- **Let Available**: 01/10/2026 (🦅 Early Bird: 66d adv)
-- **Link**: [https://www.rightmove.co.uk/properties/91353177](https://www.rightmove.co.uk/properties/91353177)
-
----
-
 ### [2026-07-22T19:18:01.179Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Fisks Ltd, London
@@ -299,21 +254,6 @@ Millwall, E14
 
 ---
 
-### [2026-07-27T15:37:47.213Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Living in London, Canada Water Tube Station
-- **Location**: SE16
-- **Property Name**: Russell Place, London
-- **ID**: 91364463
-- **Price**: £2200 PCM
-- **Size**: 75 sqm
-- **Listing Update**: 2026-07-27
-- **Listing Status**: Added today
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/91364463](https://www.rightmove.co.uk/properties/91364463)
-
----
-
 ### [2026-07-23T10:59:16.472Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: ea2, Wapping
@@ -341,21 +281,6 @@ Millwall, E14
 - **Listing Status**: Added on 23/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/91250994](https://www.rightmove.co.uk/properties/91250994)
-
----
-
-### [2026-07-22T19:18:01.180Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Alex and Matteo, London
-- **Location**: SE16
-- **Property Name**: Parker Building, Bermondsey, SE16
-- **ID**: 91158501
-- **Price**: £2700 PCM
-- **Size**: 74.5 sqm
-- **Listing Update**: 2026-07-21
-- **Listing Status**: Added on 21/07/2026
-- **Let Available**: 26/09/2026 (🦅 Early Bird: 67d adv)
-- **Link**: [https://www.rightmove.co.uk/properties/91158501](https://www.rightmove.co.uk/properties/91158501)
 
 ---
 
@@ -419,21 +344,6 @@ Millwall, E14
 
 ---
 
-### [2026-07-22T19:18:01.181Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Hunters, Shoreditch
-- **Location**: SE16
-- **Property Name**: Rotherhithe Street, London SE16
-- **ID**: 90985776
-- **Price**: £2400 PCM
-- **Size**: 72 sqm
-- **Listing Update**: 2026-07-16
-- **Listing Status**: Added on 16/07/2026
-- **Let Available**: 15/09/2026
-- **Link**: [https://www.rightmove.co.uk/properties/90985776](https://www.rightmove.co.uk/properties/90985776)
-
----
-
 ### [2026-07-22T19:18:01.177Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Hello Neighbour, London
@@ -449,21 +359,6 @@ Millwall, E14
 
 ---
 
-### [2026-07-22T19:18:01.175Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Frank Harris and Co
-- **Location**: Canada Water (SE16)
-- **Property Name**: Rotherhithe Street, Rotherhithe Street
-- **ID**: 91004832
-- **Price**: £2600 PCM
-- **Size**: 71.3 sqm
-- **Listing Update**: 2026-07-14
-- **Listing Status**: Added on 14/07/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/91004832](https://www.rightmove.co.uk/properties/91004832)
-
----
-
 ### [2026-07-22T19:18:01.176Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Hemmingfords, London
@@ -476,21 +371,6 @@ Millwall, E14
 - **Listing Status**: Reduced on 20/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90089886](https://www.rightmove.co.uk/properties/90089886)
-
----
-
-### [2026-07-27T15:37:47.213Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Independent London, London
-- **Location**: SE16
-- **Property Name**: Porter Building, Spa Road, Bermondsey, SE16 3FL
-- **ID**: 91356405
-- **Price**: £2500 PCM
-- **Size**: 70 sqm
-- **Listing Update**: 2026-07-27
-- **Listing Status**: Added today
-- **Let Available**: 09/09/2026
-- **Link**: [https://www.rightmove.co.uk/properties/91356405](https://www.rightmove.co.uk/properties/91356405)
 
 ---
 
@@ -569,36 +449,6 @@ Millwall, E14
 
 ---
 
-### [2026-07-22T19:18:01.181Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Alex and Matteo, London
-- **Location**: SE16
-- **Property Name**: Stanton House, Rotherhithe Street, SE16
-- **ID**: 90911826
-- **Price**: £2200 PCM
-- **Size**: 67.63 sqm
-- **Listing Update**: 2026-07-15
-- **Listing Status**: Added on 15/07/2026
-- **Let Available**: 29/08/2026
-- **Link**: [https://www.rightmove.co.uk/properties/90911826](https://www.rightmove.co.uk/properties/90911826)
-
----
-
-### [2026-07-27T15:37:47.213Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: City Relay, London
-- **Location**: SE16
-- **Property Name**: Cube House, Spa Road, SE16
-- **ID**: 91362336
-- **Price**: £2700 PCM
-- **Size**: 67 sqm
-- **Listing Update**: 2026-07-27
-- **Listing Status**: Reduced today
-- **Let Available**: 04/08/2026
-- **Link**: [https://www.rightmove.co.uk/properties/91362336](https://www.rightmove.co.uk/properties/91362336)
-
----
-
 ### [2026-07-22T19:18:01.176Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Dexters, Wapping
@@ -626,21 +476,6 @@ Millwall, E14
 - **Listing Status**: Reduced on 15/07/2026
 - **Let Available**: 01/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/89841429](https://www.rightmove.co.uk/properties/89841429)
-
----
-
-### [2026-07-22T19:18:01.180Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Oliver Jaques, Surrey Quays
-- **Location**: SE16
-- **Property Name**: Dunnage Crescent, Surrey Quays SE16
-- **ID**: 91201974
-- **Price**: £2200 PCM
-- **Size**: 66 sqm
-- **Listing Update**: 2026-07-22
-- **Listing Status**: Added on 22/07/2026
-- **Let Available**: 11/08/2026
-- **Link**: [https://www.rightmove.co.uk/properties/91201974](https://www.rightmove.co.uk/properties/91201974)
 
 ---
 
@@ -674,21 +509,6 @@ Millwall, E14
 
 ---
 
-### [2026-07-22T19:18:01.180Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: OpenRent, London
-- **Location**: SE16
-- **Property Name**: Blondin Way, London, SE16
-- **ID**: 90513300
-- **Price**: £2300 PCM
-- **Size**: 65.03 sqm
-- **Listing Update**: 2026-07-27
-- **Listing Status**: Reduced today
-- **Let Available**: 14/08/2026
-- **Link**: [https://www.rightmove.co.uk/properties/90513300](https://www.rightmove.co.uk/properties/90513300)
-
----
-
 ### [2026-07-24T10:55:24.202Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Dexters, Wapping
@@ -701,36 +521,6 @@ Millwall, E14
 - **Listing Status**: Reduced on 24/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90924282](https://www.rightmove.co.uk/properties/90924282)
-
----
-
-### [2026-07-22T19:18:01.175Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Kinleigh Folkard and Hayward - Lettings, Canada Water
-- **Location**: Canada Water (SE16)
-- **Property Name**: Woodland Crescent, Canada Water, London, SE16
-- **ID**: 90921774
-- **Price**: £2650 PCM
-- **Size**: 64.4 sqm
-- **Listing Update**: 2026-07-15
-- **Listing Status**: Added on 15/07/2026
-- **Let Available**: 22/08/2026
-- **Link**: [https://www.rightmove.co.uk/properties/90921774](https://www.rightmove.co.uk/properties/90921774)
-
----
-
-### [2026-07-22T14:53:42.156Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Franklyn James, Limehouse and Wapping
-- **Location**: Canary Wharf
-- **Property Name**: Wayfair House South, Poplar High Street, London, E14
-- **ID**: 91198227
-- **Price**: £2400 PCM
-- **Size**: 64 sqm
-- **Listing Update**: 2026-07-22
-- **Listing Status**: Added on 22/07/2026
-- **Let Available**: 25/09/2026
-- **Link**: [https://www.rightmove.co.uk/properties/91198227](https://www.rightmove.co.uk/properties/91198227)
 
 ---
 
@@ -780,21 +570,6 @@ Millwall, E14
 
 ---
 
-### [2026-07-22T19:18:01.176Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Oppida, Surrey Quays - Lettings
-- **Location**: Canada Water (SE16)
-- **Property Name**: Worgan Street, London, SE16
-- **ID**: 90101784
-- **Price**: £2300 PCM
-- **Size**: 62 sqm
-- **Listing Update**: 2026-06-24
-- **Listing Status**: Added on 24/06/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/90101784](https://www.rightmove.co.uk/properties/90101784)
-
----
-
 ### [2026-07-24T20:56:22.854Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Way of Life - Balfron Tower, Balfron Tower
@@ -822,21 +597,6 @@ Millwall, E14
 - **Listing Status**: Added on 24/07/2026
 - **Let Available**: 20/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91298058](https://www.rightmove.co.uk/properties/91298058)
-
----
-
-### [2026-07-27T15:37:47.213Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Stirling Ackroyd Lettings, London Bridge
-- **Location**: SE16
-- **Property Name**: Marine Street, London, SE16
-- **ID**: 91361187
-- **Price**: £2500 PCM
-- **Size**: 62 sqm
-- **Listing Update**: 2026-07-27
-- **Listing Status**: Added today
-- **Let Available**: 01/09/2026
-- **Link**: [https://www.rightmove.co.uk/properties/91361187](https://www.rightmove.co.uk/properties/91361187)
 
 ---
 
@@ -882,21 +642,6 @@ Millwall, E14
 - **Listing Status**: Added on 16/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90954810](https://www.rightmove.co.uk/properties/90954810)
-
----
-
-### [2026-07-22T19:18:01.180Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Urban Patchwork, London
-- **Location**: SE16
-- **Property Name**: Rotherhithe Street, Rotherhithe, SE16
-- **ID**: 91063287
-- **Price**: £2150 PCM
-- **Size**: 61 sqm
-- **Listing Update**: 2026-07-18
-- **Listing Status**: Added on 18/07/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/91063287](https://www.rightmove.co.uk/properties/91063287)
 
 ---
 
@@ -991,21 +736,6 @@ Millwall, E14
 
 ---
 
-### [2026-07-22T19:18:01.175Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Dexters, Canada Water
-- **Location**: Canada Water (SE16)
-- **Property Name**: Canon Beck Road, Canada Water
-- **ID**: 91039032
-- **Price**: £2250 PCM
-- **Size**: 58.6 sqm
-- **Listing Update**: 2026-07-17
-- **Listing Status**: Added on 17/07/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/91039032](https://www.rightmove.co.uk/properties/91039032)
-
----
-
 ### [2026-07-23T10:59:16.472Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: OpenRent, London
@@ -1063,21 +793,6 @@ Millwall, E14
 - **Listing Status**: Reduced on 16/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90807477](https://www.rightmove.co.uk/properties/90807477)
-
----
-
-### [2026-07-22T19:18:01.176Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Living in London, Canada Water Tube Station
-- **Location**: Canada Water (SE16)
-- **Property Name**: Maple Quays, London, SE16
-- **ID**: 88995048
-- **Price**: £2100 PCM
-- **Size**: 54.5 sqm
-- **Listing Update**: 2026-05-27
-- **Listing Status**: Added on 27/05/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/88995048](https://www.rightmove.co.uk/properties/88995048)
 
 ---
 
@@ -1188,21 +903,6 @@ Islington, N1
 
 ---
 
-### [2026-07-22T19:18:01.175Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Hastings International, Rotherhithe
-- **Location**: Canada Water (SE16)
-- **Property Name**: 22 Quebec Way, London, SE16
-- **ID**: 90189378
-- **Price**: £2232 PCM
-- **Size**: 52.03 sqm
-- **Listing Update**: 2026-06-26
-- **Listing Status**: Added on 26/06/2026
-- **Let Available**: 14/08/2026
-- **Link**: [https://www.rightmove.co.uk/properties/90189378](https://www.rightmove.co.uk/properties/90189378)
-
----
-
 ### [2026-07-23T10:59:16.472Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Douglas Pryce, Hither Green
@@ -1263,36 +963,6 @@ Islington, N1
 
 ---
 
-### [2026-07-27T15:37:47.213Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Fizzy Living, Poplar
-- **Location**: E14
-- **Property Name**: Fizzy Poplar, Lindfield Street, Poplar E14 6GP
-- **ID**: 91354992
-- **Price**: £2320 PCM
-- **Size**: 51 sqm
-- **Listing Update**: 2026-07-27
-- **Listing Status**: Added today
-- **Let Available**: 07/09/2026
-- **Link**: [https://www.rightmove.co.uk/properties/91354992](https://www.rightmove.co.uk/properties/91354992)
-
----
-
-### [2026-07-22T19:18:01.175Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Benham and Reeves - Surrey Quays, Surrey Quays
-- **Location**: Canada Water (SE16)
-- **Property Name**: Fairmont House, Needleman Street, Southwark, London
-- **ID**: 90271878
-- **Price**: £2250 PCM
-- **Size**: 50.5 sqm
-- **Listing Update**: 2026-06-29
-- **Listing Status**: Added on 29/06/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/90271878](https://www.rightmove.co.uk/properties/90271878)
-
----
-
 ### [2026-07-14T16:44:34.270Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Dexters, Canary Wharf
@@ -1320,22 +990,6 @@ Islington, N1
 - **Listing Status**: Reduced today
 - **Let Available**: 10/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90758457](https://www.rightmove.co.uk/properties/90758457)
-
----
-
-### [2026-07-25T14:27:52.063Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Chestertons, Canary Wharf and Docklands
-- **Location**: E14
-- **Property Name**: St. Annes Street, 
-Poplar, E14
-- **ID**: 91320096
-- **Price**: £1950 PCM
-- **Size**: 50 sqm
-- **Listing Update**: 2026-07-25
-- **Listing Status**: Added on 25/07/2026
-- **Let Available**: 24/08/2026
-- **Link**: [https://www.rightmove.co.uk/properties/91320096](https://www.rightmove.co.uk/properties/91320096)
 
 ---
 
@@ -1414,21 +1068,6 @@ Poplar, E14
 
 ---
 
-### [2026-07-22T19:18:01.181Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Kinleigh Folkard and Hayward - Lettings, Canada Water
-- **Location**: SE16
-- **Property Name**: Trafalgar Close, London, SE16
-- **ID**: 90846198
-- **Price**: £2250 PCM
-- **Size**: 48.6 sqm
-- **Listing Update**: 2026-07-14
-- **Listing Status**: Added on 14/07/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/90846198](https://www.rightmove.co.uk/properties/90846198)
-
----
-
 ### [2026-07-22T19:18:01.178Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Kerr W Estates Ltd, Covering City
@@ -1489,21 +1128,6 @@ Poplar, E14
 
 ---
 
-### [2026-07-24T18:11:55.408Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Hamptons, Tower Bridge
-- **Location**: SE16
-- **Property Name**: Luna House, Bermondsey, SE16
-- **ID**: 91304406
-- **Price**: £2150 PCM
-- **Size**: 47.5 sqm
-- **Listing Update**: 2026-07-24
-- **Listing Status**: Added on 24/07/2026
-- **Let Available**: 30/09/2026 (🦅 Early Bird: 68d adv)
-- **Link**: [https://www.rightmove.co.uk/properties/91304406](https://www.rightmove.co.uk/properties/91304406)
-
----
-
 ### [2026-07-26T14:23:59.277Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Settio Property Experience Ltd, London
@@ -1516,21 +1140,6 @@ Poplar, E14
 - **Listing Status**: Added on 14/07/2026
 - **Let Available**: 04/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90878985](https://www.rightmove.co.uk/properties/90878985)
-
----
-
-### [2026-07-13T16:22:49.586Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Ernest Brooks International, Canary Wharf
-- **Location**: South Quay
-- **Property Name**: Roosevelt Tower, 18 Williamsburg Plaza, Poplar, E14
-- **ID**: 90408405
-- **Price**: £2200 PCM
-- **Size**: 47 sqm
-- **Listing Update**: 2026-07-24
-- **Listing Status**: Reduced on 24/07/2026
-- **Let Available**: 08/09/2026
-- **Link**: [https://www.rightmove.co.uk/properties/90408405](https://www.rightmove.co.uk/properties/90408405)
 
 ---
 
@@ -1744,21 +1353,6 @@ Poplar, E14
 
 ---
 
-### [2026-07-27T12:11:39.061Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Dexters, Canada Water
-- **Location**: SE16
-- **Property Name**: Odessa Street, Rotherhithe
-- **ID**: 91345707
-- **Price**: £2000 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-27
-- **Listing Status**: Added today
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/91345707](https://www.rightmove.co.uk/properties/91345707)
-
----
-
 ### [2026-07-23T15:01:57.268Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Houst, London
@@ -1771,36 +1365,6 @@ Poplar, E14
 - **Listing Status**: Added on 30/06/2026
 - **Let Available**: 20/12/2026 (🦅 Early Bird: 173d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/90321876](https://www.rightmove.co.uk/properties/90321876)
-
----
-
-### [2026-07-22T19:18:01.180Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Dexters, Tower Bridge
-- **Location**: SE16
-- **Property Name**: Goodwin Close, Bermondsey
-- **ID**: 91169271
-- **Price**: £2000 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-21
-- **Listing Status**: Added on 21/07/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/91169271](https://www.rightmove.co.uk/properties/91169271)
-
----
-
-### [2026-07-22T19:18:01.180Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Living in London, Canada Water Tube Station
-- **Location**: SE16
-- **Property Name**: Rossetti Road, Bermondsey
-- **ID**: 91084284
-- **Price**: £2000 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-20
-- **Listing Status**: Added on 20/07/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/91084284](https://www.rightmove.co.uk/properties/91084284)
 
 ---
 
@@ -1894,21 +1458,6 @@ Poplar, E14
 
 ---
 
-### [2026-07-23T18:08:23.178Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Hawk and Eagle Property Consultants, London
-- **Location**: E14
-- **Property Name**: Hobday Street, Poplar, E14 6AZ
-- **ID**: 91260018
-- **Price**: £2050 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-23
-- **Listing Status**: Added on 23/07/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/91260018](https://www.rightmove.co.uk/properties/91260018)
-
----
-
 ### [2026-07-22T19:18:01.176Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Dexters, Wapping
@@ -1936,21 +1485,6 @@ Poplar, E14
 - **Listing Status**: Reduced on 13/07/2026
 - **Let Available**: 26/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/89150535](https://www.rightmove.co.uk/properties/89150535)
-
----
-
-### [2026-07-22T19:18:01.175Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: The Alba by Morro, The Alba
-- **Location**: Canada Water (SE16)
-- **Property Name**: Mulberry Walk, London, SE16
-- **ID**: 91022634
-- **Price**: £2060 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-17
-- **Listing Status**: Added on 17/07/2026
-- **Let Available**: 08/10/2026 (🦅 Early Bird: 83d adv)
-- **Link**: [https://www.rightmove.co.uk/properties/91022634](https://www.rightmove.co.uk/properties/91022634)
 
 ---
 
@@ -2044,21 +1578,6 @@ Poplar, E14
 
 ---
 
-### [2026-07-22T19:18:01.175Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: The Alba by Morro, The Alba
-- **Location**: Canada Water (SE16)
-- **Property Name**: Mulberry Walk, London, SE16
-- **ID**: 91080015
-- **Price**: £2125 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-20
-- **Listing Status**: Added on 20/07/2026
-- **Let Available**: 21/09/2026
-- **Link**: [https://www.rightmove.co.uk/properties/91080015](https://www.rightmove.co.uk/properties/91080015)
-
----
-
 ### [2026-07-27T18:19:42.384Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Dexters, Canary Wharf
@@ -2071,66 +1590,6 @@ Poplar, E14
 - **Listing Status**: Added today
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/91371792](https://www.rightmove.co.uk/properties/91371792)
-
----
-
-### [2026-07-27T18:19:42.384Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Metro Village Ltd, Canada Water
-- **Location**: SE16
-- **Property Name**: Tavern Quay, Rope Street, London, SE16
-- **ID**: 91368843
-- **Price**: £2150 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-27
-- **Listing Status**: Added today
-- **Let Available**: 26/09/2026
-- **Link**: [https://www.rightmove.co.uk/properties/91368843](https://www.rightmove.co.uk/properties/91368843)
-
----
-
-### [2026-07-25T14:27:52.063Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Oliver Jaques, Surrey Quays
-- **Location**: Canada Water (SE16)
-- **Property Name**: Howland Estate, Canada Water SE16
-- **ID**: 91319838
-- **Price**: £2150 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-25
-- **Listing Status**: Added on 25/07/2026
-- **Let Available**: 04/09/2026
-- **Link**: [https://www.rightmove.co.uk/properties/91319838](https://www.rightmove.co.uk/properties/91319838)
-
----
-
-### [2026-07-22T19:18:01.176Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: OpenRent, London
-- **Location**: Canada Water (SE16)
-- **Property Name**: Needleman Street, London, SE16
-- **ID**: 88904685
-- **Price**: £2150 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-05-25
-- **Listing Status**: Added on 25/05/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/88904685](https://www.rightmove.co.uk/properties/88904685)
-
----
-
-### [2026-07-22T19:18:01.175Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: The Alba by Morro, The Alba
-- **Location**: Canada Water (SE16)
-- **Property Name**: Mulberry Walk, London, SE16
-- **ID**: 91079700
-- **Price**: £2150 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-20
-- **Listing Status**: Added on 20/07/2026
-- **Let Available**: 21/09/2026
-- **Link**: [https://www.rightmove.co.uk/properties/91079700](https://www.rightmove.co.uk/properties/91079700)
 
 ---
 
@@ -2180,51 +1639,6 @@ Poplar, E14
 
 ---
 
-### [2026-07-23T10:59:16.472Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Felicity J Lord, Shad Thames Lettings
-- **Location**: SE16
-- **Property Name**: East Lane, Shad Thames, Tower Bridge, London
-- **ID**: 90842283
-- **Price**: £2200 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-14
-- **Listing Status**: Added on 14/07/2026
-- **Let Available**: 17/09/2026
-- **Link**: [https://www.rightmove.co.uk/properties/90842283](https://www.rightmove.co.uk/properties/90842283)
-
----
-
-### [2026-07-22T19:18:01.180Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Dexters, Tower Bridge
-- **Location**: SE16
-- **Property Name**: Cadbury Way, Rotherhithe
-- **ID**: 91090602
-- **Price**: £2200 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-20
-- **Listing Status**: Added on 20/07/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/91090602](https://www.rightmove.co.uk/properties/91090602)
-
----
-
-### [2026-07-22T19:18:01.180Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Dexters, Tower Bridge
-- **Location**: SE16
-- **Property Name**: Spa Road, Bermondsey
-- **ID**: 91082340
-- **Price**: £2200 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-20
-- **Listing Status**: Added on 20/07/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/91082340](https://www.rightmove.co.uk/properties/91082340)
-
----
-
 ### [2026-07-22T19:18:01.173Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: OpenRent, London
@@ -2270,21 +1684,6 @@ Poplar, E14
 
 ---
 
-### [2026-07-24T14:44:02.572Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Benham and Reeves - Canary Wharf, Canary Wharf
-- **Location**: E14
-- **Property Name**: Hemlock Street, Poplar, E14
-- **ID**: 91286214
-- **Price**: £2250 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-24
-- **Listing Status**: Added on 24/07/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/91286214](https://www.rightmove.co.uk/properties/91286214)
-
----
-
 ### [2026-07-24T14:44:02.571Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Life Residential, Canary Wharf Office
@@ -2297,21 +1696,6 @@ Poplar, E14
 - **Listing Status**: Added on 24/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/91296798](https://www.rightmove.co.uk/properties/91296798)
-
----
-
-### [2026-07-22T19:18:01.180Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Prospect London, London
-- **Location**: SE16
-- **Property Name**: 239 Southwark Park Road, London
-- **ID**: 90986586
-- **Price**: £2250 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-16
-- **Listing Status**: Added on 16/07/2026
-- **Let Available**: 24/08/2026
-- **Link**: [https://www.rightmove.co.uk/properties/90986586](https://www.rightmove.co.uk/properties/90986586)
 
 ---
 
@@ -2390,21 +1774,6 @@ Poplar, E14
 
 ---
 
-### [2026-07-22T19:18:01.180Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Dexters, Tower Bridge
-- **Location**: SE16
-- **Property Name**: Marine Street, Bermondsey
-- **ID**: 91169268
-- **Price**: £2300 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-21
-- **Listing Status**: Added on 21/07/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/91169268](https://www.rightmove.co.uk/properties/91169268)
-
----
-
 ### [2026-07-22T19:18:01.172Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: OpenRent, London
@@ -2480,21 +1849,6 @@ Poplar, E14
 
 ---
 
-### [2026-07-22T19:18:01.175Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: The Alba by Morro, The Alba
-- **Location**: Canada Water (SE16)
-- **Property Name**: Mulberry Walk, London, SE16
-- **ID**: 91022904
-- **Price**: £2325 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-17
-- **Listing Status**: Added on 17/07/2026
-- **Let Available**: 21/09/2026 (🦅 Early Bird: 66d adv)
-- **Link**: [https://www.rightmove.co.uk/properties/91022904](https://www.rightmove.co.uk/properties/91022904)
-
----
-
 ### [2026-07-23T15:01:57.269Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Alliance London, London
@@ -2540,21 +1894,6 @@ Poplar, E14
 
 ---
 
-### [2026-07-23T20:51:31.047Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Dexters, New Cross
-- **Location**: SE16
-- **Property Name**: Silwood Street, Rotherhithe
-- **ID**: 90525675
-- **Price**: £2400 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-13
-- **Listing Status**: Reduced on 13/07/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/90525675](https://www.rightmove.co.uk/properties/90525675)
-
----
-
 ### [2026-07-23T18:08:23.178Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Felicity J Lord, Canary Wharf Lettings
@@ -2570,21 +1909,6 @@ Poplar, E14
 
 ---
 
-### [2026-07-22T19:18:01.180Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Hawk and Eagle Property Consultants, London
-- **Location**: SE16
-- **Property Name**: Navigation House, Marine Wharf, SE16 7EG
-- **ID**: 91090725
-- **Price**: £2400 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-20
-- **Listing Status**: Added on 20/07/2026
-- **Let Available**: 04/09/2026
-- **Link**: [https://www.rightmove.co.uk/properties/91090725](https://www.rightmove.co.uk/properties/91090725)
-
----
-
 ### [2026-07-22T19:18:01.178Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: The Chant Group, Bank
@@ -2597,36 +1921,6 @@ Poplar, E14
 - **Listing Status**: Added on 16/07/2026
 - **Let Available**: 11/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90959529](https://www.rightmove.co.uk/properties/90959529)
-
----
-
-### [2026-07-22T19:18:01.176Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Dexters, Canada Water
-- **Location**: Canada Water (SE16)
-- **Property Name**: St. Elmos Road, Canada Water
-- **ID**: 89600835
-- **Price**: £2400 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-06-11
-- **Listing Status**: Added on 11/06/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/89600835](https://www.rightmove.co.uk/properties/89600835)
-
----
-
-### [2026-07-22T19:18:01.175Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Metro Village Ltd, Canada Water
-- **Location**: Canada Water (SE16)
-- **Property Name**: Albatross Way, London, Greater London, SE16
-- **ID**: 91030086
-- **Price**: £2400 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-17
-- **Listing Status**: Added on 17/07/2026
-- **Let Available**: 24/09/2026 (🦅 Early Bird: 69d adv)
-- **Link**: [https://www.rightmove.co.uk/properties/91030086](https://www.rightmove.co.uk/properties/91030086)
 
 ---
 
@@ -2672,36 +1966,6 @@ Poplar, E14
 - **Listing Status**: Reduced on 13/07/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/89831655](https://www.rightmove.co.uk/properties/89831655)
-
----
-
-### [2026-07-27T15:37:47.213Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: The Alba by Morro, The Alba
-- **Location**: Canada Water (SE16)
-- **Property Name**: Mulberry Walk, London, SE16
-- **ID**: 91358973
-- **Price**: £2425 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-27
-- **Listing Status**: Added today
-- **Let Available**: 21/09/2026
-- **Link**: [https://www.rightmove.co.uk/properties/91358973](https://www.rightmove.co.uk/properties/91358973)
-
----
-
-### [2026-07-27T15:37:47.213Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: The Alba by Morro, The Alba
-- **Location**: Canada Water (SE16)
-- **Property Name**: Mulberry Walk, London, SE16
-- **ID**: 91358916
-- **Price**: £2450 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-27
-- **Listing Status**: Added today
-- **Let Available**: 21/09/2026
-- **Link**: [https://www.rightmove.co.uk/properties/91358916](https://www.rightmove.co.uk/properties/91358916)
 
 ---
 
@@ -2915,21 +2179,6 @@ Poplar, E14
 
 ---
 
-### [2026-07-22T19:18:01.181Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: OpenRent, London
-- **Location**: SE16
-- **Property Name**: Grand Canal Avenue, London, SE16
-- **ID**: 90886578
-- **Price**: £2575 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-14
-- **Listing Status**: Added on 14/07/2026
-- **Let Available**: 31/08/2026
-- **Link**: [https://www.rightmove.co.uk/properties/90886578](https://www.rightmove.co.uk/properties/90886578)
-
----
-
 ### [2026-07-23T18:08:23.179Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Blackstones Residential, London
@@ -2957,21 +2206,6 @@ Poplar, E14
 - **Listing Status**: Added on 23/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/91226580](https://www.rightmove.co.uk/properties/91226580)
-
----
-
-### [2026-07-22T19:18:01.176Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Benham and Reeves - Surrey Quays, Surrey Quays
-- **Location**: Canada Water (SE16)
-- **Property Name**: Elephant Lane, London, SE16
-- **ID**: 89449575
-- **Price**: £2600 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-06-08
-- **Listing Status**: Added on 08/06/2026
-- **Let Available**: 17/08/2026 (🦅 Early Bird: 70d adv)
-- **Link**: [https://www.rightmove.co.uk/properties/89449575](https://www.rightmove.co.uk/properties/89449575)
 
 ---
 
