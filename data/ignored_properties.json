@@ -3320,6 +3320,18 @@
       "reason": "Price £485 below min £1900",
       "timestamp": "2026-07-27T15:35:00.239Z"
     },
+    "91366506": {
+      "reason": "Size 38 sqm below min 45",
+      "timestamp": "2026-07-27T18:18:55.816Z"
+    },
+    "91368966": {
+      "reason": "Size 38.74 sqm below min 45",
+      "timestamp": "2026-07-27T18:18:53.815Z"
+    },
+    "91371504": {
+      "reason": "Price £465 below min £1900",
+      "timestamp": "2026-07-27T18:18:52.056Z"
+    },
     "94898018": {
       "reason": "Size 30.56 sqm below min 40",
       "timestamp": "2026-06-25T13:04:33.057Z"
@@ -3407,6 +3419,10 @@
     "159503654": {
       "reason": "Price £473 below min £1900",
       "timestamp": "2026-07-13T12:39:38.246Z"
+    },
+    "159811214": {
+      "reason": "Price £555 below min £1900",
+      "timestamp": "2026-07-27T18:18:52.059Z"
     },
     "161697050": {
       "reason": "Price £461 below min £1900",

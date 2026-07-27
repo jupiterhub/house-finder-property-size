@@ -915,21 +915,6 @@ Millwall, E14
 
 ---
 
-### [2026-07-14T12:46:08.176Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: OpenRent, London
-- **Location**: South Quay
-- **Property Name**: Rugless House, London, E14
-- **ID**: 90851298
-- **Price**: £1900 PCM
-- **Size**: 60.5 sqm
-- **Listing Update**: 2026-07-14
-- **Listing Status**: Added on 14/07/2026
-- **Let Available**: 10/09/2026
-- **Link**: [https://www.rightmove.co.uk/properties/90851298](https://www.rightmove.co.uk/properties/90851298)
-
----
-
 ### [2026-07-22T19:18:01.179Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Stirling Ackroyd Lettings, Canary Wharf
@@ -2074,6 +2059,36 @@ Poplar, E14
 
 ---
 
+### [2026-07-27T18:19:42.384Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Dexters, Canary Wharf
+- **Location**: Canary Wharf (E14)
+- **Property Name**: Cassilis Road, Canary wharf
+- **ID**: 91371792
+- **Price**: £2150 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-27
+- **Listing Status**: Added today
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/91371792](https://www.rightmove.co.uk/properties/91371792)
+
+---
+
+### [2026-07-27T18:19:42.384Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Metro Village Ltd, Canada Water
+- **Location**: SE16
+- **Property Name**: Tavern Quay, Rope Street, London, SE16
+- **ID**: 91368843
+- **Price**: £2150 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-27
+- **Listing Status**: Added today
+- **Let Available**: 26/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/91368843](https://www.rightmove.co.uk/properties/91368843)
+
+---
+
 ### [2026-07-25T14:27:52.063Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Oliver Jaques, Surrey Quays
@@ -2687,21 +2702,6 @@ Poplar, E14
 - **Listing Status**: Added today
 - **Let Available**: 21/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91358916](https://www.rightmove.co.uk/properties/91358916)
-
----
-
-### [2026-07-23T10:59:16.472Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: OpenRent, London
-- **Location**: E14
-- **Property Name**: Aurora Building, London, E14
-- **ID**: 91224972
-- **Price**: £2450 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-23
-- **Listing Status**: Added on 23/07/2026
-- **Let Available**: 16/09/2026
-- **Link**: [https://www.rightmove.co.uk/properties/91224972](https://www.rightmove.co.uk/properties/91224972)
 
 ---
 
