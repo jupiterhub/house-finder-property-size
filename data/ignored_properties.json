@@ -116,6 +116,10 @@
       "reason": "Size 36.44 sqm below min 40",
       "timestamp": "2026-06-07T12:11:51.233Z"
     },
+    "88322889": {
+      "reason": "Price £543 below min £1900",
+      "timestamp": "2026-07-28T18:08:26.764Z"
+    },
     "88324614": {
       "reason": "Size 35 sqm below min 40",
       "timestamp": "2026-05-15T16:10:37.470Z"
@@ -307,6 +311,10 @@
     "88735086": {
       "reason": "Size 35.12 sqm below min 40",
       "timestamp": "2026-05-20T13:24:50.530Z"
+    },
+    "88746288": {
+      "reason": "Size 39 sqm below min 45",
+      "timestamp": "2026-07-28T18:07:29.100Z"
     },
     "88748235": {
       "reason": "Size 37 sqm below min 40",
@@ -1240,6 +1248,10 @@
       "reason": "Size 28.98 sqm below min 40",
       "timestamp": "2026-06-27T12:00:55.300Z"
     },
+    "90159603": {
+      "reason": "Size 43 sqm below min 45",
+      "timestamp": "2026-07-28T18:06:42.033Z"
+    },
     "90162723": {
       "reason": "Price £498 below min £1900",
       "timestamp": "2026-07-16T13:27:28.724Z"
@@ -1271,6 +1283,22 @@
     "90191976": {
       "reason": "Size 25 sqm below min 40",
       "timestamp": "2026-06-27T12:01:09.752Z"
+    },
+    "90192687": {
+      "reason": "Price £495 below min £1900",
+      "timestamp": "2026-07-28T18:06:39.673Z"
+    },
+    "90193110": {
+      "reason": "Price £495 below min £1900",
+      "timestamp": "2026-07-28T18:06:39.670Z"
+    },
+    "90193317": {
+      "reason": "Price £495 below min £1900",
+      "timestamp": "2026-07-28T18:06:39.666Z"
+    },
+    "90193602": {
+      "reason": "Price £520 below min £1900",
+      "timestamp": "2026-07-28T18:06:39.661Z"
     },
     "90193863": {
       "reason": "Price £520 below min £1900",
@@ -1615,6 +1643,10 @@
     "90390030": {
       "reason": "Size 35.02 sqm below min 40",
       "timestamp": "2026-07-02T17:20:35.794Z"
+    },
+    "90392811": {
+      "reason": "Size 40 sqm below min 45",
+      "timestamp": "2026-07-28T18:07:35.720Z"
     },
     "90396684": {
       "reason": "Size 19.88 sqm below min 40",
@@ -3376,6 +3408,54 @@
       "reason": "Size 35 sqm below min 45",
       "timestamp": "2026-07-28T15:09:29.651Z"
     },
+    "91409022": {
+      "reason": "Price £485 below min £1900",
+      "timestamp": "2026-07-28T18:08:50.753Z"
+    },
+    "91409241": {
+      "reason": "Contains excluded keyword: poplar",
+      "timestamp": "2026-07-28T18:08:48.979Z"
+    },
+    "91409244": {
+      "reason": "Contains excluded keyword: poplar",
+      "timestamp": "2026-07-28T18:08:50.751Z"
+    },
+    "91413879": {
+      "reason": "Size 43 sqm below min 45",
+      "timestamp": "2026-07-28T18:08:35.751Z"
+    },
+    "91416099": {
+      "reason": "Price £545 below min £1900",
+      "timestamp": "2026-07-28T18:08:33.301Z"
+    },
+    "91417071": {
+      "reason": "Price £550 below min £1900",
+      "timestamp": "2026-07-28T18:06:55.803Z"
+    },
+    "91420698": {
+      "reason": "Price £465 below min £1900",
+      "timestamp": "2026-07-28T18:09:00.836Z"
+    },
+    "91420797": {
+      "reason": "Contains excluded keyword: poplar",
+      "timestamp": "2026-07-28T18:08:30.883Z"
+    },
+    "91424439": {
+      "reason": "Size 18 sqm below min 45",
+      "timestamp": "2026-07-28T18:07:07.845Z"
+    },
+    "91424457": {
+      "reason": "Size 18 sqm below min 45",
+      "timestamp": "2026-07-28T18:07:00.200Z"
+    },
+    "91424940": {
+      "reason": "Price £565 below min £1900",
+      "timestamp": "2026-07-28T18:06:53.388Z"
+    },
+    "91426167": {
+      "reason": "Price £565 below min £1900",
+      "timestamp": "2026-07-28T18:06:53.385Z"
+    },
     "94898018": {
       "reason": "Size 30.56 sqm below min 40",
       "timestamp": "2026-06-25T13:04:33.057Z"
@@ -3699,6 +3779,10 @@
     "174801377": {
       "reason": "Size 27 sqm below min 40",
       "timestamp": "2026-05-15T16:39:27.102Z"
+    },
+    "174874553": {
+      "reason": "Size 43 sqm below min 45",
+      "timestamp": "2026-07-28T18:07:37.835Z"
     },
     "174944168": {
       "reason": "Size 39.21 sqm below min 40",
