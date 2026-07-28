@@ -3368,6 +3368,10 @@
       "reason": "Contains excluded keyword: blackwall",
       "timestamp": "2026-07-28T10:01:26.031Z"
     },
+    "91396170": {
+      "reason": "Size 38 sqm below min 45",
+      "timestamp": "2026-07-28T11:08:48.164Z"
+    },
     "94898018": {
       "reason": "Size 30.56 sqm below min 40",
       "timestamp": "2026-06-25T13:04:33.057Z"

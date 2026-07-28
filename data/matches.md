@@ -164,21 +164,6 @@ Millwall, E14
 
 ---
 
-### [2026-07-22T19:18:01.179Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Fisks Ltd, London
-- **Location**: E14
-- **Property Name**: Dundee Wharf, Canary Wharf
-- **ID**: 90982011
-- **Price**: £2500 PCM
-- **Size**: 79 sqm
-- **Listing Update**: 2026-07-22
-- **Listing Status**: Reduced on 22/07/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/90982011](https://www.rightmove.co.uk/properties/90982011)
-
----
-
 ### [2026-07-28T10:01:50.639Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Chestertons, Canary Wharf and Docklands
@@ -600,6 +585,21 @@ Millwall, E14
 
 ---
 
+### [2026-07-28T11:09:58.217Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Flagstones Property Group, London
+- **Location**: Canary Wharf (E14)
+- **Property Name**: The Madison, Marsh Wall, Canary Wharf E14
+- **ID**: 91397637
+- **Price**: £2700 PCM
+- **Size**: 64 sqm
+- **Listing Update**: 2026-07-28
+- **Listing Status**: Added today
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/91397637](https://www.rightmove.co.uk/properties/91397637)
+
+---
+
 ### [2026-07-14T16:44:34.270Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Chestertons, Canary Wharf and Docklands
@@ -733,6 +733,21 @@ Millwall, E14
 - **Listing Status**: Added on 16/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90956748](https://www.rightmove.co.uk/properties/90956748)
+
+---
+
+### [2026-07-28T11:09:58.216Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: John D Wood and Co, Docklands and City
+- **Location**: Canary Wharf (E14)
+- **Property Name**: Fairlead House, Cassilis Road, London, E14
+- **ID**: 90671751
+- **Price**: £2695 PCM
+- **Size**: 60.29 sqm
+- **Listing Update**: 2026-07-28
+- **Listing Status**: Reduced today
+- **Let Available**: 04/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/90671751](https://www.rightmove.co.uk/properties/90671751)
 
 ---
 
@@ -884,6 +899,21 @@ Millwall, E14
 - **Listing Status**: Added on 15/06/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/89709588](https://www.rightmove.co.uk/properties/89709588)
+
+---
+
+### [2026-07-28T11:09:58.217Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Greenwich Peninsula, London
+- **Location**: Greenwich Peninsula
+- **Property Name**: No.2, Upper Riverside, Cutter Lane, Greenwich Peninsula, SE10
+- **ID**: 88946391
+- **Price**: £2450 PCM
+- **Size**: 56 sqm
+- **Listing Update**: 2026-07-28
+- **Listing Status**: Added today
+- **Let Available**: 29/07/2026
+- **Link**: [https://www.rightmove.co.uk/properties/88946391](https://www.rightmove.co.uk/properties/88946391)
 
 ---
 
@@ -1456,6 +1486,22 @@ Islington, N1
 - **Listing Status**: Added yesterday
 - **Let Available**: 01/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91335915](https://www.rightmove.co.uk/properties/91335915)
+
+---
+
+### [2026-07-28T11:09:58.217Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Chestertons, Islington
+- **Location**: EC1V
+- **Property Name**: Goswell Road, 
+Angel, EC1V
+- **ID**: 89149494
+- **Price**: £2600 PCM
+- **Size**: 45 sqm
+- **Listing Update**: 2026-07-28
+- **Listing Status**: Reduced today
+- **Let Available**: 17/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/89149494](https://www.rightmove.co.uk/properties/89149494)
 
 ---
 
