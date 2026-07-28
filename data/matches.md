@@ -615,6 +615,21 @@ Millwall, E14
 
 ---
 
+### [2026-07-28T20:58:06.899Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Ashley King, Docklands
+- **Location**: E14
+- **Property Name**: Newport Avenue, London, E14 2DQ
+- **ID**: 90551667
+- **Price**: £2000 PCM
+- **Size**: 56 sqm
+- **Listing Update**: 2026-07-28
+- **Listing Status**: Reduced today
+- **Let Available**: 31/07/2026
+- **Link**: [https://www.rightmove.co.uk/properties/90551667](https://www.rightmove.co.uk/properties/90551667)
+
+---
+
 ### [2026-07-28T11:09:58.217Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Greenwich Peninsula, London
@@ -824,6 +839,21 @@ Islington, N1
 - **Listing Status**: Reduced on 22/07/2026
 - **Let Available**: 25/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90366564](https://www.rightmove.co.uk/properties/90366564)
+
+---
+
+### [2026-07-28T20:58:06.899Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: JLL, Canary Wharf
+- **Location**: E14
+- **Property Name**: Caledonian Street London E14
+- **ID**: 91427955
+- **Price**: £2200 PCM
+- **Size**: 51 sqm
+- **Listing Update**: 2026-07-28
+- **Listing Status**: Added today
+- **Let Available**: 10/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/91427955](https://www.rightmove.co.uk/properties/91427955)
 
 ---
 
