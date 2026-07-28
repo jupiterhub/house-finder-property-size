@@ -53,7 +53,7 @@ Millwall, E14
 - **Price**: £2700 PCM
 - **Size**: 95 sqm
 - **Listing Update**: 2026-07-27
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/91356993](https://www.rightmove.co.uk/properties/91356993)
 
@@ -179,6 +179,22 @@ Millwall, E14
 
 ---
 
+### [2026-07-28T10:01:50.639Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Chestertons, Canary Wharf and Docklands
+- **Location**: E14
+- **Property Name**: Studley Court, 
+5 Prime Meridian Walk, E14
+- **ID**: 91391517
+- **Price**: £2500 PCM
+- **Size**: 78 sqm
+- **Listing Update**: 2026-07-28
+- **Listing Status**: Added today
+- **Let Available**: 12/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/91391517](https://www.rightmove.co.uk/properties/91391517)
+
+---
+
 ### [2026-07-23T20:51:31.047Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Let UK Home, Covering London
@@ -187,8 +203,8 @@ Millwall, E14
 - **ID**: 90061017
 - **Price**: £2700 PCM
 - **Size**: 78 sqm
-- **Listing Update**: 2026-07-10
-- **Listing Status**: Reduced on 10/07/2026
+- **Listing Update**: 2026-07-28
+- **Listing Status**: Reduced today
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90061017](https://www.rightmove.co.uk/properties/90061017)
 
@@ -203,7 +219,7 @@ Millwall, E14
 - **Price**: £2450 PCM
 - **Size**: 77 sqm
 - **Listing Update**: 2026-07-27
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/91356114](https://www.rightmove.co.uk/properties/91356114)
 
@@ -359,6 +375,36 @@ Millwall, E14
 
 ---
 
+### [2026-07-28T10:01:50.638Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Greenwich Peninsula, London
+- **Location**: Greenwich Peninsula
+- **Property Name**: Beacon, Pilot Walk, Peninsula Gardens, Lower Riverside, Greenwich Peninsula, SE10
+- **ID**: 91174134
+- **Price**: £2600 PCM
+- **Size**: 71 sqm
+- **Listing Update**: 2026-07-21
+- **Listing Status**: Added on 21/07/2026
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/91174134](https://www.rightmove.co.uk/properties/91174134)
+
+---
+
+### [2026-07-28T10:01:50.637Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Greenwich Peninsula, London
+- **Location**: Greenwich Peninsula
+- **Property Name**: Roper, Reminder Lane, Lower Riverside, Greenwich Peninsula, SE10
+- **ID**: 91264446
+- **Price**: £2700 PCM
+- **Size**: 71 sqm
+- **Listing Update**: 2026-07-23
+- **Listing Status**: Added on 23/07/2026
+- **Let Available**: 02/10/2026 (🦅 Early Bird: 71d adv)
+- **Link**: [https://www.rightmove.co.uk/properties/91264446](https://www.rightmove.co.uk/properties/91264446)
+
+---
+
 ### [2026-07-22T19:18:01.176Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Hemmingfords, London
@@ -383,7 +429,7 @@ Millwall, E14
 - **Price**: £2300 PCM
 - **Size**: 69.68 sqm
 - **Listing Update**: 2026-07-27
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/91362786](https://www.rightmove.co.uk/properties/91362786)
 
@@ -399,7 +445,7 @@ Millwall, E14
 - **Size**: 69.5 sqm
 - **Listing Update**: 2026-07-22
 - **Listing Status**: Reduced on 22/07/2026
-- **Let Available**: 28/07/2026
+- **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/149573198](https://www.rightmove.co.uk/properties/149573198)
 
 ---
@@ -446,6 +492,21 @@ Millwall, E14
 - **Listing Status**: Added on 22/07/2026
 - **Let Available**: 04/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91220718](https://www.rightmove.co.uk/properties/91220718)
+
+---
+
+### [2026-07-28T10:01:50.637Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Greenwich Peninsula, London
+- **Location**: Greenwich Peninsula
+- **Property Name**: Tidemill Square, SE10
+- **ID**: 91264443
+- **Price**: £2700 PCM
+- **Size**: 69 sqm
+- **Listing Update**: 2026-07-23
+- **Listing Status**: Added on 23/07/2026
+- **Let Available**: 29/09/2026 (🦅 Early Bird: 68d adv)
+- **Link**: [https://www.rightmove.co.uk/properties/91264443](https://www.rightmove.co.uk/properties/91264443)
 
 ---
 
@@ -564,7 +625,7 @@ Millwall, E14
 - **Price**: £2455 PCM
 - **Size**: 63 sqm
 - **Listing Update**: 2026-07-26
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 26/07/2026
 - **Let Available**: 05/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91333113](https://www.rightmove.co.uk/properties/91333113)
 
@@ -645,6 +706,21 @@ Millwall, E14
 
 ---
 
+### [2026-07-28T10:01:50.638Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: 1st Avenue, London
+- **Location**: Greenwich Peninsula
+- **Property Name**: Barge Walk, London, SE10
+- **ID**: 89235633
+- **Price**: £2450 PCM
+- **Size**: 61 sqm
+- **Listing Update**: 2026-07-13
+- **Listing Status**: Reduced on 13/07/2026
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/89235633](https://www.rightmove.co.uk/properties/89235633)
+
+---
+
 ### [2026-07-16T11:29:32.999Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Waterview, Waterview Shad Thames
@@ -684,7 +760,7 @@ Millwall, E14
 - **Price**: £2300 PCM
 - **Size**: 59.6 sqm
 - **Listing Update**: 2026-07-27
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/91336602](https://www.rightmove.co.uk/properties/91336602)
 
@@ -714,8 +790,8 @@ Millwall, E14
 - **Price**: £2150 PCM
 - **Size**: 59 sqm
 - **Listing Update**: 2026-07-27
-- **Listing Status**: Added today
-- **Let Available**: 28/07/2026
+- **Listing Status**: Added yesterday
+- **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/91340157](https://www.rightmove.co.uk/properties/91340157)
 
 ---
@@ -751,6 +827,21 @@ Millwall, E14
 
 ---
 
+### [2026-07-28T10:01:50.638Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: KARE ESTATES, London
+- **Location**: Greenwich Peninsula
+- **Property Name**: 57 Chandlers Avenue, London
+- **ID**: 88746276
+- **Price**: £2250 PCM
+- **Size**: 58 sqm
+- **Listing Update**: 2026-05-22
+- **Listing Status**: Added on 22/05/2026
+- **Let Available**: Now (🦅 Early Bird: 67d adv)
+- **Link**: [https://www.rightmove.co.uk/properties/88746276](https://www.rightmove.co.uk/properties/88746276)
+
+---
+
 ### [2026-07-13T16:22:49.585Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Life Residential, Canary Wharf Office
@@ -766,6 +857,36 @@ Millwall, E14
 
 ---
 
+### [2026-07-28T10:01:50.639Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Keatons, Bow
+- **Location**: E14
+- **Property Name**: Old School Square, London, E14
+- **ID**: 90707043
+- **Price**: £1900 PCM
+- **Size**: 57 sqm
+- **Listing Update**: 2026-07-28
+- **Listing Status**: Reduced today
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/90707043](https://www.rightmove.co.uk/properties/90707043)
+
+---
+
+### [2026-07-28T10:01:50.638Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Greenwich Peninsula, London
+- **Location**: Greenwich Peninsula
+- **Property Name**: No.1, Upper Riverside, Cutter Lane, Greenwich Peninsula, SE10
+- **ID**: 89709588
+- **Price**: £2550 PCM
+- **Size**: 57 sqm
+- **Listing Update**: 2026-06-15
+- **Listing Status**: Added on 15/06/2026
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/89709588](https://www.rightmove.co.uk/properties/89709588)
+
+---
+
 ### [2026-07-27T12:11:39.060Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: OpenRent, London
@@ -775,7 +896,7 @@ Millwall, E14
 - **Price**: £2000 PCM
 - **Size**: 55.74 sqm
 - **Listing Update**: 2026-07-27
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: 03/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91333926](https://www.rightmove.co.uk/properties/91333926)
 
@@ -867,7 +988,7 @@ Islington, N1
 - **Price**: £2250 PCM
 - **Size**: 54 sqm
 - **Listing Update**: 2026-07-27
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: 23/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91344669](https://www.rightmove.co.uk/properties/91344669)
 
@@ -888,6 +1009,21 @@ Islington, N1
 
 ---
 
+### [2026-07-28T10:01:50.638Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Savills Lettings, Canary Wharf
+- **Location**: Greenwich Peninsula
+- **Property Name**: Pilot Walk, London, SE10
+- **ID**: 91044006
+- **Price**: £2500 PCM
+- **Size**: 54 sqm
+- **Listing Update**: 2026-07-17
+- **Listing Status**: Added on 17/07/2026
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/91044006](https://www.rightmove.co.uk/properties/91044006)
+
+---
+
 ### [2026-07-22T19:18:01.177Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Dexters, Wapping
@@ -900,6 +1036,21 @@ Islington, N1
 - **Listing Status**: Reduced on 24/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90981231](https://www.rightmove.co.uk/properties/90981231)
+
+---
+
+### [2026-07-28T10:01:50.637Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Stirling Ackroyd Lettings, Canary Wharf
+- **Location**: Canary Wharf (E14)
+- **Property Name**: Crossharbour Plaza, London, E14
+- **ID**: 91393698
+- **Price**: £2700 PCM
+- **Size**: 53 sqm
+- **Listing Update**: 2026-07-28
+- **Listing Status**: Added today
+- **Let Available**: 09/10/2026 (🦅 Early Bird: 73d adv)
+- **Link**: [https://www.rightmove.co.uk/properties/91393698](https://www.rightmove.co.uk/properties/91393698)
 
 ---
 
@@ -963,6 +1114,21 @@ Islington, N1
 
 ---
 
+### [2026-07-28T10:01:50.637Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Greenwich Peninsula, London
+- **Location**: Greenwich Peninsula
+- **Property Name**: No.2, Upper Riverside, Cutter Lane, Greenwich Peninsula, SE10
+- **ID**: 91190568
+- **Price**: £2500 PCM
+- **Size**: 51 sqm
+- **Listing Update**: 2026-07-22
+- **Listing Status**: Added on 22/07/2026
+- **Let Available**: 10/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/91190568](https://www.rightmove.co.uk/properties/91190568)
+
+---
+
 ### [2026-07-14T16:44:34.270Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Dexters, Canary Wharf
@@ -978,6 +1144,21 @@ Islington, N1
 
 ---
 
+### [2026-07-28T10:01:50.638Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: OpenRent, London
+- **Location**: Greenwich Peninsula
+- **Property Name**: Tidemill Square, London, SE10
+- **ID**: 91072137
+- **Price**: £2250 PCM
+- **Size**: 50.07 sqm
+- **Listing Update**: 2026-07-19
+- **Listing Status**: Added on 19/07/2026
+- **Let Available**: 04/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/91072137](https://www.rightmove.co.uk/properties/91072137)
+
+---
+
 ### [2026-07-27T12:11:39.061Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Chase Evans, Canary Wharf
@@ -987,24 +1168,24 @@ Islington, N1
 - **Price**: £1900 PCM
 - **Size**: 50 sqm
 - **Listing Update**: 2026-07-27
-- **Listing Status**: Reduced today
+- **Listing Status**: Reduced yesterday
 - **Let Available**: 10/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90758457](https://www.rightmove.co.uk/properties/90758457)
 
 ---
 
-### [2026-07-23T15:01:57.269Z] MATCH FOUND!
+### [2026-07-28T10:01:50.638Z] MATCH FOUND!
 - **Platform**: Rightmove
-- **Marketed by**: Jack Rose Estates Ltd, Covering London
-- **Location**: E14
-- **Property Name**: Corson House, 157 City Island Way, London, E14
-- **ID**: 91251456
-- **Price**: £2350 PCM
+- **Marketed by**: Greenwich Peninsula, London
+- **Location**: Greenwich Peninsula
+- **Property Name**: No.4, Upper Riverside, Cutter Lane, Greenwich Peninsula, SE10
+- **ID**: 91064709
+- **Price**: £2300 PCM
 - **Size**: 50 sqm
-- **Listing Update**: 2026-07-23
-- **Listing Status**: Added on 23/07/2026
-- **Let Available**: 17/09/2026
-- **Link**: [https://www.rightmove.co.uk/properties/91251456](https://www.rightmove.co.uk/properties/91251456)
+- **Listing Update**: 2026-07-18
+- **Listing Status**: Added on 18/07/2026
+- **Let Available**: 14/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/91064709](https://www.rightmove.co.uk/properties/91064709)
 
 ---
 
@@ -1038,6 +1219,21 @@ Islington, N1
 
 ---
 
+### [2026-07-28T10:01:50.637Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: KARE ESTATES, London
+- **Location**: Greenwich Peninsula
+- **Property Name**: East Parkside, London
+- **ID**: 88746285
+- **Price**: £2600 PCM
+- **Size**: 50 sqm
+- **Listing Update**: 2026-05-22
+- **Listing Status**: Added on 22/05/2026
+- **Let Available**: Now (🦅 Early Bird: 67d adv)
+- **Link**: [https://www.rightmove.co.uk/properties/88746285](https://www.rightmove.co.uk/properties/88746285)
+
+---
+
 ### [2026-07-27T12:11:39.061Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Dexters, Canary Wharf
@@ -1047,7 +1243,7 @@ Islington, N1
 - **Price**: £1950 PCM
 - **Size**: 49.9 sqm
 - **Listing Update**: 2026-07-27
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/91348053](https://www.rightmove.co.uk/properties/91348053)
 
@@ -1065,6 +1261,21 @@ Islington, N1
 - **Listing Status**: Reduced on 24/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/89450421](https://www.rightmove.co.uk/properties/89450421)
+
+---
+
+### [2026-07-28T10:01:50.637Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Marc and Partners, Mayfair
+- **Location**: Greenwich Peninsula
+- **Property Name**: 8 Cutter Lane, London, SE10
+- **ID**: 91194480
+- **Price**: £2400 PCM
+- **Size**: 49 sqm
+- **Listing Update**: 2026-07-22
+- **Listing Status**: Added on 22/07/2026
+- **Let Available**: 28/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/91194480](https://www.rightmove.co.uk/properties/91194480)
 
 ---
 
@@ -1143,6 +1354,36 @@ Islington, N1
 
 ---
 
+### [2026-07-28T10:01:50.638Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: KARE ESTATES, London
+- **Location**: Greenwich Peninsula
+- **Property Name**: Pilot Walk, London
+- **ID**: 88746282
+- **Price**: £2050 PCM
+- **Size**: 47 sqm
+- **Listing Update**: 2026-05-22
+- **Listing Status**: Added on 22/05/2026
+- **Let Available**: Now (🦅 Early Bird: 67d adv)
+- **Link**: [https://www.rightmove.co.uk/properties/88746282](https://www.rightmove.co.uk/properties/88746282)
+
+---
+
+### [2026-07-28T10:01:50.638Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Greenwich Peninsula, London
+- **Location**: Greenwich Peninsula
+- **Property Name**: No.3, Upper Riverside, Cutter Lane, Greenwich Peninsula, SE10
+- **ID**: 88974378
+- **Price**: £2350 PCM
+- **Size**: 47 sqm
+- **Listing Update**: 2026-07-16
+- **Listing Status**: Reduced on 16/07/2026
+- **Let Available**: 30/07/2026
+- **Link**: [https://www.rightmove.co.uk/properties/88974378](https://www.rightmove.co.uk/properties/88974378)
+
+---
+
 ### [2026-07-27T12:11:39.061Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: ea2, Wapping
@@ -1152,7 +1393,7 @@ Islington, N1
 - **Price**: £2000 PCM
 - **Size**: 46.4 sqm
 - **Listing Update**: 2026-07-27
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/91336608](https://www.rightmove.co.uk/properties/91336608)
 
@@ -1197,7 +1438,7 @@ Islington, N1
 - **Price**: £1950 PCM
 - **Size**: 45 sqm
 - **Listing Update**: 2026-07-27
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: 22/10/2026 (🦅 Early Bird: 87d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/91360221](https://www.rightmove.co.uk/properties/91360221)
 
@@ -1212,9 +1453,24 @@ Islington, N1
 - **Price**: £2000 PCM
 - **Size**: 45 sqm
 - **Listing Update**: 2026-07-27
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: 01/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91335915](https://www.rightmove.co.uk/properties/91335915)
+
+---
+
+### [2026-07-28T10:01:50.637Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: David Astburys, Islington
+- **Location**: King's Cross (N1C)
+- **Property Name**: York Way, Kings Cross, London
+- **ID**: 91389849
+- **Price**: £1900 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-28
+- **Listing Status**: Added today
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/91389849](https://www.rightmove.co.uk/properties/91389849)
 
 ---
 
@@ -1263,6 +1519,21 @@ Islington, N1
 
 ---
 
+### [2026-07-28T10:01:50.638Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Dexters, Canary Wharf
+- **Location**: Greenwich Peninsula
+- **Property Name**: Cold Harbour, Canary Wharf
+- **ID**: 89187000
+- **Price**: £1950 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-06-18
+- **Listing Status**: Reduced on 18/06/2026
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/89187000](https://www.rightmove.co.uk/properties/89187000)
+
+---
+
 ### [2026-07-27T15:37:47.213Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Cranbrook Lettings and Sales, Ilford
@@ -1272,7 +1543,7 @@ Islington, N1
 - **Price**: £1950 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-27
-- **Listing Status**: Reduced today
+- **Listing Status**: Reduced yesterday
 - **Let Available**: 10/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91361472](https://www.rightmove.co.uk/properties/91361472)
 
@@ -1287,7 +1558,7 @@ Islington, N1
 - **Price**: £1950 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-27
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/91355868](https://www.rightmove.co.uk/properties/91355868)
 
@@ -1305,21 +1576,6 @@ Islington, N1
 - **Listing Status**: Added on 24/07/2026
 - **Let Available**: 17/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/142893674](https://www.rightmove.co.uk/properties/142893674)
-
----
-
-### [2026-07-18T21:42:40.343Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: OpenRent, London
-- **Location**: Canary Wharf
-- **Property Name**: Indescon Square, London, E14
-- **ID**: 91063539
-- **Price**: £1950 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-18
-- **Listing Status**: Added on 18/07/2026
-- **Let Available**: 01/08/2026
-- **Link**: [https://www.rightmove.co.uk/properties/91063539](https://www.rightmove.co.uk/properties/91063539)
 
 ---
 
@@ -1350,6 +1606,21 @@ Islington, N1
 - **Listing Status**: Reduced on 22/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90984615](https://www.rightmove.co.uk/properties/90984615)
+
+---
+
+### [2026-07-28T10:01:50.638Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Hamptons, Greenwich
+- **Location**: Greenwich Peninsula
+- **Property Name**: Greenwich Peninsula London SE10
+- **ID**: 90978555
+- **Price**: £2000 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-16
+- **Listing Status**: Added on 16/07/2026
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/90978555](https://www.rightmove.co.uk/properties/90978555)
 
 ---
 
@@ -1451,8 +1722,8 @@ Islington, N1
 - **ID**: 90860154
 - **Price**: £2000 PCM
 - **Size**: Unknown
-- **Listing Update**: 2026-07-14
-- **Listing Status**: Added on 14/07/2026
+- **Listing Update**: 2026-07-28
+- **Listing Status**: Reduced today
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90860154](https://www.rightmove.co.uk/properties/90860154)
 
@@ -1485,6 +1756,21 @@ Islington, N1
 - **Listing Status**: Reduced on 13/07/2026
 - **Let Available**: 26/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/89150535](https://www.rightmove.co.uk/properties/89150535)
+
+---
+
+### [2026-07-28T10:01:50.638Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: KARE ESTATES, London
+- **Location**: Greenwich Peninsula
+- **Property Name**: Peninsula Square, Greenwich, London
+- **ID**: 88746270
+- **Price**: £2100 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-05-22
+- **Listing Status**: Added on 22/05/2026
+- **Let Available**: Now (🦅 Early Bird: 67d adv)
+- **Link**: [https://www.rightmove.co.uk/properties/88746270](https://www.rightmove.co.uk/properties/88746270)
 
 ---
 
@@ -1587,9 +1873,24 @@ Islington, N1
 - **Price**: £2150 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-27
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/91371792](https://www.rightmove.co.uk/properties/91371792)
+
+---
+
+### [2026-07-28T10:01:50.637Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Marc and Partners, Mayfair
+- **Location**: Greenwich Peninsula
+- **Property Name**: 8 Cutter Lane, Greenwich, London, SE10
+- **ID**: 91215819
+- **Price**: £2200 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-23
+- **Listing Status**: Reduced on 23/07/2026
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/91215819](https://www.rightmove.co.uk/properties/91215819)
 
 ---
 
@@ -1602,7 +1903,7 @@ Islington, N1
 - **Price**: £2200 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-27
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: 06/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91362633](https://www.rightmove.co.uk/properties/91362633)
 
@@ -1678,7 +1979,7 @@ Islington, N1
 - **Price**: £2250 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-27
-- **Listing Status**: Added today
+- **Listing Status**: Added yesterday
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/91335786](https://www.rightmove.co.uk/properties/91335786)
 
@@ -1876,6 +2177,21 @@ Islington, N1
 - **Listing Status**: Added on 21/07/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/91158090](https://www.rightmove.co.uk/properties/91158090)
+
+---
+
+### [2026-07-28T10:01:50.637Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Felicity J Lord, Canary Wharf Lettings
+- **Location**: Canary Wharf (E14)
+- **Property Name**: Millharbour, London
+- **ID**: 84026238
+- **Price**: £2400 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-28
+- **Listing Status**: Added today
+- **Let Available**: 21/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/84026238](https://www.rightmove.co.uk/properties/84026238)
 
 ---
 
@@ -2149,6 +2465,21 @@ Islington, N1
 
 ---
 
+### [2026-07-28T10:01:50.638Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Savills Lettings, The Highline
+- **Location**: E14
+- **Property Name**: The Highline, 27 Radial Avenue
+- **ID**: 91394613
+- **Price**: £2550 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-28
+- **Listing Status**: Added today
+- **Let Available**: 15/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/91394613](https://www.rightmove.co.uk/properties/91394613)
+
+---
+
 ### [2026-07-16T19:01:12.986Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Life Residential, Canary Wharf Office
@@ -2176,6 +2507,36 @@ Islington, N1
 - **Listing Status**: Reduced on 17/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/87996273](https://www.rightmove.co.uk/properties/87996273)
+
+---
+
+### [2026-07-28T10:01:50.638Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: 1st Avenue, London
+- **Location**: Greenwich Peninsula
+- **Property Name**: Chandlers Avenue, London, SE10
+- **ID**: 90143529
+- **Price**: £2600 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-06-25
+- **Listing Status**: Added on 25/06/2026
+- **Let Available**: 10/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/90143529](https://www.rightmove.co.uk/properties/90143529)
+
+---
+
+### [2026-07-28T10:01:50.638Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: OpenRent, London
+- **Location**: Greenwich Peninsula
+- **Property Name**: Cutter Lane, London, SE10
+- **ID**: 89686530
+- **Price**: £2600 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-06-14
+- **Listing Status**: Added on 14/06/2026
+- **Let Available**: 24/08/2026 (🦅 Early Bird: 71d adv)
+- **Link**: [https://www.rightmove.co.uk/properties/89686530](https://www.rightmove.co.uk/properties/89686530)
 
 ---
 
@@ -2293,7 +2654,7 @@ Islington, N1
 - **Price**: £2700 PCM
 - **Size**: Unknown
 - **Listing Update**: 2026-07-27
-- **Listing Status**: Reduced today
+- **Listing Status**: Reduced yesterday
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/89859912](https://www.rightmove.co.uk/properties/89859912)
 
