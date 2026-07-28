@@ -38,7 +38,7 @@
 - **Size**: 102.19 sqm
 - **Listing Update**: 2026-05-19
 - **Listing Status**: Added on 19/05/2026
-- **Let Available**: Now (🦅 Early Bird: 70d adv)
+- **Let Available**: Now (🦅 Early Bird: 71d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/88658109](https://www.rightmove.co.uk/properties/88658109)
 
 ---
@@ -323,9 +323,9 @@ Millwall, E14
 - **ID**: 90884757
 - **Price**: £2150 PCM
 - **Size**: 73 sqm
-- **Listing Update**: 2026-07-14
-- **Listing Status**: Added on 14/07/2026
-- **Let Available**: Now
+- **Listing Update**: 2026-07-28
+- **Listing Status**: Reduced today
+- **Let Available**: 01/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90884757](https://www.rightmove.co.uk/properties/90884757)
 
 ---
@@ -503,8 +503,8 @@ Millwall, E14
 - **ID**: 91117716
 - **Price**: £2500 PCM
 - **Size**: 66.9 sqm
-- **Listing Update**: 2026-07-20
-- **Listing Status**: Added on 20/07/2026
+- **Listing Update**: 2026-07-28
+- **Listing Status**: Reduced today
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/91117716](https://www.rightmove.co.uk/properties/91117716)
 
@@ -548,9 +548,9 @@ Millwall, E14
 - **ID**: 89631849
 - **Price**: £2500 PCM
 - **Size**: 66 sqm
-- **Listing Update**: 2026-07-24
-- **Listing Status**: Reduced on 24/07/2026
-- **Let Available**: 03/08/2026
+- **Listing Update**: 2026-07-28
+- **Listing Status**: Reduced today
+- **Let Available**: 04/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/89631849](https://www.rightmove.co.uk/properties/89631849)
 
 ---
@@ -699,8 +699,8 @@ Millwall, E14
 - **ID**: 90954810
 - **Price**: £2250 PCM
 - **Size**: 61.2 sqm
-- **Listing Update**: 2026-07-16
-- **Listing Status**: Added on 16/07/2026
+- **Listing Update**: 2026-07-28
+- **Listing Status**: Reduced today
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90954810](https://www.rightmove.co.uk/properties/90954810)
 
@@ -852,7 +852,7 @@ Millwall, E14
 - **Size**: 58 sqm
 - **Listing Update**: 2026-05-22
 - **Listing Status**: Added on 22/05/2026
-- **Let Available**: Now (🦅 Early Bird: 67d adv)
+- **Let Available**: Now (🦅 Early Bird: 68d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/88746276](https://www.rightmove.co.uk/properties/88746276)
 
 ---
@@ -940,8 +940,8 @@ Millwall, E14
 - **ID**: 90807477
 - **Price**: £2150 PCM
 - **Size**: 55.74 sqm
-- **Listing Update**: 2026-07-16
-- **Listing Status**: Reduced on 16/07/2026
+- **Listing Update**: 2026-07-28
+- **Listing Status**: Reduced today
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90807477](https://www.rightmove.co.uk/properties/90807477)
 
@@ -1219,21 +1219,6 @@ Islington, N1
 
 ---
 
-### [2026-07-24T14:44:02.572Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: JLL, Canary Wharf
-- **Location**: E14
-- **Property Name**: Serapis House, Goodluck Hope Walk, E14
-- **ID**: 91289904
-- **Price**: £2430 PCM
-- **Size**: 50 sqm
-- **Listing Update**: 2026-07-24
-- **Listing Status**: Added on 24/07/2026
-- **Let Available**: 15/09/2026
-- **Link**: [https://www.rightmove.co.uk/properties/91289904](https://www.rightmove.co.uk/properties/91289904)
-
----
-
 ### [2026-07-23T10:59:16.472Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Dexters, Wapping
@@ -1259,7 +1244,7 @@ Islington, N1
 - **Size**: 50 sqm
 - **Listing Update**: 2026-05-22
 - **Listing Status**: Added on 22/05/2026
-- **Let Available**: Now (🦅 Early Bird: 67d adv)
+- **Let Available**: Now (🦅 Early Bird: 68d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/88746285](https://www.rightmove.co.uk/properties/88746285)
 
 ---
@@ -1394,7 +1379,7 @@ Islington, N1
 - **Size**: 47 sqm
 - **Listing Update**: 2026-05-22
 - **Listing Status**: Added on 22/05/2026
-- **Let Available**: Now (🦅 Early Bird: 67d adv)
+- **Let Available**: Now (🦅 Early Bird: 68d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/88746282](https://www.rightmove.co.uk/properties/88746282)
 
 ---
@@ -1815,7 +1800,7 @@ Angel, EC1V
 - **Size**: Unknown
 - **Listing Update**: 2026-05-22
 - **Listing Status**: Added on 22/05/2026
-- **Let Available**: Now (🦅 Early Bird: 67d adv)
+- **Let Available**: Now (🦅 Early Bird: 68d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/88746270](https://www.rightmove.co.uk/properties/88746270)
 
 ---
@@ -2191,7 +2176,7 @@ Angel, EC1V
 - **Size**: Unknown
 - **Listing Update**: 2026-05-19
 - **Listing Status**: Reduced on 19/05/2026
-- **Let Available**: Now (🦅 Early Bird: 70d adv)
+- **Let Available**: Now (🦅 Early Bird: 71d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/87805383](https://www.rightmove.co.uk/properties/87805383)
 
 ---
