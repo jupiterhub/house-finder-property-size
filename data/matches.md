@@ -660,22 +660,6 @@ Millwall, E14
 
 ---
 
-### [2026-07-22T19:18:01.173Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Chestertons, Islington
-- **Location**: King's Cross (N1C)
-- **Property Name**: Calshot Street, 
-Islington, N1
-- **ID**: 89583771
-- **Price**: £2100 PCM
-- **Size**: 54 sqm
-- **Listing Update**: 2026-07-10
-- **Listing Status**: Reduced on 10/07/2026
-- **Let Available**: 03/09/2026
-- **Link**: [https://www.rightmove.co.uk/properties/89583771](https://www.rightmove.co.uk/properties/89583771)
-
----
-
 ### [2026-07-14T16:44:34.270Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Winmac Properties, London
@@ -733,6 +717,21 @@ Islington, N1
 - **Listing Status**: Reduced on 24/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90981231](https://www.rightmove.co.uk/properties/90981231)
+
+---
+
+### [2026-07-29T18:03:09.985Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Dexters, Canary Wharf
+- **Location**: E14
+- **Property Name**: Thermopylae Gate, Canary Wharf
+- **ID**: 175040423
+- **Price**: £2100 PCM
+- **Size**: 52.2 sqm
+- **Listing Update**: 2026-07-29
+- **Listing Status**: Added today
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/175040423](https://www.rightmove.co.uk/properties/175040423)
 
 ---
 
@@ -823,6 +822,21 @@ Islington, N1
 - **Listing Status**: Added on 22/07/2026
 - **Let Available**: 10/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91190568](https://www.rightmove.co.uk/properties/91190568)
+
+---
+
+### [2026-07-29T18:03:09.985Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Metro Village Ltd, Canada Water
+- **Location**: E14
+- **Property Name**: Botanic Square, Canning Town, London, E14
+- **ID**: 175047173
+- **Price**: £2250 PCM
+- **Size**: 50.91 sqm
+- **Listing Update**: 2026-07-29
+- **Listing Status**: Added today
+- **Let Available**: 19/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/175047173](https://www.rightmove.co.uk/properties/175047173)
 
 ---
 
@@ -1183,6 +1197,21 @@ Islington, N1
 - **Listing Status**: Reduced on 02/07/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/173608733](https://www.rightmove.co.uk/properties/173608733)
+
+---
+
+### [2026-07-29T18:03:09.985Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Felicity J Lord, Canary Wharf Lettings
+- **Location**: E14
+- **Property Name**: Westferry Road, LONDON
+- **ID**: 91019583
+- **Price**: £1950 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-17
+- **Listing Status**: Added on 17/07/2026
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/91019583](https://www.rightmove.co.uk/properties/91019583)
 
 ---
 
