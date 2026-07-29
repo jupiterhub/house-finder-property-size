@@ -67,8 +67,8 @@
 - **ID**: 91391517
 - **Price**: £2500 PCM
 - **Size**: 78 sqm
-- **Listing Update**: 2026-07-28
-- **Listing Status**: Added yesterday
+- **Listing Update**: 2026-07-29
+- **Listing Status**: Reduced today
 - **Let Available**: 12/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91391517](https://www.rightmove.co.uk/properties/91391517)
 
@@ -206,21 +206,6 @@
 - **Listing Status**: Reduced on 20/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90089886](https://www.rightmove.co.uk/properties/90089886)
-
----
-
-### [2026-07-27T15:37:47.213Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Right Now Residential, London
-- **Location**: E14
-- **Property Name**: Quest House South, Escapade Place, Tower Hamlets, London
-- **ID**: 91362786
-- **Price**: £2300 PCM
-- **Size**: 69.68 sqm
-- **Listing Update**: 2026-07-27
-- **Listing Status**: Added on 27/07/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/91362786](https://www.rightmove.co.uk/properties/91362786)
 
 ---
 
@@ -387,21 +372,6 @@ Millwall, E14
 - **Listing Status**: Added on 26/07/2026
 - **Let Available**: 05/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91333113](https://www.rightmove.co.uk/properties/91333113)
-
----
-
-### [2026-07-24T20:56:22.854Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Way of Life - Balfron Tower, Balfron Tower
-- **Location**: E14
-- **Property Name**: Balfron Tower, 7 St Leonards Road, London, E14 0XU
-- **ID**: 91309059
-- **Price**: £2325 PCM
-- **Size**: 62 sqm
-- **Listing Update**: 2026-07-24
-- **Listing Status**: Added on 24/07/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/91309059](https://www.rightmove.co.uk/properties/91309059)
 
 ---
 
@@ -580,7 +550,7 @@ Millwall, E14
 - **Size**: 58 sqm
 - **Listing Update**: 2026-05-22
 - **Listing Status**: Added on 22/05/2026
-- **Let Available**: Now (🦅 Early Bird: 68d adv)
+- **Let Available**: Now (🦅 Early Bird: 69d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/88746276](https://www.rightmove.co.uk/properties/88746276)
 
 ---
@@ -721,22 +691,6 @@ Islington, N1
 
 ---
 
-### [2026-07-27T12:11:39.060Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Chestertons, Canary Wharf and Docklands
-- **Location**: Canary Wharf (E14)
-- **Property Name**: Landmark West Tower, 
-22 Marsh Wall, E14
-- **ID**: 91344669
-- **Price**: £2250 PCM
-- **Size**: 54 sqm
-- **Listing Update**: 2026-07-27
-- **Listing Status**: Added on 27/07/2026
-- **Let Available**: 23/09/2026
-- **Link**: [https://www.rightmove.co.uk/properties/91344669](https://www.rightmove.co.uk/properties/91344669)
-
----
-
 ### [2026-07-22T19:18:01.178Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Grange London, London
@@ -779,6 +733,21 @@ Islington, N1
 - **Listing Status**: Reduced on 24/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90981231](https://www.rightmove.co.uk/properties/90981231)
+
+---
+
+### [2026-07-29T15:04:52.037Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Regal Hampton Properties, London
+- **Location**: E14
+- **Property Name**: 9 Escapade Place, Canary Wharf, London, E14
+- **ID**: 175024667
+- **Price**: £2165 PCM
+- **Size**: 52 sqm
+- **Listing Update**: 2026-07-29
+- **Listing Status**: Added today
+- **Let Available**: 20/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/175024667](https://www.rightmove.co.uk/properties/175024667)
 
 ---
 
@@ -842,21 +811,6 @@ Islington, N1
 
 ---
 
-### [2026-07-28T20:58:06.899Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: JLL, Canary Wharf
-- **Location**: E14
-- **Property Name**: Caledonian Street London E14
-- **ID**: 91427955
-- **Price**: £2200 PCM
-- **Size**: 51 sqm
-- **Listing Update**: 2026-07-28
-- **Listing Status**: Added yesterday
-- **Let Available**: 10/08/2026
-- **Link**: [https://www.rightmove.co.uk/properties/91427955](https://www.rightmove.co.uk/properties/91427955)
-
----
-
 ### [2026-07-28T10:01:50.637Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Greenwich Peninsula, London
@@ -899,6 +853,21 @@ Islington, N1
 - **Listing Status**: Reduced on 27/07/2026
 - **Let Available**: 10/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90758457](https://www.rightmove.co.uk/properties/90758457)
+
+---
+
+### [2026-07-29T15:04:52.036Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: SJW property management limited, London
+- **Location**: Canary Wharf (E14)
+- **Property Name**: Williamsburg Plaza, Roosevelt Tower, E14
+- **ID**: 175023596
+- **Price**: £2250 PCM
+- **Size**: 50 sqm
+- **Listing Update**: 2026-07-29
+- **Listing Status**: Added today
+- **Let Available**: 12/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/175023596](https://www.rightmove.co.uk/properties/175023596)
 
 ---
 
@@ -1047,7 +1016,7 @@ Islington, N1
 - **Size**: 47 sqm
 - **Listing Update**: 2026-05-22
 - **Listing Status**: Added on 22/05/2026
-- **Let Available**: Now (🦅 Early Bird: 68d adv)
+- **Let Available**: Now (🦅 Early Bird: 69d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/88746282](https://www.rightmove.co.uk/properties/88746282)
 
 ---
@@ -1139,6 +1108,21 @@ Islington, N1
 - **Listing Status**: Added on 27/07/2026
 - **Let Available**: 01/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91335915](https://www.rightmove.co.uk/properties/91335915)
+
+---
+
+### [2026-07-29T15:04:52.036Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: OpenRent, London
+- **Location**: King's Cross (N1C)
+- **Property Name**: Russell Court, London, WC1H
+- **ID**: 90043791
+- **Price**: £1900 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-06-23
+- **Listing Status**: Added on 23/06/2026
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/90043791](https://www.rightmove.co.uk/properties/90043791)
 
 ---
 
@@ -1292,6 +1276,21 @@ Islington, N1
 
 ---
 
+### [2026-07-29T15:04:52.036Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Alliance London, London
+- **Location**: Canary Wharf (E14)
+- **Property Name**: Manilla Street, London, E14
+- **ID**: 175039109
+- **Price**: £2000 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-29
+- **Listing Status**: Added today
+- **Let Available**: 19/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/175039109](https://www.rightmove.co.uk/properties/175039109)
+
+---
+
 ### [2026-07-28T18:09:23.077Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Chestertons, Canary Wharf and Docklands
@@ -1361,8 +1360,8 @@ Islington, N1
 - **ID**: 91163577
 - **Price**: £2000 PCM
 - **Size**: Unknown
-- **Listing Update**: 2026-07-21
-- **Listing Status**: Added on 21/07/2026
+- **Listing Update**: 2026-07-29
+- **Listing Status**: Reduced today
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/91163577](https://www.rightmove.co.uk/properties/91163577)
 
@@ -1458,6 +1457,21 @@ Islington, N1
 
 ---
 
+### [2026-07-29T15:04:52.037Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Winsor Real Estate, London
+- **Location**: E14
+- **Property Name**: Douglas Tower, Goodluck Hope Walk, London, E14
+- **ID**: 166712138
+- **Price**: £2100 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-29
+- **Listing Status**: Added today
+- **Let Available**: 21/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/166712138](https://www.rightmove.co.uk/properties/166712138)
+
+---
+
 ### [2026-07-28T18:09:23.078Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Life Residential, Canary Wharf Office
@@ -1499,7 +1513,7 @@ Islington, N1
 - **Size**: Unknown
 - **Listing Update**: 2025-09-12
 - **Listing Status**: Added on 12/09/2025
-- **Let Available**: Now (🦅 Early Bird: 320d adv)
+- **Let Available**: Now (🦅 Early Bird: 321d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/166908254](https://www.rightmove.co.uk/properties/166908254)
 
 ---
@@ -1514,7 +1528,7 @@ Islington, N1
 - **Size**: Unknown
 - **Listing Update**: 2026-05-22
 - **Listing Status**: Added on 22/05/2026
-- **Let Available**: Now (🦅 Early Bird: 68d adv)
+- **Let Available**: Now (🦅 Early Bird: 69d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/88746270](https://www.rightmove.co.uk/properties/88746270)
 
 ---
@@ -1651,6 +1665,21 @@ Islington, N1
 - **Listing Status**: Added on 27/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/91371792](https://www.rightmove.co.uk/properties/91371792)
+
+---
+
+### [2026-07-29T15:04:52.037Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Winsor Real Estate, London
+- **Location**: E14
+- **Property Name**: Douglass Tower,9 Goodluck Hope Walk, London, E14
+- **ID**: 165505733
+- **Price**: £2199 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-29
+- **Listing Status**: Reduced today
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/165505733](https://www.rightmove.co.uk/properties/165505733)
 
 ---
 
@@ -1905,7 +1934,7 @@ Islington, N1
 - **Size**: Unknown
 - **Listing Update**: 2026-05-19
 - **Listing Status**: Reduced on 19/05/2026
-- **Let Available**: Now (🦅 Early Bird: 71d adv)
+- **Let Available**: Now (🦅 Early Bird: 72d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/87805383](https://www.rightmove.co.uk/properties/87805383)
 
 ---
@@ -2135,18 +2164,18 @@ Islington, N1
 
 ---
 
-### [2026-07-25T17:48:41.185Z] MATCH FOUND!
+### [2026-07-29T15:04:52.037Z] MATCH FOUND!
 - **Platform**: Rightmove
-- **Marketed by**: LAND ROYALE UK, London
-- **Location**: South Quay (E14)
-- **Property Name**: Heritage Tower, East Ferry Road, Tower Hamlets, London
-- **ID**: 91324503
-- **Price**: £2499 PCM
+- **Marketed by**: Hamptons, Canary Wharf
+- **Location**: E14
+- **Property Name**: Biscayne Avenue, E14
+- **ID**: 175014263
+- **Price**: £2500 PCM
 - **Size**: Unknown
-- **Listing Update**: 2026-07-25
-- **Listing Status**: Added on 25/07/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/91324503](https://www.rightmove.co.uk/properties/91324503)
+- **Listing Update**: 2026-07-29
+- **Listing Status**: Added today
+- **Let Available**: 06/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/175014263](https://www.rightmove.co.uk/properties/175014263)
 
 ---
 
