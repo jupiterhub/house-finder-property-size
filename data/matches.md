@@ -58,21 +58,6 @@
 
 ---
 
-### [2026-07-25T17:48:41.185Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: JBrown International, London
-- **Location**: South Quay (E14)
-- **Property Name**: Isle Of Dogs, Canary Wharf, London, E14
-- **ID**: 91324605
-- **Price**: £2300 PCM
-- **Size**: 83 sqm
-- **Listing Update**: 2026-07-25
-- **Listing Status**: Added on 25/07/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/91324605](https://www.rightmove.co.uk/properties/91324605)
-
----
-
 ### [2026-07-28T10:01:50.639Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Chestertons, Canary Wharf and Docklands
@@ -565,7 +550,7 @@ Millwall, E14
 - **Size**: 58 sqm
 - **Listing Update**: 2026-05-22
 - **Listing Status**: Added on 22/05/2026
-- **Let Available**: Now (🦅 Early Bird: 69d adv)
+- **Let Available**: Now (🦅 Early Bird: 70d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/88746276](https://www.rightmove.co.uk/properties/88746276)
 
 ---
@@ -975,21 +960,6 @@ Millwall, E14
 
 ---
 
-### [2026-07-28T10:01:50.637Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Marc and Partners, Mayfair
-- **Location**: Greenwich Peninsula
-- **Property Name**: 8 Cutter Lane, London, SE10
-- **ID**: 91194480
-- **Price**: £2400 PCM
-- **Size**: 49 sqm
-- **Listing Update**: 2026-07-22
-- **Listing Status**: Added on 22/07/2026
-- **Let Available**: 28/08/2026
-- **Link**: [https://www.rightmove.co.uk/properties/91194480](https://www.rightmove.co.uk/properties/91194480)
-
----
-
 ### [2026-07-22T19:18:01.178Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Kerr W Estates Ltd, Covering City
@@ -1060,7 +1030,7 @@ Millwall, E14
 - **Size**: 47 sqm
 - **Listing Update**: 2026-05-22
 - **Listing Status**: Added on 22/05/2026
-- **Let Available**: Now (🦅 Early Bird: 69d adv)
+- **Let Available**: Now (🦅 Early Bird: 70d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/88746282](https://www.rightmove.co.uk/properties/88746282)
 
 ---
@@ -1572,7 +1542,7 @@ Millwall, E14
 - **Size**: Unknown
 - **Listing Update**: 2025-09-12
 - **Listing Status**: Added on 12/09/2025
-- **Let Available**: Now (🦅 Early Bird: 321d adv)
+- **Let Available**: Now (🦅 Early Bird: 322d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/166908254](https://www.rightmove.co.uk/properties/166908254)
 
 ---
@@ -1587,23 +1557,8 @@ Millwall, E14
 - **Size**: Unknown
 - **Listing Update**: 2026-05-22
 - **Listing Status**: Added on 22/05/2026
-- **Let Available**: Now (🦅 Early Bird: 69d adv)
+- **Let Available**: Now (🦅 Early Bird: 70d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/88746270](https://www.rightmove.co.uk/properties/88746270)
-
----
-
-### [2026-07-25T20:41:05.410Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: CITY REALTOR LIMITED, London
-- **Location**: Wapping (London Dock - E1W)
-- **Property Name**: Lowood Street, London
-- **ID**: 91326258
-- **Price**: £2100 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-25
-- **Listing Status**: Added on 25/07/2026
-- **Let Available**: 25/09/2026
-- **Link**: [https://www.rightmove.co.uk/properties/91326258](https://www.rightmove.co.uk/properties/91326258)
 
 ---
 
@@ -1993,7 +1948,7 @@ Millwall, E14
 - **Size**: Unknown
 - **Listing Update**: 2026-05-19
 - **Listing Status**: Reduced on 19/05/2026
-- **Let Available**: Now (🦅 Early Bird: 72d adv)
+- **Let Available**: Now (🦅 Early Bird: 73d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/87805383](https://www.rightmove.co.uk/properties/87805383)
 
 ---
@@ -2156,8 +2111,8 @@ Millwall, E14
 - **ID**: 91185840
 - **Price**: £2450 PCM
 - **Size**: Unknown
-- **Listing Update**: 2026-07-22
-- **Listing Status**: Reduced on 22/07/2026
+- **Listing Update**: 2026-07-30
+- **Listing Status**: Reduced today
 - **Let Available**: 08/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91185840](https://www.rightmove.co.uk/properties/91185840)
 
@@ -2190,21 +2145,6 @@ Millwall, E14
 - **Listing Status**: Reduced on 19/07/2026
 - **Let Available**: 25/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/88846197](https://www.rightmove.co.uk/properties/88846197)
-
----
-
-### [2026-07-15T07:54:00.022Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: OpenRent, London
-- **Location**: South Quay
-- **Property Name**: Heritage Tower, London, E14
-- **ID**: 89566008
-- **Price**: £2450 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-15
-- **Listing Status**: Reduced on 15/07/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/89566008](https://www.rightmove.co.uk/properties/89566008)
 
 ---
 
