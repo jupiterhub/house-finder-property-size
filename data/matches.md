@@ -1,18 +1,3 @@
-### [2026-07-22T19:18:01.176Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: EweMove, Covering Greater London
-- **Location**: Wapping (London Dock - E1W)
-- **Property Name**: Compass House, 11 Raine Street, London, E1W
-- **ID**: 91133916
-- **Price**: £2250 PCM
-- **Size**: 490 sqm
-- **Listing Update**: 2026-07-21
-- **Listing Status**: Added on 21/07/2026
-- **Let Available**: 03/08/2026
-- **Link**: [https://www.rightmove.co.uk/properties/91133916](https://www.rightmove.co.uk/properties/91133916)
-
----
-
 ### [2026-07-24T20:56:22.854Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Let UK Home, Covering London
@@ -25,6 +10,36 @@
 - **Listing Status**: Reduced on 24/03/2026
 - **Let Available**: 01/10/2026 (🦅 Early Bird: 191d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/172513145](https://www.rightmove.co.uk/properties/172513145)
+
+---
+
+### [2026-07-30T10:58:50.048Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Chase Evans, Docklands
+- **Location**: E14
+- **Property Name**: Westferry Road, Isle Of Dogs, London, E14
+- **ID**: 90344070
+- **Price**: £2480 PCM
+- **Size**: 98 sqm
+- **Listing Update**: 2026-07-30
+- **Listing Status**: Reduced today
+- **Let Available**: 15/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/90344070](https://www.rightmove.co.uk/properties/90344070)
+
+---
+
+### [2026-07-30T10:58:50.047Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Felicity J Lord, Canary Wharf Lettings
+- **Location**: South Quay (E14)
+- **Property Name**: Manchester Road, London
+- **ID**: 95934524
+- **Price**: £2300 PCM
+- **Size**: 92.53 sqm
+- **Listing Update**: 2026-06-16
+- **Listing Status**: Added on 16/06/2026
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/95934524](https://www.rightmove.co.uk/properties/95934524)
 
 ---
 
@@ -354,7 +369,7 @@ Millwall, E14
 - **Price**: £2235 PCM
 - **Size**: 63 sqm
 - **Listing Update**: 2026-07-28
-- **Listing Status**: Added yesterday
+- **Listing Status**: Added on 28/07/2026
 - **Let Available**: 01/10/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91413591](https://www.rightmove.co.uk/properties/91413591)
 
@@ -507,6 +522,21 @@ Millwall, E14
 - **Listing Status**: Added on 27/07/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/91340157](https://www.rightmove.co.uk/properties/91340157)
+
+---
+
+### [2026-07-30T10:58:50.048Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Benham and Reeves - Canary Wharf, Canary Wharf
+- **Location**: E14
+- **Property Name**: Arniston Way, Tower Hamlets, E14
+- **ID**: 90651216
+- **Price**: £2350 PCM
+- **Size**: 58.25 sqm
+- **Listing Update**: 2026-07-30
+- **Listing Status**: Reduced today
+- **Let Available**: 02/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/90651216](https://www.rightmove.co.uk/properties/90651216)
 
 ---
 
@@ -762,6 +792,21 @@ Millwall, E14
 - **Listing Status**: Reduced yesterday
 - **Let Available**: 21/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/89437065](https://www.rightmove.co.uk/properties/89437065)
+
+---
+
+### [2026-07-30T10:58:50.047Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Nova Haus London, London
+- **Location**: King's Cross (N1C)
+- **Property Name**: Northdown Street, London, N1
+- **ID**: 175060316
+- **Price**: £2450 PCM
+- **Size**: 52 sqm
+- **Listing Update**: 2026-07-30
+- **Listing Status**: Added today
+- **Let Available**: 15/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/175060316](https://www.rightmove.co.uk/properties/175060316)
 
 ---
 
@@ -1110,6 +1155,21 @@ Millwall, E14
 
 ---
 
+### [2026-07-30T10:58:50.048Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Node Living, Limehouse
+- **Location**: E14
+- **Property Name**: Commercial Road, London, E14
+- **ID**: 90681108
+- **Price**: £1900 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-09
+- **Listing Status**: Added on 09/07/2026
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/90681108](https://www.rightmove.co.uk/properties/90681108)
+
+---
+
 ### [2026-07-29T15:04:52.036Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: OpenRent, London
@@ -1167,21 +1227,6 @@ Millwall, E14
 - **Listing Status**: Added on 24/07/2026
 - **Let Available**: 12/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91290375](https://www.rightmove.co.uk/properties/91290375)
-
----
-
-### [2026-07-23T18:08:23.178Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Daniel Ford, Kings Cross
-- **Location**: King's Cross (N1C)
-- **Property Name**: Argyle Square
-- **ID**: 173608733
-- **Price**: £1900 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-02
-- **Listing Status**: Reduced on 02/07/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/173608733](https://www.rightmove.co.uk/properties/173608733)
 
 ---
 
@@ -1290,6 +1335,21 @@ Millwall, E14
 
 ---
 
+### [2026-07-30T10:58:50.047Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Frank Harris and Co
+- **Location**: King's Cross (N1C)
+- **Property Name**: Thanet Street, Rashleigh House
+- **ID**: 89286690
+- **Price**: £2000 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-06-23
+- **Listing Status**: Reduced on 23/06/2026
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/89286690](https://www.rightmove.co.uk/properties/89286690)
+
+---
+
 ### [2026-07-29T15:04:52.036Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Alliance London, London
@@ -1393,21 +1453,6 @@ Millwall, E14
 - **Listing Status**: Added on 13/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90804291](https://www.rightmove.co.uk/properties/90804291)
-
----
-
-### [2026-07-18T21:42:40.343Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: John D Wood and Co, Docklands and City
-- **Location**: South Quay
-- **Property Name**: Baltimore Wharf, London, E14
-- **ID**: 91064367
-- **Price**: £2000 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-18
-- **Listing Status**: Added on 18/07/2026
-- **Let Available**: 01/09/2026
-- **Link**: [https://www.rightmove.co.uk/properties/91064367](https://www.rightmove.co.uk/properties/91064367)
 
 ---
 
@@ -1931,8 +1976,8 @@ Millwall, E14
 - **ID**: 91079727
 - **Price**: £2300 PCM
 - **Size**: Unknown
-- **Listing Update**: 2026-07-20
-- **Listing Status**: Added on 20/07/2026
+- **Listing Update**: 2026-07-30
+- **Listing Status**: Reduced today
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/91079727](https://www.rightmove.co.uk/properties/91079727)
 
