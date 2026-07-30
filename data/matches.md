@@ -1496,7 +1496,7 @@ Millwall, E14
 - **Size**: Unknown
 - **Listing Update**: 2026-07-13
 - **Listing Status**: Reduced on 13/07/2026
-- **Let Available**: 26/08/2026
+- **Let Available**: 24/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/89150535](https://www.rightmove.co.uk/properties/89150535)
 
 ---
