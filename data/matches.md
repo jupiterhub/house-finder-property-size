@@ -43,6 +43,21 @@
 
 ---
 
+### [2026-07-30T17:35:24.613Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Stepney Marsh, London
+- **Location**: E14
+- **Property Name**: Shackleton Court, Maritime Quay, Isle of Dogs, London, E14 3QF
+- **ID**: 89537304
+- **Price**: £2350 PCM
+- **Size**: 88.04 sqm
+- **Listing Update**: 2026-07-30
+- **Listing Status**: Reduced today
+- **Let Available**: 17/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/89537304](https://www.rightmove.co.uk/properties/89537304)
+
+---
+
 ### [2026-07-17T21:44:52.812Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Dexters, Canary Wharf
@@ -191,6 +206,21 @@
 - **Listing Status**: Reduced on 24/07/2026
 - **Let Available**: 12/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/89744391](https://www.rightmove.co.uk/properties/89744391)
+
+---
+
+### [2026-07-30T17:35:24.612Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: OpenRent, London
+- **Location**: Greenwich Peninsula
+- **Property Name**: Chandlers Avenue, London, SE10
+- **ID**: 91436121
+- **Price**: £2450 PCM
+- **Size**: 71.26 sqm
+- **Listing Update**: 2026-07-30
+- **Listing Status**: Reduced today
+- **Let Available**: 03/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/91436121](https://www.rightmove.co.uk/properties/91436121)
 
 ---
 
@@ -597,21 +627,6 @@ Millwall, E14
 - **Listing Status**: Reduced on 28/07/2026
 - **Let Available**: 31/07/2026
 - **Link**: [https://www.rightmove.co.uk/properties/90551667](https://www.rightmove.co.uk/properties/90551667)
-
----
-
-### [2026-07-28T11:09:58.217Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Greenwich Peninsula, London
-- **Location**: Greenwich Peninsula
-- **Property Name**: No.2, Upper Riverside, Cutter Lane, Greenwich Peninsula, SE10
-- **ID**: 88946391
-- **Price**: £2450 PCM
-- **Size**: 56 sqm
-- **Listing Update**: 2026-07-28
-- **Listing Status**: Added on 28/07/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/88946391](https://www.rightmove.co.uk/properties/88946391)
 
 ---
 
@@ -1486,6 +1501,21 @@ Millwall, E14
 
 ---
 
+### [2026-07-30T17:35:24.613Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Savills Lettings, The Highline
+- **Location**: E14
+- **Property Name**: The Highline, 27 Radial Avenue
+- **ID**: 91446348
+- **Price**: £2100 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-30
+- **Listing Status**: Added today
+- **Let Available**: 04/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/91446348](https://www.rightmove.co.uk/properties/91446348)
+
+---
+
 ### [2026-07-29T15:04:52.037Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Winsor Real Estate, London
@@ -1697,6 +1727,36 @@ Millwall, E14
 
 ---
 
+### [2026-07-30T17:35:24.613Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Iconia London, Canary Wharf
+- **Location**: E14
+- **Property Name**: Chadbourn Street, London, E14
+- **ID**: 142383071
+- **Price**: £2200 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-30
+- **Listing Status**: Added today
+- **Let Available**: 03/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/142383071](https://www.rightmove.co.uk/properties/142383071)
+
+---
+
+### [2026-07-30T17:35:24.612Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Life Residential, Canary Wharf Office
+- **Location**: Canary Wharf (E14)
+- **Property Name**: Millharbour, Canary Wharf
+- **ID**: 91459026
+- **Price**: £2200 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-30
+- **Listing Status**: Added today
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/91459026](https://www.rightmove.co.uk/properties/91459026)
+
+---
+
 ### [2026-07-28T10:01:50.637Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Marc and Partners, Mayfair
@@ -1781,8 +1841,8 @@ Millwall, E14
 - **ID**: 91155174
 - **Price**: £2250 PCM
 - **Size**: Unknown
-- **Listing Update**: 2026-07-21
-- **Listing Status**: Added on 21/07/2026
+- **Listing Update**: 2026-07-30
+- **Listing Status**: Reduced today
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/91155174](https://www.rightmove.co.uk/properties/91155174)
 
@@ -1950,6 +2010,21 @@ Millwall, E14
 - **Listing Status**: Reduced on 19/05/2026
 - **Let Available**: Now (🦅 Early Bird: 73d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/87805383](https://www.rightmove.co.uk/properties/87805383)
+
+---
+
+### [2026-07-30T17:35:24.613Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Felicity J Lord, Canary Wharf Lettings
+- **Location**: E14
+- **Property Name**: Botanic Square, London
+- **ID**: 90961035
+- **Price**: £2350 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-30
+- **Listing Status**: Reduced today
+- **Let Available**: 28/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/90961035](https://www.rightmove.co.uk/properties/90961035)
 
 ---
 
