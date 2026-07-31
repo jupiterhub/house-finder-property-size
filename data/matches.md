@@ -134,21 +134,6 @@
 
 ---
 
-### [2026-07-28T18:09:23.078Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: gLocalAgents
-- **Location**: E14
-- **Property Name**: Lamington Heights, London, E14
-- **ID**: 90673011
-- **Price**: £2495 PCM
-- **Size**: 74.97 sqm
-- **Listing Update**: 2026-07-28
-- **Listing Status**: Reduced on 28/07/2026
-- **Let Available**: 15/08/2026
-- **Link**: [https://www.rightmove.co.uk/properties/90673011](https://www.rightmove.co.uk/properties/90673011)
-
----
-
 ### [2026-07-23T10:59:16.471Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Visum, Nationwide
@@ -206,6 +191,21 @@
 - **Listing Status**: Reduced on 20/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90089886](https://www.rightmove.co.uk/properties/90089886)
+
+---
+
+### [2026-07-31T18:17:03.158Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Right Now Residential, London
+- **Location**: E14
+- **Property Name**: Quest House South, Escapade Place, Tower Hamlets, London
+- **ID**: 91507185
+- **Price**: £2300 PCM
+- **Size**: 69.68 sqm
+- **Listing Update**: 2026-07-31
+- **Listing Status**: Added today
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/91507185](https://www.rightmove.co.uk/properties/91507185)
 
 ---
 
@@ -570,21 +570,6 @@ Millwall, E14
 
 ---
 
-### [2026-07-28T10:01:50.639Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Keatons, Bow
-- **Location**: E14
-- **Property Name**: Old School Square, London, E14
-- **ID**: 90707043
-- **Price**: £1900 PCM
-- **Size**: 57 sqm
-- **Listing Update**: 2026-07-28
-- **Listing Status**: Reduced on 28/07/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/90707043](https://www.rightmove.co.uk/properties/90707043)
-
----
-
 ### [2026-07-28T20:58:06.899Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Ashley King, Docklands
@@ -627,6 +612,21 @@ Millwall, E14
 - **Listing Status**: Reduced on 28/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90807477](https://www.rightmove.co.uk/properties/90807477)
+
+---
+
+### [2026-07-31T18:17:03.159Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Coopers, London
+- **Location**: E14
+- **Property Name**: Westferry Road, London
+- **ID**: 91498842
+- **Price**: £2000 PCM
+- **Size**: 55 sqm
+- **Listing Update**: 2026-07-31
+- **Listing Status**: Added today
+- **Let Available**: 03/10/2026
+- **Link**: [https://www.rightmove.co.uk/properties/91498842](https://www.rightmove.co.uk/properties/91498842)
 
 ---
 
@@ -702,6 +702,21 @@ Millwall, E14
 - **Listing Status**: Reduced on 24/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90981231](https://www.rightmove.co.uk/properties/90981231)
+
+---
+
+### [2026-07-31T18:17:03.158Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Hello Neighbour, London
+- **Location**: Canary Wharf (E14)
+- **Property Name**: Millharbour, London, E14
+- **ID**: 91517268
+- **Price**: £2350 PCM
+- **Size**: 53 sqm
+- **Listing Update**: 2026-07-31
+- **Listing Status**: Added today
+- **Let Available**: 03/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/91517268](https://www.rightmove.co.uk/properties/91517268)
 
 ---
 
