@@ -247,8 +247,8 @@
 - **ID**: 149573198
 - **Price**: £2400 PCM
 - **Size**: 69.5 sqm
-- **Listing Update**: 2026-07-22
-- **Listing Status**: Reduced on 22/07/2026
+- **Listing Update**: 2026-07-31
+- **Listing Status**: Reduced today
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/149573198](https://www.rightmove.co.uk/properties/149573198)
 
@@ -915,6 +915,21 @@ Millwall, E14
 
 ---
 
+### [2026-07-31T11:17:34.185Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Docklands Prestige Residential, London
+- **Location**: Canary Wharf (E14)
+- **Property Name**: Landmark East Tower, 24 Marsh Wall, London, E14 9EG
+- **ID**: 91488933
+- **Price**: £2500 PCM
+- **Size**: 50 sqm
+- **Listing Update**: 2026-07-31
+- **Listing Status**: Added today
+- **Let Available**: 12/10/2026 (🦅 Early Bird: 73d adv)
+- **Link**: [https://www.rightmove.co.uk/properties/91488933](https://www.rightmove.co.uk/properties/91488933)
+
+---
+
 ### [2026-07-23T10:59:16.472Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Dexters, Wapping
@@ -1022,21 +1037,6 @@ Millwall, E14
 
 ### [2026-07-28T10:01:50.638Z] MATCH FOUND!
 - **Platform**: Rightmove
-- **Marketed by**: KARE ESTATES, London
-- **Location**: Greenwich Peninsula
-- **Property Name**: Pilot Walk, London
-- **ID**: 88746282
-- **Price**: £2050 PCM
-- **Size**: 47 sqm
-- **Listing Update**: 2026-05-22
-- **Listing Status**: Added on 22/05/2026
-- **Let Available**: Now (🦅 Early Bird: 70d adv)
-- **Link**: [https://www.rightmove.co.uk/properties/88746282](https://www.rightmove.co.uk/properties/88746282)
-
----
-
-### [2026-07-28T10:01:50.638Z] MATCH FOUND!
-- **Platform**: Rightmove
 - **Marketed by**: Greenwich Peninsula, London
 - **Location**: Greenwich Peninsula
 - **Property Name**: No.3, Upper Riverside, Cutter Lane, Greenwich Peninsula, SE10
@@ -1080,6 +1080,21 @@ Millwall, E14
 
 ---
 
+### [2026-07-31T11:17:34.186Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: OpenRent, London
+- **Location**: EC1V
+- **Property Name**: City Road, London, EC1V
+- **ID**: 91483983
+- **Price**: £2150 PCM
+- **Size**: 45.43 sqm
+- **Listing Update**: 2026-07-22
+- **Listing Status**: Added on 22/07/2026
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/91483983](https://www.rightmove.co.uk/properties/91483983)
+
+---
+
 ### [2026-07-22T19:18:01.178Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Stirling Ackroyd Lettings, Canary Wharf
@@ -1107,21 +1122,6 @@ Millwall, E14
 - **Listing Status**: Added on 27/07/2026
 - **Let Available**: 22/10/2026 (🦅 Early Bird: 87d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/91360221](https://www.rightmove.co.uk/properties/91360221)
-
----
-
-### [2026-07-27T12:11:39.061Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Knight Frank - Lettings, Wapping
-- **Location**: Wapping (London Dock - E1W)
-- **Property Name**: King Charles Terrace, Sovereign Court, Wapping, London E1W.
-- **ID**: 91335915
-- **Price**: £2000 PCM
-- **Size**: 45 sqm
-- **Listing Update**: 2026-07-27
-- **Listing Status**: Added on 27/07/2026
-- **Let Available**: 01/09/2026
-- **Link**: [https://www.rightmove.co.uk/properties/91335915](https://www.rightmove.co.uk/properties/91335915)
 
 ---
 
@@ -1486,6 +1486,36 @@ Millwall, E14
 
 ---
 
+### [2026-07-31T11:17:34.185Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: MoveHome, London
+- **Location**: King's Cross (N1C)
+- **Property Name**: Pentonville Road, Islington, London
+- **ID**: 91488531
+- **Price**: £2100 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-31
+- **Listing Status**: Added today
+- **Let Available**: 21/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/91488531](https://www.rightmove.co.uk/properties/91488531)
+
+---
+
+### [2026-07-31T11:17:34.185Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: MoveHome, London
+- **Location**: King's Cross (N1C)
+- **Property Name**: Flat D, Northdown Street, Islington, London
+- **ID**: 91487679
+- **Price**: £2100 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-07-31
+- **Listing Status**: Added today
+- **Let Available**: 10/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/91487679](https://www.rightmove.co.uk/properties/91487679)
+
+---
+
 ### [2026-07-30T17:35:24.613Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Savills Lettings, The Highline
@@ -1559,21 +1589,6 @@ Millwall, E14
 - **Listing Status**: Added on 12/09/2025
 - **Let Available**: Now (🦅 Early Bird: 322d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/166908254](https://www.rightmove.co.uk/properties/166908254)
-
----
-
-### [2026-07-28T10:01:50.638Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: KARE ESTATES, London
-- **Location**: Greenwich Peninsula
-- **Property Name**: Peninsula Square, Greenwich, London
-- **ID**: 88746270
-- **Price**: £2100 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-05-22
-- **Listing Status**: Added on 22/05/2026
-- **Let Available**: Now (🦅 Early Bird: 70d adv)
-- **Link**: [https://www.rightmove.co.uk/properties/88746270](https://www.rightmove.co.uk/properties/88746270)
 
 ---
 
