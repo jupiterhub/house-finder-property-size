@@ -104,21 +104,6 @@
 
 ---
 
-### [2026-07-23T15:01:57.269Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: ENS Property Group Ltd, London
-- **Location**: E14
-- **Property Name**: 7 Branch Road, London E14 7JX
-- **ID**: 90029532
-- **Price**: £2400 PCM
-- **Size**: 76.92 sqm
-- **Listing Update**: 2026-07-23
-- **Listing Status**: Reduced on 23/07/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/90029532](https://www.rightmove.co.uk/properties/90029532)
-
----
-
 ### [2026-07-13T19:40:09.467Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: David Andrew, Highbury
@@ -176,21 +161,6 @@
 - **Listing Status**: Reduced on 23/07/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/89549856](https://www.rightmove.co.uk/properties/89549856)
-
----
-
-### [2026-07-14T22:07:39.689Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Fisks Ltd, London
-- **Location**: Canary Wharf
-- **Property Name**: Garford Street, Wesferry Road, London
-- **ID**: 90884757
-- **Price**: £2150 PCM
-- **Size**: 73 sqm
-- **Listing Update**: 2026-07-28
-- **Listing Status**: Reduced on 28/07/2026
-- **Let Available**: 01/08/2026
-- **Link**: [https://www.rightmove.co.uk/properties/90884757](https://www.rightmove.co.uk/properties/90884757)
 
 ---
 
@@ -580,7 +550,7 @@ Millwall, E14
 - **Size**: 58 sqm
 - **Listing Update**: 2026-05-22
 - **Listing Status**: Added on 22/05/2026
-- **Let Available**: Now (🦅 Early Bird: 70d adv)
+- **Let Available**: Now (🦅 Early Bird: 71d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/88746276](https://www.rightmove.co.uk/properties/88746276)
 
 ---
@@ -1335,37 +1305,6 @@ Millwall, E14
 
 ---
 
-### [2026-07-28T18:09:23.077Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Chestertons, Canary Wharf and Docklands
-- **Location**: E14
-- **Property Name**: New Providence Wharf, 
-1 Fairmont Avenue, E14
-- **ID**: 91419681
-- **Price**: £2000 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-28
-- **Listing Status**: Added on 28/07/2026
-- **Let Available**: 14/08/2026
-- **Link**: [https://www.rightmove.co.uk/properties/91419681](https://www.rightmove.co.uk/properties/91419681)
-
----
-
-### [2026-07-28T10:01:50.638Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Hamptons, Greenwich
-- **Location**: Greenwich Peninsula
-- **Property Name**: Greenwich Peninsula London SE10
-- **ID**: 90978555
-- **Price**: £2000 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-16
-- **Listing Status**: Added on 16/07/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/90978555](https://www.rightmove.co.uk/properties/90978555)
-
----
-
 ### [2026-07-23T15:01:57.268Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Houst, London
@@ -1490,21 +1429,6 @@ Millwall, E14
 - **Platform**: Rightmove
 - **Marketed by**: MoveHome, London
 - **Location**: King's Cross (N1C)
-- **Property Name**: Pentonville Road, Islington, London
-- **ID**: 91488531
-- **Price**: £2100 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-31
-- **Listing Status**: Added today
-- **Let Available**: 21/09/2026
-- **Link**: [https://www.rightmove.co.uk/properties/91488531](https://www.rightmove.co.uk/properties/91488531)
-
----
-
-### [2026-07-31T11:17:34.185Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: MoveHome, London
-- **Location**: King's Cross (N1C)
 - **Property Name**: Flat D, Northdown Street, Islington, London
 - **ID**: 91487679
 - **Price**: £2100 PCM
@@ -1587,7 +1511,7 @@ Millwall, E14
 - **Size**: Unknown
 - **Listing Update**: 2025-09-12
 - **Listing Status**: Added on 12/09/2025
-- **Let Available**: Now (🦅 Early Bird: 322d adv)
+- **Let Available**: Now (🦅 Early Bird: 323d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/166908254](https://www.rightmove.co.uk/properties/166908254)
 
 ---
@@ -1754,21 +1678,6 @@ Millwall, E14
 - **Listing Status**: Added yesterday
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/91459026](https://www.rightmove.co.uk/properties/91459026)
-
----
-
-### [2026-07-28T10:01:50.637Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Marc and Partners, Mayfair
-- **Location**: Greenwich Peninsula
-- **Property Name**: 8 Cutter Lane, Greenwich, London, SE10
-- **ID**: 91215819
-- **Price**: £2200 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-23
-- **Listing Status**: Reduced on 23/07/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/91215819](https://www.rightmove.co.uk/properties/91215819)
 
 ---
 
@@ -1953,21 +1862,6 @@ Millwall, E14
 
 ---
 
-### [2026-07-22T19:18:01.172Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: David Astburys, Islington
-- **Location**: King's Cross (N1C)
-- **Property Name**: Judd Street, Bloomsbury, London
-- **ID**: 90795330
-- **Price**: £2300 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-28
-- **Listing Status**: Reduced on 28/07/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/90795330](https://www.rightmove.co.uk/properties/90795330)
-
----
-
 ### [2026-07-21T18:07:32.406Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Ernest Brooks International, Canary Wharf
@@ -2008,7 +1902,7 @@ Millwall, E14
 - **Size**: Unknown
 - **Listing Update**: 2026-05-19
 - **Listing Status**: Reduced on 19/05/2026
-- **Let Available**: Now (🦅 Early Bird: 73d adv)
+- **Let Available**: Now (🦅 Early Bird: 74d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/87805383](https://www.rightmove.co.uk/properties/87805383)
 
 ---
@@ -2171,8 +2065,8 @@ Millwall, E14
 - **ID**: 89831655
 - **Price**: £2400 PCM
 - **Size**: Unknown
-- **Listing Update**: 2026-07-13
-- **Listing Status**: Reduced on 13/07/2026
+- **Listing Update**: 2026-07-31
+- **Listing Status**: Reduced today
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/89831655](https://www.rightmove.co.uk/properties/89831655)
 
@@ -2182,7 +2076,7 @@ Millwall, E14
 - **Platform**: Rightmove
 - **Marketed by**: Waterfronts, London
 - **Location**: Canary Wharf (E14)
-- **Property Name**: Lincoln Plaza, London, E14
+- **Property Name**: Duckman Tower, Lincoln Plaza, London, E14
 - **ID**: 91477893
 - **Price**: £2450 PCM
 - **Size**: Unknown
