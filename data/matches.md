@@ -329,6 +329,21 @@
 
 ---
 
+### [2026-07-31T20:52:26.969Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Way of Life - Balfron Tower, Balfron Tower
+- **Location**: E14
+- **Property Name**: Balfron Tower, 7 St Leonards Road, London, E14 0UY
+- **ID**: 91519749
+- **Price**: £2415 PCM
+- **Size**: 64 sqm
+- **Listing Update**: 2026-07-31
+- **Listing Status**: Added today
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/91519749](https://www.rightmove.co.uk/properties/91519749)
+
+---
+
 ### [2026-07-14T16:44:34.270Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Chestertons, Canary Wharf and Docklands
@@ -1002,6 +1017,21 @@ Millwall, E14
 - **Listing Status**: Added on 22/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/91218207](https://www.rightmove.co.uk/properties/91218207)
+
+---
+
+### [2026-07-31T20:52:26.969Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Inspired Real Estate, London
+- **Location**: E14
+- **Property Name**: Commercial Road, E14 7JR
+- **ID**: 91519443
+- **Price**: £2200 PCM
+- **Size**: 47.38 sqm
+- **Listing Update**: 2026-07-31
+- **Listing Status**: Added today
+- **Let Available**: 01/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/91519443](https://www.rightmove.co.uk/properties/91519443)
 
 ---
 
