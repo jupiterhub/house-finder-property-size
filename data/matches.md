@@ -299,6 +299,21 @@
 
 ---
 
+### [2026-08-01T14:21:55.771Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Felicity J Lord, Canary Wharf Lettings
+- **Location**: E14
+- **Property Name**: Ashton Street, LONDON
+- **ID**: 91534083
+- **Price**: £1900 PCM
+- **Size**: 64.1 sqm
+- **Listing Update**: 2026-08-01
+- **Listing Status**: Added today
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/91534083](https://www.rightmove.co.uk/properties/91534083)
+
+---
+
 ### [2026-07-31T20:52:26.969Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Way of Life - Balfron Tower, Balfron Tower
@@ -402,6 +417,21 @@ Millwall, E14
 - **Listing Status**: Reduced on 28/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90954810](https://www.rightmove.co.uk/properties/90954810)
+
+---
+
+### [2026-08-01T14:21:55.771Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Romans and Partners, London
+- **Location**: E14
+- **Property Name**: Elite House, Limehouse, E14
+- **ID**: 91529673
+- **Price**: £2400 PCM
+- **Size**: 61 sqm
+- **Listing Update**: 2026-08-01
+- **Listing Status**: Added today
+- **Let Available**: 25/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/91529673](https://www.rightmove.co.uk/properties/91529673)
 
 ---
 
@@ -535,7 +565,7 @@ Millwall, E14
 - **Size**: 58 sqm
 - **Listing Update**: 2026-05-22
 - **Listing Status**: Added on 22/05/2026
-- **Let Available**: Now (🦅 Early Bird: 71d adv)
+- **Let Available**: Now (🦅 Early Bird: 72d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/88746276](https://www.rightmove.co.uk/properties/88746276)
 
 ---
@@ -687,6 +717,21 @@ Millwall, E14
 - **Listing Status**: Reduced on 24/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90981231](https://www.rightmove.co.uk/properties/90981231)
+
+---
+
+### [2026-08-01T14:21:55.770Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Romans and Partners, London
+- **Location**: Greenwich Peninsula
+- **Property Name**: Bella House, North Greenwich, SE10
+- **ID**: 91529736
+- **Price**: £2250 PCM
+- **Size**: 53 sqm
+- **Listing Update**: 2026-08-01
+- **Listing Status**: Added today
+- **Let Available**: 22/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/91529736](https://www.rightmove.co.uk/properties/91529736)
 
 ---
 
@@ -1526,7 +1571,7 @@ Millwall, E14
 - **Size**: Unknown
 - **Listing Update**: 2025-09-12
 - **Listing Status**: Added on 12/09/2025
-- **Let Available**: Now (🦅 Early Bird: 323d adv)
+- **Let Available**: Now (🦅 Early Bird: 324d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/166908254](https://www.rightmove.co.uk/properties/166908254)
 
 ---
@@ -1633,6 +1678,21 @@ Millwall, E14
 - **Listing Status**: Added on 25/06/2026
 - **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/90148128](https://www.rightmove.co.uk/properties/90148128)
+
+---
+
+### [2026-08-01T14:21:55.771Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Felicity J Lord, Canary Wharf Lettings
+- **Location**: E14
+- **Property Name**: Glengarnock Avenue, LONDON
+- **ID**: 91534245
+- **Price**: £2150 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-08-01
+- **Listing Status**: Added today
+- **Let Available**: 30/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/91534245](https://www.rightmove.co.uk/properties/91534245)
 
 ---
 
@@ -1917,7 +1977,7 @@ Millwall, E14
 - **Size**: Unknown
 - **Listing Update**: 2026-05-19
 - **Listing Status**: Reduced on 19/05/2026
-- **Let Available**: Now (🦅 Early Bird: 74d adv)
+- **Let Available**: Now (🦅 Early Bird: 75d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/87805383](https://www.rightmove.co.uk/properties/87805383)
 
 ---
