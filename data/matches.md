@@ -284,21 +284,6 @@
 
 ---
 
-### [2026-07-24T14:44:02.571Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Propertymade Residential, London
-- **Location**: E14
-- **Property Name**: Handlebury House, Leamouth Road, London, E14
-- **ID**: 89631849
-- **Price**: £2500 PCM
-- **Size**: 66 sqm
-- **Listing Update**: 2026-07-28
-- **Listing Status**: Reduced on 28/07/2026
-- **Let Available**: 04/08/2026
-- **Link**: [https://www.rightmove.co.uk/properties/89631849](https://www.rightmove.co.uk/properties/89631849)
-
----
-
 ### [2026-07-24T10:55:24.202Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Dexters, Wapping
@@ -1125,6 +1110,21 @@ Millwall, E14
 
 ---
 
+### [2026-08-01T10:27:07.580Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Felicity J Lord, Canary Wharf Lettings
+- **Location**: E14
+- **Property Name**: Manchester Road, London
+- **ID**: 89714229
+- **Price**: £1900 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-06-15
+- **Listing Status**: Added on 15/06/2026
+- **Let Available**: 17/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/89714229](https://www.rightmove.co.uk/properties/89714229)
+
+---
+
 ### [2026-07-30T10:58:50.048Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Node Living, Limehouse
@@ -1435,7 +1435,7 @@ Millwall, E14
 - **Size**: Unknown
 - **Listing Update**: 2026-07-13
 - **Listing Status**: Reduced on 13/07/2026
-- **Let Available**: 24/08/2026
+- **Let Available**: 10/09/2026
 - **Link**: [https://www.rightmove.co.uk/properties/89150535](https://www.rightmove.co.uk/properties/89150535)
 
 ---
@@ -2159,6 +2159,21 @@ Millwall, E14
 - **Listing Status**: Reduced on 13/07/2026
 - **Let Available**: 31/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/88695102](https://www.rightmove.co.uk/properties/88695102)
+
+---
+
+### [2026-08-01T10:27:07.580Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Ernest Brooks International, Canary Wharf
+- **Location**: Canary Wharf (E14)
+- **Property Name**: Hobart Building, 2 Wards Place, Canary Wharf, E14
+- **ID**: 91527807
+- **Price**: £2495 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-08-01
+- **Listing Status**: Added today
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/91527807](https://www.rightmove.co.uk/properties/91527807)
 
 ---
 
