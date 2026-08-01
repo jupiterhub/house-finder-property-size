@@ -1155,21 +1155,6 @@ Millwall, E14
 
 ---
 
-### [2026-08-01T10:27:07.580Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Felicity J Lord, Canary Wharf Lettings
-- **Location**: E14
-- **Property Name**: Manchester Road, London
-- **ID**: 89714229
-- **Price**: £1900 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-06-15
-- **Listing Status**: Added on 15/06/2026
-- **Let Available**: 17/08/2026
-- **Link**: [https://www.rightmove.co.uk/properties/89714229](https://www.rightmove.co.uk/properties/89714229)
-
----
-
 ### [2026-07-30T10:58:50.048Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Node Living, Limehouse
@@ -2125,8 +2110,8 @@ Millwall, E14
 - **ID**: 91141362
 - **Price**: £2400 PCM
 - **Size**: Unknown
-- **Listing Update**: 2026-07-21
-- **Listing Status**: Added on 21/07/2026
+- **Listing Update**: 2026-08-01
+- **Listing Status**: Reduced today
 - **Let Available**: 17/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91141362](https://www.rightmove.co.uk/properties/91141362)
 
