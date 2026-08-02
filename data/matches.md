@@ -550,7 +550,7 @@ Millwall, E14
 - **Size**: 58 sqm
 - **Listing Update**: 2026-05-22
 - **Listing Status**: Added on 22/05/2026
-- **Let Available**: Now (🦅 Early Bird: 72d adv)
+- **Let Available**: Now (🦅 Early Bird: 73d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/88746276](https://www.rightmove.co.uk/properties/88746276)
 
 ---
@@ -1556,7 +1556,7 @@ Millwall, E14
 - **Size**: Unknown
 - **Listing Update**: 2025-09-12
 - **Listing Status**: Added on 12/09/2025
-- **Let Available**: Now (🦅 Early Bird: 324d adv)
+- **Let Available**: Now (🦅 Early Bird: 325d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/166908254](https://www.rightmove.co.uk/properties/166908254)
 
 ---
@@ -1601,7 +1601,7 @@ Millwall, E14
 - **Size**: Unknown
 - **Listing Update**: 2026-07-21
 - **Listing Status**: Added on 21/07/2026
-- **Let Available**: 03/08/2026
+- **Let Available**: 09/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91157310](https://www.rightmove.co.uk/properties/91157310)
 
 ---
@@ -1947,7 +1947,7 @@ Millwall, E14
 - **Size**: Unknown
 - **Listing Update**: 2026-05-19
 - **Listing Status**: Reduced on 19/05/2026
-- **Let Available**: Now (🦅 Early Bird: 75d adv)
+- **Let Available**: Now (🦅 Early Bird: 76d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/87805383](https://www.rightmove.co.uk/properties/87805383)
 
 ---
