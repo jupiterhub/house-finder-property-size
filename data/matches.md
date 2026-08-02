@@ -1621,21 +1621,6 @@ Millwall, E14
 
 ---
 
-### [2026-07-28T18:09:23.078Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: OpenRent, London
-- **Location**: E14
-- **Property Name**: Ambrose House, London, E14
-- **ID**: 91410165
-- **Price**: £2125 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-28
-- **Listing Status**: Added on 28/07/2026
-- **Let Available**: 07/09/2026
-- **Link**: [https://www.rightmove.co.uk/properties/91410165](https://www.rightmove.co.uk/properties/91410165)
-
----
-
 ### [2026-07-28T18:09:23.077Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Victorstone, London
