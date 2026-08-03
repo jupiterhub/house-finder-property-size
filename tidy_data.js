@@ -588,7 +588,7 @@ async function main() {
   const availabilityConfig = getDesiredAvailabilityConfig(config);
   const flags = {
     maxPrice: config.maxPrice || null,
-    sort: 'ideal',
+    sort: 'recent',
     order: 'desc',
     output: null,
     cleanSeen: false,
@@ -3541,8 +3541,6 @@ function syncFromDrawer(inputElem) {
       Showing <span id="visibleCount">${result.length}</span> of ${result.length} properties found
       <button id="resetStarredBtn" onclick="resetStarred()" style="display:none;">Clear Saved (<span id="starredCount">0</span>)</button>
       <button id="resetSeenBtn" onclick="resetSeen()" style="display:none;">Reset Viewed (<span id="seenCount">0</span>)</button>
-      <button class="btn-export" onclick="copyShortlistToClipboard()" title="Copy Shortlist to Clipboard">📋 Copy Shortlist</button>
-      <button class="btn-export" style="background: linear-gradient(135deg, #3b82f6, #2563eb);" onclick="downloadStarredJson()" title="Download Starred JSON for GitHub Actions">📥 Export JSON</button>
       <button id="syncSettingsBtn" class="btn-export" style="background: linear-gradient(135deg, #8b5cf6, #6d28d9);" onclick="openSyncModal()" title="Sync to Mobile">📱 Sync Devices</button>
       <div class="view-toggle-group">
         <button id="viewCardsBtn" class="view-toggle-btn active" onclick="setViewMode('cards')" title="Mobile Card View">🗂️ Cards</button>
@@ -3550,92 +3548,17 @@ function syncFromDrawer(inputElem) {
       </div>
     </div>
   </div>
-  <div class="move-in-assistant" id="moveInAssistant">
-    <div class="assistant-header">
-      <span class="assistant-icon">🎯</span>
-      <span class="assistant-title">Let Available Date Assistant</span>
-      <span class="assistant-subtitle">Filter deals tailored to your desired let available date</span>
-    </div>
-    <div class="assistant-controls">
-      <div class="control-group">
-        <label for="targetDateInput">Target Let Available:</label>
-        <input type="date" id="targetDateInput" value="${flags.targetDate || ''}" onchange="applyMoveInFilter()">
-      </div>
-      <div class="control-group">
-        <label for="windowSelect">Tolerance:</label>
-        <select id="windowSelect" onchange="applyMoveInFilter()">
-          <option value="7" ${(flags.window === 7 || !flags.window) ? 'selected' : ''}>± 7 days</option>
-          <option value="14" ${flags.window === 14 ? 'selected' : ''}>± 14 days</option>
-          <option value="30" ${flags.window === 30 ? 'selected' : ''}>± 30 days</option>
-          <option value="999" ${flags.window === 999 ? 'selected' : ''}>Any time before</option>
-          <option value="3650" ${flags.window === 3650 ? 'selected' : ''}>Any date (All)</option>
-        </select>
-      </div>
-      <div class="control-group">
-        <label for="compatLabelSelect">Match Label:</label>
-        <select id="compatLabelSelect" onchange="applyMoveInFilter()">
-          <option value="">All Labels</option>
-          <option value="spot-on">🟢 Spot On Only</option>
-          <option value="early">🟡 Early Only</option>
-          <option value="advance">🔵 Advance Only</option>
-          <option value="imm">⚪ Immediate / Negotiable</option>
-          <option value="ask-agent">❓ Ask Agent / Unknown</option>
-        </select>
-      </div>
-      <div class="control-group checkbox-group">
-        <label class="toggle-check"><input type="checkbox" id="includeUnknownCheck" ${flags.includeUnknownAvailability ? 'checked' : ''} onchange="applyMoveInFilter()"> <span>Include "Ask Agent / Any"</span></label>
-      </div>
-      <button id="clearMoveInBtn" class="filter-chip chip-clear-movein" onclick="clearMoveInAssistant()">Reset Date</button>
-    </div>
-  </div>
+
   <div class="quick-actions-bar">
     <div class="quick-filters action-group">
       <span class="filter-label">Quick Filters:</span>
       <button id="chipAll" class="filter-chip active" onclick="setQuickFilter('')">All</button>
-      <button id="chipBargain" class="filter-chip chip-bargain" onclick="setQuickFilter('Bargain')">💎 Bargain</button>
-      <button id="chipGoodValue" class="filter-chip chip-goodvalue" onclick="setQuickFilter('GoodValue')">👍 Good Value</button>
-      <button id="chipElizabethLine" class="filter-chip chip-lizline" onclick="setQuickFilter('ElizabethLine')" title="Show only properties with Direct Elizabeth Line to Farringdon">🚆 Elizabeth Line</button>
-      <button id="chipLizLineDeals" class="filter-chip chip-lizline-deals" onclick="setQuickFilter('LizLineDeals')" title="Show only Elizabeth Line properties rated Bargain or Good Value">💎 Liz Line Deals</button>
-      <button id="chipTargetTower" class="filter-chip chip-targettower" onclick="setQuickFilter('TargetTower')">🏛️ Target Towers</button>
-      <button id="chipEarlyBird" class="filter-chip chip-earlybird" onclick="setQuickFilter('EarlyBird')">🦅 Early Bird</button>
-      <button id="chipExcludeNow" class="filter-chip chip-excludenow" onclick="setQuickFilter('ExcludeNow')">🚫 Exclude Now</button>
       <button id="chipViewed" class="filter-chip chip-viewed" onclick="setQuickFilter('Viewed')">✓ Viewed</button>
       <button id="chipUnviewed" class="filter-chip chip-unviewed" onclick="setQuickFilter('Unviewed')">👀 Unviewed</button>
       <button id="chipStarred" class="filter-chip chip-starred" onclick="setQuickFilter('Starred')">⭐ Starred (<span id="starredCount">0</span>)</button>
     </div>
-    <div class="action-divider"></div>
-    <div class="quick-sorts action-group">
-      <span class="filter-label">Quick Sort:</span>
-      <button id="sortLatestDate" class="filter-chip" onclick="setSingleSort(0, 'desc', this)">📅 Latest Date</button>
-      <button id="sortLetSoonest" class="filter-chip" onclick="setSingleSort(3, 'asc', this)">🗝️ Let Available (Soonest)</button>
-      <button id="sortLetLatest" class="filter-chip" onclick="setSingleSort(3, 'desc', this)">🗝️ Let Available (Latest)</button>
-      <button id="sortPriceLow" class="filter-chip" onclick="setSingleSort(8, 'asc', this)">💰 Price (Lowest)</button>
-      <button id="sortSizeLarge" class="filter-chip" onclick="setSingleSort(9, 'desc', this)">📐 Size (Largest)</button>
-      <button id="sortPpsqmLow" class="filter-chip" onclick="setSingleSort(10, 'asc', this)">⚡ £/sqm (Lowest)</button>
-      <button id="sortDatePrice" class="filter-chip" onclick="setMultiSort([{col: 0, dir: 'desc'}, {col: 8, dir: 'asc'}])">📅 Date → Price</button>
-      <button id="sortTargetDate" class="filter-chip chip-target" onclick="sortByTargetDate()">🎯 Match Proximity</button>
-      <button id="clearSortBtn" class="filter-chip chip-clear" onclick="clearSort()">✕ Clear Sort</button>
-      <div class="tooltip-container">
-        <span class="tooltip-badge">ℹ️ Multi-Sort</span>
-        <div class="tooltip-popup">
-          <strong>⚡ Multi-Column Sorting Guide:</strong><br>
-          • <strong>Hold SHIFT + Click</strong> any column header to add it as a secondary (2), tertiary (3), etc. sort column.<br>
-          • <strong>Normal Click</strong> sets a smart 2-column default (e.g. Date then Price).<br>
-          • Click <strong>✕ Clear Sort</strong> to clear all filters and remove sorting.
-        </div>
-      </div>
-    </div>
     <div class="action-divider mobile-sort-date-bar" style="display: none;"></div>
     <div class="mobile-sort-date-bar action-group" style="display: none; width: 100%; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 4px;">
-      <div class="sort-control-item" style="flex: 1; min-width: 150px; display: flex; align-items: center; gap: 6px;">
-        <span class="filter-label" style="white-space: nowrap; font-size: 0.85rem;">Sort:</span>
-        <select id="mobileSortSelect" class="sort-select-dropdown" onchange="handleSortSelect(this.value)" style="flex: 1; padding: 8px 10px; border-radius: 8px; background: var(--card-bg); color: var(--text); border: 1px solid var(--border); font-weight: 600; font-size: 0.88rem;">
-          <option value="">Sort: Default</option>
-          <option value="date_desc">📅 Latest Date</option>
-          <option value="let_asc">🗝️ Let Available (Soonest)</option>
-          <option value="let_desc">🗝️ Let Available (Latest)</option>
-        </select>
-      </div>
       <div class="date-control-item" style="flex: 1; min-width: 170px; display: flex; align-items: center; gap: 6px;">
         <span class="filter-label" style="white-space: nowrap; font-size: 0.85rem;">Let Avail ≥:</span>
         <input type="date" id="letAfterDateInput" class="filter-input-date" onchange="filterTable()" style="flex: 1; padding: 7px 10px; border-radius: 8px; background: var(--card-bg); color: var(--text); border: 1px solid var(--border); font-weight: 600; font-size: 0.88rem;" title="Show properties with Let Available date on or after this date">
@@ -3653,20 +3576,6 @@ function syncFromDrawer(inputElem) {
 </div>
 
 <div id="mobileFiltersDrawer" class="mobile-filter-drawer" style="display: none;">
-  <div class="drawer-section">
-    <div class="drawer-title">⚡ Multi-Column & Quick Sort Options</div>
-    <div class="drawer-chips">
-      <button class="filter-chip" onclick="setSingleSort(0, 'desc', this)">📅 Latest Date</button>
-      <button class="filter-chip" onclick="setSingleSort(3, 'asc', this)">🗝️ Let Available (Soonest)</button>
-      <button class="filter-chip" onclick="setSingleSort(3, 'desc', this)">🗝️ Let Available (Furthest)</button>
-      <button class="filter-chip" onclick="setSingleSort(8, 'asc', this)">💰 Price (Lowest)</button>
-      <button class="filter-chip" onclick="setSingleSort(9, 'desc', this)">📐 Size (Largest)</button>
-      <button class="filter-chip" onclick="setSingleSort(10, 'asc', this)">⚡ £/sqm (Lowest)</button>
-      <button class="filter-chip" onclick="setMultiSort([{col: 0, dir: 'desc'}, {col: 8, dir: 'asc'}])">📅 Date → Price</button>
-      <button class="filter-chip chip-target" onclick="sortByTargetDate()">🎯 Match Proximity</button>
-      <button class="filter-chip chip-clear" onclick="clearSort()">✕ Clear Sort</button>
-    </div>
-  </div>
   <div class="drawer-section">
     <div class="drawer-title">🎯 Specific Column Filters</div>
     <div class="drawer-grid">
