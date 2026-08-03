@@ -798,22 +798,6 @@
     border-color: #0284c7;
     box-shadow: 0 0 12px rgba(56, 189, 248, 0.4);
   }
-  #resetStarredBtn {
-    padding: 3px 8px;
-    background: rgba(234, 179, 8, 0.15);
-    color: #fde047;
-    border: 1px solid rgba(234, 179, 8, 0.3);
-    border-radius: 6px;
-    font-weight: 600;
-    cursor: pointer;
-    font-size: 0.8em;
-    transition: all 0.2s;
-    margin-left: 8px;
-  }
-  #resetStarredBtn:hover {
-    background: #eab308;
-    color: #0f172a;
-  }
 
   .seen-property-row {
     opacity: 0.55;
@@ -1596,10 +1580,6 @@ function toggleStar(id, btn) {
   applyStarred();
 }
 
-function resetStarred() {
-  localStorage.removeItem(STARRED_STORAGE_KEY);
-  applyStarred();
-}
 
 function applyStarred() {
   const starredIds = getStarredIds();
@@ -1632,15 +1612,6 @@ function applyStarred() {
     }
   }
 
-  const resetBtn = document.getElementById("resetStarredBtn");
-  if (resetBtn) {
-    if (starredCount > 0) {
-      resetBtn.style.display = "inline-block";
-      document.getElementById("starredCount").textContent = starredCount;
-    } else {
-      resetBtn.style.display = "none";
-    }
-  }
 
   const chip = document.getElementById("chipStarred");
   if (chip) {
@@ -1690,6 +1661,22 @@ function filterTable() {
       }
     }
     
+    if (activeQuickFilter === "CanaryWharf") {
+      var locText = (tr[i].querySelector('.col-location') ? tr[i].querySelector('.col-location').textContent : '').toLowerCase();
+      if (!locText.includes("canary wharf") && !locText.includes("south quay") && !locText.includes("e14")) {
+        tr[i].style.display = "none";
+        continue;
+      }
+    }
+
+    if (activeQuickFilter === "KingsCross") {
+      var locText = (tr[i].querySelector('.col-location') ? tr[i].querySelector('.col-location').textContent : '').toLowerCase();
+      if (!locText.includes("king's cross") && !locText.includes("kings cross") && !locText.includes("n1c")) {
+        tr[i].style.display = "none";
+        continue;
+      }
+    }
+
     if (activeQuickFilter === "Starred" && !starredIds.includes(id)) {
       tr[i].style.display = "none";
       continue;
@@ -1953,6 +1940,12 @@ function setQuickFilter(filterType) {
     } else if (filterType === "Unviewed") {
       var uvBtn = document.getElementById("chipUnviewed");
       if (uvBtn) uvBtn.classList.add("active");
+    } else if (filterType === "CanaryWharf") {
+      var cwBtn = document.getElementById("chipCanaryWharf");
+      if (cwBtn) cwBtn.classList.add("active");
+    } else if (filterType === "KingsCross") {
+      var kcBtn = document.getElementById("chipKingsCross");
+      if (kcBtn) kcBtn.classList.add("active");
     } else if (filterType === "Bargain") {
       var bgBtn = document.getElementById("chipBargain");
       if (bgBtn) bgBtn.classList.add("active");
@@ -2508,7 +2501,6 @@ function syncFromDrawer(inputElem) {
     <h2>Property Matches</h2>
     <div class="stats">
       Showing <span id="visibleCount">114</span> of 114 properties found
-      <button id="resetStarredBtn" onclick="resetStarred()" style="display:none;">Clear Saved (<span id="starredCount">0</span>)</button>
       <button id="resetSeenBtn" onclick="resetSeen()" style="display:none;">Reset Viewed (<span id="seenCount">0</span>)</button>
       <button id="syncSettingsBtn" class="btn-export" style="background: linear-gradient(135deg, #8b5cf6, #6d28d9);" onclick="openSyncModal()" title="Sync to Mobile">📱 Sync Devices</button>
       <div class="view-toggle-group">
@@ -2521,7 +2513,9 @@ function syncFromDrawer(inputElem) {
   <div class="quick-actions-bar">
     <div class="quick-filters action-group">
       <span class="filter-label">Quick Filters:</span>
-      <button id="chipAll" class="filter-chip active" onclick="setQuickFilter('')">All</button>
+      <button id="chipAll" class="filter-chip active" onclick="setQuickFilter('')">All (Both)</button>
+      <button id="chipCanaryWharf" class="filter-chip" onclick="setQuickFilter('CanaryWharf')">🏢 Canary Wharf & South Quay</button>
+      <button id="chipKingsCross" class="filter-chip" onclick="setQuickFilter('KingsCross')">🚆 King's Cross</button>
       <button id="chipViewed" class="filter-chip chip-viewed" onclick="setQuickFilter('Viewed')">✓ Viewed</button>
       <button id="chipUnviewed" class="filter-chip chip-unviewed" onclick="setQuickFilter('Unviewed')">👀 Unviewed</button>
       <button id="chipStarred" class="filter-chip chip-starred" onclick="setQuickFilter('Starred')">⭐ Starred (<span id="starredCount">0</span>)</button>

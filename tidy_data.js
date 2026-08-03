@@ -698,8 +698,8 @@ async function main() {
     } catch (e) {}
   }
 
-  // Auto-prune listings older than 14 days
-  const MAX_AGE_DAYS = 14;
+  // Auto-prune listings older than 7 days
+  const MAX_AGE_DAYS = 7;
   const cutoffTime = Date.now() - (MAX_AGE_DAYS * 24 * 60 * 60 * 1000);
   const preAgeCount = result.length;
   result = result.filter(m => {
