@@ -690,11 +690,20 @@ async function main() {
     console.log(`Filtered out excluded keywords (${config.excludedKeywords.join(', ')}): ${preKwCount} -> ${result.length} matches.`);
   }
 
-  // Auto-prune listings older than 60 days
-  const MAX_AGE_DAYS = 60;
+  let starredIds = [];
+  if (fs.existsSync(STARRED_FILE)) {
+    try {
+      starredIds = JSON.parse(fs.readFileSync(STARRED_FILE, 'utf-8'));
+      if (!Array.isArray(starredIds)) starredIds = [];
+    } catch (e) {}
+  }
+
+  // Auto-prune listings older than 14 days
+  const MAX_AGE_DAYS = 14;
   const cutoffTime = Date.now() - (MAX_AGE_DAYS * 24 * 60 * 60 * 1000);
   const preAgeCount = result.length;
   result = result.filter(m => {
+    if (m.id && starredIds.includes(m.id)) return true; // Keep starred properties
     if (!m.timestamp) return true;
     const ts = new Date(m.timestamp).getTime();
     return !isNaN(ts) && ts >= cutoffTime;
@@ -2428,9 +2437,102 @@ async function main() {
     }
   }
 </style>
+
+<div class="modal-overlay" id="syncModal" style="display:none;">
+  <div class="modal-card" style="text-align: center;">
+    <h3>📱 Sync to Mobile</h3>
+    <p style="font-size: 0.85rem; color: #94a3b8; margin-bottom: 15px;">Scan this QR code with your phone to securely transfer your starred and viewed properties directly to your mobile browser.</p>
+    <div id="qrCodeContainer" style="background: white; padding: 15px; border-radius: 8px; display: inline-block; margin-bottom: 15px;">
+      <img id="qrCodeImg" src="" alt="Sync QR Code" style="width: 250px; height: 250px; display: none;">
+      <div id="qrCodeLoading" style="color: #0f172a; font-weight: 600; padding: 100px 20px;">Generating QR Code...</div>
+    </div>
+    <div style="margin-bottom: 20px;">
+      <button class="btn-save" style="background: #38bdf8; width: 100%;" onclick="copyMagicLink()">🔗 Copy Magic Link (for Desktop)</button>
+    </div>
+    <div class="modal-actions" style="justify-content: center;">
+      <button class="btn-cancel" onclick="closeSyncModal()">Close</button>
+    </div>
+  </div>
+</div>
+
 <script>
 const STARRED_STORAGE_KEY = 'house_finder_starred_ids';
 const SEEN_STORAGE_KEY = 'house_finder_seen_ids';
+
+function openSyncModal() {
+  document.getElementById('syncModal').style.display = 'flex';
+  const stars = getStarredIds();
+  const seen = getSeenIds();
+  
+  const state = { s: stars, v: seen };
+  const encodedState = btoa(JSON.stringify(state));
+  
+  const currentUrl = new URL(window.location.href);
+  currentUrl.searchParams.set('sync_data', encodedState);
+  
+  const qrUrl = 'https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=' + encodeURIComponent(currentUrl.toString());
+  
+  const img = document.getElementById('qrCodeImg');
+  const loading = document.getElementById('qrCodeLoading');
+  
+  img.style.display = 'none';
+  loading.style.display = 'block';
+  
+  img.onload = function() {
+    loading.style.display = 'none';
+    img.style.display = 'block';
+  };
+  img.src = qrUrl;
+}
+
+function copyMagicLink() {
+  const stars = getStarredIds();
+  const seen = getSeenIds();
+  const state = { s: stars, v: seen };
+  const encodedState = btoa(JSON.stringify(state));
+  const currentUrl = new URL(window.location.href);
+  currentUrl.searchParams.set('sync_data', encodedState);
+  
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(currentUrl.toString()).then(() => {
+      alert('✅ Magic Link copied! Paste this in an email or note to open on your desktop.');
+    });
+  } else {
+    alert(currentUrl.toString());
+  }
+}
+
+function closeSyncModal() {
+  document.getElementById('syncModal').style.display = 'none';
+}
+
+function processIncomingSync() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const syncData = urlParams.get('sync_data');
+  if (syncData) {
+    try {
+      const state = JSON.parse(atob(syncData));
+      if (state.s && Array.isArray(state.s)) {
+        const existingStars = getStarredIds();
+        const mergedStars = [...new Set([...existingStars, ...state.s])];
+        localStorage.setItem(STARRED_STORAGE_KEY, JSON.stringify(mergedStars));
+      }
+      if (state.v && Array.isArray(state.v)) {
+        const existingSeen = getSeenIds();
+        const mergedSeen = [...new Set([...existingSeen, ...state.v])];
+        localStorage.setItem(SEEN_STORAGE_KEY, JSON.stringify(mergedSeen));
+      }
+      
+      const newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname;
+      window.history.replaceState({path: newUrl}, '', newUrl);
+      
+      alert('✅ Devices successfully synced! Your starred and viewed properties have been merged.');
+    } catch (e) {
+      console.error("Failed to parse sync data", e);
+      alert('❌ Failed to sync devices. The link might be invalid or corrupted.');
+    }
+  }
+}
 
 function getStarredIds() {
   try {
@@ -3330,7 +3432,23 @@ function copyShortlistToClipboard() {
     alert(summary);
   }
 }
+
+function downloadStarredJson() {
+  const starred = getStarredIds();
+  if (starred.length === 0) {
+    alert('No properties starred yet! Click ⭐ on properties first.');
+    return;
+  }
+  const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(starred, null, 2));
+  const dlAnchorElem = document.createElement('a');
+  dlAnchorElem.setAttribute("href", dataStr);
+  dlAnchorElem.setAttribute("download", "starred_properties.json");
+  document.body.appendChild(dlAnchorElem);
+  dlAnchorElem.click();
+  dlAnchorElem.remove();
+}
 document.addEventListener("DOMContentLoaded", function() {
+  processIncomingSync();
   applyStarred();
   applySeen();
   applySavedCrmData();
@@ -3423,6 +3541,9 @@ function syncFromDrawer(inputElem) {
       Showing <span id="visibleCount">${result.length}</span> of ${result.length} properties found
       <button id="resetStarredBtn" onclick="resetStarred()" style="display:none;">Clear Saved (<span id="starredCount">0</span>)</button>
       <button id="resetSeenBtn" onclick="resetSeen()" style="display:none;">Reset Viewed (<span id="seenCount">0</span>)</button>
+      <button class="btn-export" onclick="copyShortlistToClipboard()" title="Copy Shortlist to Clipboard">📋 Copy Shortlist</button>
+      <button class="btn-export" style="background: linear-gradient(135deg, #3b82f6, #2563eb);" onclick="downloadStarredJson()" title="Download Starred JSON for GitHub Actions">📥 Export JSON</button>
+      <button id="syncSettingsBtn" class="btn-export" style="background: linear-gradient(135deg, #8b5cf6, #6d28d9);" onclick="openSyncModal()" title="Sync to Mobile">📱 Sync Devices</button>
       <div class="view-toggle-group">
         <button id="viewCardsBtn" class="view-toggle-btn active" onclick="setViewMode('cards')" title="Mobile Card View">🗂️ Cards</button>
         <button id="viewTableBtn" class="view-toggle-btn" onclick="setViewMode('table')" title="Desktop Table View">📋 Table</button>
