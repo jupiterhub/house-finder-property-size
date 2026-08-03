@@ -1,3 +1,18 @@
+### [2026-08-03T15:37:15.977Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Greenwich Peninsula, London
+- **Location**: Greenwich Peninsula
+- **Property Name**: No.1, Upper Riverside, Cutter Lane, Greenwich Peninsula, SE10
+- **ID**: 91584432
+- **Price**: £2500 PCM
+- **Size**: 525 sqm
+- **Listing Update**: 2026-08-03
+- **Listing Status**: Added today
+- **Let Available**: 23/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/91584432](https://www.rightmove.co.uk/properties/91584432)
+
+---
+
 ### [2026-07-24T20:56:22.854Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Let UK Home, Covering London
@@ -119,6 +134,21 @@
 
 ---
 
+### [2026-08-03T15:37:15.977Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Dexters, Wapping
+- **Location**: E14
+- **Property Name**: Wharf Lane, 1 Wharf Lane
+- **ID**: 91574736
+- **Price**: £2300 PCM
+- **Size**: 75.8 sqm
+- **Listing Update**: 2026-08-03
+- **Listing Status**: Added today
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/91574736](https://www.rightmove.co.uk/properties/91574736)
+
+---
+
 ### [2026-07-13T16:22:49.585Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Dexters, Canary Wharf
@@ -206,21 +236,6 @@
 - **Listing Status**: Reduced on 20/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90089886](https://www.rightmove.co.uk/properties/90089886)
-
----
-
-### [2026-07-31T18:17:03.158Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Right Now Residential, London
-- **Location**: E14
-- **Property Name**: Quest House South, Escapade Place, Tower Hamlets, London
-- **ID**: 91507185
-- **Price**: £2300 PCM
-- **Size**: 69.68 sqm
-- **Listing Update**: 2026-07-31
-- **Listing Status**: Added on 31/07/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/91507185](https://www.rightmove.co.uk/properties/91507185)
 
 ---
 
@@ -386,6 +401,21 @@
 - **Listing Status**: Added on 26/07/2026
 - **Let Available**: 05/08/2026
 - **Link**: [https://www.rightmove.co.uk/properties/91333113](https://www.rightmove.co.uk/properties/91333113)
+
+---
+
+### [2026-08-03T12:12:41.863Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: John D Wood and Co, Docklands and City
+- **Location**: E14
+- **Property Name**: John Nash Mews, London, E14
+- **ID**: 89506566
+- **Price**: £2250 PCM
+- **Size**: 62 sqm
+- **Listing Update**: 2026-08-03
+- **Listing Status**: Reduced today
+- **Let Available**: 06/08/2026
+- **Link**: [https://www.rightmove.co.uk/properties/89506566](https://www.rightmove.co.uk/properties/89506566)
 
 ---
 
@@ -959,21 +989,6 @@
 
 ---
 
-### [2026-07-28T10:01:50.638Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Greenwich Peninsula, London
-- **Location**: Greenwich Peninsula
-- **Property Name**: No.4, Upper Riverside, Cutter Lane, Greenwich Peninsula, SE10
-- **ID**: 91064709
-- **Price**: £2300 PCM
-- **Size**: 50 sqm
-- **Listing Update**: 2026-07-18
-- **Listing Status**: Added on 18/07/2026
-- **Let Available**: 14/09/2026
-- **Link**: [https://www.rightmove.co.uk/properties/91064709](https://www.rightmove.co.uk/properties/91064709)
-
----
-
 ### [2026-07-31T11:17:34.185Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Docklands Prestige Residential, London
@@ -1377,6 +1392,21 @@ Cassilis Road, E14
 - **Listing Status**: Reduced on 22/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/90984615](https://www.rightmove.co.uk/properties/90984615)
+
+---
+
+### [2026-08-03T15:37:15.977Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Life Residential, Canary Wharf Office
+- **Location**: E14
+- **Property Name**: Wheat Sheaf Close, Canary Wharf
+- **ID**: 91575858
+- **Price**: £2000 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-08-03
+- **Listing Status**: Added today
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/91575858](https://www.rightmove.co.uk/properties/91575858)
 
 ---
 
@@ -1802,36 +1832,6 @@ Cassilis Road, E14
 
 ---
 
-### [2026-07-22T19:18:01.173Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: OpenRent, London
-- **Location**: King's Cross (N1C)
-- **Property Name**: Clare Court, London, WC1H
-- **ID**: 90780096
-- **Price**: £2200 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-11
-- **Listing Status**: Added on 11/07/2026
-- **Let Available**: 01/09/2026
-- **Link**: [https://www.rightmove.co.uk/properties/90780096](https://www.rightmove.co.uk/properties/90780096)
-
----
-
-### [2026-08-03T12:12:41.863Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: John D Wood and Co, Docklands and City
-- **Location**: E14
-- **Property Name**: John Nash Mews, London, E14
-- **ID**: 89506566
-- **Price**: £2250 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-08-03
-- **Listing Status**: Reduced today
-- **Let Available**: 06/08/2026
-- **Link**: [https://www.rightmove.co.uk/properties/89506566](https://www.rightmove.co.uk/properties/89506566)
-
----
-
 ### [2026-07-27T15:37:47.213Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Benham and Reeves - Canary Wharf, Canary Wharf
@@ -1844,21 +1844,6 @@ Cassilis Road, E14
 - **Listing Status**: Reduced on 30/07/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/91155174](https://www.rightmove.co.uk/properties/91155174)
-
----
-
-### [2026-07-24T14:44:02.571Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Life Residential, Canary Wharf Office
-- **Location**: E14
-- **Property Name**: Yabsley Street, Canary Wharf
-- **ID**: 91296798
-- **Price**: £2250 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-07-24
-- **Listing Status**: Added on 24/07/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/91296798](https://www.rightmove.co.uk/properties/91296798)
 
 ---
 
