@@ -56,6 +56,10 @@
       "reason": "Size 33 sqm below min 40",
       "timestamp": "2026-05-23T11:45:34.185Z"
     },
+    "88115751": {
+      "reason": "Price £470 below min £1900",
+      "timestamp": "2026-08-23T12:51:07.507Z"
+    },
     "88143681": {
       "reason": "Size 27 sqm below min 40",
       "timestamp": "2026-05-15T16:10:28.177Z"
@@ -3928,6 +3932,98 @@
       "reason": "Size 43 sqm below min 45",
       "timestamp": "2026-08-16T12:50:08.938Z"
     },
+    "92070279": {
+      "reason": "Price £450 below min £1900",
+      "timestamp": "2026-08-23T12:49:27.247Z"
+    },
+    "92117355": {
+      "reason": "Price £576 below min £1900",
+      "timestamp": "2026-08-23T12:49:20.136Z"
+    },
+    "92164221": {
+      "reason": "Size 30.29 sqm below min 45",
+      "timestamp": "2026-08-23T12:49:11.812Z"
+    },
+    "92167869": {
+      "reason": "Price £555 below min £1900",
+      "timestamp": "2026-08-23T12:49:39.028Z"
+    },
+    "92184690": {
+      "reason": "Size 40 sqm below min 45",
+      "timestamp": "2026-08-23T12:49:04.120Z"
+    },
+    "92208738": {
+      "reason": "Size 42 sqm below min 45",
+      "timestamp": "2026-08-23T12:48:22.975Z"
+    },
+    "92211555": {
+      "reason": "Price £560 below min £1900",
+      "timestamp": "2026-08-23T12:51:09.553Z"
+    },
+    "92217165": {
+      "reason": "Price £530 below min £1900",
+      "timestamp": "2026-08-23T12:51:07.512Z"
+    },
+    "92232879": {
+      "reason": "Size 33.63 sqm below min 45",
+      "timestamp": "2026-08-23T12:48:43.323Z"
+    },
+    "92233197": {
+      "reason": "Price £525 below min £1900",
+      "timestamp": "2026-08-23T12:48:41.504Z"
+    },
+    "92242158": {
+      "reason": "Price £565 below min £1900",
+      "timestamp": "2026-08-23T12:48:39.420Z"
+    },
+    "92264211": {
+      "reason": "Price £570 below min £1900",
+      "timestamp": "2026-08-23T12:48:01.168Z"
+    },
+    "92264319": {
+      "reason": "Price £570 below min £1900",
+      "timestamp": "2026-08-23T12:48:01.165Z"
+    },
+    "92264586": {
+      "reason": "Price £570 below min £1900",
+      "timestamp": "2026-08-23T12:48:01.161Z"
+    },
+    "92266854": {
+      "reason": "Contains excluded keyword: poplar",
+      "timestamp": "2026-08-23T12:50:36.870Z"
+    },
+    "92266857": {
+      "reason": "Contains excluded keyword: poplar",
+      "timestamp": "2026-08-23T12:50:34.627Z"
+    },
+    "92268171": {
+      "reason": "Price £484 below min £1900",
+      "timestamp": "2026-08-23T12:50:31.348Z"
+    },
+    "92272446": {
+      "reason": "Price £445 below min £1900",
+      "timestamp": "2026-08-23T12:48:39.415Z"
+    },
+    "92285565": {
+      "reason": "Size 43 sqm below min 45",
+      "timestamp": "2026-08-23T12:50:29.348Z"
+    },
+    "92290668": {
+      "reason": "Price £500 below min £1900",
+      "timestamp": "2026-08-23T12:48:37.273Z"
+    },
+    "92293161": {
+      "reason": "Size 18 sqm below min 45",
+      "timestamp": "2026-08-23T12:48:37.268Z"
+    },
+    "92293182": {
+      "reason": "Size 18 sqm below min 45",
+      "timestamp": "2026-08-23T12:48:34.999Z"
+    },
+    "92293194": {
+      "reason": "Size 18 sqm below min 45",
+      "timestamp": "2026-08-23T12:48:32.929Z"
+    },
     "94898018": {
       "reason": "Size 30.56 sqm below min 40",
       "timestamp": "2026-06-25T13:04:33.057Z"
@@ -3975,6 +4071,10 @@
     "145170395": {
       "reason": "Price £500 below min £1900",
       "timestamp": "2026-07-22T19:09:34.225Z"
+    },
+    "145585124": {
+      "reason": "Size 39 sqm below min 45",
+      "timestamp": "2026-08-23T12:51:14.239Z"
     },
     "145973345": {
       "reason": "Size 37 sqm below min 45",
