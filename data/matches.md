@@ -1,571 +1,512 @@
-### [2026-08-23T12:51:16.735Z] MATCH FOUND!
+### [2026-08-30T16:26:13.442Z] MATCH FOUND!
 - **Platform**: Rightmove
-- **Marketed by**: Hamptons, Canary Wharf
+- **Marketed by**: Knight Frank - Lettings, Canary  Wharf
 - **Location**: E14
-- **Property Name**: Chrisp Street, E14
-- **ID**: 92217504
-- **Price**: £2450 PCM
-- **Size**: 74.88 sqm
-- **Listing Update**: 2026-08-20
-- **Listing Status**: Added on 20/08/2026
-- **Let Available**: 28/09/2026
-- **Link**: [https://www.rightmove.co.uk/properties/92217504](https://www.rightmove.co.uk/properties/92217504)
-
----
-
-### [2026-08-23T12:51:16.735Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Right Now Residential, London
-- **Location**: E14
-- **Property Name**: Quest House South, Escapade Place, Tower Hamlets, London
-- **ID**: 92278986
-- **Price**: £2300 PCM
-- **Size**: 69.68 sqm
-- **Listing Update**: 2026-08-21
-- **Listing Status**: Added on 21/08/2026
+- **Property Name**: Milligan Street, London, E14
+- **ID**: 91940691
+- **Price**: £2500 PCM
+- **Size**: 73 sqm
+- **Listing Update**: 2026-08-28
+- **Listing Status**: Reduced on 28/08/2026
 - **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/92278986](https://www.rightmove.co.uk/properties/92278986)
+- **Link**: [https://www.rightmove.co.uk/properties/91940691](https://www.rightmove.co.uk/properties/91940691)
 
 ---
 
-### [2026-08-23T12:51:16.735Z] MATCH FOUND!
+### [2026-08-30T16:26:13.442Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Stirling Ackroyd Lettings, Canary Wharf
+- **Location**: E14
+- **Property Name**: Milligan Street, London, E14
+- **ID**: 92532714
+- **Price**: £2400 PCM
+- **Size**: 69 sqm
+- **Listing Update**: 2026-08-28
+- **Listing Status**: Added on 28/08/2026
+- **Let Available**: 12/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/92532714](https://www.rightmove.co.uk/properties/92532714)
+
+---
+
+### [2026-08-30T16:26:13.442Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Districts London, London
+- **Location**: E14
+- **Property Name**: Jetty Court Old Bellgate Place, London E14
+- **ID**: 92441472
+- **Price**: £2500 PCM
+- **Size**: 69 sqm
+- **Listing Update**: 2026-08-29
+- **Listing Status**: Reduced yesterday
+- **Let Available**: 07/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/92441472](https://www.rightmove.co.uk/properties/92441472)
+
+---
+
+### [2026-08-30T16:26:13.442Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Way of Life - Balfron Tower, Balfron Tower
 - **Location**: E14
 - **Property Name**: Balfron Tower, St Leonards Road, London, E14 0UY
-- **ID**: 96686329
-- **Price**: £2415 PCM
-- **Size**: 64 sqm
-- **Listing Update**: 2026-08-21
-- **Listing Status**: Added on 21/08/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/96686329](https://www.rightmove.co.uk/properties/96686329)
+- **ID**: 92531742
+- **Price**: £2490 PCM
+- **Size**: 63 sqm
+- **Listing Update**: 2026-08-28
+- **Listing Status**: Added on 28/08/2026
+- **Let Available**: 07/10/2026
+- **Link**: [https://www.rightmove.co.uk/properties/92531742](https://www.rightmove.co.uk/properties/92531742)
 
 ---
 
-### [2026-08-23T12:51:16.735Z] MATCH FOUND!
+### [2026-08-30T16:26:13.442Z] MATCH FOUND!
 - **Platform**: Rightmove
-- **Marketed by**: Felicity J Lord, Canary Wharf Lettings
+- **Marketed by**: Savills Lettings, Canary Wharf
 - **Location**: E14
-- **Property Name**: Manchester Road, London
-- **ID**: 92256237
-- **Price**: £1900 PCM
+- **Property Name**: Bartlett Mews, London, E14
+- **ID**: 90636693
+- **Price**: £2450 PCM
 - **Size**: 60 sqm
-- **Listing Update**: 2026-08-21
-- **Listing Status**: Added on 21/08/2026
-- **Let Available**: 28/09/2026
-- **Link**: [https://www.rightmove.co.uk/properties/92256237](https://www.rightmove.co.uk/properties/92256237)
+- **Listing Update**: 2026-08-27
+- **Listing Status**: Reduced on 27/08/2026
+- **Let Available**: 16/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/90636693](https://www.rightmove.co.uk/properties/90636693)
 
 ---
 
-### [2026-08-23T12:51:16.735Z] MATCH FOUND!
+### [2026-08-30T16:26:13.442Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Romans and Partners, London
+- **Location**: E14
+- **Property Name**: Sail Loft Court, Limehouse, E14
+- **ID**: 92493510
+- **Price**: £1950 PCM
+- **Size**: 51 sqm
+- **Listing Update**: 2026-08-28
+- **Listing Status**: Added on 28/08/2026
+- **Let Available**: 16/10/2026
+- **Link**: [https://www.rightmove.co.uk/properties/92493510](https://www.rightmove.co.uk/properties/92493510)
+
+---
+
+### [2026-08-30T16:26:13.442Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Hello Neighbour, London
 - **Location**: E14
-- **Property Name**: Ferguson Close, London, E14
-- **ID**: 91885578
-- **Price**: £2250 PCM
-- **Size**: 56 sqm
-- **Listing Update**: 2026-08-20
-- **Listing Status**: Reduced on 20/08/2026
-- **Let Available**: 19/09/2026
-- **Link**: [https://www.rightmove.co.uk/properties/91885578](https://www.rightmove.co.uk/properties/91885578)
-
----
-
-### [2026-08-23T12:51:16.735Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Franklyn James, Limehouse and Wapping
-- **Location**: E14
-- **Property Name**: Berglen Court, London, Limehouse, E14
-- **ID**: 92222553
-- **Price**: £1900 PCM
-- **Size**: 48 sqm
-- **Listing Update**: 2026-08-20
-- **Listing Status**: Added on 20/08/2026
-- **Let Available**: 21/10/2026
-- **Link**: [https://www.rightmove.co.uk/properties/92222553](https://www.rightmove.co.uk/properties/92222553)
-
----
-
-### [2026-08-23T12:51:16.735Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Ivy and Stone, Covering East London and West Essex
-- **Location**: E14
-- **Property Name**: Banbury Point, 1 Cording Street, London, Greater London, E14
-- **ID**: 92235642
+- **Property Name**: Commercial Road, London, E14
+- **ID**: 92137824
 - **Price**: £2000 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-08-20
-- **Listing Status**: Added on 20/08/2026
-- **Let Available**: 29/08/2026
-- **Link**: [https://www.rightmove.co.uk/properties/92235642](https://www.rightmove.co.uk/properties/92235642)
+- **Size**: 45 sqm
+- **Listing Update**: 2026-08-28
+- **Listing Status**: Reduced on 28/08/2026
+- **Let Available**: 01/11/2026
+- **Link**: [https://www.rightmove.co.uk/properties/92137824](https://www.rightmove.co.uk/properties/92137824)
 
 ---
 
-### [2026-08-23T12:51:16.735Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Savills Lettings, The Highline
-- **Location**: E14
-- **Property Name**: The Highline, 27 Radial Avenue
-- **ID**: 92226573
-- **Price**: £2100 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-08-20
-- **Listing Status**: Added on 20/08/2026
-- **Let Available**: 22/09/2026
-- **Link**: [https://www.rightmove.co.uk/properties/92226573](https://www.rightmove.co.uk/properties/92226573)
-
----
-
-### [2026-08-23T12:51:16.735Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: JOHNSandCO, Canning Town
-- **Location**: E14
-- **Property Name**: Charrington Tower, New Providence Wharf, E14
-- **ID**: 92230296
-- **Price**: £2125 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-08-20
-- **Listing Status**: Added on 20/08/2026
-- **Let Available**: 23/09/2026
-- **Link**: [https://www.rightmove.co.uk/properties/92230296](https://www.rightmove.co.uk/properties/92230296)
-
----
-
-### [2026-08-23T12:51:16.735Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: OpenRent, London
-- **Location**: E14
-- **Property Name**: Coutts Court, London, E14
-- **ID**: 92190423
-- **Price**: £2150 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-08-19
-- **Listing Status**: Added on 19/08/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/92190423](https://www.rightmove.co.uk/properties/92190423)
-
----
-
-### [2026-08-23T12:51:16.735Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Dexters, Wapping
-- **Location**: E14
-- **Property Name**: Parnham Street, London
-- **ID**: 92205057
-- **Price**: £2200 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-08-20
-- **Listing Status**: Added on 20/08/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/92205057](https://www.rightmove.co.uk/properties/92205057)
-
----
-
-### [2026-08-23T12:51:16.735Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Dexters, Canary Wharf
-- **Location**: E14
-- **Property Name**: Sturry Street, Canary Wharf
-- **ID**: 92226084
-- **Price**: £2300 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-08-20
-- **Listing Status**: Added on 20/08/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/92226084](https://www.rightmove.co.uk/properties/92226084)
-
----
-
-### [2026-08-23T12:51:16.735Z] MATCH FOUND!
+### [2026-08-30T16:26:13.442Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Dexters, Royal Wharf
 - **Location**: E14
-- **Property Name**: Goodluck Hope Walk, Canary Wharf
-- **ID**: 92230242
-- **Price**: £2400 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-08-20
-- **Listing Status**: Added on 20/08/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/92230242](https://www.rightmove.co.uk/properties/92230242)
-
----
-
-### [2026-08-23T12:51:16.735Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Life Residential, Canary Wharf Office
-- **Location**: E14
-- **Property Name**: Keymer Place, Canary Wharf
-- **ID**: 92224560
-- **Price**: £2450 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-08-20
-- **Listing Status**: Added on 20/08/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/92224560](https://www.rightmove.co.uk/properties/92224560)
-
----
-
-### [2026-08-23T12:51:16.734Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: The Bespoke Agent, London
-- **Location**: E14
-- **Property Name**: Pier Street, London, E14
-- **ID**: 92291199
-- **Price**: £2500 PCM
-- **Size**: 62 sqm
-- **Listing Update**: 2026-08-22
-- **Listing Status**: Added yesterday
-- **Let Available**: 05/09/2026
-- **Link**: [https://www.rightmove.co.uk/properties/92291199](https://www.rightmove.co.uk/properties/92291199)
-
----
-
-### [2026-08-23T12:51:16.734Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Campbell Residential, Docklands
-- **Location**: Canary Wharf (E14)
-- **Property Name**: Denison House Lanterns Way E14 9JH
-- **ID**: 92154465
-- **Price**: £2000 PCM
-- **Size**: 48 sqm
-- **Listing Update**: 2026-08-19
-- **Listing Status**: Added on 19/08/2026
-- **Let Available**: 16/10/2026
-- **Link**: [https://www.rightmove.co.uk/properties/92154465](https://www.rightmove.co.uk/properties/92154465)
-
----
-
-### [2026-08-23T12:51:16.734Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: OpenRent, London
-- **Location**: Canary Wharf (E14)
-- **Property Name**: Denison House, London, E14
-- **ID**: 92013114
-- **Price**: £1900 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-08-20
-- **Listing Status**: Reduced on 20/08/2026
-- **Let Available**: 25/08/2026
-- **Link**: [https://www.rightmove.co.uk/properties/92013114](https://www.rightmove.co.uk/properties/92013114)
-
----
-
-### [2026-08-23T12:51:16.734Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Life Residential, Canary Wharf Office
-- **Location**: Canary Wharf (E14)
-- **Property Name**: Lanterns Way, Canary Wharf
-- **ID**: 92212911
+- **Property Name**: Blair Street, Canary Wharf
+- **ID**: 92509569
 - **Price**: £1950 PCM
 - **Size**: Unknown
-- **Listing Update**: 2026-08-20
-- **Listing Status**: Added on 20/08/2026
+- **Listing Update**: 2026-08-28
+- **Listing Status**: Added on 28/08/2026
 - **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/92212911](https://www.rightmove.co.uk/properties/92212911)
+- **Link**: [https://www.rightmove.co.uk/properties/92509569](https://www.rightmove.co.uk/properties/92509569)
 
 ---
 
-### [2026-08-23T12:51:16.734Z] MATCH FOUND!
+### [2026-08-30T16:26:13.442Z] MATCH FOUND!
 - **Platform**: Rightmove
-- **Marketed by**: Global House Estates, London
-- **Location**: Canary Wharf (E14)
-- **Property Name**: Constable House, Isle of Dogs, London
-- **ID**: 92098470
+- **Marketed by**: Henry Wiltshire, Canary Wharf
+- **Location**: E14
+- **Property Name**: Parkview Apartments, E14
+- **ID**: 92454651
 - **Price**: £2000 PCM
 - **Size**: Unknown
-- **Listing Update**: 2026-08-17
-- **Listing Status**: Added on 17/08/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/92098470](https://www.rightmove.co.uk/properties/92098470)
+- **Listing Update**: 2026-08-27
+- **Listing Status**: Added on 27/08/2026
+- **Let Available**: 03/10/2026
+- **Link**: [https://www.rightmove.co.uk/properties/92454651](https://www.rightmove.co.uk/properties/92454651)
 
 ---
 
-### [2026-08-23T12:51:16.734Z] MATCH FOUND!
+### [2026-08-30T16:26:13.442Z] MATCH FOUND!
 - **Platform**: Rightmove
-- **Marketed by**: PropertyLoop, London
-- **Location**: Canary Wharf (E14)
-- **Property Name**: Cuba Street, London, E14
-- **ID**: 174613238
-- **Price**: £2000 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-08-12
-- **Listing Status**: Added on 12/08/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/174613238](https://www.rightmove.co.uk/properties/174613238)
-
----
-
-### [2026-08-23T12:51:16.734Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Life Residential, Canary Wharf Office
-- **Location**: Canary Wharf (E14)
-- **Property Name**: Maine Tower, Canary Wharf
-- **ID**: 92207160
-- **Price**: £2100 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-08-20
-- **Listing Status**: Added on 20/08/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/92207160](https://www.rightmove.co.uk/properties/92207160)
-
----
-
-### [2026-08-23T12:51:16.734Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Life Residential, Canary Wharf Office
-- **Location**: Canary Wharf (E14)
-- **Property Name**: Lanterns Way, Canary Wharf
-- **ID**: 92207142
-- **Price**: £2100 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-08-20
-- **Listing Status**: Added on 20/08/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/92207142](https://www.rightmove.co.uk/properties/92207142)
-
----
-
-### [2026-08-23T12:51:16.734Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Douglas Pryce, Hither Green
-- **Location**: Canary Wharf (E14)
-- **Property Name**: Pan Peninsula, London
-- **ID**: 92085975
-- **Price**: £2100 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-08-17
-- **Listing Status**: Added on 17/08/2026
-- **Let Available**: 20/10/2026
-- **Link**: [https://www.rightmove.co.uk/properties/92085975](https://www.rightmove.co.uk/properties/92085975)
-
----
-
-### [2026-08-23T12:51:16.734Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Life Residential, Canary Wharf Office
-- **Location**: Canary Wharf (E14)
-- **Property Name**: Cobalt Point, 38 Millharbour, London
-- **ID**: 92183331
+- **Marketed by**: Felicity J Lord, Canary Wharf Lettings
+- **Location**: E14
+- **Property Name**: Beacon House, London
+- **ID**: 92474766
 - **Price**: £2150 PCM
 - **Size**: Unknown
-- **Listing Update**: 2026-08-19
-- **Listing Status**: Added on 19/08/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/92183331](https://www.rightmove.co.uk/properties/92183331)
+- **Listing Update**: 2026-08-27
+- **Listing Status**: Reduced on 27/08/2026
+- **Let Available**: 06/10/2026
+- **Link**: [https://www.rightmove.co.uk/properties/92474766](https://www.rightmove.co.uk/properties/92474766)
 
 ---
 
-### [2026-08-23T12:51:16.734Z] MATCH FOUND!
+### [2026-08-30T16:26:13.442Z] MATCH FOUND!
 - **Platform**: Rightmove
-- **Marketed by**: relocate-me
-- **Location**: Canary Wharf (E14)
-- **Property Name**: Hutching's St, London, E14
-- **ID**: 92211249
-- **Price**: £2350 PCM
+- **Marketed by**: OpenRent, London
+- **Location**: E14
+- **Property Name**: Delta Building, London, E14
+- **ID**: 92482050
+- **Price**: £2250 PCM
 - **Size**: Unknown
-- **Listing Update**: 2026-08-20
-- **Listing Status**: Added on 20/08/2026
-- **Let Available**: 15/09/2026
-- **Link**: [https://www.rightmove.co.uk/properties/92211249](https://www.rightmove.co.uk/properties/92211249)
+- **Listing Update**: 2026-08-27
+- **Listing Status**: Added on 27/08/2026
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/92482050](https://www.rightmove.co.uk/properties/92482050)
 
 ---
 
-### [2026-08-23T12:51:16.734Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Life Residential, Canary Wharf Office
-- **Location**: Canary Wharf (E14)
-- **Property Name**: Maine Tower, Canary Wharf, London
-- **ID**: 92210058
-- **Price**: £2450 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-08-20
-- **Listing Status**: Added on 20/08/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/92210058](https://www.rightmove.co.uk/properties/92210058)
-
----
-
-### [2026-08-23T12:51:16.734Z] MATCH FOUND!
+### [2026-08-30T16:26:13.442Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Marc and Partners, Mayfair
-- **Location**: Canary Wharf (E14)
-- **Property Name**: Maine Tower, 9 Harbour Way, London Greater London, E14
-- **ID**: 92183883
+- **Location**: E14
+- **Property Name**: Felix Point, 5 Epstein Square, Greater London, E14
+- **ID**: 92461659
+- **Price**: £2450 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-08-27
+- **Listing Status**: Added on 27/08/2026
+- **Let Available**: 27/10/2026
+- **Link**: [https://www.rightmove.co.uk/properties/92461659](https://www.rightmove.co.uk/properties/92461659)
+
+---
+
+### [2026-08-30T16:26:13.442Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Dexters, Canary Wharf
+- **Location**: E14
+- **Property Name**: St. Davids Square, Canary Wharf
+- **ID**: 92542032
 - **Price**: £2500 PCM
 - **Size**: Unknown
-- **Listing Update**: 2026-08-19
-- **Listing Status**: Added on 19/08/2026
-- **Let Available**: 03/11/2026 (🦅 Early Bird: 76d adv)
-- **Link**: [https://www.rightmove.co.uk/properties/92183883](https://www.rightmove.co.uk/properties/92183883)
-
----
-
-### [2026-08-23T12:51:16.733Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Storeys, London
-- **Location**: Canary Wharf (E14)
-- **Property Name**: Premiere Place, Canary Wharf, London E14
-- **ID**: 92280978
-- **Price**: £2250 PCM
-- **Size**: 65 sqm
-- **Listing Update**: 2026-08-21
-- **Listing Status**: Added on 21/08/2026
-- **Let Available**: 28/09/2026
-- **Link**: [https://www.rightmove.co.uk/properties/92280978](https://www.rightmove.co.uk/properties/92280978)
-
----
-
-### [2026-08-23T12:51:16.733Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Savills Lettings, Canary Wharf
-- **Location**: Canary Wharf (E14)
-- **Property Name**: Roosevelt Tower, 18 Williamsburg Plaza, E14
-- **ID**: 92070498
-- **Price**: £2300 PCM
-- **Size**: 50 sqm
-- **Listing Update**: 2026-08-17
-- **Listing Status**: Added on 17/08/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/92070498](https://www.rightmove.co.uk/properties/92070498)
-
----
-
-### [2026-08-23T12:51:16.733Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Chestertons, Marylebone
-- **Location**: King's Cross (N1C)
-- **Property Name**: Coopers Lane, 
-Saint Pancras, NW1
-- **ID**: 92280099
-- **Price**: £2250 PCM
-- **Size**: 47 sqm
-- **Listing Update**: 2026-08-21
-- **Listing Status**: Added on 21/08/2026
-- **Let Available**: 28/08/2026
-- **Link**: [https://www.rightmove.co.uk/properties/92280099](https://www.rightmove.co.uk/properties/92280099)
-
----
-
-### [2026-08-23T12:51:16.733Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Christo and Co, London
-- **Location**: King's Cross (N1C)
-- **Property Name**: Chamberlain House, Phoenix Road, London, NW1
-- **ID**: 167131937
-- **Price**: £1950 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-08-18
-- **Listing Status**: Added on 18/08/2026
-- **Let Available**: 26/09/2026
-- **Link**: [https://www.rightmove.co.uk/properties/167131937](https://www.rightmove.co.uk/properties/167131937)
-
----
-
-### [2026-08-23T12:51:16.733Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Hamptons, Canary Wharf
-- **Location**: Canary Wharf (E14)
-- **Property Name**: Cassilis Road, E14
-- **ID**: 92222202
-- **Price**: £2000 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-08-20
-- **Listing Status**: Added on 20/08/2026
-- **Let Available**: 27/08/2026
-- **Link**: [https://www.rightmove.co.uk/properties/92222202](https://www.rightmove.co.uk/properties/92222202)
-
----
-
-### [2026-08-23T12:51:16.733Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Dexters, Bloomsbury
-- **Location**: King's Cross (N1C)
-- **Property Name**: Hunter Street, London
-- **ID**: 92219019
-- **Price**: £2000 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-08-21
-- **Listing Status**: Reduced on 21/08/2026
+- **Listing Update**: 2026-08-29
+- **Listing Status**: Added yesterday
 - **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/92219019](https://www.rightmove.co.uk/properties/92219019)
+- **Link**: [https://www.rightmove.co.uk/properties/92542032](https://www.rightmove.co.uk/properties/92542032)
 
 ---
 
-### [2026-08-23T12:51:16.733Z] MATCH FOUND!
+### [2026-08-30T16:26:13.442Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Dexters, Canary Wharf
+- **Location**: E14
+- **Property Name**: Douglas Path, Canary Wharf
+- **ID**: 92539449
+- **Price**: £2500 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-08-29
+- **Listing Status**: Added yesterday
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/92539449](https://www.rightmove.co.uk/properties/92539449)
+
+---
+
+### [2026-08-30T16:26:13.442Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Life Residential, Canary Wharf Office
+- **Location**: E14
+- **Property Name**: Millennium Drive, Canary Wharf
+- **ID**: 92529570
+- **Price**: £2500 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-08-28
+- **Listing Status**: Added on 28/08/2026
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/92529570](https://www.rightmove.co.uk/properties/92529570)
+
+---
+
+### [2026-08-30T16:26:13.441Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Franklyn James, Limehouse and Wapping
+- **Location**: Canary Wharf (E14)
+- **Property Name**: Denison House, South Quay, London, E14
+- **ID**: 92357199
+- **Price**: £2400 PCM
+- **Size**: 70 sqm
+- **Listing Update**: 2026-08-25
+- **Listing Status**: Added on 25/08/2026
+- **Let Available**: 28/10/2026
+- **Link**: [https://www.rightmove.co.uk/properties/92357199](https://www.rightmove.co.uk/properties/92357199)
+
+---
+
+### [2026-08-30T16:26:13.441Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Chestertons, Canary Wharf and Docklands
+- **Location**: Canary Wharf (E14)
+- **Property Name**: Fairlead House, 
+Cassilis Road, E14
+- **ID**: 92452386
+- **Price**: £2200 PCM
+- **Size**: 56 sqm
+- **Listing Update**: 2026-08-27
+- **Listing Status**: Added on 27/08/2026
+- **Let Available**: 31/10/2026
+- **Link**: [https://www.rightmove.co.uk/properties/92452386](https://www.rightmove.co.uk/properties/92452386)
+
+---
+
+### [2026-08-30T16:26:13.441Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Romans and Partners, London
+- **Location**: Canary Wharf (E14)
+- **Property Name**: The Bellamy, Canary Wharf, E14
+- **ID**: 92457192
+- **Price**: £2500 PCM
+- **Size**: 54 sqm
+- **Listing Update**: 2026-08-27
+- **Listing Status**: Reduced on 27/08/2026
+- **Let Available**: 27/11/2026 (🦅 Early Bird: 92d adv)
+- **Link**: [https://www.rightmove.co.uk/properties/92457192](https://www.rightmove.co.uk/properties/92457192)
+
+---
+
+### [2026-08-30T16:26:13.441Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Hurford Salvi Carr, Britton Street
+- **Location**: King's Cross (N1C)
+- **Property Name**: York Way, N1
+- **ID**: 92482104
+- **Price**: £2400 PCM
+- **Size**: 52 sqm
+- **Listing Update**: 2026-08-27
+- **Listing Status**: Added on 27/08/2026
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/92482104](https://www.rightmove.co.uk/properties/92482104)
+
+---
+
+### [2026-08-30T16:26:13.441Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Henry Wiltshire, Canary Wharf
+- **Location**: South Quay (E14)
+- **Property Name**: Baltimore Wharf, E14
+- **ID**: 92449251
+- **Price**: £2000 PCM
+- **Size**: 46 sqm
+- **Listing Update**: 2026-08-27
+- **Listing Status**: Added on 27/08/2026
+- **Let Available**: 10/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/92449251](https://www.rightmove.co.uk/properties/92449251)
+
+---
+
+### [2026-08-30T16:26:13.441Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Henry Wiltshire, Canary Wharf
+- **Location**: South Quay (E14)
+- **Property Name**: Baltimore Wharf, E14
+- **ID**: 92449254
+- **Price**: £2100 PCM
+- **Size**: 46 sqm
+- **Listing Update**: 2026-08-27
+- **Listing Status**: Added on 27/08/2026
+- **Let Available**: 05/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/92449254](https://www.rightmove.co.uk/properties/92449254)
+
+---
+
+### [2026-08-30T16:26:13.441Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Atlas Property Letting and Services Ltd, London
+- **Location**: King's Cross (N1C)
+- **Property Name**: Leigh Street, WC1H
+- **ID**: 92448669
+- **Price**: £1900 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-08-27
+- **Listing Status**: Added on 27/08/2026
+- **Let Available**: 03/10/2026
+- **Link**: [https://www.rightmove.co.uk/properties/92448669](https://www.rightmove.co.uk/properties/92448669)
+
+---
+
+### [2026-08-30T16:26:13.441Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Life Residential, Canary Wharf Office
 - **Location**: Canary Wharf (E14)
-- **Property Name**: Denison House, Canary Wharf
-- **ID**: 92234736
-- **Price**: £2250 PCM
+- **Property Name**: Crossharbour Plaza, Canary Wharf
+- **ID**: 92447205
+- **Price**: £2100 PCM
 - **Size**: Unknown
-- **Listing Update**: 2026-08-20
-- **Listing Status**: Added on 20/08/2026
+- **Listing Update**: 2026-08-27
+- **Listing Status**: Added on 27/08/2026
 - **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/92234736](https://www.rightmove.co.uk/properties/92234736)
+- **Link**: [https://www.rightmove.co.uk/properties/92447205](https://www.rightmove.co.uk/properties/92447205)
 
 ---
 
-### [2026-08-23T12:51:16.733Z] MATCH FOUND!
+### [2026-08-30T16:26:13.441Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Hawk and Eagle Property Consultants, London
+- **Location**: South Quay (E14)
+- **Property Name**: John McDonald House, Tower Hamlets, E14 3LX
+- **ID**: 92504253
+- **Price**: £2100 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-08-28
+- **Listing Status**: Added on 28/08/2026
+- **Let Available**: 29/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/92504253](https://www.rightmove.co.uk/properties/92504253)
+
+---
+
+### [2026-08-30T16:26:13.441Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Life Residential, Canary Wharf Office
+- **Location**: Canary Wharf (E14)
+- **Property Name**: Lanterns Way, Canary Wharf
+- **ID**: 92431926
+- **Price**: £2150 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-08-26
+- **Listing Status**: Added on 26/08/2026
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/92431926](https://www.rightmove.co.uk/properties/92431926)
+
+---
+
+### [2026-08-30T16:26:13.441Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Barnard Marcus Lettings, Covent Garden Lettings
+- **Location**: King's Cross (N1C)
+- **Property Name**: Woburn Place, LONDON
+- **ID**: 92376624
+- **Price**: £2150 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-08-27
+- **Listing Status**: Reduced on 27/08/2026
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/92376624](https://www.rightmove.co.uk/properties/92376624)
+
+---
+
+### [2026-08-30T16:26:13.441Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Felicity J Lord, Canary Wharf Lettings
+- **Location**: Canary Wharf (E14)
+- **Property Name**: Crossharbour Plaza, London
+- **ID**: 127172066
+- **Price**: £2200 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-08-27
+- **Listing Status**: Added on 27/08/2026
+- **Let Available**: Now
+- **Link**: [https://www.rightmove.co.uk/properties/127172066](https://www.rightmove.co.uk/properties/127172066)
+
+---
+
+### [2026-08-30T16:26:13.441Z] MATCH FOUND!
 - **Platform**: Rightmove
 - **Marketed by**: Frank Harris and Co
 - **Location**: King's Cross (N1C)
-- **Property Name**: Judd Street, Queen Alexandra Mansions
-- **ID**: 92242521
-- **Price**: £2300 PCM
+- **Property Name**: Tavistock Place, Seymour House
+- **ID**: 92425275
+- **Price**: £2250 PCM
 - **Size**: Unknown
-- **Listing Update**: 2026-08-21
-- **Listing Status**: Added on 21/08/2026
+- **Listing Update**: 2026-08-26
+- **Listing Status**: Added on 26/08/2026
 - **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/92242521](https://www.rightmove.co.uk/properties/92242521)
+- **Link**: [https://www.rightmove.co.uk/properties/92425275](https://www.rightmove.co.uk/properties/92425275)
 
 ---
 
-### [2026-08-23T12:51:16.733Z] MATCH FOUND!
+### [2026-08-30T16:26:13.441Z] MATCH FOUND!
 - **Platform**: Rightmove
-- **Marketed by**: Hemmingfords, London
+- **Marketed by**: Marsh and Parsons, Camden Town and Tufnell Park
 - **Location**: King's Cross (N1C)
-- **Property Name**: Stelfox House, Penton Rise, London, WC1X
-- **ID**: 92244093
+- **Property Name**: Phoenix Road, London
+- **ID**: 92454108
 - **Price**: £2400 PCM
 - **Size**: Unknown
-- **Listing Update**: 2026-08-21
-- **Listing Status**: Added on 21/08/2026
-- **Let Available**: 04/10/2026
-- **Link**: [https://www.rightmove.co.uk/properties/92244093](https://www.rightmove.co.uk/properties/92244093)
+- **Listing Update**: 2026-08-27
+- **Listing Status**: Added on 27/08/2026
+- **Let Available**: Ask agent
+- **Link**: [https://www.rightmove.co.uk/properties/92454108](https://www.rightmove.co.uk/properties/92454108)
 
 ---
 
-### [2026-08-23T12:51:16.733Z] MATCH FOUND!
+### [2026-08-30T16:26:13.441Z] MATCH FOUND!
 - **Platform**: Rightmove
-- **Marketed by**: Uni Living London, London
-- **Location**: King's Cross (N1C)
-- **Property Name**: Leigh Street, London WC1H (Near Russell Square)
-- **ID**: 91981758
-- **Price**: £2499 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-08-21
-- **Listing Status**: Reduced on 21/08/2026
-- **Let Available**: 14/09/2026
-- **Link**: [https://www.rightmove.co.uk/properties/91981758](https://www.rightmove.co.uk/properties/91981758)
-
----
-
-### [2026-08-23T12:51:16.732Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: The Chant Group, Bank
-- **Location**: King's Cross (N1C)
-- **Property Name**: 9 Vernon Rise, London, WC1X
-- **ID**: 92295381
+- **Marketed by**: John D Wood and Co, Docklands and City
+- **Location**: Canary Wharf (E14)
+- **Property Name**: Millharbour, London, E14
+- **ID**: 92442564
 - **Price**: £2500 PCM
 - **Size**: Unknown
-- **Listing Update**: 2026-08-22
-- **Listing Status**: Added yesterday
-- **Let Available**: 26/08/2026
-- **Link**: [https://www.rightmove.co.uk/properties/92295381](https://www.rightmove.co.uk/properties/92295381)
+- **Listing Update**: 2026-08-27
+- **Listing Status**: Added on 27/08/2026
+- **Let Available**: 05/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/92442564](https://www.rightmove.co.uk/properties/92442564)
+
+---
+
+### [2026-08-30T16:26:13.441Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: OpenRent, London
+- **Location**: Canary Wharf (E14)
+- **Property Name**: South Quay Square, London, E14
+- **ID**: 92389449
+- **Price**: £2500 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-08-25
+- **Listing Status**: Added on 25/08/2026
+- **Let Available**: 01/10/2026
+- **Link**: [https://www.rightmove.co.uk/properties/92389449](https://www.rightmove.co.uk/properties/92389449)
+
+---
+
+### [2026-08-30T16:26:13.441Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Kinleigh Folkard and Hayward - Lettings, Islington
+- **Location**: King's Cross (N1C)
+- **Property Name**: Judd Street, London, WC1H
+- **ID**: 92450256
+- **Price**: £2500 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-08-27
+- **Listing Status**: Added on 27/08/2026
+- **Let Available**: 30/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/92450256](https://www.rightmove.co.uk/properties/92450256)
+
+---
+
+### [2026-08-30T16:26:13.441Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Leo Newman, London
+- **Location**: King's Cross (N1C)
+- **Property Name**: Judd Street, Bloomsbury, WC1
+- **ID**: 92448924
+- **Price**: £2500 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-08-27
+- **Listing Status**: Added on 27/08/2026
+- **Let Available**: 30/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/92448924](https://www.rightmove.co.uk/properties/92448924)
+
+---
+
+### [2026-08-30T16:26:13.440Z] MATCH FOUND!
+- **Platform**: Rightmove
+- **Marketed by**: Chestertons, Covent Garden
+- **Location**: King's Cross (N1C)
+- **Property Name**: Russell Court, 
+Woburn Place, WC1H
+- **ID**: 92515644
+- **Price**: £1900 PCM
+- **Size**: Unknown
+- **Listing Update**: 2026-08-28
+- **Listing Status**: Added on 28/08/2026
+- **Let Available**: 04/09/2026
+- **Link**: [https://www.rightmove.co.uk/properties/92515644](https://www.rightmove.co.uk/properties/92515644)
 
 ---
 
