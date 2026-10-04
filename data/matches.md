@@ -15,21 +15,6 @@
 
 ### [2026-09-27T16:45:09.434Z] MATCH FOUND!
 - **Platform**: Rightmove
-- **Marketed by**: Right Now Residential, London
-- **Location**: E14
-- **Property Name**: Quest House, Escapade Place, Tower Hamlets, London
-- **ID**: 93585801
-- **Price**: £2300 PCM
-- **Size**: 69.68 sqm
-- **Listing Update**: 2026-09-25
-- **Listing Status**: Added on 25/09/2026
-- **Let Available**: Ask agent
-- **Link**: [https://www.rightmove.co.uk/properties/93585801](https://www.rightmove.co.uk/properties/93585801)
-
----
-
-### [2026-09-27T16:45:09.434Z] MATCH FOUND!
-- **Platform**: Rightmove
 - **Marketed by**: Legacy Property Consultants Ltd, London
 - **Location**: E14
 - **Property Name**: Clyde Square, Severn Court, E14
@@ -67,9 +52,9 @@
 - **ID**: 92946990
 - **Price**: £2500 PCM
 - **Size**: 53 sqm
-- **Listing Update**: 2026-09-25
-- **Listing Status**: Reduced on 25/09/2026
-- **Let Available**: 02/10/2026
+- **Listing Update**: 2026-10-02
+- **Listing Status**: Reduced on 02/10/2026
+- **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/92946990](https://www.rightmove.co.uk/properties/92946990)
 
 ---
@@ -181,21 +166,6 @@
 
 ### [2026-09-27T16:45:09.433Z] MATCH FOUND!
 - **Platform**: Rightmove
-- **Marketed by**: Ashley King, Docklands
-- **Location**: Canary Wharf (E14)
-- **Property Name**: Cold Harbour, London, E14 9NT
-- **ID**: 93435828
-- **Price**: £2000 PCM
-- **Size**: 60 sqm
-- **Listing Update**: 2026-09-22
-- **Listing Status**: Added on 22/09/2026
-- **Let Available**: Now
-- **Link**: [https://www.rightmove.co.uk/properties/93435828](https://www.rightmove.co.uk/properties/93435828)
-
----
-
-### [2026-09-27T16:45:09.433Z] MATCH FOUND!
-- **Platform**: Rightmove
 - **Marketed by**: Filtons Stratford Ltd, Stratford
 - **Location**: King's Cross (N1C)
 - **Property Name**: Priory Heights, Wynford Road, Islington, London
@@ -211,24 +181,9 @@
 
 ### [2026-09-27T16:45:09.433Z] MATCH FOUND!
 - **Platform**: Rightmove
-- **Marketed by**: JOHNSandCO, Canary Wharf
-- **Location**: South Quay (E14)
-- **Property Name**: Heritage Tower, Canary Wharf, E14
-- **ID**: 93429228
-- **Price**: £2400 PCM
-- **Size**: 52.03 sqm
-- **Listing Update**: 2026-09-02
-- **Listing Status**: Added on 02/09/2026
-- **Let Available**: 30/10/2026
-- **Link**: [https://www.rightmove.co.uk/properties/93429228](https://www.rightmove.co.uk/properties/93429228)
-
----
-
-### [2026-09-27T16:45:09.433Z] MATCH FOUND!
-- **Platform**: Rightmove
 - **Marketed by**: Martin and Co, Camden
 - **Location**: Canary Wharf (E14)
-- **Property Name**: Manhattan Plaza TO LET
+- **Property Name**: Roosevelt Plaza
 - **ID**: 93437967
 - **Price**: £2225 PCM
 - **Size**: 52 sqm
@@ -249,23 +204,8 @@
 - **Size**: 51 sqm
 - **Listing Update**: 2026-09-18
 - **Listing Status**: Added on 18/09/2026
-- **Let Available**: 28/09/2026
+- **Let Available**: Now
 - **Link**: [https://www.rightmove.co.uk/properties/93302964](https://www.rightmove.co.uk/properties/93302964)
-
----
-
-### [2026-09-27T16:45:09.433Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: BPS London, London
-- **Location**: King's Cross (N1C)
-- **Property Name**: Gray's Inn Road, London, WC1X
-- **ID**: 93591414
-- **Price**: £2400 PCM
-- **Size**: 49.98 sqm
-- **Listing Update**: 2026-09-25
-- **Listing Status**: Added on 25/09/2026
-- **Let Available**: 01/10/2026
-- **Link**: [https://www.rightmove.co.uk/properties/93591414](https://www.rightmove.co.uk/properties/93591414)
 
 ---
 
@@ -281,21 +221,6 @@
 - **Listing Status**: Added on 24/09/2026
 - **Let Available**: Ask agent
 - **Link**: [https://www.rightmove.co.uk/properties/93546525](https://www.rightmove.co.uk/properties/93546525)
-
----
-
-### [2026-09-27T16:45:09.433Z] MATCH FOUND!
-- **Platform**: Rightmove
-- **Marketed by**: Hamptons, Canary Wharf
-- **Location**: Canary Wharf (E14)
-- **Property Name**: Cassilis Road, E14
-- **ID**: 93549096
-- **Price**: £2000 PCM
-- **Size**: Unknown
-- **Listing Update**: 2026-09-24
-- **Listing Status**: Added on 24/09/2026
-- **Let Available**: 27/10/2026
-- **Link**: [https://www.rightmove.co.uk/properties/93549096](https://www.rightmove.co.uk/properties/93549096)
 
 ---
 
@@ -339,7 +264,7 @@
 - **Size**: Unknown
 - **Listing Update**: 2026-06-16
 - **Listing Status**: Added on 16/06/2026
-- **Let Available**: Now (🦅 Early Bird: 104d adv)
+- **Let Available**: Now (🦅 Early Bird: 111d adv)
 - **Link**: [https://www.rightmove.co.uk/properties/89773119](https://www.rightmove.co.uk/properties/89773119)
 
 ---
